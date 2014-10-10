@@ -23,7 +23,7 @@ public:
 	void setSpeed(float _speed);
 	void setSprite(sf::Sprite _sprite);
 
-	Tile getTile();//After the creation of class Tile
+	//Tile getTile();//After the creation of class Tile
 	void resolveCollision(Entity _entity);
 	void draw();
 };

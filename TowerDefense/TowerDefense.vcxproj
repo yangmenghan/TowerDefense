@@ -85,12 +85,15 @@
     <ClInclude Include="AreaAttack.h" />
     <ClInclude Include="Attack.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="GameMenu.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="Tower.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AreaAttack.cpp" />
     <ClCompile Include="Attack.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="GameMenu.cpp" />
     <ClCompile Include="Tower.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
