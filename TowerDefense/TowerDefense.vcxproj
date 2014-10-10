@@ -84,17 +84,25 @@
   <ItemGroup>
     <ClInclude Include="AreaAttack.h" />
     <ClInclude Include="Attack.h" />
+    <ClInclude Include="BuildMenu.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="Field.h" />
     <ClInclude Include="GameMenu.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="Tile.h" />
     <ClInclude Include="Tower.h" />
+    <ClInclude Include="TowerMenu.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AreaAttack.cpp" />
     <ClCompile Include="Attack.cpp" />
+    <ClCompile Include="BuildMenu.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Field.cpp" />
     <ClCompile Include="GameMenu.cpp" />
+    <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Tower.cpp" />
+    <ClCompile Include="TowerMenu.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
