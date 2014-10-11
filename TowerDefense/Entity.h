@@ -22,14 +22,14 @@ public:
 	sf::Sprite getSprite();
 
 	//Setters
-	void setPosition(sf::Vector2f _position);
-	void setSize(sf::Vector2f _size);
-	void setSpeed(float _speed);
-	void setSprite(sf::Sprite _sprite);
+	void setPosition(sf::Vector2f mPosition);
+	void setSize(sf::Vector2f mSize);
+	void setSpeed(float mSpeed);
+	void setSprite(sf::Sprite mSprite);
 
 	//Functions
 	Tile getTile();
-	void resolveCollision(Entity _entity);
+	void resolveCollision(Entity mEntity);
 	void draw();
 };
 

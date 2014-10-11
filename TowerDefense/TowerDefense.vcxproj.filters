@@ -13,17 +13,26 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Enemy">
+      <UniqueIdentifier>{e6825e8c-9345-4cc4-b6c5-409d00798888}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Enemy">
+      <UniqueIdentifier>{2af3957c-bf24-49eb-9185-000ffe594aaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Attack">
+      <UniqueIdentifier>{263a5892-e4e5-4130-a547-0e84fa1cabaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Tower">
+      <UniqueIdentifier>{5e2c95e3-41fb-469d-b68b-dd7bf391026a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Attack">
+      <UniqueIdentifier>{ca979e2d-2eb5-4c42-a03a-e4fdd4b7a035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Tower">
+      <UniqueIdentifier>{0f447e64-ae1d-4d88-b795-4c37b6812661}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="AreaAttack.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Attack.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="BuildMenu.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -39,20 +48,62 @@
     <ClCompile Include="Tile.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Tower.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="TowerMenu.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Attack.cpp">
+      <Filter>Fichiers sources\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaAttack.cpp">
+      <Filter>Fichiers sources\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="Tower.cpp">
+      <Filter>Fichiers sources\Tower</Filter>
+    </ClCompile>
+    <ClCompile Include="SFMLTest.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Fichiers sources\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="FastEnemy.cpp">
+      <Filter>Fichiers sources\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="ToughEnemy.cpp">
+      <Filter>Fichiers sources\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalEnemy.cpp">
+      <Filter>Fichiers sources\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="BombEnemy.cpp">
+      <Filter>Fichiers sources\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Config.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Wave.cpp">
+      <Filter>Fichiers sources\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalTower.cpp">
+      <Filter>Fichiers sources\Tower</Filter>
+    </ClCompile>
+    <ClCompile Include="MoneyTower.cpp">
+      <Filter>Fichiers sources\Tower</Filter>
+    </ClCompile>
+    <ClCompile Include="SunTower.cpp">
+      <Filter>Fichiers sources\Tower</Filter>
+    </ClCompile>
+    <ClCompile Include="SlowTower.cpp">
+      <Filter>Fichiers sources\Tower</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleAttack.cpp">
+      <Filter>Fichiers sources\Attack</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AreaAttack.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Attack.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="BuildMenu.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -71,11 +122,59 @@
     <ClInclude Include="Tile.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Tower.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="TowerMenu.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelManager.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Fichiers d%27en-tête\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="BombEnemy.h">
+      <Filter>Fichiers d%27en-tête\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="FastEnemy.h">
+      <Filter>Fichiers d%27en-tête\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="ToughEnemy.h">
+      <Filter>Fichiers d%27en-tête\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Wave.h">
+      <Filter>Fichiers d%27en-tête\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Attack.h">
+      <Filter>Fichiers d%27en-tête\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaAttack.h">
+      <Filter>Fichiers d%27en-tête\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="Tower.h">
+      <Filter>Fichiers d%27en-tête\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalEnemy.h">
+      <Filter>Fichiers d%27en-tête\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalTower.h">
+      <Filter>Fichiers d%27en-tête\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="SlowTower.h">
+      <Filter>Fichiers d%27en-tête\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="SunTower.h">
+      <Filter>Fichiers d%27en-tête\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="MoneyTower.h">
+      <Filter>Fichiers d%27en-tête\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleAttack.h">
+      <Filter>Fichiers d%27en-tête\Attack</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,15 +1,14 @@
 #pragma once
 #include "Entity.h"
+#include "Config.h"
+
 class Tower :
 	public Entity
 {
-protected:
-	float damage;
-	int price;
-	int level;
-	float range;
 public:
+	
 	Tower();
+	Tower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite);
 	~Tower();
 
 	float getDamage();
@@ -17,15 +16,20 @@ public:
 	int getLevel();
 	float getRange();
 
-	void setDamage(float _damage);
-	void setPrice(int _price);
-	void setLevel(int _level);
-	void setRange(float _range);
+	void setDamage(float mDamage);
+	void setPrice(int mPrice);
+	void setLevel(int mLevel);
+	void setRange(float mRange);
 
 	void sellTw();
 	void upgradeTw();
 	void downgradeTw();
 	sf::Vector2f getTarget();
 
+protected:
+	float damage;
+	int price;
+	int level;
+	float range;
 };
 

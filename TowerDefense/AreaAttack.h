@@ -4,9 +4,6 @@
 class AreaAttack :
 	public Attack
 {
-private:
-	float range;
-
 public:
 	AreaAttack();
 	~AreaAttack();
@@ -16,5 +13,8 @@ public:
 	void setRange();
 
 	sf::Vector2f getTarget();
+
+private:
+	float range;
 };
 

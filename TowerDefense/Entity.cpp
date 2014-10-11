@@ -30,32 +30,33 @@ sf::Sprite Entity::getSprite()
 	return sprite;
 }
 
-void Entity::setPosition(sf::Vector2f _position)
+void Entity::setPosition(sf::Vector2f mPosition)
 {
-
+	position = mPosition;
 }
 
-void Entity::setSize(sf::Vector2f _size)
+void Entity::setSize(sf::Vector2f mSize)
 {
-
+	size = mSize;
 }
 
-void Entity::setSpeed(float _speed)
+void Entity::setSpeed(float mSpeed)
 {
-
+	speed = mSpeed;
 }
 
-void Entity::setSprite(sf::Sprite _sprite)
+void Entity::setSprite(sf::Sprite mSprite)
 {
-
+	sprite = mSprite;
 }
 
+//TODO
 Tile Entity::getTile()
 {
-
+	
 }
 
-void Entity::resolveCollision(Entity _entity)
+void Entity::resolveCollision(Entity mEntity)
 {
 
 }

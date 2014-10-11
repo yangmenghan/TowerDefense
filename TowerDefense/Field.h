@@ -1,5 +1,6 @@
 #pragma once
 #include <map>
+#include "Tile.h"
 #include <SFML\Graphics.hpp>
 
 class Field

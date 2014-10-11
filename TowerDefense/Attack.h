@@ -3,12 +3,6 @@
 
 class Attack
 {
-private:
-	float slowAmount;
-
-protected:
-	float damage;
-
 public:
 	Attack();
 	~Attack();
@@ -16,9 +10,15 @@ public:
 	float getDamage();
 	float getSlowAmount();
 
-	void setDamage(float _damage);
+	void setDamage(float mDamage);
 	void setSlowAmount();
 
 	void resolve();
+
+private:
+	float slowAmount;
+
+protected:
+	float damage;
 };
 
