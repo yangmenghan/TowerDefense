@@ -1,7 +1,7 @@
 #include <SFML\Graphics.hpp>
 #include "Menu.h"
 #include "GameMenu.h"
-/*
+
 GameMenu::GameMenu(sf::Texture t, float w, float h, int n)
 {
 	width = w;
@@ -13,7 +13,7 @@ GameMenu::GameMenu(sf::Texture t, float w, float h, int n)
 }
 
 GameMenu::~GameMenu(){}
-*/
+
 
 
 
