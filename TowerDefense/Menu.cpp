@@ -4,10 +4,6 @@ Menu::Menu()
 {
 }
 
-Menu::Menu()
-{
-}
-
 sf::Vector2f Menu::getSize()
 {
 	return size;

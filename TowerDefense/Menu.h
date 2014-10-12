@@ -1,3 +1,4 @@
+#pragma once
 #include <SFML\Graphics.hpp>
 
 class Menu
@@ -24,6 +25,6 @@ public:
 	sf::Texture getTexture();
 
 //Functions
-	virtual void draw() = 0;
-	virtual void close() = 0;
+	void draw();
+	void close();
 };
