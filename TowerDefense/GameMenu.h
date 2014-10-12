@@ -38,6 +38,8 @@ public:
 
 //Fonctions
 	void pauseGame();
+	void speedGame();
+	void returnSpeed();
 	void restartGame();
 	void startWave();
 };
