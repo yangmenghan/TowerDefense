@@ -8,9 +8,8 @@ using namespace std;
 
 class LevelManager{
 public:
-	LevelManager();
-	LevelManager(int hp, float defence, int bounty, int scoreValue, sf::Sprite sprite, float speed);
-	~LevelManager();
+	LevelManager getLevelManager();
+	void kill();
 
 	void gameLoop();
 	void addEnemy(Enemy);
@@ -18,6 +17,7 @@ public:
 	void addTower(Tower);
 	void removeTower(Tower);
 
+	static LevelManager levelManager = NULL;
 private:
 	vector<Enemy> enemies;
 	vector<Tower> towers;
