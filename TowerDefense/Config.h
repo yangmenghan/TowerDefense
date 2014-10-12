@@ -78,9 +78,18 @@ Attack constants
 /*
 Wave constants
 */
+extern const int		WAVE_TOTAL;
+
+/*
+Game Menu constants
+*/
+extern const string		GAME_MENU_DEFAULT_TEXTURE;
+extern const float		GAME_MENU_WIDTH;
+extern const float		GAME_MENU_HEIGHT;
+
 
 /*
 Other constants
 */
-extern const int INIT_MONEY;
-extern const int INIT_HP;
+extern const int		 INIT_MONEY;
+extern const int		 INIT_HP;
