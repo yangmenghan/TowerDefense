@@ -1,13 +1,14 @@
 #pragma once
 #include <SFML\Graphics.hpp>
+#include "Button.h"
 
 class BuildMenu 
 {
 private: 
-	button basicTwButton;
-	button slowTwButton;
-	button moneyTwButton;
-	button sunTwButton;
+	Button basicTwButton;
+	Button slowTwButton;
+	Button moneyTwButton;
+	Button sunTwButton;
 public:
 	BuildMenu();
 	~BuildMenu();

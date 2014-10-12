@@ -88,9 +88,11 @@
     <ClCompile Include="AreaAttack.cpp" />
     <ClCompile Include="Attack.cpp" />
     <ClCompile Include="BuildMenu.cpp" />
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Field.cpp" />
     <ClCompile Include="GameMenu.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MoneyTower.cpp" />
     <ClCompile Include="NormalTower.cpp" />
     <ClCompile Include="SFMLTest.cpp" />
@@ -113,6 +115,7 @@
     <ClInclude Include="AreaAttack.h" />
     <ClInclude Include="Attack.h" />
     <ClInclude Include="BuildMenu.h" />
+    <ClInclude Include="Button.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Field.h" />
     <ClInclude Include="GameMenu.h" />

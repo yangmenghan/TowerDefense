@@ -1,16 +1,30 @@
+#pragma once
 #include <SFML\Graphics.hpp>
 
 class Menu
 {
 protected:
 	sf::Texture texture;
-	float width;
-	float height;
+	sf::Vector2f size;
 	sf::Vector2f position;
 
 public:
+//Constructor and destructor
 	Menu();
 	~Menu();
-	virtual void draw() = 0;
-	virtual void close() = 0;
+
+//Setters
+	void setSize(sf::Vector2f);
+	void setPosition(sf::Vector2f);
+	void setTexture(sf::Texture);
+
+
+//Getters
+	sf::Vector2f getSize();
+	sf::Vector2f getPosition();
+	sf::Texture getTexture();
+
+//Functions
+	void draw();
+	void close();
 };

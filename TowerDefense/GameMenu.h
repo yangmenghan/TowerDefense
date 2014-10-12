@@ -1,5 +1,9 @@
+#pragma once
 #include <SFML\Graphics.hpp>
 #include "Menu.h"
+#include "Button.h"
+#include "Config.h"
+
 
 // needs creation of Button class
 
@@ -14,24 +18,29 @@ private:
 	Button exitButton;
 
 	float gameSpeed;
-	int waveNmb;
+	int waveCount;
 	int waveTotal;
 
 public:
+//Constructors, destructors
+	GameMenu();
 	GameMenu(sf::Texture, float, float, int);
+	~GameMenu();
 
-	void pause();
-	void restart();
-
-	float getSpeed();
-	float setSpeed();
-
-	void startWave();
-	int getWaveNmb();
-	int setWaveNmb();
+//Getters
+	float getGameSpeed();
+	int getWaveCount();
 	int getWaveTotal();
-	int setWaveTotal();
 
-	void draw();
+//Setters
+	void setGameSpeed(float);
+	void setWaveCount(int);
+	void setWaveTotal(int); // not useful ?
 
+//Fonctions
+	void pauseGame();
+	void speedGame();
+	void returnSpeed();
+	void restartGame();
+	void startWave();
 };

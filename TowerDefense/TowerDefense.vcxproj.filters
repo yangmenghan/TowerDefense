@@ -102,6 +102,12 @@
     <ClCompile Include="SingleAttack.cpp">
       <Filter>Fichiers sources\Attack</Filter>
     </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BuildMenu.h">
@@ -175,6 +181,9 @@
     </ClInclude>
     <ClInclude Include="SingleAttack.h">
       <Filter>Fichiers d%27en-tête\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
