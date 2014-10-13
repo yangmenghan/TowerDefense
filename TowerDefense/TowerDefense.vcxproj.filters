@@ -31,24 +31,21 @@
     <Filter Include="Fichiers sources\Tower">
       <UniqueIdentifier>{0f447e64-ae1d-4d88-b795-4c37b6812661}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\Interface %28menus/buttons%29">
+      <UniqueIdentifier>{69da7991-fbad-4f98-8f96-20ac0ae0e66f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Interface %28menus/buttons%29">
+      <UniqueIdentifier>{6aea86a2-5df9-43bb-a112-a6ce70176d4a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BuildMenu.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Entity.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Field.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="GameMenu.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Tile.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="TowerMenu.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Attack.cpp">
@@ -102,33 +99,30 @@
     <ClCompile Include="SingleAttack.cpp">
       <Filter>Fichiers sources\Attack</Filter>
     </ClCompile>
-    <ClCompile Include="Button.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Menu.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMenu.cpp">
+      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildMenu.cpp">
+      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerMenu.cpp">
+      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BuildMenu.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Entity.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Field.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="GameMenu.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Menu.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Tile.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="TowerMenu.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
@@ -182,8 +176,20 @@
     <ClInclude Include="SingleAttack.h">
       <Filter>Fichiers d%27en-tête\Attack</Filter>
     </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMenu.h">
+      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildMenu.h">
+      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
+    </ClInclude>
     <ClInclude Include="Button.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerMenu.h">
+      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
