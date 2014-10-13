@@ -11,6 +11,7 @@ private:
 public:
 //Constructors and destroyers
 	Button();
+	Button(sf::Vector2f, sf::Sprite, sf::Vector2f);
 	~Button();
 
 //Getters
