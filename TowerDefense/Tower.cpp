@@ -1,16 +1,11 @@
 #include "Tower.h"
+#include "Player.h"
 
-/*
-protected:
-float damage;
-int price;
-int level;
-float range;
-*/
 Tower::Tower()
 {
 	damage = 0.0;
 	price = 0;
+	income = 0;
 	level = 0;
 	range = 0.0;
 	speed = 0.0;
@@ -20,10 +15,16 @@ Tower::Tower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, 
 {
 	damage = mDamage;
 	price = mPrice;
+	income = int(price * INCOME_RATE);
 	level = mLevel;
 	range = mRange;
 	speed = mSpeed;
 	sprite = mSprite;
+
+	rangeCircle.setPosition(this->getPosition());
+	rangeCircle.setRadius(range);
+	rangeCircle.setOutlineThickness(2);
+	rangeCircle.setFillColor(RANGE_CIRCLE_FILL_COLOR);
 }
 
 Tower::~Tower()
@@ -73,17 +74,19 @@ void Tower::setRange(float mRange)
 
 void Tower::sellTw()
 {
-
+	
 }
 
 void Tower::upgradeTw()
 {
-
+	if (level < 3)
+		level++;
 }
 
 void Tower::downgradeTw()
 {
-
+	if (level > 0)
+		level--;
 }
 
 sf::Vector2f Tower::getTarget()
@@ -91,3 +94,7 @@ sf::Vector2f Tower::getTarget()
 
 }
 
+void Tower::showRangeCircle()
+{
+
+}

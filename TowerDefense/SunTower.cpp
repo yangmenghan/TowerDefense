@@ -5,6 +5,7 @@ SunTower::SunTower()
 {
 	damage = SUN_TOWER_DAMAGE;
 	price = SUN_TOWER_PRICE;
+	income = int(price * INCOME_RATE);
 	level = 1;
 	range = SUN_TOWER_RANGE;
 	speed = SUN_TOWER_SPEED;
@@ -16,6 +17,11 @@ SunTower::SunTower()
 	}
 
 	sprite.setTexture(texture);
+
+	rangeCircle.setPosition(this->getPosition());
+	rangeCircle.setRadius(range);
+	rangeCircle.setOutlineThickness(2);
+	rangeCircle.setFillColor(sf::Color(0, 0, 255, 100));
 }
 
 SunTower::SunTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite)
