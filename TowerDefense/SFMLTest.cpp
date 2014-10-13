@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
 
-//Ceci est un test SFML, à supprimer pour la compilation finale - MY
+//Ceci est un test SFML, ?supprimer pour la compilation finale - MY
 
 
 int main()

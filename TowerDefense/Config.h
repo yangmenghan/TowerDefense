@@ -9,6 +9,16 @@ using namespace std;
 		call simply the name of the global constant ! :D
 */
 
+
+/*
+Tile constants
+*/
+extern const int		TILE_WIDTH;
+extern const int		TILE_HEIGHT;
+extern const int		TILE_COOLDOWN_TIME;
+extern const int		TILE_NUM_HOR;
+extern const int		TILE_NUM_VER;
+
 /*
 Enemy constants
 */
@@ -70,6 +80,7 @@ extern const float		SLOW_TOWER_SPEED;
 extern const float		SLOW_TOWER_RANGE;
 extern const int		SLOW_TOWER_PRICE;
 extern const string		SLOW_TOWER_SPRITE_ADD;
+
 
 /*
 Attack constants
