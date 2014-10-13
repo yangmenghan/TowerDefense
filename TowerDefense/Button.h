@@ -4,6 +4,7 @@
 class Button
 {
 private:
+	sf::Texture texture;
 	sf::Sprite sprite;
 	sf::Vector2i position;
 	sf::Vector2f size;
@@ -11,7 +12,7 @@ private:
 public:
 //Constructors and destroyers
 	Button();
-	Button(sf::Vector2f, sf::Sprite, sf::Vector2i);
+	Button(sf::Vector2f, sf::Texture, sf::Vector2i);
 	~Button();
 
 //Getters

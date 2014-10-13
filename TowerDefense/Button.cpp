@@ -6,10 +6,10 @@ Button::Button()
 	position = sf::Vector2i(0, 0);
 }
 
-Button::Button(sf::Vector2f mySize, sf::Sprite mySprite, sf::Vector2i myPosition)
+Button::Button(sf::Vector2f mySize, sf::Texture texture, sf::Vector2i myPosition)
 {
 	size = mySize;
-	sprite = mySprite;
+	sprite.setTexture(texture);
 	position = myPosition;
 }
 
@@ -48,7 +48,7 @@ void Button::setSprite(sf::Sprite mSprite)
 
 void Button::draw()
 {
-	window.draw(sprite);
+	// TO DO
 }
 
 bool Button::mouseHover()

@@ -87,6 +87,14 @@ extern const string		GAME_MENU_DEFAULT_TEXTURE;
 extern const float		GAME_MENU_WIDTH;
 extern const float		GAME_MENU_HEIGHT;
 
+/*
+Button constants
+*/
+extern const string		PAUSE_BUTTON_TEXTURE;
+extern const string		SPEED_BUTTON_TEXTURE;
+extern const string		MUTE_BUTTON_TEXTURE;
+extern const string		RESTART_BUTTON_TEXTURE;
+extern const string		EXIT_BUTTON_TEXTURE;
 
 /*
 Other constants
