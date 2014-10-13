@@ -48,14 +48,14 @@ void Button::setSprite(sf::Sprite mSprite)
 
 void Button::draw()
 {
-
+	window.draw(sprite);
 }
 
 bool Button::mouseHover()
 {
 	bool isHovering = false;
 	sf::Vector2i mousePosition = sf::Mouse::getPosition(); // for now gets absolute position, might need to make it relative
-	//is Vector2i. Make Vector 2f ?
+	//is Vector2i. Make into Vector2f ?
 	if (/*position is in button*/)
 	{
 		isHovering = true;
@@ -72,5 +72,23 @@ bool Button::mouseHover()
 
 bool Button::mouseClick()
 {
-
+	sf::Event event;
+	bool isClicked = false;
+	
+	if (event.type == sf::Event::KeyPressed)
+	{
+		if (event.key.code == sf::Keyboard::Escape)
+		{
+			if (mouseHover())
+			{
+				isClicked = true;
+			}
+		}
+			
+	}
+	else
+	{
+		isClicked = false;
+	}
+	return isClicked;
 }
