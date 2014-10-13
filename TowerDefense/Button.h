@@ -5,28 +5,28 @@ class Button
 {
 private:
 	sf::Sprite sprite;
-	sf::Vector2f position;
+	sf::Vector2i position;
 	sf::Vector2f size;
 
 public:
 //Constructors and destroyers
 	Button();
-	Button(sf::Vector2f, sf::Sprite, sf::Vector2f);
+	Button(sf::Vector2f, sf::Sprite, sf::Vector2i);
 	~Button();
 
 //Getters
-	sf::Vector2f getPosition();
+	sf::Vector2i getPosition();
 	sf::Vector2f getSize();
 	sf::Sprite getSprite();
 
 //Setters
-	void setPosition(sf::Vector2f mPosition);
+	void setPosition(sf::Vector2i mPosition);
 	void setSize(sf::Vector2f mSize);
 	void setSprite(sf::Sprite mSprite);
 
 //Functions
 	void draw();
-	void mouseClick();
-	void mouseHover();
+	bool mouseClick();
+	bool mouseHover();
 
 };

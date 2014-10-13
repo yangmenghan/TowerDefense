@@ -21,13 +21,12 @@ GameMenu::GameMenu()
 	texture = t;
 }
 
-GameMenu::GameMenu(sf::Texture t, float w, float h, int n)
+GameMenu::GameMenu(sf::Texture myTexture, sf::Vector2f mySize, int myWaveTotal)
 {
-	size.x = w;
-	size.y = h;
-	texture = t;
+	size = mySize;
+	texture = myTexture;
 	gameSpeed = 1;
-	waveTotal = n;
+	waveTotal = myWaveTotal;
 	waveCount = 0;
 }
 
@@ -48,19 +47,19 @@ int GameMenu::getWaveTotal()
 	return waveTotal;
 }
 
-void GameMenu::setGameSpeed(float gs)
+void GameMenu::setGameSpeed(float myGameSpeed)
 {
-	gameSpeed = gs;
+	gameSpeed = myGameSpeed;
 }
 
-void GameMenu::setWaveCount(int wc)
+void GameMenu::setWaveCount(int myWaveCount)
 {
-	waveCount = wc;
+	waveCount = myWaveCount;
 }
 
-void GameMenu::setWaveTotal(int wt)
+void GameMenu::setWaveTotal(int myWaveTotal)
 {
-	waveTotal = wt;
+	waveTotal = myWaveTotal;
 }
 
 //Functions

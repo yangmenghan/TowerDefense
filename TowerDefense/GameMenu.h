@@ -24,7 +24,7 @@ private:
 public:
 //Constructors, destructors
 	GameMenu();
-	GameMenu(sf::Texture, float, float, int);
+	GameMenu(sf::Texture, sf::Vector2f, int);
 	~GameMenu();
 
 //Getters
