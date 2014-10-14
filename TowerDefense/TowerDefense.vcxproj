@@ -104,6 +104,7 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SingleAttack.cpp" />
     <ClCompile Include="SlowTower.cpp" />
+    <ClCompile Include="StartMenu.cpp" />
     <ClCompile Include="SunTower.cpp" />
     <ClCompile Include="Wave.cpp" />
     <ClCompile Include="ToughEnemy.cpp" />
@@ -129,6 +130,7 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="SingleAttack.h" />
     <ClInclude Include="SlowTower.h" />
+    <ClInclude Include="StartMenu.h" />
     <ClInclude Include="SunTower.h" />
     <ClInclude Include="Wave.h" />
     <ClInclude Include="ToughEnemy.h" />

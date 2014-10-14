@@ -7,6 +7,15 @@ call simply the name of the global constant ! :D
 */
 
 /*
+Tile constants
+*/
+extern const int		TILE_WIDTH				= 100;
+extern const int		TILE_HEIGHT				= 100;
+extern const int		TILE_COOLDOWN_TIME		= 5;
+extern const int		TILE_NUM_HOR			= 20;
+extern const int		TILE_NUM_VER			= 10;
+
+/*
 Enemy constants
 */
 

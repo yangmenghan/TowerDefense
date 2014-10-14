@@ -1,4 +1,5 @@
 #include "Button.h"
+#include <string>
 
 Button::Button()
 {
@@ -6,11 +7,32 @@ Button::Button()
 	position = sf::Vector2i(0, 0);
 }
 
-Button::Button(sf::Vector2f mySize, sf::Texture texture, sf::Vector2i myPosition)
+Button::Button(std::string textureAddress)
 {
-	size = mySize;
+	size = sf::Vector2f(0, 0);
+	position = sf::Vector2i(0, 0);
+
+	sf::Texture texture;
+	if (!texture.loadFromFile(textureAddress))
+	{
+		// TODO erreur...
+	}
+
 	sprite.setTexture(texture);
+}
+
+Button::Button(sf::Vector2f mySize, std::string textureAddress, sf::Vector2i myPosition)
+{
+	sf::Texture texture;
+	if (!texture.loadFromFile(textureAddress))
+	{
+		// TODO erreur...
+	}
+
+	sprite.setTexture(texture);
+
 	position = myPosition;
+	size = mySize;
 }
 
 
