@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <SFML\Graphics.hpp>
 
 using namespace std;
 
@@ -56,6 +57,9 @@ extern const string		TOUGH_ENEMY_SPRITE_ADD;
 /*
 Tower constants
 */
+
+extern const float		INCOME_RATE;
+extern const sf::Color	RANGE_CIRCLE_FILL_COLOR;
 
 extern const float		NORMAL_TOWER_DAMAGE;
 extern const float		NORMAL_TOWER_SPEED;
