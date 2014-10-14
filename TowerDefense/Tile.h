@@ -1,21 +1,37 @@
 #pragma once
 #include <SFML\Graphics.hpp>
 #include <vector>
+#include "Tower.h"
+#include "BuildMenu.h"
+#include "TowerMenu.h"
 
 class Tile
 {
 private:
-	vector<float> position;
+	sf::Vector2f position;
 	int width;
 	int height;
-	Tower tower;
-	int cooldown;
+	int cooldown;//剩余的冷却时间，默认为正常状态，值为0.若被污染，倒计时TILLE_COOLDOWN秒恢复
+	Tower* tower;
 public:
+	//Constructors and destroyers
 	Tile();
 	~Tile();
+
+	//Getters
+	sf::Vector2f getPosition();
+	Tower* getTower();
+	int getCooldowm();
+
+	//Setters
+	void setPosition(sf::Vector2f);
+	void setTower(Tower*);
+	void setCooldown(int);
+
+	//Functions
 	bool isPolluted();
-	void openTowerMenu();
-	void openBuildMenu();
-	void setTower();
-	Tower getTower();
+	bool hasTower();
+	BuildMenu* openBuildMenu();
+	TowerMenu* openTowerMenu();
+
 };

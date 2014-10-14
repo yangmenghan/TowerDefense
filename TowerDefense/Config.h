@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <SFML\Graphics.hpp>
 
 using namespace std;
 
@@ -8,6 +9,16 @@ using namespace std;
 		include Config.h in your class
 		call simply the name of the global constant ! :D
 */
+
+
+/*
+Tile constants
+*/
+extern const int		TILE_WIDTH;
+extern const int		TILE_HEIGHT;
+extern const int		TILE_COOLDOWN_TIME;
+extern const int		TILE_NUM_HOR;
+extern const int		TILE_NUM_VER;
 
 /*
 Enemy constants
@@ -47,6 +58,9 @@ extern const string		TOUGH_ENEMY_SPRITE_ADD;
 Tower constants
 */
 
+extern const float		INCOME_RATE;
+extern const sf::Color	RANGE_CIRCLE_FILL_COLOR;
+
 extern const float		NORMAL_TOWER_DAMAGE;
 extern const float		NORMAL_TOWER_SPEED;
 extern const float		NORMAL_TOWER_RANGE;
@@ -70,6 +84,7 @@ extern const float		SLOW_TOWER_SPEED;
 extern const float		SLOW_TOWER_RANGE;
 extern const int		SLOW_TOWER_PRICE;
 extern const string		SLOW_TOWER_SPRITE_ADD;
+
 
 /*
 Attack constants

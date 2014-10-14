@@ -25,11 +25,14 @@ public:
 	void upgradeTw();
 	void downgradeTw();
 	sf::Vector2f getTarget();
+	void showRangeCircle();
 
 protected:
 	float damage;
 	int price;
+	int income;
 	int level;
 	float range;
+	sf::CircleShape rangeCircle;
 };
 

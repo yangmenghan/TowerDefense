@@ -7,6 +7,15 @@ call simply the name of the global constant ! :D
 */
 
 /*
+Tile constants
+*/
+extern const int		TILE_WIDTH				= 100;
+extern const int		TILE_HEIGHT				= 100;
+extern const int		TILE_COOLDOWN_TIME		= 5;
+extern const int		TILE_NUM_HOR			= 20;
+extern const int		TILE_NUM_VER			= 10;
+
+/*
 Enemy constants
 */
 
@@ -43,6 +52,10 @@ extern const string		TOUGH_ENEMY_SPRITE_ADD	= "";
 /*
 Tower constants
 */
+
+extern const float		INCOME_RATE				= 0.8;
+extern const sf::Color	RANGE_CIRCLE_FILL_COLOR = sf::Color(0, 0, 255, 100);
+
 
 extern const float		NORMAL_TOWER_DAMAGE		= 18;
 extern const float		NORMAL_TOWER_SPEED		= 1;

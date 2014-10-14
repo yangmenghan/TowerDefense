@@ -5,6 +5,7 @@ NormalTower::NormalTower()
 {
 	damage = NORMAL_TOWER_DAMAGE;
 	price = NORMAL_TOWER_PRICE;
+	income = int(price * INCOME_RATE);
 	level = 1;
 	range = NORMAL_TOWER_RANGE;
 	speed = NORMAL_TOWER_SPEED;
@@ -16,6 +17,11 @@ NormalTower::NormalTower()
 	}
 
 	sprite.setTexture(texture);
+
+	rangeCircle.setPosition(this->getPosition());
+	rangeCircle.setRadius(range);
+	rangeCircle.setOutlineThickness(2);
+	rangeCircle.setFillColor(sf::Color(0, 0, 255, 100));
 }
 
 NormalTower::NormalTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite)
