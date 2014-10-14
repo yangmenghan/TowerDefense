@@ -1,10 +1,10 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <string>
 
 class Button
 {
 private:
-	sf::Texture texture;
 	sf::Sprite sprite;
 	sf::Vector2i position;
 	sf::Vector2f size;
@@ -12,7 +12,8 @@ private:
 public:
 //Constructors and destroyers
 	Button();
-	Button(sf::Vector2f, sf::Texture, sf::Vector2i);
+	Button(std::string);
+	Button(sf::Vector2f, std::string, sf::Vector2i);
 	~Button();
 
 //Getters
@@ -27,7 +28,7 @@ public:
 
 //Functions
 	void draw();
-	bool mouseClick();
+	bool mouseClick();  // should be an event ?
 	bool mouseHover();
 
 };

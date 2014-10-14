@@ -11,6 +11,7 @@ protected:
 public:
 //Constructor and destructor
 	Menu();
+	Menu(sf::Vector2f, sf::Vector2f, sf::Texture);
 	~Menu();
 
 //Setters

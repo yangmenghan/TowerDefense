@@ -1,7 +1,10 @@
 #include "Menu.h"
 
-Menu::Menu()
+Menu::Menu(sf::Vector2f mySize, sf::Vector2f myPosition, sf::Texture myTexture)
 {
+	size = mySize;
+	position = myPosition;
+	texture = myTexture;
 }
 
 sf::Vector2f Menu::getSize()
@@ -18,17 +21,29 @@ sf::Texture Menu::getTexture()
 	return texture;
 }
 
-void Menu::setSize(sf::Vector2f s)
+void Menu::setSize(sf::Vector2f mySize)
 {
-	size = s;
+	size = mySize;
 }
 
-void Menu::setPosition(sf::Vector2f p)
+void Menu::setPosition(sf::Vector2f myPosition)
 {
-	position = p;
+	position = myPosition;
 }
 
-void Menu::setTexture(sf::Texture t)
+void Menu::setTexture(sf::Texture myTexture)
 {
-	texture = t;
+	texture = myTexture;
+}
+
+//TO DO
+
+void Menu::draw()
+{
+
+}
+
+void Menu::close()
+{
+
 }

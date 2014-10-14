@@ -95,6 +95,10 @@ extern const string		SPEED_BUTTON_TEXTURE;
 extern const string		MUTE_BUTTON_TEXTURE;
 extern const string		RESTART_BUTTON_TEXTURE;
 extern const string		EXIT_BUTTON_TEXTURE;
+extern const string		START_GAME_TEXTURE;
+extern const string		SCOREBOARD_BUTTON_TEXTURE;
+extern const string		CREDITS_BUTTON_TEXTURE;
+extern const string		EXIT_GAME_BUTTON_TEXTURE;
 
 /*
 Other constants

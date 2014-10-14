@@ -11,11 +11,11 @@ class GameMenu
 	: public Menu
 {
 private:
-	Button pauseButton;
-	Button speedButton;
-	Button muteButton;
-	Button restartButton;
-	Button exitButton;
+	Button pauseButton = Button(PAUSE_BUTTON_TEXTURE);
+	Button speedButton = Button(SPEED_BUTTON_TEXTURE);
+	Button muteButton = Button(MUTE_BUTTON_TEXTURE);
+	Button restartButton = Button(RESTART_BUTTON_TEXTURE);
+	Button exitButton = Button(EXIT_BUTTON_TEXTURE);
 
 	float gameSpeed;
 	int waveCount;
@@ -28,6 +28,7 @@ public:
 	~GameMenu();
 
 //Getters
+//Do we need getters and setters for buttons ?
 	float getGameSpeed();
 	int getWaveCount();
 	int getWaveTotal();
