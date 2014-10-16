@@ -12,7 +12,7 @@ private:
 	Button muteButton = Button(MUTE_BUTTON_TEXTURE);
 	Button exitGameButton = Button(EXIT_BUTTON_TEXTURE);
 
-private:
+public:
 	void startGame();
 	void openCredits();
 };

@@ -96,11 +96,13 @@ Wave constants
 extern const int		WAVE_TOTAL;
 
 /*
-Game Menu constants
+Menu constants
 */
 extern const string		GAME_MENU_DEFAULT_TEXTURE;
 extern const float		GAME_MENU_WIDTH;
 extern const float		GAME_MENU_HEIGHT;
+
+extern const string		CREDITS_ADD;
 
 /*
 Button constants
