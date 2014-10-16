@@ -117,6 +117,9 @@
     <ClCompile Include="StartMenu.cpp">
       <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
     </ClCompile>
+    <ClCompile Include="CreditsMenu.cpp">
+      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity.h">
@@ -195,6 +198,9 @@
       <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
     </ClInclude>
     <ClInclude Include="StartMenu.h">
+      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
+    </ClInclude>
+    <ClInclude Include="CreditsMenu.h">
       <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
     </ClInclude>
   </ItemGroup>
