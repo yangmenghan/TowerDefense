@@ -9,20 +9,30 @@ using namespace std;
 
 class LevelManager{
 public:
-	static LevelManager getLevelManager();
+<<<<<<< HEAD
+
 	Player getPlayer();
 
+=======
+>>>>>>> origin/master
 	void kill();
 
 	void gameLoop();
 	void addEnemy(Enemy);
 	void removeEnemy(Enemy);
+	void removeEnemy(int);
 	void addTower(Tower);
 	void removeTower(Tower);
+	void removeTower(int);
 
-	static LevelManager levelManager;
+	vector<Enemy>* getEnemies();
+	vector<Tower>* getTowers();
+	LevelManager* getLevelManager();
+
+	static LevelManager* levelManager;
 private:
+	LevelManager();
+	~LevelManager();
 	vector<Enemy> enemies;
 	vector<Tower> towers;
-	Player player;
 };
