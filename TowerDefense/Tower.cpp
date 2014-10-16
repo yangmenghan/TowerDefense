@@ -1,6 +1,5 @@
 #include "Tower.h"
 #include "Player.h"
-#include "LevelManager.h"
 
 Tower::Tower()
 {
@@ -74,7 +73,7 @@ void Tower::setRange(float mRange)
 
 void Tower::sellTw()
 {
-		
+	
 }
 
 void Tower::upgradeTw()
@@ -89,29 +88,18 @@ void Tower::downgradeTw()
 		level--;
 }
 
-Enemy Tower::getTarget()
+sf::Vector2f Tower::getTarget()
 {
-	std::vector<Enemy>* enemiesField = LevelManager::getLevelManager.getEnemies();
-	Enemy enemyMinDistanceToTarget;
-	float minDistance = 0;
-	for (Enemy e : *enemiesField)
-	{
-		if (minDistance == 0)
-		{
-			minDistance = e.getDistanceToTarget;
-			enemyMinDistanceToTarget = e;
-		}
-		else if (e.getDistanceToTarget() < minDistance)
-		{
-			minDistance = e.getDistanceToTarget;
-			enemyMinDistanceToTarget = e;
-		}
-	}
+	
+}
 
-	return enemyMinDistanceToTarget;
+
+void Tower::draw()
+{
+
 }
 
 void Tower::showRangeCircle()
 {
-	
+
 }

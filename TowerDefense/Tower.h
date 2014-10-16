@@ -1,7 +1,6 @@
 #pragma once
 #include "Entity.h"
 #include "Config.h"
-#include "LevelManager.h"
 
 class Tower :
 	public Entity
@@ -26,8 +25,9 @@ public:
 	void sellTw();
 	void upgradeTw();
 	void downgradeTw();
-	Enemy getTarget();
-	void showRangeCircle(); 
+	sf::Vector2f getTarget();
+	void draw();
+	void showRangeCircle();
 
 protected:
 	float damage;
@@ -37,5 +37,7 @@ protected:
 	float range;
 	sf::CircleShape rangeCircle;
 	enum TowerType {NORMAL, SLOW, SUN, MONEY} towerType;
+	
+	
 };
 
