@@ -19,6 +19,7 @@ GameMenu::GameMenu()
 	}
 
 	texture = t;
+	sprite.setTexture(texture);
 }
 
 GameMenu::GameMenu(sf::Texture myTexture, sf::Vector2f mySize, int myWaveTotal)
@@ -28,6 +29,7 @@ GameMenu::GameMenu(sf::Texture myTexture, sf::Vector2f mySize, int myWaveTotal)
 	gameSpeed = 1;
 	waveTotal = myWaveTotal;
 	waveCount = 0;
+	sprite.setTexture(texture);
 }
 
 GameMenu::~GameMenu(){}
@@ -89,6 +91,16 @@ void GameMenu::restartGame()
 void GameMenu::startWave()
 {
 
+}
+
+void GameMenu::display()
+{
+	pauseButton.draw();
+	speedButton.draw();
+	muteButton.draw();
+	restartButton.draw();
+	exitButton.draw();
+	window.draw(sprite);
 }
 
 

@@ -17,6 +17,8 @@ private:
 	Button restartButton = Button(RESTART_BUTTON_TEXTURE);
 	Button exitButton = Button(EXIT_BUTTON_TEXTURE);
 
+	enum Actions {Pause, SpeedUp, ReturnSpeed, Mute, RestartGame, Exit};
+
 	float gameSpeed;
 	int waveCount;
 	int waveTotal;
@@ -38,10 +40,13 @@ public:
 	void setWaveCount(int);
 	void setWaveTotal(int); // not useful ?
 
+	
+
 //Fonctions
 	void pauseGame();
 	void speedGame();
 	void returnSpeed();
 	void restartGame();
 	void startWave();
+	void display();
 };

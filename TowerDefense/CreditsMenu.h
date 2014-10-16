@@ -1,6 +1,5 @@
 #include <SFML\Graphics.hpp>
 #include "Menu.h"
-#include "GameMenu.h"
 #include "Button.h"
 #include "Config.h"
 #include <string>
@@ -9,12 +8,12 @@ class CreditsMenu : public Menu
 {
 private:
 	Button backButton;
-	string CREDIT_ADD;
-	sf::Font font;
+	string CREDITS_ADD;
+	sf::Sprite sprite;
 
 public:
-	string getCreditsFile();
-	sf::Font getFont();
-	void setFont();
+	string getCreditsAddress();
+	sf::Sprite getSprite();
+	void setSprite(sf::Sprite);
 	void rollCredits();
 };

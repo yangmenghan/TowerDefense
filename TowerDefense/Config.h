@@ -102,7 +102,7 @@ extern const string		GAME_MENU_DEFAULT_TEXTURE;
 extern const float		GAME_MENU_WIDTH;
 extern const float		GAME_MENU_HEIGHT;
 
-extern const string		CREDITS_ADD;
+extern const string		CREDITS_SPRITE_ADD;
 
 /*
 Button constants

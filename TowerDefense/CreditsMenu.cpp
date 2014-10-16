@@ -1,24 +1,23 @@
+#include <SFML\Graphics.hpp>
 #include "CreditsMenu.h"
 
-string getCreditsFile()
+
+string CreditsMenu::getCreditsAddress()
 {
 	return CREDITS_ADD;
 }
 
-sf::Font getFont()
+sf::Sprite CreditsMenu::getSprite()
 {
-	return font;
+	return sprite;
 }
 
-void setFont()
+void CreditsMenu::setSprite(sf::Sprite mySprite)
 {
-
+	sprite = mySprite;
 }
 
-
-
-void rollCredits()
+void CreditsMenu::rollCredits()
 {
-	sf::Text credits;
 
 }
