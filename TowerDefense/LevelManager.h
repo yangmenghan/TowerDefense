@@ -9,12 +9,11 @@ using namespace std;
 
 class LevelManager{
 public:
-<<<<<<< HEAD
+
 
 	Player getPlayer();
 
-=======
->>>>>>> origin/master
+
 	void kill();
 
 	void gameLoop();
@@ -27,7 +26,7 @@ public:
 
 	vector<Enemy>* getEnemies();
 	vector<Tower>* getTowers();
-	LevelManager* getLevelManager();
+	static LevelManager* getLevelManager();
 
 	static LevelManager* levelManager;
 private:
