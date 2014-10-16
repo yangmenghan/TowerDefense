@@ -9,7 +9,7 @@ using namespace std;
 
 class LevelManager{
 public:
-	LevelManager getLevelManager();
+	static LevelManager getLevelManager();
 	Player getPlayer();
 
 	void kill();

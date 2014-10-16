@@ -91,7 +91,7 @@ void Tower::downgradeTw()
 
 Enemy Tower::getTarget()
 {
-	std::vector<Enemy>* enemiesField = LevelManager::getLevelManager.getEnemies();
+	std::vector<Enemy>* enemiesField = LevelManager::getLevelManager().ge;
 	Enemy enemyMinDistanceToTarget;
 	float minDistance = 0;
 	for (Enemy e : *enemiesField)

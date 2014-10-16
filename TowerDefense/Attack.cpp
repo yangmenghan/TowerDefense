@@ -30,6 +30,7 @@ void Attack::setSlowAmount(float mFloatAmount)
 
 void Attack::resolve(int type)
 {
+	//¼õÑª£¬¶¯»­
 	switch (type)
 	{
 	case NORMAL:

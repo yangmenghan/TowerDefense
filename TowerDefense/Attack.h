@@ -18,6 +18,6 @@ public:
 protected:
 	float slowAmount;
 	float damage;
-	typedef enum TowerType{NORMAL, SLOW, SUN, MONEY};
+	enum TowerType{NORMAL, SLOW, SUN, MONEY};
 };
 
