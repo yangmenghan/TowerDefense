@@ -3,12 +3,6 @@
 
 Tower::Tower()
 {
-	damage = 0.0;
-	price = 0;
-	income = 0;
-	level = 0;
-	range = 0.0;
-	speed = 0.0;
 }
 
 Tower::Tower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite)
@@ -51,6 +45,11 @@ float Tower::getRange()
 	return range;
 }
 
+int Tower::getTowerType()
+{
+	return towerType;
+}
+
 void Tower::setDamage(float mDamage)
 {
 	damage = mDamage;
@@ -90,6 +89,12 @@ void Tower::downgradeTw()
 }
 
 sf::Vector2f Tower::getTarget()
+{
+	
+}
+
+
+void Tower::draw()
 {
 
 }

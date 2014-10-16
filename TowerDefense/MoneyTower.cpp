@@ -3,6 +3,7 @@
 
 MoneyTower::MoneyTower()
 {
+	towerType = MONEY;
 	damage = MONEY_TOWER_DAMAGE;
 	price = MONEY_TOWER_PRICE;
 	income = int(price * INCOME_RATE);
@@ -27,6 +28,7 @@ MoneyTower::MoneyTower()
 MoneyTower::MoneyTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite)
 {
 	Tower(mDamage, mPrice, mLevel, mRange, mSpeed, mSprite);
+	towerType = MONEY;
 }
 
 MoneyTower::~MoneyTower()

@@ -76,7 +76,7 @@ BuildMenu* Tile::openBuildMenu()
 TowerMenu* Tile::openTowerMenu()
 {
 	TowerMenu towerMenu;
-	TowerMenu* ptowerMenu;
-	ptowerMenu = &towerMenu;
-	return ptowerMenu;
+	TowerMenu* pTowerMenu;
+	pTowerMenu = &towerMenu;
+	return pTowerMenu;
 }

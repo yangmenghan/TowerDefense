@@ -3,6 +3,7 @@
 
 class Attack
 {
+
 public:
 	Attack();
 	~Attack();
@@ -11,14 +12,12 @@ public:
 	float getSlowAmount();
 
 	void setDamage(float mDamage);
-	void setSlowAmount();
+	void setSlowAmount(float mSlowAmount);
 
-	void resolve();
-
-private:
-	float slowAmount;
-
+	void resolve(int type);
 protected:
+	float slowAmount;
 	float damage;
+	typedef enum TowerType{NORMAL, SLOW, SUN, MONEY};
 };
 

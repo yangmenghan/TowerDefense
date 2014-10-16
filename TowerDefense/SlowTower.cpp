@@ -3,6 +3,7 @@
 
 SlowTower::SlowTower()
 {
+	towerType = SLOW;
 	damage = SLOW_TOWER_DAMAGE;
 	price = SLOW_TOWER_PRICE;
 	income = int(price * INCOME_RATE);
@@ -27,13 +28,14 @@ SlowTower::SlowTower()
 SlowTower::SlowTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite)
 {
 	Tower(mDamage, mPrice, mLevel, mRange, mSpeed, mSprite);
+	towerType = SLOW;
 }
 
 SlowTower::~SlowTower()
 {
 }
 
-void SlowTower::attack()
+void SlowTower::doAttack()
 {
 
 }

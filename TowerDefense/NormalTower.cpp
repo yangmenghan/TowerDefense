@@ -3,13 +3,14 @@
 
 NormalTower::NormalTower()
 {
+	towerType = NORMAL;
 	damage = NORMAL_TOWER_DAMAGE;
 	price = NORMAL_TOWER_PRICE;
 	income = int(price * INCOME_RATE);
 	level = 1;
 	range = NORMAL_TOWER_RANGE;
 	speed = NORMAL_TOWER_SPEED;
-
+	
 	sf::Texture texture;
 	if (!texture.loadFromFile(NORMAL_TOWER_SPRITE_ADD))
 	{
@@ -27,13 +28,14 @@ NormalTower::NormalTower()
 NormalTower::NormalTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite)
 {
 	Tower(mDamage, mPrice, mLevel, mRange, mSpeed, mSprite);
+	towerType = NORMAL;
 }
 
 NormalTower::~NormalTower()
 {
 }
 
-void NormalTower::attack()
+void NormalTower::doAttack()
 {
 
 }

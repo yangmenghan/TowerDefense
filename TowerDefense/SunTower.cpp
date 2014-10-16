@@ -3,6 +3,7 @@
 
 SunTower::SunTower()
 {
+	towerType = SUN;
 	damage = SUN_TOWER_DAMAGE;
 	price = SUN_TOWER_PRICE;
 	income = int(price * INCOME_RATE);
@@ -27,13 +28,14 @@ SunTower::SunTower()
 SunTower::SunTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite)
 {
 	Tower(mDamage, mPrice, mLevel, mRange, mSpeed, mSprite);
+	towerType = SUN;
 }
 
 SunTower::~SunTower()
 {
 }
 
-void SunTower::attack()
+void SunTower::doAttack()
 {
 
 }

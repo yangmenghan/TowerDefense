@@ -11,7 +11,7 @@ private:
 	sf::Vector2f position;
 	int width;
 	int height;
-	int cooldown;//剩余的冷却时间，默认为正常状态，值为0.若被污染，倒计时TILLE_COOLDOWN秒恢复
+	int cooldown;//剩余的冷却时间，默认为正常状态，值为0.若被污染，倒计时TILE_COOLDOWN_TIME秒恢复
 	Tower* tower;
 public:
 	//Constructors and destroyers
