@@ -1,9 +1,9 @@
 #include "LevelManager.h"
 
-LevelManager LevelManager::getLevelManager(){
+LevelManager* LevelManager::getLevelManager(){
 	if (NULL == levelManager)
 	{
-		levelManager = new UniqueObject;
+		levelManager = new LevelManager;
 	}
 
 	return levelManager;
@@ -25,6 +25,11 @@ void LevelManager::addEnemy(Enemy e){
 };
 
 void LevelManager::removeEnemy(Enemy e){
+	enemies.erase(std::remove(enemies.begin(), enemies.end(), e), enemies.end());
+};
+
+void LevelManager::removeEnemy(int index){
+	enemies.erase(enemies.begin() + index);
 };
 
 void LevelManager::addTower(Tower t){
@@ -32,4 +37,18 @@ void LevelManager::addTower(Tower t){
 };
 
 void LevelManager::removeTower(Tower t){
+	towers.erase(std::remove(towers.begin(), towers.end(), t), towers.end());
 };
+
+void LevelManager::removeTower(int index){
+	towers.erase(towers.begin()+index);
+};
+
+vector<Enemy>* LevelManager::getEnemies(){
+	return &enemies;
+
+}
+
+vector<Tower>* LevelManager::getTowers(){
+	return &towers;
+}

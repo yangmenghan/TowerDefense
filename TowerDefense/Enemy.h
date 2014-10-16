@@ -17,6 +17,7 @@ public :
 	int getScoreValue();
 	float getDefence();
 	int getSlowTime();
+	float getDistanceToTarget();
 
 	void takeDamage(int);
 

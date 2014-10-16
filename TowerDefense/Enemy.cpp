@@ -26,6 +26,10 @@ Enemy::Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite m
 	sprite = mSprite;
 }
 
+float Enemy::getDistanceToTarget(){
+
+};
+
 bool Enemy::move(){
 
 };
