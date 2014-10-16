@@ -161,12 +161,6 @@
     <ClInclude Include="Wave.h">
       <Filter>Fichiers d%27en-tête\Enemy</Filter>
     </ClInclude>
-    <ClInclude Include="Attack.h">
-      <Filter>Fichiers d%27en-tête\Attack</Filter>
-    </ClInclude>
-    <ClInclude Include="AreaAttack.h">
-      <Filter>Fichiers d%27en-tête\Attack</Filter>
-    </ClInclude>
     <ClInclude Include="Tower.h">
       <Filter>Fichiers d%27en-tête\Tower</Filter>
     </ClInclude>
@@ -184,9 +178,6 @@
     </ClInclude>
     <ClInclude Include="MoneyTower.h">
       <Filter>Fichiers d%27en-tête\Tower</Filter>
-    </ClInclude>
-    <ClInclude Include="SingleAttack.h">
-      <Filter>Fichiers d%27en-tête\Attack</Filter>
     </ClInclude>
     <ClInclude Include="Menu.h">
       <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
@@ -208,6 +199,15 @@
     </ClInclude>
     <ClInclude Include="CreditsMenu.h">
       <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaAttack.h">
+      <Filter>Fichiers d%27en-tête\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="Attack.h">
+      <Filter>Fichiers d%27en-tête\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleAttack.h">
+      <Filter>Fichiers d%27en-tête\Attack</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
