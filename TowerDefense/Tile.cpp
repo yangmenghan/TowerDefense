@@ -1,7 +1,17 @@
 #include"Tile.h"
 
-Tile::Tile(){
-	position = sf::Vector2f(0, 0);
+Tile::Tile()
+{
+	position = sf::Vector2f(0, 0);//默认位置为0,0
+	width = TILE_WIDTH;
+	height = TILE_HEIGHT;
+	cooldown = 0;
+	tower = make_shared<Tower>();
+}
+
+Tile::Tile(int x, int y)//构造x行y列的Tile
+{
+	position = sf::Vector2f(x*TILE_WIDTH, y*TILE_HEIGHT);
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
 	cooldown = 0;

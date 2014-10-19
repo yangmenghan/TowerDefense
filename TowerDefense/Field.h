@@ -1,5 +1,6 @@
 #pragma once
 #include <map>
+#include <memory>
 #include <SFML\Graphics.hpp>
 #include "Tile.h"
 #include "Path.h"
@@ -9,9 +10,11 @@ class Field
 private:
 	int width;
 	int height;
-	map<Tile,int> map;
-	Tile* startTile;
-	Tile* endTile;
+	int numTileHor;
+	int numTileVer;
+	map<shared_ptr<Tile>,int> tilesMap;
+	shared_ptr<Tile> startTile;
+	shared_ptr<Tile> endTile;
 public:
 	//Constructors and destroyers
 	Field();
@@ -20,6 +23,8 @@ public:
 	//Getters
 	int getWidth();
 	int getHeight();
+	int getNumTileVer();
+	int getNumTileHor();
 
 	//Setters
 	void setWidth(int);
@@ -28,6 +33,6 @@ public:
 
 	//Functions
 	void draw();
-	Path computePath(Tile, Tile);//startTile,endTile
-	bool tryCross(Tile);//startTile
+	Path computePath(shared_ptr<Tile>, shared_ptr<Tile>);//startTile,endTile
+	bool tryCross(shared_ptr<Tile>);//startTile
 };

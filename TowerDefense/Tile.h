@@ -8,7 +8,7 @@
 class Tile
 {
 private:
-	sf::Vector2f position;
+	sf::Vector2f position;//左上角点的位置
 	int width;
 	int height;
 	int cooldown;//剩余的冷却时间，默认为正常状态，值为0.若被污染，倒计时TILE_COOLDOWN_TIME秒恢复
@@ -16,6 +16,7 @@ private:
 public:
 	//Constructors and destroyers
 	Tile();
+	Tile(int, int);//x,y position,第x行，第y列，从0开始计数
 	~Tile();
 
 	//Getters
