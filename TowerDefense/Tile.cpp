@@ -5,7 +5,7 @@ Tile::Tile(){
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
 	cooldown = 0;
-	tower = NULL;
+	tower = make_shared<Tower>();
 }
 
 Tile::~Tile(){};
@@ -15,7 +15,7 @@ sf::Vector2f Tile::getPosition()
 	return position;
 }
 
-Tower* Tile::getTower()
+shared_ptr<Tower>  Tile::getTower()
 {
 	return tower;
 }
@@ -30,9 +30,9 @@ void Tile::setPosition(sf::Vector2f mPosition)
 	mPosition = mPosition;
 }
 
-void Tile::setTower(Tower* mTower)
+void Tile::setTower(shared_ptr<Tower> mTower)
 {
-	tower = mTower;
+	shared_ptr<Tower>tower(mTower);
 }
 
 void Tile::setCooldown(int mCooldown)
@@ -54,7 +54,7 @@ bool Tile::isPolluted()
 
 bool Tile::hasTower()
 {
-	if (tower != NULL)
+	if (tower)
 	{
 		return true;
 	}
@@ -65,18 +65,16 @@ bool Tile::hasTower()
 
 }
 
-BuildMenu* Tile::openBuildMenu()
+shared_ptr<BuildMenu> Tile::openBuildMenu()
 {
-	BuildMenu buildMenu;
-	BuildMenu* pBuildMenu;
-	pBuildMenu = &buildMenu;
+	BuildMenu buildMenu();
+	shared_ptr<BuildMenu>pBuildMenu = make_shared<BuildMenu>(buildMenu);
 	return pBuildMenu;
 }
 
-TowerMenu* Tile::openTowerMenu()
+shared_ptr<TowerMenu> Tile::openTowerMenu()
 {
-	TowerMenu towerMenu;
-	TowerMenu* pTowerMenu;
-	pTowerMenu = &towerMenu;
+	TowerMenu towerMenu();
+	shared_ptr<TowerMenu>pTowerMenu = make_shared<TowerMenu>(towerMenu);
 	return pTowerMenu;
 }
