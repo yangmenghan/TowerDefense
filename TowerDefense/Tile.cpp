@@ -2,7 +2,7 @@
 
 Tile::Tile()
 {
-	position = sf::Vector2f(0, 0);//默认位置为0,0
+	position = sf::Vector2f(0, 0);//默认位置为0,0,代表0行0列
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
 	cooldown = 0;

@@ -1,5 +1,6 @@
 #pragma once
 #include <map>
+#include <vector>
 #include <memory>
 #include <SFML\Graphics.hpp>
 #include "Tile.h"
@@ -12,9 +13,9 @@ private:
 	int height;
 	int numTileHor;
 	int numTileVer;
-	map<shared_ptr<Tile>,int> tilesMap;
-	shared_ptr<Tile> startTile;
-	shared_ptr<Tile> endTile;
+	std::vector<Tile> tilesMap;
+	Tile startTile;
+	Tile endTile;
 public:
 	//Constructors and destroyers
 	Field();
@@ -27,12 +28,12 @@ public:
 	int getNumTileHor();
 
 	//Setters
-	void setWidth(int);
-	void setHeight(int);
-	void setMap();
+	//void setWidth(int);
+	//void setHeight(int);
+	//void setMap();
 
 	//Functions
 	void draw();
-	Path computePath(shared_ptr<Tile>, shared_ptr<Tile>);//startTile,endTile
-	bool tryCross(shared_ptr<Tile>);//startTile
+	Path computePath(Tile, Tile);//startTile,endTile
+	bool tryCross(Tile);//startTile
 };

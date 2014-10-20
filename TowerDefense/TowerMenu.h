@@ -15,5 +15,6 @@ public:
 	//Getters
 	//Setters
 	//Functions
-
+	void draw();
+	void close();
 };

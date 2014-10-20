@@ -12,12 +12,14 @@ private:
 	Button moneyTwButton;
 	Button sunTwButton;
 public:
-//Constructors, destructors
+	//Constructors, destructors
 	BuildMenu();
 	~BuildMenu();
 
 	//Getters
+	
 	//Setters
+
 	//Functions
 	void buyBasicTw();
 	void buySlowTw();

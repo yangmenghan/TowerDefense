@@ -19,6 +19,8 @@ extern const int		TILE_HEIGHT;
 extern const int		TILE_COOLDOWN_TIME;
 extern const int		TILE_NUM_HOR;
 extern const int		TILE_NUM_VER;
+extern const int		NUM_START_TILE;
+extern const int		NUM_END_TILE;
 
 /*
 Enemy constants
