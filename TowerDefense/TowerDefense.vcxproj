@@ -95,6 +95,7 @@
     <ClCompile Include="GameMenu.cpp" />
     <ClCompile Include="LevelManager.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MenuManager.cpp" />
     <ClCompile Include="MoneyTower.cpp" />
     <ClCompile Include="NormalTower.cpp" />
     <ClCompile Include="SFMLTest.cpp">
@@ -131,6 +132,7 @@
     <ClInclude Include="FastEnemy.h" />
     <ClInclude Include="Config.h" />
     <ClInclude Include="LevelManager.h" />
+    <ClInclude Include="MenuManager.h" />
     <ClInclude Include="MoneyTower.h" />
     <ClInclude Include="NormalTower.h" />
     <ClInclude Include="Player.h" />

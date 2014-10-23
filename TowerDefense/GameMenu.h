@@ -15,13 +15,17 @@ private:
 	Button speedButton = Button(SPEED_BUTTON_TEXTURE);
 	Button muteButton = Button(MUTE_BUTTON_TEXTURE);
 	Button restartButton = Button(RESTART_BUTTON_TEXTURE);
-	Button exitButton = Button(EXIT_BUTTON_TEXTURE);
+	Button giveUpButton = Button(GIVE_UP_BUTTON_TEXTURE);
 
 	enum Actions {Pause, SpeedUp, ReturnSpeed, Mute, RestartGame, Exit};
 
 	float gameSpeed;
 	int waveCount;
 	int waveTotal;
+
+	sf::Text lifeCountDisplay;
+	sf::Text pointsCountDisplay;
+	sf::Text waveCountDisplay;
 
 public:
 //Constructors, destructors

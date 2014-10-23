@@ -126,6 +126,9 @@
     <ClCompile Include="Main_test.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="MenuManager.cpp">
+      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity.h">
@@ -208,6 +211,9 @@
     </ClInclude>
     <ClInclude Include="SingleAttack.h">
       <Filter>Fichiers d%27en-tête\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuManager.h">
+      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
