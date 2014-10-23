@@ -8,6 +8,6 @@ private:
 public:
 	void mute();
 	bool play();
-	void getAudioManager();
-
+	int getAudioManager();
+	 
 };

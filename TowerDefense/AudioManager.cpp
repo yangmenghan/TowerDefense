@@ -1,7 +1,7 @@
 #pragma once
 #include "AudioManager.h"
 #include <SFML/Audio.hpp>
-#include <Music.hpp>
+#include <SFML/Audio/Music.hpp>
 
 
 
@@ -17,7 +17,7 @@ enum  Status
 
 void AudioManager::mute()
 {
-	music.stop();  //Stop it
+	music.stop(); //Stop it
 };
 
 bool AudioManager::play()
@@ -28,7 +28,7 @@ bool AudioManager::play()
 	music.setLoop(true); // Make it loop
 };
 
-void AudioManager::getAudioManager()
+int AudioManager::getAudioManager()
 {
-	Status music.getStatus() const; //Get the current status of the stream(stopped, paused, playing)
+	return music.getStatus(); //Get and return the current status of the stream(stopped, paused, playing)
 };
