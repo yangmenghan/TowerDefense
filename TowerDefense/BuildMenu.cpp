@@ -1,7 +1,8 @@
 #include"BuildMenu.h"
 
-BuildMenu::BuildMenu()
+BuildMenu::BuildMenu(shared_ptr<Tile> _pTile)
 {
+	Button basicTw( sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("BasicTower"), _pTile->getPosition());
 	
 }
 

@@ -2,7 +2,7 @@
 
 Tile::Tile()
 {
-	position = sf::Vector2f(0, 0);//默认位置为0,0,代表0行0列
+	position = sf::Vector2i(0, 0);//默认位置为0,0,代表0行0列
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
 	cooldown = 0;
@@ -11,7 +11,7 @@ Tile::Tile()
 
 Tile::Tile(int x, int y)//构造x行y列的Tile
 {
-	position = sf::Vector2f(x*TILE_WIDTH, y*TILE_HEIGHT);
+	position = sf::Vector2i(x*TILE_WIDTH, y*TILE_HEIGHT);
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
 	cooldown = 0;
@@ -20,7 +20,7 @@ Tile::Tile(int x, int y)//构造x行y列的Tile
 
 Tile::~Tile(){};
 
-sf::Vector2f Tile::getPosition()
+sf::Vector2i Tile::getPosition()
 {
 	return position;
 }

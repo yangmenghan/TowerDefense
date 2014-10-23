@@ -23,6 +23,12 @@ extern const int		NUM_START_TILE;
 extern const int		NUM_END_TILE;
 
 /*
+BuildMenu Constants
+*/
+extern const float		BUTTON_WIDTH;
+extern const float		BUTTON_HEIGHT;
+
+/*
 Enemy constants
 */
 

@@ -17,6 +17,12 @@ extern const int		TILE_NUM_VER			= 10;
 extern const int		NUM_START_TILE			= 0;
 extern const int		NUM_END_TILE			= TILE_NUM_HOR * TILE_NUM_VER - 1;
 /*
+BuildMenu Constants
+*/
+extern const float		BUTTON_WIDTH			= 70;
+extern const float		BUTTON_HEIGHT			= 70;
+
+/*
 Enemy constants
 */
 

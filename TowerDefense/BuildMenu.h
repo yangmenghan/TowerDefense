@@ -2,6 +2,9 @@
 #include <SFML\Graphics.hpp>
 #include "Menu.h"
 #include "Button.h"
+#include "Tile.h"
+#include <memory>
+#include <string>
 
 
 class BuildMenu : public Menu
@@ -13,7 +16,7 @@ private:
 	Button sunTwButton;
 public:
 	//Constructors, destructors
-	BuildMenu();
+	BuildMenu(shared_ptr<Tile>);
 	~BuildMenu();
 
 	//Getters
