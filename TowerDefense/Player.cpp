@@ -19,3 +19,14 @@ void Player::manageScore(int s){
 void Player::manageHP(int h){
 	hp = hp + h;
 };
+
+
+int Player::getHP(){
+	return hp;
+};
+int Player::getScore(){
+	return score;
+};
+int Player::getMoney(){
+	return money;
+};

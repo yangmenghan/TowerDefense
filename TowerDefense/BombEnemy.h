@@ -18,6 +18,7 @@ public:
 	void explode();
 	void TriggerCountDown();
 	void checkCountDown();
+	bool move() override;
 
 private:
 	int trigger;		//(percentage) HP threshold which triggers explosion countdown 

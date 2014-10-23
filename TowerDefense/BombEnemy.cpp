@@ -34,11 +34,39 @@ int BombEnemy::getTimer(){
 	return timer;
 };
 
+bool BombEnemy::move(){
+	if (hp <= trigger){
+		//TODO : manage the countdown
+		if (hp<=0){
+			explode();
+		}
+	}
+	else {
+		return Entity::move();
+		//TODO : verify the syntax
+	}
+}
 
 void BombEnemy::explode(){
+	//TODO : get tiles ...
+	for (Tile tile : tiles){
+		tile.setCooldown(TILE_COOLDOWN);
+	}
+
+	//TODO : ...and enemies...
+	for (Enemy e : enemies){
+		e.dieWithoutBonus();
+	}
+
+	//TODO : ...and towers.
+	for (Tower t : towers){
+		t.downgradeTw();
+	}
+	dieWithoutBonus();
 };
 
 void BombEnemy::TriggerCountDown(){
+
 };
 
 void BombEnemy::checkCountDown(){

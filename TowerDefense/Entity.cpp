@@ -61,7 +61,7 @@ void Entity::resolveCollision(Entity mEntity)
 
 }
 
-void Entity::draw()
+void Entity::draw(sf::RenderWindow &w)
 {
 
 }

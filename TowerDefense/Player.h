@@ -9,6 +9,10 @@ public:
 	void manageScore(int);
 	void manageHP(int);
 
+	int getHP();
+	int getScore();
+	int getMoney();
+
 private:
 	int money;
 	int score;

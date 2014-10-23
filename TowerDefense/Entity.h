@@ -30,6 +30,6 @@ public:
 	//Functions
 	Tile getTile();
 	void resolveCollision(Entity mEntity);
-	void draw();
+	void draw(sf::RenderWindow&);
 };
 

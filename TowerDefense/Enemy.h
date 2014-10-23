@@ -1,5 +1,6 @@
 #pragma once
 #include "Entity.h"
+#include "LevelManager.h"
 #include <SFML\Graphics.hpp>
  
 class Enemy : public Entity{
@@ -7,9 +8,10 @@ public :
 	Enemy();
 	Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite mSprite, float mSpeed);
 
-	bool move();
+	virtual bool move();
 	void succed();
 	void die();
+	void dieWithoutBonus();
 	void slow(int);
 
 	int getHP();

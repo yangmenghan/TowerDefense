@@ -51,6 +51,12 @@ extern const float		TOUGH_ENEMY_DEFENCE		= 10;
 extern const string		TOUGH_ENEMY_SPRITE_ADD	= "";
 
 /*
+Tile constants
+*/
+
+extern const int		TILE_COOLDOWN			= 500;
+
+/*
 Tower constants
 */
 
