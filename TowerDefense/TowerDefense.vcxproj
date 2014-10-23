@@ -87,20 +87,19 @@
   <ItemGroup>
     <ClCompile Include="AreaAttack.cpp" />
     <ClCompile Include="Attack.cpp" />
+    <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="BuildMenu.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="CreditsMenu.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Field.cpp" />
     <ClCompile Include="GameMenu.cpp" />
-    <ClCompile Include="LevelManager.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MenuManager.cpp" />
     <ClCompile Include="MoneyTower.cpp" />
     <ClCompile Include="NormalTower.cpp" />
-    <ClCompile Include="SFMLTest.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="Path.cpp" />
+    <ClCompile Include="SFMLTest.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="FastEnemy.cpp" />
     <ClCompile Include="NormalEnemy.cpp" />
@@ -109,7 +108,6 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SingleAttack.cpp" />
     <ClCompile Include="SlowTower.cpp" />
-    <ClCompile Include="Main_test.cpp" />
     <ClCompile Include="StartMenu.cpp" />
     <ClCompile Include="SunTower.cpp" />
     <ClCompile Include="Wave.cpp" />
@@ -121,6 +119,7 @@
   <ItemGroup>
     <ClInclude Include="AreaAttack.h" />
     <ClInclude Include="Attack.h" />
+    <ClInclude Include="AudioManager.h" />
     <ClInclude Include="BuildMenu.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="CreditsMenu.h" />
@@ -135,6 +134,7 @@
     <ClInclude Include="MenuManager.h" />
     <ClInclude Include="MoneyTower.h" />
     <ClInclude Include="NormalTower.h" />
+    <ClInclude Include="Path.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="SingleAttack.h" />
     <ClInclude Include="SlowTower.h" />

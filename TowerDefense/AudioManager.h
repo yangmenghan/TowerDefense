@@ -7,7 +7,7 @@ private:
 	bool isMute;
 public:
 	void mute();
-	void play();
+	bool play();
 	void getAudioManager();
 
 };
