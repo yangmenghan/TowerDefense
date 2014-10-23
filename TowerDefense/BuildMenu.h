@@ -1,11 +1,10 @@
 #pragma once
 #include <SFML\Graphics.hpp>
+#include <memory>
+#include <string>
 #include "Menu.h"
 #include "Button.h"
 #include "Tile.h"
-#include <memory>
-#include <string>
-
 
 class BuildMenu : public Menu
 {

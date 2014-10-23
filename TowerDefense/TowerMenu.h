@@ -1,5 +1,8 @@
 #pragma once
 #include <SFML\Graphics.hpp>
+#include <memory>
+#include <string>
+#include "Tile.h"
 #include "Button.h"
 
 class TowerMenu
@@ -9,7 +12,7 @@ private:
 	Button upgradeButton;
 public:
 	//Constructors and destroyers
-	TowerMenu();
+	TowerMenu(shared_ptr<Tile>);
 	~TowerMenu();
 
 	//Getters

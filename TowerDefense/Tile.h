@@ -20,7 +20,7 @@ public:
 	~Tile();
 
 	//Getters
-	sf::Vector2f getPosition();
+	sf::Vector2i getPosition();
 	shared_ptr<Tower>  getTower();
 	int getCooldowm();
 
