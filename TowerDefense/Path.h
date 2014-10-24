@@ -9,6 +9,9 @@ class Path
 {
 private:
 	vector<Tile> path;
+	
 public:
 	void draw(vector<Tile>);
+	Path(vector<Tile>);
+	Path();
 };
