@@ -5,6 +5,7 @@
 #include <SFML\Graphics.hpp>
 #include "Tile.h"
 #include "Path.h"
+#include "string.h"
 
 class Field
 {
@@ -16,6 +17,7 @@ private:
 	std::vector<Tile> tilesMap;
 	Tile startTile;
 	Tile endTile;
+	int Field::tempCross(int, int);
 public:
 	//Constructors and destroyers
 	Field();
@@ -35,5 +37,5 @@ public:
 	//Functions
 	void draw();
 	Path computePath(Tile, Tile);//startTile,endTile
-	bool tryCross(Tile);//startTile
+	bool tryCross(Tile, Tile);//startTile, endTile
 };
