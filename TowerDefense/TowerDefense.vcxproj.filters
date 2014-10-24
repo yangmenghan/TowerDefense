@@ -129,6 +129,9 @@
     <ClCompile Include="MenuManager.cpp">
       <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
     </ClCompile>
+    <ClCompile Include="LevelManager.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity.h">

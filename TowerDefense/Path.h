@@ -10,5 +10,5 @@ class Path
 private:
 	vector<Tile> path;
 public:
-	void draw();
+	void draw(vector<Tile>);
 };

@@ -4,6 +4,4 @@
 
 using namespace std;
 
-Path::Path();
-
 void draw();

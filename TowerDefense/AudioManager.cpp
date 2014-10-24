@@ -7,13 +7,18 @@
 
 
 sf::Music music;// Declare a new music
-enum  Status 
+
+
+AudioManager::AudioManager()
 {
-	Stopped,
-	Paused,
-	Playing
-}
-//Enumeration of the sound source states
+	isMute = false;
+};
+
+
+AudioManager::AudioManager(bool b)
+{
+	isMute = b;
+};
 
 void AudioManager::mute()
 {
@@ -28,7 +33,11 @@ bool AudioManager::play()
 	music.setLoop(true); // Make it loop
 };
 
-int AudioManager::getAudioManager()
+AudioManager AudioManager::getAudioManager()
 {
-	return music.getStatus(); //Get and return the current status of the stream(stopped, paused, playing)
+	if (NULL == audioManager)
+	{
+		audioManager = new AudioManager;
+	}
+	return *audioManager;
 };
