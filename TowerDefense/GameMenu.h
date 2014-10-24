@@ -1,11 +1,9 @@
 #pragma once
 #include <SFML\Graphics.hpp>
+#include <SFML\Window.hpp>
 #include "Menu.h"
 #include "Button.h"
 #include "Config.h"
-
-
-// needs creation of Button class
 
 class GameMenu 
 	: public Menu
@@ -23,7 +21,7 @@ private:
 	int waveCount;
 	int waveTotal;
 
-	sf::Text lifeCountDisplay;
+	sf::Text lifeCountDisplay; //is it the best way to proceed ? will need tests
 	sf::Text pointsCountDisplay;
 	sf::Text waveCountDisplay;
 
@@ -44,13 +42,12 @@ public:
 	void setWaveCount(int);
 	void setWaveTotal(int); // not useful ?
 
-	
-
 //Fonctions
 	void pauseGame();
 	void speedGame();
 	void returnSpeed();
 	void restartGame();
 	void startWave();
-	void display();
+	void draw(sf::RenderWindow& w);
+	void resolveEvent();
 };

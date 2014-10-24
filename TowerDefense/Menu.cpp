@@ -1,11 +1,13 @@
 #include "Menu.h"
 
-sf::Vector2f Menu::getSize()
+//Getters
+
+sf::Vector2u Menu::getSize()
 {
 	return size;
 }
 
-sf::Vector2f Menu::getPosition()
+sf::Vector2i Menu::getPosition()
 {
 	return position;
 }
@@ -20,12 +22,14 @@ std::string Menu::getAddress()
 	return textureAddress;
 }
 
-void Menu::setSize(sf::Vector2f mySize)
+//Setters
+
+void Menu::setSize(sf::Vector2u mySize)
 {
 	size = mySize;
 }
 
-void Menu::setPosition(sf::Vector2f myPosition)
+void Menu::setPosition(sf::Vector2i myPosition)
 {
 	position = myPosition;
 }
@@ -54,12 +58,15 @@ void Menu::setSprite(std::string myFileName)
 	}
 }
 
-void Menu::run()
+//Functions
+
+void Menu::draw(sf::RenderWindow& w)
 {
-	window.draw(sprite);
+	w.draw(sprite);
 }
 
 void Menu::close()
-{
+{}
 
-}
+void Menu::resolveEvent()
+{}

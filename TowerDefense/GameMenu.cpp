@@ -1,4 +1,5 @@
 #include <SFML\Graphics.hpp>
+#include <SFML\Window.hpp>
 #include "Menu.h"
 #include "GameMenu.h"
 #include "Button.h"
@@ -34,6 +35,8 @@ GameMenu::GameMenu(sf::Texture myTexture, sf::Vector2f mySize, int myWaveTotal)
 
 GameMenu::~GameMenu(){}
 
+//Getters
+
 float GameMenu::getGameSpeed()
 {
 	return gameSpeed;
@@ -48,6 +51,8 @@ int GameMenu::getWaveTotal()
 {
 	return waveTotal;
 }
+
+//Setters
 
 void GameMenu::setGameSpeed(float myGameSpeed)
 {
@@ -81,7 +86,7 @@ void GameMenu::speedGame()
 	gameSpeed = 2;
 }
 
-//TO DO
+	//TO DO
 
 void GameMenu::restartGame()
 {
@@ -93,15 +98,19 @@ void GameMenu::startWave()
 
 }
 
-void GameMenu::display()
+void GameMenu::draw(sf::RenderWindow& w)
 {
-	pauseButton.draw();
-	speedButton.draw();
-	muteButton.draw();
-	restartButton.draw();
-	exitButton.draw();
-	window.draw(sprite);
+	w.draw(sprite);
+	pauseButton.draw(w);
+	speedButton.draw(w);
+	muteButton.draw(w);
+	restartButton.draw(w);
+	giveUpButton.draw(w);
 }
 
+void GameMenu::resolveEvent()
+{
+
+}
 
 

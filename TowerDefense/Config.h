@@ -113,9 +113,7 @@ extern const int		WAVE_TOTAL;
 Menu constants
 */
 extern const string		GAME_MENU_DEFAULT_TEXTURE;
-extern const float		GAME_MENU_WIDTH;
-extern const float		GAME_MENU_HEIGHT;
-
+extern const string		START_MENU_TEXTURE;
 extern const string		CREDITS_SPRITE_ADD;
 
 /*
@@ -126,7 +124,7 @@ extern const string		SPEED_BUTTON_TEXTURE;
 extern const string		MUTE_BUTTON_TEXTURE;
 extern const string		RESTART_BUTTON_TEXTURE;
 extern const string		GIVE_UP_BUTTON_TEXTURE;
-extern const string		START_GAME_TEXTURE;
+extern const string		START_GAME_BUTTON_TEXTURE;
 extern const string		SCOREBOARD_BUTTON_TEXTURE;
 extern const string		CREDITS_BUTTON_TEXTURE;
 extern const string		EXIT_GAME_BUTTON_TEXTURE;

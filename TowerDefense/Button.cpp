@@ -1,5 +1,4 @@
 #include "Button.h"
-#include <string>
 
 Button::Button()
 {
@@ -68,9 +67,9 @@ void Button::setSprite(sf::Sprite mSprite)
 	sprite = mSprite;
 }
 
-void Button::draw()
+void Button::draw(sf::RenderWindow& w)
 {
-	// TO DO
+	w.draw(sprite);
 }
 
 bool Button::mouseHover()

@@ -27,7 +27,7 @@ public:
 	void setSprite(sf::Sprite mSprite);
 
 //Functions
-	void draw();
+	void draw(sf::RenderWindow&);
 	bool mouseClick();  // should be an event ?
 	bool mouseHover();
 

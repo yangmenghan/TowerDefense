@@ -101,6 +101,27 @@ Attack constants
 /*
 Wave constants
 */
+extern const int		WAVE_TOTAL				  = 20;
+
+/*
+Menu constants
+*/
+extern const string		GAME_MENU_DEFAULT_TEXTURE = "";
+extern const string		START_MENU_TEXTURE		  = "";
+extern const string		CREDITS_SPRITE_ADD		  = "";
+		
+/*
+Button constants
+*/
+extern const string		PAUSE_BUTTON_TEXTURE	  = "";
+extern const string		SPEED_BUTTON_TEXTURE	  = "";
+extern const string		MUTE_BUTTON_TEXTURE		  = "";
+extern const string		RESTART_BUTTON_TEXTURE	  = "";
+extern const string		GIVE_UP_BUTTON_TEXTURE	  = "";
+extern const string		START_GAME_BUTTON_TEXTURE = "";
+extern const string		SCOREBOARD_BUTTON_TEXTURE = "";
+extern const string		CREDITS_BUTTON_TEXTURE    = "";
+extern const string		EXIT_GAME_BUTTON_TEXTURE  = "";
 
 /*
 Other constants
