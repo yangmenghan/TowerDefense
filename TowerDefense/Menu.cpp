@@ -1,5 +1,8 @@
 #include "Menu.h"
 
+Menu::Menu(sf::RenderWindow& myW) : w(myW)
+{}
+
 //Getters
 
 sf::Vector2u Menu::getSize()

@@ -19,4 +19,6 @@ public:
 	std::vector<Menu*>* getMenus();
 
 	static MenuManager* getMenuManager();
+
+	void resolveEvent();
 };

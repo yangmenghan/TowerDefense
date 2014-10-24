@@ -9,11 +9,15 @@ private:
 	sf::Vector2i position;
 	sf::Vector2f size;
 
+	sf::RenderWindow& w;
+
+	sf::FloatRect boundingBox;
+
 public:
 //Constructors and destroyers
-	Button();
-	Button(std::string);
-	Button(sf::Vector2f, std::string, sf::Vector2i);
+	Button(sf::RenderWindow&);
+	Button(sf::RenderWindow&, std::string);
+	Button(sf::RenderWindow&, sf::Vector2f, std::string, sf::Vector2i);
 	~Button();
 
 //Getters
@@ -28,7 +32,7 @@ public:
 
 //Functions
 	void draw(sf::RenderWindow&);
-	bool mouseClick();  // should be an event ?
+	bool mouseClick();  
 	bool mouseHover();
 
 };

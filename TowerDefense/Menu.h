@@ -10,11 +10,13 @@ protected:
 	std::string textureAddress;
 	sf::Vector2u size;
 	sf::Vector2i position;
+	sf::RenderWindow& w; // is it useful to reference the window in the menu ?
 
 public:
 //Constructor and destructor
 	Menu();
-	~Menu();
+	Menu(sf::RenderWindow&);
+	~Menu(); 
 
 //Setters
 	void setSize(sf::Vector2u);

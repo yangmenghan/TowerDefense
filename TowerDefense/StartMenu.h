@@ -3,6 +3,7 @@
 #include "GameMenu.h"
 #include "Button.h"
 #include "Config.h"
+#include <vector>
 
 class StartMenu : public Menu
 {
@@ -12,14 +13,17 @@ private:
 	Button muteButton = Button(MUTE_BUTTON_TEXTURE);
 	Button exitGameButton = Button(EXIT_GAME_BUTTON_TEXTURE);
 
+	vector<Button*> buttons;
+
+	sf::Event event; // not sure where the event will be : linked to a menu ? linked to the renderwindow ?
+
 public:
-	StartMenu();
-	StartMenu(sf::RenderWindow&);
+	StartMenu(sf::RenderWindow& ); // is it necessary ?
 	~StartMenu();
 
-	void draw(sf::RenderWindow&);
+	void draw();
 
-	void resolveEvent();
+	void resolveEvent(); 
 
 	void startGame();
 	void openCredits();

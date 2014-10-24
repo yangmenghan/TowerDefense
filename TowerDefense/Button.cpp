@@ -1,12 +1,13 @@
 #include "Button.h"
 
-Button::Button()
+Button::Button(sf::RenderWindow& myW) : w(myW)
 {
 	size = sf::Vector2f(0, 0);
+	boundingBox = sprite.getGlobalBounds();
 	position = sf::Vector2i(0, 0);
 }
 
-Button::Button(std::string textureAddress)
+Button::Button(sf::RenderWindow& myW, std::string textureAddress) : w(myW)
 {
 	size = sf::Vector2f(0, 0);
 	position = sf::Vector2i(0, 0);
@@ -18,9 +19,10 @@ Button::Button(std::string textureAddress)
 	}
 
 	sprite.setTexture(texture);
+	boundingBox = sprite.getGlobalBounds();
 }
 
-Button::Button(sf::Vector2f mySize, std::string textureAddress, sf::Vector2i myPosition)
+Button::Button(sf::RenderWindow& myW, sf::Vector2f mySize, std::string textureAddress, sf::Vector2i myPosition) : w(myW)
 {
 	sf::Texture texture;
 	if (!texture.loadFromFile(textureAddress))
@@ -29,6 +31,7 @@ Button::Button(sf::Vector2f mySize, std::string textureAddress, sf::Vector2i myP
 	}
 
 	sprite.setTexture(texture);
+	boundingBox = sprite.getGlobalBounds();
 
 	position = myPosition;
 	size = mySize;
@@ -75,9 +78,10 @@ void Button::draw(sf::RenderWindow& w)
 bool Button::mouseHover()
 {
 	bool isHovering = false;
-	sf::Vector2i mousePosition = sf::Mouse::getPosition(); // for now gets absolute position, might need to make it relative
+	sf::Vector2f mousePosition((float)sf::Mouse::getPosition().x, (float)sf::Mouse::getPosition().y);
+
 	//is Vector2i. Make into Vector2f ?
-	if (/*position is in button*/)
+	if (boundingBox.contains(mousePosition))
 	{
 		isHovering = true;
 		//change sprite
@@ -88,7 +92,6 @@ bool Button::mouseHover()
 	}
 
 	return isHovering;
-
 }
 
 bool Button::mouseClick()
