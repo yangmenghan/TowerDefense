@@ -31,8 +31,11 @@ public:
 	void setSprite(sf::Sprite mSprite);
 
 //Functions
-	void draw(sf::RenderWindow&);
-	bool mouseClick();  
-	bool mouseHover();
+	void draw(); 
+	bool mouseHover(sf::Event);
+	bool mouseClicking(sf::Event);
+	bool mouseClick(sf::Event); //I have no idea if the events should be sent to the button 
+	//by the Menu they belong to, by the menu manager, or be instanciated int the function...
+	void spriteUpdate(sf::Event);
 
 };

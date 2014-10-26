@@ -34,7 +34,7 @@ void StartMenu::resolveEvent()
 		case sf::Event::MouseButtonPressed:
 			if (event.mouseButton.button == sf::Mouse::Left)
 			{
-
+				
 			}
 
 			// we don't process other types of events

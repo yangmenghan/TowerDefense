@@ -8,10 +8,10 @@
 class StartMenu : public Menu
 {
 private:
-	Button startGameButton = Button(START_GAME_BUTTON_TEXTURE);
-	Button openCreditsButton = Button(CREDITS_BUTTON_TEXTURE);
-	Button muteButton = Button(MUTE_BUTTON_TEXTURE);
-	Button exitGameButton = Button(EXIT_GAME_BUTTON_TEXTURE);
+	Button startGameButton = Button(w, START_GAME_BUTTON_TEXTURE);
+	Button openCreditsButton = Button(w, CREDITS_BUTTON_TEXTURE);
+	Button muteButton = Button(w, MUTE_BUTTON_TEXTURE);
+	Button exitGameButton = Button(w, EXIT_GAME_BUTTON_TEXTURE);
 
 	vector<Button*> buttons;
 

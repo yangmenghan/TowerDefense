@@ -70,21 +70,19 @@ void Button::setSprite(sf::Sprite mSprite)
 	sprite = mSprite;
 }
 
-void Button::draw(sf::RenderWindow& w)
+void Button::draw()
 {
 	w.draw(sprite);
 }
 
-bool Button::mouseHover()
+bool Button::mouseHover(sf::Event event)
 {
 	bool isHovering = false;
 	sf::Vector2f mousePosition((float)sf::Mouse::getPosition().x, (float)sf::Mouse::getPosition().y);
 
-	//is Vector2i. Make into Vector2f ?
 	if (boundingBox.contains(mousePosition))
 	{
 		isHovering = true;
-		//change sprite
 	}
 	else
 	{
@@ -94,25 +92,40 @@ bool Button::mouseHover()
 	return isHovering;
 }
 
-bool Button::mouseClick()
+bool Button::mouseClicking(sf::Event event)
 {
-	sf::Event event;
-	bool isClicked = false;
-	
-	if (event.type == sf::Event::KeyPressed)
+	if (mouseHover(event))
 	{
-		if (event.key.code == sf::Keyboard::Escape)
+		while (w.pollEvent(event))
 		{
-			if (mouseHover())
+			if (event.type == sf::Event::MouseButtonPressed)
 			{
-				isClicked = true;
+				return true;
 			}
 		}
-			
 	}
-	else
+}
+
+bool Button::mouseClick(sf::Event event)
+{
+	if (mouseClicking(event))
 	{
-		isClicked = false;
+		while (w.pollEvent(event))
+		{
+			if (event.type == sf::Event::MouseButtonReleased)
+			{
+				return true;
+			}
+		}
 	}
-	return isClicked;
+}
+
+void Button::spriteUpdate(sf::Event event) // or no arguments ?
+{
+	if (mouseHover(event))
+	{
+		//sprite update
+	}
+
+
 }
