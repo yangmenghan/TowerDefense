@@ -1,5 +1,6 @@
 #include"Tile.h"
 
+//Constructors and destroyers
 Tile::Tile()
 {
 	position = sf::Vector2i(0, 0);//默认位置为0,0,代表0行0列
@@ -20,6 +21,7 @@ Tile::Tile(int x, int y)//构造x行y列的Tile
 
 Tile::~Tile(){};
 
+//Getters
 sf::Vector2i Tile::getPosition()
 {
 	return position;
@@ -35,6 +37,7 @@ int Tile::getCooldowm()
 	return cooldown;
 }
 
+//Setters
 void Tile::setPosition(sf::Vector2f mPosition)
 {
 	mPosition = mPosition;
@@ -50,6 +53,7 @@ void Tile::setCooldown(int mCooldown)
 	cooldown = mCooldown;
 }
 
+//Functions
 bool Tile::isPolluted()
 {
 	if (cooldown != 0)

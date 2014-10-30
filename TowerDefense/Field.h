@@ -17,6 +17,8 @@ private:
 	std::vector<Tile> tilesMap;
 	Tile startTile;
 	Tile endTile;
+
+
 	int Field::tempCross(int, int);
 public:
 	//Constructors and destroyers
@@ -36,6 +38,6 @@ public:
 
 	//Functions
 	void draw();
-	Path computePath(Tile, Tile);//startTile,endTile
-	bool tryCross(Tile, Tile);//startTile, endTile
+	Path computePath(Tile, Tile);
+	bool tryCross(Tile, Tile);
 };

@@ -5,10 +5,17 @@
 #include "Menu.h"
 #include "Button.h"
 #include "Tile.h"
+#include "Tower.h"
+#include "NormalTower.h"
+#include "MoneyTower.h"
+#include "SlowTower.h"
+#include "SunTower.h"
 
-class BuildMenu : public Menu
+class BuildMenu 
+	: public Menu
 {
 private: 
+	shared_ptr<Tile> tile;
 	Button basicTwButton;
 	Button slowTwButton;
 	Button moneyTwButton;
@@ -19,11 +26,12 @@ public:
 	~BuildMenu();
 
 	//Getters
-	
+	shared_ptr<Tile> getTile();
+
 	//Setters
 
 	//Functions
-	void buyBasicTw();
+	void buyNomalTw();
 	void buySlowTw();
 	void buyMoneyTw();
 	void buySunTw();
