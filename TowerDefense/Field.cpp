@@ -1,5 +1,7 @@
 #include"Field.h"
 #include"Tile.h"
+#include"LevelManager.h"
+#include "Enemy.h"
 
 Field::Field()
 {
@@ -143,8 +145,26 @@ bool Field::tryCross(Tile _startTile, Tile _endTile)
 	sf::Vector2i vec2 = _endTile.getPosition();
 	int m = vec1.x / TILE_WIDTH + vec1.y * 10 / TILE_HEIGHT;  //  point de depart
 	int n = vec2.x / TILE_WIDTH + vec2.y * 10 / TILE_HEIGHT; // point d'arrive
+
+	//trycross from depart tile
 	int time = tempCross(m, n);
 	if (time > 200)
 		return false;
+
+	//try cross for all the enemies on the field
+	LevelManager levelManager = LevelManager::getLevelManager();
+	vector<Enemy*> enemies;
+	enemies = levelManager.getEnemies();//get the list of enemies
+	for (int i = 0; i < enemies.size(); i++)
+	{
+		Enemy *enemy = enemies[i];
+		Tile tile = (*enemy).getTile();
+		sf::Vector2i vec3 = tile.getPosition();
+		int p = vec3.x / TILE_WIDTH + vec3.y * 10 / TILE_HEIGHT;  //  point d'enemy
+		time = tempCross(p, n);
+		if (time > 200)
+			return false;  //enemy i can't cross
+	}
+	//all the enemis on the field and enemies that will appear on the field can cross
 	return true;
 }
