@@ -17,7 +17,7 @@ public:
 	static LevelManager getLevelManager();
 	void kill();
 
-	void gameLoop(RenderWindow& w);
+	void gameLoop(sf::RenderWindow& w);
 	void addEnemy(Enemy&);
 	void removeEnemy(Enemy);
 	void removeEnemy(int);

@@ -35,6 +35,11 @@ SlowTower::~SlowTower()
 {
 }
 
+void Tower::sellTw()
+{
+	LevelManager::getLevelManager().getPlayer().manageMoney(int(SLOW_TOWER_PRICE * INCOME_RATE));
+}
+
 void SlowTower::doAttack()
 {
 

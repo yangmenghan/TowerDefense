@@ -96,9 +96,6 @@
     <ClCompile Include="SlowTower.cpp">
       <Filter>Fichiers sources\Tower</Filter>
     </ClCompile>
-    <ClCompile Include="SingleAttack.cpp">
-      <Filter>Fichiers sources\Attack</Filter>
-    </ClCompile>
     <ClCompile Include="Menu.cpp">
       <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
     </ClCompile>
@@ -131,6 +128,12 @@
     </ClCompile>
     <ClCompile Include="LevelManager.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SlowAttack.cpp">
+      <Filter>Fichiers sources\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalAttack.cpp">
+      <Filter>Fichiers sources\Attack</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -191,9 +194,6 @@
     <ClInclude Include="MoneyTower.h">
       <Filter>Fichiers d%27en-tête\Tower</Filter>
     </ClInclude>
-    <ClInclude Include="SingleAttack.h">
-      <Filter>Fichiers d%27en-tête\Attack</Filter>
-    </ClInclude>
     <ClInclude Include="Menu.h">
       <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
     </ClInclude>
@@ -223,6 +223,12 @@
     </ClInclude>
     <ClInclude Include="MenuManager.h">
       <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalAttack.h">
+      <Filter>Fichiers d%27en-tête\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="SlowAttack.h">
+      <Filter>Fichiers d%27en-tête\Attack</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

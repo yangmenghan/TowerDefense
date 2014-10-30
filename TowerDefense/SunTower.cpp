@@ -35,6 +35,11 @@ SunTower::~SunTower()
 {
 }
 
+void Tower::sellTw()
+{
+	LevelManager::getLevelManager().getPlayer().manageMoney(int(SUN_TOWER_PRICE * INCOME_RATE));
+}
+
 void SunTower::doAttack()
 {
 

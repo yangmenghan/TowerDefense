@@ -35,7 +35,16 @@ MoneyTower::~MoneyTower()
 {
 }
 
+void Tower::sellTw()
+{
+	LevelManager::getLevelManager().getPlayer().manageMoney(int(MONEY_TOWER_PRICE * INCOME_RATE));
+}
+
 void MoneyTower::generateMoney()
 {
-
+	while (this)
+	{
+		LevelManager::getLevelManager().getPlayer().manageMoney(MONEY_TOWER_GENERATION_UNIT);
+		//How can it be hold on for seconds?
+	}
 }

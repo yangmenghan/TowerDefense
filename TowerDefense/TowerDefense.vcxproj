@@ -98,6 +98,7 @@
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MenuManager.cpp" />
     <ClCompile Include="MoneyTower.cpp" />
+    <ClCompile Include="NormalAttack.cpp" />
     <ClCompile Include="NormalTower.cpp" />
     <ClCompile Include="Path.cpp" />
     <ClCompile Include="SFMLTest.cpp" />
@@ -107,7 +108,7 @@
     <ClCompile Include="BombEnemy.cpp" />
     <ClCompile Include="Config.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="SingleAttack.cpp" />
+    <ClCompile Include="SlowAttack.cpp" />
     <ClCompile Include="SlowTower.cpp" />
     <ClCompile Include="StartMenu.cpp" />
     <ClCompile Include="SunTower.cpp" />
@@ -134,10 +135,11 @@
     <ClInclude Include="LevelManager.h" />
     <ClInclude Include="MenuManager.h" />
     <ClInclude Include="MoneyTower.h" />
+    <ClInclude Include="NormalAttack.h" />
     <ClInclude Include="NormalTower.h" />
     <ClInclude Include="Path.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="SingleAttack.h" />
+    <ClInclude Include="SlowAttack.h" />
     <ClInclude Include="SlowTower.h" />
     <ClInclude Include="StartMenu.h" />
     <ClInclude Include="SunTower.h" />

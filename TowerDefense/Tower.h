@@ -2,6 +2,7 @@
 #include "Entity.h"
 #include "Config.h"
 #include "LevelManager.h"
+#include "Attack.h"
 
 class Tower :
 	public Entity
@@ -23,13 +24,14 @@ public:
 	void setLevel(int mLevel);
 	void setRange(float mRange);
 
-	void sellTw();
+	void virtual sellTw();
 	void upgradeTw();
 	void downgradeTw();
 	Enemy getTarget();
 	void showRangeCircle(); 
 
 protected:
+	Attack attack;
 	float damage;
 	int price;
 	int income;

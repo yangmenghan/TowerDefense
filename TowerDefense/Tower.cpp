@@ -72,43 +72,50 @@ void Tower::setRange(float mRange)
 }
 
 
-void Tower::sellTw()
-{
-		
-}
+
 
 void Tower::upgradeTw()
 {
 	if (level < 3)
+	{
 		level++;
+		damage *= UPGRADE_RATE;
+		speed *= UPGRADE_RATE;		
+		range++;
+	}
 }
 
 void Tower::downgradeTw()
 {
 	if (level > 0)
+	{
 		level--;
+		damage /= UPGRADE_RATE;
+		speed /= UPGRADE_RATE;
+		range--;
+	}
 }
 
 Enemy Tower::getTarget()
 {
-	std::vector<Enemy>* enemiesField = LevelManager::getLevelManager()->getEnemies();
-	Enemy enemyMinDistanceToTarget;
+	std::vector<Enemy*> enemiesField = LevelManager::getLevelManager().getEnemies();
+	Enemy* enemyMinDistanceToTarget;
 	float minDistance = 0;
-	for (Enemy e : *enemiesField)
+	for (Enemy* e : enemiesField)
 	{
 		if (minDistance == 0)
 		{
-			minDistance = e.getDistanceToTarget;
+			minDistance = e->getDistanceToTarget;
 			enemyMinDistanceToTarget = e;
 		}
-		else if (e.getDistanceToTarget() < minDistance)
+		else if (e->getDistanceToTarget() < minDistance)
 		{
-			minDistance = e.getDistanceToTarget;
+			minDistance = e->getDistanceToTarget;
 			enemyMinDistanceToTarget = e;
 		}
 	}
 
-	return enemyMinDistanceToTarget;
+	return *enemyMinDistanceToTarget;
 }
 
 void Tower::showRangeCircle()

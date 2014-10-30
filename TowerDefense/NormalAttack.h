@@ -1,10 +1,11 @@
 #pragma once
 #include "Attack.h"
-class SingleAttack :
+
+class NormalAttack :
 	public Attack
 {
 public:
-	SingleAttack();
-	~SingleAttack();
+	NormalAttack();
+	~NormalAttack();
 };
 

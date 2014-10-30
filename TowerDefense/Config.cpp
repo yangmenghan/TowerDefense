@@ -70,6 +70,7 @@ Tower constants
 */
 
 extern const float		INCOME_RATE				= 0.8;
+extern const float		UPGRADE_RATE			= 1.02;
 extern const sf::Color	RANGE_CIRCLE_FILL_COLOR = sf::Color(0, 0, 255, 100);
 
 

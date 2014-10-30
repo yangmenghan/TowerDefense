@@ -14,7 +14,8 @@ public:
 	void setDamage(float mDamage);
 	void setSlowAmount(float mSlowAmount);
 
-	void resolve(int type);
+	void virtual resolve();
+
 protected:
 	float slowAmount;
 	float damage;
