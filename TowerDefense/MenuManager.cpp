@@ -5,7 +5,6 @@
 
 MenuManager::MenuManager()
 {
-	activeMenu = menuStack.back;
 }
 
 MenuManager::~MenuManager()
@@ -13,9 +12,10 @@ MenuManager::~MenuManager()
 	menuStack.clear();
 }
 
-void MenuManager::addMenu(Menu* menu)
+void MenuManager::addMenu(Menu menu)
 {
-	menuStack.push_back(menu);
+	Menu* pmenu = &menu;
+	menuStack.push_back(pmenu);
 }
 
 void MenuManager::popMenu()
@@ -28,7 +28,10 @@ void MenuManager::popMenu()
 
 void MenuManager::display(sf::RenderWindow& w)
 {
-	activeMenu->draw(w);
+	for ( std::vector<Menu*>::iterator menu = menuStack.begin(); menu != menuStack.end(); menu++)
+	{
+		(*menu)->draw(w);
+	}
 }
 
 std::vector<Menu*>* MenuManager::getMenus()
@@ -36,9 +39,19 @@ std::vector<Menu*>* MenuManager::getMenus()
 	return &menuStack;
 }
 
-Menu* MenuManager::getActiveMenu()
+void MenuManager::setMenus()
 {
-	return activeMenu;
+
+}
+
+void MenuManager::openMenu(Menu menu)
+{
+	addMenu(menu);
+}
+
+void MenuManager::closeMenu()
+{
+	popMenu();
 }
 
 MenuManager* MenuManager::getMenuManager()
@@ -46,7 +59,7 @@ MenuManager* MenuManager::getMenuManager()
 	return menuManager;
 }
 
-void MenuManager::resolveEvent()
+void MenuManager::resolveEvent(sf::Event event)
 {
-	activeMenu->resolveEvent();
+	menuStack.back->resolveEvent(event);
 }

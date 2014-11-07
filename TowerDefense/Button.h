@@ -9,15 +9,13 @@ private:
 	sf::Vector2i position;
 	sf::Vector2f size;
 
-	sf::RenderWindow& w;
-
 	sf::FloatRect boundingBox;
 
 public:
 //Constructors and destroyers
-	Button(sf::RenderWindow&);
-	Button(sf::RenderWindow&, std::string);
-	Button(sf::RenderWindow&, sf::Vector2f, std::string, sf::Vector2i);
+	Button();
+	Button(std::string);
+	Button(sf::Vector2f, std::string, sf::Vector2i);
 	~Button();
 
 //Getters
@@ -31,10 +29,8 @@ public:
 	void setSprite(sf::Sprite mSprite);
 
 //Functions
-	void draw(); 
+	void draw(sf::RenderWindow&); 
 	bool mouseHover();
-	bool mouseClicking();
-	bool mouseClick(); //I have no idea if the events should be sent to the button 
-	//by the Menu they belong to, by the menu manager, or be instanciated int the function...
-
+	bool mouseClicking(sf::Event);
+	bool mouseClick(sf::Event);
 };

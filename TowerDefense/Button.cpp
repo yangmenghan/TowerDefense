@@ -1,13 +1,13 @@
 #include "Button.h"
 
-Button::Button(sf::RenderWindow& myW) : w(myW)
+Button::Button()
 {
 	size = sf::Vector2f(0, 0);
 	boundingBox = sprite.getGlobalBounds();
 	position = sf::Vector2i(0, 0);
 }
 
-Button::Button(sf::RenderWindow& myW, std::string textureAddress) : w(myW)
+Button::Button(std::string textureAddress)
 {
 	size = sf::Vector2f(0, 0);
 	position = sf::Vector2i(0, 0);
@@ -22,7 +22,7 @@ Button::Button(sf::RenderWindow& myW, std::string textureAddress) : w(myW)
 	boundingBox = sprite.getGlobalBounds();
 }
 
-Button::Button(sf::RenderWindow& myW, sf::Vector2f mySize, std::string textureAddress, sf::Vector2i myPosition) : w(myW)
+Button::Button(sf::Vector2f mySize, std::string textureAddress, sf::Vector2i myPosition)
 {
 	sf::Texture texture;
 	if (!texture.loadFromFile(textureAddress))
@@ -70,20 +70,8 @@ void Button::setSprite(sf::Sprite mSprite)
 	sprite = mSprite;
 }
 
-void Button::draw()
+void Button::draw(sf::RenderWindow& w)
 {
-	if (mouseHover())
-	{
-		//sprite update
-	}
-	if (mouseClicking())
-	{
-		//sprite update
-	}
-	if (mouseClick())
-	{
-		//sprite update
-	}
 	w.draw(sprite);
 }
 
@@ -95,42 +83,38 @@ bool Button::mouseHover()
 	if (boundingBox.contains(mousePosition))
 	{
 		isHovering = true;
+		//updatesprite
 	}
 	else
 	{
 		isHovering = false;
+		//updatesprite
 	}
 
 	return isHovering;
 }
 
-bool Button::mouseClicking()
+bool Button::mouseClicking(sf::Event event)
 {
-	sf::Event event;
 	if (mouseHover())
 	{
-		while (w.pollEvent(event))
+		if (event.type == sf::Event::MouseButtonPressed)
 		{
-			if (event.type == sf::Event::MouseButtonPressed)
-			{
-				return true;
-			}
+			return true;
+			//updatesprite
 		}
 	}
 	return false;
 }
 
-bool Button::mouseClick()
+bool Button::mouseClick(sf::Event event)
 {
-	sf::Event event;
-	if (mouseClicking())
+	if (mouseClicking(event))
 	{
-		while (w.pollEvent(event))
+		if (event.type == sf::Event::MouseButtonReleased)
 		{
-			if (event.type == sf::Event::MouseButtonReleased)
-			{
-				return true;
-			}
+			return true;
+			//updatesprite
 		}
 	}
 	return false;

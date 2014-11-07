@@ -11,8 +11,6 @@ protected:
 	std::string textureAddress;
 	sf::Vector2u size;
 	sf::Vector2i position;
-	
-	sf::RenderWindow& w; // is it useful to reference the window in the menu ?
 
 public:
 //Constructor and destructor
@@ -44,7 +42,8 @@ public:
 
 
 //Functions
-	void draw(/*sf::RenderWindow&*/);
+	void draw(sf::RenderWindow&);
 	void close();
-	void resolveEvent();
+	void opent();
+	void resolveEvent(sf::Event);
 };

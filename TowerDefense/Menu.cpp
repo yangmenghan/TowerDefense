@@ -1,8 +1,5 @@
 #include "Menu.h"
 
-Menu::Menu(sf::RenderWindow& myW) : w(myW)
-{}
-
 //Getters
 
 sf::Vector2u Menu::getSize()
@@ -63,7 +60,7 @@ void Menu::setSprite(std::string myFileName)
 
 //Functions
 
-void Menu::draw(/*sf::RenderWindow& w*/)
+void Menu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
 }
@@ -71,5 +68,5 @@ void Menu::draw(/*sf::RenderWindow& w*/)
 void Menu::close()
 {}
 
-void Menu::resolveEvent()
+void Menu::resolveEvent(sf::Event event)
 {}
