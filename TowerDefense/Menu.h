@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML\Graphics.hpp>
 #include <string>
+#include "MenuManager.h"
 
 class Menu
 {
@@ -10,6 +11,7 @@ protected:
 	std::string textureAddress;
 	sf::Vector2u size;
 	sf::Vector2i position;
+	
 	sf::RenderWindow& w; // is it useful to reference the window in the menu ?
 
 public:
@@ -42,7 +44,7 @@ public:
 
 
 //Functions
-	void draw(sf::RenderWindow&);
+	void draw(/*sf::RenderWindow&*/);
 	void close();
 	void resolveEvent();
 };

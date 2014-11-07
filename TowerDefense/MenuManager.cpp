@@ -4,7 +4,9 @@
 #include "MenuManager.h"
 
 MenuManager::MenuManager()
-{}
+{
+	activeMenu = menuStack.back;
+}
 
 MenuManager::~MenuManager()
 {
@@ -24,9 +26,9 @@ void MenuManager::popMenu()
 	}
 }
 
-void MenuManager::display()
+void MenuManager::display(sf::RenderWindow& w)
 {
-
+	activeMenu->draw(w);
 }
 
 std::vector<Menu*>* MenuManager::getMenus()
@@ -34,7 +36,17 @@ std::vector<Menu*>* MenuManager::getMenus()
 	return &menuStack;
 }
 
+Menu* MenuManager::getActiveMenu()
+{
+	return activeMenu;
+}
+
 MenuManager* MenuManager::getMenuManager()
 {
 	return menuManager;
+}
+
+void MenuManager::resolveEvent()
+{
+	activeMenu->resolveEvent();
 }

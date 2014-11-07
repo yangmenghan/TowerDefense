@@ -32,10 +32,9 @@ public:
 
 //Functions
 	void draw(); 
-	bool mouseHover(sf::Event);
-	bool mouseClicking(sf::Event);
-	bool mouseClick(sf::Event); //I have no idea if the events should be sent to the button 
+	bool mouseHover();
+	bool mouseClicking();
+	bool mouseClick(); //I have no idea if the events should be sent to the button 
 	//by the Menu they belong to, by the menu manager, or be instanciated int the function...
-	void spriteUpdate(sf::Event);
 
 };

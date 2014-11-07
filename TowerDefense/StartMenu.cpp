@@ -22,25 +22,9 @@ void StartMenu::draw()
 
 void StartMenu::resolveEvent()
 {
-	while (w.pollEvent(event))
+	if (startGameButton.mouseClick())
 	{
-		switch (event.type)
-		{
-		case sf::Event::Closed:
-			w.close();
-			break;
 
-			// mouse
-		case sf::Event::MouseButtonPressed:
-			if (event.mouseButton.button == sf::Mouse::Left)
-			{
-				
-			}
-
-			// we don't process other types of events
-		default:
-			break;
-		}
 	}
 }
 

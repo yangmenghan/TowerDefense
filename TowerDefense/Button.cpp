@@ -72,10 +72,22 @@ void Button::setSprite(sf::Sprite mSprite)
 
 void Button::draw()
 {
+	if (mouseHover())
+	{
+		//sprite update
+	}
+	if (mouseClicking())
+	{
+		//sprite update
+	}
+	if (mouseClick())
+	{
+		//sprite update
+	}
 	w.draw(sprite);
 }
 
-bool Button::mouseHover(sf::Event event)
+bool Button::mouseHover()
 {
 	bool isHovering = false;
 	sf::Vector2f mousePosition((float)sf::Mouse::getPosition().x, (float)sf::Mouse::getPosition().y);
@@ -92,9 +104,10 @@ bool Button::mouseHover(sf::Event event)
 	return isHovering;
 }
 
-bool Button::mouseClicking(sf::Event event)
+bool Button::mouseClicking()
 {
-	if (mouseHover(event))
+	sf::Event event;
+	if (mouseHover())
 	{
 		while (w.pollEvent(event))
 		{
@@ -104,11 +117,13 @@ bool Button::mouseClicking(sf::Event event)
 			}
 		}
 	}
+	return false;
 }
 
-bool Button::mouseClick(sf::Event event)
+bool Button::mouseClick()
 {
-	if (mouseClicking(event))
+	sf::Event event;
+	if (mouseClicking())
 	{
 		while (w.pollEvent(event))
 		{
@@ -118,14 +133,5 @@ bool Button::mouseClick(sf::Event event)
 			}
 		}
 	}
-}
-
-void Button::spriteUpdate(sf::Event event) // or no arguments ?
-{
-	if (mouseHover(event))
-	{
-		//sprite update
-	}
-
-
+	return false;
 }

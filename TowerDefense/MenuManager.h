@@ -6,6 +6,7 @@ class MenuManager
 {
 private:
 	std::vector<Menu*> menuStack;
+	Menu* activeMenu;
 
 public:
 	static MenuManager* menuManager;
@@ -13,10 +14,18 @@ public:
 	MenuManager();
 	~MenuManager();
 
-	void display();
+	void display(sf::RenderWindow& w);
 	void addMenu(Menu*);
 	void popMenu();
+
 	std::vector<Menu*>* getMenus();
+	Menu* getActiveMenu();
+
+	void setMenus();
+	void setActiveMenu();
+	void openMenu();
+	void closeMenu();
+	
 
 	static MenuManager* getMenuManager();
 

@@ -63,7 +63,7 @@ void Menu::setSprite(std::string myFileName)
 
 //Functions
 
-void Menu::draw(sf::RenderWindow& w)
+void Menu::draw(/*sf::RenderWindow& w*/)
 {
 	w.draw(sprite);
 }

@@ -15,7 +15,7 @@ private:
 
 	vector<Button*> buttons;
 
-	sf::Event event; // not sure where the event will be : linked to a menu ? linked to the renderwindow ?
+	 // not sure where the event will be : linked to a menu ? linked to the renderwindow ?
 
 public:
 	StartMenu(sf::RenderWindow& ); // is it necessary ?
