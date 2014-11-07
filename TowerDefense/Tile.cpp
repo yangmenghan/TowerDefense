@@ -63,19 +63,7 @@ std::vector<Tile*> Tile::getNeighbor(int _range)
 
 }
 
-Tile* Tile::getStartTile()
-{
-	Tile* pTile;
-	pTile = LevelManager::getLevelManager().getField().getTile(NUM_START_TILE);
-	return pTile;
-}
 
-Tile* Tile::getEndTile()
-{
-	Tile* pTile;
-	pTile = LevelManager::getLevelManager().getField().getTile(NUM_END_TILE);
-	return pTile;
-}
 
 //Setters
 void Tile::setPosition(sf::Vector2i mPosition)

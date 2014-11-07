@@ -55,6 +55,20 @@ Tile* Field::getTile(sf::Vector2i _position)
 	return t;
 }
 
+Tile* Tile::getStartTile()
+{
+	Tile* pTile;
+	pTile = LevelManager::getLevelManager().getField().getTile(NUM_START_TILE);
+	return pTile;
+}
+
+Tile* Tile::getEndTile()
+{
+	Tile* pTile;
+	pTile = LevelManager::getLevelManager().getField().getTile(NUM_END_TILE);
+	return pTile;
+}
+
 //Functions
 void Field::draw()
 {

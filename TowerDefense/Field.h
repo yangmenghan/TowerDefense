@@ -30,6 +30,8 @@ public:
 	int getNumTileHor();
 	Tile* getTile(int);
 	Tile* getTile(sf::Vector2i position);
+	Tile* getStartTile();
+	Tile* getEndTile();
 
 	//Setters
 	//void setWidth(int);
