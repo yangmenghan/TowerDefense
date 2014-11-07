@@ -11,13 +11,13 @@ sf::Music music;// Declare a new music
 
 AudioManager::AudioManager()
 {
-	isMute = false;
+	ismute = false;
 };
 
 
 AudioManager::AudioManager(bool b)
 {
-	isMute = b;
+	ismute = b;
 };
 
 void AudioManager::mute()
@@ -33,19 +33,26 @@ bool AudioManager::play()
 	music.setLoop(true); // Make it loop
 };
 
-AudioManager* AudioManager::getAudioManager()
+AudioManager AudioManager::getAudioManager()
 {
 	if (NULL == audioManager)
 	{
 		audioManager = new AudioManager;
 	}
-	return &audioManager;
+	return *audioManager;
 };
+
+bool AudioManager::isMute()
+{
+	return ismute;
+}
 
 //test
 
 void main()
 {
 	music.play();
+
+
 
 }
