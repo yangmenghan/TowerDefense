@@ -33,11 +33,19 @@ bool AudioManager::play()
 	music.setLoop(true); // Make it loop
 };
 
-AudioManager AudioManager::getAudioManager()
+AudioManager* AudioManager::getAudioManager()
 {
 	if (NULL == audioManager)
 	{
 		audioManager = new AudioManager;
 	}
-	return *audioManager;
+	return &audioManager;
 };
+
+//test
+
+void main()
+{
+	music.play();
+
+}

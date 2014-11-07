@@ -1,6 +1,11 @@
 #include"BuildMenu.h"
 
 //Constructors, destructors
+
+BuildMenu::BuildMenu()
+{
+}
+
 BuildMenu::BuildMenu(shared_ptr<Tile> _pTile)
 {
 	tile = _pTile;
@@ -13,7 +18,7 @@ BuildMenu::BuildMenu(shared_ptr<Tile> _pTile)
 	Button sunTw(w, sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("SunTower"), tilePosition + sf::Vector2i(TILE_WIDTH, TILE_HEIGHT));
 }
 
-BuildMenu::~BuildMenu(){};
+BuildMenu::~BuildMenu(){}
 
 //Getters
 

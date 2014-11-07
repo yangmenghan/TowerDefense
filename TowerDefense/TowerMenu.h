@@ -15,6 +15,7 @@ private:
 public:
 
 	//Constructors and destroyers
+	TowerMenu::TowerMenu(){};
 	TowerMenu(shared_ptr<Tile>);
 	~TowerMenu();
 

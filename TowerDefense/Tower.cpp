@@ -2,25 +2,11 @@
 #include "Player.h"
 #include "LevelManager.h"
 
-Tower::Tower()
+Tower::Tower(Tile mTile)
 {
+	this->tile = mTile;
 }
 
-Tower::Tower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite)
-{
-	damage = mDamage;
-	price = mPrice;
-	income = int(price * INCOME_RATE);
-	level = mLevel;
-	range = mRange;
-	speed = mSpeed;
-	sprite = mSprite;
-
-	rangeCircle.setPosition(this->getPosition());
-	rangeCircle.setRadius(range);
-	rangeCircle.setOutlineThickness(2);
-	rangeCircle.setFillColor(RANGE_CIRCLE_FILL_COLOR);
-}
 
 Tower::~Tower()
 {
@@ -94,6 +80,8 @@ void Tower::downgradeTw()
 		speed /= UPGRADE_RATE;
 		range--;
 	}
+	if (level == 0)
+		this->~Tower();//Delete this tower
 }
 
 Enemy Tower::getTarget()

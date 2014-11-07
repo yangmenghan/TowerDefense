@@ -1,7 +1,8 @@
 #include "NormalTower.h"
 
 
-NormalTower::NormalTower()
+NormalTower::NormalTower(Tile mTile)
+	:Tower(mTile)
 {
 	towerType = NORMAL;
 	damage = NORMAL_TOWER_DAMAGE;
@@ -19,16 +20,10 @@ NormalTower::NormalTower()
 
 	sprite.setTexture(texture);
 
-	rangeCircle.setPosition(this->getPosition());
+	rangeCircle.setPosition(sf::Vector2f(this->getPosition()));
 	rangeCircle.setRadius(range);
 	rangeCircle.setOutlineThickness(2);
 	rangeCircle.setFillColor(sf::Color(0, 0, 255, 100));
-}
-
-NormalTower::NormalTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite)
-{
-	Tower(mDamage, mPrice, mLevel, mRange, mSpeed, mSprite);
-	towerType = NORMAL;
 }
 
 NormalTower::~NormalTower()
@@ -40,7 +35,7 @@ void Tower::sellTw()
 	LevelManager::getLevelManager().getPlayer().manageMoney(int(NORMAL_TOWER_PRICE * INCOME_RATE));
 }
 
-void NormalTower::doAttack()
+void NormalTower::doAttack() 
 {
-
+	attack.resolve();
 }

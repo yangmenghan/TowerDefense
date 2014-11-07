@@ -2,6 +2,8 @@
 
 //Constructors and destroyers
 
+TowerMenu::TowerMenu(){}
+
 TowerMenu::TowerMenu(shared_ptr<Tile> _pTile)
 {
 	tile = _pTile;
