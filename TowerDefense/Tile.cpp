@@ -12,19 +12,43 @@ Tile::Tile()
 
 Tile::Tile(int x, int y)//构造x行y列的Tile
 {
-	position = sf::Vector2i(x*TILE_WIDTH, y*TILE_HEIGHT);
+	positionPixel = sf::Vector2i(x*TILE_WIDTH, y*TILE_HEIGHT);
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
 	cooldown = 0;
 	tower = make_shared<Tower>();
 }
 
-Tile::~Tile(){};
+Tile::~Tile(){}
 
 //Getters
+std::vector<Tile*> Tile::getNeighbor(int _range)
+{
+	std::vector<Tile*> neighborTiles;
+	Tile* pNeighber;
+	int i, j;
+	for (i = position.x - _range; i <= position.x + _range; i++)
+	{
+		for (j = position.y - _range; j <= position.y + _range; j++)
+		{
+			if (i >= 0 && i < TILE_NUM_VER && j >= 0 && j <= TILE_NUM_HOR)
+			{
+				pNeighber = field.getTile(sf::Vector2i(i,j));  //need to construct un instance field
+				neighborTiles.push_back(pNeighber);
+			}
+		}
+	}
+	return neighborTiles;
+
+}
 sf::Vector2i Tile::getPosition()
 {
 	return position;
+}
+
+sf::Vector2i Tile::getPositionPixel()
+{
+	return positionPixel;
 }
 
 shared_ptr<Tower>  Tile::getTower()
@@ -38,7 +62,7 @@ int Tile::getCooldowm()
 }
 
 //Setters
-void Tile::setPosition(sf::Vector2f mPosition)
+void Tile::setPosition(sf::Vector2i mPosition)
 {
 	mPosition = mPosition;
 }

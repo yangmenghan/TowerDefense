@@ -30,6 +30,7 @@ public:
 	int getHeight();
 	int getNumTileVer();
 	int getNumTileHor();
+	Tile* getTile(sf::Vector2i position);
 
 	//Setters
 	//void setWidth(int);

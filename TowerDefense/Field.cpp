@@ -18,7 +18,7 @@ Field::Field()
 	endTile = tilesMap[NUM_END_TILE];
 }
 
-Field::~Field(){};
+Field::~Field(){}
 
 //Getters
 int Field::getWidth()
@@ -39,6 +39,13 @@ int Field::getNumTileHor()
 int Field::getNumTileVer()
 {
 	return numTileVer;
+}
+
+Tile* Field::getTile(sf::Vector2i _position)
+{
+	Tile *t;
+	*t = tilesMap[_position.x*TILE_NUM_HOR+_position.y];
+	return t;
 }
 
 //Functions

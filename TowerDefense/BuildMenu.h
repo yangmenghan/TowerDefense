@@ -22,6 +22,7 @@ private:
 	Button sunTwButton;
 public:
 	//Constructors, destructors
+	BuildMenu();
 	BuildMenu(shared_ptr<Tile>);
 	~BuildMenu();
 
