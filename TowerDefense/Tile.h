@@ -27,6 +27,8 @@ public:
 	shared_ptr<Tower>  getTower();
 	int getCooldowm();
 	vector<Tile*> getNeighbor(int);
+	Tile* getStartTile();
+	Tile* getEndTile();
 
 	//Setters
 	void setPosition(sf::Vector2i);

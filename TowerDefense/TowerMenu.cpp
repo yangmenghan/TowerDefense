@@ -8,10 +8,10 @@ TowerMenu::TowerMenu(shared_ptr<Tile> _pTile)
 {
 	tile = _pTile;
 
-	sf::Vector2i tilePosition(tile->getPosition());
+	sf::Vector2i tilePositionPixel(tile->getPositionPixel());
 
-	Button sellButton(w, sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("Sell"), tilePosition + sf::Vector2i(-TILE_WIDTH, TILE_HEIGHT));
-	Button upgradeButton(w, sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("UpGrade"), tilePosition + sf::Vector2i(TILE_WIDTH, -TILE_HEIGHT));
+	Button sellButton(w, sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("Sell"), tilePositionPixel + sf::Vector2i(-TILE_WIDTH, TILE_HEIGHT));
+	Button upgradeButton(w, sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("UpGrade"), tilePositionPixel + sf::Vector2i(TILE_WIDTH, -TILE_HEIGHT));
 }
 
 TowerMenu::~TowerMenu(){}

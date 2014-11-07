@@ -16,7 +16,7 @@ Tile constants
 */
 extern const int		TILE_WIDTH;
 extern const int		TILE_HEIGHT;
-extern const int		TILE_COOLDOWN_TIME;
+extern const int		TILE_COOLDOWN;
 extern const int		TILE_NUM_HOR;
 extern const int		TILE_NUM_VER;
 extern const int		NUM_START_TILE;
@@ -62,11 +62,6 @@ extern const int		TOUGH_ENEMY_SCOREVALUE;
 extern const float		TOUGH_ENEMY_DEFENCE;
 extern const string		TOUGH_ENEMY_SPRITE_ADD;
 
-/*
-Tile constants
-*/
-
-extern const int		TILE_COOLDOWN;
 
 /*
 Tower constants

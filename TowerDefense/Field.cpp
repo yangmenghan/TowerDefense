@@ -41,6 +41,13 @@ int Field::getNumTileVer()
 	return numTileVer;
 }
 
+Tile* Field::getTile(int n)
+{
+	Tile *t;
+	*t = tilesMap[n];
+	return t;
+}
+
 Tile* Field::getTile(sf::Vector2i _position)
 {
 	Tile *t;

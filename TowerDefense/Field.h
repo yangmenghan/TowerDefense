@@ -28,6 +28,7 @@ public:
 	int getHeight();
 	int getNumTileVer();
 	int getNumTileHor();
+	Tile* getTile(int);
 	Tile* getTile(sf::Vector2i position);
 
 	//Setters

@@ -22,25 +22,7 @@ Tile::Tile(int x, int y)//构造x行y列的Tile
 Tile::~Tile(){}
 
 //Getters
-std::vector<Tile*> Tile::getNeighbor(int _range)
-{
-	std::vector<Tile*> neighborTiles;
-	Tile* pNeighber;
-	int i, j;
-	for (i = position.x - _range; i <= position.x + _range; i++)
-	{
-		for (j = position.y - _range; j <= position.y + _range; j++)
-		{
-			if (i >= 0 && i < TILE_NUM_VER && j >= 0 && j <= TILE_NUM_HOR)
-			{
-				pNeighber = field.getTile(sf::Vector2i(i,j));  //need to construct un instance field
-				neighborTiles.push_back(pNeighber);
-			}
-		}
-	}
-	return neighborTiles;
 
-}
 sf::Vector2i Tile::getPosition()
 {
 	return position;
@@ -59,6 +41,40 @@ shared_ptr<Tower>  Tile::getTower()
 int Tile::getCooldowm()
 {
 	return cooldown;
+}
+
+std::vector<Tile*> Tile::getNeighbor(int _range)
+{
+	std::vector<Tile*> neighborTiles;
+	Tile* pNeighber;
+	int i, j;
+	for (i = position.x - _range; i <= position.x + _range; i++)
+	{
+		for (j = position.y - _range; j <= position.y + _range; j++)
+		{
+			if (i >= 0 && i < TILE_NUM_VER && j >= 0 && j <= TILE_NUM_HOR)
+			{
+				pNeighber = LevelManager::getLevelManager().getField().getTile(sf::Vector2i(i, j)); 
+				neighborTiles.push_back(pNeighber);
+			}
+		}
+	}
+	return neighborTiles;
+
+}
+
+Tile* Tile::getStartTile()
+{
+	Tile* pTile;
+	pTile = LevelManager::getLevelManager().getField().getTile(NUM_START_TILE);
+	return pTile;
+}
+
+Tile* Tile::getEndTile()
+{
+	Tile* pTile;
+	pTile = LevelManager::getLevelManager().getField().getTile(NUM_END_TILE);
+	return pTile;
 }
 
 //Setters
