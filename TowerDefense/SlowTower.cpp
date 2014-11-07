@@ -1,7 +1,8 @@
 #include "SlowTower.h"
 
 
-SlowTower::SlowTower()
+SlowTower::SlowTower(Tile mTile)
+	:Tower(mTile)
 {
 	towerType = SLOW;
 	damage = SLOW_TOWER_DAMAGE;
@@ -19,16 +20,10 @@ SlowTower::SlowTower()
 
 	sprite.setTexture(texture);
 
-	rangeCircle.setPosition(this->getPosition());
+	rangeCircle.setPosition(sf::Vector2f(this->getPosition()));
 	rangeCircle.setRadius(range);
 	rangeCircle.setOutlineThickness(2);
 	rangeCircle.setFillColor(sf::Color(0, 0, 255, 100));
-}
-
-SlowTower::SlowTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite)
-{
-	Tower(mDamage, mPrice, mLevel, mRange, mSpeed, mSprite);
-	towerType = SLOW;
 }
 
 SlowTower::~SlowTower()
@@ -42,5 +37,5 @@ void Tower::sellTw()
 
 void SlowTower::doAttack()
 {
-
+	attack.resolve();
 }

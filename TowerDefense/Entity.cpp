@@ -10,7 +10,7 @@ Entity::~Entity()
 {
 }
 
-sf::Vector2f Entity::getPosition()
+sf::Vector2i Entity::getPosition()
 {
 	return position;
 }
@@ -30,7 +30,12 @@ sf::Sprite Entity::getSprite()
 	return sprite;
 }
 
-void Entity::setPosition(sf::Vector2f mPosition)
+Tile Entity::getTile()
+{
+	return tile;
+}
+
+void Entity::setPosition(sf::Vector2i mPosition)
 {
 	position = mPosition;
 }
@@ -50,16 +55,8 @@ void Entity::setSprite(sf::Sprite mSprite)
 	sprite = mSprite;
 }
 
-//TODO
-Tile Entity::getTile()
-{
-	
-}
 
-void Entity::resolveCollision(Entity mEntity)
-{
 
-}
 
 void Entity::draw(sf::RenderWindow &w)
 {

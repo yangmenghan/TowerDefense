@@ -1,17 +1,17 @@
 #pragma once
 #include "Tower.h"
-#include "SingleAttack.h"
+#include "SlowAttack.h"
 
 class SlowTower :
 	public Tower
 {
 public:
-	SlowTower();
+	SlowTower(Tile mTile);
 	SlowTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite);
 	~SlowTower();
 
-	void doAttack();
+	void doAttack() override;
 private:
-	SingleAttack attack;
+	SlowAttack attack;
 };
 

@@ -9,8 +9,7 @@ class Tower :
 {
 public:
 	
-	Tower();
-	Tower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite);
+	Tower(Tile mTile);
 	~Tower();
 
 	float getDamage();
@@ -28,6 +27,7 @@ public:
 	void upgradeTw();
 	void downgradeTw();
 	Enemy getTarget();
+	void virtual doAttack();
 	void showRangeCircle(); 
 
 protected:

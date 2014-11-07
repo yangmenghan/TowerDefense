@@ -1,7 +1,8 @@
 #include "MoneyTower.h"
 
 
-MoneyTower::MoneyTower()
+MoneyTower::MoneyTower(Tile mTile)
+	:Tower(mTile)
 {
 	towerType = MONEY;
 	damage = MONEY_TOWER_DAMAGE;
@@ -19,16 +20,10 @@ MoneyTower::MoneyTower()
 
 	sprite.setTexture(texture);
 
-	rangeCircle.setPosition(this->getPosition());
+	rangeCircle.setPosition(sf::Vector2f(this->getPosition()));
 	rangeCircle.setRadius(range);
 	rangeCircle.setOutlineThickness(2);
 	rangeCircle.setFillColor(sf::Color(0, 0, 255, 100));
-}
-
-MoneyTower::MoneyTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite)
-{
-	Tower(mDamage, mPrice, mLevel, mRange, mSpeed, mSprite);
-	towerType = MONEY;
 }
 
 MoneyTower::~MoneyTower()
@@ -45,6 +40,7 @@ void MoneyTower::generateMoney()
 	while (this)
 	{
 		LevelManager::getLevelManager().getPlayer().manageMoney(MONEY_TOWER_GENERATION_UNIT);
-		//How can it be hold on for seconds?
+		//How can it hold on for seconds?
+		//Private Timer 
 	}
 }

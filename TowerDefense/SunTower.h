@@ -6,11 +6,11 @@ class SunTower :
 	public Tower
 {
 public:
-	SunTower();
+	SunTower(Tile mTile);
 	SunTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite);
 	~SunTower();
 
-	void doAttack();
+	void doAttack() override;
 private:
 	AreaAttack attack;
 };
