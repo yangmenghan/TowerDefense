@@ -1,5 +1,6 @@
 #include "BombEnemy.h"
 #include "Config.h"
+#include "Tile.h"
 
 
 BombEnemy::BombEnemy(){
@@ -49,19 +50,45 @@ bool BombEnemy::move(){
 
 void BombEnemy::explode(){
 	//TODO : get tiles ...
-	for (Tile tile : tiles){
-		tile.setCooldown(TILE_COOLDOWN);
+	Field f = LevelManager::getLevelManager().getField();
+	vector<Tile*> t = tile.getNeighbor(1);
+	t.push_back(tile);
+	for (Tile* tile : t){
+		tile->setCooldown(TILE_COOLDOWN);
 	}
 
 	//TODO : ...and enemies...
-	for (Enemy e : enemies){
-		e.dieWithoutBonus();
+	vector<Enemy*> e = LevelManager::getLevelManager().getEnemies();
+	vector<Enemy*> enemies;
+	for (Enemy* en : e){
+		for (Tile* temp_tile : t){
+			if (en->getTile().getPosition == (*temp_tile).getPosition){
+				enemies.push_back(en);
+			}
+		}
+
+	}
+
+	for (Enemy* e : enemies){
+		e->dieWithoutBonus();
 	}
 
 	//TODO : ...and towers.
-	for (Tower t : towers){
-		t.downgradeTw();
+	vector<Tower*> t2 = LevelManager::getLevelManager().getTowers();
+	vector<Tower*> towers;
+	for (Tower* temp_tower: t2){
+		for (Tile* temp_tile : t){
+			if (temp_tower->getTile().getPosition == (*temp_tile).getPosition){
+				towers.push_back(temp_tower);
+			}
+		}
+
 	}
+
+	for (Tower* t : towers){
+		t->downgradeTw();
+	}
+
 	dieWithoutBonus();
 };
 

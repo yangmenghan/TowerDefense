@@ -41,24 +41,21 @@ void LevelManager::gameLoop(RenderWindow& w){
 			//Tower actions
 			for (Tower* tower : towers){
 				tower->draw(w);
-				if (tower->canAttack()){
-					tower->attack();
-				}
+				tower->doAttack();
 			}
 
 			//Enemy Action
 			for (Enemy* enemy : enemies){
 				if (enemy->getHP <= 0){
-					removeEnemy(*enemy);
 					enemy->die();
 				}
-				else if (enemy->getPosition == field.getFinalTile().getPosition()){
+				else if (enemy->getPosition == field.getEndTile().getPosition()){
 					removeEnemy(*enemy);
 					enemy->succed();
 				}
 				else {
+					enemy->move(); 
 					enemy->draw(w);
-					enemy->move();
 				}
 			}
 			
