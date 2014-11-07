@@ -18,8 +18,6 @@ private:
 	Tile startTile;
 	Tile endTile;
 
-
-	int Field::tempCross(int, int);
 public:
 	//Constructors and destroyers
 	Field();
@@ -41,4 +39,5 @@ public:
 	void draw();
 	Path computePath(Tile, Tile);
 	bool tryCross(Tile, Tile);
+	int Field::tempCross(int, int);
 };
