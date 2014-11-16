@@ -4,13 +4,13 @@
 SlowTower::SlowTower(Tile mTile)
 	:Tower(mTile)
 {
-	towerType = SLOW;
-	damage = SLOW_TOWER_DAMAGE;
-	price = SLOW_TOWER_PRICE;
-	income = int(price * INCOME_RATE);
 	level = 1;
-	range = SLOW_TOWER_RANGE;
-	speed = SLOW_TOWER_SPEED;
+
+	damage = SLOW_TOWER_DAMAGE[level-1];
+	price = SLOW_TOWER_PRICE;
+	income = SLOW_TOWER_INCOME[level-1];
+	range = SLOW_TOWER_RANGE[level-1];
+	speed = SLOW_TOWER_SPEED[level-1];
 
 	sf::Texture texture;
 	if (!texture.loadFromFile(SLOW_TOWER_SPRITE_ADD))
@@ -32,7 +32,7 @@ SlowTower::~SlowTower()
 
 void Tower::sellTw()
 {
-	LevelManager::getLevelManager()->getPlayer().manageMoney(int(SLOW_TOWER_PRICE * INCOME_RATE));
+	LevelManager::getLevelManager()->getPlayer().manageMoney(income);
 }
 
 void SlowTower::doAttack()

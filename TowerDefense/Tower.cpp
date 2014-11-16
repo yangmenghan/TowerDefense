@@ -68,7 +68,8 @@ void Tower::upgradeTw()
 	{
 		level++;
 		damage += UPGRADE_INCREMENT;
-		speed -= UPGRADE_INCREMENT;		
+		speed -= UPGRADE_INCREMENT;
+		income = int(income * UPGRADE_RATE);
 		range++;
 
 		attack.setDamage(damage);

@@ -29,12 +29,14 @@ public:
 	void showRangeCircle(); 
 
 protected:
-	Attack attack;
-	float damage;
+	Attack attack[3];
+	float damage[3];
 	int price;
-	int income;
+	int income[3];
 	int level;
-	float range;
+	float range[3];
+
+
 	sf::CircleShape rangeCircle;
 };
 

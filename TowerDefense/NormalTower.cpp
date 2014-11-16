@@ -32,7 +32,7 @@ NormalTower::~NormalTower()
 
 void Tower::sellTw()
 {
-	LevelManager::getLevelManager()->getPlayer().manageMoney(int(NORMAL_TOWER_PRICE * INCOME_RATE));
+	LevelManager::getLevelManager()->getPlayer().manageMoney(income);
 }
 
 void NormalTower::doAttack() 

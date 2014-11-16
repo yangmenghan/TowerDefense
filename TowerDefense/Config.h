@@ -86,32 +86,37 @@ Tower constants
 */
 
 extern const float		INCOME_RATE;
-extern const float		UPGRADE_INCREMENT;
+extern const int		UPGRADE_INCREMENT;
+extern const float		UPGRADE_RATE;
 extern const sf::Color	RANGE_CIRCLE_FILL_COLOR;
 
-extern const float		NORMAL_TOWER_DAMAGE;
-extern const int		NORMAL_TOWER_SPEED;
-extern const float		NORMAL_TOWER_RANGE;
+extern const float		NORMAL_TOWER_DAMAGE[3];
+extern const int		NORMAL_TOWER_SPEED[3];
+extern const float		NORMAL_TOWER_RANGE[3];
 extern const int		NORMAL_TOWER_PRICE;
+extern const int		NORMAL_TOWER_INCOME[3];
 extern const string		NORMAL_TOWER_SPRITE_ADD;
 
-extern const float		SUN_TOWER_DAMAGE;
-extern const int		SUN_TOWER_SPEED;
-extern const float		SUN_TOWER_RANGE;
+extern const float		SUN_TOWER_DAMAGE[3];
+extern const int		SUN_TOWER_SPEED[3];
+extern const float		SUN_TOWER_RANGE[3];
 extern const int		SUN_TOWER_PRICE;
+extern const int		SUN_TOWER_INCOME[3];
 extern const string		SUN_TOWER_SPRITE_ADD;
 
-extern const float		MONEY_TOWER_DAMAGE;
-extern const int		MONEY_TOWER_GENERATION_UNIT;
-extern const int		MONEY_TOWER_SPEED;
-extern const float		MONEY_TOWER_RANGE;
+extern const float		MONEY_TOWER_DAMAGE[3];
+extern const int		MONEY_TOWER_GENERATION_UNIT[3];
+extern const int		MONEY_TOWER_SPEED[3];
+extern const float		MONEY_TOWER_RANGE[3];
 extern const int		MONEY_TOWER_PRICE;
+extern const int		MONEY_TOWER_INCOME[3];
 extern const string		MONEY_TOWER_SPRITE_ADD;
 
-extern const float		SLOW_TOWER_DAMAGE;
-extern const int		SLOW_TOWER_SPEED;
-extern const float		SLOW_TOWER_RANGE;
+extern const float		SLOW_TOWER_DAMAGE[3];
+extern const int		SLOW_TOWER_SPEED[3];
+extern const float		SLOW_TOWER_RANGE[3];
 extern const int		SLOW_TOWER_PRICE;
+extern const int		SLOW_TOWER_INCOME[3];
 extern const string		SLOW_TOWER_SPRITE_ADD;
 
 
