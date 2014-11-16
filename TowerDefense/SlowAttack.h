@@ -7,5 +7,7 @@ class SlowAttack :
 public:
 	SlowAttack();
 	~SlowAttack();
+
+	void resolve() override;
 };
 

@@ -2,6 +2,7 @@
 
 Attack::Attack()
 {
+	timer = speed;
 }
 
 Attack::~Attack()
@@ -36,6 +37,11 @@ void Attack::setCenter(sf::Vector2i mCenter)
 void Attack::setRange(float mRange)
 {
 	range = mRange;
+}
+
+void Attack::setSpeed(int mSpeed)
+{
+	speed = mSpeed;
 }
 Enemy Attack::getTarget()
 {

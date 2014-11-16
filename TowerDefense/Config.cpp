@@ -84,30 +84,30 @@ Tower constants
 */
 
 extern const float		INCOME_RATE				= 0.8;
-extern const float		UPGRADE_RATE			= 1.02;
+extern const int		UPGRADE_INCREMENT		= 5;
 extern const sf::Color	RANGE_CIRCLE_FILL_COLOR = sf::Color(0, 0, 255, 100);
 
 
 extern const float		NORMAL_TOWER_DAMAGE		= 18;
-extern const float		NORMAL_TOWER_SPEED		= 1;
+extern const int		NORMAL_TOWER_SPEED		= 15;
 extern const float		NORMAL_TOWER_RANGE		= 10;
 extern const int		NORMAL_TOWER_PRICE		= 200;
 extern const string		NORMAL_TOWER_SPRITE_ADD = "";
 
 extern const float		SUN_TOWER_DAMAGE		= 17;
-extern const float		SUN_TOWER_SPEED			= 0.8;
+extern const int		SUN_TOWER_SPEED			= 30;
 extern const float		SUN_TOWER_RANGE			= 10;
 extern const int		SUN_TOWER_PRICE			= 500;
 extern const string		SUN_TOWER_SPRITE_ADD	= "";
 
 extern const float		MONEY_TOWER_DAMAGE		= 0;
-extern const float		MONEY_TOWER_SPEED		= 0.1;
+extern const int		MONEY_TOWER_SPEED		= 30;
 extern const float		MONEY_TOWER_RANGE		= 0;
 extern const int		MONEY_TOWER_PRICE		= 400;
 extern const string		MONEY_TOWER_SPRITE_ADD	= "";
 
 extern const float		SLOW_TOWER_DAMAGE		= 0;
-extern const float		SLOW_TOWER_SPEED		= 1.5;
+extern const int		SLOW_TOWER_SPEED		= 15;
 extern const float		SLOW_TOWER_RANGE		= 10;
 extern const int		SLOW_TOWER_PRICE		= 300;
 extern const string		SLOW_TOWER_SPRITE_ADD	= "";

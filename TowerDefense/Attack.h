@@ -16,6 +16,7 @@ public:
 	void setSlowAmount(float mSlowAmount);
 	void setCenter(sf::Vector2i mCenter);
 	void setRange(float mRange);
+	void setSpeed(int mSpeed);
 
 	Enemy getTarget();
 	void virtual resolve();
@@ -25,6 +26,7 @@ protected:
 	float damage;
 	float range;
 	sf::Vector2i center;
-	
+	int timer;
+	int speed;
 };
 

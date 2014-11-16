@@ -4,7 +4,6 @@
 MoneyTower::MoneyTower(Tile mTile)
 	:Tower(mTile)
 {
-	towerType = MONEY;
 	damage = MONEY_TOWER_DAMAGE;
 	price = MONEY_TOWER_PRICE;
 	income = int(price * INCOME_RATE);
@@ -39,8 +38,12 @@ void MoneyTower::generateMoney()
 {
 	while (this)
 	{
-		LevelManager::getLevelManager().getPlayer().manageMoney(MONEY_TOWER_GENERATION_UNIT);
-		//How can it hold on for seconds?
-		//Private Timer 
+		if (timer == 0)
+		{
+			LevelManager::getLevelManager().getPlayer().manageMoney(MONEY_TOWER_GENERATION_UNIT);
+			timer = speed;
+		}
+		else
+			timer--;
 	}
 }
