@@ -22,7 +22,8 @@ private:
 	
 
 public:
-	GameOverMenu(sf::RenderWindow&); //Default constructor.
+	GameOverMenu(); //Constructor.
+	GameOverMenu(std::string, sf::Vector2u, sf::Vector2i);
 	~GameOverMenu();//Destructor.
 
 	void draw(sf::RenderWindow&);//Draw.
