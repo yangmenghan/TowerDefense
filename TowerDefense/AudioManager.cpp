@@ -27,7 +27,7 @@ void AudioManager::mute()
 
 bool AudioManager::play()
 {
-	if (!music.openFromFile("music.ogg"))  // Open it from an audio file
+	if (!music.openFromFile("test.mp3"))  // Open it from an audio file
 		return 1; // Error
 	music.play();  // Play it
 	music.setLoop(true); // Make it loop
@@ -39,22 +39,10 @@ AudioManager AudioManager::getAudioManager()
 	{
 		audioManager = new AudioManager;
 	}
-
-	return audioManager;
-
+	return *audioManager;
 };
 
 bool AudioManager::isMute()
 {
 	return ismute;
-}
-
-//test
-
-void main()
-{
-	music.play();
-
-
-
-}
+};

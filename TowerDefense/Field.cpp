@@ -141,23 +141,23 @@ int Field::timeCross(int m, int n)  //Dijkstra
 
 }
 
-Path Field::computePath(Tile _startTile, Tile _endTile)
+Path Field::computePath(Tile tile1, Tile tile2)
 {
-	sf::Vector2i vec1 = _startTile.getPosition();
-	sf::Vector2i vec2 = _endTile.getPosition();
+	sf::Vector2i vec1 = tile1.getPosition();
+	sf::Vector2i vec2 = tile2.getPosition();
 	int m = vec1.x / TILE_WIDTH + vec1.y * TILE_NUM_VER / TILE_HEIGHT;  //  point de depart
 	int n = vec2.x / TILE_WIDTH + vec2.y * TILE_NUM_VER / TILE_HEIGHT; // point d'arrive
-	int time = tempCross(m, n);
+	int time = timeCross(m, n);
 	vector<Tile> path;
-	path[0] = _startTile;
+	path[0] = tile1;
 	int g = m;
 	for (int r = 1; r < time; r++)
 	{
-		if (time == tempCross(g + TILE_NUM_VER, n) + tempCross(m, g + TILE_NUM_VER))
+		if (time == timeCross(g + TILE_NUM_VER, n) + timeCross(m, g + TILE_NUM_VER))
 			g += TILE_NUM_VER;
-		if (time == tempCross(g + 1, n) + tempCross(m, g + 1))
+		if (time == timeCross(g + 1, n) + timeCross(m, g + 1))
 			g += 1;
-		if (time == tempCross(g - 1, n) + tempCross(m, g - 1))
+		if (time ==timeCross(g - 1, n) + timeCross(m, g - 1))
 			g -= 1;
 		Tile tile(g / TILE_NUM_VER, g % TILE_NUM_VER);
 		path[r] = tile;
@@ -173,7 +173,7 @@ bool Field::tryCross(Tile _startTile, Tile _endTile)
 	int n = vec2.x / TILE_WIDTH + vec2.y * TILE_NUM_VER / TILE_HEIGHT; // point d'arrive
 
 	//trycross from depart tile
-	int time = tempCross(m, n);
+	int time = timeCross(m, n);
 	if (time > TILE_NUM_HOR*TILE_NUM_VER)
 		return false;
 
@@ -187,7 +187,7 @@ bool Field::tryCross(Tile _startTile, Tile _endTile)
 		Tile tile = (*enemy).getTile();
 		sf::Vector2i vec3 = tile.getPosition();
 		int p = vec3.x / TILE_WIDTH + vec3.y * TILE_NUM_VER / TILE_HEIGHT;  //  point d'enemy
-		time = tempCross(p, n);
+		time = timeCross(p, n);
 		if (time > TILE_NUM_HOR*TILE_NUM_VER)
 			return false;  //enemy i can't cross
 	}
