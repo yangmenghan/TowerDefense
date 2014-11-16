@@ -15,7 +15,7 @@ protected:
 public:
 //Constructor and destructor
 	Menu();
-	Menu(sf::RenderWindow&);
+	Menu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition);
 	~Menu(); 
 
 //Setters

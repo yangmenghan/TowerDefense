@@ -36,7 +36,7 @@ void StartMenu::resolveEvent(sf::Event event)
 	}
 	if (muteButton.mouseClick(event))
 	{
-		AudioManager* audio = AudioManager*::getAudioManager();
+		AudioManager audio = AudioManager::getAudioManager();
 		if (audio.isMute() == false)
 		{
 			muteGame();

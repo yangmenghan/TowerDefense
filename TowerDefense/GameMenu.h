@@ -4,6 +4,8 @@
 #include "Menu.h"
 #include "Button.h"
 #include "Config.h"
+#include "LevelManager.h"
+#include "AudioManager.h"
 
 class GameMenu 
 	: public Menu
@@ -15,12 +17,6 @@ private:
 	Button restartButton = Button(RESTART_BUTTON_TEXTURE);
 	Button giveUpButton = Button(GIVE_UP_BUTTON_TEXTURE);
 
-	enum Actions {Pause, SpeedUp, ReturnSpeed, Mute, RestartGame, Exit};
-
-	float gameSpeed;
-	int waveCount;
-	int waveTotal;
-
 	sf::Text lifeCountDisplay; //is it the best way to proceed ? will need tests
 	sf::Text pointsCountDisplay;
 	sf::Text waveCountDisplay;
@@ -28,26 +24,28 @@ private:
 public:
 //Constructors, destructors
 	GameMenu();
-	GameMenu(sf::Texture, sf::Vector2f, int);
+	GameMenu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition);
 	~GameMenu();
 
 //Getters
-//Do we need getters and setters for buttons ?
-	float getGameSpeed();
-	int getWaveCount();
-	int getWaveTotal();
+	sf::Text getLifeCountDisplay();
+	sf::Text getPointsCountDisplay();
+	sf::Text getWaveCountDisplay();
 
 //Setters
-	void setGameSpeed(float);
-	void setWaveCount(int);
-	void setWaveTotal(int); // not useful ?
+	void setLifeCountDisplay(int myLifeCount);
+	void setPointsCountDisplay(int myPointsCount);
+	void setWaveCountDisplay(int myWaveCount);
 
 //Fonctions
 	void pauseGame();
 	void speedGame();
 	void returnSpeed();
+
+	void muteGame();
+	void playMusic();
+	
 	void restartGame();
-	void startWave();
 	void draw(sf::RenderWindow& w);
-	void resolveEvent();
+	void resolveEvent(sf::Event event);
 };
