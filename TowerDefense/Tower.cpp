@@ -5,6 +5,8 @@
 Tower::Tower(Tile mTile)
 {
 	this->tile = mTile;
+	this->attack.setRange(range);
+	this->attack.setCenter(tile.getPosition());
 }
 
 
@@ -30,11 +32,6 @@ int Tower::getLevel()
 float Tower::getRange()
 {
 	return range;
-}
-
-int Tower::getTowerType()
-{
-	return towerType;
 }
 
 void Tower::setDamage(float mDamage)
@@ -84,27 +81,7 @@ void Tower::downgradeTw()
 		this->~Tower();//Delete this tower
 }
 
-Enemy Tower::getTarget()
-{
-	std::vector<Enemy*> enemiesField = LevelManager::getLevelManager().getEnemies();
-	Enemy* enemyMinDistanceToTarget;
-	float minDistance = 0;
-	for (Enemy* e : enemiesField)
-	{
-		if (minDistance == 0)
-		{
-			minDistance = e->getDistanceToTarget;
-			enemyMinDistanceToTarget = e;
-		}
-		else if (e->getDistanceToTarget() < minDistance)
-		{
-			minDistance = e->getDistanceToTarget;
-			enemyMinDistanceToTarget = e;
-		}
-	}
 
-	return *enemyMinDistanceToTarget;
-}
 
 void Tower::showRangeCircle()
 {

@@ -28,4 +28,35 @@ void Attack::setSlowAmount(float mFloatAmount)
 	slowAmount = mFloatAmount;
 }
 
+void Attack::setCenter(sf::Vector2i mCenter)
+{
+	center = mCenter;
+}
 
+void Attack::setRange(float mRange)
+{
+	range = mRange;
+}
+Enemy Attack::getTarget()
+{
+	std::vector<Enemy*> enemiesField = LevelManager::getLevelManager().getEnemies();
+	Enemy* enemyMinDistanceToTarget;
+	float minDistance = 0;
+	for (Enemy* e : enemiesField)
+	{
+		if (sqrt((e->getPosition().x - center.x) ^ 2 + (e->getPosition().y - center.y) ^ 2) < range)
+		{
+			if (minDistance == 0)
+			{
+				minDistance = e->getDistanceToTarget;
+				enemyMinDistanceToTarget = e;
+			}
+			else if (e->getDistanceToTarget() < minDistance)
+			{
+				minDistance = e->getDistanceToTarget;
+				enemyMinDistanceToTarget = e;
+			}
+		}
+	}
+	return *enemyMinDistanceToTarget;
+}

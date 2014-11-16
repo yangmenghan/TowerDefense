@@ -7,6 +7,15 @@ call simply the name of the global constant ! :D
 */
 
 /*
+Main Window constants
+*/
+
+extern const int		WINDOW_WIDTH			= 2200;
+extern const int		WINDOW_HEIGHT			= 1200;
+extern const int		BORDER_SIZE				= 30;
+
+
+/*
 Tile constants
 */
 
@@ -25,6 +34,15 @@ BuildMenu Constants
 
 extern const float		BUTTON_WIDTH			= 70;
 extern const float		BUTTON_HEIGHT			= 70;
+
+/*
+Wave constants
+*/
+
+extern const int		WAVE_COUNT				= 21;
+extern const string		WAVE_FILE_ADDRESS		= "";
+extern const int		WAVE_SPAWN_COOLDOWN	= 300;
+extern const int		WAVE_COOLDOWN			= 600;
 
 /*
 Enemy constants
@@ -109,6 +127,7 @@ Menu constants
 extern const string		GAME_MENU_DEFAULT_TEXTURE = "";
 extern const string		START_MENU_TEXTURE		  = "";
 extern const string		CREDITS_SPRITE_ADD		  = "";
+extern const string		GAMEOVER_MENU_TEXTURE	  = "";
 		
 /*
 Button constants
@@ -122,6 +141,7 @@ extern const string		START_GAME_BUTTON_TEXTURE = "";
 extern const string		SCOREBOARD_BUTTON_TEXTURE = "";
 extern const string		CREDITS_BUTTON_TEXTURE    = "";
 extern const string		EXIT_GAME_BUTTON_TEXTURE  = "";
+extern const string		BACK_BUTTON_TEXTURE		  = "";
 
 /*
 Other constants

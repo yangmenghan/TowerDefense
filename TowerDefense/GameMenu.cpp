@@ -4,78 +4,86 @@
 #include "GameMenu.h"
 #include "Button.h"
 #include "Config.h"
-#include <string>
 
 GameMenu::GameMenu()
 {
+	size.x = GAME_MENU_WIDTH;
+	size.y = GAME_MENU_HEIGHT;
+	gameSpeed = 1;
+	waveTotal = WAVE_TOTAL;
+	waveCount = 0;
 
+	sf::Texture t;
+	if (!t.loadFromFile(GAME_MENU_DEFAULT_TEXTURE))
+	{
+		// TODO erreur...
+	}
+
+	texture = t;
+	sprite.setTexture(texture);
 }
 
-GameMenu::GameMenu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition)
+GameMenu::GameMenu(sf::Texture myTexture, sf::Vector2f mySize, int myWaveTotal)
 {
-	Menu(myTextureAdress, mySize, myPosition);
+	size = mySize;
+	texture = myTexture;
+	gameSpeed = 1;
+	waveTotal = myWaveTotal;
+	waveCount = 0;
+	sprite.setTexture(texture);
 }
 
 GameMenu::~GameMenu(){}
 
 //Getters
-sf::Text GameMenu::getLifeCountDisplay()
+
+float GameMenu::getGameSpeed()
 {
-	return lifeCountDisplay;
+	return gameSpeed;
 }
 
-sf::Text GameMenu::getPointsCountDisplay()
-{
-	return pointsCountDisplay;
-}
-
-sf::Text GameMenu::getWaveCountDisplay()
-{
-	return waveCountDisplay;
-}
 
 //Setters
 
-void GameMenu::setLifeCountDisplay(int myLifeCount)
+void GameMenu::setGameSpeed(float myGameSpeed)
 {
-	lifeCountDisplay.setString(to_string(myLifeCount));
+	gameSpeed = myGameSpeed;
 }
 
-void GameMenu::setPointsCountDisplay(int myPointsCount)
+void GameMenu::setWaveCount(int myWaveCount)
 {
-	pointsCountDisplay.setString(to_string(myPointsCount));
+	waveCount = myWaveCount;
 }
 
-void GameMenu::setWaveCountDisplay(int myWaveCount)
+void GameMenu::setWaveTotal(int myWaveTotal)
 {
-	waveCountDisplay.setString(to_string(myWaveCount));
+	waveTotal = myWaveTotal;
 }
 
 //Functions
 
 void GameMenu::pauseGame()
 {
-	LevelManager levelManager = LevelManager::getLevelManager();
-	levelManager.setSpeed(0);
+	gameSpeed = 0;
 }
 
 void GameMenu::returnSpeed()
 {
-	LevelManager levelManager = LevelManager::getLevelManager();
-	levelManager.setSpeed(1);
+	gameSpeed = 1;
 }
 
 void GameMenu::speedGame()
 {
-	LevelManager levelManager = LevelManager::getLevelManager();
-	levelManager.setSpeed(2);
+	gameSpeed = 2;
 }
 
+	//TO DO
 
 void GameMenu::restartGame()
 {
 
 }
+
 
 void GameMenu::draw(sf::RenderWindow& w)
 {
@@ -85,62 +93,11 @@ void GameMenu::draw(sf::RenderWindow& w)
 	muteButton.draw(w);
 	restartButton.draw(w);
 	giveUpButton.draw(w);
-
-	//set position and font for the text displays
-
-	w.draw(lifeCountDisplay);
-	w.draw(pointsCountDisplay);
-	w.draw(waveCountDisplay);
-
 }
 
-void GameMenu::resolveEvent(sf::Event event)
+void GameMenu::resolveEvent()
 {
-	if (pauseButton.mouseClick(event))
-	{
-		int gameSpeed = LevelManager::getLevelManager().getSpeed();
-		if (gameSpeed == 0)
-		{
-			returnSpeed();
-		}
-		else
-		{
-			pauseGame();
-		}
-		
-	}
-	if (speedButton.mouseClick(event))
-	{
-		int gameSpeed = LevelManager::getLevelManager().getSpeed();
-		if (gameSpeed == 2)
-		{
-			returnSpeed();
-		}
-		else
-		{
-			speedGame();
-		}
-	}
-	if (muteButton.mouseClick(event))
-	{
-		AudioManager audio = AudioManager::getAudioManager();
-		if (audio.isMute() == false)
-		{
-			muteGame();
-		}
-		else
-		{
-			playMusic();
-		}
-	}
-	if (restartButton.mouseClick(event))
-	{
-		restartGame();
-	}
-	if (giveUpButton.mouseClick(event))
-	{
-		//game over
-	}
+
 }
 
 

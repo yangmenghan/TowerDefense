@@ -60,6 +60,7 @@ void Enemy::dieWithoutBonus(){
 
 void Enemy::slow(int seconds){
 	slowTime = seconds;
+	speed = speed - seconds;
 };
 
 void Enemy::takeDamage(int damage){

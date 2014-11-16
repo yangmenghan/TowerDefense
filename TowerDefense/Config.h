@@ -10,6 +10,14 @@ using namespace std;
 		call simply the name of the global constant ! :D
 */
 
+/*
+Main Window constants
+*/
+
+extern const int		WINDOW_WIDTH;
+extern const int		WINDOW_HEIGHT;
+extern const int		BORDER_SIZE;
+
 
 /*
 Tile constants
@@ -28,6 +36,15 @@ BuildMenu Constants
 */
 extern const float		BUTTON_WIDTH;
 extern const float		BUTTON_HEIGHT;
+
+/*
+Wave Constants 
+*/
+extern const int		WAVE_COUNT;
+extern const string		WAVE_FILE_ADDRESS;
+extern const int		WAVE_SPAWN_COOLDOWN;
+extern const int		WAVE_COOLDOWN;
+
 
 /*
 Enemy constants
@@ -113,6 +130,7 @@ Menu constants
 extern const string		GAME_MENU_DEFAULT_TEXTURE;
 extern const string		START_MENU_TEXTURE;
 extern const string		CREDITS_SPRITE_ADD;
+extern const string		GAMEOVER_MENU_TEXTURE;
 
 /*
 Button constants
@@ -126,6 +144,7 @@ extern const string		START_GAME_BUTTON_TEXTURE;
 extern const string		SCOREBOARD_BUTTON_TEXTURE;
 extern const string		CREDITS_BUTTON_TEXTURE;
 extern const string		EXIT_GAME_BUTTON_TEXTURE;
+extern const string		BACK_BUTTON_TEXTURE;
 
 /*
 Other constants

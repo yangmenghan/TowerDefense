@@ -12,7 +12,8 @@ public:
 
 	void setRange();
 
-	sf::Vector2f getTarget();
+	vector<Enemy*> getTarget();
+
 
 private:
 	float range;
