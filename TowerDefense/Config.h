@@ -113,6 +113,7 @@ Menu constants
 extern const string		GAME_MENU_DEFAULT_TEXTURE;
 extern const string		START_MENU_TEXTURE;
 extern const string		CREDITS_SPRITE_ADD;
+extern const string		GAMEOVER_MENU_TEXTURE;
 
 /*
 Button constants
