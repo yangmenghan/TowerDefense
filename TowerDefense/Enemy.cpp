@@ -41,8 +41,8 @@ bool Enemy::move(){
 		unSlow();
 	}
 
-	vector<Tile*> tiles = LevelManager::getLevelManager()->getField().computePath(tile, LevelManager::getLevelManager()->getField().getEndTile()).getPath();
-	Tile t = *tiles[0];
+	vector<Tile> tiles = LevelManager::getLevelManager()->getField().computePath(tile, *LevelManager::getLevelManager()->getField().getEndTile()).getPath();
+	Tile t = tiles[0];
 	int gameSpeed = LevelManager::getLevelManager()->getSpeed();
 	position.x = position.x + gameSpeed * speed;
 	position.y = position.y + gameSpeed * speed;
