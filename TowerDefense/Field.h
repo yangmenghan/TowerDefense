@@ -39,7 +39,7 @@ public:
 	//void setMap();
 
 	//Functions
-	void draw();
+	void draw();  //draw
 	Path computePath(Tile, Tile);  // compute the path of all the enemies
 	bool tryCross(Tile, Tile);  // to know if all the enemies can go to the destination
 	int timeCross(int, int);  // nomber of tile until the destination

@@ -21,7 +21,7 @@ void Path::draw(vector<Tile> path)
 	for (int i = 0; i < path.size(); i++)
 	{
 		Tile tile = path[i];
-		//change color
+		//change color  TODO
 
 	};
 
