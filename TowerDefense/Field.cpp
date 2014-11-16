@@ -1,4 +1,5 @@
 #include"Field.h"
+#include "LevelManager.h"
 
 //Constructors and destroyers
 Field::Field()
@@ -56,14 +57,14 @@ Tile* Field::getTile(sf::Vector2i _position)
 Tile* Field::getStartTile()
 {
 	Tile* pTile;
-	pTile = LevelManager::getLevelManager().getField().getTile(NUM_START_TILE);
+	pTile = LevelManager::getLevelManager()->getField().getTile(NUM_START_TILE);
 	return pTile;
 }
 
 Tile* Field::getEndTile()
 {
 	Tile* pTile;
-	pTile = LevelManager::getLevelManager().getField().getTile(NUM_END_TILE);
+	pTile = LevelManager::getLevelManager()->getField().getTile(NUM_END_TILE);
 	return pTile;
 }
 

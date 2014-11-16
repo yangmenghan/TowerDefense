@@ -2,9 +2,10 @@
 #include <SFML\Graphics.hpp>
 #include <memory>
 #include <Vector>
-#include "Tower.h"
 #include "BuildMenu.h"
 #include "TowerMenu.h"
+
+class Tower;
 
 class Tile
 {

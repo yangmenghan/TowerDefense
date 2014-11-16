@@ -1,7 +1,7 @@
 #pragma once
 
 #include <SFML\Graphics.hpp>
-//#include "Menu.h"
+#include "Menu.h"
 #include <vector>
 
 class MenuManager

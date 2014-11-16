@@ -7,7 +7,6 @@
 #include "Path.h"
 #include "string.h"
 #include "Config.h"
-#include "LevelManager.h"
 #include "Enemy.h"
 
 class Field
