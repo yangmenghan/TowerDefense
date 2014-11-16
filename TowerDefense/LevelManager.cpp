@@ -3,14 +3,13 @@
 
 using namespace sf;
 
-LevelManager LevelManager::getLevelManager(){
+LevelManager* LevelManager::getLevelManager(){
 	if (NULL == levelManager)
 	{
 		levelManager = new LevelManager;
 	}
 
-	return *levelManager;
-	return;
+	return levelManager;
 };
 
 void LevelManager::kill(){
@@ -23,24 +22,27 @@ void LevelManager::kill(){
 
 LevelManager::LevelManager(){
 	waveCooldown = WAVE_COOLDOWN;
-	chargeWaves();
+	loadWaves();
 }
 
 void LevelManager::gameLoop(RenderWindow& w){
 	sf::Event event;
 	while (w.pollEvent(event)){
 		w.clear();
-		if (event == null){
+		
+		/*
+		if (event == ""){
 			//TODO
 		}
 		
-		else {
+		else {*/
+
 			if (event.type == sf::Event::Closed){
 				w.close();
 				//TODO : stop the game !!
 			}
 				
-		}
+		
 
 		MenuManager::getMenuManager()->display(w);
 		MenuManager::getMenuManager()->resolveEvent(event);
@@ -70,7 +72,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 				}
 			}
 			else { 
-					waves.back()->spawnEnemy();
+					waves.back().spawnEnemy();
 				
 			}
 			
@@ -102,6 +104,8 @@ void LevelManager::gameLoop(RenderWindow& w){
 	}
 };
 
+
+//proceed to the terminaison of current wave and pop the next wave
 void LevelManager::nextWave(){
 	if (enemies.empty()){ // the spawn of the next wave start if there is no enemy left on the map
 		if (waveCooldown != 0){
@@ -115,22 +119,25 @@ void LevelManager::nextWave(){
 	
 }
 
-void LevelManager::chargeWaves(){
+//load
+void LevelManager::loadWaves(){
 	string address = WAVE_FILE_ADDRESS;
 	ifstream file(address);
-	file.open();
 
 	string line;
 	while (std::getline(file, line))
 	{
+		Wave w;
 		for (char type: line){
-			wave.addEnemy(type);
+			w.addEnemy(type);
 		}
+		waves.push_back(w);
 	}
 	file.close();
 }
 
 void LevelManager::addEnemy(Enemy &e){
+	e.setTile(*field.getStartTile());
 	enemies.push_back(&e);
 };
 

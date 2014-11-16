@@ -5,19 +5,24 @@ Wave::Wave(){
 	spawnCooldown = WAVE_SPAWN_COOLDOWN;
 };
 
-Wave::Wave(vector<Enemy*> e){
+Wave::Wave(vector<Enemy> e){
 	enemies = e;
 };
 
 void Wave::addEnemy(char type){
+	//TODO : warning modularity
 	switch type :
 	case "1":
+		enemies.push_back(NormalEnemy e);
 		break;
 	case "2":
+		enemies.push_back(FastEnemy e);
 		break;
 	case "3":
+		enemies.push_back(ToughEnemy e);
 		break;
 	case "4":
+		enemies.push_back(BombEnemy e);
 		break;
 }
 
@@ -33,7 +38,7 @@ Enemy* Wave::spawnEnemy(){
 	if (spawnCooldown == 0){
 		spawnCooldown = WAVE_SPAWN_COOLDOWN;
 		if (!enemies.empty()){
-			Enemy* e = enemies.back();
+			Enemy e = enemies.back();
 			enemies.pop_back();
 			return e;
 		}

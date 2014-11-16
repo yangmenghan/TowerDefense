@@ -40,7 +40,7 @@ extern const float		BUTTON_HEIGHT;
 /*
 Wave Constants 
 */
-extern const int		WAVE_COUNT;
+extern const int		WAVE_TOTAL;
 extern const string		WAVE_FILE_ADDRESS;
 extern const int		WAVE_SPAWN_COOLDOWN;
 extern const int		WAVE_COOLDOWN;
@@ -118,11 +118,8 @@ extern const string		SLOW_TOWER_SPRITE_ADD;
 /*
 Attack constants
 */
+extern const int		SLOW_EFFECT;
 
-/*
-Wave constants
-*/
-extern const int		WAVE_TOTAL;
 
 /*
 Menu constants

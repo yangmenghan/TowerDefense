@@ -13,7 +13,7 @@ using namespace std;
 class LevelManager{
 public:
 
-	static LevelManager getLevelManager();
+	static LevelManager* getLevelManager();
 	void kill();
 
 	void gameLoop(sf::RenderWindow& w);
@@ -40,7 +40,7 @@ public:
 	void setSpeed(int);
 
 	void nextWave();
-	void chargeWaves(); //TODO
+	void loadWaves(); //TODO
 
 	void gameOver(); //TODO
 	void victory(); //TODO
@@ -64,7 +64,7 @@ private:
 
 	vector<Enemy*> enemies;
 	vector<Tower*> towers;
-	vector<Wave*> waves;
+	vector<Wave> waves;
 
 	Player player;
 	Field field;

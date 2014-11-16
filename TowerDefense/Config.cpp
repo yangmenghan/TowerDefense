@@ -39,9 +39,9 @@ extern const float		BUTTON_HEIGHT			= 70;
 Wave constants
 */
 
-extern const int		WAVE_COUNT				= 21;
-extern const string		WAVE_FILE_ADDRESS		= "";
-extern const int		WAVE_SPAWN_COOLDOWN	= 300;
+extern const int		WAVE_TOTAL				= 21;
+extern const string		WAVE_FILE_ADDRESS		= "\Waves.txt";
+extern const int		WAVE_SPAWN_COOLDOWN		= 300;
 extern const int		WAVE_COOLDOWN			= 600;
 
 /*
@@ -116,10 +116,7 @@ extern const string		SLOW_TOWER_SPRITE_ADD	= "";
 Attack constants
 */
 
-/*
-Wave constants
-*/
-extern const int		WAVE_TOTAL				  = 20;
+extern const int		SLOW_EFFECT				= 100;
 
 /*
 Menu constants

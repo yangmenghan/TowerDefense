@@ -10,6 +10,8 @@ BombEnemy::BombEnemy(){
 	scoreValue = BOMB_ENEMY_SCOREVALUE;
 	speed = BOMB_ENEMY_SPEED;
 
+	timer = BOMB_ENEMY_COUNTDOWN;
+
 	sf::Texture texture;
 	if (!texture.loadFromFile(BOMB_ENEMY_SPRITE_ADD))
 	{
@@ -37,10 +39,16 @@ int BombEnemy::getTimer(){
 
 bool BombEnemy::move(){
 	if (hp <= trigger){
-		//TODO : manage the countdown
-		if (hp<=0){
-			explode();
+		if (timer > 0){
+			timer--;
 		}
+		else {
+			timer = BOMB_ENEMY_COUNTDOWN;
+			if (hp <= 0){
+				explode();
+			}
+		}
+		
 	}
 	else {
 		return Entity::move();
@@ -49,7 +57,7 @@ bool BombEnemy::move(){
 }
 
 void BombEnemy::explode(){
-	//TODO : get tiles ...
+	
 	Field f = LevelManager::getLevelManager().getField();
 	vector<Tile*> t = tile.getNeighbor(1);
 	t.push_back(tile);
@@ -57,7 +65,6 @@ void BombEnemy::explode(){
 		tile->setCooldown(TILE_COOLDOWN);
 	}
 
-	//TODO : ...and enemies...
 	vector<Enemy*> e = LevelManager::getLevelManager().getEnemies();
 	vector<Enemy*> enemies;
 	for (Enemy* en : e){
@@ -73,7 +80,6 @@ void BombEnemy::explode(){
 		e->dieWithoutBonus();
 	}
 
-	//TODO : ...and towers.
 	vector<Tower*> t2 = LevelManager::getLevelManager().getTowers();
 	vector<Tower*> towers;
 	for (Tower* temp_tower: t2){

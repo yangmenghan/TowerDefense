@@ -8,15 +8,17 @@ using namespace std;
 class Wave {
 public:
 	Wave();
-	Wave(vector<Enemy*>);
+	Wave(vector<Enemy>);
 	Wave::Wave(int lineNumber);
 
-	Enemy* spawnEnemy();
+	Enemy spawnEnemy();
+
+	void addEnemy(char type);
 
 	int getSpawnCooldown();
 
 private:
 	int spawnCooldown;
-	vector<Enemy*> enemies;
+	vector<Enemy> enemies;
 
 };
