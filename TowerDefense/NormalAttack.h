@@ -7,5 +7,7 @@ class NormalAttack :
 public:
 	NormalAttack();
 	~NormalAttack();
+
+	void resolve() override;
 };
 

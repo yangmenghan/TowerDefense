@@ -33,6 +33,13 @@ float Enemy::getDistanceToTarget(){
 };
 
 bool Enemy::move(){
+	if (slowTime > 0){
+		slowTime--;
+	}
+	else {
+		unSlow();
+	}
+
 	vector<Tile*> tiles = LevelManager::getLevelManager().getField().computePath(tile, LevelManager::getLevelManager().getField().getEndTile()).getPath();
 	Tile t = *tiles[0];
 	int gameSpeed = LevelManager::getLevelManager().getSpeed();
@@ -46,21 +53,33 @@ void Enemy::succed(){
 	dieWithoutBonus();
 };
 
+void Enemy::setTile(Tile t){
+	tile = t;
+	position = t.getPosition();
+}
+
 
 void Enemy::die(){
 	LevelManager::getLevelManager().getPlayer().manageScore(scoreValue);
 	this->~Enemy();
-	//TODO : destroy enemy
 };
 
 void Enemy::dieWithoutBonus(){
 	this->~Enemy();
-	//TODO : destroy enemy
 }
 
-void Enemy::slow(int seconds){
-	slowTime = seconds;
-	speed = speed - seconds;
+void Enemy::slow(int frames){
+	slowTime = frames;
+	speed = speed - ;
+};
+
+void Enemy::slow(int frames){
+	slowTime = frames;
+	speed = speed - SLOW_EFFECT;
+};
+
+void Enemy::unSlow(){
+	speed = speed + SLOW_EFFECT;
 };
 
 void Enemy::takeDamage(int damage){

@@ -21,6 +21,8 @@ public :
 	int getSlowTime();
 	float getDistanceToTarget();
 
+	void setTile(Tile);
+
 	void takeDamage(int);
 
 protected:

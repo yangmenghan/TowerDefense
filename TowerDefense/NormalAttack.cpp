@@ -11,12 +11,16 @@ NormalAttack::~NormalAttack()
 {
 }
 
-void Attack::resolve()
+void NormalAttack::resolve()
 {
-	//TODO:¼õÑª£¬¶¯»­
-	Enemy enemy = getTarget();
-	enemy.takeDamage(damage);
+	//TODO:Animation
+	if (timer == 0)
+	{
+		Enemy enemy = getTarget();
+		enemy.takeDamage(damage);
+		timer = speed;
+	}
 
-	//????Timer?????
-
+	else
+		timer--;
 }
