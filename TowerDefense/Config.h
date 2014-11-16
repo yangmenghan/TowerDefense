@@ -86,7 +86,7 @@ Tower constants
 */
 
 extern const float		INCOME_RATE;
-extern const float		UPGRADE_INCREMENT;
+extern const int		UPGRADE_INCREMENT;
 extern const sf::Color	RANGE_CIRCLE_FILL_COLOR;
 
 extern const float		NORMAL_TOWER_DAMAGE;

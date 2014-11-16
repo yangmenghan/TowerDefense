@@ -14,5 +14,5 @@ public:
 	void draw(vector<Tile>);				//draw path by changing color
 	Path(vector<Tile>);						//constructor
 	Path();									//constructor
-	vector<Tile> getPath(Path);				//provide path
+	vector<Tile> getPath();					//provide path
 };

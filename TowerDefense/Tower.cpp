@@ -2,16 +2,16 @@
 #include "Player.h"
 #include "LevelManager.h"
 
-Tower::Tower(Tile mTile)
+Tower::Tower(Tile &mTile)
 {
-	this->tile = mTile;
+	tile = mTile;
 
-	this->attack.setDamage(damage);
-	this->attack.setSlowAmount(damage);
-	this->attack.setRange(range);
-	this->attack.setSpeed(speed);
-	this->timer = speed;
-	this->attack.setCenter(tile.getPosition());
+	attack.setDamage(damage);
+	attack.setSlowAmount(damage);
+	attack.setRange(range);
+	attack.setSpeed(speed);
+	timer = speed;
+	attack.setCenter(tile.getPosition());
 }
 
 

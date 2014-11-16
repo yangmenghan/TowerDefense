@@ -4,7 +4,7 @@
 SlowTower::SlowTower(Tile mTile)
 	:Tower(mTile)
 {
-	towerType = SLOW;
+
 	damage = SLOW_TOWER_DAMAGE;
 	price = SLOW_TOWER_PRICE;
 	income = int(price * INCOME_RATE);

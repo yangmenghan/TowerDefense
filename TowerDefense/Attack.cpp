@@ -1,4 +1,5 @@
 #include "Attack.h"
+#include "LevelManager.h"
 
 Attack::Attack()
 {
@@ -45,7 +46,7 @@ void Attack::setSpeed(int mSpeed)
 }
 Enemy Attack::getTarget()
 {
-	std::vector<Enemy*> enemiesField = LevelManager::getLevelManager().getEnemies();
+	std::vector<Enemy*> enemiesField = LevelManager::getLevelManager()->getEnemies();
 	Enemy* enemyMinDistanceToTarget;
 	float minDistance = 0;
 	for (Enemy* e : enemiesField)
@@ -54,12 +55,12 @@ Enemy Attack::getTarget()
 		{
 			if (minDistance == 0)
 			{
-				minDistance = e->getDistanceToTarget;
+				minDistance = e->getDistanceToTarget();
 				enemyMinDistanceToTarget = e;
 			}
 			else if (e->getDistanceToTarget() < minDistance)
 			{
-				minDistance = e->getDistanceToTarget;
+				minDistance = e->getDistanceToTarget();
 				enemyMinDistanceToTarget = e;
 			}
 		}

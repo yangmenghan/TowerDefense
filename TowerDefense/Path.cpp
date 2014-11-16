@@ -28,9 +28,9 @@ void Path::draw(vector<Tile> path)
 
 };
 
-vector<Tile> Path::getPath(Path)
+vector<Tile> Path::getPath()
 {
-	return Path;
+	return path;
 };
 	
 

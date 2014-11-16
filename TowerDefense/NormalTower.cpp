@@ -4,7 +4,6 @@
 NormalTower::NormalTower(Tile mTile)
 	:Tower(mTile)
 {
-	towerType = NORMAL;
 	damage = NORMAL_TOWER_DAMAGE;
 	price = NORMAL_TOWER_PRICE;
 	income = int(price * INCOME_RATE);

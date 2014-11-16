@@ -78,6 +78,7 @@ void Field::draw()
 
 int Field::timeCross(int m, int n)  //Dijkstra
 {
+
 	int t[TILE_NUM_HOR*TILE_NUM_VER][TILE_NUM_HOR*TILE_NUM_VER]; //build matrice of graph TILE_NUM_HOR*TILE_NUM_VER, TILE_NUM_HOR*TILE_NUM_VER Tiles
 	for (int i = 0; i < TILE_NUM_HOR*TILE_NUM_VER; i++)
 	{

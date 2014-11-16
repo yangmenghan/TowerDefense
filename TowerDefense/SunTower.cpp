@@ -4,7 +4,6 @@
 SunTower::SunTower(Tile mTile)
 	:Tower(mTile)
 {
-	towerType = SUN;
 	damage = SUN_TOWER_DAMAGE;
 	price = SUN_TOWER_PRICE;
 	income = int(price * INCOME_RATE);

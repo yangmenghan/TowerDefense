@@ -1,4 +1,5 @@
 #include "LevelManager.h"
+#include "MenuManager.h"
 #include <fstream>
 
 using namespace sf;
@@ -61,7 +62,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 
 
 
-			if (player.getHP<=0){
+			if (player.getHP() <=0){
 				gameOver(); 
 			}
 			
@@ -85,10 +86,10 @@ void LevelManager::gameLoop(RenderWindow& w){
 
 			//Enemy Action
 			for (Enemy* enemy : enemies){
-				if (enemy->getHP <= 0){
+				if (enemy->getHP() <= 0){
 					enemy->die();
 				}
-				else if (enemy->getPosition == field.getEndTile()->getPosition()){
+				else if (enemy->getPosition() == field.getEndTile()->getPosition()){
 					removeEnemy(*enemy);
 					enemy->succed();
 				}
