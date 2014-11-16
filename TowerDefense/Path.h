@@ -14,4 +14,5 @@ public:
 	void draw(vector<Tile>);
 	Path(vector<Tile>);
 	Path();
+	vector<Tile> getPath(Path);
 };

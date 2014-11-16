@@ -1,4 +1,5 @@
 #include "Enemy.h"
+#include "Config.h"
 
 /*
 private:
@@ -8,6 +9,7 @@ int bounty;
 int scoreValue;
 int slowTime;
 */
+
 Enemy::Enemy(){
 	hp = 0;
 	defence = 0;
@@ -27,11 +29,12 @@ Enemy::Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite m
 }
 
 float Enemy::getDistanceToTarget(){
-	return LevelManager::getLevelManager().getField().getPath(position).getDistance();
+	return LevelManager::getLevelManager().getField().tempCross(tile, LevelManager::getLevelManager().getField().getEndTile());
 };
 
 bool Enemy::move(){
-	Tile t = LevelManager::getLevelManager().getField().getPath(position).getNextTile();
+	vector<Tile*> tiles = LevelManager::getLevelManager().getField().computePath(tile, LevelManager::getLevelManager().getField().getEndTile()).getPath();
+	Tile t = *tiles[0];
 	int gameSpeed = LevelManager::getLevelManager().getSpeed();
 	position.x = position.x + gameSpeed * speed;
 	position.y = position.y + gameSpeed * speed;
@@ -46,10 +49,12 @@ void Enemy::succed(){
 
 void Enemy::die(){
 	LevelManager::getLevelManager().getPlayer().manageScore(scoreValue);
+	this->~Enemy();
 	//TODO : destroy enemy
 };
 
 void Enemy::dieWithoutBonus(){
+	this->~Enemy();
 	//TODO : destroy enemy
 }
 

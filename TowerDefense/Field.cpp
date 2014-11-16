@@ -41,11 +41,32 @@ int Field::getNumTileVer()
 	return numTileVer;
 }
 
+Tile* Field::getTile(int n)
+{
+	Tile *t;
+	*t = tilesMap[n];
+	return t;
+}
+
 Tile* Field::getTile(sf::Vector2i _position)
 {
 	Tile *t;
 	*t = tilesMap[_position.x*TILE_NUM_HOR+_position.y];
 	return t;
+}
+
+Tile* Tile::getStartTile()
+{
+	Tile* pTile;
+	pTile = LevelManager::getLevelManager().getField().getTile(NUM_START_TILE);
+	return pTile;
+}
+
+Tile* Tile::getEndTile()
+{
+	Tile* pTile;
+	pTile = LevelManager::getLevelManager().getField().getTile(NUM_END_TILE);
+	return pTile;
 }
 
 //Functions

@@ -2,20 +2,18 @@
 
 //Constructors, destructors
 
-BuildMenu::BuildMenu()
-{
-}
+BuildMenu::BuildMenu(){}
 
 BuildMenu::BuildMenu(shared_ptr<Tile> _pTile)
 {
 	tile = _pTile;
 
-	sf::Vector2i tilePosition(tile->getPosition());
+	sf::Vector2i tilePositionPixel(tile->getPositionPixel());
 
-	Button basicTw(w, sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("NomalTower"), tilePosition + sf::Vector2i(-TILE_WIDTH, -TILE_HEIGHT));
-	Button moneyTw(w, sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("MoneyTower"), tilePosition + sf::Vector2i(-TILE_WIDTH, TILE_HEIGHT));
-	Button slowTw(w, sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("SlowTower"), tilePosition + sf::Vector2i(TILE_WIDTH, -TILE_HEIGHT));
-	Button sunTw(w, sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("SunTower"), tilePosition + sf::Vector2i(TILE_WIDTH, TILE_HEIGHT));
+	Button basicTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("NomalTower"), tilePositionPixel + sf::Vector2i(-TILE_WIDTH, -TILE_HEIGHT));
+	Button moneyTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("MoneyTower"), tilePositionPixel + sf::Vector2i(-TILE_WIDTH, TILE_HEIGHT));
+	Button slowTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("SlowTower"), tilePositionPixel + sf::Vector2i(TILE_WIDTH, -TILE_HEIGHT));
+	Button sunTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("SunTower"), tilePositionPixel + sf::Vector2i(TILE_WIDTH, TILE_HEIGHT));
 }
 
 BuildMenu::~BuildMenu(){}

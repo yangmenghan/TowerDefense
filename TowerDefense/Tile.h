@@ -13,7 +13,7 @@ private:
 	sf::Vector2i position;
 	int width;
 	int height;
-	int cooldown;//剩余的冷却时间，默认为正常状态，值为0.若被污染，倒计时TILE_COOLDOWN_TIME秒恢复
+	int cooldown;//剩余的冷却时间，默认为正常状态，值为0.若被污染，倒计时TILE_COOLDOWN秒恢复
 	shared_ptr<Tower> tower;
 public:
 	//Constructors and destroyers
@@ -28,6 +28,7 @@ public:
 	int getCooldowm();
 	vector<Tile*> getNeighbor(int);
 
+
 	//Setters
 	void setPosition(sf::Vector2i);
 	void setTower(shared_ptr<Tower>);
@@ -38,5 +39,4 @@ public:
 	bool hasTower();
 	shared_ptr<BuildMenu> openBuildMenu();
 	shared_ptr<TowerMenu> openTowerMenu();
-
 };
