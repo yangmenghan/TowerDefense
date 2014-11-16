@@ -10,8 +10,6 @@ GameMenu::GameMenu()
 	size.x = GAME_MENU_WIDTH;
 	size.y = GAME_MENU_HEIGHT;
 	gameSpeed = 1;
-	waveTotal = WAVE_TOTAL;
-	waveCount = 0;
 
 	sf::Texture t;
 	if (!t.loadFromFile(GAME_MENU_DEFAULT_TEXTURE))
@@ -28,8 +26,7 @@ GameMenu::GameMenu(sf::Texture myTexture, sf::Vector2f mySize, int myWaveTotal)
 	size = mySize;
 	texture = myTexture;
 	gameSpeed = 1;
-	waveTotal = myWaveTotal;
-	waveCount = 0;
+
 	sprite.setTexture(texture);
 }
 
@@ -50,15 +47,6 @@ void GameMenu::setGameSpeed(float myGameSpeed)
 	gameSpeed = myGameSpeed;
 }
 
-void GameMenu::setWaveCount(int myWaveCount)
-{
-	waveCount = myWaveCount;
-}
-
-void GameMenu::setWaveTotal(int myWaveTotal)
-{
-	waveTotal = myWaveTotal;
-}
 
 //Functions
 

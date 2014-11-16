@@ -4,12 +4,8 @@
 #include <string>
 #include "Menu.h"
 #include "Button.h"
-#include "Tile.h"
-#include "Tower.h"
-#include "NormalTower.h"
-#include "MoneyTower.h"
-#include "SlowTower.h"
-#include "SunTower.h"
+
+class Tile;
 
 class BuildMenu 
 	: public Menu
