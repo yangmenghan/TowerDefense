@@ -1,16 +1,13 @@
 #include "StartMenu.h"
+#include <string>
 
-StartMenu::StartMenu(sf::RenderWindow& w)
+StartMenu::StartMenu()
 {
-	Menu();
+}
 
-	size = w.getSize();
-	textureAddress = START_MENU_TEXTURE;
-	if (!texture.loadFromFile(textureAddress))
-	{
-		//error
-	}
-	sprite.setTexture(texture);
+StartMenu::StartMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition)
+{
+	Menu(myTextureAddress, mySize, myPosition);
 }
 
 //functions
@@ -57,7 +54,10 @@ void StartMenu::startGame()
 	GameMenu gameMenu = GameMenu();
 	MenuManager* m = MenuManager::getMenuManager();
 
+	m->popMenu();
 	m->addMenu(gameMenu);
+
+	this -> ~StartMenu();
 }
 
 void StartMenu::openCredits()

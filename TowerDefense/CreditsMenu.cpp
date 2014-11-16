@@ -17,7 +17,22 @@ void CreditsMenu::setSprite(sf::Sprite mySprite)
 	sprite = mySprite;
 }
 
-void CreditsMenu::rollCredits()
+void CreditsMenu::draw(sf::RenderWindow& w)
 {
+	w.draw(sprite);
+}
 
+void CreditsMenu::closeMenu()
+{
+	MenuManager* m = MenuManager::getMenuManager();
+	m->popMenu();
+	this->~CreditsMenu();
+}
+
+void CreditsMenu::resolveEvent(sf::Event event)
+{
+	if (backButton.mouseClick(event))
+	{
+		closeMenu();
+	}
 }

@@ -6,6 +6,7 @@
 #include "Config.h"
 #include "AudioManager.h"
 #include <vector>
+#include <string>
 
 class StartMenu : public Menu
 {
@@ -17,7 +18,8 @@ private:
 	Button exitGameButton = Button(EXIT_GAME_BUTTON_TEXTURE);
 
 public:
-	StartMenu(sf::RenderWindow&); // is it necessary ?
+	StartMenu();
+	StartMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition);
 	~StartMenu();
 
 	void draw(sf::RenderWindow&);

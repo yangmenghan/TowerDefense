@@ -74,7 +74,14 @@ void GameMenu::speedGame()
 
 void GameMenu::restartGame()
 {
+	GameMenu newGame = GameMenu::GameMenu();
 
+	MenuManager* m = MenuManager::getMenuManager();
+
+	m->popMenu();
+	m->addMenu(newGame);
+
+	this -> ~GameMenu();
 }
 
 void GameMenu::draw(sf::RenderWindow& w)

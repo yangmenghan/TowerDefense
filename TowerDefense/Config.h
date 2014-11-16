@@ -126,6 +126,7 @@ extern const string		START_GAME_BUTTON_TEXTURE;
 extern const string		SCOREBOARD_BUTTON_TEXTURE;
 extern const string		CREDITS_BUTTON_TEXTURE;
 extern const string		EXIT_GAME_BUTTON_TEXTURE;
+extern const string		BACK_BUTTON_TEXTURE;
 
 /*
 Other constants
