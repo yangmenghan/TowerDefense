@@ -1,5 +1,4 @@
 #include"Field.h"
-#include "Config.h"
 
 //Constructors and destroyers
 Field::Field()
@@ -14,6 +13,7 @@ Field::Field()
 	}
 	startTile = tilesMap[NUM_START_TILE];
 	endTile = tilesMap[NUM_END_TILE];
+	boundingBox = sprite.getGlobalBounds();
 }
 
 Field::~Field(){}
@@ -67,10 +67,67 @@ Tile* Field::getEndTile()
 	return pTile;
 }
 
-//Functions
-void Field::draw()
+sf::Sprite Field::getSprite()
 {
-	//to do
+	return sprite;
+}
+
+//Setters
+
+void Field::setSprite(sf::Sprite mySprite)
+{
+	sprite = mySprite;
+}
+
+//Functions
+
+bool Field::mouseHover()
+{
+	bool isHovering = false;
+	sf::Vector2f mousePosition((float)sf::Mouse::getPosition().x, (float)sf::Mouse::getPosition().y);
+
+	if (boundingBox.contains(mousePosition))
+	{
+		isHovering = true;
+		//updatesprite
+	}
+	else
+	{
+		isHovering = false;
+		//updatesprite
+	}
+
+	return isHovering;
+}
+
+bool Field::mouseClicking(sf::Event event)
+{
+	if (mouseHover())
+	{
+		if (event.type == sf::Event::MouseButtonPressed)
+		{
+			return true;
+			//updatesprite
+		}
+	}
+	return false;
+}
+
+bool Field::mouseClick(sf::Event event)
+{
+	if (mouseClicking(event))
+	{
+		if (event.type == sf::Event::MouseButtonReleased)
+		{
+			return true;
+			//updatesprite
+		}
+	}
+	return false;
+}
+void Field::draw(sf::RenderWindow& w)
+{
+	w.draw(sprite);
 }
 
 int Field::timeCross(int m, int n)  //Dijkstra

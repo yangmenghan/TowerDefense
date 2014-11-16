@@ -1,16 +1,8 @@
 #include <SFML\Graphics.hpp>
 #include "Menu.h"
 #include "GameMenu.h"
-#include "CreditsMenu.h"
 #include "Button.h"
 #include "Config.h"
-#include <SFML\Graphics.hpp>
-#include "Menu.h"
-#include "GameMenu.h"
-#include "Button.h"
-#include "Config.h"
-#include "AudioManager.h"
-#include <vector>
 
 class GameOverMenu 
 	: public Menu
@@ -23,7 +15,7 @@ private:
 
 public:
 	GameOverMenu(); //Constructor.
-	GameOverMenu(std::string, sf::Vector2u, sf::Vector2i);
+	GameOverMenu(std::string, sf::Vector2u, sf::Vector2i);//Constructor.
 	~GameOverMenu();//Destructor.
 
 	void draw(sf::RenderWindow&);//Draw.
