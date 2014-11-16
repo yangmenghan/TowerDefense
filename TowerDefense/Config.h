@@ -87,7 +87,9 @@ Tower constants
 
 extern const float		INCOME_RATE;
 extern const int		UPGRADE_INCREMENT;
+
 extern const float		UPGRADE_RATE;
+
 extern const sf::Color	RANGE_CIRCLE_FILL_COLOR;
 
 extern const float		NORMAL_TOWER_DAMAGE[3];
@@ -147,6 +149,15 @@ extern const string		SCOREBOARD_BUTTON_TEXTURE;
 extern const string		CREDITS_BUTTON_TEXTURE;
 extern const string		EXIT_GAME_BUTTON_TEXTURE;
 extern const string		BACK_BUTTON_TEXTURE;
+extern const string		BASIC_TOWER_BUTTON_TEXTURE;
+extern const string		SUN_TOWER_BUTTON_TEXTURE;
+extern const string		SLOW_TOWER_BUTTON_TEXTURE;
+extern const string		MONEY_TOWER_BUTTON_TEXTURE;
+extern const string		SELL_BUTTON_TEXTURE;
+extern const string		UPGRADE_BUTTON_TEXTURE;
+
+extern const sf::Vector2i	BUTTON_SIZE;
+extern const sf::Vector2i	MUTE_BUTTON_SIZE;
 
 /*
 Other constants

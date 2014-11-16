@@ -1,4 +1,5 @@
 #pragma once
+
 #include <SFML\Graphics.hpp>
 #include <SFML\Window.hpp>
 #include "Menu.h"
@@ -9,11 +10,11 @@ class GameMenu
 	: public Menu
 {
 private:
-	Button pauseButton = Button(PAUSE_BUTTON_TEXTURE);
-	Button speedButton = Button(SPEED_BUTTON_TEXTURE);
-	Button muteButton = Button(MUTE_BUTTON_TEXTURE);
-	Button restartButton = Button(RESTART_BUTTON_TEXTURE);
-	Button giveUpButton = Button(GIVE_UP_BUTTON_TEXTURE);
+	//Button pauseButton = Button(PAUSE_BUTTON_TEXTURE);
+	//Button speedButton = Button(SPEED_BUTTON_TEXTURE);
+	//Button muteButton = Button(MUTE_BUTTON_TEXTURE);
+	//Button restartButton = Button(RESTART_BUTTON_TEXTURE);
+	//Button giveUpButton = Button(GIVE_UP_BUTTON_TEXTURE);
 
 	enum Actions {Pause, SpeedUp, ReturnSpeed, Mute, RestartGame, Exit};
 

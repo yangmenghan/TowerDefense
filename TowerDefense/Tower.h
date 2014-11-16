@@ -9,7 +9,7 @@ class Tower :
 {
 public:
 	
-	Tower(Tile mTile);
+	Tower(Tile &mTile);
 	~Tower();
 
 	float getDamage();

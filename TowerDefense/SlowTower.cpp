@@ -4,6 +4,7 @@
 SlowTower::SlowTower(Tile mTile)
 	:Tower(mTile)
 {
+
 	level = 1;
 
 	damage = SLOW_TOWER_DAMAGE[level-1];

@@ -1,6 +1,5 @@
 #pragma once
 #include "Entity.h"
-#include "LevelManager.h"
 #include <SFML\Graphics.hpp>
  
 class Enemy : public Entity{
@@ -13,6 +12,7 @@ public :
 	void die();
 	void dieWithoutBonus();
 	void slow(int);
+	void unSlow();
 
 	int getHP();
 	int getBounty();

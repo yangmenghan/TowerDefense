@@ -1,4 +1,5 @@
 #include "AreaAttack.h"
+#include "LevelManager.h"
 
 
 AreaAttack::AreaAttack()
@@ -12,7 +13,7 @@ AreaAttack::~AreaAttack()
 
 vector<Enemy*> AreaAttack::getTarget()
 {
-	vector<Enemy*> enemiesField = LevelManager::getLevelManager().getEnemies();
+	vector<Enemy*> enemiesField = LevelManager::getLevelManager()->getEnemies();
 	vector<Enemy*> enemiesInRange;
 	for (Enemy* e : enemiesField)
 	{

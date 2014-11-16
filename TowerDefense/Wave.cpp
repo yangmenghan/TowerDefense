@@ -1,5 +1,10 @@
 #include "Wave.h"
 #include "Config.h"
+#include "NormalEnemy.h"
+#include "ToughEnemy.h"
+#include "BombEnemy.h"
+#include "FastEnemy.h"
+#include "LevelManager.h"
 
 Wave::Wave(){
 	spawnCooldown = WAVE_SPAWN_COOLDOWN;
@@ -11,19 +16,27 @@ Wave::Wave(vector<Enemy> e){
 
 void Wave::addEnemy(char type){
 	//TODO : warning modularity
-	switch type :
-	case "1":
-		enemies.push_back(NormalEnemy e);
-		break;
-	case "2":
-		enemies.push_back(FastEnemy e);
-		break;
-	case "3":
-		enemies.push_back(ToughEnemy e);
-		break;
-	case "4":
-		enemies.push_back(BombEnemy e);
-		break;
+	if (type == '1'){
+		NormalEnemy e;
+		enemies.push_back(e);
+		return;
+	}
+	else if (type == '2'){
+		FastEnemy e;
+		enemies.push_back(e);
+		return;
+	}
+	else if (type == '3'){
+		ToughEnemy e;
+		enemies.push_back(e);
+		return;
+	}
+	else if (type == '4'){
+		BombEnemy e;
+		enemies.push_back(e);
+		return;
+	}
+
 }
 
 Wave::Wave(int lineNumber){
@@ -32,9 +45,9 @@ Wave::Wave(int lineNumber){
 
 // if the cooldown is done, the return the last enemy of the wave and delete it from the list
 // if the wave is empty the call the nextWave Function of levelmanager
-// if the cooldown is not done, continue the cooldown
+// if the cooldown is not done, continue the Zcooldown
 
-Enemy* Wave::spawnEnemy(){ 
+Enemy Wave::spawnEnemy(){ 
 	if (spawnCooldown == 0){
 		spawnCooldown = WAVE_SPAWN_COOLDOWN;
 		if (!enemies.empty()){
@@ -43,7 +56,7 @@ Enemy* Wave::spawnEnemy(){
 			return e;
 		}
 		else {
-			LevelManager::getLevelManager().nextWave();
+			LevelManager::getLevelManager()->nextWave();
 		}
 		
 	}

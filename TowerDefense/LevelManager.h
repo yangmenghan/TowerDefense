@@ -26,7 +26,7 @@ public:
 
 	vector<Enemy*> getEnemies();
 	vector<Tower*> getTowers();
-	vector<Wave*> getWaves();
+	vector<Wave> getWaves();
 	
 	void setPlayer(Player &player);
 	Player getPlayer();

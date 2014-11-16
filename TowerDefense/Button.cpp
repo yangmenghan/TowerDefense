@@ -2,41 +2,25 @@
 
 Button::Button()
 {
-	size = sf::Vector2f(0, 0);
-	boundingBox = sprite.getGlobalBounds();
-	position = sf::Vector2i(0, 0);
 }
 
-Button::Button(std::string textureAddress)
+Button::Button(std::string myTextureAddress, sf::Vector2i mySize, sf::Vector2i myPosition, int n)
 {
-	size = sf::Vector2f(0, 0);
-	position = sf::Vector2i(0, 0);
-
-	sf::Texture texture;
-	if (!texture.loadFromFile(textureAddress))
-	{
-		// TODO erreur...
-	}
-
-	sprite.setTexture(texture);
-	boundingBox = sprite.getGlobalBounds();
-}
-
-Button::Button(sf::Vector2f mySize, std::string textureAddress, sf::Vector2i myPosition)
-{
-	sf::Texture texture;
-	if (!texture.loadFromFile(textureAddress))
-	{
-		// TODO erreur...
-	}
-
-	sprite.setTexture(texture);
-	boundingBox = sprite.getGlobalBounds();
-
-	position = myPosition;
+	textureAddress = myTextureAddress;
 	size = mySize;
-}
+	position = myPosition;
+	totalSprites = n;
+	currentSprite = 0;
 
+	if (!spriteSheet.loadFromFile(textureAddress))
+	{
+		// TODO erreur...
+	}
+
+	sprite.setTexture(spriteSheet);
+	sprite.setTextureRect(sf::IntRect(sf::Vector2i(0,0),size));
+	boundingBox = sprite.getGlobalBounds();
+}
 
 Button::~Button(){};
 
@@ -45,7 +29,7 @@ sf::Vector2i Button::getPosition()
 	return position;
 }
 
-sf::Vector2f Button::getSize()
+sf::Vector2i Button::getSize()
 {
 	return size;
 }
@@ -60,7 +44,7 @@ void Button::setPosition(sf::Vector2i mPosition)
 	position = mPosition;
 }
 
-void Button::setSize(sf::Vector2f mSize)
+void Button::setSize(sf::Vector2i mSize)
 {
 	size = mSize;
 }
@@ -83,12 +67,13 @@ bool Button::mouseHover()
 	if (boundingBox.contains(mousePosition))
 	{
 		isHovering = true;
-		//updatesprite
+		spriteUpdate();
 	}
 	else
 	{
 		isHovering = false;
-		//updatesprite
+		sprite.setTextureRect(sf::IntRect(0, 0, size.x, size.y));
+		spriteUpdate();
 	}
 
 	return isHovering;
@@ -101,7 +86,7 @@ bool Button::mouseClicking(sf::Event event)
 		if (event.type == sf::Event::MouseButtonPressed)
 		{
 			return true;
-			//updatesprite
+			spriteUpdate();
 		}
 	}
 	return false;
@@ -114,8 +99,25 @@ bool Button::mouseClick(sf::Event event)
 		if (event.type == sf::Event::MouseButtonReleased)
 		{
 			return true;
-			//updatesprite
+			spriteUpdate();
 		}
 	}
 	return false;
+}
+
+void Button::spriteUpdate()
+{
+	if (currentSprite != (totalSprites - 1))
+	{
+		currentSprite++;
+	}
+	else
+	{
+		currentSprite = 0;
+	}
+
+	sf::Vector2i spriteInit(0, currentSprite*size.y);
+
+	sprite.setTextureRect(sf::IntRect(spriteInit, size));
+
 }

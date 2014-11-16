@@ -11,8 +11,8 @@ private:
 	vector<Tile> path;
 	
 public:
-	void draw(vector<Tile>);
-	Path(vector<Tile>);
-	Path();
-	vector<Tile> getPath(Path);
+	void draw(vector<Tile>);				//draw path by changing color
+	Path(vector<Tile>);						//constructor
+	Path();									//constructor
+	vector<Tile> getPath();					//provide path
 };

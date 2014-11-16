@@ -1,3 +1,5 @@
+#pragma once
+
 #include <SFML\Graphics.hpp>
 #include "Menu.h"
 #include "GameMenu.h"
@@ -12,10 +14,10 @@ class StartMenu : public Menu
 {
 private:
 	
-	Button startGameButton = Button(START_GAME_BUTTON_TEXTURE);
-	Button openCreditsButton = Button(CREDITS_BUTTON_TEXTURE);
-	Button muteButton = Button(MUTE_BUTTON_TEXTURE);
-	Button exitGameButton = Button(EXIT_GAME_BUTTON_TEXTURE);
+	Button startGameButton = Button(START_GAME_BUTTON_TEXTURE, BUTTON_SIZE, sf::Vector2i((WINDOW_WIDTH / 2)-(BUTTON_SIZE.x/2), ((WINDOW_HEIGHT-300)/3)-(BUTTON_SIZE.y/2)), 3);
+	Button openCreditsButton = Button(CREDITS_BUTTON_TEXTURE, BUTTON_SIZE, sf::Vector2i((WINDOW_WIDTH / 2) - (BUTTON_SIZE.x / 2), ((WINDOW_HEIGHT - 300) * 2 / 3) - (BUTTON_SIZE.y / 2)),3);
+	Button muteButton = Button(MUTE_BUTTON_TEXTURE, MUTE_BUTTON_SIZE, sf::Vector2i(2000, 200),2);
+	Button exitGameButton = Button(EXIT_GAME_BUTTON_TEXTURE, BUTTON_SIZE, sf::Vector2i((WINDOW_WIDTH / 2) - (BUTTON_SIZE.x / 2), (WINDOW_HEIGHT - 300) - (BUTTON_SIZE.y / 2)),3);
 
 public:
 	StartMenu();

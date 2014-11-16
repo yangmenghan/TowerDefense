@@ -1,6 +1,8 @@
 #include "BombEnemy.h"
 #include "Config.h"
 #include "Tile.h"
+#include "Field.h"
+#include "LevelManager.h"
 
 
 BombEnemy::BombEnemy(){
@@ -51,25 +53,25 @@ bool BombEnemy::move(){
 		
 	}
 	else {
-		return Entity::move();
+		return move();
 		//TODO : verify the syntax
 	}
 }
 
 void BombEnemy::explode(){
 	
-	Field f = LevelManager::getLevelManager().getField();
+	Field f = LevelManager::getLevelManager()->getField();
 	vector<Tile*> t = tile.getNeighbor(1);
 	t.push_back(tile);
 	for (Tile* tile : t){
 		tile->setCooldown(TILE_COOLDOWN);
 	}
 
-	vector<Enemy*> e = LevelManager::getLevelManager().getEnemies();
+	vector<Enemy*> e = LevelManager::getLevelManager()->getEnemies();
 	vector<Enemy*> enemies;
 	for (Enemy* en : e){
 		for (Tile* temp_tile : t){
-			if (en->getTile().getPosition == (*temp_tile).getPosition){
+			if (en->getTile().getPosition() == (*temp_tile).getPosition){
 				enemies.push_back(en);
 			}
 		}
@@ -80,11 +82,11 @@ void BombEnemy::explode(){
 		e->dieWithoutBonus();
 	}
 
-	vector<Tower*> t2 = LevelManager::getLevelManager().getTowers();
+	vector<Tower*> t2 = LevelManager::getLevelManager()->getTowers();
 	vector<Tower*> towers;
 	for (Tower* temp_tower: t2){
 		for (Tile* temp_tile : t){
-			if (temp_tower->getTile().getPosition == (*temp_tile).getPosition){
+			if (temp_tower->getTile().getPosition() == (*temp_tile).getPosition){
 				towers.push_back(temp_tower);
 			}
 		}
