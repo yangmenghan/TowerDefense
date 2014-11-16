@@ -9,21 +9,22 @@ class TowerMenu
 	: public Menu
 {
 private:
-	Button sellButton;
-	Button upgradeButton;
-	shared_ptr<Tile> tile;
+	Button sellButton;//The button to sell the tower in this tile.
+	Button upgradeButton;//The button to upgrade the tower in this tile.
+	shared_ptr<Tile> tile;//The tile which opens the towermenu.
 public:
 
 	//Constructors and destroyers
-	TowerMenu::TowerMenu(){};
-	TowerMenu(shared_ptr<Tile>);
-	~TowerMenu();
+	TowerMenu::TowerMenu();//Defauld constructor.
+	TowerMenu(shared_ptr<Tile>);//Constructor a towermenu in this tile.
+	~TowerMenu();//Destructor.
 
 	//Getters
-	shared_ptr<Tile> getTile();
+	shared_ptr<Tile> getTile();//Get the tile which opens the towermenu.
 
 	//Setters
+
 	//Functions
-	void draw();
-	void close();
+	void draw();//Draw the menu.
+	void close();//Close the menu.
 };

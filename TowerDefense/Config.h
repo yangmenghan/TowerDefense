@@ -19,6 +19,7 @@ extern const int		TILE_HEIGHT;
 extern const int		TILE_COOLDOWN;
 extern const int		TILE_NUM_HOR;
 extern const int		TILE_NUM_VER;
+extern const int		TILE_NUM;
 extern const int		NUM_START_TILE;
 extern const int		NUM_END_TILE;
 
