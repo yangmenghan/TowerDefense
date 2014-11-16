@@ -10,6 +10,14 @@ using namespace std;
 		call simply the name of the global constant ! :D
 */
 
+/*
+Main Window constants
+*/
+
+extern const int		WINDOW_WIDTH;
+extern const int		WINDOW_HEIGHT;
+extern const int		BORDER_SIZE;
+
 
 /*
 Tile constants

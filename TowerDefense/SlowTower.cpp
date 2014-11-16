@@ -37,5 +37,6 @@ void Tower::sellTw()
 
 void SlowTower::doAttack()
 {
+	attack.setSlowAmount(damage);
 	attack.resolve();
 }

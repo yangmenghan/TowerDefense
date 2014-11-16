@@ -7,6 +7,15 @@ call simply the name of the global constant ! :D
 */
 
 /*
+Main Window constants
+*/
+
+extern const int		WINDOW_WIDTH			= 2200;
+extern const int		WINDOW_HEIGHT			= 1200;
+extern const int		BORDER_SIZE				= 30;
+
+
+/*
 Tile constants
 */
 
