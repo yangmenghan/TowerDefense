@@ -42,15 +42,6 @@ float GameMenu::getGameSpeed()
 	return gameSpeed;
 }
 
-int GameMenu::getWaveCount()
-{
-	return waveCount;
-}
-
-int GameMenu::getWaveTotal()
-{
-	return waveTotal;
-}
 
 //Setters
 
@@ -93,10 +84,6 @@ void GameMenu::restartGame()
 
 }
 
-void GameMenu::startWave()
-{
-
-}
 
 void GameMenu::draw(sf::RenderWindow& w)
 {

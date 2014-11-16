@@ -1,4 +1,5 @@
 #include "LevelManager.h"
+#include <fstream>
 
 using namespace sf;
 
@@ -9,6 +10,7 @@ LevelManager LevelManager::getLevelManager(){
 	}
 
 	return *levelManager;
+	return;
 };
 
 void LevelManager::kill(){
@@ -19,24 +21,59 @@ void LevelManager::kill(){
 	}
 };
 
-void LevelManager::gameLoop(RenderWindow& w){
-	while(w.isOpen){
-		w.clear();
+LevelManager::LevelManager(){
+	waveCooldown = WAVE_COOLDOWN;
+	chargeWaves();
+}
 
-		gameMenu.draw(w);
-		gameMenu.resolveEvent();
+void LevelManager::gameLoop(RenderWindow& w){
+	sf::Event event;
+	while (w.pollEvent(event)){
+		w.clear();
+		if (event == null){
+			//TODO
+		}
+		
+		else {
+			if (event.type == sf::Event::Closed){
+				w.close();
+				//TODO : stop the game !!
+			}
+				
+		}
+
+		MenuManager::getMenuManager()->display(w);
+		MenuManager::getMenuManager()->resolveEvent(event);
 
 		//if the game is not paused
 		if (gameSpeed != 0){ 
 
 
-
-			for (Tile tile : field.getTiles()) {
+			/*for (Tile tile : field.getTiles()) {
 				if (tile.hasOpenedMenu()) {
 					tile.getCurrentMenu().draw(w);
 					tile.getCurrentMenu().resolveEvents();
 				}
 			}
+			*/
+
+
+
+			if (player.getHP<=0){
+				gameOver(); 
+			}
+			
+
+			if (waves.size() == 0){
+				if (enemies.empty()){
+					victory(); // you win if there is no enemy and no wave left
+				}
+			}
+			else { 
+					waves.back()->spawnEnemy();
+				
+			}
+			
 
 			//Tower actions
 			for (Tower* tower : towers){
@@ -49,7 +86,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 				if (enemy->getHP <= 0){
 					enemy->die();
 				}
-				else if (enemy->getPosition == field.getEndTile().getPosition()){
+				else if (enemy->getPosition == field.getEndTile()->getPosition()){
 					removeEnemy(*enemy);
 					enemy->succed();
 				}
@@ -60,14 +97,38 @@ void LevelManager::gameLoop(RenderWindow& w){
 			}
 			
 		}
-
-		else {
-
-		}
 		
-		w.display();
+		w.display(); 
 	}
 };
+
+void LevelManager::nextWave(){
+	if (enemies.empty()){ // the spawn of the next wave start if there is no enemy left on the map
+		if (waveCooldown != 0){
+			waveCooldown--;
+		}
+		else {
+			waveCooldown = WAVE_COOLDOWN;
+			waves.pop_back();
+		}
+	}
+	
+}
+
+void LevelManager::chargeWaves(){
+	string address = WAVE_FILE_ADDRESS;
+	ifstream file(address);
+	file.open();
+
+	string line;
+	while (std::getline(file, line))
+	{
+		for (char type: line){
+			wave.addEnemy(type);
+		}
+	}
+	file.close();
+}
 
 void LevelManager::addEnemy(Enemy &e){
 	enemies.push_back(&e);
@@ -125,4 +186,8 @@ int LevelManager::getSpeed(){
 }
 void LevelManager::setSpeed(int speed){
 	gameSpeed = speed;
+}
+
+int LevelManager::getCurrentWaveNumber(){
+	return (WAVE_TOTAL - waves.size());
 }

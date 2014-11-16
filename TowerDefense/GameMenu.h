@@ -18,8 +18,6 @@ private:
 	enum Actions {Pause, SpeedUp, ReturnSpeed, Mute, RestartGame, Exit};
 
 	float gameSpeed;
-	int waveCount;
-	int waveTotal;
 
 	sf::Text lifeCountDisplay; //is it the best way to proceed ? will need tests
 	sf::Text pointsCountDisplay;
@@ -34,20 +32,16 @@ public:
 //Getters
 //Do we need getters and setters for buttons ?
 	float getGameSpeed();
-	int getWaveCount();
-	int getWaveTotal();
 
 //Setters
 	void setGameSpeed(float);
-	void setWaveCount(int);
-	void setWaveTotal(int); // not useful ?
+
 
 //Fonctions
 	void pauseGame();
 	void speedGame();
 	void returnSpeed();
 	void restartGame();
-	void startWave();
 	void draw(sf::RenderWindow& w);
 	void resolveEvent();
 };

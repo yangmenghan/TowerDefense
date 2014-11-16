@@ -29,6 +29,15 @@ extern const float		BUTTON_WIDTH;
 extern const float		BUTTON_HEIGHT;
 
 /*
+Wave Constants 
+*/
+extern const int		WAVE_COUNT;
+extern const string		WAVE_FILE_ADDRESS;
+extern const int		WAVE_SPAWN_COOLDOWN;
+extern const int		WAVE_COOLDOWN;
+
+
+/*
 Enemy constants
 */
 
