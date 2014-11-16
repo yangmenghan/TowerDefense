@@ -31,7 +31,7 @@ MoneyTower::~MoneyTower()
 
 void Tower::sellTw()
 {
-	LevelManager::getLevelManager().getPlayer().manageMoney(int(MONEY_TOWER_PRICE * INCOME_RATE));
+	LevelManager::getLevelManager()->getPlayer().manageMoney(int(MONEY_TOWER_PRICE * INCOME_RATE));
 }
 
 void MoneyTower::generateMoney()
@@ -40,7 +40,7 @@ void MoneyTower::generateMoney()
 	{
 		if (timer == 0)
 		{
-			LevelManager::getLevelManager().getPlayer().manageMoney(MONEY_TOWER_GENERATION_UNIT);
+			LevelManager::getLevelManager()->getPlayer().manageMoney(MONEY_TOWER_GENERATION_UNIT);
 			timer = speed;
 		}
 		else
