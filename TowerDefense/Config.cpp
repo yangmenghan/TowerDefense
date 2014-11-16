@@ -7,6 +7,15 @@ call simply the name of the global constant ! :D
 */
 
 /*
+Main Window constants
+*/
+
+extern const int		WINDOW_WIDTH			= 2200;
+extern const int		WINDOW_HEIGHT			= 1200;
+extern const int		BORDER_SIZE				= 30;
+
+
+/*
 Tile constants
 */
 
@@ -15,6 +24,7 @@ extern const int		TILE_HEIGHT				= 100;
 extern const int		TILE_COOLDOWN			= 50;
 extern const int		TILE_NUM_HOR			= 20;
 extern const int		TILE_NUM_VER			= 10;
+extern const int		TILE_NUM				= TILE_NUM_HOR * TILE_NUM_VER;
 extern const int		NUM_START_TILE			= 0;
 extern const int		NUM_END_TILE			= TILE_NUM_HOR * TILE_NUM_VER - 1;
 
@@ -117,6 +127,7 @@ Menu constants
 extern const string		GAME_MENU_DEFAULT_TEXTURE = "";
 extern const string		START_MENU_TEXTURE		  = "";
 extern const string		CREDITS_SPRITE_ADD		  = "";
+extern const string		GAMEOVER_MENU_TEXTURE	  = "";
 		
 /*
 Button constants
@@ -130,6 +141,7 @@ extern const string		START_GAME_BUTTON_TEXTURE = "";
 extern const string		SCOREBOARD_BUTTON_TEXTURE = "";
 extern const string		CREDITS_BUTTON_TEXTURE    = "";
 extern const string		EXIT_GAME_BUTTON_TEXTURE  = "";
+extern const string		BACK_BUTTON_TEXTURE		  = "";
 
 /*
 Other constants

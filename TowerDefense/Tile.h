@@ -9,34 +9,34 @@
 class Tile
 {
 private:
-	sf::Vector2i positionPixel;//左上角点的位置
-	sf::Vector2i position;
-	int width;
-	int height;
-	int cooldown;//剩余的冷却时间，默认为正常状态，值为0.若被污染，倒计时TILE_COOLDOWN秒恢复
-	shared_ptr<Tower> tower;
+	sf::Vector2i positionPixel;//Positon of the pixel in topleft point of tile.
+	sf::Vector2i position; //Position of tile (row,colonne).
+	int width;//The width of every tile.
+	int height;//The height of every tile.
+	int cooldown;//Time left for the tower to return normal.The defaut value is 0s. 
+	shared_ptr<Tower> tower;//The tower built in this tile.
 public:
 	//Constructors and destroyers
-	Tile();
-	Tile(int, int);//x,y position,第x行，第y列，从0开始计数
-	~Tile();
+	Tile();//Default constructor. 
+	Tile(int, int); //Constructs the container with the position of tile.
+	~Tile();//Destructor.
 
 	//Getters
-	sf::Vector2i getPosition();
-	sf::Vector2i getPositionPixel();
-	shared_ptr<Tower>  getTower();
-	int getCooldowm();
-	vector<Tile*> getNeighbor(int);
+	sf::Vector2i getPosition();//Get the position of tile.
+	sf::Vector2i getPositionPixel();//Get the position of the pixel topleft of the tile.
+	shared_ptr<Tower>  getTower();//Get the pointer of the tower in this tile.
+	int getCooldowm();//Get the time left for the tower to return normal.
+	vector<Tile*> getNeighbor(int);//get all the tiles near this tile.The distanse may be 1,2,3.
 
 
 	//Setters
-	void setPosition(sf::Vector2i);
-	void setTower(shared_ptr<Tower>);
-	void setCooldown(int);
+	void setPosition(sf::Vector2i);//Set the position of this tile.
+	void setTower(shared_ptr<Tower>);//Build a tower in this tile.
+	void setCooldown(int);//Set the time of cooldown for the tower in this tile.
 
 	//Functions	
-	bool isPolluted();
-	bool hasTower();
-	shared_ptr<BuildMenu> openBuildMenu();
-	shared_ptr<TowerMenu> openTowerMenu();
+	bool isPolluted();//Determine if the tower in this tile is polluted by enemy.
+	bool hasTower();//Determine if there is a tower built in this tile.
+	shared_ptr<BuildMenu> openBuildMenu();//Open the menu for build a tower.
+	shared_ptr<TowerMenu> openTowerMenu();//Open the menu for upgrade or sell a menu.
 };

@@ -14,5 +14,6 @@ SlowAttack::~SlowAttack()
 void Attack::resolve()
 {
 	//TODO:¼õÑª£¬¶¯»­
-	
+	Enemy enemy = getTarget();
+	enemy.slow(slowAmount);
 }

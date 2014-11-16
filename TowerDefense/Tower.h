@@ -16,7 +16,6 @@ public:
 	int getPrice();
 	int getLevel();
 	float getRange();
-	int getTowerType();
 
 	void setDamage(float mDamage);
 	void setPrice(int mPrice);
@@ -26,7 +25,6 @@ public:
 	void virtual sellTw();
 	void upgradeTw();
 	void downgradeTw();
-	Enemy getTarget();
 	void virtual doAttack();
 	void showRangeCircle(); 
 
@@ -38,6 +36,5 @@ protected:
 	int level;
 	float range;
 	sf::CircleShape rangeCircle;
-	enum TowerType {NORMAL, SLOW, SUN, MONEY} towerType;
 };
 

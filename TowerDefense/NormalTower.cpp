@@ -37,5 +37,6 @@ void Tower::sellTw()
 
 void NormalTower::doAttack() 
 {
+	attack.setDamage(damage);
 	attack.resolve();
 }

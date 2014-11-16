@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "Enemy.h"
 
 class Attack
 {
@@ -13,12 +14,17 @@ public:
 
 	void setDamage(float mDamage);
 	void setSlowAmount(float mSlowAmount);
+	void setCenter(sf::Vector2i mCenter);
+	void setRange(float mRange);
 
+	Enemy getTarget();
 	void virtual resolve();
 
 protected:
 	float slowAmount;
 	float damage;
-	enum TowerType{NORMAL, SLOW, SUN, MONEY};
+	float range;
+	sf::Vector2i center;
+	
 };
 
