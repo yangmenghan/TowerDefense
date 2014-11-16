@@ -87,7 +87,7 @@ void BuildMenu::resolveEvent(sf::Event _event)
 	{
 		buyMoneyTw();
 	}
-	if ()///todo 
+	if (true)///todo 
 		//field.mouseClick(_event) && (!buildMenu.mouseClick(_event))
 	{
 		close();

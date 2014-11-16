@@ -62,7 +62,7 @@ void BombEnemy::explode(){
 	
 	Field f = LevelManager::getLevelManager()->getField();
 	vector<Tile*> t = tile.getNeighbor(1);
-	t.push_back(tile);
+	t.push_back(&tile);
 	for (Tile* tile : t){
 		tile->setCooldown(TILE_COOLDOWN);
 	}
@@ -71,7 +71,7 @@ void BombEnemy::explode(){
 	vector<Enemy*> enemies;
 	for (Enemy* en : e){
 		for (Tile* temp_tile : t){
-			if (en->getTile().getPosition() == (*temp_tile).getPosition){
+			if (en->getTile().getPosition() == (*temp_tile).getPosition()){
 				enemies.push_back(en);
 			}
 		}
@@ -86,7 +86,7 @@ void BombEnemy::explode(){
 	vector<Tower*> towers;
 	for (Tower* temp_tower: t2){
 		for (Tile* temp_tile : t){
-			if (temp_tower->getTile().getPosition() == (*temp_tile).getPosition){
+			if (temp_tower->getTile().getPosition() == (*temp_tile).getPosition()){
 				towers.push_back(temp_tower);
 			}
 		}

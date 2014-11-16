@@ -1,5 +1,7 @@
 #include"TowerMenu.h"
 #include "Config.h"
+#include "Tile.h"
+#include "Tower.h"
 
 //Constructors and destroyers
 
