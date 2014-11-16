@@ -1,8 +1,4 @@
 #include"Field.h"
-#include"Tile.h"
-#include"LevelManager.h"
-#include "Enemy.h"
-#include "Config.h"
 
 //Constructors and destroyers
 Field::Field()
@@ -13,10 +9,11 @@ Field::Field()
 	numTileVer = TILE_NUM_VER;
 	for (int i = 0; i < TILE_NUM_HOR*TILE_NUM_VER; i++)
 	{
-		tilesMap.emplace_back(i / TILE_NUM_HOR, i % TILE_NUM_HOR);
+		tilesMap.emplace_back(i / TILE_NUM_HOR, i % TILE_NUM_HOR);//construct the map of tiles
 	}
 	startTile = tilesMap[NUM_START_TILE];
 	endTile = tilesMap[NUM_END_TILE];
+	boundingBox = sprite.getGlobalBounds();
 }
 
 Field::~Field(){}
@@ -59,27 +56,86 @@ Tile* Field::getTile(sf::Vector2i _position)
 Tile* Field::getStartTile()
 {
 	Tile* pTile;
-	pTile = LevelManager::getLevelManager()->getField().getTile(NUM_START_TILE);
+	pTile = LevelManager::getLevelManager().getField().getTile(NUM_START_TILE);
 	return pTile;
 }
 
 Tile* Field::getEndTile()
 {
 	Tile* pTile;
-	pTile = LevelManager::getLevelManager()->getField().getTile(NUM_END_TILE);
+	pTile = LevelManager::getLevelManager().getField().getTile(NUM_END_TILE);
 	return pTile;
 }
 
-//Functions
-void Field::draw()
+sf::Sprite Field::getSprite()
 {
-	//to do
+	return sprite;
+}
+
+//Setters
+
+void Field::setSprite(sf::Sprite mySprite)
+{
+	sprite = mySprite;
+}
+
+//Functions
+
+bool Field::mouseHover()
+{
+	bool isHovering = false;
+	sf::Vector2f mousePosition((float)sf::Mouse::getPosition().x, (float)sf::Mouse::getPosition().y);
+
+	if (boundingBox.contains(mousePosition))
+	{
+		isHovering = true;
+		//updatesprite
+	}
+	else
+	{
+		isHovering = false;
+		//updatesprite
+	}
+
+	return isHovering;
+}
+
+bool Field::mouseClicking(sf::Event event)
+{
+	if (mouseHover())
+	{
+		if (event.type == sf::Event::MouseButtonPressed)
+		{
+			return true;
+			//updatesprite
+		}
+	}
+	return false;
+}
+
+bool Field::mouseClick(sf::Event event)
+{
+	if (mouseClicking(event))
+	{
+		if (event.type == sf::Event::MouseButtonReleased)
+		{
+			return true;
+			//updatesprite
+		}
+	}
+	return false;
+}
+void Field::draw(sf::RenderWindow& w)
+{
+	w.draw(sprite);
 }
 
 int Field::timeCross(int m, int n)  //Dijkstra
 {
 
+
 	int t[TILE_NUM_HOR*TILE_NUM_VER][TILE_NUM_HOR*TILE_NUM_VER]; //build matrice of graph TILE_NUM_HOR*TILE_NUM_VER, TILE_NUM_HOR*TILE_NUM_VER Tiles
+
 	for (int i = 0; i < TILE_NUM_HOR*TILE_NUM_VER; i++)
 	{
 		for (int j = 0; j < TILE_NUM_HOR*TILE_NUM_VER; j++)
@@ -106,8 +162,8 @@ int Field::timeCross(int m, int n)  //Dijkstra
 	}                  // no path if has tower
 
 
-	int V[TILE_NUM_HOR*TILE_NUM_VER];  //is in the group
-	int D[TILE_NUM_HOR*TILE_NUM_VER];  //distanceV[m] = 1;
+	int V[TILE_NUM_HOR * TILE_NUM_VER];  //is in the group
+	int D[TILE_NUM_HOR * TILE_NUM_VER];  //distanceV[m] = 1;
 	
 	for (int c = 0; c <= TILE_NUM_HOR*TILE_NUM_VER; c++)
 	{
@@ -143,15 +199,15 @@ int Field::timeCross(int m, int n)  //Dijkstra
 
 }
 
-Path Field::computePath(Tile tile1, Tile tile2)
+Path Field::computePath(Tile _startTile, Tile _endTile)
 {
-	sf::Vector2i vec1 = tile1.getPosition();
-	sf::Vector2i vec2 = tile2.getPosition();
+	sf::Vector2i vec1 = _startTile.getPosition();
+	sf::Vector2i vec2 = _endTile.getPosition();
 	int m = vec1.x / TILE_WIDTH + vec1.y * TILE_NUM_VER / TILE_HEIGHT;  //  point de depart
 	int n = vec2.x / TILE_WIDTH + vec2.y * TILE_NUM_VER / TILE_HEIGHT; // point d'arrive
 	int time = timeCross(m, n);
 	vector<Tile> path;
-	path[0] = tile1;
+	path[0] = _startTile;
 	int g = m;
 	for (int r = 1; r < time; r++)
 	{
@@ -159,7 +215,7 @@ Path Field::computePath(Tile tile1, Tile tile2)
 			g += TILE_NUM_VER;
 		if (time == timeCross(g + 1, n) + timeCross(m, g + 1))
 			g += 1;
-		if (time ==timeCross(g - 1, n) + timeCross(m, g - 1))
+		if (time == timeCross(g - 1, n) + timeCross(m, g - 1))
 			g -= 1;
 		Tile tile(g / TILE_NUM_VER, g % TILE_NUM_VER);
 		path[r] = tile;
@@ -180,9 +236,9 @@ bool Field::tryCross(Tile _startTile, Tile _endTile)
 		return false;
 
 	//try cross for all the enemies on the field
-	LevelManager* levelManager = LevelManager::getLevelManager();
+	LevelManager levelManager = LevelManager::getLevelManager();
 	vector<Enemy*> enemies;
-	enemies = levelManager->getEnemies();//get the list of enemies
+	enemies = levelManager.getEnemies();//get the list of enemies
 	for (int i = 0; i < enemies.size(); i++)
 	{
 		Enemy *enemy = enemies[i];

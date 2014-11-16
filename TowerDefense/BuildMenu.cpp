@@ -11,16 +11,19 @@
 
 BuildMenu::BuildMenu(){}
 
-BuildMenu::BuildMenu(shared_ptr<Tile> _pTile)
+BuildMenu::BuildMenu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition,shared_ptr<Tile> pTile)
 {
-	tile = _pTile;
+	Menu(myTextureAdress, mySize, myPosition);
+
+	tile = pTile;
 
 	sf::Vector2i tilePositionPixel(tile->getPositionPixel());
 
-	Button basicTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("NomalTower"), tilePositionPixel + sf::Vector2i(-TILE_WIDTH, -TILE_HEIGHT));
-	Button moneyTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("MoneyTower"), tilePositionPixel + sf::Vector2i(-TILE_WIDTH, TILE_HEIGHT));
-	Button slowTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("SlowTower"), tilePositionPixel + sf::Vector2i(TILE_WIDTH, -TILE_HEIGHT));
-	Button sunTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), std::string("SunTower"), tilePositionPixel + sf::Vector2i(TILE_WIDTH, TILE_HEIGHT));
+
+	Button basicTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), BASIC_TOWER_BUTTON_TEXTURE, tilePositionPixel + sf::Vector2i(-TILE_WIDTH, -TILE_HEIGHT));
+	Button moneyTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), MONEY_TOWER_BUTTON_TEXTURE, tilePositionPixel + sf::Vector2i(-TILE_WIDTH, TILE_HEIGHT));
+	Button slowTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), SLOW_TOWER_BUTTON_TEXTURE, tilePositionPixel + sf::Vector2i(TILE_WIDTH, -TILE_HEIGHT));
+	Button sunTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), SUN_TOWER_BUTTON_TEXTURE, tilePositionPixel + sf::Vector2i(TILE_WIDTH, TILE_HEIGHT));
 }
 
 BuildMenu::~BuildMenu(){}
@@ -34,7 +37,7 @@ shared_ptr<Tile> BuildMenu::getTile()
 
 //Functions
 
-void BuildMenu::buyNomalTw()
+void BuildMenu::buyBasicTw()
 {
 	LevelManager::getLevelManager()->getPlayer().manageMoney(-NORMAL_TOWER_PRICE);
 	NormalTower normalTw();
@@ -66,12 +69,41 @@ void BuildMenu::buySunTw()
 	tile.operator*().setTower(pSunTw);
 }
 
-void BuildMenu::draw()
+void BuildMenu::resolveEvent(sf::Event _event)
 {
+	if (basicTwButton.mouseClick(_event))
+	{
+		buyBasicTw();
+	}
+	if (slowTwButton.mouseClick(_event))
+	{
+		buySlowTw();
+	}
+	if (sunTwButton.mouseClick(_event))
+	{
+		buySunTw();
+	}
+	if (moneyTwButton.mouseClick(_event))
+	{
+		buyMoneyTw();
+	}
+	if ()///todo 
+		//field.mouseClick(_event) && (!buildMenu.mouseClick(_event))
+	{
+		close();
+	}
+}
 
+void BuildMenu::draw(sf::RenderWindow& w)
+{
+	w.draw(sprite);
+	basicTwButton.draw(w);
+	slowTwButton.draw(w);
+	moneyTwButton.draw(w);
+	sunTwButton.draw(w);
 }
 
 void BuildMenu::close()
 {
-
+	//to do.
 }

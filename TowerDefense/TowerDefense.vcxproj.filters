@@ -135,8 +135,8 @@
     <ClCompile Include="NormalAttack.cpp">
       <Filter>Fichiers sources\Attack</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="GameOverMenu.cpp">
+      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -232,6 +232,9 @@
     </ClInclude>
     <ClInclude Include="SlowAttack.h">
       <Filter>Fichiers d%27en-tête\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverMenu.h">
+      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

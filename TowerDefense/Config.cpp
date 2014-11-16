@@ -139,6 +139,12 @@ extern const string		SCOREBOARD_BUTTON_TEXTURE = "";
 extern const string		CREDITS_BUTTON_TEXTURE    = "";
 extern const string		EXIT_GAME_BUTTON_TEXTURE  = "";
 extern const string		BACK_BUTTON_TEXTURE		  = "";
+extern const string		BASIC_TOWER_BUTTON_TEXTURE = "";
+extern const string		SUN_TOWER_BUTTON_TEXTURE = "";
+extern const string		SLOW_TOWER_BUTTON_TEXTURE = "";
+extern const string		MONEY_TOWER_BUTTON_TEXTURE = "";
+extern const string		SELL_BUTTON_TEXTURE = "";
+extern const string		UPGRADE_BUTTON_TEXTURE = "";
 
 /*
 Other constants
