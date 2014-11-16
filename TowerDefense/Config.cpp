@@ -1,4 +1,5 @@
 #include "Config.h"
+#include <SFML\Graphics.hpp>
 
 /* Global game configuration constants
 For using those constants :
@@ -115,9 +116,9 @@ extern const int		WAVE_TOTAL				  = 20;
 /*
 Menu constants
 */
-extern const string		GAME_MENU_DEFAULT_TEXTURE = "";
-extern const string		START_MENU_TEXTURE		  = "";
-extern const string		CREDITS_SPRITE_ADD		  = "";
+extern const string		GAME_MENU_DEFAULT_TEXTURE = "TowerDefense/sprite/background.jpg";
+extern const string		START_MENU_TEXTURE		  = "TowerDefense/sprite/background.jpg";
+extern const string		CREDITS_SPRITE_ADD		  = "TowerDefense/sprite/credits.png";
 extern const string		GAMEOVER_MENU_TEXTURE	  = "";
 		
 /*
@@ -125,14 +126,17 @@ Button constants
 */
 extern const string		PAUSE_BUTTON_TEXTURE	  = "";
 extern const string		SPEED_BUTTON_TEXTURE	  = "";
-extern const string		MUTE_BUTTON_TEXTURE		  = "";
+extern const string		MUTE_BUTTON_TEXTURE		  = "TowerDefense/sprites/mute_button.png";
 extern const string		RESTART_BUTTON_TEXTURE	  = "";
 extern const string		GIVE_UP_BUTTON_TEXTURE	  = "";
-extern const string		START_GAME_BUTTON_TEXTURE = "";
+extern const string		START_GAME_BUTTON_TEXTURE = "TowerDefense/sprites/start_game_button";
 extern const string		SCOREBOARD_BUTTON_TEXTURE = "";
-extern const string		CREDITS_BUTTON_TEXTURE    = "";
-extern const string		EXIT_GAME_BUTTON_TEXTURE  = "";
-extern const string		BACK_BUTTON_TEXTURE		  = "";
+extern const string		CREDITS_BUTTON_TEXTURE    = "TowerDefense/sprites/credits_button.png";
+extern const string		EXIT_GAME_BUTTON_TEXTURE  = "TowerDefense/sprites/exit_game.png";
+extern const string		BACK_BUTTON_TEXTURE		  = "TowerDefense/sprite/back_button.png";
+
+extern const sf::Vector2i	BUTTON_SIZE			  = sf::Vector2i(407, 230);
+extern const sf::Vector2i	MUTE_BUTTON_SIZE	  = sf::Vector2i(100, 33);
 
 /*
 Other constants

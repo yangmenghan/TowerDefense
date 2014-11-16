@@ -87,11 +87,11 @@ void GameMenu::restartGame()
 void GameMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
-	pauseButton.draw(w);
+	/*pauseButton.draw(w);
 	speedButton.draw(w);
 	muteButton.draw(w);
 	restartButton.draw(w);
-	giveUpButton.draw(w);
+	giveUpButton.draw(w);*/
 
 	//set position and font for the text displays
 
@@ -103,7 +103,7 @@ void GameMenu::draw(sf::RenderWindow& w)
 
 void GameMenu::resolveEvent(sf::Event event)
 {
-	if (pauseButton.mouseClick(event))
+	/*if (pauseButton.mouseClick(event))
 	{
 		int gameSpeed = LevelManager::getLevelManager().getSpeed();
 		if (gameSpeed == 0)
@@ -147,7 +147,7 @@ void GameMenu::resolveEvent(sf::Event event)
 	if (giveUpButton.mouseClick(event))
 	{
 		//game over
-	}
+	}*/
 }
 
 

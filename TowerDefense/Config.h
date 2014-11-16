@@ -137,6 +137,9 @@ extern const string		CREDITS_BUTTON_TEXTURE;
 extern const string		EXIT_GAME_BUTTON_TEXTURE;
 extern const string		BACK_BUTTON_TEXTURE;
 
+extern const sf::Vector2i	BUTTON_SIZE;
+extern const sf::Vector2i	MUTE_BUTTON_SIZE;
+
 /*
 Other constants
 */

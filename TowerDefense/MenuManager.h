@@ -1,5 +1,7 @@
+#pragma once
+
 #include <SFML\Graphics.hpp>
-#include "Menu.h"
+//#include "Menu.h"
 #include <vector>
 
 class MenuManager
@@ -14,12 +16,12 @@ public:
 	~MenuManager();
 
 	void display(sf::RenderWindow& w);
-	void addMenu(Menu);
+	void addMenu(Menu menu);
 	void popMenu();
 
 	std::vector<Menu*>* getMenus();
 
-	void openMenu(Menu);
+	void openMenu(Menu menu);
 	void closeMenu();
 	
 
