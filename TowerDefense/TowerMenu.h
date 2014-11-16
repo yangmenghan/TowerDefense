@@ -2,11 +2,14 @@
 #include <SFML\Graphics.hpp>
 #include <memory>
 #include <string>
-#include "Tile.h"
 #include "Button.h"
+#include "Menu.h"
 
-class TowerMenu 
-	: public Menu
+using namespace std;
+
+class Tile;
+
+class TowerMenu : public Menu
 {
 private:
 	Button sellButton;//The button to sell the tower in this tile.

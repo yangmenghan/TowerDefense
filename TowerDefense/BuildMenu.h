@@ -5,6 +5,8 @@
 #include "Menu.h"
 #include "Button.h"
 
+using namespace std;
+
 class Tile;
 
 class BuildMenu 

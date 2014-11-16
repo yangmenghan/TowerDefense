@@ -1,4 +1,6 @@
 #include"Tile.h"
+#include "Config.h"
+#include "LevelManager.h"
 
 //Constructors and destroyers
 Tile::Tile()
@@ -54,7 +56,7 @@ std::vector<Tile*> Tile::getNeighbor(int _range)
 		{
 			if (i >= 0 && i < TILE_NUM_VER && j >= 0 && j <= TILE_NUM_HOR)
 			{
-				pNeighber = LevelManager::getLevelManager().getField().getTile(sf::Vector2i(i, j)); 
+				pNeighber = LevelManager::getLevelManager()->getField().getTile(sf::Vector2i(i, j)); 
 				neighborTiles.push_back(pNeighber);
 			}
 		}
