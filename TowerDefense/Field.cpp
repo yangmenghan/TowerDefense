@@ -1,7 +1,5 @@
 #include"Field.h"
-#include"Tile.h"
-#include"LevelManager.h"
-#include "Enemy.h"
+#include "Config.h"
 
 //Constructors and destroyers
 Field::Field()
@@ -12,7 +10,7 @@ Field::Field()
 	numTileVer = TILE_NUM_VER;
 	for (int i = 0; i < TILE_NUM_HOR*TILE_NUM_VER; i++)
 	{
-		tilesMap.emplace_back(i / TILE_NUM_HOR, i % TILE_NUM_HOR);
+		tilesMap.emplace_back(i / TILE_NUM_HOR, i % TILE_NUM_HOR);//construct the map of tiles
 	}
 	startTile = tilesMap[NUM_START_TILE];
 	endTile = tilesMap[NUM_END_TILE];
@@ -55,14 +53,14 @@ Tile* Field::getTile(sf::Vector2i _position)
 	return t;
 }
 
-Tile* Tile::getStartTile()
+Tile* Field::getStartTile()
 {
 	Tile* pTile;
 	pTile = LevelManager::getLevelManager().getField().getTile(NUM_START_TILE);
 	return pTile;
 }
 
-Tile* Tile::getEndTile()
+Tile* Field::getEndTile()
 {
 	Tile* pTile;
 	pTile = LevelManager::getLevelManager().getField().getTile(NUM_END_TILE);
@@ -77,7 +75,7 @@ void Field::draw()
 
 int Field::timeCross(int m, int n)  //Dijkstra
 {
-	int t[TILE_NUM_HOR*TILE_NUM_VER][TILE_NUM_HOR*TILE_NUM_VER]; //build matrice of graph TILE_NUM_HOR*TILE_NUM_VER, TILE_NUM_HOR*TILE_NUM_VER Tiles
+	int t[TILE_NUM][TILE_NUM_HOR*TILE_NUM_VER]; //build matrice of graph TILE_NUM_HOR*TILE_NUM_VER, TILE_NUM_HOR*TILE_NUM_VER Tiles
 	for (int i = 0; i < TILE_NUM_HOR*TILE_NUM_VER; i++)
 	{
 		for (int j = 0; j < TILE_NUM_HOR*TILE_NUM_VER; j++)
@@ -104,8 +102,8 @@ int Field::timeCross(int m, int n)  //Dijkstra
 	}                  // no path if has tower
 
 
-	int V[TILE_NUM_HOR*TILE_NUM_VER];  //is in the group
-	int D[TILE_NUM_HOR*TILE_NUM_VER];  //distanceV[m] = 1;
+	int V[TILE_NUM_HOR * TILE_NUM_VER];  //is in the group
+	int D[TILE_NUM_HOR * TILE_NUM_VER];  //distanceV[m] = 1;
 	
 	for (int c = 0; c <= TILE_NUM_HOR*TILE_NUM_VER; c++)
 	{
@@ -147,17 +145,17 @@ Path Field::computePath(Tile _startTile, Tile _endTile)
 	sf::Vector2i vec2 = _endTile.getPosition();
 	int m = vec1.x / TILE_WIDTH + vec1.y * TILE_NUM_VER / TILE_HEIGHT;  //  point de depart
 	int n = vec2.x / TILE_WIDTH + vec2.y * TILE_NUM_VER / TILE_HEIGHT; // point d'arrive
-	int time = tempCross(m, n);
+	int time = timeCross(m, n);
 	vector<Tile> path;
 	path[0] = _startTile;
 	int g = m;
 	for (int r = 1; r < time; r++)
 	{
-		if (time == tempCross(g + TILE_NUM_VER, n) + tempCross(m, g + TILE_NUM_VER))
+		if (time == timeCross(g + TILE_NUM_VER, n) + timeCross(m, g + TILE_NUM_VER))
 			g += TILE_NUM_VER;
-		if (time == tempCross(g + 1, n) + tempCross(m, g + 1))
+		if (time == timeCross(g + 1, n) + timeCross(m, g + 1))
 			g += 1;
-		if (time == tempCross(g - 1, n) + tempCross(m, g - 1))
+		if (time == timeCross(g - 1, n) + timeCross(m, g - 1))
 			g -= 1;
 		Tile tile(g / TILE_NUM_VER, g % TILE_NUM_VER);
 		path[r] = tile;
@@ -173,7 +171,7 @@ bool Field::tryCross(Tile _startTile, Tile _endTile)
 	int n = vec2.x / TILE_WIDTH + vec2.y * TILE_NUM_VER / TILE_HEIGHT; // point d'arrive
 
 	//trycross from depart tile
-	int time = tempCross(m, n);
+	int time = timeCross(m, n);
 	if (time > TILE_NUM_HOR*TILE_NUM_VER)
 		return false;
 
@@ -187,7 +185,7 @@ bool Field::tryCross(Tile _startTile, Tile _endTile)
 		Tile tile = (*enemy).getTile();
 		sf::Vector2i vec3 = tile.getPosition();
 		int p = vec3.x / TILE_WIDTH + vec3.y * TILE_NUM_VER / TILE_HEIGHT;  //  point d'enemy
-		time = tempCross(p, n);
+		time = timeCross(p, n);
 		if (time > TILE_NUM_HOR*TILE_NUM_VER)
 			return false;  //enemy i can't cross
 	}

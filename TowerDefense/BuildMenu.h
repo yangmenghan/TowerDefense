@@ -15,28 +15,28 @@ class BuildMenu
 	: public Menu
 {
 private: 
-	shared_ptr<Tile> tile;
-	Button basicTwButton;
-	Button slowTwButton;
-	Button moneyTwButton;
-	Button sunTwButton;
+	shared_ptr<Tile> tile;//The tile which opens the buildmenu.
+	Button basicTwButton;//The button for building a basic tower in the tile.
+	Button slowTwButton;//The button for building a slow tower in the tile.
+	Button moneyTwButton;//The button for building a money tower in the tile.
+	Button sunTwButton;//The button for building a sun tower in the tile.
 public:
 	//Constructors, destructors
-	BuildMenu();
-	BuildMenu(shared_ptr<Tile>);
-	~BuildMenu();
+	BuildMenu();//Default constructor.
+	BuildMenu(shared_ptr<Tile>);//Constructor a buildmenu in this tile. 
+	~BuildMenu();//Destructor.
 
 	//Getters
-	shared_ptr<Tile> getTile();
+	shared_ptr<Tile> getTile();//Get the tile where build the tower.
 
 	//Setters
 
 	//Functions
-	void buyNomalTw();
-	void buySlowTw();
-	void buyMoneyTw();
-	void buySunTw();
+	void buyNomalTw();//Buy and build a normal tower.
+	void buySlowTw();//Buy and build a slow tower.
+	void buyMoneyTw();//Buy and build a money tower.
+	void buySunTw(); // Buy and build a sun tower.
 
-	void draw();
-	void close();
+	void draw();//Draw the menu.
+	void close();//Close the menu.
 };
