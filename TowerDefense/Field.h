@@ -45,8 +45,8 @@ public:
 	bool mouseHover();
 	bool mouseClicking(sf::Event);
 	bool mouseClick(sf::Event);
-	void draw(sf::RenderWindow&);			//Draw.
-	Path computePath(Tile, Tile);			//Compute the path of the enemenies
+	void draw(sf::RenderWindow&);			//Draw
+	Path computePath(Tile, Tile);			//Compute path of enemeny
 	bool tryCross(Tile, Tile); 
 	int timeCross(Tile, Tile);
 	int timeCross(int, int);
