@@ -1,4 +1,5 @@
 #include "StartMenu.h"
+#include "MenuManager.h"
 #include <string>
 
 StartMenu::StartMenu()

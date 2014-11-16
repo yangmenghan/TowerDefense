@@ -56,5 +56,5 @@ MenuManager* MenuManager::getMenuManager()
 
 void MenuManager::resolveEvent(sf::Event event)
 {
-	(menuStack.back)->resolveEvent(event);
+	menuStack.back()->resolveEvent(event);
 }

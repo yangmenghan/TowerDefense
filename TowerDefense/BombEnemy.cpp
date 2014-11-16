@@ -1,6 +1,8 @@
 #include "BombEnemy.h"
 #include "Config.h"
 #include "Tile.h"
+#include "Field.h"
+#include "LevelManager.h"
 
 
 BombEnemy::BombEnemy(){
@@ -9,6 +11,8 @@ BombEnemy::BombEnemy(){
 	bounty = BOMB_ENEMY_BOUNTY;
 	scoreValue = BOMB_ENEMY_SCOREVALUE;
 	speed = BOMB_ENEMY_SPEED;
+
+	timer = BOMB_ENEMY_COUNTDOWN;
 
 	sf::Texture texture;
 	if (!texture.loadFromFile(BOMB_ENEMY_SPRITE_ADD))
@@ -37,32 +41,37 @@ int BombEnemy::getTimer(){
 
 bool BombEnemy::move(){
 	if (hp <= trigger){
-		//TODO : manage the countdown
-		if (hp<=0){
-			explode();
+		if (timer > 0){
+			timer--;
 		}
+		else {
+			timer = BOMB_ENEMY_COUNTDOWN;
+			if (hp <= 0){
+				explode();
+			}
+		}
+		
 	}
 	else {
-		return Entity::move();
+		return move();
 		//TODO : verify the syntax
 	}
 }
 
 void BombEnemy::explode(){
-	//TODO : get tiles ...
-	Field f = LevelManager::getLevelManager().getField();
+	
+	Field f = LevelManager::getLevelManager()->getField();
 	vector<Tile*> t = tile.getNeighbor(1);
 	t.push_back(tile);
 	for (Tile* tile : t){
 		tile->setCooldown(TILE_COOLDOWN);
 	}
 
-	//TODO : ...and enemies...
-	vector<Enemy*> e = LevelManager::getLevelManager().getEnemies();
+	vector<Enemy*> e = LevelManager::getLevelManager()->getEnemies();
 	vector<Enemy*> enemies;
 	for (Enemy* en : e){
 		for (Tile* temp_tile : t){
-			if (en->getTile().getPosition == (*temp_tile).getPosition){
+			if (en->getTile().getPosition() == (*temp_tile).getPosition){
 				enemies.push_back(en);
 			}
 		}
@@ -73,12 +82,11 @@ void BombEnemy::explode(){
 		e->dieWithoutBonus();
 	}
 
-	//TODO : ...and towers.
-	vector<Tower*> t2 = LevelManager::getLevelManager().getTowers();
+	vector<Tower*> t2 = LevelManager::getLevelManager()->getTowers();
 	vector<Tower*> towers;
 	for (Tower* temp_tower: t2){
 		for (Tile* temp_tile : t){
-			if (temp_tower->getTile().getPosition == (*temp_tile).getPosition){
+			if (temp_tower->getTile().getPosition() == (*temp_tile).getPosition){
 				towers.push_back(temp_tower);
 			}
 		}

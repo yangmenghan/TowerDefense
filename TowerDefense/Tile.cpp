@@ -1,4 +1,6 @@
 #include"Tile.h"
+#include "Config.h"
+#include "LevelManager.h"
 
 //Constructors and destroyers
 Tile::Tile()
@@ -8,6 +10,7 @@ Tile::Tile()
 	height = TILE_HEIGHT;
 	cooldown = 0;
 	tower = make_shared<Tower>();
+	boundingBox = sprite.getGlobalBounds();
 }
 
 Tile::Tile(int x, int y)//构造x行y列的Tile
@@ -17,6 +20,7 @@ Tile::Tile(int x, int y)//构造x行y列的Tile
 	height = TILE_HEIGHT;
 	cooldown = 0;
 	tower = make_shared<Tower>();
+	boundingBox = sprite.getGlobalBounds();
 }
 
 Tile::~Tile(){}
@@ -54,7 +58,7 @@ std::vector<Tile*> Tile::getNeighbor(int _range)
 		{
 			if (i >= 0 && i < TILE_NUM_VER && j >= 0 && j <= TILE_NUM_HOR)
 			{
-				pNeighber = LevelManager::getLevelManager().getField().getTile(sf::Vector2i(i, j)); 
+				pNeighber = LevelManager::getLevelManager()->getField().getTile(sf::Vector2i(i, j)); 
 				neighborTiles.push_back(pNeighber);
 			}
 		}
@@ -63,25 +67,79 @@ std::vector<Tile*> Tile::getNeighbor(int _range)
 
 }
 
-
+sf::Sprite Tile::getSprite()
+{
+	return sprite;
+}
 
 //Setters
-void Tile::setPosition(sf::Vector2i mPosition)
+void Tile::setPosition(sf::Vector2i myPosition)
 {
-	mPosition = mPosition;
+	myPosition = myPosition;
 }
 
-void Tile::setTower(shared_ptr<Tower> mTower)
+void Tile::setTower(shared_ptr<Tower> myTower)
 {
-	shared_ptr<Tower>tower(mTower);
+	shared_ptr<Tower>tower(myTower);
 }
 
-void Tile::setCooldown(int mCooldown)
+void Tile::setCooldown(int myCooldown)
 {
-	cooldown = mCooldown;
+	cooldown = myCooldown;
+}
+
+void Tile::setSprite(sf::Sprite mySprite)
+{
+	sprite = mySprite;
 }
 
 //Functions
+
+bool Tile::mouseHover()
+{
+	bool isHovering = false;
+	sf::Vector2f mousePosition((float)sf::Mouse::getPosition().x, (float)sf::Mouse::getPosition().y);
+
+	if (boundingBox.contains(mousePosition))
+	{
+		isHovering = true;
+		//updatesprite
+	}
+	else
+	{
+		isHovering = false;
+		//updatesprite
+	}
+
+	return isHovering;
+}
+
+bool Tile::mouseClicking(sf::Event event)
+{
+	if (mouseHover())
+	{
+		if (event.type == sf::Event::MouseButtonPressed)
+		{
+			return true;
+			//updatesprite
+		}
+	}
+	return false;
+}
+
+bool Tile::mouseClick(sf::Event event)
+{
+	if (mouseClicking(event))
+	{
+		if (event.type == sf::Event::MouseButtonReleased)
+		{
+			return true;
+			//updatesprite
+		}
+	}
+	return false;
+}
+
 bool Tile::isPolluted()
 {
 	if (cooldown != 0)
@@ -119,4 +177,9 @@ shared_ptr<TowerMenu> Tile::openTowerMenu()
 	TowerMenu towerMenu();
 	shared_ptr<TowerMenu>pTowerMenu = make_shared<TowerMenu>(towerMenu);
 	return pTowerMenu;
+}
+
+void Tile::draw(sf::RenderWindow& w)
+{
+	w.draw(sprite);
 }

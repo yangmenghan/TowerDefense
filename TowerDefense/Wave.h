@@ -9,8 +9,11 @@ class Wave {
 public:
 	Wave();
 	Wave(vector<Enemy>);
+	Wave::Wave(int lineNumber);
 
-	void spawnEnemy();
+	Enemy spawnEnemy();
+
+	void addEnemy(char type);
 
 	int getSpawnCooldown();
 

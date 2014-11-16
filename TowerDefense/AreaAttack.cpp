@@ -1,4 +1,5 @@
 #include "AreaAttack.h"
+#include "LevelManager.h"
 
 
 AreaAttack::AreaAttack()
@@ -12,7 +13,7 @@ AreaAttack::~AreaAttack()
 
 vector<Enemy*> AreaAttack::getTarget()
 {
-	vector<Enemy*> enemiesField = LevelManager::getLevelManager().getEnemies();
+	vector<Enemy*> enemiesField = LevelManager::getLevelManager()->getEnemies();
 	vector<Enemy*> enemiesInRange;
 	for (Enemy* e : enemiesField)
 	{
@@ -23,9 +24,18 @@ vector<Enemy*> AreaAttack::getTarget()
 	return enemiesInRange;
 }
 
-void Attack::resolve()
+void AreaAttack::resolve()
 {
-	//TODO:¼õÑª£¬¶¯»­
-	vector<Enemy*> enemiesInRange(getTarget());
-
+	//TODO:Animation
+	if (timer == 0)
+	{
+		vector<Enemy*> enemiesInRange = getTarget();
+		for (Enemy* e : enemiesInRange)
+		{
+			e->takeDamage(damage);
+		}
+		timer = speed;
+	}
+	else
+		timer--;
 }

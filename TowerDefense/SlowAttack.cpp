@@ -11,9 +11,15 @@ SlowAttack::~SlowAttack()
 {
 }
 
-void Attack::resolve()
+void SlowAttack::resolve()
 {
-	//TODO:¼õÑª£¬¶¯»­
-	Enemy enemy = getTarget();
-	enemy.slow(slowAmount);
+	//TODO:Animation
+	if (timer == 0)
+	{
+		Enemy enemy = getTarget();
+		enemy.slow(slowAmount);
+		timer = speed;
+	}
+	else
+		timer--;
 }

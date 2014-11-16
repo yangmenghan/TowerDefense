@@ -1,16 +1,13 @@
 #include "GameOverMenu.h"
 
 //Constructor and destroyers
-GameOverMenu::GameOverMenu(sf::RenderWindow& w)
+GameOverMenu::GameOverMenu()
 {
-	size = w.getSize();
-	textureAddress = GAMEOVER_MENU_TEXTURE;
-	if (!texture.loadFromFile(textureAddress))
-	{
-		//error
-	}
-	sprite.setTexture(texture);
-	//position??
+}
+
+GameOverMenu::GameOverMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition)
+{
+	Menu(myTextureAddress, mySize, myPosition);
 }
 
 GameOverMenu::~GameOverMenu(){}
@@ -40,7 +37,9 @@ void GameOverMenu::reStartGame()
 {
 	GameMenu gameMenu = GameMenu();
 	MenuManager* m = MenuManager::getMenuManager();
+	m->popMenu();
 	m->addMenu(gameMenu);
+	this->~GameOverMenu();
 }
 
 void GameOverMenu::exitGame()

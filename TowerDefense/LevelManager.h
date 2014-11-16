@@ -4,6 +4,7 @@
 #include "Player.h"
 #include "Field.h"
 #include "GameMenu.h"
+#include "Wave.h"
 #include <vector>
 #include <SFML\Graphics.hpp>
 
@@ -11,10 +12,8 @@ using namespace std;
 
 class LevelManager{
 public:
-	LevelManager();
-	~LevelManager();
 
-	static LevelManager getLevelManager();
+	static LevelManager* getLevelManager();
 	void kill();
 
 	void gameLoop(sf::RenderWindow& w);
@@ -27,25 +26,48 @@ public:
 
 	vector<Enemy*> getEnemies();
 	vector<Tower*> getTowers();
+	vector<Wave> getWaves();
 	
 	void setPlayer(Player &player);
 	Player getPlayer();
+
 	void setField(Field &field);
 	Field getField();
+
 	void setGameMenu(GameMenu &gameMenu);
+
 	int getSpeed();
 	void setSpeed(int);
 
-	int gameSpeed = 1;
+	void nextWave();
+	void loadWaves(); //TODO
+
+	void gameOver(); //TODO
+	void victory(); //TODO
+
+	int getCurrentWaveNumber();
 
 	static LevelManager* levelManager;
 
 private:
 
+	LevelManager();
+	~LevelManager();
+
+	//Cooldowns:
+	int waveCooldown;
+
+	//end of cooldowns
+
+
+	int gameSpeed = 1;
+
 	vector<Enemy*> enemies;
 	vector<Tower*> towers;
+	vector<Wave> waves;
 
 	Player player;
 	Field field;
 	GameMenu gameMenu;
+
 };

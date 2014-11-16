@@ -38,6 +38,15 @@ extern const float		BUTTON_WIDTH;
 extern const float		BUTTON_HEIGHT;
 
 /*
+Wave Constants 
+*/
+extern const int		WAVE_TOTAL;
+extern const string		WAVE_FILE_ADDRESS;
+extern const int		WAVE_SPAWN_COOLDOWN;
+extern const int		WAVE_COOLDOWN;
+
+
+/*
 Enemy constants
 */
 
@@ -77,30 +86,30 @@ Tower constants
 */
 
 extern const float		INCOME_RATE;
-extern const float		UPGRADE_RATE;
+extern const int		UPGRADE_INCREMENT;
 extern const sf::Color	RANGE_CIRCLE_FILL_COLOR;
 
 extern const float		NORMAL_TOWER_DAMAGE;
-extern const float		NORMAL_TOWER_SPEED;
+extern const int		NORMAL_TOWER_SPEED;
 extern const float		NORMAL_TOWER_RANGE;
 extern const int		NORMAL_TOWER_PRICE;
 extern const string		NORMAL_TOWER_SPRITE_ADD;
 
 extern const float		SUN_TOWER_DAMAGE;
-extern const float		SUN_TOWER_SPEED;
+extern const int		SUN_TOWER_SPEED;
 extern const float		SUN_TOWER_RANGE;
 extern const int		SUN_TOWER_PRICE;
 extern const string		SUN_TOWER_SPRITE_ADD;
 
 extern const float		MONEY_TOWER_DAMAGE;
 extern const int		MONEY_TOWER_GENERATION_UNIT;
-extern const float		MONEY_TOWER_SPEED;
+extern const int		MONEY_TOWER_SPEED;
 extern const float		MONEY_TOWER_RANGE;
 extern const int		MONEY_TOWER_PRICE;
 extern const string		MONEY_TOWER_SPRITE_ADD;
 
 extern const float		SLOW_TOWER_DAMAGE;
-extern const float		SLOW_TOWER_SPEED;
+extern const int		SLOW_TOWER_SPEED;
 extern const float		SLOW_TOWER_RANGE;
 extern const int		SLOW_TOWER_PRICE;
 extern const string		SLOW_TOWER_SPRITE_ADD;
@@ -109,11 +118,8 @@ extern const string		SLOW_TOWER_SPRITE_ADD;
 /*
 Attack constants
 */
+extern const int		SLOW_EFFECT;
 
-/*
-Wave constants
-*/
-extern const int		WAVE_TOTAL;
 
 /*
 Menu constants
@@ -136,6 +142,12 @@ extern const string		SCOREBOARD_BUTTON_TEXTURE;
 extern const string		CREDITS_BUTTON_TEXTURE;
 extern const string		EXIT_GAME_BUTTON_TEXTURE;
 extern const string		BACK_BUTTON_TEXTURE;
+extern const string		BASIC_TOWER_BUTTON_TEXTURE;
+extern const string		SUN_TOWER_BUTTON_TEXTURE;
+extern const string		SLOW_TOWER_BUTTON_TEXTURE;
+extern const string		MONEY_TOWER_BUTTON_TEXTURE;
+extern const string		SELL_BUTTON_TEXTURE;
+extern const string		UPGRADE_BUTTON_TEXTURE;
 
 extern const sf::Vector2i	BUTTON_SIZE;
 extern const sf::Vector2i	MUTE_BUTTON_SIZE;

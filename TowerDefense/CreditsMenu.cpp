@@ -1,5 +1,6 @@
 #include <SFML\Graphics.hpp>
 #include "CreditsMenu.h"
+#include "MenuManager.h"
 
 
 string CreditsMenu::getCreditsAddress()

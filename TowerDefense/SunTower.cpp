@@ -4,7 +4,6 @@
 SunTower::SunTower(Tile mTile)
 	:Tower(mTile)
 {
-	towerType = SUN;
 	damage = SUN_TOWER_DAMAGE;
 	price = SUN_TOWER_PRICE;
 	income = int(price * INCOME_RATE);
@@ -32,7 +31,7 @@ SunTower::~SunTower()
 
 void Tower::sellTw()
 {
-	LevelManager::getLevelManager().getPlayer().manageMoney(int(SUN_TOWER_PRICE * INCOME_RATE));
+	LevelManager::getLevelManager()->getPlayer().manageMoney(int(SUN_TOWER_PRICE * INCOME_RATE));
 }
 
 void SunTower::doAttack()

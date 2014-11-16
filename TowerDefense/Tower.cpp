@@ -2,11 +2,16 @@
 #include "Player.h"
 #include "LevelManager.h"
 
-Tower::Tower(Tile mTile)
+Tower::Tower(Tile &mTile)
 {
-	this->tile = mTile;
-	this->attack.setRange(range);
-	this->attack.setCenter(tile.getPosition());
+	tile = mTile;
+
+	attack.setDamage(damage);
+	attack.setSlowAmount(damage);
+	attack.setRange(range);
+	attack.setSpeed(speed);
+	timer = speed;
+	attack.setCenter(tile.getPosition());
 }
 
 
@@ -62,9 +67,14 @@ void Tower::upgradeTw()
 	if (level < 3)
 	{
 		level++;
-		damage *= UPGRADE_RATE;
-		speed *= UPGRADE_RATE;		
+		damage += UPGRADE_INCREMENT;
+		speed -= UPGRADE_INCREMENT;		
 		range++;
+
+		attack.setDamage(damage);
+		attack.setSlowAmount(damage);
+		attack.setSpeed(speed);
+		attack.setRange(range);
 	}
 }
 
@@ -73,9 +83,14 @@ void Tower::downgradeTw()
 	if (level > 0)
 	{
 		level--;
-		damage /= UPGRADE_RATE;
-		speed /= UPGRADE_RATE;
+		damage -= UPGRADE_INCREMENT;
+		speed += UPGRADE_INCREMENT;
 		range--;
+		
+		attack.setDamage(damage);
+		attack.setSlowAmount(damage);
+		attack.setSpeed(speed);
+		attack.setRange(range);
 	}
 	if (level == 0)
 		this->~Tower();//Delete this tower
@@ -83,7 +98,4 @@ void Tower::downgradeTw()
 
 
 
-void Tower::showRangeCircle()
-{
-	
-}
+
