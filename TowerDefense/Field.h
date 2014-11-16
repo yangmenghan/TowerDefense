@@ -48,5 +48,6 @@ public:
 	void draw(sf::RenderWindow&);			//Draw.
 	Path computePath(Tile, Tile);			//Compute the path of the enemenies
 	bool tryCross(Tile, Tile); 
+	int timeCross(Tile, Tile);
 	int timeCross(int, int);
 };
