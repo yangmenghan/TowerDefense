@@ -19,7 +19,6 @@ public:
 
 	std::vector<Menu*>* getMenus();
 
-	void setMenus();
 	void openMenu(Menu);
 	void closeMenu();
 	

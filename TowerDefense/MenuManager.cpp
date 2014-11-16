@@ -39,11 +39,6 @@ std::vector<Menu*>* MenuManager::getMenus()
 	return &menuStack;
 }
 
-void MenuManager::setMenus()
-{
-
-}
-
 void MenuManager::openMenu(Menu menu)
 {
 	addMenu(menu);

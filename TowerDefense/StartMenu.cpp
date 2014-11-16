@@ -18,6 +18,10 @@ StartMenu::StartMenu(sf::RenderWindow& w)
 void StartMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
+	startGameButton.draw(w);
+	openCreditsButton.draw(w);
+	muteButton.draw(w);
+	exitGameButton.draw(w);
 }
 
 void StartMenu::resolveEvent(sf::Event event)
@@ -32,7 +36,7 @@ void StartMenu::resolveEvent(sf::Event event)
 	}
 	if (muteButton.mouseClick(event))
 	{
-		AudioManager audio = AudioManager::getAudioManager();
+		AudioManager* audio = AudioManager*::getAudioManager();
 		if (audio.isMute() == false)
 		{
 			muteGame();

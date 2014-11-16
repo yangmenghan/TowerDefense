@@ -39,7 +39,7 @@ AudioManager* AudioManager::getAudioManager()
 	{
 		audioManager = new AudioManager;
 	}
-	return &audioManager;
+	return audioManager;
 };
 
 //test

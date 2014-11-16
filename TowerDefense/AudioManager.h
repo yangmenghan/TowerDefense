@@ -11,10 +11,6 @@ public:
 	AudioManager();
 	void mute();
 	bool play();
-<<<<<<< HEAD
 	static AudioManager getAudioManager();
-=======
-	AudioManager* getAudioManager();
->>>>>>> origin/master
 	 
 };
