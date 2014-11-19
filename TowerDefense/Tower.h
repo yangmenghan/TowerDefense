@@ -8,7 +8,6 @@ class Tower :
 	public Entity
 {
 public:
-	
 	Tower(Tile &mTile);
 	~Tower();
 

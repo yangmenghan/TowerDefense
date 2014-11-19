@@ -143,7 +143,7 @@ void LevelManager::addEnemy(Enemy &e){
 };
 
 void LevelManager::removeEnemy(Enemy e){
-	enemies.erase(std::remove(enemies.begin(), enemies.end(), e), enemies.end());
+	remove(enemies.begin(), enemies.end(), &e);
 };
 
 void LevelManager::removeEnemy(int index){
@@ -155,7 +155,7 @@ void LevelManager::addTower(Tower &t){
 };
 
 void LevelManager::removeTower(Tower t){
-	towers.erase(std::remove(towers.begin(), towers.end(), t), towers.end());
+	remove(towers.begin(), towers.end(), &t);
 };
 
 void LevelManager::removeTower(int index){

@@ -42,16 +42,16 @@ int Field::getNumTileVer()
 
 Tile* Field::getTile(int n)
 {
-	Tile *t;
-	*t = tilesMap[n];
-	return t;
+	Tile t;
+	t = tilesMap[n];
+	return &t;
 }
 
 Tile* Field::getTile(sf::Vector2i _position)
 {
-	Tile *t;
-	*t = tilesMap[_position.x*TILE_NUM_HOR+_position.y];
-	return t;
+	Tile t;
+	t = tilesMap[_position.x*TILE_NUM_HOR+_position.y];
+	return &t;
 }
 
 Tile* Field::getStartTile()
@@ -138,7 +138,7 @@ int Field::timeCross(Tile tile1, Tile tile2)							//algorithme de Dijkstra
 	int m = vec1.x / TILE_WIDTH + vec1.y * TILE_NUM_VER / TILE_HEIGHT;  //  start tile
 	int n = vec2.x / TILE_WIDTH + vec2.y * TILE_NUM_VER / TILE_HEIGHT;  // destination tile
 
-	int t[TILE_NUM_HOR*TILE_NUM_VER][TILE_NUM_HOR*TILE_NUM_VER];		//build matrice of graph (TILE_NUM_HOR*TILE_NUM_VER, TILE_NUM_HOR*TILE_NUM_VER Tiles)
+	int t[TILE_NUM][TILE_NUM];		//build matrice of graph (TILE_NUM_HOR*TILE_NUM_VER, TILE_NUM_HOR*TILE_NUM_VER Tiles)
 
 	for (int i = 0; i < TILE_NUM_HOR*TILE_NUM_VER; i++)
 	{
@@ -166,8 +166,8 @@ int Field::timeCross(Tile tile1, Tile tile2)							//algorithme de Dijkstra
 	}                  
 
 
-	int V[TILE_NUM_HOR * TILE_NUM_VER];									//is in the group
-	int D[TILE_NUM_HOR * TILE_NUM_VER];									//distance from m   
+	int V[TILE_NUM];									//is in the group
+	int D[TILE_NUM];									//distance from m   
 	
 	for (int c = 0; c <= TILE_NUM_HOR*TILE_NUM_VER; c++)
 	{
@@ -206,7 +206,7 @@ int Field::timeCross(int m, int n)										 // overload    algorithme de Dijkst
 {
 	
 
-	int t[TILE_NUM_HOR*TILE_NUM_VER][TILE_NUM_HOR*TILE_NUM_VER];		//build matrice of graph TILE_NUM_HOR*TILE_NUM_VER, TILE_NUM_HOR*TILE_NUM_VER Tiles
+	int t[TILE_NUM][TILE_NUM];		//build matrice of graph TILE_NUM_HOR*TILE_NUM_VER, TILE_NUM_HOR*TILE_NUM_VER Tiles
 
 	for (int i = 0; i < TILE_NUM_HOR*TILE_NUM_VER; i++)
 	{
@@ -234,8 +234,8 @@ int Field::timeCross(int m, int n)										 // overload    algorithme de Dijkst
 	}                  
 
 
-	int V[TILE_NUM_HOR * TILE_NUM_VER];  
-	int D[TILE_NUM_HOR * TILE_NUM_VER];  
+	int V[TILE_NUM];  
+	int D[TILE_NUM];  
 
 	for (int c = 0; c <= TILE_NUM_HOR*TILE_NUM_VER; c++)
 	{
