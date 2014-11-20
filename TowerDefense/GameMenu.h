@@ -16,8 +16,6 @@ private:
 	//Button restartButton = Button(RESTART_BUTTON_TEXTURE);
 	//Button giveUpButton = Button(GIVE_UP_BUTTON_TEXTURE);
 
-	enum Actions {Pause, SpeedUp, ReturnSpeed, Mute, RestartGame, Exit};
-
 	float gameSpeed;
 
 	sf::Text lifeCountDisplay; //is it the best way to proceed ? will need tests
@@ -27,7 +25,7 @@ private:
 public:
 //Constructors, destructors
 	GameMenu();
-	GameMenu(sf::Texture, sf::Vector2f, int);
+	GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition);
 	~GameMenu();
 
 //Getters

@@ -52,7 +52,7 @@ void StartMenu::resolveEvent(sf::Event event)
 
 void StartMenu::startGame()
 {
-	GameMenu gameMenu = GameMenu(GAME_MENU_DEFAULT_TEXTURE, sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT), sf::Vector2i(0,0));
+	GameMenu gameMenu = GameMenu::GameMenu(GAME_MENU_DEFAULT_TEXTURE, sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT), sf::Vector2i(0,0));
 	MenuManager* m = MenuManager::getMenuManager();
 
 	m->popMenu();

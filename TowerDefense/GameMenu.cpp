@@ -7,27 +7,12 @@
 
 GameMenu::GameMenu()
 {
-	size.x = GAME_MENU_WIDTH;
-	size.y = GAME_MENU_HEIGHT;
-	gameSpeed = 1;
-
-	sf::Texture t;
-	if (!t.loadFromFile(GAME_MENU_DEFAULT_TEXTURE))
-	{
-		// TODO erreur...
-	}
-
-	texture = t;
-	sprite.setTexture(texture);
 }
 
-GameMenu::GameMenu(sf::Texture myTexture, sf::Vector2f mySize, int myWaveTotal)
+GameMenu::GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition)
 {
-	size = mySize;
-	texture = myTexture;
+	Menu(myTextureAddress, mySize, myPosition);
 	gameSpeed = 1;
-
-	sprite.setTexture(texture);
 }
 
 GameMenu::~GameMenu(){}

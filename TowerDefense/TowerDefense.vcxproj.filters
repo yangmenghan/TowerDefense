@@ -135,26 +135,17 @@
     <ClCompile Include="NormalAttack.cpp">
       <Filter>Fichiers sources\Attack</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
     <ClCompile Include="GameOverMenu.cpp">
-      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_test.cpp">
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Entity.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Field.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Tile.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="LevelManager.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Config.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -179,23 +170,8 @@
     <ClInclude Include="AreaAttack.h">
       <Filter>Fichiers d%27en-tête\Attack</Filter>
     </ClInclude>
-    <ClInclude Include="Tower.h">
-      <Filter>Fichiers d%27en-tête\Tower</Filter>
-    </ClInclude>
     <ClInclude Include="NormalEnemy.h">
       <Filter>Fichiers d%27en-tête\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="NormalTower.h">
-      <Filter>Fichiers d%27en-tête\Tower</Filter>
-    </ClInclude>
-    <ClInclude Include="SlowTower.h">
-      <Filter>Fichiers d%27en-tête\Tower</Filter>
-    </ClInclude>
-    <ClInclude Include="SunTower.h">
-      <Filter>Fichiers d%27en-tête\Tower</Filter>
-    </ClInclude>
-    <ClInclude Include="MoneyTower.h">
-      <Filter>Fichiers d%27en-tête\Tower</Filter>
     </ClInclude>
     <ClInclude Include="Menu.h">
       <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
@@ -218,12 +194,6 @@
     <ClInclude Include="CreditsMenu.h">
       <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
     </ClInclude>
-    <ClInclude Include="Path.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="AudioManager.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="MenuManager.h">
       <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
     </ClInclude>
@@ -233,8 +203,62 @@
     <ClInclude Include="SlowAttack.h">
       <Filter>Fichiers d%27en-tête\Attack</Filter>
     </ClInclude>
-    <ClInclude Include="GameOverMenu.h">
-      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
+    <ClInclude Include="Entity.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="Field.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioManager.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverMenu.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelManager.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Path.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Tower.h">
+      <Filter>Fichiers d%27en-tête\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="SunTower.h">
+      <Filter>Fichiers d%27en-tête\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="SlowTower.h">
+      <Filter>Fichiers d%27en-tête\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalTower.h">
+      <Filter>Fichiers d%27en-tête\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="MoneyTower.h">
+      <Filter>Fichiers d%27en-tête\Tower</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sfml-audio-2.dll" />
+    <None Include="sfml-audio-d-2.dll" />
+    <None Include="sfml-graphics-2.dll" />
+    <None Include="sfml-graphics-d-2.dll" />
+    <None Include="sfml-network-2.dll" />
+    <None Include="sfml-network-d-2.dll" />
+    <None Include="sfml-system-2.dll" />
+    <None Include="sfml-system-d-2.dll" />
+    <None Include="sfml-window-d-2.dll" />
+    <None Include="sfml-window-2.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="test.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Waves.txt" />
   </ItemGroup>
 </Project>

@@ -8,6 +8,8 @@
 #include "StartMenu.h"
 #include "GameMenu.h"
 #include "CreditsMenu.h"
+#include <string>
+
 
 int main()
 {
