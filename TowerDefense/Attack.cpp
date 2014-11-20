@@ -47,7 +47,8 @@ void Attack::setSpeed(int mSpeed)
 Enemy Attack::getTarget()
 {
 	std::vector<Enemy*> enemiesField = LevelManager::getLevelManager()->getEnemies();
-	Enemy* enemyMinDistanceToTarget;
+	Enemy e;
+	Enemy* enemyMinDistanceToTarget = &e;
 	float minDistance = 0;
 	for (Enemy* e : enemiesField)
 	{

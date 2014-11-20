@@ -9,7 +9,7 @@ Tile::Tile()
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
 	cooldown = 0;
-	tower = make_shared<Tower>();
+	tower = make_shared<Tower>(*this);
 	boundingBox = sprite.getGlobalBounds();
 }
 
@@ -19,7 +19,7 @@ Tile::Tile(int x, int y)//构造x行y列的Tile
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
 	cooldown = 0;
-	tower = make_shared<Tower>();
+	tower = make_shared<Tower>(*this);
 	boundingBox = sprite.getGlobalBounds();
 }
 
@@ -167,16 +167,13 @@ bool Tile::hasTower()
 
 shared_ptr<BuildMenu> Tile::openBuildMenu()
 {
-	BuildMenu buildMenu();
-	shared_ptr<BuildMenu>pBuildMenu = make_shared<BuildMenu>(buildMenu);
-	return pBuildMenu;
+	return make_shared<BuildMenu>();
 }
 
 shared_ptr<TowerMenu> Tile::openTowerMenu()
 {
-	TowerMenu towerMenu();
-	shared_ptr<TowerMenu>pTowerMenu = make_shared<TowerMenu>(towerMenu);
-	return pTowerMenu;
+	return make_shared<TowerMenu>();
+
 }
 
 void Tile::draw(sf::RenderWindow& w)

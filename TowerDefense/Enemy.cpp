@@ -30,7 +30,7 @@ Enemy::Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite m
 }
 
 float Enemy::getDistanceToTarget(){
-	return LevelManager::getLevelManager()->getField().timeCross(tile, LevelManager::getLevelManager()->getField().getEndTile());
+	return LevelManager::getLevelManager()->getField().timeCross(tile, *LevelManager::getLevelManager()->getField().getEndTile());
 };
 
 bool Enemy::move(){

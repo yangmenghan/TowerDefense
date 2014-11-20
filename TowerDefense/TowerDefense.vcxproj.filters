@@ -137,12 +137,15 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Fichiers sources</Filter>
+<<<<<<< HEAD
     </ClCompile>
     <ClCompile Include="GameOverMenu.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Main_test.cpp">
       <Filter>Fichiers sources</Filter>
+=======
+>>>>>>> origin/master
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -203,6 +206,7 @@
     <ClInclude Include="SlowAttack.h">
       <Filter>Fichiers d%27en-tête\Attack</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Entity.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -260,5 +264,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Waves.txt" />
+=======
+>>>>>>> origin/master
   </ItemGroup>
 </Project>

@@ -25,7 +25,7 @@ extern const int		TILE_HEIGHT				= 100;
 extern const int		TILE_COOLDOWN			= 50;
 extern const int		TILE_NUM_HOR			= 20;
 extern const int		TILE_NUM_VER			= 10;
-extern const int		TILE_NUM				= TILE_NUM_HOR * TILE_NUM_VER;
+//extern const int		TILE_NUM				= TILE_NUM_HOR * TILE_NUM_VER;
 extern const int		NUM_START_TILE			= 0;
 extern const int		NUM_END_TILE			= TILE_NUM_HOR * TILE_NUM_VER - 1;
 
