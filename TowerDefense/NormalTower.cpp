@@ -4,12 +4,16 @@
 NormalTower::NormalTower(Tile mTile)
 	:Tower(mTile)
 {
-	damage = NORMAL_TOWER_DAMAGE;
+	damage[level - 1] = NORMAL_TOWER_DAMAGE[level - 1];
 	price = NORMAL_TOWER_PRICE;
-	income = int(price * INCOME_RATE);
-	level = 1;
-	range = NORMAL_TOWER_RANGE;
-	speed = NORMAL_TOWER_SPEED;
+	income[level - 1] = NORMAL_TOWER_INCOME[level - 1];
+	range[level - 1] = NORMAL_TOWER_RANGE[level - 1];
+
+	attack.setDamage(damage[level - 1]);
+	attack.setRange(range[level - 1]);
+	attack.setSpeed(speed);
+
+	timer = speed;
 	
 	sf::Texture texture;
 	if (!texture.loadFromFile(NORMAL_TOWER_SPRITE_ADD))
@@ -20,7 +24,7 @@ NormalTower::NormalTower(Tile mTile)
 	sprite.setTexture(texture);
 
 	rangeCircle.setPosition(sf::Vector2f(this->getPosition()));
-	rangeCircle.setRadius(range);
+	rangeCircle.setRadius(range[level - 1]);
 	rangeCircle.setOutlineThickness(2);
 	rangeCircle.setFillColor(sf::Color(0, 0, 255, 100));
 }
@@ -29,13 +33,8 @@ NormalTower::~NormalTower()
 {
 }
 
-void Tower::sellTw()
-{
-	LevelManager::getLevelManager()->getPlayer().manageMoney(income);
-}
 
 void NormalTower::doAttack() 
 {
-	attack.setDamage(damage);
 	attack.resolve();
 }

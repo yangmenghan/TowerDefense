@@ -15,8 +15,8 @@ TowerMenu::TowerMenu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vecto
 
 	sf::Vector2i tilePositionPixel(tile->getPositionPixel());
 
-	Button sellButton(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), SELL_BUTTON_TEXTURE, tilePositionPixel + sf::Vector2i(-TILE_WIDTH, TILE_HEIGHT));
-	Button upgradeButton(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), UPGRADE_BUTTON_TEXTURE, tilePositionPixel + sf::Vector2i(TILE_WIDTH, -TILE_HEIGHT));
+	Button sellButton(SELL_BUTTON_TEXTURE, sf::Vector2i(BUTTON_WIDTH, BUTTON_HEIGHT), tilePositionPixel + sf::Vector2i(-TILE_WIDTH, TILE_HEIGHT),2);
+	Button upgradeButton(UPGRADE_BUTTON_TEXTURE, sf::Vector2i(BUTTON_WIDTH, BUTTON_HEIGHT), tilePositionPixel + sf::Vector2i(TILE_WIDTH, -TILE_HEIGHT),2);
 }
 
 TowerMenu::~TowerMenu(){}

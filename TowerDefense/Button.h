@@ -20,7 +20,7 @@ private:
 public:
 //Constructors and destroyers
 	Button();
-	Button(std::string myTextureAddress, sf::Vector2i mySize, sf::Vector2i myPosition, int n);
+	Button(const std::string myTextureAddress, sf::Vector2i mySize, sf::Vector2i myPosition, int n);
 	~Button();
 
 //Getters

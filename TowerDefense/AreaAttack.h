@@ -10,8 +10,6 @@ public:
 
 	float getRange();
 
-	void setRange();
-
 	vector<Enemy*> getTarget();
 	void resolve() override;
 

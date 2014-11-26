@@ -4,12 +4,16 @@
 SunTower::SunTower(Tile mTile)
 	:Tower(mTile)
 {
-	damage = SUN_TOWER_DAMAGE;
+	damage[level - 1] = SUN_TOWER_DAMAGE[level - 1];
 	price = SUN_TOWER_PRICE;
-	income = int(price * INCOME_RATE);
-	level = 1;
-	range = SUN_TOWER_RANGE;
-	speed = SUN_TOWER_SPEED;
+	income[level - 1] = SUN_TOWER_INCOME[level - 1];
+	range[level - 1] = SUN_TOWER_RANGE[level - 1];
+
+	attack.setDamage(damage[level - 1]);
+	attack.setRange(range[level - 1]);
+	attack.setSpeed(speed);
+
+	timer = speed;
 
 	sf::Texture texture;
 	if (!texture.loadFromFile(SUN_TOWER_SPRITE_ADD))
@@ -20,18 +24,13 @@ SunTower::SunTower(Tile mTile)
 	sprite.setTexture(texture);
 
 	rangeCircle.setPosition(sf::Vector2f(this->getPosition()));
-	rangeCircle.setRadius(range);
+	rangeCircle.setRadius(range[level - 1]);
 	rangeCircle.setOutlineThickness(2);
 	rangeCircle.setFillColor(sf::Color(0, 0, 255, 100));
 }
 
 SunTower::~SunTower()
 {
-}
-
-void Tower::sellTw()
-{
-	LevelManager::getLevelManager()->getPlayer().manageMoney(income);
 }
 
 void SunTower::doAttack()

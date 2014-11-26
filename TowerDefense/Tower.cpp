@@ -4,14 +4,11 @@
 
 Tower::Tower(Tile &mTile)
 {
+	level = 1;
 	tile = mTile;
-
-	attack.setDamage(damage);
-	attack.setSlowAmount(damage);
-	attack.setRange(range);
-	attack.setSpeed(speed);
-	timer = speed;
 	attack.setCenter(tile.getPosition());
+
+	speed = TOWER_SPEED;
 }
 
 
@@ -21,7 +18,7 @@ Tower::~Tower()
 
 float Tower::getDamage()
 {
-	return damage;
+	return damage[level - 1];
 }
 
 int Tower::getPrice()
@@ -36,12 +33,12 @@ int Tower::getLevel()
 
 float Tower::getRange()
 {
-	return range;
+	return range[level - 1];
 }
 
 void Tower::setDamage(float mDamage)
 {
-	damage = mDamage;
+	damage[level - 1] = mDamage;
 }
 
 void Tower::setPrice(int mPrice)
@@ -56,7 +53,7 @@ void Tower::setLevel(int mLevel)
 
 void Tower::setRange(float mRange)
 {
-	range = mRange;
+	range[level - 1] = mRange;
 }
 
 
@@ -67,15 +64,14 @@ void Tower::upgradeTw()
 	if (level < 3)
 	{
 		level++;
-		damage += UPGRADE_INCREMENT;
-		speed -= UPGRADE_INCREMENT;
-		income = int(income * UPGRADE_RATE);
-		range++;
+		speed -= 5;
 
-		attack.setDamage(damage);
-		attack.setSlowAmount(damage);
+		attack.setDamage(damage[level - 1]);
+		attack.setSlowAmount(damage[level - 1]);
 		attack.setSpeed(speed);
-		attack.setRange(range);
+		attack.setRange(range[level -1]);
+
+		timer = speed;
 	}
 }
 
@@ -84,19 +80,25 @@ void Tower::downgradeTw()
 	if (level > 0)
 	{
 		level--;
-		damage -= UPGRADE_INCREMENT;
-		speed += UPGRADE_INCREMENT;
-		range--;
 		
-		attack.setDamage(damage);
-		attack.setSlowAmount(damage);
-		attack.setSpeed(speed);
-		attack.setRange(range);
+		if (level != 0)
+		{
+			speed += 5;
+			attack.setDamage(damage[level - 1]);
+			attack.setSlowAmount(damage[level - 1]);
+			attack.setSpeed(speed);
+			attack.setRange(range[level - 1]);
+
+			timer = speed;
+		}
 	}
 	if (level == 0)
 		this->~Tower();//Delete this tower
 }
 
-
+void Tower::sellTw()
+{
+	LevelManager::getLevelManager()->getPlayer().manageMoney(income[level - 1]);
+}
 
 
