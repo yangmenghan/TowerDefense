@@ -1,6 +1,5 @@
 #include"Field.h"
 #include "LevelManager.h"
-#include "Config.h"
 
 //Constructors and destroyers
 Field::Field()
