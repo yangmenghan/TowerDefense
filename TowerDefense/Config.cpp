@@ -149,6 +149,7 @@ extern const string		BACK_BUTTON_TEXTURE		  = "TowerDefense/sprite/back_button.p
 
 extern const sf::Vector2i	BUTTON_SIZE			  = sf::Vector2i(407, 230);
 extern const sf::Vector2i	MUTE_BUTTON_SIZE	  = sf::Vector2i(100, 33);
+extern const sf::Vector2i	SMALL_BUTTON_SIZE	  = sf::Vector2i(BUTTON_WIDTH, BUTTON_HEIGHT);
 
 
 /*

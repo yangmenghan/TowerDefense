@@ -9,8 +9,8 @@ class GameOverMenu
 {
 private:
 
-	Button reStartGameButton = Button(RESTART_BUTTON_TEXTURE);//The button to restart the game.
-	Button exitGameButton = Button(EXIT_GAME_BUTTON_TEXTURE);//The button te exit.
+	Button reStartGameButton = Button(RESTART_BUTTON_TEXTURE, BUTTON_SIZE, sf::Vector2i((WINDOW_WIDTH / 2) - (BUTTON_SIZE.x / 2), ((WINDOW_HEIGHT - 200) / 2) - (BUTTON_SIZE.y / 2)), 3);//The button to restart the game.
+	Button exitGameButton = Button(EXIT_GAME_BUTTON_TEXTURE, BUTTON_SIZE, sf::Vector2i((WINDOW_WIDTH / 2) - (BUTTON_SIZE.x / 2), ((WINDOW_HEIGHT - 200) / 2) - (BUTTON_SIZE.y / 2)), 3);//The button te exit.
 	
 
 public:

@@ -20,10 +20,10 @@ BuildMenu::BuildMenu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vecto
 	sf::Vector2i tilePositionPixel(tile->getPositionPixel());
 
 
-	Button basicTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), BASIC_TOWER_BUTTON_TEXTURE, tilePositionPixel + sf::Vector2i(-TILE_WIDTH, -TILE_HEIGHT));
-	Button moneyTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), MONEY_TOWER_BUTTON_TEXTURE, tilePositionPixel + sf::Vector2i(-TILE_WIDTH, TILE_HEIGHT));
-	Button slowTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), SLOW_TOWER_BUTTON_TEXTURE, tilePositionPixel + sf::Vector2i(TILE_WIDTH, -TILE_HEIGHT));
-	Button sunTw(sf::Vector2f(BUTTON_WIDTH, BUTTON_HEIGHT), SUN_TOWER_BUTTON_TEXTURE, tilePositionPixel + sf::Vector2i(TILE_WIDTH, TILE_HEIGHT));
+	Button basicTw(BASIC_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, sf::Vector2i(2000, 200), 2);
+	Button moneyTw(MONEY_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, sf::Vector2i(2000, 200), 2);
+	Button slowTw(SLOW_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, sf::Vector2i(2000, 200), 2);
+	Button sunTw(SUN_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, sf::Vector2i(2000, 200), 2);
 }
 
 BuildMenu::~BuildMenu(){}

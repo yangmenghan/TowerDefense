@@ -158,6 +158,7 @@ extern const string		UPGRADE_BUTTON_TEXTURE;
 
 extern const sf::Vector2i	BUTTON_SIZE;
 extern const sf::Vector2i	MUTE_BUTTON_SIZE;
+extern const sf::Vector2i	SMALL_BUTTON_SIZE;
 
 /*
 Other constants
