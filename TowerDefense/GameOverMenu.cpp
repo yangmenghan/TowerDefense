@@ -1,4 +1,5 @@
 #include "GameOverMenu.h"
+#include "MenuManager.h"
 
 //Constructor and destroyers
 GameOverMenu::GameOverMenu()
