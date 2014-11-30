@@ -71,7 +71,8 @@ void Enemy::dieWithoutBonus(){
 
 void Enemy::slow(int frames){
 	slowTime = frames;
-	speed = speed - SLOW_EFFECT;
+	if (speed - SLOW_EFFECT > 0)
+		speed = speed - SLOW_EFFECT;
 };
 
 void Enemy::unSlow(){
@@ -79,7 +80,10 @@ void Enemy::unSlow(){
 };
 
 void Enemy::takeDamage(int damage){
-	hp = hp - damage;
+	if (hp - damage > 0)
+		hp = hp - damage;
+	else
+		this->die();
 };
 
 

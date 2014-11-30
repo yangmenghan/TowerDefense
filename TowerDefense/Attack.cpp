@@ -10,6 +10,9 @@ Attack::~Attack()
 {
 }
 
+/*
+Setters and Getters.
+*/
 float Attack::getDamage()
 {
 	return damage;
@@ -44,7 +47,11 @@ void Attack::setSpeed(int mSpeed)
 {
 	speed = mSpeed;
 }
-Enemy Attack::getTarget()
+
+/*
+Return the pointer to the enenmy (in the range of tower) who is the closest to the final target. 
+*/
+Enemy* Attack::getTarget()
 {
 	std::vector<Enemy*> enemiesField = LevelManager::getLevelManager()->getEnemies();
 	Enemy e;
@@ -66,5 +73,5 @@ Enemy Attack::getTarget()
 			}
 		}
 	}
-	return *enemyMinDistanceToTarget;
+	return enemyMinDistanceToTarget;
 }

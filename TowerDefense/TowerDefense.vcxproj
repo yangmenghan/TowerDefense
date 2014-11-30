@@ -175,6 +175,7 @@
     <ClCompile Include="SunTower.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="TowerTest.cpp" />
     <ClCompile Include="Wave.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
@@ -290,22 +291,46 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="sfml-audio-2.dll" />
-    <None Include="sfml-audio-d-2.dll" />
-    <None Include="sfml-graphics-2.dll" />
-    <None Include="sfml-graphics-d-2.dll" />
-    <None Include="sfml-network-2.dll" />
-    <None Include="sfml-network-d-2.dll" />
-    <None Include="sfml-system-2.dll" />
-    <None Include="sfml-system-d-2.dll" />
-    <None Include="sfml-window-2.dll" />
-    <None Include="sfml-window-d-2.dll" />
+    <None Include="sfml-audio-2.dll">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </None>
+    <None Include="sfml-audio-d-2.dll">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </None>
+    <None Include="sfml-graphics-2.dll">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </None>
+    <None Include="sfml-graphics-d-2.dll">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </None>
+    <None Include="sfml-network-2.dll">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </None>
+    <None Include="sfml-network-d-2.dll">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </None>
+    <None Include="sfml-system-2.dll">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </None>
+    <None Include="sfml-system-d-2.dll">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </None>
+    <None Include="sfml-window-2.dll">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </None>
+    <None Include="sfml-window-d-2.dll">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Media Include="test.mp3" />
+    <Media Include="test.mp3">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </Media>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Waves.txt" />
+    <Text Include="Waves.txt">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </Text>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

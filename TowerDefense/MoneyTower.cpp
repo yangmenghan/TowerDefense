@@ -33,6 +33,9 @@ MoneyTower::~MoneyTower()
 {
 }
 
+/*
+Generate money in a frequency defined by timer
+*/
 void MoneyTower::generateMoney()
 {
 	while (this)

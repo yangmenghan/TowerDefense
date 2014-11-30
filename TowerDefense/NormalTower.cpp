@@ -33,7 +33,9 @@ NormalTower::~NormalTower()
 {
 }
 
-
+/*
+Activate attack
+*/
 void NormalTower::doAttack() 
 {
 	attack.resolve();

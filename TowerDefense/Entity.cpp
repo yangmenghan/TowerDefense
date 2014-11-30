@@ -10,6 +10,9 @@ Entity::~Entity()
 {
 }
 
+/*
+Getters and Setters
+*/
 sf::Vector2i Entity::getPosition()
 {
 	return position;
@@ -56,7 +59,9 @@ void Entity::setSprite(sf::Sprite mSprite)
 }
 
 
-
+/*
+Draw the entity in a Render Window
+*/
 
 void Entity::draw(sf::RenderWindow &w)
 {

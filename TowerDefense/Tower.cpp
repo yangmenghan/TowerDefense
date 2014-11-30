@@ -15,7 +15,9 @@ Tower::Tower(Tile &mTile)
 Tower::~Tower()
 {
 }
-
+/*
+Getters and Setters
+*/
 float Tower::getDamage()
 {
 	return damage[level - 1];
@@ -58,7 +60,9 @@ void Tower::setRange(float mRange)
 
 
 
-
+/*
+Upgrade the level of tower and set its new parameters
+*/
 void Tower::upgradeTw()
 {
 	if (level < 3)
@@ -74,7 +78,9 @@ void Tower::upgradeTw()
 		timer = speed;
 	}
 }
-
+/*
+Downgrade the level of tower and set its new parameters
+*/
 void Tower::downgradeTw()
 {
 	if (level > 0)
@@ -96,6 +102,9 @@ void Tower::downgradeTw()
 		this->~Tower();//Delete this tower
 }
 
+/*
+Sell this tower and
+*/
 void Tower::sellTw()
 {
 	LevelManager::getLevelManager()->getPlayer().manageMoney(income[level - 1]);

@@ -18,7 +18,7 @@ public:
 	void setRange(float mRange);
 	void setSpeed(int mSpeed);
 
-	Enemy getTarget();
+	Enemy* getTarget();
 	void virtual resolve();
 
 protected:

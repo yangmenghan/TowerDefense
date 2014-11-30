@@ -11,6 +11,9 @@ AreaAttack::~AreaAttack()
 {
 }
 
+/*
+Return a list of pointers to enemies, who are in the range of tower. 
+*/
 vector<Enemy*> AreaAttack::getTarget()
 {
 	vector<Enemy*> enemiesField = LevelManager::getLevelManager()->getEnemies();
@@ -23,7 +26,10 @@ vector<Enemy*> AreaAttack::getTarget()
 
 	return enemiesInRange;
 }
-
+/*
+Resolve damages of enemies who are in the range. 
+The damage will occure in a frequency defined by timer.
+*/
 void AreaAttack::resolve()
 {
 	//TODO:Animation
