@@ -309,11 +309,11 @@ bool Field::tryCross(Tile _startTile, Tile _endTile)
 
 	//try cross for all the enemies on the field
 	LevelManager* levelManager = LevelManager::getLevelManager();
-	vector<Enemy*> enemies;
+	vector<shared_ptr<Enemy>> enemies;
 	enemies = levelManager->getEnemies();									//get the list of enemies
 	for (int i = 0; i < enemies.size(); i++)
 	{
-		Enemy *enemy = enemies[i];
+		shared_ptr<Enemy> enemy = enemies[i];
 		Tile tile = (*enemy).getTile();
 		sf::Vector2i vec3 = tile.getPosition();
 		int p = vec3.x / TILE_WIDTH + vec3.y * TILE_NUM_VER / TILE_HEIGHT;  //  tile of enemy

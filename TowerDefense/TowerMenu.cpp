@@ -7,9 +7,8 @@
 
 TowerMenu::TowerMenu(){}
 
-TowerMenu::TowerMenu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition, shared_ptr<Tile> pTile)
+TowerMenu::TowerMenu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition, shared_ptr<Tile> pTile) :Menu(myTextureAdress, mySize, myPosition)
 {
-	Menu(myTextureAdress, mySize, myPosition);
 
 	tile = pTile;
 

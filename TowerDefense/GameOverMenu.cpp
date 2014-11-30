@@ -1,13 +1,14 @@
 #include "GameOverMenu.h"
+#include "MenuManager.h"
 
 //Constructor and destroyers
 GameOverMenu::GameOverMenu()
 {
 }
 
-GameOverMenu::GameOverMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition)
+GameOverMenu::GameOverMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition) : Menu(myTextureAddress, mySize, myPosition)
 {
-	Menu(myTextureAddress, mySize, myPosition);
+	
 }
 
 GameOverMenu::~GameOverMenu(){}
@@ -35,10 +36,9 @@ void GameOverMenu::resolveEvent(sf::Event _event)
 
 void GameOverMenu::reStartGame()
 {
-	GameMenu gameMenu = GameMenu();
 	MenuManager* m = MenuManager::getMenuManager();
 	m->popMenu();
-	m->addMenu(gameMenu);
+	m->addMenu(make_shared<GameMenu>());
 	this->~GameOverMenu();
 }
 

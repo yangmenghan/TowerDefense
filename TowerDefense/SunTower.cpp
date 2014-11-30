@@ -35,6 +35,7 @@ SunTower::~SunTower()
 /*
 Activate attck
 */
+
 void SunTower::doAttack()
 {
 	attack.resolve();

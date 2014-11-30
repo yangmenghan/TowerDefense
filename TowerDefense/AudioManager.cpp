@@ -4,7 +4,7 @@
 #include <SFML/Audio/Music.hpp>
 
 
-
+AudioManager* AudioManager::audioManager = NULL;
 
 sf::Music music;                                     // Declare a new music
 

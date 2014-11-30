@@ -8,6 +8,8 @@ class ToughEnemy : public Enemy{
 public:
 	ToughEnemy();
 	ToughEnemy(int hp, float defence, int bounty, int scoreValue, sf::Sprite sprite, float speed);
-	~ToughEnemy();
+	virtual ~ToughEnemy(){};
+
+	string test(){ return ""; };
 
 };

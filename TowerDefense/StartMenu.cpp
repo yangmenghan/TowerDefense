@@ -6,9 +6,13 @@ StartMenu::StartMenu()
 {
 }
 
-StartMenu::StartMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition)
+StartMenu::~StartMenu()
 {
-	Menu(myTextureAddress, mySize, myPosition);
+}
+
+StartMenu::StartMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition) :Menu(myTextureAddress, mySize, myPosition)
+{
+	
 }
 
 //functions
@@ -52,21 +56,19 @@ void StartMenu::resolveEvent(sf::Event event)
 
 void StartMenu::startGame()
 {
-	GameMenu gameMenu = GameMenu::GameMenu(GAME_MENU_DEFAULT_TEXTURE, sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT), sf::Vector2i(0,0));
 	MenuManager* m = MenuManager::getMenuManager();
 
 	m->popMenu();
-	m->addMenu(gameMenu);
+	m->addMenu(make_shared<GameMenu>(GAME_MENU_DEFAULT_TEXTURE, sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT), sf::Vector2i(0, 0)));
 
 	this -> ~StartMenu();
 }
 
 void StartMenu::openCredits()
 {
-	CreditsMenu credits = CreditsMenu();
 	MenuManager* m = MenuManager::getMenuManager();
 
-	m->addMenu(credits);
+	m->addMenu(make_shared<CreditsMenu>());
 }
 
 void StartMenu::muteGame()

@@ -2,6 +2,13 @@
 #include "CreditsMenu.h"
 #include "MenuManager.h"
 
+CreditsMenu::CreditsMenu()
+{
+}
+
+CreditsMenu::~CreditsMenu()
+{
+}
 
 string CreditsMenu::getCreditsAddress()
 {

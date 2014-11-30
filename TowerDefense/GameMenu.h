@@ -26,7 +26,10 @@ public:
 //Constructors, destructors
 	GameMenu();
 	GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition);
-	~GameMenu();
+	virtual ~GameMenu();
+
+
+	void opent(){}; //TODO : for test
 
 //Getters
 //Do we need getters and setters for buttons ?
@@ -42,5 +45,5 @@ public:
 	void returnSpeed();
 	void restartGame();
 	void draw(sf::RenderWindow& w);
-	void resolveEvent();
+	void resolveEvent(sf::Event event);
 };

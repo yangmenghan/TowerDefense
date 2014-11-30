@@ -1,12 +1,14 @@
 #include "Tower.h"
 #include "Player.h"
 #include "LevelManager.h"
+#include "NormalAttack.h"
 
 Tower::Tower(Tile &mTile)
 {
 	level = 1;
 	tile = mTile;
-	attack.setCenter(tile.getPosition());
+	attack = make_shared<NormalAttack>();
+	attack->setCenter(tile.getPosition());
 
 	speed = TOWER_SPEED;
 }
@@ -70,10 +72,10 @@ void Tower::upgradeTw()
 		level++;
 		speed -= 5;
 
-		attack.setDamage(damage[level - 1]);
-		attack.setSlowAmount(damage[level - 1]);
-		attack.setSpeed(speed);
-		attack.setRange(range[level -1]);
+		attack->setDamage(damage[level - 1]);
+		attack->setSlowAmount(damage[level - 1]);
+		attack->setSpeed(speed);
+		attack->setRange(range[level - 1]);
 
 		timer = speed;
 	}
@@ -90,10 +92,10 @@ void Tower::downgradeTw()
 		if (level != 0)
 		{
 			speed += 5;
-			attack.setDamage(damage[level - 1]);
-			attack.setSlowAmount(damage[level - 1]);
-			attack.setSpeed(speed);
-			attack.setRange(range[level - 1]);
+			attack->setDamage(damage[level - 1]);
+			attack->setSlowAmount(damage[level - 1]);
+			attack->setSpeed(speed);
+			attack->setRange(range[level - 1]);
 
 			timer = speed;
 		}

@@ -6,11 +6,11 @@ class AreaAttack :
 {
 public:
 	AreaAttack();
-	~AreaAttack();
+	virtual ~AreaAttack();
 
 	float getRange();
 
-	vector<Enemy*> getTarget();
+	vector<shared_ptr<Enemy>> getTarget();
 	void resolve() override;
 
 

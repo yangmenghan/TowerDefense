@@ -15,7 +15,7 @@ private:
 
 public:
 	CreditsMenu();
-	~CreditsMenu();
+	virtual ~CreditsMenu();
 
 	string getCreditsAddress();
 	sf::Sprite getSprite();

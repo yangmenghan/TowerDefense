@@ -17,15 +17,15 @@ public:
 	void kill();
 
 	void gameLoop(sf::RenderWindow& w);
-	void addEnemy(Enemy&);
-	void removeEnemy(Enemy);
+	void addEnemy(shared_ptr<Enemy> e);
+	void removeEnemy(shared_ptr<Enemy> e);
 	void removeEnemy(int);
-	void addTower(Tower&);
-	void removeTower(Tower);
+	void addTower(shared_ptr<Tower>);
+	void removeTower(shared_ptr<Tower>);
 	void removeTower(int);
 
-	vector<Enemy*> getEnemies();
-	vector<Tower*> getTowers();
+	vector<shared_ptr<Enemy>> getEnemies();
+	vector<shared_ptr<Tower>> getTowers();
 	vector<Wave> getWaves();
 	
 	void setPlayer(Player &player);
@@ -62,8 +62,8 @@ private:
 
 	int gameSpeed = 1;
 
-	vector<Enemy*> enemies;
-	vector<Tower*> towers;
+	vector<shared_ptr<Enemy>> enemies;
+	vector<shared_ptr<Tower>> towers;
 	vector<Wave> waves;
 
 	Player player;

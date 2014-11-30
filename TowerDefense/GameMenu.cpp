@@ -9,9 +9,9 @@ GameMenu::GameMenu()
 {
 }
 
-GameMenu::GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition)
+GameMenu::GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition) : Menu(myTextureAddress, mySize, myPosition)
 {
-	Menu(myTextureAddress, mySize, myPosition);
+	
 	gameSpeed = 1;
 }
 
@@ -74,7 +74,7 @@ void GameMenu::draw(sf::RenderWindow& w)
 	w.draw(waveCountDisplay);
 }
 
-void GameMenu::resolveEvent()
+void GameMenu::resolveEvent(sf::Event event)
 {
 	/*if (pauseButton.mouseClick(event))
 	{

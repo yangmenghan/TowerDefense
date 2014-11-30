@@ -8,6 +8,11 @@ Menu::Menu()
 
 }
 
+Menu::~Menu()
+{
+
+}
+
 Menu::Menu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition)
 {
 	textureAddress = myTextureAdress;

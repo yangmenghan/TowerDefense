@@ -10,7 +10,7 @@ Wave::Wave(){
 	spawnCooldown = WAVE_SPAWN_COOLDOWN;
 };
 
-Wave::Wave(vector<Enemy> e){
+Wave::Wave(vector<shared_ptr<Enemy>> e){
 	enemies = e;
 };
 
@@ -18,22 +18,22 @@ void Wave::addEnemy(char type){
 	//TODO : warning modularity
 	if (type == '1'){
 		NormalEnemy e;
-		enemies.push_back(e);
+		enemies.push_back(make_shared<NormalEnemy>(e));
 		return;
 	}
 	else if (type == '2'){
 		FastEnemy e;
-		enemies.push_back(e);
+		enemies.push_back(make_shared<FastEnemy>(e));
 		return;
 	}
 	else if (type == '3'){
 		ToughEnemy e;
-		enemies.push_back(e);
+		enemies.push_back(make_shared<ToughEnemy>(e));
 		return;
 	}
 	else if (type == '4'){
 		BombEnemy e;
-		enemies.push_back(e);
+		enemies.push_back(make_shared<BombEnemy>(e));
 		return;
 	}
 
@@ -47,11 +47,11 @@ Wave::Wave(int lineNumber){
 // if the wave is empty the call the nextWave Function of levelmanager
 // if the cooldown is not done, continue the Zcooldown
 
-Enemy Wave::spawnEnemy(){ 
+shared_ptr<Enemy> Wave::spawnEnemy(){
 	if (spawnCooldown == 0){
 		spawnCooldown = WAVE_SPAWN_COOLDOWN;
 		if (!enemies.empty()){
-			Enemy e = enemies.back();
+			shared_ptr<Enemy> e = enemies.back();
 			enemies.pop_back();
 			return e;
 		}
@@ -63,7 +63,7 @@ Enemy Wave::spawnEnemy(){
 	else {
 		spawnCooldown--;
 	}
-	
+	return NULL;
 };
 
 // return the number of frames remaining before the next enemy spawn

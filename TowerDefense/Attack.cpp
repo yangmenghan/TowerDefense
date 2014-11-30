@@ -1,5 +1,7 @@
 #include "Attack.h"
 #include "LevelManager.h"
+#include "NormalEnemy.h"
+#include <memory>
 
 Attack::Attack()
 {
@@ -47,17 +49,20 @@ void Attack::setSpeed(int mSpeed)
 {
 	speed = mSpeed;
 }
+<<<<<<< HEAD
 
 /*
 Return the pointer to the enenmy (in the range of tower) who is the closest to the final target. 
 */
 Enemy* Attack::getTarget()
+=======
+shared_ptr<Enemy> Attack::getTarget()
+>>>>>>> origin/master
 {
-	std::vector<Enemy*> enemiesField = LevelManager::getLevelManager()->getEnemies();
-	Enemy e;
-	Enemy* enemyMinDistanceToTarget = &e;
+	std::vector<shared_ptr<Enemy>> enemiesField = LevelManager::getLevelManager()->getEnemies();
+	shared_ptr<Enemy> enemyMinDistanceToTarget = make_shared<NormalEnemy>();
 	float minDistance = 0;
-	for (Enemy* e : enemiesField)
+	for (shared_ptr<Enemy> e : enemiesField)
 	{
 		if (sqrt((e->getPosition().x - center.x) ^ 2 + (e->getPosition().y - center.y) ^ 2) < range)
 		{

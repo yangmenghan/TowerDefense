@@ -14,11 +14,12 @@ AreaAttack::~AreaAttack()
 /*
 Return a list of pointers to enemies, who are in the range of tower. 
 */
-vector<Enemy*> AreaAttack::getTarget()
+
+vector<shared_ptr<Enemy>> AreaAttack::getTarget()
 {
-	vector<Enemy*> enemiesField = LevelManager::getLevelManager()->getEnemies();
-	vector<Enemy*> enemiesInRange;
-	for (Enemy* e : enemiesField)
+	vector<shared_ptr<Enemy>> enemiesField = LevelManager::getLevelManager()->getEnemies();
+	vector<shared_ptr<Enemy>> enemiesInRange;
+	for (shared_ptr<Enemy> e : enemiesField)
 	{
 		if (sqrt((e->getPosition().x - center.x) ^ 2 + (e->getPosition().y - center.y) ^ 2) < range)
 			enemiesInRange.push_back(e);
@@ -35,8 +36,8 @@ void AreaAttack::resolve()
 	//TODO:Animation
 	if (timer == 0)
 	{
-		vector<Enemy*> enemiesInRange = getTarget();
-		for (Enemy* e : enemiesInRange)
+		vector<shared_ptr<Enemy>> enemiesInRange = getTarget();
+		for (shared_ptr<Enemy> e : enemiesInRange)
 		{
 			e->takeDamage(damage);
 		}

@@ -6,7 +6,7 @@ class SlowAttack :
 {
 public:
 	SlowAttack();
-	~SlowAttack();
+	virtual ~SlowAttack(){};
 
 	void resolve() override;
 };

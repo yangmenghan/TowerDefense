@@ -1,5 +1,5 @@
-#include "Tile.h";
-#include "Path.h";
+#include "Tile.h"
+#include "Path.h"
 #include <SFML\Graphics.hpp>
 #include <vector>
 
