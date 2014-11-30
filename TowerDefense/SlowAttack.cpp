@@ -6,10 +6,6 @@ SlowAttack::SlowAttack()
 {
 }
 
-
-SlowAttack::~SlowAttack()
-{
-}
 /*
 Resolve slow effect of the enemy who is closest to the final target in the range.
 The slow effect will occure in a frequency defined by timer.

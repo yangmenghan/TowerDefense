@@ -13,14 +13,12 @@
     <ClCompile Include="GameOverMenu.cpp" />
     <ClCompile Include="LevelManager.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Main_test.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MenuManager.cpp" />
     <ClCompile Include="MoneyTower.cpp" />
     <ClCompile Include="NormalAttack.cpp" />
     <ClCompile Include="NormalTower.cpp" />
     <ClCompile Include="Path.cpp" />
-    <ClCompile Include="SFMLTest.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="FastEnemy.cpp" />
     <ClCompile Include="NormalEnemy.cpp" />
@@ -31,17 +29,14 @@
     <ClCompile Include="SlowTower.cpp" />
     <ClCompile Include="StartMenu.cpp" />
     <ClCompile Include="SunTower.cpp" />
+    <ClCompile Include="TowerTest.cpp" />
     <ClCompile Include="Wave.cpp" />
     <ClCompile Include="ToughEnemy.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Tower.cpp" />
     <ClCompile Include="TowerMenu.cpp" />
-    <ClCompile Include="TowerTest.cpp">
-      <Filter>UnitTests</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <ClInclude Include="AreaAttack.h" />
     <ClInclude Include="Attack.h" />
     <ClInclude Include="AudioManager.h" />
@@ -77,205 +72,6 @@
   </ItemGroup>
   <ItemGroup>
     <Media Include="test.mp3" />
-=======
-    <ClCompile Include="Entity.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Field.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Tile.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Attack.cpp">
-      <Filter>Fichiers sources\Attack</Filter>
-    </ClCompile>
-    <ClCompile Include="AreaAttack.cpp">
-      <Filter>Fichiers sources\Attack</Filter>
-    </ClCompile>
-    <ClCompile Include="Tower.cpp">
-      <Filter>Fichiers sources\Tower</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>Fichiers sources\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="FastEnemy.cpp">
-      <Filter>Fichiers sources\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="ToughEnemy.cpp">
-      <Filter>Fichiers sources\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="NormalEnemy.cpp">
-      <Filter>Fichiers sources\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="BombEnemy.cpp">
-      <Filter>Fichiers sources\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Config.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Wave.cpp">
-      <Filter>Fichiers sources\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="NormalTower.cpp">
-      <Filter>Fichiers sources\Tower</Filter>
-    </ClCompile>
-    <ClCompile Include="MoneyTower.cpp">
-      <Filter>Fichiers sources\Tower</Filter>
-    </ClCompile>
-    <ClCompile Include="SunTower.cpp">
-      <Filter>Fichiers sources\Tower</Filter>
-    </ClCompile>
-    <ClCompile Include="SlowTower.cpp">
-      <Filter>Fichiers sources\Tower</Filter>
-    </ClCompile>
-    <ClCompile Include="Menu.cpp">
-      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
-    </ClCompile>
-    <ClCompile Include="GameMenu.cpp">
-      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
-    </ClCompile>
-    <ClCompile Include="BuildMenu.cpp">
-      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
-    </ClCompile>
-    <ClCompile Include="Button.cpp">
-      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
-    </ClCompile>
-    <ClCompile Include="TowerMenu.cpp">
-      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
-    </ClCompile>
-    <ClCompile Include="StartMenu.cpp">
-      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
-    </ClCompile>
-    <ClCompile Include="CreditsMenu.cpp">
-      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
-    </ClCompile>
-    <ClCompile Include="Path.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="AudioManager.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuManager.cpp">
-      <Filter>Fichiers sources\Interface %28menus/buttons%29</Filter>
-    </ClCompile>
-    <ClCompile Include="LevelManager.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="SlowAttack.cpp">
-      <Filter>Fichiers sources\Attack</Filter>
-    </ClCompile>
-    <ClCompile Include="NormalAttack.cpp">
-      <Filter>Fichiers sources\Attack</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="GameOverMenu.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Config.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Fichiers d%27en-tête\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="BombEnemy.h">
-      <Filter>Fichiers d%27en-tête\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="FastEnemy.h">
-      <Filter>Fichiers d%27en-tête\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="ToughEnemy.h">
-      <Filter>Fichiers d%27en-tête\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Wave.h">
-      <Filter>Fichiers d%27en-tête\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Attack.h">
-      <Filter>Fichiers d%27en-tête\Attack</Filter>
-    </ClInclude>
-    <ClInclude Include="AreaAttack.h">
-      <Filter>Fichiers d%27en-tête\Attack</Filter>
-    </ClInclude>
-    <ClInclude Include="NormalEnemy.h">
-      <Filter>Fichiers d%27en-tête\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Menu.h">
-      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
-    </ClInclude>
-    <ClInclude Include="GameMenu.h">
-      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
-    </ClInclude>
-    <ClInclude Include="BuildMenu.h">
-      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
-    </ClInclude>
-    <ClInclude Include="Button.h">
-      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
-    </ClInclude>
-    <ClInclude Include="TowerMenu.h">
-      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
-    </ClInclude>
-    <ClInclude Include="StartMenu.h">
-      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
-    </ClInclude>
-    <ClInclude Include="CreditsMenu.h">
-      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuManager.h">
-      <Filter>Fichiers d%27en-tête\Interface %28menus/buttons%29</Filter>
-    </ClInclude>
-    <ClInclude Include="NormalAttack.h">
-      <Filter>Fichiers d%27en-tête\Attack</Filter>
-    </ClInclude>
-    <ClInclude Include="SlowAttack.h">
-      <Filter>Fichiers d%27en-tête\Attack</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Field.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="AudioManager.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="GameOverMenu.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="LevelManager.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Path.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Tile.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Tower.h">
-      <Filter>Fichiers d%27en-tête\Tower</Filter>
-    </ClInclude>
-    <ClInclude Include="SunTower.h">
-      <Filter>Fichiers d%27en-tête\Tower</Filter>
-    </ClInclude>
-    <ClInclude Include="SlowTower.h">
-      <Filter>Fichiers d%27en-tête\Tower</Filter>
-    </ClInclude>
-    <ClInclude Include="NormalTower.h">
-      <Filter>Fichiers d%27en-tête\Tower</Filter>
-    </ClInclude>
-    <ClInclude Include="MoneyTower.h">
-      <Filter>Fichiers d%27en-tête\Tower</Filter>
-    </ClInclude>
->>>>>>> origin/master
   </ItemGroup>
   <ItemGroup>
     <None Include="sfml-audio-2.dll" />
@@ -291,14 +87,5 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Waves.txt" />
-  </ItemGroup>
-  <ItemGroup>
-<<<<<<< HEAD
-    <Filter Include="UnitTests">
-      <UniqueIdentifier>{e7609c0f-219a-4ab8-ae63-ecdc3e6fcbc5}</UniqueIdentifier>
-    </Filter>
-=======
-    <Text Include="Waves.txt" />
->>>>>>> origin/master
   </ItemGroup>
 </Project>

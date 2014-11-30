@@ -49,15 +49,12 @@ void Attack::setSpeed(int mSpeed)
 {
 	speed = mSpeed;
 }
-<<<<<<< HEAD
 
 /*
 Return the pointer to the enenmy (in the range of tower) who is the closest to the final target. 
 */
-Enemy* Attack::getTarget()
-=======
+
 shared_ptr<Enemy> Attack::getTarget()
->>>>>>> origin/master
 {
 	std::vector<shared_ptr<Enemy>> enemiesField = LevelManager::getLevelManager()->getEnemies();
 	shared_ptr<Enemy> enemyMinDistanceToTarget = make_shared<NormalEnemy>();

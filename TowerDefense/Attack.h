@@ -18,13 +18,9 @@ public:
 	void setRange(float mRange);
 	void setSpeed(int mSpeed);
 
-<<<<<<< HEAD
-	Enemy* getTarget();
-	void virtual resolve();
-=======
+
 	shared_ptr<Enemy> getTarget();
 	void virtual resolve()=0;
->>>>>>> origin/master
 
 protected:
 	float slowAmount;
