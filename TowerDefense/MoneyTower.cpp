@@ -9,9 +9,9 @@ MoneyTower::MoneyTower(Tile mTile)
 	income[level - 1] = MONEY_TOWER_INCOME[level - 1];
 	range[level - 1] = MONEY_TOWER_RANGE[level - 1];
 
-	attack.setDamage(damage[level - 1]);
-	attack.setRange(range[level - 1]);
-	attack.setSpeed(speed);
+	attack->setDamage(damage[level - 1]);
+	attack->setRange(range[level - 1]);
+	attack->setSpeed(speed);
 
 	timer = speed;
 
@@ -29,8 +29,9 @@ MoneyTower::MoneyTower(Tile mTile)
 	rangeCircle.setFillColor(sf::Color(0, 0, 255, 100));
 }
 
-MoneyTower::~MoneyTower()
+void MoneyTower::doAttack()
 {
+	generateMoney();
 }
 
 void MoneyTower::generateMoney()

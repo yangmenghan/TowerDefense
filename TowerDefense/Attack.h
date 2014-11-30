@@ -18,8 +18,8 @@ public:
 	void setRange(float mRange);
 	void setSpeed(int mSpeed);
 
-	Enemy getTarget();
-	void virtual resolve();
+	shared_ptr<Enemy> getTarget();
+	void virtual resolve()=0;
 
 protected:
 	float slowAmount;

@@ -8,10 +8,10 @@ using namespace std;
 class Wave {
 public:
 	Wave();
-	Wave(vector<Enemy>);
+	Wave(vector<shared_ptr<Enemy>>);
 	Wave::Wave(int lineNumber);
 
-	Enemy spawnEnemy();
+	shared_ptr<Enemy> spawnEnemy();
 
 	void addEnemy(char type);
 
@@ -19,6 +19,6 @@ public:
 
 private:
 	int spawnCooldown;
-	vector<Enemy> enemies;
+	vector<shared_ptr<Enemy>> enemies;
 
 };

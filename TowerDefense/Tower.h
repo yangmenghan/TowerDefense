@@ -3,12 +3,14 @@
 #include "Config.h"
 #include "LevelManager.h"
 #include "Attack.h"
+#include <memory>
 
 class Tower :
 	public Entity
 {
 public:
 	Tower(Tile &mTile);
+	Tower();
 	~Tower();
 
 	float getDamage();
@@ -24,11 +26,11 @@ public:
 	void sellTw();
 	void upgradeTw();
 	void downgradeTw();
-	void virtual doAttack();
+	void virtual doAttack() = 0;
 	void showRangeCircle(); 
 
 protected:
-	Attack attack;
+	shared_ptr<Attack> attack;
 	float damage[3];
 	int price;
 	int income[3];

@@ -57,9 +57,6 @@
     <ClCompile Include="Tower.cpp">
       <Filter>Fichiers sources\Tower</Filter>
     </ClCompile>
-    <ClCompile Include="SFMLTest.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Enemy.cpp">
       <Filter>Fichiers sources\Enemy</Filter>
     </ClCompile>
@@ -136,6 +133,9 @@
       <Filter>Fichiers sources\Attack</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOverMenu.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

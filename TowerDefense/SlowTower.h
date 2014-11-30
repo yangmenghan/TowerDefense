@@ -8,7 +8,7 @@ class SlowTower :
 public:
 	SlowTower(Tile mTile);
 	SlowTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite);
-	~SlowTower();
+	virtual ~SlowTower(){};
 
 	void doAttack() override;
 private:

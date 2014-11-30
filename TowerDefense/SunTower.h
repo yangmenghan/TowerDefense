@@ -8,7 +8,7 @@ class SunTower :
 public:
 	SunTower(Tile mTile);
 	SunTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite);
-	~SunTower();
+	virtual ~SunTower(){};
 
 	void doAttack() override;
 private:

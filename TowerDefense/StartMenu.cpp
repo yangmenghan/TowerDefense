@@ -6,6 +6,10 @@ StartMenu::StartMenu()
 {
 }
 
+StartMenu::~StartMenu()
+{
+}
+
 StartMenu::StartMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition)
 {
 	Menu(myTextureAddress, mySize, myPosition);

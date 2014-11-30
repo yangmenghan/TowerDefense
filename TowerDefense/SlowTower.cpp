@@ -29,11 +29,6 @@ SlowTower::SlowTower(Tile mTile)
 	rangeCircle.setFillColor(sf::Color(0, 0, 255, 100));
 }
 
-SlowTower::~SlowTower()
-{
-}
-
-
 
 void SlowTower::doAttack()
 {

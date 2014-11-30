@@ -7,8 +7,9 @@ class MoneyTower :
 public:
 	MoneyTower(Tile mTile);
 	MoneyTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite);
-	~MoneyTower();
+	virtual ~MoneyTower(){};
 
 	void generateMoney();
+	void doAttack() override;
 };
 

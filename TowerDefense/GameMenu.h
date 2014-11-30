@@ -26,7 +26,7 @@ public:
 //Constructors, destructors
 	GameMenu();
 	GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition);
-	~GameMenu();
+	virtual ~GameMenu();
 
 //Getters
 //Do we need getters and setters for buttons ?

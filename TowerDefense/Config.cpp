@@ -41,7 +41,7 @@ Wave constants
 */
 
 extern const int		WAVE_TOTAL				= 21;
-extern const string		WAVE_FILE_ADDRESS		= "\Waves.txt";
+extern const string		WAVE_FILE_ADDRESS		= "/Waves.txt";
 extern const int		WAVE_SPAWN_COOLDOWN		= 300;
 extern const int		WAVE_COOLDOWN			= 600;
 
@@ -91,32 +91,33 @@ extern const sf::Color	RANGE_CIRCLE_FILL_COLOR = sf::Color(0, 0, 255, 100);
 extern const int		TOWER_SPEED				= 15;
 
 
-extern const float		NORMAL_TOWER_DAMAGE[3] = { 10, 20, 30 };
-//extern const int		NORMAL_TOWER_SPEED[3] = { 15, 10, 5 };
-extern const float		NORMAL_TOWER_RANGE[3] = { 10, 15, 20 };
-extern const int		NORMAL_TOWER_PRICE = 200;
-extern const int		NORMAL_TOWER_INCOME[3] = {150,300, 450 };
+extern const float		NORMAL_TOWER_DAMAGE[3]	= { 10, 20, 30 };
+//extern const int		NORMAL_TOWER_SPEED[3]	= { 15, 10, 5 };
+extern const float		NORMAL_TOWER_RANGE[3]	= { 10, 15, 20 };
+extern const int		NORMAL_TOWER_PRICE		= 200;
+extern const int		NORMAL_TOWER_INCOME[3]	= {150,300, 450 };
 extern const string		NORMAL_TOWER_SPRITE_ADD = "";
 
-extern const float		SUN_TOWER_DAMAGE[3] = { 10, 15, 20 };
-//extern const int		SUN_TOWER_SPEED[3] = { 30, 20, 10 };
-extern const float		SUN_TOWER_RANGE[3] = { 10, 15, 20 };
-extern const int		SUN_TOWER_PRICE = 500;
-extern const int		SUN_TOWER_INCOME[3] = {400, 800, 1200};
+extern const float		SUN_TOWER_DAMAGE[3]		= { 10, 15, 20 };
+//extern const int		SUN_TOWER_SPEED[3]		= { 30, 20, 10 };
+extern const float		SUN_TOWER_RANGE[3]		= { 10, 15, 20 };
+extern const int		SUN_TOWER_PRICE			= 500;
+extern const int		SUN_TOWER_INCOME[3]		= {400, 800, 1200};
 extern const string		SUN_TOWER_SPRITE_ADD	= "";
 
-extern const float		MONEY_TOWER_DAMAGE[3] = { 0, 0, 0 };
-//extern const int		MONEY_TOWER_SPEED[3] = { 15, 10, 5 };
-extern const float		MONEY_TOWER_RANGE[3] = { 0, 0, 0 };
-extern const int		MONEY_TOWER_PRICE = 400;
-extern const int		MONEY_TOWER_INCOME[3] = {300, 600, 900};
+extern const float		MONEY_TOWER_DAMAGE[3]	= { 0, 0, 0 };
+extern const int		MONEY_TOWER_GENERATION_UNIT[3] = { 300, 600, 900 }; //TODO : = ???
+//extern const int		MONEY_TOWER_SPEED[3]	= { 15, 10, 5 };
+extern const float		MONEY_TOWER_RANGE[3]	= { 0, 0, 0 };
+extern const int		MONEY_TOWER_PRICE		= 400;
+extern const int		MONEY_TOWER_INCOME[3]	= {300, 600, 900};
 extern const string		MONEY_TOWER_SPRITE_ADD	= "";
 
-extern const float		SLOW_TOWER_DAMAGE[3] = { 10, 20, 30 };
-extern const int		SLOW_TOWER_SPEED[3] = { 15, 10, 5 };
-extern const float		SLOW_TOWER_RANGE[3] = { 10, 15, 20 };
-extern const int		SLOW_TOWER_PRICE = 300;
-extern const int		SLOW_TOWER_INCOME[3] = {250, 500, 750};
+extern const float		SLOW_TOWER_DAMAGE[3]	= { 10, 20, 30 };
+extern const int		SLOW_TOWER_SPEED[3]		= { 15, 10, 5 };
+extern const float		SLOW_TOWER_RANGE[3]		= { 10, 15, 20 };
+extern const int		SLOW_TOWER_PRICE		= 300;
+extern const int		SLOW_TOWER_INCOME[3]	= {250, 500, 750};
 extern const string		SLOW_TOWER_SPRITE_ADD	= "";
 
 /*
@@ -136,16 +137,22 @@ extern const string		GAMEOVER_MENU_TEXTURE	  = "";
 /*
 Button constants
 */
-extern const string		PAUSE_BUTTON_TEXTURE	  = "";
-extern const string		SPEED_BUTTON_TEXTURE	  = "";
-extern const string		MUTE_BUTTON_TEXTURE		  = "TowerDefense/sprites/mute_button.png";
-extern const string		RESTART_BUTTON_TEXTURE	  = "";
-extern const string		GIVE_UP_BUTTON_TEXTURE	  = "";
-extern const string		START_GAME_BUTTON_TEXTURE = "TowerDefense/sprites/start_game_button";
-extern const string		SCOREBOARD_BUTTON_TEXTURE = "";
-extern const string		CREDITS_BUTTON_TEXTURE    = "TowerDefense/sprites/credits_button.png";
-extern const string		EXIT_GAME_BUTTON_TEXTURE  = "TowerDefense/sprites/exit_game.png";
-extern const string		BACK_BUTTON_TEXTURE		  = "TowerDefense/sprite/back_button.png";
+extern const string		PAUSE_BUTTON_TEXTURE		= "";
+extern const string		SPEED_BUTTON_TEXTURE		= "";
+extern const string		MUTE_BUTTON_TEXTURE			= "TowerDefense/sprites/mute_button.png";
+extern const string		RESTART_BUTTON_TEXTURE		= "";
+extern const string		GIVE_UP_BUTTON_TEXTURE		= "";
+extern const string		START_GAME_BUTTON_TEXTURE	= "TowerDefense/sprites/start_game_button";
+extern const string		SCOREBOARD_BUTTON_TEXTURE	= "";
+extern const string		CREDITS_BUTTON_TEXTURE		= "TowerDefense/sprites/credits_button.png";
+extern const string		EXIT_GAME_BUTTON_TEXTURE	= "TowerDefense/sprites/exit_game.png";
+extern const string		BACK_BUTTON_TEXTURE			= "TowerDefense/sprite/back_button.png";
+extern const string		BASIC_TOWER_BUTTON_TEXTURE	= "";
+extern const string		SUN_TOWER_BUTTON_TEXTURE	= "";
+extern const string		SLOW_TOWER_BUTTON_TEXTURE	= "";
+extern const string		MONEY_TOWER_BUTTON_TEXTURE	= "";
+extern const string		SELL_BUTTON_TEXTURE			= "";
+extern const string		UPGRADE_BUTTON_TEXTURE		= "";
 
 extern const sf::Vector2i	BUTTON_SIZE			  = sf::Vector2i(407, 230);
 extern const sf::Vector2i	MUTE_BUTTON_SIZE	  = sf::Vector2i(100, 33);

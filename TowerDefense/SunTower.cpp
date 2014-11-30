@@ -29,10 +29,6 @@ SunTower::SunTower(Tile mTile)
 	rangeCircle.setFillColor(sf::Color(0, 0, 255, 100));
 }
 
-SunTower::~SunTower()
-{
-}
-
 void SunTower::doAttack()
 {
 	attack.resolve();

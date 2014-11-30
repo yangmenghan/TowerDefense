@@ -6,7 +6,7 @@ class NormalAttack :
 {
 public:
 	NormalAttack();
-	~NormalAttack();
+	virtual ~NormalAttack(){};
 
 	void resolve() override;
 };

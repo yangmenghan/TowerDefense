@@ -4,8 +4,10 @@
 
 using namespace sf;
 
+LevelManager* LevelManager::levelManager = NULL;
+
 LevelManager* LevelManager::getLevelManager(){
-	if (NULL == levelManager)
+	if (levelManager = NULL)
 	{
 		levelManager = new LevelManager;
 	}
@@ -21,9 +23,13 @@ void LevelManager::kill(){
 	}
 };
 
-LevelManager::LevelManager(){
+LevelManager::LevelManager()
+{
 	waveCooldown = WAVE_COOLDOWN;
 	loadWaves();
+}
+
+LevelManager::~LevelManager(){
 }
 
 void LevelManager::gameLoop(RenderWindow& w){
@@ -79,18 +85,18 @@ void LevelManager::gameLoop(RenderWindow& w){
 			
 
 			//Tower actions
-			for (Tower* tower : towers){
+			for (shared_ptr<Tower> tower : towers){
 				tower->draw(w);
 				tower->doAttack();
 			}
 
 			//Enemy Action
-			for (Enemy* enemy : enemies){
+			for (shared_ptr<Enemy> enemy : enemies){
 				if (enemy->getHP() <= 0){
 					enemy->die();
 				}
 				else if (enemy->getPosition() == field.getEndTile()->getPosition()){
-					removeEnemy(*enemy);
+					removeEnemy(enemy);
 					enemy->succed();
 				}
 				else {
@@ -137,37 +143,45 @@ void LevelManager::loadWaves(){
 	file.close();
 }
 
-void LevelManager::addEnemy(Enemy &e){
-	e.setTile(*field.getStartTile());
-	enemies.push_back(&e);
+void LevelManager::victory(){
+	//TODO
+}
+
+void LevelManager::gameOver(){
+	//TODO
+}
+
+void LevelManager::addEnemy(shared_ptr<Enemy> e){
+	e->setTile(*field.getStartTile());
+	enemies.push_back(e);
 };
 
-void LevelManager::removeEnemy(Enemy e){
-	remove(enemies.begin(), enemies.end(), &e);
+void LevelManager::removeEnemy(shared_ptr<Enemy> e){
+	remove(enemies.begin(), enemies.end(), e);
 };
 
 void LevelManager::removeEnemy(int index){
 	enemies.erase(enemies.begin() + index);
 };
 
-void LevelManager::addTower(Tower &t){
-	towers.push_back(&t);
+void LevelManager::addTower(shared_ptr<Tower> t){
+	towers.push_back(t);
 };
 
-void LevelManager::removeTower(Tower t){
-	remove(towers.begin(), towers.end(), &t);
+void LevelManager::removeTower(shared_ptr<Tower> t){
+	remove(towers.begin(), towers.end(), t);
 };
 
 void LevelManager::removeTower(int index){
 	towers.erase(towers.begin()+index);
 };
 
-vector<Enemy*> LevelManager::getEnemies(){
+vector<shared_ptr<Enemy>> LevelManager::getEnemies(){
 	return enemies;
 
 }
 
-vector<Tower*> LevelManager::getTowers(){
+vector<shared_ptr<Tower>> LevelManager::getTowers(){
 	return towers;
 }
 

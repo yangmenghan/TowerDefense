@@ -8,7 +8,7 @@ class NormalTower :
 public:
 	NormalTower(Tile mTile);
 	NormalTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite);
-	~NormalTower();
+	virtual ~NormalTower(){};
 
 	void doAttack()override;
 private:

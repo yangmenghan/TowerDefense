@@ -1,6 +1,5 @@
 #pragma once
-#include "Tile.h";
-#include "Path.h";
+#include "Tile.h"
 #include <SFML\Graphics.hpp>
 
 using namespace std;

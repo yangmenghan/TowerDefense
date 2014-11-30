@@ -3,6 +3,8 @@
 #include <vector>
 #include "MenuManager.h"
 
+MenuManager* MenuManager::menuManager = NULL;
+
 MenuManager::MenuManager()
 {
 }

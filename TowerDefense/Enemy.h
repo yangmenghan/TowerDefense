@@ -21,6 +21,8 @@ public :
 	int getSlowTime();
 	float getDistanceToTarget();
 
+	string virtual test() = 0;
+
 	void setTile(Tile);
 
 	void takeDamage(int);

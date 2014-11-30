@@ -40,32 +40,28 @@ shared_ptr<Tile> BuildMenu::getTile()
 void BuildMenu::buyBasicTw()
 {
 	LevelManager::getLevelManager()->getPlayer().manageMoney(-NORMAL_TOWER_PRICE);
-	NormalTower normalTw();
-	auto pNormalTw = make_shared<NormalTower>(normalTw);
+	auto pNormalTw = make_shared<NormalTower>(*tile);
 	tile.operator*().setTower(pNormalTw);
 }
 
 void BuildMenu::buyMoneyTw()
 {
 	LevelManager::getLevelManager()->getPlayer().manageMoney(-MONEY_TOWER_PRICE);
-	MoneyTower moneyTw();
-	auto pMoneyTw = make_shared<MoneyTower>(moneyTw);
+	auto pMoneyTw = make_shared<MoneyTower>(*tile);
 	tile.operator*().setTower(pMoneyTw);
 }
 
 void BuildMenu::buySlowTw()
 {
 	LevelManager::getLevelManager()->getPlayer().manageMoney(-SLOW_TOWER_PRICE);
-	SlowTower slowTw();
-	auto pSlowTw = make_shared<SlowTower>(slowTw);
+	auto pSlowTw = make_shared<SlowTower>(*tile);
 	tile.operator*().setTower(pSlowTw);
 }
 
 void BuildMenu::buySunTw()
 {
 	LevelManager::getLevelManager()->getPlayer().manageMoney(-SUN_TOWER_PRICE);
-	SunTower sunTw();
-	auto pSunTw = make_shared<SunTower>(sunTw);
+	auto pSunTw = make_shared<SunTower>(*tile);
 	tile.operator*().setTower(pSunTw);
 }
 

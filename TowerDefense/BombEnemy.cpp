@@ -5,14 +5,7 @@
 #include "LevelManager.h"
 
 
-BombEnemy::BombEnemy(){
-	hp = BOMB_ENEMY_HP;
-	defence = BOMB_ENEMY_DEFENCE;
-	bounty = BOMB_ENEMY_BOUNTY;
-	scoreValue = BOMB_ENEMY_SCOREVALUE;
-	speed = BOMB_ENEMY_SPEED;
-
-	timer = BOMB_ENEMY_COUNTDOWN;
+BombEnemy::BombEnemy() :Enemy(BOMB_ENEMY_HP, BOMB_ENEMY_DEFENCE, BOMB_ENEMY_BOUNTY, BOMB_ENEMY_SCOREVALUE, sf::Sprite(), BOMB_ENEMY_SPEED){
 
 	sf::Texture texture;
 	if (!texture.loadFromFile(BOMB_ENEMY_SPRITE_ADD))
@@ -21,14 +14,12 @@ BombEnemy::BombEnemy(){
 	}
 
 	sprite.setTexture(texture);
-}
+};
 
-BombEnemy::BombEnemy(int mHP, float mDefence, int mBounty, int mScoreValue, int mTrigger, sf::Sprite mSprite, float mSpeed){
-	Enemy(mHP, mDefence, mBounty, mScoreValue, mSprite, mSpeed); 
+BombEnemy::BombEnemy(int mHP, float mDefence, int mBounty, int mScoreValue, int mTrigger, sf::Sprite mSprite, float mSpeed)
+	:Enemy(mHP, mDefence, mBounty, mScoreValue, mSprite, mSpeed)
+{
 	trigger = mTrigger;
-}
-
-BombEnemy::~BombEnemy(){
 };
 
 int BombEnemy::getTrigger(){
@@ -67,9 +58,9 @@ void BombEnemy::explode(){
 		tile->setCooldown(TILE_COOLDOWN);
 	}
 
-	vector<Enemy*> e = LevelManager::getLevelManager()->getEnemies();
-	vector<Enemy*> enemies;
-	for (Enemy* en : e){
+	vector<shared_ptr<Enemy>> e = LevelManager::getLevelManager()->getEnemies();
+	vector<shared_ptr<Enemy>> enemies;
+	for (shared_ptr<Enemy> en : e){
 		for (Tile* temp_tile : t){
 			if (en->getTile().getPosition() == (*temp_tile).getPosition()){
 				enemies.push_back(en);
@@ -78,13 +69,13 @@ void BombEnemy::explode(){
 
 	}
 
-	for (Enemy* e : enemies){
+	for (shared_ptr<Enemy> e : enemies){
 		e->dieWithoutBonus();
 	}
 
-	vector<Tower*> t2 = LevelManager::getLevelManager()->getTowers();
-	vector<Tower*> towers;
-	for (Tower* temp_tower: t2){
+	vector<shared_ptr<Tower>> t2 = LevelManager::getLevelManager()->getTowers();
+	vector<shared_ptr<Tower>> towers;
+	for (shared_ptr<Tower> temp_tower : t2){
 		for (Tile* temp_tile : t){
 			if (temp_tower->getTile().getPosition() == (*temp_tile).getPosition()){
 				towers.push_back(temp_tower);
@@ -93,7 +84,7 @@ void BombEnemy::explode(){
 
 	}
 
-	for (Tower* t : towers){
+	for (shared_ptr<Tower> t : towers){
 		t->downgradeTw();
 	}
 
