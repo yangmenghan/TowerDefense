@@ -26,7 +26,7 @@ public:
 	void sellTw();
 	void upgradeTw();
 	void downgradeTw();
-	void virtual doAttack() = 0;
+	virtual void doAttack() = 0;
 	void showRangeCircle(); 
 
 protected:

@@ -7,7 +7,7 @@ using namespace sf;
 LevelManager* LevelManager::levelManager = NULL;
 
 LevelManager* LevelManager::getLevelManager(){
-	if (levelManager = NULL)
+	if (levelManager == NULL)
 	{
 		levelManager = new LevelManager;
 	}

@@ -28,6 +28,9 @@ public:
 	GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition);
 	virtual ~GameMenu();
 
+
+	void opent(){}; //TODO : for test
+
 //Getters
 //Do we need getters and setters for buttons ?
 	float getGameSpeed();
@@ -42,5 +45,5 @@ public:
 	void returnSpeed();
 	void restartGame();
 	void draw(sf::RenderWindow& w);
-	void resolveEvent();
+	void resolveEvent(sf::Event event);
 };

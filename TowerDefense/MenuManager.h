@@ -3,11 +3,14 @@
 #include <SFML\Graphics.hpp>
 #include "Menu.h"
 #include <vector>
+#include <memory>
+
+using namespace std;
 
 class MenuManager
 {
 private:
-	std::vector<Menu*> menuStack;
+	vector<shared_ptr<Menu> > menuStack;
 
 public:
 	static MenuManager* menuManager;
@@ -16,12 +19,12 @@ public:
 	~MenuManager();
 
 	void display(sf::RenderWindow& w);
-	void addMenu(Menu menu);
+	void addMenu(shared_ptr<Menu> menu);
 	void popMenu();
 
-	std::vector<Menu*>* getMenus();
+	std::vector<shared_ptr<Menu>>* getMenus();
 
-	void openMenu(Menu menu);
+	void openMenu(shared_ptr<Menu> menu);
 	void closeMenu();
 	
 

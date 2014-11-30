@@ -41,8 +41,8 @@ public:
 
 
 //Functions
-	void draw(sf::RenderWindow&);
+	virtual void draw(sf::RenderWindow&);
 	void close();
 	void opent();
-	void resolveEvent(sf::Event);
+	virtual void resolveEvent(sf::Event) = 0;
 };

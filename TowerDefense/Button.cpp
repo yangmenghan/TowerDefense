@@ -16,10 +16,6 @@ Button::Button(const std::string myTextureAddress, sf::Vector2i mySize, sf::Vect
 	{
 		// TODO erreur...
 	}
-
-	sprite.setTexture(spriteSheet);
-	sprite.setTextureRect(sf::IntRect(sf::Vector2i(0,0),size));
-	boundingBox = sprite.getGlobalBounds();
 }
 
 Button::~Button(){};
@@ -56,6 +52,10 @@ void Button::setSprite(sf::Sprite mSprite)
 
 void Button::draw(sf::RenderWindow& w)
 {
+	sprite.setTexture(spriteSheet);
+	sprite.setTextureRect(sf::IntRect(sf::Vector2i(0, 0), size));
+	sprite.setPosition(sf::Vector2f(200, 200));
+	boundingBox = sprite.getGlobalBounds();
 	w.draw(sprite);
 }
 

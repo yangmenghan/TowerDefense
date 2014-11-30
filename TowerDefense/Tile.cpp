@@ -10,7 +10,7 @@ Tile::Tile()
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
 	cooldown = 0;
-	tower = make_shared<NormalTower>(*this);
+	tower = NULL;
 	boundingBox = sprite.getGlobalBounds();
 }
 
@@ -20,7 +20,7 @@ Tile::Tile(int x, int y)//构造x行y列的Tile
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
 	cooldown = 0;
-	tower = make_shared<NormalTower>(*this);
+	tower = NULL;
 	boundingBox = sprite.getGlobalBounds();
 }
 
