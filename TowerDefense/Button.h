@@ -17,6 +17,9 @@ private:
 
 	sf::FloatRect boundingBox;
 
+	bool isHovered;
+	bool isClicking;
+
 public:
 //Constructors and destroyers
 	Button();
@@ -35,9 +38,7 @@ public:
 
 //Functions
 	void draw(sf::RenderWindow&); 
-	bool mouseHover();
-	bool mouseClicking(sf::Event);
-	bool mouseClick(sf::Event);
-	void spriteUpdate();
+	void mouseHover();
+	bool Button::resolveEvent(sf::Event event);
 
 };

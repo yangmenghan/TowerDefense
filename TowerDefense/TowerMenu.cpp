@@ -31,11 +31,11 @@ shared_ptr<Tile> TowerMenu::getTile()
 
 void TowerMenu::resolveEvent(sf::Event _event)
 {
-	if (sellButton.mouseClick(_event))
+	if (sellButton.resolveEvent(_event))
 	{
 		tile->getTower()->sellTw();
 	}
-	if (upgradeButton.mouseClick(_event))
+	if (upgradeButton.resolveEvent(_event))
 	{
 		tile->getTower()->upgradeTw();
 	}

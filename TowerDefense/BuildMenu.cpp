@@ -67,19 +67,19 @@ void BuildMenu::buySunTw()
 
 void BuildMenu::resolveEvent(sf::Event _event)
 {
-	if (basicTwButton.mouseClick(_event))
+	if (basicTwButton.resolveEvent(_event))
 	{
 		buyBasicTw();
 	}
-	if (slowTwButton.mouseClick(_event))
+	if (slowTwButton.resolveEvent(_event))
 	{
 		buySlowTw();
 	}
-	if (sunTwButton.mouseClick(_event))
+	if (sunTwButton.resolveEvent(_event))
 	{
 		buySunTw();
 	}
-	if (moneyTwButton.mouseClick(_event))
+	if (moneyTwButton.resolveEvent(_event))
 	{
 		buyMoneyTw();
 	}

@@ -11,8 +11,8 @@ call simply the name of the global constant ! :D
 Main Window constants
 */
 
-extern const int		WINDOW_WIDTH			= 1200;
-extern const int		WINDOW_HEIGHT			= 800;
+extern const int		WINDOW_WIDTH			= 1100;
+extern const int		WINDOW_HEIGHT			= 600;
 extern const int		BORDER_SIZE				= 30;
 
 
@@ -130,7 +130,7 @@ extern const int		SLOW_EFFECT				= 100;
 Menu constants
 */
 extern const string		GAME_MENU_DEFAULT_TEXTURE = "sprites/background.png";
-extern const string		START_MENU_TEXTURE		  = "sprites/background.png";
+extern const string		START_MENU_TEXTURE		  = "sprites/startbackground.png";
 extern const string		CREDITS_SPRITE_ADD		  = "sprites/credits.png";
 extern const string		GAMEOVER_MENU_TEXTURE	  = "";
 		
@@ -144,8 +144,8 @@ extern const string		RESTART_BUTTON_TEXTURE		= "";
 extern const string		GIVE_UP_BUTTON_TEXTURE		= "";
 extern const string		START_GAME_BUTTON_TEXTURE	= "sprites/start_game_button.png";
 extern const string		SCOREBOARD_BUTTON_TEXTURE	= "";
-extern const string		CREDITS_BUTTON_TEXTURE		= "sprites/credits_button.png";
-extern const string		EXIT_GAME_BUTTON_TEXTURE	= "sprites/exit_game.png";
+extern const string		CREDITS_BUTTON_TEXTURE      = "sprites/credits_button.png";
+extern const string		EXIT_GAME_BUTTON_TEXTURE 	= "sprites/exit_game.png";
 extern const string		BACK_BUTTON_TEXTURE			= "sprites/back_button.png";
 extern const string		BASIC_TOWER_BUTTON_TEXTURE	= "";
 extern const string		SUN_TOWER_BUTTON_TEXTURE	= "";
@@ -154,9 +154,16 @@ extern const string		MONEY_TOWER_BUTTON_TEXTURE	= "";
 extern const string		SELL_BUTTON_TEXTURE			= "";
 extern const string		UPGRADE_BUTTON_TEXTURE		= "";
 
-extern const sf::Vector2i	BUTTON_SIZE			  = sf::Vector2i(407, 230);
-extern const sf::Vector2i	MUTE_BUTTON_SIZE	  = sf::Vector2i(100, 33);
+extern const sf::Vector2i	BUTTON_SIZE			  = sf::Vector2i(408, 77);
+extern const sf::Vector2i	MUTE_BUTTON_SIZE	  = sf::Vector2i(100, 34);
 extern const sf::Vector2i	SMALL_BUTTON_SIZE	  = sf::Vector2i(BUTTON_WIDTH, BUTTON_HEIGHT);
+
+extern const sf::Vector2i	START_BUTTON_POSITION	= sf::Vector2i(346, 150);
+extern const sf::Vector2i	CREDITS_BUTTON_POSITION = sf::Vector2i(346, 250);
+extern const sf::Vector2i	EXIT_BUTTON_POSITION	= sf::Vector2i(346, 350);
+extern const sf::Vector2i	MUTE_BUTTON_POSITION	= sf::Vector2i(10, 10);
+
+
 
 
 /*

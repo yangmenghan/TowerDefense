@@ -12,6 +12,9 @@ Button::Button(const std::string myTextureAddress, sf::Vector2i mySize, sf::Vect
 	totalSprites = n;
 	currentSprite = 0;
 
+	isHovered = false;
+	isClicking = false;
+
 	if (!spriteSheet.loadFromFile(textureAddress))
 	{
 		// TODO erreur...
@@ -53,71 +56,57 @@ void Button::setSprite(sf::Sprite mSprite)
 void Button::draw(sf::RenderWindow& w)
 {
 	sprite.setTexture(spriteSheet);
-	sprite.setTextureRect(sf::IntRect(sf::Vector2i(0, 0), size));
-	sprite.setPosition(sf::Vector2f(200, 200));
+
+	sf::Vector2i spriteInit(0, currentSprite*(size.y));
+	sprite.setTextureRect(sf::IntRect(spriteInit, size));
+
+	sprite.setPosition(sf::Vector2f(float(position.x), float(position.y)));
+
 	boundingBox = sprite.getGlobalBounds();
 	w.draw(sprite);
 }
 
-bool Button::mouseHover()
+void Button::mouseHover()
 {
-	bool isHovering = false;
 	sf::Vector2f mousePosition((float)sf::Mouse::getPosition().x, (float)sf::Mouse::getPosition().y);
 
 	if (boundingBox.contains(mousePosition))
 	{
-		isHovering = true;
-		spriteUpdate();
+		isHovered = true;
+		currentSprite = 1;
 	}
 	else
 	{
-		isHovering = false;
-		sprite.setTextureRect(sf::IntRect(0, 0, size.x, size.y));
-		spriteUpdate();
+		isHovered = false;
+		currentSprite = 0;
 	}
-
-	return isHovering;
 }
 
-bool Button::mouseClicking(sf::Event event)
+bool Button::resolveEvent(sf::Event event)
 {
-	if (mouseHover())
+	if (isHovered == true)
 	{
 		if (event.type == sf::Event::MouseButtonPressed)
 		{
-			return true;
-			spriteUpdate();
+			isClicking = true;
+			currentSprite = 1;
+		}
+		else
+		{
+			currentSprite = 0;
 		}
 	}
-	return false;
-}
-
-bool Button::mouseClick(sf::Event event)
-{
-	if (mouseClicking(event))
+	if (isClicking == true)
 	{
 		if (event.type == sf::Event::MouseButtonReleased)
 		{
+			currentSprite = 2;
 			return true;
-			spriteUpdate();
+			isClicking = false;
 		}
-	}
-	return false;
-}
-
-void Button::spriteUpdate()
-{
-	if (currentSprite != (totalSprites - 1))
-	{
-		currentSprite++;
 	}
 	else
 	{
-		currentSprite = 0;
+		return false;
 	}
-
-	sf::Vector2i spriteInit(0, currentSprite*size.y);
-
-	sprite.setTextureRect(sf::IntRect(spriteInit, size));
-
 }

@@ -28,7 +28,7 @@ int main()
 			if ((event.type == sf::Event::Closed))
 				window.close();
 			
-			menuManager.addMenu(make_shared<StartMenu>(START_MENU_TEXTURE, sf::Vector2u(1200,800), sf::Vector2i(0,0)));
+			menuManager.addMenu(make_shared<StartMenu>(START_MENU_TEXTURE, sf::Vector2u(1100,600), sf::Vector2i(0,0)));
 			menuManager.resolveEvent(event);
 		}
 

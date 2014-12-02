@@ -28,15 +28,15 @@ void StartMenu::draw(sf::RenderWindow& w)
 
 void StartMenu::resolveEvent(sf::Event event)
 {
-	if (startGameButton.mouseClick(event))
+	if (startGameButton.resolveEvent(event))
 	{
 		startGame();
 	}
-	if (openCreditsButton.mouseClick(event))
+	if (openCreditsButton.resolveEvent(event))
 	{
 		openCredits();
 	}
-	if (muteButton.mouseClick(event))
+	if (muteButton.resolveEvent(event))
 	{
 		AudioManager audio = AudioManager::getAudioManager();
 		if (audio.isMute() == false)
@@ -48,7 +48,7 @@ void StartMenu::resolveEvent(sf::Event event)
 			playMusic();
 		}
 	}
-	if (exitGameButton.mouseClick(event))
+	if (exitGameButton.resolveEvent(event))
 	{
 		exitGame();
 	}

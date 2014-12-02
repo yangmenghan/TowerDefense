@@ -39,7 +39,7 @@ void CreditsMenu::closeMenu()
 
 void CreditsMenu::resolveEvent(sf::Event event)
 {
-	if (backButton.mouseClick(event))
+	if (backButton.resolveEvent(event))
 	{
 		closeMenu();
 	}

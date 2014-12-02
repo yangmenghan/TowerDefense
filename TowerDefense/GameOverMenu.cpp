@@ -24,11 +24,11 @@ void GameOverMenu::draw(sf::RenderWindow& w)
 
 void GameOverMenu::resolveEvent(sf::Event _event)
 {
-	if (reStartGameButton.mouseClick(_event))
+	if (reStartGameButton.resolveEvent(_event))
 	{
 		reStartGame();
 	}
-	if (exitGameButton.mouseClick(_event))
+	if (exitGameButton.resolveEvent(_event))
 	{
 		exitGame();
 	}

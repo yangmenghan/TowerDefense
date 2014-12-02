@@ -160,6 +160,11 @@ extern const sf::Vector2i	BUTTON_SIZE;
 extern const sf::Vector2i	MUTE_BUTTON_SIZE;
 extern const sf::Vector2i	SMALL_BUTTON_SIZE;
 
+extern const sf::Vector2i	START_BUTTON_POSITION;
+extern const sf::Vector2i	CREDITS_BUTTON_POSITION;
+extern const sf::Vector2i	EXIT_BUTTON_POSITION;
+extern const sf::Vector2i	MUTE_BUTTON_POSITION;
+
 /*
 Other constants
 */
