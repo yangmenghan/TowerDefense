@@ -90,7 +90,6 @@ void GameMenu::resolveEvent(sf::Event event)
 		pauseButton.resolveEvent(event);
 		if (pauseButton.checkClick())
 		{
-			int gameSpeed = LevelManager::getLevelManager().getSpeed();
 			if (gameSpeed == 0)
 			{
 				returnSpeed();
@@ -106,7 +105,6 @@ void GameMenu::resolveEvent(sf::Event event)
 		speedButton.resolveEvent(event);
 		if (speedButton.checkClick())
 		{
-			int gameSpeed = LevelManager::getLevelManager().getSpeed();
 			if (gameSpeed == 2)
 			{
 				returnSpeed();
@@ -125,11 +123,11 @@ void GameMenu::resolveEvent(sf::Event event)
 			AudioManager audio = AudioManager::getAudioManager();
 			if (audio.isMute() == false)
 			{
-				muteGame();
+				audio.mute();
 			}
 			else
 			{
-				playMusic();
+				audio.play();
 			}
 		}
 	}

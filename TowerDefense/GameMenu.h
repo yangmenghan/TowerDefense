@@ -50,8 +50,6 @@ public:
 	void speedGame();
 	void returnSpeed();
 	void restartGame();
-	void muteGame();
-	void playMusic();
 	void draw(sf::RenderWindow& w);
 	void resolveEvent(sf::Event event);
 };

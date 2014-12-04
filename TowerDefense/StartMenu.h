@@ -30,7 +30,5 @@ public:
 
 	void startGame();
 	void openCredits();
-	void muteGame();
-	void playMusic();
 	void exitGame();
 };

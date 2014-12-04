@@ -20,6 +20,7 @@ StartMenu::StartMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vect
 void StartMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
+
 	startGameButton.mouseHover(w);
 	openCreditsButton.mouseHover(w);
 	muteButton.mouseHover(w);
@@ -54,7 +55,15 @@ void StartMenu::resolveEvent(sf::Event event)
 		muteButton.resolveEvent(event);
 		if (muteButton.checkClick())
 		{
-			muteGame();
+			AudioManager audio = AudioManager::getAudioManager();
+			if (audio.isMute() == false)
+			{
+				audio.mute();
+			}
+			else
+			{
+				audio.play();
+			}
 		}
 	}
 	else if (exitGameButton.checkHover())
@@ -81,19 +90,7 @@ void StartMenu::openCredits()
 {
 	MenuManager* m = MenuManager::getMenuManager();
 
-	m->addMenu(make_shared<CreditsMenu>());
-}
-
-void StartMenu::muteGame()
-{
-	AudioManager audio = AudioManager::getAudioManager();
-	audio.mute();
-}
-
-void StartMenu::playMusic()
-{
-	AudioManager audio = AudioManager::getAudioManager();
-	audio.play();
+	m->addMenu(make_shared<CreditsMenu>(CREDITS_SPRITE_ADD, sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT), sf::Vector2i(0, 0)));
 }
 
 void StartMenu::exitGame()
