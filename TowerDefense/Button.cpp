@@ -78,25 +78,20 @@ void Button::draw(sf::RenderWindow& w)
 
 void Button::resolveEvent(sf::Event event)
 {
-	if (isHovered == true)
+	if (event.type == sf::Event::MouseButtonPressed)
 	{
-		spriteUpdate(1);
-		if (event.type == sf::Event::MouseButtonPressed)
-		{
-			isClicking = true;
-			spriteUpdate(2);
-		}
-		if (event.type == sf::Event::MouseButtonReleased)
-		{
-			if (isClicking == true)
-			{
-				spriteUpdate(0);
-				isClicked = true;
-				isClicking = false;
-			}
-		}
+		isClicking = true;
+		spriteUpdate(2);
 	}
-		
+	if (event.type == sf::Event::MouseButtonReleased)
+	{
+		if (isClicking == true)
+		{
+			spriteUpdate(0);
+			isClicked = true;
+			isClicking = false;
+		}
+	}		
 }
 
 void Button::spriteUpdate(int i)
@@ -109,10 +104,12 @@ bool Button::mouseHover(sf::RenderWindow& w)
 	if (box.contains(sf::Mouse::getPosition(w)))
 	{
 		isHovered = true;
+		spriteUpdate(1);
 	}
 	else
 	{
 		isHovered = false;
+		spriteUpdate(0);
 	}
 	return isHovered;
 }

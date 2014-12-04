@@ -21,10 +21,14 @@ void StartMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
 	startGameButton.mouseHover(w);
+	openCreditsButton.mouseHover(w);
+	muteButton.mouseHover(w);
+	exitGameButton.mouseHover(w);
+
 	startGameButton.draw(w);
-	/*openCreditsButton.draw(w);
+	openCreditsButton.draw(w);
 	muteButton.draw(w);
-	exitGameButton.draw(w);*/
+	exitGameButton.draw(w);
 }
 
 void StartMenu::resolveEvent(sf::Event event)
@@ -32,33 +36,35 @@ void StartMenu::resolveEvent(sf::Event event)
 	if (startGameButton.checkHover())
 	{ 
 		startGameButton.resolveEvent(event);
-		if (startGameButton.checkClick()){
+		if (startGameButton.checkClick())
+		{
 			startGame();
 		}
-
 	}
-	
-	
-	/*if (openCreditsButton.resolveEvent(event))
+	else if (openCreditsButton.checkHover())
 	{
-		openCredits();
+		openCreditsButton.resolveEvent(event);
+		if (openCreditsButton.checkClick())
+		{
+			openCredits();
+		}
 	}
-	if (muteButton.resolveEvent(event))
+	else if (muteButton.checkHover())
 	{
-		AudioManager audio = AudioManager::getAudioManager();
-		if (audio.isMute() == false)
+		muteButton.resolveEvent(event);
+		if (muteButton.checkClick())
 		{
 			muteGame();
 		}
-		else
+	}
+	else if (exitGameButton.checkHover())
+	{
+		exitGameButton.resolveEvent(event);
+		if (exitGameButton.checkClick())
 		{
-			playMusic();
+			exitGame();
 		}
 	}
-	if (exitGameButton.resolveEvent(event))
-	{
-		exitGame();
-	}*/
 }
 
 void StartMenu::startGame()
@@ -78,7 +84,7 @@ void StartMenu::openCredits()
 	m->addMenu(make_shared<CreditsMenu>());
 }
 
-/*void StartMenu::muteGame()
+void StartMenu::muteGame()
 {
 	AudioManager audio = AudioManager::getAudioManager();
 	audio.mute();
@@ -94,5 +100,5 @@ void StartMenu::exitGame()
 {
 	MenuManager* m = MenuManager::getMenuManager();
 	m-> ~MenuManager();
-}*/
+}
 
