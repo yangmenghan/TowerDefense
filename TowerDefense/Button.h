@@ -32,6 +32,7 @@ public:
 	sf::Vector2i getSize();
 	sf::Sprite getSprite();
 	bool checkClick();
+	bool checkHover();
 
 //Setters
 	void setPosition(sf::Vector2i mPosition);
@@ -40,7 +41,8 @@ public:
 
 //Functions
 	void draw(sf::RenderWindow&); 
-	bool mouseHover();
+	bool mouseHover(sf::RenderWindow& w);
 	void Button::resolveEvent(sf::Event event);
+	void spriteUpdate();
 
 };

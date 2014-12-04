@@ -21,6 +21,7 @@ void StartMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
 	startGameButton.draw(w);
+	startGameButton.mouseHover(w);
 	/*openCreditsButton.draw(w);
 	muteButton.draw(w);
 	exitGameButton.draw(w);*/
@@ -28,14 +29,11 @@ void StartMenu::draw(sf::RenderWindow& w)
 
 void StartMenu::resolveEvent(sf::Event event)
 {
-	if (startGameButton.mouseHover() == true)
+	if (startGameButton.checkHover() == true)
 	{
 		startGameButton.resolveEvent(event);
-		if (startGameButton.checkClick() == true)
-		{
-			startGame();
-		}
 	}
+
 	
 	/*if (openCreditsButton.resolveEvent(event))
 	{
