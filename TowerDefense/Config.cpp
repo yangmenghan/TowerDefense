@@ -137,10 +137,10 @@ extern const string		GAMEOVER_MENU_TEXTURE	  = "";
 /*
 Button constants
 */
-extern const string		PAUSE_BUTTON_TEXTURE		= "";
-extern const string		SPEED_BUTTON_TEXTURE		= "";
+extern const string		PAUSE_BUTTON_TEXTURE		= "sprites/pause_button.png";
+extern const string		SPEED_BUTTON_TEXTURE		= "sprites/speed_button.png";
 extern const string		MUTE_BUTTON_TEXTURE			= "sprites/mute_button.png";
-extern const string		RESTART_BUTTON_TEXTURE		= "";
+extern const string		RESTART_BUTTON_TEXTURE		= "sprites/restart_button.png";
 extern const string		GIVE_UP_BUTTON_TEXTURE		= "";
 extern const string		START_GAME_BUTTON_TEXTURE	= "sprites/start_game_button.png";
 extern const string		SCOREBOARD_BUTTON_TEXTURE	= "";

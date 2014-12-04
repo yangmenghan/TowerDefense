@@ -3,6 +3,8 @@
 #include <SFML\Graphics.hpp>
 #include <SFML\Window.hpp>
 #include "Menu.h"
+#include "AudioManager.h"
+#include "LevelManager.h"
 #include "Button.h"
 #include "Config.h"
 
@@ -10,10 +12,10 @@ class GameMenu
 	: public Menu
 {
 private:
-	//Button pauseButton = Button(PAUSE_BUTTON_TEXTURE);
-	//Button speedButton = Button(SPEED_BUTTON_TEXTURE);
-	//Button muteButton = Button(MUTE_BUTTON_TEXTURE);
-	//Button restartButton = Button(RESTART_BUTTON_TEXTURE);
+	Button pauseButton = Button(PAUSE_BUTTON_TEXTURE, MUTE_BUTTON_SIZE, MUTE_BUTTON_POSITION + sf::Vector2i(120,0), 2);
+	Button speedButton = Button(SPEED_BUTTON_TEXTURE, MUTE_BUTTON_SIZE, MUTE_BUTTON_POSITION + sf::Vector2i(240, 0), 2);
+	Button muteButton = Button(MUTE_BUTTON_TEXTURE, MUTE_BUTTON_SIZE, MUTE_BUTTON_POSITION, 2);
+	Button restartButton = Button(RESTART_BUTTON_TEXTURE, MUTE_BUTTON_SIZE, MUTE_BUTTON_POSITION + sf::Vector2i(360, 0), 2);
 	//Button giveUpButton = Button(GIVE_UP_BUTTON_TEXTURE);
 
 	float gameSpeed;
@@ -44,6 +46,8 @@ public:
 	void speedGame();
 	void returnSpeed();
 	void restartGame();
+	void muteGame();
+	void playMusic();
 	void draw(sf::RenderWindow& w);
 	void resolveEvent(sf::Event event);
 };
