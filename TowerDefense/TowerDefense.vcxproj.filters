@@ -114,12 +114,6 @@
     <ClInclude Include="Wave.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="TowerMenu.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Tower.h">
-      <Filter>Header</Filter>
-    </ClInclude>
     <ClInclude Include="Tile.h">
       <Filter>Header</Filter>
     </ClInclude>
@@ -200,6 +194,12 @@
     </ClInclude>
     <ClInclude Include="ToughEnemy.h">
       <Filter>Header\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Tower.h">
+      <Filter>Header\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerMenu.h">
+      <Filter>Header\Interface</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

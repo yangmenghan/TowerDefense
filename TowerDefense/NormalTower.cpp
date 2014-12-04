@@ -15,11 +15,13 @@ NormalTower::NormalTower(Tile mTile)
 
 	timer = speed;
 	
-	sf::Texture texture;
-	if (!texture.loadFromFile(NORMAL_TOWER_SPRITE_ADD))
-	{
-		// TODO erreur...
-	}
+	for (int i = 0; i < 3; i++)
+		if (!texturesRead[i].loadFromFile(NORMAL_TOWER_SPRITE_ADD[i]))
+		{
+			// TODO erreur...
+		}
+
+	texture = texturesRead[level - 1];
 
 	sprite.setTexture(texture);
 

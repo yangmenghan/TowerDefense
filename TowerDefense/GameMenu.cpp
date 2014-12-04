@@ -76,6 +76,8 @@ void GameMenu::draw(sf::RenderWindow& w)
 
 void GameMenu::resolveEvent(sf::Event event)
 {
+	
+	
 	/*if (pauseButton.mouseClick(event))
 	{
 		int gameSpeed = LevelManager::getLevelManager().getSpeed();

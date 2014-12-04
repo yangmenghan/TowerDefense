@@ -39,5 +39,7 @@ protected:
 
 
 	sf::CircleShape rangeCircle;
+	sf::Texture texture;
+	sf::Texture texturesRead[3];
 };
 

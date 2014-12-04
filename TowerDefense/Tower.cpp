@@ -78,6 +78,8 @@ void Tower::upgradeTw()
 		attack->setRange(range[level - 1]);
 
 		timer = speed;
+
+		texture = texturesRead[level - 1];
 	}
 }
 /*
@@ -98,6 +100,8 @@ void Tower::downgradeTw()
 			attack->setRange(range[level - 1]);
 
 			timer = speed;
+
+			texture = texturesRead[level - 1];
 		}
 	}
 	if (level == 0)

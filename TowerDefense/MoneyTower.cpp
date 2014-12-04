@@ -15,11 +15,13 @@ MoneyTower::MoneyTower(Tile mTile)
 
 	timer = speed;
 
-	sf::Texture texture;
-	if (!texture.loadFromFile(MONEY_TOWER_SPRITE_ADD))
-	{
+	for (int i = 0; i < 3; i++)
+		if (!texturesRead[i].loadFromFile(MONEY_TOWER_SPRITE_ADD[i]))
+		{
 		// TODO erreur...
-	}
+		}
+
+	texture = texturesRead[level - 1];
 
 	sprite.setTexture(texture);
 
