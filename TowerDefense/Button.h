@@ -43,6 +43,6 @@ public:
 	void draw(sf::RenderWindow&); 
 	bool mouseHover(sf::RenderWindow& w);
 	void Button::resolveEvent(sf::Event event);
-	void spriteUpdate();
+	void spriteUpdate(int i);
 
 };

@@ -20,8 +20,8 @@ StartMenu::StartMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vect
 void StartMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
-	startGameButton.draw(w);
 	startGameButton.mouseHover(w);
+	startGameButton.draw(w);
 	/*openCreditsButton.draw(w);
 	muteButton.draw(w);
 	exitGameButton.draw(w);*/
@@ -29,11 +29,15 @@ void StartMenu::draw(sf::RenderWindow& w)
 
 void StartMenu::resolveEvent(sf::Event event)
 {
-	if (startGameButton.checkHover() == true)
-	{
+	if (startGameButton.checkHover())
+	{ 
 		startGameButton.resolveEvent(event);
-	}
+		if (startGameButton.checkClick()){
+			startGame();
+		}
 
+	}
+	
 	
 	/*if (openCreditsButton.resolveEvent(event))
 	{

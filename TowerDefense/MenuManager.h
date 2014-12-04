@@ -10,9 +10,10 @@ using namespace std;
 class MenuManager
 {
 private:
-	vector<shared_ptr<Menu> > menuStack;
+	
 
 public:
+	vector<shared_ptr<Menu>> menuStack;
 	static MenuManager* menuManager;
 
 	MenuManager();

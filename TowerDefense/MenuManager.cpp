@@ -2,6 +2,7 @@
 #include "Menu.h"
 #include <vector>
 #include <memory>
+#include <iostream>
 #include "MenuManager.h"
 
 using namespace std;
@@ -25,6 +26,7 @@ void MenuManager::addMenu(shared_ptr<Menu> menu)
 
 void MenuManager::popMenu()
 {
+	cout << menuStack.size();
 	if (!menuStack.empty())
 	{
 		menuStack.pop_back();

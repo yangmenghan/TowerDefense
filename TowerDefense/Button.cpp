@@ -14,7 +14,7 @@ Button::Button(const std::string myTextureAddress, sf::Vector2i mySize, sf::Vect
 	box = sf::IntRect(position, size);
 
 	isClicking = false;
-	isHovered = true;
+	isHovered = false;
 	isClicked = false;
 
 	if (!spriteSheet.loadFromFile(textureAddress))
@@ -80,17 +80,17 @@ void Button::resolveEvent(sf::Event event)
 {
 	if (isHovered == true)
 	{
-		spriteUpdate();
+		spriteUpdate(1);
 		if (event.type == sf::Event::MouseButtonPressed)
 		{
 			isClicking = true;
-			spriteUpdate();
+			spriteUpdate(2);
 		}
 		if (event.type == sf::Event::MouseButtonReleased)
 		{
 			if (isClicking == true)
 			{
-				spriteUpdate();
+				spriteUpdate(0);
 				isClicked = true;
 				isClicking = false;
 			}
@@ -99,16 +99,9 @@ void Button::resolveEvent(sf::Event event)
 		
 }
 
-void Button::spriteUpdate()
+void Button::spriteUpdate(int i)
 {
-	if (currentSprite == totalSprites - 1)
-	{
-		currentSprite = 0;
-	}
-	else
-	{
-		currentSprite ++ ;
-	}
+	currentSprite = i;
 }
 
 bool Button::mouseHover(sf::RenderWindow& w)
