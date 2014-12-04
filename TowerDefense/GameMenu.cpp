@@ -7,11 +7,11 @@
 
 GameMenu::GameMenu()
 {
+	levelManager = LevelManager::getLevelManager();
 }
 
 GameMenu::GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition) : Menu(myTextureAddress, mySize, myPosition)
 {
-	
 	gameSpeed = 1;
 }
 
@@ -61,64 +61,89 @@ void GameMenu::restartGame()
 void GameMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
-	/*pauseButton.draw(w);
+
+	pauseButton.mouseHover(w);
+	speedButton.mouseHover(w);
+	muteButton.mouseHover(w);
+	restartButton.mouseHover(w);
+	//giveUpButton.draw(w);
+
+	pauseButton.draw(w);
 	speedButton.draw(w);
 	muteButton.draw(w);
 	restartButton.draw(w);
-	giveUpButton.draw(w);*/
+	//giveUpButton.draw(w);
 
 	//set position and font for the text displays
 
 	w.draw(lifeCountDisplay);
 	w.draw(pointsCountDisplay);
 	w.draw(waveCountDisplay);
+
+	levelManager->gameLoop(w);
 }
 
 void GameMenu::resolveEvent(sf::Event event)
 {
-	
-	
-	/*if (pauseButton.mouseClick(event))
+
+	if (pauseButton.checkHover())
 	{
-		int gameSpeed = LevelManager::getLevelManager().getSpeed();
-		if (gameSpeed == 0)
+		pauseButton.resolveEvent(event);
+		if (pauseButton.checkClick())
 		{
-			returnSpeed();
-		}
-		else
-		{
-			pauseGame();
-		}
-		
-	}
-	if (speedButton.mouseClick(event))
-	{
-		int gameSpeed = LevelManager::getLevelManager().getSpeed();
-		if (gameSpeed == 2)
-		{
-			returnSpeed();
-		}
-		else
-		{
-			speedGame();
+			int gameSpeed = LevelManager::getLevelManager().getSpeed();
+			if (gameSpeed == 0)
+			{
+				returnSpeed();
+			}
+			else
+			{
+				pauseGame();
+			}
 		}
 	}
-	if (muteButton.mouseClick(event))
+	if (speedButton.checkHover())
 	{
-		AudioManager audio = AudioManager::getAudioManager();
-		if (audio.isMute() == false)
+		speedButton.resolveEvent(event);
+		if (speedButton.checkClick())
 		{
-			muteGame();
-		}
-		else
-		{
-			playMusic();
+			int gameSpeed = LevelManager::getLevelManager().getSpeed();
+			if (gameSpeed == 2)
+			{
+				returnSpeed();
+			}
+			else
+			{
+				speedGame();
+			}
 		}
 	}
-	if (restartButton.mouseClick(event))
+	if (muteButton.checkHover())
 	{
-		restartGame();
+		muteButton.resolveEvent(event);
+		if (muteButton.checkClick())
+		{
+			AudioManager audio = AudioManager::getAudioManager();
+			if (audio.isMute() == false)
+			{
+				muteGame();
+			}
+			else
+			{
+				playMusic();
+			}
+		}
 	}
+	if (restartButton.checkHover())
+	{
+		restartButton.resolveEvent(event);
+		if (restartButton.checkClick())
+		{
+			restartGame();
+		}
+	}
+
+	/*
 	if (giveUpButton.mouseClick(event))
 	{
 		//game over

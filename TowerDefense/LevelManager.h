@@ -3,7 +3,6 @@
 #include "Tower.h"
 #include "Player.h"
 #include "Field.h"
-#include "GameMenu.h"
 #include "Wave.h"
 #include <vector>
 #include <SFML\Graphics.hpp>
@@ -33,8 +32,6 @@ public:
 
 	void setField(Field &field);
 	Field getField();
-
-	void setGameMenu(GameMenu &gameMenu);
 
 	int getSpeed();
 	void setSpeed(int);
@@ -68,6 +65,5 @@ private:
 
 	Player player;
 	Field field;
-	GameMenu gameMenu;
 
 };
