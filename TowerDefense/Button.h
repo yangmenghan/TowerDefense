@@ -15,10 +15,11 @@ private:
 	int currentSprite;
 	int totalSprites;
 
-	sf::FloatRect boundingBox;
+	sf::IntRect box;
 
 	bool isHovered;
 	bool isClicking;
+	bool isClicked;
 
 public:
 //Constructors and destroyers
@@ -30,6 +31,7 @@ public:
 	sf::Vector2i getPosition();
 	sf::Vector2i getSize();
 	sf::Sprite getSprite();
+	bool checkClick();
 
 //Setters
 	void setPosition(sf::Vector2i mPosition);
@@ -39,6 +41,6 @@ public:
 //Functions
 	void draw(sf::RenderWindow&); 
 	bool mouseHover();
-	bool Button::resolveEvent(sf::Event event);
+	void Button::resolveEvent(sf::Event event);
 
 };

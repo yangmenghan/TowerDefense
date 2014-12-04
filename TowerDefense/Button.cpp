@@ -11,8 +11,11 @@ Button::Button(const std::string myTextureAddress, sf::Vector2i mySize, sf::Vect
 	position = myPosition;
 	totalSprites = n;
 	currentSprite = 0;
+	box = sf::IntRect(position, size);
 
 	isClicking = false;
+	isHovered = false;
+	isClicked = false;
 
 	if (!spriteSheet.loadFromFile(textureAddress))
 	{
@@ -37,6 +40,11 @@ sf::Sprite Button::getSprite()
 	return sprite;
 }
 
+bool Button::checkClick()
+{
+	return isClicked;
+}
+
 void Button::setPosition(sf::Vector2i mPosition)
 {
 	position = mPosition;
@@ -58,49 +66,40 @@ void Button::draw(sf::RenderWindow& w)
 
 	sf::Vector2i spriteInit(0, currentSprite*(size.y));
 	sprite.setTextureRect(sf::IntRect(spriteInit, size));
-	boundingBox = sprite.getGlobalBounds();
 
 	sprite.setPosition(sf::Vector2f(float(position.x), float(position.y)));
 	w.draw(sprite);
 }
 
-bool Button::resolveEvent(sf::Event event)
+void Button::resolveEvent(sf::Event event)
 {
-	bool isClicked = false;
-
-	if (mouseHover()== true)
+	
+	currentSprite = 1;
+	if (event.type == sf::Event::MouseButtonPressed)
 	{
-		currentSprite = 1;
-		if (event.type == sf::Event::MouseButtonPressed)
+		isClicking = true;
+		currentSprite = 2;
+	}
+	if (event.type == sf::Event::MouseButtonReleased)
+	{
+		if (isClicking == true)
 		{
-			isClicking = true;
-			currentSprite = 2;
-		}
-		if (event.type == sf::Event::MouseButtonReleased)
-		{
-			if (isClicking == true)
-			{
-				currentSprite = 0;
-				isClicked = true;
-				isClicking = false;
-			}
+			currentSprite = 0;
+			isClicked = true;
+			isClicking = false;
 		}
 	}
-	
-	return isClicked;
 }
 
 bool Button::mouseHover()
-{
-	//sf::Vector2f mousePosition((float)sf::Mouse::getPosition().x, (float)sf::Mouse::getPosition().y);
-	sf::IntRect box(position, size);
-	
+{	
 	if (box.contains(sf::Mouse::getPosition()))
 	{
-		return true;
+		isHovered = true;
 	}
 	else
 	{
-		return false;
+		isHovered = false;
 	}
+	return isHovered;
 }

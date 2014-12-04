@@ -67,7 +67,7 @@ void BuildMenu::buySunTw()
 
 void BuildMenu::resolveEvent(sf::Event _event)
 {
-	if (basicTwButton.resolveEvent(_event))
+/*	if (basicTwButton.resolveEvent(_event))
 	{
 		buyBasicTw();
 	}
@@ -87,7 +87,7 @@ void BuildMenu::resolveEvent(sf::Event _event)
 		//field.mouseClick(_event) && (!buildMenu.mouseClick(_event))
 	{
 		close();
-	}
+	}*/
 }
 
 void BuildMenu::draw(sf::RenderWindow& w)

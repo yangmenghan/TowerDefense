@@ -28,10 +28,15 @@ void StartMenu::draw(sf::RenderWindow& w)
 
 void StartMenu::resolveEvent(sf::Event event)
 {
-	if (startGameButton.resolveEvent(event) == true)
+	if (startGameButton.mouseHover() == true)
 	{
-		startGame();
+		startGameButton.resolveEvent(event);
+		if (startGameButton.checkClick() == true)
+		{
+			startGame();
+		}
 	}
+	
 	/*if (openCreditsButton.resolveEvent(event))
 	{
 		openCredits();
