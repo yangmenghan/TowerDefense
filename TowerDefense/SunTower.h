@@ -6,7 +6,7 @@ class SunTower :
 	public Tower
 {
 public:
-	SunTower(Tile mTile);
+	SunTower(shared_ptr<Tile> mTile);
 	SunTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite);
 	virtual ~SunTower(){};
 

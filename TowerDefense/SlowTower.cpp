@@ -1,7 +1,7 @@
 #include "SlowTower.h"
 
 
-SlowTower::SlowTower(Tile mTile)
+SlowTower::SlowTower(shared_ptr<Tile> mTile)
 	:Tower(mTile)
 {
 	damage[level - 1] = SLOW_TOWER_DAMAGE[level - 1];

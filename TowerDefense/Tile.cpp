@@ -48,10 +48,10 @@ int Tile::getCooldowm()
 	return cooldown;
 }
 
-std::vector<Tile*> Tile::getNeighbor(int _range)
+std::vector<shared_ptr<Tile>> Tile::getNeighbor(int _range)
 {
-	std::vector<Tile*> neighborTiles;
-	Tile* pNeighber;
+	std::vector<shared_ptr<Tile>> neighborTiles;
+	shared_ptr<Tile> pNeighber;
 	int i, j;
 	for (i = position.x - _range; i <= position.x + _range; i++)
 	{

@@ -3,12 +3,12 @@
 #include "LevelManager.h"
 #include "NormalAttack.h"
 
-Tower::Tower(Tile &mTile)
+Tower::Tower(shared_ptr<Tile> tile)
 {
 	level = 1;
-	tile = mTile;
+	tile = tile;
 	attack = make_shared<NormalAttack>();
-	attack->setCenter(tile.getPosition());
+	attack->setCenter(tile->getPosition());
 
 	speed = TOWER_SPEED;
 }

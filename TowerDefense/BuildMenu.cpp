@@ -40,29 +40,29 @@ shared_ptr<Tile> BuildMenu::getTile()
 void BuildMenu::buyBasicTw()
 {
 	LevelManager::getLevelManager()->getPlayer().manageMoney(-NORMAL_TOWER_PRICE);
-	auto pNormalTw = make_shared<NormalTower>(*tile);
-	tile.operator*().setTower(pNormalTw);
+	auto pNormalTw = make_shared<NormalTower>(tile);
+	tile->setTower(pNormalTw);
 }
 
 void BuildMenu::buyMoneyTw()
 {
 	LevelManager::getLevelManager()->getPlayer().manageMoney(-MONEY_TOWER_PRICE);
-	auto pMoneyTw = make_shared<MoneyTower>(*tile);
-	tile.operator*().setTower(pMoneyTw);
+	auto pMoneyTw = make_shared<MoneyTower>(tile);
+	tile->setTower(pMoneyTw);
 }
 
 void BuildMenu::buySlowTw()
 {
 	LevelManager::getLevelManager()->getPlayer().manageMoney(-SLOW_TOWER_PRICE);
-	auto pSlowTw = make_shared<SlowTower>(*tile);
-	tile.operator*().setTower(pSlowTw);
+	auto pSlowTw = make_shared<SlowTower>(tile);
+	tile->setTower(pSlowTw);
 }
 
 void BuildMenu::buySunTw()
 {
 	LevelManager::getLevelManager()->getPlayer().manageMoney(-SUN_TOWER_PRICE);
-	auto pSunTw = make_shared<SunTower>(*tile);
-	tile.operator*().setTower(pSunTw);
+	auto pSunTw = make_shared<SunTower>(tile);
+	tile->setTower(pSunTw);
 }
 
 void BuildMenu::resolveEvent(sf::Event event)

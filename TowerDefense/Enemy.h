@@ -23,7 +23,7 @@ public :
 
 	virtual string test() = 0;
 
-	void setTile(Tile);
+	void setTile(shared_ptr<Tile>);
 
 	void takeDamage(int);
 

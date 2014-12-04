@@ -1,7 +1,7 @@
 #include "SunTower.h"
 
 
-SunTower::SunTower(Tile mTile)
+SunTower::SunTower(shared_ptr<Tile> mTile)
 	:Tower(mTile)
 {
 	damage[level - 1] = SUN_TOWER_DAMAGE[level - 1];

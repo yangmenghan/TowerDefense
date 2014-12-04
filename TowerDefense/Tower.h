@@ -9,7 +9,7 @@ class Tower :
 	public Entity
 {
 public:
-	Tower(Tile &mTile);
+	Tower(shared_ptr<Tile>);
 	Tower();
 	~Tower();
 

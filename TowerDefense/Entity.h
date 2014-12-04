@@ -9,8 +9,9 @@ protected:
 	sf::Vector2f size;
 	float speed;
 	sf::Sprite sprite;
-	Tile tile;
+	shared_ptr<Tile> tile;
 	int timer;//To define Config respectively for Enemy and Tower
+	sf::Texture texture;
 
 public:
 	//Constructors and destroyers
@@ -22,7 +23,7 @@ public:
 	sf::Vector2f getSize();
 	float getSpeed();
 	sf::Sprite getSprite();
-	Tile getTile();
+	shared_ptr<Tile> getTile();
 
 	//Setters
 	void setPosition(sf::Vector2i mPosition);

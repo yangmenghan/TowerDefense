@@ -6,7 +6,7 @@ class NormalTower :
 	public Tower
 {
 public:
-	NormalTower(Tile mTile);
+	NormalTower(shared_ptr<Tile> mTile);
 	NormalTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite);
 	virtual ~NormalTower(){};
 

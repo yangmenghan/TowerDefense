@@ -1,7 +1,7 @@
 #include "NormalTower.h"
 
 
-NormalTower::NormalTower(Tile mTile)
+NormalTower::NormalTower(shared_ptr<Tile> mTile)
 	:Tower(mTile)
 {
 	damage[level - 1] = NORMAL_TOWER_DAMAGE[level - 1];

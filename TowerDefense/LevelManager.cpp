@@ -58,7 +58,8 @@ void LevelManager::gameLoop(RenderWindow& w){
 				}
 			}
 			else { 
-					waves.back().spawnEnemy();
+				//TODO : memory???
+				waves.back().spawnEnemy();
 				
 			}
 			
@@ -129,7 +130,7 @@ void LevelManager::gameOver(){
 }
 
 void LevelManager::addEnemy(shared_ptr<Enemy> e){
-	e->setTile(*field.getStartTile());
+	e->setTile(field.getStartTile());
 	enemies.push_back(e);
 };
 

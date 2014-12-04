@@ -3,7 +3,6 @@
 
 NormalEnemy::NormalEnemy() :Enemy(NORMAL_ENEMY_HP, NORMAL_ENEMY_DEFENCE, NORMAL_ENEMY_BOUNTY, NORMAL_ENEMY_SCOREVALUE, sf::Sprite(), NORMAL_ENEMY_SPEED){
 
-	sf::Texture texture;
 	if (!texture.loadFromFile(NORMAL_ENEMY_SPRITE_ADD))
 	{
 		// TODO erreur...

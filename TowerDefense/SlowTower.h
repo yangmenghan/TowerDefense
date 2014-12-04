@@ -6,7 +6,7 @@ class SlowTower :
 	public Tower
 {
 public:
-	SlowTower(Tile mTile);
+	SlowTower(shared_ptr<Tile> mTile);
 	SlowTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite);
 	virtual ~SlowTower(){};
 

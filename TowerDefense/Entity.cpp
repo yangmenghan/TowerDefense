@@ -33,7 +33,7 @@ sf::Sprite Entity::getSprite()
 	return sprite;
 }
 
-Tile Entity::getTile()
+shared_ptr<Tile> Entity::getTile()
 {
 	return tile;
 }
@@ -65,5 +65,5 @@ Draw the entity in a Render Window
 
 void Entity::draw(sf::RenderWindow &w)
 {
-
+	w.draw(sprite);
 }

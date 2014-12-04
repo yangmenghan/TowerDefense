@@ -3,7 +3,6 @@
 
 ToughEnemy::ToughEnemy() :Enemy(TOUGH_ENEMY_HP, TOUGH_ENEMY_DEFENCE, TOUGH_ENEMY_BOUNTY, TOUGH_ENEMY_SCOREVALUE, sf::Sprite(), TOUGH_ENEMY_SPEED){
 
-	sf::Texture texture;
 	if (!texture.loadFromFile(TOUGH_ENEMY_SPRITE_ADD))
 	{
 		// TODO erreur...

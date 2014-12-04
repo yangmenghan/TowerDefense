@@ -10,10 +10,10 @@ Field::Field()
 	numTileVer = TILE_NUM_VER;
 	for (int i = 0; i < TILE_NUM_HOR*TILE_NUM_VER; i++)
 	{
-		tilesMap.emplace_back(i / TILE_NUM_HOR, i % TILE_NUM_HOR);//construct the map of tiles
+		tilesMap.emplace_back(make_shared<Tile>(i / TILE_NUM_HOR, i % TILE_NUM_HOR));	//construct the map of tiles
 	}
-	startTile = tilesMap[NUM_START_TILE];
-	endTile = tilesMap[NUM_END_TILE];
+	startTile = *tilesMap[NUM_START_TILE];
+	endTile = *tilesMap[NUM_END_TILE];
 	boundingBox = sprite.getGlobalBounds();
 }
 
@@ -40,32 +40,24 @@ int Field::getNumTileVer()
 	return numTileVer;
 }
 
-Tile* Field::getTile(int n)
+shared_ptr<Tile> Field::getTile(int n)
 {
-	Tile t;
-	t = tilesMap[n];
-	return &t;
+	return tilesMap[n];
 }
 
-Tile* Field::getTile(sf::Vector2i _position)
+shared_ptr<Tile> Field::getTile(sf::Vector2i _position)
 {
-	Tile t;
-	t = tilesMap[_position.x*TILE_NUM_HOR+_position.y];
-	return &t;
+	return tilesMap[_position.x*TILE_NUM_HOR + _position.y];
 }
 
-Tile* Field::getStartTile()
+shared_ptr<Tile> Field::getStartTile()
 {
-	Tile* pTile;
-	pTile = LevelManager::getLevelManager()->getField().getTile(NUM_START_TILE);
-	return pTile;
+	return this->getTile(NUM_START_TILE);
 }
 
-Tile* Field::getEndTile()
+shared_ptr<Tile> Field::getEndTile()
 {
-	Tile* pTile;
-	pTile = LevelManager::getLevelManager()->getField().getTile(NUM_END_TILE);
-	return pTile;
+	return this->getTile(NUM_END_TILE);
 }
 
 sf::Sprite Field::getSprite()
@@ -315,8 +307,8 @@ bool Field::tryCross(Tile _startTile, Tile _endTile)
 	for (int i = 0; i < enemies.size(); i++)
 	{
 		shared_ptr<Enemy> enemy = enemies[i];
-		Tile tile = (*enemy).getTile();
-		sf::Vector2i vec3 = tile.getPosition();
+		shared_ptr<Tile> tile = (*enemy).getTile();
+		sf::Vector2i vec3 = tile->getPosition();
 		int p = vec3.x / TILE_WIDTH + vec3.y * TILE_NUM_VER / TILE_HEIGHT;  //  tile of enemy
 		time = timeCross(p, n);
 		if (time > TILE_NUM_HOR*TILE_NUM_VER)

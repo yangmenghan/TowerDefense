@@ -29,7 +29,7 @@ public:
 	sf::Vector2i getPositionPixel();			//Get the position of the pixel topleft of the tile.
 	shared_ptr<Tower>  getTower();				//Get the pointer of the tower in this tile.
 	int getCooldowm();							//Get the time left for the tower to return normal.
-	vector<Tile*> getNeighbor(int);				//get all the tiles near this tile.
+	vector<shared_ptr<Tile>> getNeighbor(int);	//get all the tiles near this tile.
 												//The distanse may be 1,2,3.
 	sf::Sprite getSprite();
 

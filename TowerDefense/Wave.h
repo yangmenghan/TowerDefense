@@ -11,7 +11,7 @@ public:
 	Wave(vector<shared_ptr<Enemy>>);
 	Wave::Wave(int lineNumber);
 
-	shared_ptr<Enemy> spawnEnemy();
+	void spawnEnemy();
 
 	void addEnemy(char type);
 

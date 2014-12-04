@@ -16,7 +16,7 @@ private:
 	int height;								//The height of the heignt.
 	int numTileHor;							//The number of tiles in a row.
 	int numTileVer;							//The number of tiles in a colonne.
-	std::vector<Tile> tilesMap;				//The vector of tiles in this field.
+	std::vector<shared_ptr<Tile>> tilesMap;	//The vector of tiles in this field.
 	Tile startTile;							//The tile where enter the enemies.
 	Tile endTile;							//The tile in the end of the path of enemies.
 	sf::FloatRect boundingBox;
@@ -32,10 +32,10 @@ public:
 	int getHeight();						//Get the height of this field.
 	int getNumTileVer();					//Get the nomber of tiles in a colonne.
 	int getNumTileHor();					//Get the nomber of tiles in a row.
-	Tile* getTile(int);						//Get the tile with the number of tile.
-	Tile* getTile(sf::Vector2i position);	//Get the tile with its position. 
-	Tile* getStartTile();					//Get the starttile.
-	Tile* getEndTile();						//Get the end tile.
+	shared_ptr<Tile> getTile(int);						//Get the tile with the number of tile.
+	shared_ptr<Tile> getTile(sf::Vector2i position);	//Get the tile with its position. 
+	shared_ptr<Tile> getStartTile();					//Get the starttile.
+	shared_ptr<Tile> getEndTile();						//Get the end tile.
 	sf::Sprite getSprite();
 
 	//Setters

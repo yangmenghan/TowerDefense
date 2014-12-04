@@ -57,7 +57,7 @@ private:
 	//end of cooldowns
 
 
-	int gameSpeed = 1;
+	float gameSpeed = 1;
 
 	vector<shared_ptr<Enemy>> enemies;
 	vector<shared_ptr<Tower>> towers;

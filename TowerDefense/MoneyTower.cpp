@@ -1,7 +1,7 @@
 #include "MoneyTower.h"
 
 
-MoneyTower::MoneyTower(Tile mTile)
+MoneyTower::MoneyTower(shared_ptr<Tile> mTile)
 	:Tower(mTile)
 {
 	damage[level - 1] = MONEY_TOWER_DAMAGE[level - 1];

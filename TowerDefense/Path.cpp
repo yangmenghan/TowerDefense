@@ -11,8 +11,7 @@ Path::Path(vector<Tile> a)
 };
 Path::Path()
 {
-	vector<Tile> b;
-	path = b;
+
 };
 
 
