@@ -7,6 +7,7 @@
 #include "LevelManager.h"
 #include "Button.h"
 #include "Config.h"
+#include "LevelManager.h"
 
 class GameMenu 
 	: public Menu
@@ -20,17 +21,20 @@ private:
 
 	float gameSpeed;
 
+	LevelManager* levelManager;
+
 	sf::Text lifeCountDisplay; //is it the best way to proceed ? will need tests
 	sf::Text pointsCountDisplay;
 	sf::Text waveCountDisplay;
 
+
 public:
+
 //Constructors, destructors
 	GameMenu();
 	GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition);
 	virtual ~GameMenu();
-
-
+	
 	void opent(){}; //TODO : for test
 
 //Getters

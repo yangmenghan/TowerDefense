@@ -7,6 +7,7 @@
 
 GameMenu::GameMenu()
 {
+	levelManager = LevelManager::getLevelManager();
 }
 
 GameMenu::GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition) : Menu(myTextureAddress, mySize, myPosition)
@@ -78,6 +79,8 @@ void GameMenu::draw(sf::RenderWindow& w)
 	w.draw(lifeCountDisplay);
 	w.draw(pointsCountDisplay);
 	w.draw(waveCountDisplay);
+
+	levelManager->gameLoop(w);
 }
 
 void GameMenu::resolveEvent(sf::Event event)

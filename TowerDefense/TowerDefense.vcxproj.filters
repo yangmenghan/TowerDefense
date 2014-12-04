@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-
   <ItemGroup>
     <ClCompile Include="Config.cpp">
       <Filter>Source</Filter>
@@ -106,67 +105,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AreaAttack.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Attack.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="AudioManager.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="BombEnemy.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="BuildMenu.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Button.h">
-      <Filter>Header</Filter>
-    </ClInclude>
     <ClInclude Include="Config.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="CreditsMenu.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Header</Filter>
-    </ClInclude>
     <ClInclude Include="Entity.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="FastEnemy.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Field.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="GameMenu.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="GameOverMenu.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="LevelManager.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Menu.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuManager.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="MoneyTower.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="NormalAttack.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="NormalEnemy.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="NormalTower.h">
       <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Wave.h">
@@ -178,22 +120,7 @@
     <ClInclude Include="Tower.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="ToughEnemy.h">
-      <Filter>Header</Filter>
-    </ClInclude>
     <ClInclude Include="Tile.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="SunTower.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="StartMenu.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="SlowTower.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="SlowAttack.h">
       <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
@@ -201,6 +128,78 @@
     </ClInclude>
     <ClInclude Include="Path.h">
       <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="AreaAttack.h">
+      <Filter>Header\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="Attack.h">
+      <Filter>Header\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioManager.h">
+      <Filter>Header\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BombEnemy.h">
+      <Filter>Header\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildMenu.h">
+      <Filter>Header\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="CreditsMenu.h">
+      <Filter>Header\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="FastEnemy.h">
+      <Filter>Header\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Field.h">
+      <Filter>Header\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMenu.h">
+      <Filter>Header\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverMenu.h">
+      <Filter>Header\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelManager.h">
+      <Filter>Header\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuManager.h">
+      <Filter>Header\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="MoneyTower.h">
+      <Filter>Header\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalTower.h">
+      <Filter>Header\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalAttack.h">
+      <Filter>Header\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalEnemy.h">
+      <Filter>Header\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="SlowAttack.h">
+      <Filter>Header\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="SlowTower.h">
+      <Filter>Header\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="SunTower.h">
+      <Filter>Header\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="StartMenu.h">
+      <Filter>Header\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="ToughEnemy.h">
+      <Filter>Header\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -303,7 +302,8 @@
     </ClCompile>
     <ClCompile Include="GameOverMenu.cpp">
       <Filter>Fichiers sources</Filter>
-    </ClCompile>  </ItemGroup>
+    </ClCompile>
+  </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h">
       <Filter>Fichiers d%27en-tête</Filter>
@@ -401,7 +401,9 @@
     <ClInclude Include="MoneyTower.h">
       <Filter>Fichiers d%27en-tête\Tower</Filter>
     </ClInclude>
-  </ItemGroup>  <ItemGroup>    <None Include="sfml-audio-2.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sfml-audio-2.dll" />
     <None Include="sfml-audio-d-2.dll" />
     <None Include="sfml-graphics-2.dll" />
     <None Include="sfml-graphics-d-2.dll" />
@@ -415,7 +417,6 @@
   <ItemGroup>
     <Text Include="Waves.txt" />
   </ItemGroup>
-
   <ItemGroup>
     <Filter Include="Header">
       <UniqueIdentifier>{5419e0c7-6f24-4f44-987d-10971f76f85b}</UniqueIdentifier>
@@ -438,6 +439,20 @@
     <Filter Include="Source\Manager">
       <UniqueIdentifier>{1b2427c0-49af-4b1d-b9e6-72398846ca29}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header\Tower">
+      <UniqueIdentifier>{fb9bdcd1-a507-4b96-bcf9-254571d315ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Enemy">
+      <UniqueIdentifier>{2f608e17-3d0f-4601-8acf-43b78c8377ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Attack">
+      <UniqueIdentifier>{b7d28fa3-3efa-4937-a108-26bc8ed05e46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Manager">
+      <UniqueIdentifier>{ff5da1ea-15b7-4dc0-9016-b24ebd3a37cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Interface">
+      <UniqueIdentifier>{f87a8917-5c4f-465d-8b43-319ef7bbefaf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
-
