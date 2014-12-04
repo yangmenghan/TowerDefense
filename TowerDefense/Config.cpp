@@ -167,6 +167,8 @@ extern const sf::Vector2i	CREDITS_BUTTON_POSITION = sf::Vector2i(346, 250);
 extern const sf::Vector2i	EXIT_BUTTON_POSITION	= sf::Vector2i(346, 350);
 extern const sf::Vector2i	MUTE_BUTTON_POSITION	= sf::Vector2i(10, 10);
 
+extern const sf::Vector2i	BACK_BUTTON_POSITION	= sf::Vector2i((WINDOW_WIDTH - MUTE_BUTTON_SIZE.x)/2,500);
+
 
 
 

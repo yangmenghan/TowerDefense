@@ -19,7 +19,7 @@ void CreditsMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
 
-	backButton.checkHover();
+	backButton.mouseHover(w);
 	backButton.draw(w);
 }
 

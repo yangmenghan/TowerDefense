@@ -9,7 +9,7 @@
 class CreditsMenu : public Menu
 {
 private:
-	Button backButton = Button(BACK_BUTTON_TEXTURE, MUTE_BUTTON_SIZE, sf::Vector2i(2000, 200), 3);
+	Button backButton = Button(BACK_BUTTON_TEXTURE, MUTE_BUTTON_SIZE, BACK_BUTTON_POSITION, 3);
 
 public:
 	CreditsMenu();
