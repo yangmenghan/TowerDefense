@@ -27,10 +27,11 @@ Enemy::Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite m
 	scoreValue = mScoreValue;
 	speed = mSpeed;
 	sprite = mSprite;
+	position = sf::Vector2i(0, 0);
 }
 
 float Enemy::getDistanceToTarget(){
-	return LevelManager::getLevelManager()->getField().timeCross(*tile, *LevelManager::getLevelManager()->getField().getEndTile());
+	return LevelManager::getLevelManager()->getField().timeCross(tile, LevelManager::getLevelManager()->getField().getEndTile());
 };
 
 bool Enemy::move(){
@@ -41,11 +42,26 @@ bool Enemy::move(){
 		unSlow();
 	}
 
-	vector<Tile> tiles = LevelManager::getLevelManager()->getField().computePath(*tile, *LevelManager::getLevelManager()->getField().getEndTile()).getPath();
-	Tile t = tiles[0];
+	vector<shared_ptr<Tile>> tiles = LevelManager::getLevelManager()->getField().computePath(tile, LevelManager::getLevelManager()->getField().getEndTile()).getPath();
+
+	shared_ptr<Tile> t = tiles[1];
+
 	int gameSpeed = LevelManager::getLevelManager()->getSpeed();
-	position.x = position.x + gameSpeed * speed;
-	position.y = position.y + gameSpeed * speed;
+	if(position.x < t->getPosition().x){
+		position.x = position.x + gameSpeed * speed;
+	}
+	else if (position.x > t->getPosition().x){
+		position.x = position.x - gameSpeed * speed;
+	}
+	
+	if (position.y < t->getPosition().y){
+		position.y = position.y + gameSpeed * speed;
+	}
+	else if (position.y > t->getPosition().y){
+		position.y = position.y - gameSpeed * speed;
+	}
+	
+	
 	return true;
 };
 
@@ -62,11 +78,9 @@ void Enemy::setTile(shared_ptr<Tile> t){
 
 void Enemy::die(){
 	LevelManager::getLevelManager()->getPlayer().manageScore(scoreValue);
-	this->~Enemy();
 };
 
 void Enemy::dieWithoutBonus(){
-	this->~Enemy();
 }
 
 void Enemy::slow(int frames){

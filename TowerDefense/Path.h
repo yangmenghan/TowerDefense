@@ -7,11 +7,11 @@ using namespace std;
 class Path
 {
 private:
-	vector<Tile> path;
+	vector<shared_ptr<Tile>> path;
 	
 public:
-	void draw(vector<Tile>);				//draw path by changing color
-	Path(vector<Tile>);						//constructor
+	void draw();				//draw path by changing color
+	Path(vector<shared_ptr<Tile>>);						//constructor
 	Path();									//constructor
-	vector<Tile> getPath();					//provide path
+	vector<shared_ptr<Tile>> getPath();					//provide path
 };

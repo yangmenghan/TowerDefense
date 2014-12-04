@@ -17,6 +17,7 @@ Tile::Tile()
 Tile::Tile(int x, int y)//构造x行y列的Tile
 {
 	positionPixel = sf::Vector2i(x*TILE_WIDTH, y*TILE_HEIGHT);
+	position = sf::Vector2i(x*TILE_WIDTH, y*TILE_HEIGHT);
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
 	cooldown = 0;

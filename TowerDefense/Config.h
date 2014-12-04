@@ -17,6 +17,7 @@ Main Window constants
 extern const int		WINDOW_WIDTH;
 extern const int		WINDOW_HEIGHT;
 extern const int		BORDER_SIZE;
+extern const int		FRAME_RATE;
 
 
 /*

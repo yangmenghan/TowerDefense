@@ -124,10 +124,10 @@ void Field::draw(sf::RenderWindow& w)
 	w.draw(sprite);
 }
 
-int Field::timeCross(Tile tile1, Tile tile2)							//algorithme de Dijkstra
+int Field::timeCross(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)							//algorithme de Dijkstra
 {
-	sf::Vector2i vec1 = tile1.getPosition();
-	sf::Vector2i vec2 = tile2.getPosition();
+	sf::Vector2i vec1 = tile1->getPosition();
+	sf::Vector2i vec2 = tile2->getPosition();
 	int m = vec1.x / TILE_WIDTH + vec1.y * TILE_NUM_VER / TILE_HEIGHT;  //  start tile
 	int n = vec2.x / TILE_WIDTH + vec2.y * TILE_NUM_VER / TILE_HEIGHT;  // destination tile
 
@@ -137,18 +137,21 @@ int Field::timeCross(Tile tile1, Tile tile2)							//algorithme de Dijkstra
 	{
 		for (int j = 0; j < TILE_NUM_HOR*TILE_NUM_VER; j++)
 		{
-			if (i == j + 1 || i == j - 1 || i == j + TILE_NUM_VER || i == j - TILE_NUM_VER)
-				t[i][j] = 1;											 // have lien between Tile i and Tile j
-			if (i == j)
+			if (i == j + 1 || i == j - 1 || i == j + TILE_NUM_VER || i == j - TILE_NUM_VER) {
+				t[i][j] = 1;											 // have link between Tile i and Tile j
+			}
+			 else if (i == j){
 				t[i][j] = 0;
-
-			t[i][j] = 999;												// no lien between Tile i and Tile j
+			}
+			 else {
+				 t[i][j] = 999;												// no link between Tile i and Tile j
+			 }
 		};                           
 	};
+
 	for (int k = 0; k < TILE_NUM_HOR*TILE_NUM_VER; k++)
 	{
-		Tile tile(k / TILE_NUM_VER, k % TILE_NUM_VER);
-		if (tile.hasTower() == 1)										// there is a tower on the tile->can't cross
+		if (tilesMap.at(k)->hasTower() == 1)								// there is a tower on the tile->can't cross
 		{
 			for (int l = 0; l < TILE_NUM_HOR*TILE_NUM_VER; l++)
 			{
@@ -162,9 +165,10 @@ int Field::timeCross(Tile tile1, Tile tile2)							//algorithme de Dijkstra
 	int V[TILE_NUM];									//is in the group
 	int D[TILE_NUM];									//distance from m   
 	
-	for (int c = 0; c <= TILE_NUM_HOR*TILE_NUM_VER; c++)
+	for (int c = 0; c < TILE_NUM_HOR*TILE_NUM_VER; c++)
 	{
 		D[c] = t[m][c];
+		V[c] = 0;
 	}
 
 	for (int f = 0; f < TILE_NUM_HOR*TILE_NUM_VER; f++)
@@ -215,8 +219,7 @@ int Field::timeCross(int m, int n)										 // overload    algorithme de Dijkst
 	};
 	for (int k = 0; k < TILE_NUM_HOR*TILE_NUM_VER; k++)
 	{
-		Tile tile(k / TILE_NUM_VER, k % TILE_NUM_VER);
-		if (tile.hasTower() == 1)
+		if (tilesMap.at(k)->hasTower() == 1)
 		{
 			for (int l = 0; l < TILE_NUM_HOR*TILE_NUM_VER; l++)
 			{
@@ -230,9 +233,10 @@ int Field::timeCross(int m, int n)										 // overload    algorithme de Dijkst
 	int V[TILE_NUM];  
 	int D[TILE_NUM];  
 
-	for (int c = 0; c <= TILE_NUM_HOR*TILE_NUM_VER; c++)
+	for (int c = 0; c < TILE_NUM_HOR*TILE_NUM_VER; c++)
 	{
 		D[c] = t[m][c];
+		V[c] = 0;
 	}
 
 	for (int f = 0; f < TILE_NUM_HOR*TILE_NUM_VER; f++)
@@ -264,15 +268,16 @@ int Field::timeCross(int m, int n)										 // overload    algorithme de Dijkst
 
 }
 
-Path Field::computePath(Tile tile1, Tile tile2)
+Path Field::computePath(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)
 {
-	sf::Vector2i vec1 = tile1.getPosition();
-	sf::Vector2i vec2 = tile2.getPosition();
+	sf::Vector2i vec1 = tile1->getPosition();
+	sf::Vector2i vec2 = tile2->getPosition();
 	int m = vec1.x / TILE_WIDTH + vec1.y * TILE_NUM_VER / TILE_HEIGHT;		 //  start tile
 	int n = vec2.x / TILE_WIDTH + vec2.y * TILE_NUM_VER / TILE_HEIGHT;		 // end tile
 	int time = timeCross(m, n);
-	vector<Tile> path;
-	path[0] = tile1;
+
+	vector<shared_ptr<Tile>> path;
+	path.push_back(tile1);
 	int g = m;
 	for (int r = 1; r < time; r++)
 	{
@@ -282,16 +287,15 @@ Path Field::computePath(Tile tile1, Tile tile2)
 			g += 1;
 		if (time == timeCross(g - 1, n) + timeCross(m, g - 1))
 			g -= 1;
-		Tile tile(g / TILE_NUM_VER, g % TILE_NUM_VER);
-		path[r] = tile;
+		path.push_back(getTile(g));
 	}
-	return path;
+	return Path(path);
 }
 
-bool Field::tryCross(Tile _startTile, Tile _endTile)
+bool Field::tryCross(shared_ptr<Tile> _startTile, shared_ptr<Tile> _endTile)
 {
-	sf::Vector2i vec1 = _startTile.getPosition();
-	sf::Vector2i vec2 = _endTile.getPosition();
+	sf::Vector2i vec1 = _startTile->getPosition();
+	sf::Vector2i vec2 = _endTile->getPosition();
 	int m = vec1.x / TILE_WIDTH + vec1.y * TILE_NUM_VER / TILE_HEIGHT;  
 	int n = vec2.x / TILE_WIDTH + vec2.y * TILE_NUM_VER / TILE_HEIGHT; 
 

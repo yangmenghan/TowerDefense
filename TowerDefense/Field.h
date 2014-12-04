@@ -46,8 +46,8 @@ public:
 	bool mouseClicking(sf::Event);
 	bool mouseClick(sf::Event);
 	void draw(sf::RenderWindow&);			//Draw
-	Path computePath(Tile, Tile);			//Compute path of enemeny
-	bool tryCross(Tile, Tile); 
-	int timeCross(Tile, Tile);
+	Path computePath(shared_ptr<Tile>, shared_ptr<Tile>);			//Compute path of enemeny
+	bool tryCross(shared_ptr<Tile>, shared_ptr<Tile>);
+	int timeCross(shared_ptr<Tile>, shared_ptr<Tile>);
 	int timeCross(int, int);
 };

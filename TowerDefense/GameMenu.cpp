@@ -13,6 +13,7 @@ GameMenu::GameMenu()
 GameMenu::GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition) : Menu(myTextureAddress, mySize, myPosition)
 {
 	gameSpeed = 1;
+	levelManager = LevelManager::getLevelManager();
 }
 
 GameMenu::~GameMenu(){}

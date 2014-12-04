@@ -32,7 +32,6 @@ LevelManager::~LevelManager(){
 }
 
 void LevelManager::gameLoop(RenderWindow& w){
-	sf::Event event;
 		//if the game is not paused
 		if (gameSpeed != 0){ 
 
@@ -71,17 +70,20 @@ void LevelManager::gameLoop(RenderWindow& w){
 			}
 
 			//Enemy Action
-			for (shared_ptr<Enemy> enemy : enemies){
-				if (enemy->getHP() <= 0){
-					enemy->die();
+			for (int i = 0; i < enemies.size(); i++){
+				if (enemies.at(i)->getHP() <= 0){
+					enemies.at(i)->die();
+					removeEnemy(i);
+					i--;
 				}
-				else if (enemy->getPosition() == field.getEndTile()->getPosition()){
-					removeEnemy(enemy);
-					enemy->succed();
+				else if (enemies.at(i)->getPosition() == field.getEndTile()->getPosition()){
+					enemies.at(i)->succed();
+					removeEnemy(i);
+					i--;
 				}
 				else {
-					enemy->move(); 
-					enemy->draw(w);
+					enemies.at(i)->move();
+					enemies.at(i)->draw(w);
 				}
 			}
 			
@@ -135,7 +137,7 @@ void LevelManager::addEnemy(shared_ptr<Enemy> e){
 };
 
 void LevelManager::removeEnemy(shared_ptr<Enemy> e){
-	remove(enemies.begin(), enemies.end(), e);
+	enemies.erase(remove(enemies.begin(), enemies.end(), e), enemies.end());
 };
 
 void LevelManager::removeEnemy(int index){
@@ -147,7 +149,7 @@ void LevelManager::addTower(shared_ptr<Tower> t){
 };
 
 void LevelManager::removeTower(shared_ptr<Tower> t){
-	remove(towers.begin(), towers.end(), t);
+	towers.erase(remove(towers.begin(), towers.end(), t), towers.end());
 };
 
 void LevelManager::removeTower(int index){

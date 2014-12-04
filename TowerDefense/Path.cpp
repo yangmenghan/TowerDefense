@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Path::Path(vector<Tile> a)
+Path::Path(vector<shared_ptr<Tile>> a)
 {
 	path = a;
 };
@@ -15,19 +15,20 @@ Path::Path()
 };
 
 
-void Path::draw(vector<Tile> path)
+void Path::draw()
 {
 	for (int i = 0; i < path.size(); i++)
 	{
-		Tile tile = path[i];
-		//change color  TODO
+		
+		//change color  TODO 
+		//path[i] - >;
 
 	};
 
 
 };
 
-vector<Tile> Path::getPath()
+vector<shared_ptr<Tile>> Path::getPath()
 {
 	return path;
 };

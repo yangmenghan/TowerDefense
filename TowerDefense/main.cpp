@@ -14,6 +14,8 @@ int main()
 {
 	sf::VideoMode videoMode(WINDOW_WIDTH, WINDOW_HEIGHT);
 	sf::RenderWindow window(videoMode, "~~~Tower Defense!~~~");
+	window.setFramerateLimit(FRAME_RATE);
+
 	MenuManager* menuManager = MenuManager::getMenuManager();
 	menuManager->addMenu(make_shared<StartMenu>(START_MENU_TEXTURE, sf::Vector2u(1100, 600), sf::Vector2i(0, 0)));
 
