@@ -25,9 +25,7 @@ void MenuManager::addMenu(shared_ptr<Menu> menu)
 
 void MenuManager::popMenu()
 {
-	if (menuManager == NULL){
-		cout << "test" << endl;
-	}
+
 	if (!menuStack.empty())
 	{
 		menuStack.pop_back();

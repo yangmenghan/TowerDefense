@@ -1,5 +1,4 @@
 #include "LevelManager.h"
-#include "MenuManager.h"
 #include <fstream>
 
 using namespace sf;
@@ -34,26 +33,6 @@ LevelManager::~LevelManager(){
 
 void LevelManager::gameLoop(RenderWindow& w){
 	sf::Event event;
-	while (w.pollEvent(event)){
-		w.clear();
-		
-		/*
-		if (event == ""){
-			//TODO
-		}
-		
-		else {*/
-
-			if (event.type == sf::Event::Closed){
-				w.close();
-				//TODO : stop the game !!
-			}
-				
-		
-
-		MenuManager::getMenuManager()->display(w);
-		MenuManager::getMenuManager()->resolveEvent(event);
-
 		//if the game is not paused
 		if (gameSpeed != 0){ 
 
@@ -107,8 +86,6 @@ void LevelManager::gameLoop(RenderWindow& w){
 			
 		}
 		
-		w.display(); 
-	}
 };
 
 
@@ -190,9 +167,6 @@ void LevelManager::setPlayer(Player &p){
 };
 void LevelManager::setField(Field &f){
 	field = f;
-};
-void LevelManager::setGameMenu(GameMenu &gameMenu){
-	gameMenu = gameMenu;
 };
 
 Player	LevelManager::getPlayer(){

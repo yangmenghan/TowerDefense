@@ -41,7 +41,7 @@ Wave constants
 */
 
 extern const int		WAVE_TOTAL				= 21;
-extern const string		WAVE_FILE_ADDRESS		= "/Waves.txt";
+extern const string		WAVE_FILE_ADDRESS		= "Waves.txt";
 extern const int		WAVE_SPAWN_COOLDOWN		= 300;
 extern const int		WAVE_COOLDOWN			= 600;
 

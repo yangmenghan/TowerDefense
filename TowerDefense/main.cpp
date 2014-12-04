@@ -2,7 +2,6 @@
 
 #include <SFML/Graphics.hpp>
 #include "Config.h"
-#include "LevelManager.h"
 #include "MenuManager.h"
 #include "Menu.h"
 #include "StartMenu.h"
@@ -17,8 +16,6 @@ int main()
 	sf::RenderWindow window(videoMode, "~~~Tower Defense!~~~");
 	MenuManager* menuManager = MenuManager::getMenuManager();
 	menuManager->addMenu(make_shared<StartMenu>(START_MENU_TEXTURE, sf::Vector2u(1100, 600), sf::Vector2i(0, 0)));
-
-	LevelManager* levelManager = LevelManager::getLevelManager();
 
 	while (window.isOpen())
 	{
