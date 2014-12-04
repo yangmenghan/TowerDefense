@@ -11,6 +11,8 @@ class MenuManager
 {
 private:
 	vector<shared_ptr<Menu>> menuStack;
+	bool exitFlag;
+
 
 	MenuManager();
 	~MenuManager();
@@ -19,10 +21,13 @@ public:
 
 	static MenuManager* menuManager;
 
+	void exit();
+
 	void display(sf::RenderWindow& w);
 	void addMenu(shared_ptr<Menu> menu);
 	void popMenu();
 
+	bool getExitFlag();
 	std::vector<shared_ptr<Menu>>* getMenus();
 
 	void openMenu(shared_ptr<Menu> menu);

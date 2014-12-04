@@ -96,6 +96,7 @@ void StartMenu::openCredits()
 void StartMenu::exitGame()
 {
 	MenuManager* m = MenuManager::getMenuManager();
+	m->exit();
 	//m-> ~MenuManager();
 }
 

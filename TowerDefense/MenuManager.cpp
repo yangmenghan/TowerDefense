@@ -11,11 +11,17 @@ MenuManager* MenuManager::menuManager = NULL;
 
 MenuManager::MenuManager()
 {
+
 }
 
 MenuManager::~MenuManager()
 {
 	menuStack.clear();
+}
+
+void MenuManager::exit()
+{
+	exitFlag = true;
 }
 
 void MenuManager::addMenu(shared_ptr<Menu> menu)
@@ -40,6 +46,10 @@ void MenuManager::display(sf::RenderWindow& w)
 	}
 }
 
+bool MenuManager::getExitFlag()
+{
+	return exitFlag;
+}
 std::vector<shared_ptr<Menu>>* MenuManager::getMenus()
 {
 	return &menuStack;
