@@ -21,18 +21,18 @@ void StartMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
 	startGameButton.draw(w);
-	openCreditsButton.draw(w);
+	/*openCreditsButton.draw(w);
 	muteButton.draw(w);
-	exitGameButton.draw(w);
+	exitGameButton.draw(w);*/
 }
 
 void StartMenu::resolveEvent(sf::Event event)
 {
-	if (startGameButton.resolveEvent(event))
+	if (startGameButton.resolveEvent(event) == true)
 	{
 		startGame();
 	}
-	if (openCreditsButton.resolveEvent(event))
+	/*if (openCreditsButton.resolveEvent(event))
 	{
 		openCredits();
 	}
@@ -51,7 +51,7 @@ void StartMenu::resolveEvent(sf::Event event)
 	if (exitGameButton.resolveEvent(event))
 	{
 		exitGame();
-	}
+	}*/
 }
 
 void StartMenu::startGame()
@@ -71,7 +71,7 @@ void StartMenu::openCredits()
 	m->addMenu(make_shared<CreditsMenu>());
 }
 
-void StartMenu::muteGame()
+/*void StartMenu::muteGame()
 {
 	AudioManager audio = AudioManager::getAudioManager();
 	audio.mute();
@@ -87,5 +87,5 @@ void StartMenu::exitGame()
 {
 	MenuManager* m = MenuManager::getMenuManager();
 	m-> ~MenuManager();
-}
+}*/
 

@@ -38,7 +38,7 @@ public:
 
 //Functions
 	void draw(sf::RenderWindow&); 
-	void mouseHover();
+	bool mouseHover();
 	bool Button::resolveEvent(sf::Event event);
 
 };
