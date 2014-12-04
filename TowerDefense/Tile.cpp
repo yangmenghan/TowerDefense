@@ -147,7 +147,7 @@ void Tile::resolveEvent(sf::Event event)
 	{
 		if (mouseHover())
 		{
-			if (mouseClick)
+			if (mouseClick(event))
 			{
 				if (hasTower())
 				{
