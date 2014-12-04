@@ -45,5 +45,6 @@ void GameOverMenu::reStartGame()
 void GameOverMenu::exitGame()
 {
 	MenuManager* m = MenuManager::getMenuManager();
-	m->~MenuManager();
+	//m->~MenuManager();
+	//TODO
 }

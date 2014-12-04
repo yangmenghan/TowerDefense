@@ -20,13 +20,14 @@ MenuManager::~MenuManager()
 
 void MenuManager::addMenu(shared_ptr<Menu> menu)
 {
-	shared_ptr<Menu> pmenu = menu;
-	menuStack.push_back(pmenu);
+	menuStack.push_back(menu);
 }
 
 void MenuManager::popMenu()
 {
-	cout << menuStack.size();
+	if (menuManager == NULL){
+		cout << "test" << endl;
+	}
 	if (!menuStack.empty())
 	{
 		menuStack.pop_back();
@@ -58,8 +59,13 @@ void MenuManager::closeMenu()
 
 MenuManager* MenuManager::getMenuManager()
 {
+	if (menuManager == NULL)
+	{
+		menuManager = new MenuManager;
+	}
+
 	return menuManager;
-}
+};
 
 void MenuManager::resolveEvent(sf::Event event)
 {

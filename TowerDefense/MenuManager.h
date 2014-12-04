@@ -10,14 +10,14 @@ using namespace std;
 class MenuManager
 {
 private:
-	
-
-public:
 	vector<shared_ptr<Menu>> menuStack;
-	static MenuManager* menuManager;
 
 	MenuManager();
 	~MenuManager();
+
+public:
+
+	static MenuManager* menuManager;
 
 	void display(sf::RenderWindow& w);
 	void addMenu(shared_ptr<Menu> menu);
