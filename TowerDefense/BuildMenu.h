@@ -35,7 +35,6 @@ public:
 	void buySlowTw();						//Buy and build a slow tower.
 	void buyMoneyTw();						//Buy and build a money tower.
 	void buySunTw(); 						// Buy and build a sun tower.
-
 	void resolveEvent(sf::Event);
 	void draw(sf::RenderWindow&);			//Draw the menu.
 	void close();							//Close the menu.

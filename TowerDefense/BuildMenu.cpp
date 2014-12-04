@@ -65,29 +65,45 @@ void BuildMenu::buySunTw()
 	tile.operator*().setTower(pSunTw);
 }
 
-void BuildMenu::resolveEvent(sf::Event _event)
+void BuildMenu::resolveEvent(sf::Event event)
 {
-/*	if (basicTwButton.resolveEvent(_event))
-	{
-		buyBasicTw();
+	if (basicTwButton.checkHover())
+	{	
+		basicTwButton.resolveEvent(event);
+		if (basicTwButton.checkClick())
+		{
+			buyBasicTw();
+		}
 	}
-	if (slowTwButton.resolveEvent(_event))
+	else if (sunTwButton.checkHover())
 	{
-		buySlowTw();
+		sunTwButton.resolveEvent(event);
+		if (sunTwButton.checkClick())
+		{
+			buySunTw();
+		}
 	}
-	if (sunTwButton.resolveEvent(_event))
+	else if (slowTwButton.checkHover())
 	{
-		buySunTw();
+		slowTwButton.resolveEvent(event);
+		if (slowTwButton.checkClick())
+		{
+			buySlowTw();
+		}
 	}
-	if (moneyTwButton.resolveEvent(_event))
+	else if (moneyTwButton.checkHover())
 	{
-		buyMoneyTw();
+		moneyTwButton.resolveEvent(event);
+		if (moneyTwButton.checkClick())
+		{
+			buyMoneyTw();
+		}
 	}
-	if (true)///todo 
-		//field.mouseClick(_event) && (!buildMenu.mouseClick(_event))
+	//field.mouseClick(_event) && (!buildMenu.mouseClick(_event))
+	else 
 	{
 		close();
-	}*/
+	}
 }
 
 void BuildMenu::draw(sf::RenderWindow& w)

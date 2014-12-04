@@ -44,6 +44,7 @@ public:
 	bool mouseHover();
 	bool mouseClicking(sf::Event);
 	bool mouseClick(sf::Event);
+	void resolveEvent(sf::Event);
 	bool isPolluted();							//Determine if the tower in this tile is polluted by enemy.
 	bool hasTower();							//Determine if there is a tower built in this tile.
 	shared_ptr<BuildMenu> openBuildMenu();		//Open the menu for build a tower.

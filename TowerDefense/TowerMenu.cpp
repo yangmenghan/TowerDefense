@@ -29,16 +29,28 @@ shared_ptr<Tile> TowerMenu::getTile()
 
 //Functions
 
-void TowerMenu::resolveEvent(sf::Event _event)
+void TowerMenu::resolveEvent(sf::Event event)
 {
-	/*if (sellButton.resolveEvent(_event))
+	if (sellButton.checkHover())
 	{
-		tile->getTower()->sellTw();
+		sellButton.resolveEvent(event);
+		if (sellButton.checkClick())
+		{
+			tile->getTower()->sellTw();
+		}		
 	}
-	if (upgradeButton.resolveEvent(_event))
+	else if (upgradeButton.checkHover())
 	{
-		tile->getTower()->upgradeTw();
-	}*/
+		upgradeButton.resolveEvent(event);
+		if (upgradeButton.checkClick())
+		{
+			tile->getTower()->upgradeTw();
+		}
+	}
+	else 
+	{
+		close();
+	}
 }
 
 void TowerMenu::draw(sf::RenderWindow& w)

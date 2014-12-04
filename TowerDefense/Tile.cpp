@@ -141,6 +141,27 @@ bool Tile::mouseClick(sf::Event event)
 	return false;
 }
 
+void Tile::resolveEvent(sf::Event event)
+{
+	if (!isPolluted())
+	{
+		if (mouseHover())
+		{
+			if (mouseClick)
+			{
+				if (hasTower())
+				{
+					openTowerMenu();
+				}
+				else
+				{
+					openBuildMenu();
+				}
+			}
+		}
+	}	
+}
+
 bool Tile::isPolluted()
 {
 	if (cooldown != 0)

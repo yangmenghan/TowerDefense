@@ -126,6 +126,7 @@ bool Field::mouseClick(sf::Event event)
 	}
 	return false;
 }
+
 void Field::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
