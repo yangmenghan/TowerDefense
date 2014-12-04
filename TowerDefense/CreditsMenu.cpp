@@ -10,37 +10,34 @@ CreditsMenu::~CreditsMenu()
 {
 }
 
-string CreditsMenu::getCreditsAddress()
+CreditsMenu::CreditsMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition) :Menu(myTextureAddress, mySize, myPosition)
 {
-	return CREDITS_ADD;
-}
 
-sf::Sprite CreditsMenu::getSprite()
-{
-	return sprite;
-}
-
-void CreditsMenu::setSprite(sf::Sprite mySprite)
-{
-	sprite = mySprite;
 }
 
 void CreditsMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
+
+	backButton.checkHover();
+	backButton.draw(w);
 }
 
 void CreditsMenu::closeMenu()
 {
 	MenuManager* m = MenuManager::getMenuManager();
 	m->popMenu();
-	this->~CreditsMenu();
+	//this->~CreditsMenu();
 }
 
 void CreditsMenu::resolveEvent(sf::Event event)
 {
-	/*if (backButton.resolveEvent(event))
+	if (backButton.checkHover())
 	{
-		closeMenu();
-	}*/
+		backButton.resolveEvent(event);
+		if (backButton.checkClick())
+		{
+			closeMenu();
+		}
+	}
 }
