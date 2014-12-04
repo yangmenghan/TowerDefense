@@ -2,6 +2,208 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <ItemGroup>
+    <ClCompile Include="Config.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Path.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Wave.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerTest.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="AreaAttack.cpp">
+      <Filter>Source\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="Attack.cpp">
+      <Filter>Source\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="BombEnemy.cpp">
+      <Filter>Source\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="FastEnemy.cpp">
+      <Filter>Source\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalAttack.cpp">
+      <Filter>Source\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalEnemy.cpp">
+      <Filter>Source\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="MoneyTower.cpp">
+      <Filter>Source\Tower</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalTower.cpp">
+      <Filter>Source\Tower</Filter>
+    </ClCompile>
+    <ClCompile Include="SlowAttack.cpp">
+      <Filter>Source\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="SlowTower.cpp">
+      <Filter>Source\Tower</Filter>
+    </ClCompile>
+    <ClCompile Include="SunTower.cpp">
+      <Filter>Source\Tower</Filter>
+    </ClCompile>
+    <ClCompile Include="ToughEnemy.cpp">
+      <Filter>Source\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Tower.cpp">
+      <Filter>Source\Tower</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildMenu.cpp">
+      <Filter>Source\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="CreditsMenu.cpp">
+      <Filter>Source\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMenu.cpp">
+      <Filter>Source\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOverMenu.cpp">
+      <Filter>Source\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="StartMenu.cpp">
+      <Filter>Source\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerMenu.cpp">
+      <Filter>Source\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioManager.cpp">
+      <Filter>Source\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelManager.cpp">
+      <Filter>Source\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuManager.cpp">
+      <Filter>Source\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Field.cpp">
+      <Filter>Source\Interface</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AreaAttack.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Attack.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioManager.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="BombEnemy.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildMenu.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="CreditsMenu.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="FastEnemy.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Field.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMenu.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverMenu.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelManager.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuManager.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="MoneyTower.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalAttack.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalEnemy.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalTower.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Wave.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerMenu.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Tower.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="ToughEnemy.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="SunTower.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="StartMenu.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="SlowTower.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="SlowAttack.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Path.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <Media Include="test.mp3" />
     <ClCompile Include="Entity.cpp">
       <Filter>Fichiers sources</Filter>
@@ -213,6 +415,29 @@
   <ItemGroup>
     <Text Include="Waves.txt" />
   </ItemGroup>
-  <ItemGroup>    <Filter Include="UnitTests">
-      <UniqueIdentifier>{e7609c0f-219a-4ab8-ae63-ecdc3e6fcbc5}</UniqueIdentifier>
-    </Filter>  </ItemGroup></Project>
+
+  <ItemGroup>
+    <Filter Include="Header">
+      <UniqueIdentifier>{5419e0c7-6f24-4f44-987d-10971f76f85b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{9cc6111d-ec6c-41eb-8213-f4d640f3da29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Tower">
+      <UniqueIdentifier>{fbe79e92-f661-4a4e-ab66-1fea8d5bd9df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Enemy">
+      <UniqueIdentifier>{6e1a0b81-973e-430b-80e2-93bf3288f60a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Attack">
+      <UniqueIdentifier>{25989502-1a73-46d5-8b1d-19ee4b08c926}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Interface">
+      <UniqueIdentifier>{a3bcc3bf-da32-4362-95bb-7e50b6dfed34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Manager">
+      <UniqueIdentifier>{1b2427c0-49af-4b1d-b9e6-72398846ca29}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
+
