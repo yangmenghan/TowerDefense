@@ -99,6 +99,7 @@ void StartMenu::playMusic()
 void StartMenu::exitGame()
 {
 	MenuManager* m = MenuManager::getMenuManager();
-//	m-> ~MenuManager();
+
+	//m-> ~MenuManager();
 }
 
