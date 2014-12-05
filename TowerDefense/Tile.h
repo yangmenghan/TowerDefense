@@ -18,6 +18,7 @@ private:
 	shared_ptr<Tower> tower;					//The tower built in this tile.
 	sf::FloatRect boundingBox;
 	sf::Sprite sprite;
+	sf::Texture texture;
 public:
 	//Constructors and destroyers
 	Tile();										//Default constructor. 

@@ -12,6 +12,10 @@ Tile::Tile()
 	cooldown = 0;
 	tower = NULL;
 	boundingBox = sprite.getGlobalBounds();
+	if (!texture.loadFromFile(TILE_SPRITE))
+	{
+		// TODO erreur...
+	}
 }
 
 Tile::Tile(int x, int y)//构造x行y列的Tile
@@ -23,6 +27,10 @@ Tile::Tile(int x, int y)//构造x行y列的Tile
 	cooldown = 0;
 	tower = NULL;
 	boundingBox = sprite.getGlobalBounds();
+	if (!texture.loadFromFile(TILE_SPRITE))
+	{
+		// TODO erreur...
+	}
 }
 
 Tile::~Tile(){}
@@ -201,5 +209,10 @@ shared_ptr<TowerMenu> Tile::openTowerMenu()
 
 void Tile::draw(sf::RenderWindow& w)
 {
+	sprite.setTexture(texture);
+
+	sprite.setTextureRect(sf::IntRect(sf::Vector2i(0,0), sf::Vector2i(width, height)));
+
+	sprite.setPosition(sf::Vector2f(float(position.x), float(position.y)));
 	w.draw(sprite);
 }

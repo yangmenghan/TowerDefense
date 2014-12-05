@@ -32,6 +32,8 @@ LevelManager::~LevelManager(){
 }
 
 void LevelManager::gameLoop(RenderWindow& w){
+		field.draw(w);
+
 		//if the game is not paused
 		if (gameSpeed != 0){ 
 

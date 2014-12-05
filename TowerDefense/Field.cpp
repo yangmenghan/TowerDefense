@@ -121,10 +121,13 @@ bool Field::mouseClick(sf::Event event)
 
 void Field::draw(sf::RenderWindow& w)
 {
-	w.draw(sprite);
+	//w.draw(sprite);
+	for (shared_ptr<Tile> t : tilesMap){
+		t->draw(w);
+	}
 }
 
-int Field::timeCross(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)							//algorithme de Dijkstra
+int Field::timeCross(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)	//algorithme de Dijkstra
 {
 	sf::Vector2i vec1 = tile1->getPosition();
 	sf::Vector2i vec2 = tile2->getPosition();
@@ -275,9 +278,16 @@ Path Field::computePath(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)
 	int m = vec1.x / TILE_WIDTH + vec1.y * TILE_NUM_VER / TILE_HEIGHT;		 //  start tile
 	int n = vec2.x / TILE_WIDTH + vec2.y * TILE_NUM_VER / TILE_HEIGHT;		 // end tile
 	int time = timeCross(m, n);
-
 	vector<shared_ptr<Tile>> path;
 	path.push_back(tile1);
+
+	//limit the size of the path...
+	if (time == 999){
+		path.push_back(tile1);
+		return Path(path);
+	}
+
+	
 	int g = m;
 	for (int r = 1; r < time; r++)
 	{
