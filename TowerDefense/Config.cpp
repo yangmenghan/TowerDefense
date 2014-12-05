@@ -21,11 +21,11 @@ extern const int		FRAME_RATE				= 60;
 Tile constants
 */
 
-extern const int		TILE_WIDTH				= 100;
-extern const int		TILE_HEIGHT				= 100;
+extern const int		TILE_WIDTH				= 50; //changed from 100
+extern const int		TILE_HEIGHT				= 50;
 extern const int		TILE_COOLDOWN			= 50;
-extern const int		TILE_NUM_HOR			= 20;
-extern const int		TILE_NUM_VER			= 10;
+extern const int		TILE_NUM_HOR			= 10;
+extern const int		TILE_NUM_VER			= 20;
 //extern const int		TILE_NUM				= TILE_NUM_HOR * TILE_NUM_VER;
 extern const int		NUM_START_TILE			= 0;
 extern const int		NUM_END_TILE			= TILE_NUM_HOR * TILE_NUM_VER - 1;
@@ -51,21 +51,21 @@ extern const int		WAVE_COOLDOWN			= 600;
 Enemy constants
 */
 
-extern const float		NORMAL_ENEMY_SPEED		= 1;
+extern const float		NORMAL_ENEMY_SPEED		= 2;
 extern const int		NORMAL_ENEMY_HP			= 100;
 extern const int		NORMAL_ENEMY_BOUNTY		= 100;
 extern const int		NORMAL_ENEMY_SCOREVALUE = 100;
 extern const float		NORMAL_ENEMY_DEFENCE	= 10;
 extern const string		NORMAL_ENEMY_SPRITE_ADD = "sprites/Enemy4.png";
 
-extern const float		FAST_ENEMY_SPEED		= 3;
+extern const float		FAST_ENEMY_SPEED		= 5;
 extern const int		FAST_ENEMY_HP			= 50;
 extern const int		FAST_ENEMY_BOUNTY		= 150;
 extern const int		FAST_ENEMY_SCOREVALUE	= 150;
 extern const float		FAST_ENEMY_DEFENCE		= 7;
 extern const string		FAST_ENEMY_SPRITE_ADD	= "sprites/Enemy2.png";
 
-extern const float		BOMB_ENEMY_SPEED		= 1;
+extern const float		BOMB_ENEMY_SPEED		= 2;
 extern const int		BOMB_ENEMY_HP			= 200;
 extern const int		BOMB_ENEMY_BOUNTY		= 100;
 extern const int		BOMB_ENEMY_SCOREVALUE	= 200;
@@ -74,7 +74,7 @@ extern const string		BOMB_ENEMY_SPRITE_ADD	= "sprites/Enemy1.png";
 extern const int		BOMB_ENEMY_TRIGGER		= 25;
 extern const int		BOMB_ENEMY_COUNTDOWN	= 5;
 
-extern const float		TOUGH_ENEMY_SPEED		= 0.5;
+extern const float		TOUGH_ENEMY_SPEED		= 1;
 extern const int		TOUGH_ENEMY_HP			= 500;
 extern const int		TOUGH_ENEMY_BOUNTY		= 300;
 extern const int		TOUGH_ENEMY_SCOREVALUE	= 350;

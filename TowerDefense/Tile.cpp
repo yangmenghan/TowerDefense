@@ -213,6 +213,6 @@ void Tile::draw(sf::RenderWindow& w)
 
 	sprite.setTextureRect(sf::IntRect(sf::Vector2i(0,0), sf::Vector2i(width, height)));
 
-	sprite.setPosition(sf::Vector2f(float(position.x), float(position.y)));
+	sprite.setPosition(sf::Vector2f(float(position.x + TILE_WIDTH), float(position.y+TILE_HEIGHT)));
 	w.draw(sprite);
 }

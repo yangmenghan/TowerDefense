@@ -33,5 +33,6 @@ protected:
 	int bounty;
 	int scoreValue;
 	int slowTime;
+	bool slowed;
 };
 

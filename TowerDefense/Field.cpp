@@ -10,7 +10,7 @@ Field::Field()
 	numTileVer = TILE_NUM_VER;
 	for (int i = 0; i < TILE_NUM_HOR*TILE_NUM_VER; i++)
 	{
-		tilesMap.emplace_back(make_shared<Tile>(i / TILE_NUM_HOR, i % TILE_NUM_HOR));	//construct the map of tiles
+		tilesMap.emplace_back(make_shared<Tile>(i % TILE_NUM_VER, i / TILE_NUM_VER));	//construct the map of tiles
 	}
 	startTile = *tilesMap[NUM_START_TILE];
 	endTile = *tilesMap[NUM_END_TILE];
@@ -140,7 +140,12 @@ int Field::timeCross(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)	//algorithm
 	{
 		for (int j = 0; j < TILE_NUM_HOR*TILE_NUM_VER; j++)
 		{
-			if (i == j + 1 || i == j - 1 || i == j + TILE_NUM_VER || i == j - TILE_NUM_VER) {
+			if (
+				(i == j + 1 && i % TILE_NUM_VER != 0) || 
+				(i == j - 1 && j % TILE_NUM_VER != 0) ||
+				i == j + TILE_NUM_VER || 
+				i == j - TILE_NUM_VER) 
+			{
 				t[i][j] = 1;											 // have link between Tile i and Tile j
 			}
 			 else if (i == j){
@@ -212,12 +217,22 @@ int Field::timeCross(int m, int n)										 // overload    algorithme de Dijkst
 	{
 		for (int j = 0; j < TILE_NUM_HOR*TILE_NUM_VER; j++)
 		{
-			if (i == j + 1 || i == j - 1 || i == j + TILE_NUM_VER || i == j - TILE_NUM_VER)
-				t[i][j] = 1; 
-			if (i == j)
+			if(
+				(i == j + 1 && i % TILE_NUM_VER != 0) ||
+				(i == j - 1 && j % TILE_NUM_VER != 0) ||
+				i == j + TILE_NUM_VER ||
+				i == j - TILE_NUM_VER)
+			{
+				t[i][j] = 1;
+			}
+			else if (i == j)
+			{
 				t[i][j] = 0;
-
-			t[i][j] = 999;       
+			}
+			else {
+				t[i][j] = 999;
+			}
+     
 		};
 	};
 	for (int k = 0; k < TILE_NUM_HOR*TILE_NUM_VER; k++)
@@ -291,14 +306,22 @@ Path Field::computePath(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)
 	int g = m;
 	for (int r = 1; r < time; r++)
 	{
-		if (time == timeCross(g + TILE_NUM_VER, n) + timeCross(m, g + TILE_NUM_VER))
+		if ((g + TILE_NUM_VER < TILE_NUM_VER*TILE_NUM_HOR) && time == timeCross(g + TILE_NUM_VER, n) + timeCross(m, g + TILE_NUM_VER)){
 			g += TILE_NUM_VER;
-		if (time == timeCross(g + 1, n) + timeCross(m, g + 1))
+		}
+		else if ((g>TILE_NUM_VER) && time == timeCross(g - TILE_NUM_VER, n) + timeCross(m, g - TILE_NUM_VER)){
+			g -= TILE_NUM_VER;
+		}
+		else if (((g+1)%TILE_NUM_VER != 0)&&time == timeCross(g + 1, n) + timeCross(m, g + 1)){
 			g += 1;
-		if (time == timeCross(g - 1, n) + timeCross(m, g - 1))
+		}
+		else if ((g % TILE_NUM_VER != 0) && time == timeCross(g - 1, n) + timeCross(m, g - 1)){
 			g -= 1;
+		}
+			
 		path.push_back(getTile(g));
 	}
+	path.push_back(getEndTile());
 	return Path(path);
 }
 
