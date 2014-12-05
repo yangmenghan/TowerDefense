@@ -50,6 +50,11 @@ bool Button::checkHover()
 	return isHovered;
 }
 
+void Button::setClickedState(bool mIsClicked)
+{
+	isClicked = mIsClicked;
+}
+
 void Button::setPosition(sf::Vector2i mPosition)
 {
 	position = mPosition;

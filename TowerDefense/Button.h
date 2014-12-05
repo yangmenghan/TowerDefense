@@ -38,6 +38,7 @@ public:
 	void setPosition(sf::Vector2i mPosition);
 	void setSize(sf::Vector2i mSize);
 	void setSprite(sf::Sprite mSprite);
+	void setClickedState(bool mIsClicked);
 
 //Functions
 	void draw(sf::RenderWindow&); 

@@ -47,6 +47,7 @@ void StartMenu::resolveEvent(sf::Event event)
 		openCreditsButton.resolveEvent(event);
 		if (openCreditsButton.checkClick())
 		{
+			
 			openCredits();
 		}
 	}
@@ -89,7 +90,7 @@ void StartMenu::startGame()
 void StartMenu::openCredits()
 {
 	MenuManager* m = MenuManager::getMenuManager();
-
+	openCreditsButton.setClickedState(false);
 	m->addMenu(make_shared<CreditsMenu>(CREDITS_SPRITE_ADD, sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT), sf::Vector2i(0, 0)));
 }
 
