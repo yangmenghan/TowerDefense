@@ -18,7 +18,6 @@ private:
 	Button muteButton = Button(MUTE_BUTTON_TEXTURE, MUTE_BUTTON_SIZE, MUTE_BUTTON_POSITION, 2);
 	Button restartButton = Button(RESTART_BUTTON_TEXTURE, MUTE_BUTTON_SIZE, MUTE_BUTTON_POSITION + sf::Vector2i(360, 0), 2);
 	//Button giveUpButton = Button(GIVE_UP_BUTTON_TEXTURE);
-
 	float gameSpeed;
 
 	LevelManager* levelManager;

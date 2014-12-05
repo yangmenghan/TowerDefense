@@ -10,16 +10,10 @@
     <ClCompile Include="main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Path.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Wave.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Tile.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="TowerTest.cpp">
@@ -101,6 +95,12 @@
       <Filter>Source\Manager</Filter>
     </ClCompile>
     <ClCompile Include="Field.cpp">
+      <Filter>Source\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Source\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Path.cpp">
       <Filter>Source\Interface</Filter>
     </ClCompile>
   </ItemGroup>

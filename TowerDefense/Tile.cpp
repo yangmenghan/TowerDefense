@@ -12,7 +12,7 @@ Tile::Tile()
 	cooldown = 0;
 	tower = NULL;
 	boundingBox = sprite.getGlobalBounds();
-	if (!texture.loadFromFile(TILE_SPRITE))
+	if (!texture.loadFromFile(TILE_SPRITE[0]))
 	{
 		// TODO erreur...
 	}
@@ -27,7 +27,7 @@ Tile::Tile(int x, int y)//构造x行y列的Tile
 	cooldown = 0;
 	tower = NULL;
 	boundingBox = sprite.getGlobalBounds();
-	if (!texture.loadFromFile(TILE_SPRITE))
+	if (!texture.loadFromFile(TILE_SPRITE[0]))
 	{
 		// TODO erreur...
 	}
@@ -113,11 +113,19 @@ bool Tile::mouseHover()
 	if (boundingBox.contains(mousePosition))
 	{
 		isHovering = true;
+		if (!texture.loadFromFile(TILE_SPRITE[1]))
+		{
+			//TODO
+		};
 		//updatesprite
 	}
 	else
 	{
 		isHovering = false;
+		if (!texture.loadFromFile(TILE_SPRITE[0]))
+		{
+			//TODO
+		};
 		//updatesprite
 	}
 
@@ -152,6 +160,7 @@ bool Tile::mouseClick(sf::Event event)
 
 void Tile::resolveEvent(sf::Event event)
 {
+	
 	if (!isPolluted())
 	{
 		if (mouseHover())
@@ -168,7 +177,8 @@ void Tile::resolveEvent(sf::Event event)
 				}
 			}
 		}
-	}	
+	}
+	
 }
 
 bool Tile::isPolluted()

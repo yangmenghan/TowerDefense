@@ -60,6 +60,11 @@ shared_ptr<Tile> Field::getEndTile()
 	return this->getTile(NUM_END_TILE);
 }
 
+std::vector<shared_ptr<Tile>> Field::getAllTiles()
+{
+	return tilesMap;
+}
+
 sf::Sprite Field::getSprite()
 {
 	return sprite;
@@ -82,6 +87,7 @@ bool Field::mouseHover()
 	if (boundingBox.contains(mousePosition))
 	{
 		isHovering = true;
+		
 		//updatesprite
 	}
 	else
