@@ -29,9 +29,9 @@ extern const int		TILE_NUM_VER			= 20;
 //extern const int		TILE_NUM				= TILE_NUM_HOR * TILE_NUM_VER;
 extern const int		NUM_START_TILE			= 0;
 extern const int		NUM_END_TILE			= TILE_NUM_HOR * TILE_NUM_VER - 1;
-extern const string		TILE_SPRITE[2]				= {
-	"sprites/tile_repose.png", 
-	"sprites/tile_hovered.png"};
+extern const string		TILE_SPRITE[3]			= {"sprites/tile_repose.png" , 
+												   "sprites/tile_hovered.png" ,
+												   "sprites/tile_pollution.png"};
 
 /*
 BuildMenu Constants

@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML\Graphics.hpp>
+#include <SFML\Graphics\Rect.hpp>
 #include <memory>
 #include <Vector>
 #include "BuildMenu.h"
@@ -19,6 +20,8 @@ private:
 	sf::FloatRect boundingBox;
 	sf::Sprite sprite;
 	sf::Texture texture;
+	int currentSprite;
+	bool isHovered;
 public:
 	//Constructors and destroyers
 	Tile();										//Default constructor. 
@@ -42,13 +45,14 @@ public:
 	void setSprite(sf::Sprite);
 
 	//Functions	
-	bool mouseHover();
-	bool mouseClicking(sf::Event);
-	bool mouseClick(sf::Event);
-	void resolveEvent(sf::Event);
+	bool mouseHover(sf::RenderWindow& w);
+	bool mouseClicking(sf::Event, sf::RenderWindow& );
+	bool mouseClick(sf::Event, sf::RenderWindow& );
+	void resolveEvent(sf::Event, sf::RenderWindow& );
 	bool isPolluted();							//Determine if the tower in this tile is polluted by enemy.
 	bool hasTower();							//Determine if there is a tower built in this tile.
 	shared_ptr<BuildMenu> openBuildMenu();		//Open the menu for build a tower.
 	shared_ptr<TowerMenu> openTowerMenu();		//Open the menu for upgrade or sell a menu.
 	void draw(sf::RenderWindow&);
+	void spriteUpdate(int);
 };

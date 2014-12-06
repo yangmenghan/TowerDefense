@@ -3,34 +3,43 @@
 #include "LevelManager.h"
 #include "NormalTower.h"
 
+
 //Constructors and destroyers
 Tile::Tile()
 {
-	position = sf::Vector2i(0, 0);//默认位置为0,0,代表0行0列
+	position = sf::Vector2i(0, 0);//(row,collon)=(0.0)
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
 	cooldown = 0;
 	tower = NULL;
-	boundingBox = sprite.getGlobalBounds();
-	if (!texture.loadFromFile(TILE_SPRITE[0]))
+	isHovered = false;
+	currentSprite = 0;
+	if (!texture.loadFromFile(TILE_SPRITE[currentSprite]))
 	{
 		// TODO erreur...
 	}
+	sprite.setTexture(texture);
+	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);
+	boundingBox = sprite.getGlobalBounds();
 }
 
-Tile::Tile(int x, int y)//构造x行y列的Tile
+Tile::Tile(int x, int y)//(row,collone)=(x,y)
 {
 	positionPixel = sf::Vector2i(x*TILE_WIDTH, y*TILE_HEIGHT);
-	position = sf::Vector2i(x*TILE_WIDTH, y*TILE_HEIGHT);
+	position = sf::Vector2i(x, y);
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
 	cooldown = 0;
 	tower = NULL;
-	boundingBox = sprite.getGlobalBounds();
-	if (!texture.loadFromFile(TILE_SPRITE[0]))
+	isHovered = false;	
+	currentSprite = 0;
+	if (!texture.loadFromFile(TILE_SPRITE[currentSprite]))
 	{
 		// TODO erreur...
 	}
+	sprite.setTexture(texture);	
+	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);
+	boundingBox = bounding;
 }
 
 Tile::~Tile(){}
@@ -105,67 +114,59 @@ void Tile::setSprite(sf::Sprite mySprite)
 
 //Functions
 
-bool Tile::mouseHover()
+bool Tile::mouseHover(sf::RenderWindow& w)
 {
-	bool isHovering = false;
-	sf::Vector2f mousePosition((float)sf::Mouse::getPosition().x, (float)sf::Mouse::getPosition().y);
+	sf::Vector2f mousePosition((float)sf::Mouse::getPosition(w).x, (float)sf::Mouse::getPosition(w).y);
 
 	if (boundingBox.contains(mousePosition))
 	{
-		isHovering = true;
-		if (!texture.loadFromFile(TILE_SPRITE[1]))
-		{
-			//TODO
-		};
-		//updatesprite
+		isHovered = true;
+		spriteUpdate(1);
 	}
 	else
 	{
-		isHovering = false;
-		if (!texture.loadFromFile(TILE_SPRITE[0]))
-		{
-			//TODO
-		};
-		//updatesprite
+		isHovered = false;
+		spriteUpdate(0);
 	}
-
-	return isHovering;
+	return isHovered;
 }
 
-bool Tile::mouseClicking(sf::Event event)
+bool Tile::mouseClicking(sf::Event event, sf::RenderWindow& w)
 {
-	if (mouseHover())
+	if (mouseHover(w))
 	{
 		if (event.type == sf::Event::MouseButtonPressed)
 		{
 			return true;
 			//updatesprite
+			spriteUpdate(1);
 		}
 	}
 	return false;
 }
 
-bool Tile::mouseClick(sf::Event event)
+bool Tile::mouseClick(sf::Event event, sf::RenderWindow& w)
 {
-	if (mouseClicking(event))
+	if (mouseClicking(event,w))
 	{
 		if (event.type == sf::Event::MouseButtonReleased)
 		{
 			return true;
 			//updatesprite
+			spriteUpdate(1);
 		}
 	}
 	return false;
 }
 
-void Tile::resolveEvent(sf::Event event)
+void Tile::resolveEvent(sf::Event event, sf::RenderWindow& w)
 {
 	
 	if (!isPolluted())
 	{
-		if (mouseHover())
+		if (mouseHover(w))
 		{
-			if (mouseClick(event))
+			if (mouseClick(event,w))
 			{
 				if (hasTower())
 				{
@@ -223,6 +224,14 @@ void Tile::draw(sf::RenderWindow& w)
 
 	sprite.setTextureRect(sf::IntRect(sf::Vector2i(0,0), sf::Vector2i(width, height)));
 
-	sprite.setPosition(sf::Vector2f(float(position.x + TILE_WIDTH), float(position.y+TILE_HEIGHT)));
+	sprite.setPosition(sf::Vector2f(float(positionPixel.x + TILE_WIDTH), float(positionPixel.y+TILE_HEIGHT)));
+	
+	mouseHover(w);
 	w.draw(sprite);
+}
+
+void Tile::spriteUpdate(int i)
+{
+	currentSprite = i;
+	texture.loadFromFile(TILE_SPRITE[currentSprite]);
 }
