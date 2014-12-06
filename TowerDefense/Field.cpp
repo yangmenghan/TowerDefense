@@ -14,7 +14,8 @@ Field::Field()
 	}
 	startTile = *tilesMap[NUM_START_TILE];
 	endTile = *tilesMap[NUM_END_TILE];
-	boundingBox = sprite.getGlobalBounds();
+	sf::FloatRect bounding(50, 50, TILE_NUM_HOR*TILE_WIDTH, TILE_NUM_VER*TILE_HEIGHT);
+	boundingBox = bounding;
 }
 
 Field::~Field(){}
@@ -79,10 +80,10 @@ void Field::setSprite(sf::Sprite mySprite)
 
 //Functions
 
-bool Field::mouseHover()
+bool Field::mouseHover(sf::RenderWindow& w)
 {
 	bool isHovering = false;
-	sf::Vector2f mousePosition((float)sf::Mouse::getPosition().x, (float)sf::Mouse::getPosition().y);
+	sf::Vector2f mousePosition((float)sf::Mouse::getPosition(w).x, (float)sf::Mouse::getPosition(w).y);
 
 	if (boundingBox.contains(mousePosition))
 	{
@@ -99,9 +100,9 @@ bool Field::mouseHover()
 	return isHovering;
 }
 
-bool Field::mouseClicking(sf::Event event)
+bool Field::mouseClicking(sf::Event event, sf::RenderWindow& w)
 {
-	if (mouseHover())
+	if (mouseHover(w))
 	{
 		if (event.type == sf::Event::MouseButtonPressed)
 		{
@@ -112,9 +113,9 @@ bool Field::mouseClicking(sf::Event event)
 	return false;
 }
 
-bool Field::mouseClick(sf::Event event)
+bool Field::mouseClick(sf::Event event, sf::RenderWindow& w)
 {
-	if (mouseClicking(event))
+	if (mouseClicking(event,w))
 	{
 		if (event.type == sf::Event::MouseButtonReleased)
 		{

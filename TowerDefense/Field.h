@@ -3,6 +3,7 @@
 #include <vector>
 #include <memory>
 #include <SFML\Graphics.hpp>
+#include <SFML\Graphics\Rect.hpp>
 #include "Tile.h"
 #include "Path.h"
 #include "string.h"
@@ -44,9 +45,9 @@ public:
 	void setSprite(sf::Sprite);
 
 	//Functions
-	bool mouseHover();
-	bool mouseClicking(sf::Event);
-	bool mouseClick(sf::Event);
+	bool mouseHover(sf::RenderWindow&);
+	bool mouseClicking(sf::Event, sf::RenderWindow&);
+	bool mouseClick(sf::Event, sf::RenderWindow&);
 	void draw(sf::RenderWindow&);			//Draw
 	Path computePath(shared_ptr<Tile>, shared_ptr<Tile>);			//Compute path of enemeny
 	bool tryCross(shared_ptr<Tile>, shared_ptr<Tile>);

@@ -19,7 +19,7 @@ Tile::Tile()
 		// TODO erreur...
 	}
 	sprite.setTexture(texture);
-	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);
+	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
 	boundingBox = sprite.getGlobalBounds();
 }
 
@@ -38,7 +38,7 @@ Tile::Tile(int x, int y)//(row,collone)=(x,y)
 		// TODO erreur...
 	}
 	sprite.setTexture(texture);	
-	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);
+	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
 	boundingBox = bounding;
 }
 
