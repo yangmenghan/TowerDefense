@@ -33,6 +33,8 @@ LevelManager::~LevelManager(){
 
 void LevelManager::gameLoop(RenderWindow& w){
 		field.draw(w);
+		//currentPath.draw(w);
+
 		field.computePath(field.getStartTile(), field.getEndTile()).draw(w);
 
 		//if the game is not paused
@@ -144,6 +146,7 @@ void LevelManager::gameOver(){
 void LevelManager::startGame(){
 	loadWaves();
 	player.init();
+	currentPath = field.computePath(field.getStartTile(), field.getEndTile());
 }
 
 void LevelManager::stopGame(){

@@ -48,12 +48,13 @@ public:
 
 	int getCurrentWaveNumber();
 
-	static LevelManager* levelManager;
-
 private:
 
 	LevelManager();
 	~LevelManager();
+	static LevelManager* levelManager;
+
+	Path currentPath;
 
 	//Cooldowns:
 	int waveCooldown;
