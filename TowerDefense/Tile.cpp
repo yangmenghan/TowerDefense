@@ -21,7 +21,7 @@ Tile::Tile()
 		// TODO erreur...
 	}
 	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);
-	boundingBox = sf::IntRect(position, sf::Vector2i(width, height));
+	boundingBox = sf::IntRect(positionPixel, sf::Vector2i(width, height));
 }
 
 Tile::Tile(int x, int y)//(row,collone)=(x,y)
@@ -42,8 +42,11 @@ Tile::Tile(int x, int y)//(row,collone)=(x,y)
 	}
 	sprite.setTexture(texture);	
 
+
 	sf::IntRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
-	boundingBox = sf::IntRect(position, sf::Vector2i(width, height));
+
+	boundingBox = sf::IntRect(positionPixel, sf::Vector2i(width, height));
+
 }
 
 Tile::~Tile(){}
@@ -131,11 +134,20 @@ void Tile::mouseHover(sf::RenderWindow& w)
 {
 	if (boundingBox.contains(sf::Mouse::getPosition(w)))
 	{
+		if (currentSprite == 0)
+		{
+			currentSprite == 1;
+			spriteUpdate(currentSprite);			
+		}
 		isHovered = true;
 	}
 	else
 	{
-		spriteUpdate(0);
+		if (currentSprite == 1)
+		{
+			currentSprite = 0;
+			spriteUpdate(currentSprite);
+		}
 		isHovered = false;
 	}
 }
@@ -143,9 +155,10 @@ void Tile::mouseHover(sf::RenderWindow& w)
 void Tile::resolveEvent(sf::Event event)
 {
 	spriteUpdate(1);
-	if (!isPolluted())
+	if (isPolluted())
 	{
-		spriteUpdate(2);
+		currentSprite = 2;
+		spriteUpdate(currentSprite);
 	}
 	{
 		if (event.type == sf::Event::MouseButtonPressed)
@@ -210,7 +223,8 @@ bool Tile::hasTower()
 
 shared_ptr<BuildMenu> Tile::openBuildMenu()
 {
-	auto buildMenuptr = make_shared<BuildMenu>();
+	auto p = make_shared<Tile>(*this);
+	auto buildMenuptr = make_shared<BuildMenu>(p);
 	MenuManager::getMenuManager()->addMenu(buildMenuptr);
 	return buildMenuptr;
 }
@@ -228,6 +242,7 @@ void Tile::draw(sf::RenderWindow& w)
 	sprite.setTextureRect(sf::IntRect(spriteInit, sf::Vector2i(width, height)));
 
 	sprite.setPosition(sf::Vector2f(float(positionPixel.x), float(positionPixel.y)));
+	mouseHover(w);
 	w.draw(sprite);
 }
 
