@@ -19,10 +19,12 @@ MoneyTower::MoneyTower(shared_ptr<Tile> mTile)
 	sprite.setTextureRect(sf::IntRect(spriteInit, size));
 	sprite.setPosition(sf::Vector2f(tile->getPositionPixel().x, tile->getPositionPixel().y));
 
+	/*
 	rangeCircle.setPosition(sf::Vector2f(this->getPosition()));
 	rangeCircle.setRadius(range[level - 1]);
 	rangeCircle.setOutlineThickness(2);
 	rangeCircle.setFillColor(sf::Color(0, 0, 255, 100));
+	*/
 }
 
 void MoneyTower::doAttack()
@@ -33,10 +35,9 @@ void MoneyTower::doAttack()
 /*
 Generate money in a frequency defined by timer
 */
+
 void MoneyTower::generateMoney()
 {
-	while (this)
-	{
 		if (timer == 0)
 		{
 			LevelManager::getLevelManager()->getPlayer().manageMoney(MONEY_TOWER_GENERATION_UNIT[level - 1]);
@@ -44,5 +45,4 @@ void MoneyTower::generateMoney()
 		}
 		else
 			timer--;
-	}
 }
