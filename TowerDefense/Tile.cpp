@@ -197,7 +197,12 @@ void Tile::resolveEvent(sf::Event event)
 			}
 			else
 			{
-				openBuildMenu();
+				hasTw = true;
+				if (LevelManager::getLevelManager()->getField().tryCross(LevelManager::getLevelManager()->getField().getTile(NUM_START_TILE), LevelManager::getLevelManager()->getField().getTile(NUM_END_TILE)))
+				{
+					openBuildMenu();
+				}
+				hasTw = false;
 			}
 		}
 	}
