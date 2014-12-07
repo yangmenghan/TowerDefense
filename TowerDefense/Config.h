@@ -19,6 +19,12 @@ extern const int		WINDOW_HEIGHT;
 extern const int		BORDER_SIZE;
 extern const int		FRAME_RATE;
 
+/*
+Audio constants
+*/
+
+extern const string		MAIN_BGM;
+
 
 /*
 Tile constants

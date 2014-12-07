@@ -41,16 +41,19 @@ void GameMenu::setGameSpeed(float myGameSpeed)
 void GameMenu::pauseGame()
 {
 	gameSpeed = 0;
+	LevelManager::getLevelManager()->setSpeed(0);
 }
 
 void GameMenu::returnSpeed()
 {
 	gameSpeed = 1;
+	LevelManager::getLevelManager()->setSpeed(1);
 }
 
 void GameMenu::speedGame()
 {
 	gameSpeed = 2;
+	LevelManager::getLevelManager()->setSpeed(2);
 }
 
 	//TO DO
@@ -127,14 +130,14 @@ void GameMenu::resolveEvent(sf::Event event)
 		muteButton.resolveEvent(event);
 		if (muteButton.checkClick())
 		{
-			AudioManager audio = AudioManager::getAudioManager();
-			if (audio.isMute() == false)
+			shared_ptr<AudioManager> audio = AudioManager::getAudioManager();
+			if (audio->isMute() == false)
 			{
-				audio.mute();
+				audio->mute();
 			}
 			else
 			{
-				audio.play();
+				audio->play();
 			}
 		}
 	}

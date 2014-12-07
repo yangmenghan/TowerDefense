@@ -2,9 +2,13 @@
 #include "AudioManager.h"
 #include <SFML/Audio.hpp>
 #include <SFML/Audio/Music.hpp>
+#include <memory>
+#include "Config.h"
+
+using namespace std;
 
 
-AudioManager* AudioManager::audioManager = NULL;
+shared_ptr<AudioManager> AudioManager::audioManager = NULL;
 
 sf::Music music;                                     // Declare a new music
 
@@ -12,6 +16,7 @@ sf::Music music;                                     // Declare a new music
 AudioManager::AudioManager()
 {
 	ismute = false;
+	loaded = false;
 };
 
 
@@ -22,24 +27,42 @@ AudioManager::AudioManager(bool b)
 
 void AudioManager::mute()
 {
-	music.stop();									 //Stop it
+	if (music.Playing){
+		music.pause();		//Pause it
+		ismute = true;
+	}
+									
 };
 
 bool AudioManager::play()
 {
-	if (!music.openFromFile("test.mp3"))			// Open it from an audio file
-		return 1;									// Error
-	music.play();									// Play it
-	music.setLoop(true);							// Make it loop
+	if (loaded){
+		if (music.Paused){
+			music.play();
+			ismute = false;
+		}
+	}
+	else {
+		if (!music.openFromFile(MAIN_BGM))
+		{
+			return false;
+		}
+		loaded = true;
+		ismute = false;
+		music.play();
+		music.setLoop(true);							// Make it loop
+	}
+	return true;
+	
 };
 
-AudioManager AudioManager::getAudioManager()
+shared_ptr<AudioManager> AudioManager::getAudioManager()
 {
 	if (NULL == audioManager)
 	{
-		audioManager = new AudioManager;
+		audioManager = make_shared<AudioManager>();
 	}
-	return *audioManager;
+	return audioManager;
 };
 
 bool AudioManager::isMute()

@@ -56,14 +56,14 @@ void StartMenu::resolveEvent(sf::Event event)
 		muteButton.resolveEvent(event);
 		if (muteButton.checkClick())
 		{
-			AudioManager audio = AudioManager::getAudioManager();
-			if (audio.isMute() == false)
+			shared_ptr<AudioManager> audio = AudioManager::getAudioManager();
+			if (!audio->isMute())
 			{
-				audio.mute();
+				audio->mute();
 			}
 			else
 			{
-				audio.play();
+				audio->play();
 			}
 		}
 	}

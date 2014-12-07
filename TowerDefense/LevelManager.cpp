@@ -68,7 +68,6 @@ void LevelManager::gameLoop(RenderWindow& w){
 
 			//Tower actions
 			for (shared_ptr<Tower> tower : towers){
-				tower->draw(w);
 				tower->doAttack();
 			}
 
@@ -87,12 +86,18 @@ void LevelManager::gameLoop(RenderWindow& w){
 				}
 				else {
 					enemies.at(i)->move();
-					enemies.at(i)->draw(w);
 				}
 			}
 			
 		}
-		
+		//Tower actions
+		for (shared_ptr<Tower> tower : towers){
+			tower->draw(w);
+		}
+
+		for (int i = 0; i < enemies.size(); i++){
+			enemies.at(i)->draw(w);
+		}
 };
 
 

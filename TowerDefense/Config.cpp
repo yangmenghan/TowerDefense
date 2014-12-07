@@ -16,6 +16,11 @@ extern const int		WINDOW_HEIGHT			= 600;
 extern const int		BORDER_SIZE				= 30;
 extern const int		FRAME_RATE				= 60;
 
+/* 
+Audio constants
+*/
+
+extern const string		MAIN_BGM				= "music/test.ogg";
 
 /*
 Tile constants
