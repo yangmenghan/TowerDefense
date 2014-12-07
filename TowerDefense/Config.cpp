@@ -137,7 +137,7 @@ extern const int		SLOW_EFFECT				= 100;
 /*
 Menu constants
 */
-extern const string		GAME_MENU_DEFAULT_TEXTURE = "sprites/background.png";
+extern const string		GAME_MENU_DEFAULT_TEXTURE = "sprites/gamebg.png";
 extern const string		START_MENU_TEXTURE		  = "sprites/startbackground.png";
 extern const string		CREDITS_SPRITE_ADD		  = "sprites/credits.png";
 extern const string		GAMEOVER_MENU_TEXTURE	  = "";
@@ -163,7 +163,7 @@ extern const string		SELL_BUTTON_TEXTURE			= "";
 extern const string		UPGRADE_BUTTON_TEXTURE		= "";
 
 extern const sf::Vector2i	BUTTON_SIZE			  = sf::Vector2i(408, 77);
-extern const sf::Vector2i	MUTE_BUTTON_SIZE	  = sf::Vector2i(100, 34);
+extern const sf::Vector2i	MUTE_BUTTON_SIZE	  = sf::Vector2i(100, 32);
 extern const sf::Vector2i	SMALL_BUTTON_SIZE	  = sf::Vector2i(BUTTON_WIDTH, BUTTON_HEIGHT);
 
 extern const sf::Vector2i	START_BUTTON_POSITION	= sf::Vector2i(346, 150);
