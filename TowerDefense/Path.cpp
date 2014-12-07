@@ -17,11 +17,20 @@ Path::Path()
 
 void Path::draw()
 {
+	sf::CircleShape shape(10); 
+	shape.setFillColor(sf::Color(100, 250, 50));
+	
 	for (int i = 0; i < path.size(); i++)
 	{
-		
-		//change color  TODO 
-		//path[i] - >;
+		//draw circle in the center 
+		shared_ptr<Tile> tile = path[i];
+		sf::Vector2i vec = tile->getPositionPixel();
+		sf::Vector2f vec1;
+		vec1.x =vec.x + 25;
+		vec1.y =vec.y + 25;
+		shape.setPosition(vec1);
+		sf::RenderWindow w;
+		w.draw(shape);
 
 	};
 
