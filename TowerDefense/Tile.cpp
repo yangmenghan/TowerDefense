@@ -222,7 +222,8 @@ bool Tile::hasTower()
 
 shared_ptr<BuildMenu> Tile::openBuildMenu()
 {
-	auto buildMenuptr = make_shared<BuildMenu>();
+	auto p = make_shared<Tile>(*this);
+	auto buildMenuptr = make_shared<BuildMenu>(p);
 	MenuManager::getMenuManager()->addMenu(buildMenuptr);
 	return buildMenuptr;
 }
