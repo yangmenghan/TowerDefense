@@ -1,6 +1,7 @@
 #include <SFML\Graphics.hpp>
 #include <SFML\Window.hpp>
 #include "Menu.h"
+#include "MenuManager.h"
 #include "GameMenu.h"
 #include "Button.h"
 #include "Config.h"
@@ -56,7 +57,10 @@ void GameMenu::speedGame()
 
 void GameMenu::restartGame()
 {
+	MenuManager* m = MenuManager::getMenuManager();
 
+	m->popMenu();
+	m->addMenu(make_shared<GameMenu>(GAME_MENU_DEFAULT_TEXTURE, sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT), sf::Vector2i(0, 0)));
 }
 
 
@@ -88,7 +92,6 @@ void GameMenu::draw(sf::RenderWindow& w)
 
 void GameMenu::resolveEvent(sf::Event event)
 {
-	
 	if (pauseButton.checkHover())
 	{
 		pauseButton.resolveEvent(event);

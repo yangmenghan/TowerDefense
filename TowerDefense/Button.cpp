@@ -83,20 +83,40 @@ void Button::draw(sf::RenderWindow& w)
 
 void Button::resolveEvent(sf::Event event)
 {
-	spriteUpdate(1);
+	if (totalSprites == 3)
+	{
+		spriteUpdate(1);
+	}
 	if (event.type == sf::Event::MouseButtonPressed)
 	{
-		spriteUpdate(2);
+		if (totalSprites == 3)
+		{
+			spriteUpdate(2);
+		}
 		isClicking = true;
 	}
 	if (event.type == sf::Event::MouseButtonReleased)
 	{
 		if (isClicking == true)
 		{
-			spriteUpdate(0);
-			isClicked = true;
-			isClicking = false;
+			if (totalSprites == 3)
+			{
+				spriteUpdate(0);
+			}
+			else if (totalSprites == 2)
+			{
+				if (currentSprite == 0)
+				{
+					spriteUpdate(1);
+				}
+				else
+				{
+					spriteUpdate(0);
+				}
+			}
 		}
+		isClicked = true;
+		isClicking = false;
 	}
 }
 
@@ -113,7 +133,10 @@ bool Button::mouseHover(sf::RenderWindow& w)
 	}
 	else
 	{
-		spriteUpdate(0);
+		if (totalSprites == 3)
+		{
+			spriteUpdate(0);
+		}
 		isHovered = false;
 	}
 	return isHovered;
