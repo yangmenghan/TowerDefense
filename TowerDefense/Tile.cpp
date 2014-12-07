@@ -42,7 +42,7 @@ Tile::Tile(int x, int y)//(row,collone)=(x,y)
 	}
 	sprite.setTexture(texture);	
 
-	//sf::IntRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
+	sf::IntRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
 	boundingBox = sf::IntRect(position, sf::Vector2i(width, height));
 }
 

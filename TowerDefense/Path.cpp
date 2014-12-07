@@ -15,7 +15,7 @@ Path::Path()
 };
 
 
-void Path::draw()
+void Path::draw(sf::RenderWindow &w)
 {
 	sf::CircleShape shape(10); 
 	shape.setFillColor(sf::Color(100, 250, 50));
@@ -29,7 +29,6 @@ void Path::draw()
 		vec1.x =vec.x + 25;
 		vec1.y =vec.y + 25;
 		shape.setPosition(vec1);
-		sf::RenderWindow w;
 		w.draw(shape);
 
 	};

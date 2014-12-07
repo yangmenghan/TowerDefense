@@ -10,7 +10,7 @@ private:
 	vector<shared_ptr<Tile>> path;
 	
 public:
-	void draw();				//draw path by changing color
+	void draw(sf::RenderWindow&);				//draw path by changing color
 	Path(vector<shared_ptr<Tile>>);						//constructor
 	Path();									//constructor
 	vector<shared_ptr<Tile>> getPath();					//provide path
