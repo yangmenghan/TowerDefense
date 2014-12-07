@@ -31,7 +31,7 @@ extern const int		TILE_NUM_VER;
 #define					TILE_NUM			200
 extern const int		NUM_START_TILE;
 extern const int		NUM_END_TILE;
-extern const string		TILE_SPRITE[3];
+extern const string		TILE_SPRITE;
 
 /*
 BuildMenu Constants

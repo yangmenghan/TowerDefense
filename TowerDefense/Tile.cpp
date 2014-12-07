@@ -14,13 +14,12 @@ Tile::Tile()
 	tower = NULL;
 	isHovered = false;
 	currentSprite = 0;
-	if (!texture.loadFromFile(TILE_SPRITE[currentSprite]))
+	if (!texture.loadFromFile(TILE_SPRITE))
 	{
 		// TODO erreur...
 	}
-	sprite.setTexture(texture);
 	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
-	boundingBox = sprite.getGlobalBounds();
+	boundingBox = sf::IntRect(position, sf::Vector2i(width, height));
 }
 
 Tile::Tile(int x, int y)//(row,collone)=(x,y)
@@ -33,13 +32,13 @@ Tile::Tile(int x, int y)//(row,collone)=(x,y)
 	tower = NULL;
 	isHovered = false;	
 	currentSprite = 0;
-	if (!texture.loadFromFile(TILE_SPRITE[currentSprite]))
+	if (!texture.loadFromFile(TILE_SPRITE))
 	{
 		// TODO erreur...
 	}
 	sprite.setTexture(texture);	
 	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
-	boundingBox = bounding;
+	boundingBox = sf::IntRect(position, sf::Vector2i(width, height));
 }
 
 Tile::~Tile(){}
@@ -116,24 +115,14 @@ void Tile::setSprite(sf::Sprite mySprite)
 
 bool Tile::mouseHover(sf::RenderWindow& w)
 {
-	sf::Vector2f mousePosition((float)sf::Mouse::getPosition(w).x, (float)sf::Mouse::getPosition(w).y);
-
-	if (boundingBox.contains(mousePosition))
+	if (boundingBox.contains(sf::Mouse::getPosition(w)))
 	{
-		if (currentSprite == 0)
-		{
-			currentSprite = 1;
-			spriteUpdate(currentSprite);
-		}
+		spriteUpdate(1);
 		isHovered = true;
 	}
 	else
 	{
-		if (currentSprite == 1)
-		{
-			currentSprite = 0;
-			spriteUpdate(0);
-		}
+		spriteUpdate(0);
 		isHovered = false;
 	}
 	return isHovered;
@@ -194,6 +183,7 @@ bool Tile::isPolluted()
 {
 	if (cooldown != 0)
 	{
+		spriteUpdate(2);
 		return true;
 	}
 	else
@@ -229,17 +219,14 @@ shared_ptr<TowerMenu> Tile::openTowerMenu()
 void Tile::draw(sf::RenderWindow& w)
 {
 	sprite.setTexture(texture);
+	sf::Vector2i spriteInit(0, currentSprite*height);
+	sprite.setTextureRect(sf::IntRect(spriteInit, sf::Vector2i(width, height)));
 
-	sprite.setTextureRect(sf::IntRect(sf::Vector2i(0,0), sf::Vector2i(width, height)));
-
-	sprite.setPosition(sf::Vector2f(float(positionPixel.x + TILE_WIDTH), float(positionPixel.y+TILE_HEIGHT)));
-	
-	mouseHover(w);
+	sprite.setPosition(sf::Vector2f(float(positionPixel.x), float(positionPixel.y)));
 	w.draw(sprite);
 }
 
 void Tile::spriteUpdate(int i)
 {
 	currentSprite = i;
-	texture.loadFromFile(TILE_SPRITE[currentSprite]);
 }

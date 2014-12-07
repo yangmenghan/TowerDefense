@@ -17,7 +17,7 @@ private:
 	int height;									//The height of every tile.
 	int cooldown;								//Time left for the tower to return normal.The defaut value is 0s. 
 	shared_ptr<Tower> tower;					//The tower built in this tile.
-	sf::FloatRect boundingBox;
+	sf::IntRect boundingBox;
 	sf::Sprite sprite;
 	sf::Texture texture;
 	int currentSprite;

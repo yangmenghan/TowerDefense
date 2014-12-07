@@ -130,6 +130,7 @@ void Field::draw(sf::RenderWindow& w)
 {
 	//w.draw(sprite);
 	for (shared_ptr<Tile> t : tilesMap){
+		mouseHover(w);
 		t->draw(w);
 	}
 }
