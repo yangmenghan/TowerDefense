@@ -40,8 +40,8 @@ extern const string		TILE_SPRITE				= "sprites/tile_texture.png";
 BuildMenu Constants
 */
 
-extern const int		BUTTON_WIDTH			= 70;
-extern const int		BUTTON_HEIGHT			= 70;
+extern const int		BUTTON_WIDTH			= 50;
+extern const int		BUTTON_HEIGHT			= 50;
 
 /*
 Wave constants
