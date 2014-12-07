@@ -126,11 +126,10 @@ bool Tile::checkClick()
 	return isClicked;
 }
 
-bool Tile::mouseHover(sf::RenderWindow& w)
+void Tile::mouseHover(sf::RenderWindow& w)
 {
 	if (boundingBox.contains(sf::Mouse::getPosition(w)))
 	{
-		spriteUpdate(1);
 		isHovered = true;
 	}
 	else
@@ -138,42 +137,15 @@ bool Tile::mouseHover(sf::RenderWindow& w)
 		spriteUpdate(0);
 		isHovered = false;
 	}
-	return isHovered;
 }
-
-/*
-bool Tile::mouseClicking(sf::Event event, sf::RenderWindow& w)
-{
-	if (mouseHover(w))
-	{
-		if (event.type == sf::Event::MouseButtonPressed)
-		{
-			isClicking = true;
-			//updatesprite
-			spriteUpdate(1); 
-		}
-	}
-	
-	return isClicking;
-}
-
-bool Tile::mouseClick(sf::Event event, sf::RenderWindow& w)
-{
-	if (mouseClicking(event,w))
-	{
-		if (event.type == sf::Event::MouseButtonReleased)
-		{
-			isClicked = true;
-			//updatesprite
-			spriteUpdate(1);
-		}
-	}
-	return isClicked;
-}*/
 
 void Tile::resolveEvent(sf::Event event)
 {
-	//if (!isPolluted())
+	spriteUpdate(1);
+	if (!isPolluted())
+	{
+		spriteUpdate(2);
+	}
 	{
 		if (event.type == sf::Event::MouseButtonPressed)
 		{
