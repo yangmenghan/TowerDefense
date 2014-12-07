@@ -7,21 +7,9 @@
 
 TowerMenu::TowerMenu(){}
 
-TowerMenu::TowerMenu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition, shared_ptr<Tile> pTile) :Menu(myTextureAdress, mySize, myPosition)
-{
-
-	tile = pTile;
-
-	sf::Vector2i tilePositionPixel(tile->getPositionPixel());
-
-	sellButton = Button(SELL_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(-BUTTON_WIDTH, 0), 1);
-	upgradeButton = Button(UPGRADE_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(BUTTON_WIDTH, 0), 1);
-}
-
 TowerMenu::TowerMenu(shared_ptr<Tile> pTile)
 {
 	tile = pTile;
-
 	sf::Vector2i tilePositionPixel(tile->getPositionPixel());
 
 	sellButton = Button(SELL_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(-BUTTON_WIDTH, 0), 1);
@@ -59,7 +47,7 @@ void TowerMenu::resolveEvent(sf::Event event)
 			close();
 		}
 	}
-	else 
+	else if (event.type==sf::Event::MouseButtonPressed )
 	{
 		close();
 	}
