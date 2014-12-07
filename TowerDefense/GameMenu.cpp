@@ -86,7 +86,7 @@ void GameMenu::draw(sf::RenderWindow& w)
 	levelManager->gameLoop(w);
 }
 
-void GameMenu::resolveEvent(sf::Event event,sf::RenderWindow& w)
+void GameMenu::resolveEvent(sf::Event event)
 {
 	
 	if (pauseButton.checkHover())
@@ -143,7 +143,7 @@ void GameMenu::resolveEvent(sf::Event event,sf::RenderWindow& w)
 			restartGame();
 		}
 	}
-	LevelManager::getLevelManager()->getField().resolveEvent(event,w);
+	//LevelManager::getLevelManager()->getField().resolveEvent(event,w);
 
 	/*
 	if (giveUpButton.mouseClick(event))
