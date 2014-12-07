@@ -61,6 +61,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 			else { 
 				//TODO : memory???
 				waves.back().spawnEnemy();
+
 				
 			}
 			

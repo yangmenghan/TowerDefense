@@ -49,6 +49,7 @@ void Wave::spawnEnemy(){
 		if (!enemies.empty()){
 			spawnCooldown = WAVE_SPAWN_COOLDOWN;
 			LevelManager::getLevelManager()->addEnemy(enemies.back());
+			LevelManager::getLevelManager()->getEnemies().back()->setTile(LevelManager::getLevelManager()->getField().getStartTile());
 			enemies.pop_back();
 			enemies.shrink_to_fit();
 		}
