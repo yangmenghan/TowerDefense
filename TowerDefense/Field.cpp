@@ -149,7 +149,7 @@ int Field::timeCross(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)	//algorithm
 
 	for (int k = 0; k < TILE_NUM_HOR*TILE_NUM_VER; k++)
 	{
-		if (tilesMap.at(k)->hasTower() == 1)								// there is a tower on the tile->can't cross
+		if (tilesMap.at(k)->hasTower())								// there is a tower on the tile->can't cross
 		{
 			for (int l = 0; l < TILE_NUM_HOR*TILE_NUM_VER; l++)
 			{
@@ -227,7 +227,7 @@ int Field::timeCross(int m, int n)										 // overload    algorithme de Dijkst
 	};
 	for (int k = 0; k < TILE_NUM_HOR*TILE_NUM_VER; k++)
 	{
-		if (tilesMap.at(k)->hasTower() == 1)
+		if (tilesMap.at(k)->hasTower())
 		{
 			for (int l = 0; l < TILE_NUM_HOR*TILE_NUM_VER; l++)
 			{

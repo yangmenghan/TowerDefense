@@ -113,7 +113,12 @@ void Tower::downgradeTw()
 		}
 	}
 	if (level == 0)
-		this->~Tower();//Delete this tower
+	{
+		LevelManager::getLevelManager()->removeTower(shared_ptr<Tower>(this));
+		tile->setTower(NULL);
+		//this->~Tower();//Delete this tower
+	}
+		
 }
 
 /*

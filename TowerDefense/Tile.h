@@ -25,6 +25,7 @@ private:
 	bool isHovered;
 	bool isClicked;
 	bool isClicking;
+	bool hasTw;
 public:
 	//Constructors and destroyers
 	Tile();										//Default constructor. 

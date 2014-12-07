@@ -53,6 +53,7 @@ void BuildMenu::buyBasicTw()
 {
 	LevelManager::getLevelManager()->getPlayer().manageMoney(-NORMAL_TOWER_PRICE);
 	auto pNormalTw = make_shared<NormalTower>(tile);
+	LevelManager::getLevelManager()->addTower(pNormalTw);
 	tile->setTower(pNormalTw);
 }
 
@@ -60,6 +61,7 @@ void BuildMenu::buyMoneyTw()
 {
 	LevelManager::getLevelManager()->getPlayer().manageMoney(-MONEY_TOWER_PRICE);
 	auto pMoneyTw = make_shared<MoneyTower>(tile);
+	LevelManager::getLevelManager()->addTower(pMoneyTw);
 	tile->setTower(pMoneyTw);
 }
 
@@ -67,6 +69,7 @@ void BuildMenu::buySlowTw()
 {
 	LevelManager::getLevelManager()->getPlayer().manageMoney(-SLOW_TOWER_PRICE);
 	auto pSlowTw = make_shared<SlowTower>(tile);
+	LevelManager::getLevelManager()->addTower(pSlowTw);
 	tile->setTower(pSlowTw);
 }
 
@@ -74,6 +77,7 @@ void BuildMenu::buySunTw()
 {
 	LevelManager::getLevelManager()->getPlayer().manageMoney(-SUN_TOWER_PRICE);
 	auto pSunTw = make_shared<SunTower>(tile);
+	LevelManager::getLevelManager()->addTower(pSunTw);
 	tile->setTower(pSunTw);
 }
 
@@ -85,6 +89,7 @@ void BuildMenu::resolveEvent(sf::Event event)
 		if (basicTwButton.checkClick())
 		{
 			buyBasicTw();
+			close();
 		}
 	}
 	else if (sunTwButton.checkHover())
@@ -93,6 +98,7 @@ void BuildMenu::resolveEvent(sf::Event event)
 		if (sunTwButton.checkClick())
 		{
 			buySunTw();
+			close();
 		}
 	}
 	else if (slowTwButton.checkHover())
@@ -101,6 +107,7 @@ void BuildMenu::resolveEvent(sf::Event event)
 		if (slowTwButton.checkClick())
 		{
 			buySlowTw();
+			close();
 		}
 	}
 	else if (moneyTwButton.checkHover())
@@ -109,10 +116,11 @@ void BuildMenu::resolveEvent(sf::Event event)
 		if (moneyTwButton.checkClick())
 		{
 			buyMoneyTw();
+			close();
 		}
 	}
 	//field.mouseClick(_event) && (!buildMenu.mouseClick(_event))
-	else 
+	else if (event.type == sf::Event::MouseButtonPressed)
 	{
 		close();
 	}
@@ -121,6 +129,11 @@ void BuildMenu::resolveEvent(sf::Event event)
 void BuildMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
+
+	basicTwButton.mouseHover(w);
+	slowTwButton.mouseHover(w);
+	moneyTwButton.mouseHover(w);
+	sunTwButton.mouseHover(w);
 
 	basicTwButton.draw(w);
 	slowTwButton.draw(w);
@@ -131,5 +144,6 @@ void BuildMenu::draw(sf::RenderWindow& w)
 
 void BuildMenu::close()
 {
-	//to do.
+	MenuManager::getMenuManager()->popMenu();
+	LevelManager::getLevelManager()->setSpeed(1);
 }

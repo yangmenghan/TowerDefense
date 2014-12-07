@@ -15,6 +15,7 @@ Tile::Tile()
 	isHovered = false;
 	isClicked = false;
 	isClicking = false;
+	hasTw = false;
 	currentSprite = 0;
 	if (!texture.loadFromFile(TILE_SPRITE))
 	{
@@ -35,6 +36,7 @@ Tile::Tile(int x, int y)//(row,collone)=(x,y)
 	isHovered = false;	
 	isClicked = false;
 	isClicking = false;
+	hasTw = false;
 	currentSprite = 0;
 	if (!texture.loadFromFile(TILE_SPRITE))
 	{
@@ -106,7 +108,14 @@ void Tile::setPosition(sf::Vector2i myPosition)
 
 void Tile::setTower(shared_ptr<Tower> myTower)
 {
-	shared_ptr<Tower>tower(myTower);
+	tower = myTower;
+	if (tower != NULL)
+	{
+		hasTw = true;
+	}else 
+	{
+		hasTw = false;
+	}
 }
 
 void Tile::setCooldown(int myCooldown)
@@ -210,21 +219,25 @@ bool Tile::isPolluted()
 
 bool Tile::hasTower()
 {
-	if (tower)
+	return hasTw;
+
+	/*if (tower != NULL)
 	{
-		return true;
+		if (tower->getTile()->position == position){
+			return true;
+		}
+		return false;
 	}
 	else
 	{
 		return false;
 	}
-
+	*/
 }
 
 shared_ptr<BuildMenu> Tile::openBuildMenu()
 {
-	auto p = make_shared<Tile>(*this);
-	auto buildMenuptr = make_shared<BuildMenu>(p);
+	auto buildMenuptr = make_shared<BuildMenu>(shared_ptr<Tile>(this));
 	MenuManager::getMenuManager()->addMenu(buildMenuptr);
 	return buildMenuptr;
 }
