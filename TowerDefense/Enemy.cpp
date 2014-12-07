@@ -74,7 +74,7 @@ bool Enemy::move(){
 };
 
 void Enemy::succed(){
-	LevelManager::getLevelManager()->getPlayer().manageHP(-1);
+	LevelManager::getLevelManager()->getPlayer()->manageHP(-1);
 	dieWithoutBonus();
 };
 
@@ -85,7 +85,7 @@ void Enemy::setTile(shared_ptr<Tile> t){
 
 
 void Enemy::die(){
-	LevelManager::getLevelManager()->getPlayer().manageScore(scoreValue);
+	LevelManager::getLevelManager()->getPlayer()->manageScore(scoreValue);
 };
 
 void Enemy::dieWithoutBonus(){

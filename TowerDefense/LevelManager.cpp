@@ -51,7 +51,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 
 
 
-			if (player.getHP() <=0){
+			if (player->getHP() <=0){
 				gameOver(); 
 			}
 			
@@ -82,7 +82,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 					i--;
 				}
 				else if (enemies.at(i)->getPosition() == field.getEndTile()->getPositionPixel()){
-					player.manageHP(-1);
+					player->manageHP(-1);
 					enemies.at(i)->succed();
 					removeEnemy(i);
 					i--;
@@ -145,7 +145,8 @@ void LevelManager::gameOver(){
 
 void LevelManager::startGame(){
 	loadWaves();
-	player.init();
+	player = make_shared<Player>();
+	//player->init();
 	currentPath = field.computePath(field.getStartTile(), field.getEndTile());
 }
 
@@ -198,13 +199,13 @@ vector<shared_ptr<Tower>> LevelManager::getTowers(){
 }
 
 void LevelManager::setPlayer(Player &p){
-	player = p;
+	player = make_shared<Player>(p);
 };
 void LevelManager::setField(Field &f){
 	field = f;
 };
 
-Player	LevelManager::getPlayer(){
+shared_ptr<Player>	LevelManager::getPlayer(){
 	return player;
 }
 

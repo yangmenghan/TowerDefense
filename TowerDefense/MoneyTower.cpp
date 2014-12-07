@@ -40,9 +40,10 @@ void MoneyTower::generateMoney()
 {
 		if (timer == 0)
 		{
-			LevelManager::getLevelManager()->getPlayer().manageMoney(MONEY_TOWER_GENERATION_UNIT[level - 1]);
+			LevelManager::getLevelManager()->getPlayer()->manageMoney(MONEY_TOWER_GENERATION_UNIT[level - 1]);
 			timer = speed;
 		}
 		else
 			timer--;
+		int m = LevelManager::getLevelManager()->getPlayer()->getMoney();
 }
