@@ -37,10 +37,14 @@ public:
 	void setSpeed(int);
 
 	void nextWave();
-	void loadWaves(); //TODO
+	void loadWaves(); 
 
 	void gameOver(); //TODO
 	void victory(); //TODO
+
+	void stopGame();
+	void startGame();
+	void restartGame();
 
 	int getCurrentWaveNumber();
 

@@ -13,6 +13,8 @@ public:
 	int getScore();
 	int getMoney();
 
+	void init();
+
 private:
 	int money;
 	int score;
