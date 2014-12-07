@@ -23,6 +23,7 @@ public:
 	BuildMenu();							//Default constructor.
 	BuildMenu(std::string, sf::Vector2u, sf::Vector2i, shared_ptr<Tile>);
 											//Constructor a buildmenu in this tile. 
+	BuildMenu(shared_ptr<Tile>);
 	virtual ~BuildMenu();//Destructor.
 
 	//Getters

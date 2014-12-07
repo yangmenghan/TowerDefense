@@ -25,6 +25,7 @@ Menu::Menu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosi
 	position = myPosition;
 }
 
+
 sf::Vector2u Menu::getSize()
 {
 	return size;

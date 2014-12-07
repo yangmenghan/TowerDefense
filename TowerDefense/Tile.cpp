@@ -41,7 +41,7 @@ Tile::Tile(int x, int y)//(row,collone)=(x,y)
 		// TODO erreur...
 	}
 	sprite.setTexture(texture);	
-	sf::FloatRect bounding(positionPixel.x + 100, positionPixel.y + 100, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
+	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
 	boundingBox = sf::IntRect(position, sf::Vector2i(width, height));
 }
 
@@ -237,7 +237,8 @@ bool Tile::hasTower()
 
 shared_ptr<BuildMenu> Tile::openBuildMenu()
 {
-	auto buildMenuptr = make_shared<BuildMenu>();
+	auto p=make_shared<Tile>(*this);
+	auto buildMenuptr = make_shared<BuildMenu>(p);
 	MenuManager::getMenuManager()->addMenu(buildMenuptr);
 	return buildMenuptr;
 }
