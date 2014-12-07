@@ -18,7 +18,7 @@ sf::Vector2i Entity::getPosition()
 	return position;
 }
 
-sf::Vector2f Entity::getSize()
+sf::Vector2i Entity::getSize()
 {
 	return size;
 }
@@ -43,7 +43,7 @@ void Entity::setPosition(sf::Vector2i mPosition)
 	position = mPosition;
 }
 
-void Entity::setSize(sf::Vector2f mSize)
+void Entity::setSize(sf::Vector2i mSize)
 {
 	size = mSize;
 }

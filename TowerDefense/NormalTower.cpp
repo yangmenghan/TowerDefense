@@ -15,15 +15,15 @@ NormalTower::NormalTower(shared_ptr<Tile> mTile)
 
 	timer = speed;
 	
-	for (int i = 0; i < 3; i++)
-		if (!texturesRead[i].loadFromFile(NORMAL_TOWER_SPRITE_ADD[i]))
-		{
-			// TODO erreur...
-		}
-
-	texture = texturesRead[level - 1];
+	if (!texture.loadFromFile(NORMAL_TOWER_SPRITE_ADD))
+	{
+		// TODO erreur...
+	}
 
 	sprite.setTexture(texture);
+	sf::Vector2i spriteInit(0, currentSprite * size.y);
+	sprite.setTextureRect(sf::IntRect(spriteInit, size));
+	sprite.setPosition(sf::Vector2f(tile->getPositionPixel().x, tile->getPositionPixel().y));
 
 	rangeCircle.setPosition(sf::Vector2f(this->getPosition()));
 	rangeCircle.setRadius(range[level - 1]);

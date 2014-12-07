@@ -3,10 +3,12 @@
 #include "LevelManager.h"
 #include "NormalAttack.h"
 
-Tower::Tower(shared_ptr<Tile> tile)
+Tower::Tower(shared_ptr<Tile> mTile)
 {
 	level = 1;
-	tile = tile;
+	currentSprite = level - 1;
+	tile = mTile;
+	size = sf::Vector2i(TILE_WIDTH, TILE_HEIGHT);
 	attack = make_shared<NormalAttack>();
 	attack->setCenter(tile->getPosition());
 
@@ -60,7 +62,10 @@ void Tower::setRange(float mRange)
 	range[level - 1] = mRange;
 }
 
-
+void Tower::spriteUpdate(int i)
+{
+	currentSprite = i;
+}
 
 /*
 Upgrade the level of tower and set its new parameters
@@ -71,6 +76,7 @@ void Tower::upgradeTw()
 	{
 		level++;
 		speed -= 5;
+		currentSprite = level - 1;
 
 		attack->setDamage(damage[level - 1]);
 		attack->setSlowAmount(damage[level - 1]);
@@ -79,7 +85,7 @@ void Tower::upgradeTw()
 
 		timer = speed;
 
-		texture = texturesRead[level - 1];
+		spriteUpdate(currentSprite);
 	}
 }
 /*
@@ -94,6 +100,8 @@ void Tower::downgradeTw()
 		if (level != 0)
 		{
 			speed += 5;
+			currentSprite = level - 1;
+
 			attack->setDamage(damage[level - 1]);
 			attack->setSlowAmount(damage[level - 1]);
 			attack->setSpeed(speed);
@@ -101,7 +109,7 @@ void Tower::downgradeTw()
 
 			timer = speed;
 
-			texture = texturesRead[level - 1];
+			spriteUpdate(currentSprite);
 		}
 	}
 	if (level == 0)
