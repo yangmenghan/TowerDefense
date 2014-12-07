@@ -38,6 +38,7 @@ void Path::draw(sf::RenderWindow &w)
 
 vector<shared_ptr<Tile>> Path::getPath()
 {
+	Path::draw();
 	return path;
 };
 	
