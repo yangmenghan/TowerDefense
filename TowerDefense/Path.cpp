@@ -39,7 +39,6 @@ void Path::draw()
 
 vector<shared_ptr<Tile>> Path::getPath()
 {
-	Path::draw();
 	return path;
 };
 	
