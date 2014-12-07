@@ -18,7 +18,6 @@ Enemy::Enemy(){
 	scoreValue = 0;
 	speed = 0;
 	slowed = false;
-	position = sf::Vector2i(0,0);
 }
 
 
@@ -30,7 +29,6 @@ Enemy::Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite m
 	speed = mSpeed;
 	sprite = mSprite;
 	slowed = false;
-	position = sf::Vector2i(0,0);
 }
 
 float Enemy::getDistanceToTarget(){
@@ -80,7 +78,7 @@ void Enemy::succed(){
 
 void Enemy::setTile(shared_ptr<Tile> t){
 	tile = t;
-	//position = t->getPosition();
+	position = t->getPositionPixel();
 }
 
 
