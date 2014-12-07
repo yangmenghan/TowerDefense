@@ -26,7 +26,7 @@ Tile::Tile()
 
 Tile::Tile(int x, int y)//(row,collone)=(x,y)
 {
-	positionPixel = sf::Vector2i(x*TILE_WIDTH, y*TILE_HEIGHT);
+	positionPixel = sf::Vector2i(x*TILE_WIDTH + 50, y*TILE_HEIGHT + 50);
 	position = sf::Vector2i(x, y);
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
@@ -41,7 +41,7 @@ Tile::Tile(int x, int y)//(row,collone)=(x,y)
 		// TODO erreur...
 	}
 	sprite.setTexture(texture);	
-	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
+	//sf::IntRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
 	boundingBox = sf::IntRect(position, sf::Vector2i(width, height));
 }
 
