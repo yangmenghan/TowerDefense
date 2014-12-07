@@ -14,8 +14,18 @@ TowerMenu::TowerMenu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vecto
 
 	sf::Vector2i tilePositionPixel(tile->getPositionPixel());
 
-	Button sellButton(SELL_BUTTON_TEXTURE, sf::Vector2i(BUTTON_WIDTH, BUTTON_HEIGHT), tilePositionPixel + sf::Vector2i(-TILE_WIDTH, TILE_HEIGHT),2);
-	Button upgradeButton(UPGRADE_BUTTON_TEXTURE, sf::Vector2i(BUTTON_WIDTH, BUTTON_HEIGHT), tilePositionPixel + sf::Vector2i(TILE_WIDTH, -TILE_HEIGHT),2);
+	sellButton = Button(SELL_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(-BUTTON_WIDTH, 0), 1);
+	upgradeButton = Button(UPGRADE_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(BUTTON_WIDTH, 0), 1);
+}
+
+TowerMenu::TowerMenu(shared_ptr<Tile> pTile)
+{
+	tile = pTile;
+
+	sf::Vector2i tilePositionPixel(tile->getPositionPixel());
+
+	sellButton = Button(SELL_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(-BUTTON_WIDTH, 0), 1);
+	upgradeButton = Button(UPGRADE_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(BUTTON_WIDTH, 0), 1);
 }
 
 TowerMenu::~TowerMenu(){}
@@ -37,6 +47,7 @@ void TowerMenu::resolveEvent(sf::Event event)
 		if (sellButton.checkClick())
 		{
 			tile->getTower()->sellTw();
+			close();
 		}		
 	}
 	else if (upgradeButton.checkHover())
@@ -45,6 +56,7 @@ void TowerMenu::resolveEvent(sf::Event event)
 		if (upgradeButton.checkClick())
 		{
 			tile->getTower()->upgradeTw();
+			close();
 		}
 	}
 	else 
@@ -56,11 +68,18 @@ void TowerMenu::resolveEvent(sf::Event event)
 void TowerMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
+
+	sellButton.mouseHover(w);
+	upgradeButton.mouseHover(w);
+
 	sellButton.draw(w);
 	upgradeButton.draw(w);
+
+	LevelManager::getLevelManager()->setSpeed(0);
 }
 
 void TowerMenu::close()
 {
-	//to do  with menumanager
+	MenuManager::getMenuManager()->popMenu();
+	LevelManager::getLevelManager()->setSpeed(1);
 }

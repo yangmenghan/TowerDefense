@@ -15,7 +15,7 @@ public:
 //Constructor and destructor
 	Menu();
 	Menu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition);
-	~Menu(); 
+	virtual ~Menu();
 
 //Setters
 	void setSize(sf::Vector2u);

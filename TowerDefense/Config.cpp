@@ -158,8 +158,8 @@ extern const string		BASIC_TOWER_BUTTON_TEXTURE	= "sprites/normal_tower_button.p
 extern const string		SUN_TOWER_BUTTON_TEXTURE	= "sprites/sun_tower_button.png";
 extern const string		SLOW_TOWER_BUTTON_TEXTURE	= "sprites/slow_tower_button.png";
 extern const string		MONEY_TOWER_BUTTON_TEXTURE	= "sprites/money_tower_button.png";
-extern const string		SELL_BUTTON_TEXTURE			= "";
-extern const string		UPGRADE_BUTTON_TEXTURE		= "";
+extern const string		SELL_BUTTON_TEXTURE			= "sprites/sell_tower_button.png";
+extern const string		UPGRADE_BUTTON_TEXTURE		= "sprites/upgrade_tower_button.png";
 
 extern const sf::Vector2i	BUTTON_SIZE			  = sf::Vector2i(408, 77);
 extern const sf::Vector2i	MUTE_BUTTON_SIZE	  = sf::Vector2i(100, 32);

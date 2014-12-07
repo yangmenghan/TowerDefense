@@ -225,19 +225,6 @@ bool Tile::isPolluted()
 bool Tile::hasTower()
 {
 	return hasTw;
-
-	/*if (tower != NULL)
-	{
-		if (tower->getTile()->position == position){
-			return true;
-		}
-		return false;
-	}
-	else
-	{
-		return false;
-	}
-	*/
 }
 
 shared_ptr<BuildMenu> Tile::openBuildMenu()
@@ -249,7 +236,9 @@ shared_ptr<BuildMenu> Tile::openBuildMenu()
 
 shared_ptr<TowerMenu> Tile::openTowerMenu()
 {
-	return make_shared<TowerMenu>();
+	auto TowerMenuptr = make_shared<TowerMenu>(shared_ptr<Tile>(this));
+	MenuManager::getMenuManager()->addMenu(TowerMenuptr);
+	return TowerMenuptr;
 
 }
 
