@@ -126,6 +126,17 @@ bool Field::mouseClick(sf::Event event, sf::RenderWindow& w)
 	return false;
 }
 
+void Field::resolveEvent(sf::Event event, sf::RenderWindow& w)
+{
+	if (mouseHover(w) || mouseClick(event, w) || mouseClicking(event,w))
+	{
+		for (auto t : tilesMap)
+		{
+			t->resolveEvent(event, w);
+		}
+	}
+}
+
 void Field::draw(sf::RenderWindow& w)
 {
 	//w.draw(sprite);
@@ -139,8 +150,8 @@ int Field::timeCross(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)	//algorithm
 {
 	sf::Vector2i vec1 = tile1->getPosition();
 	sf::Vector2i vec2 = tile2->getPosition();
-	int m = vec1.x / TILE_WIDTH + vec1.y * TILE_NUM_VER / TILE_HEIGHT;  //  start tile
-	int n = vec2.x / TILE_WIDTH + vec2.y * TILE_NUM_VER / TILE_HEIGHT;  // destination tile
+	int m = vec1.x + vec1.y * TILE_NUM_VER;  //  start tile
+	int n = vec2.x + vec2.y * TILE_NUM_VER ;  // destination tile
 
 	int t[TILE_NUM][TILE_NUM];		//build matrice of graph (TILE_NUM_HOR*TILE_NUM_VER, TILE_NUM_HOR*TILE_NUM_VER Tiles)
 
@@ -298,8 +309,8 @@ Path Field::computePath(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)
 {
 	sf::Vector2i vec1 = tile1->getPosition();
 	sf::Vector2i vec2 = tile2->getPosition();
-	int m = vec1.x / TILE_WIDTH + vec1.y * TILE_NUM_VER / TILE_HEIGHT;		 //  start tile
-	int n = vec2.x / TILE_WIDTH + vec2.y * TILE_NUM_VER / TILE_HEIGHT;		 // end tile
+	int m = vec1.x  + vec1.y * TILE_NUM_VER ;		 //  start tile
+	int n = vec2.x  + vec2.y * TILE_NUM_VER ;		 // end tile
 	int time = timeCross(m, n);
 	vector<shared_ptr<Tile>> path;
 	path.push_back(tile1);
@@ -337,8 +348,8 @@ bool Field::tryCross(shared_ptr<Tile> _startTile, shared_ptr<Tile> _endTile)
 {
 	sf::Vector2i vec1 = _startTile->getPosition();
 	sf::Vector2i vec2 = _endTile->getPosition();
-	int m = vec1.x / TILE_WIDTH + vec1.y * TILE_NUM_VER / TILE_HEIGHT;  
-	int n = vec2.x / TILE_WIDTH + vec2.y * TILE_NUM_VER / TILE_HEIGHT; 
+	int m = vec1.x  + vec1.y * TILE_NUM_VER ;  
+	int n = vec2.x  + vec2.y * TILE_NUM_VER ; 
 
 	//trycross from depart tile
 	int time = timeCross(m, n);
@@ -354,7 +365,7 @@ bool Field::tryCross(shared_ptr<Tile> _startTile, shared_ptr<Tile> _endTile)
 		shared_ptr<Enemy> enemy = enemies[i];
 		shared_ptr<Tile> tile = (*enemy).getTile();
 		sf::Vector2i vec3 = tile->getPosition();
-		int p = vec3.x / TILE_WIDTH + vec3.y * TILE_NUM_VER / TILE_HEIGHT;  //  tile of enemy
+		int p = vec3.x  + vec3.y * TILE_NUM_VER ;  //  tile of enemy
 		time = timeCross(p, n);
 		if (time > TILE_NUM_HOR*TILE_NUM_VER)
 			return false;													//enemy i can't cross
