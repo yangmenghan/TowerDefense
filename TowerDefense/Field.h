@@ -17,6 +17,7 @@ private:
 	int height;								//The height of the heignt.
 	int numTileHor;							//The number of tiles in a row.
 	int numTileVer;							//The number of tiles in a colonne.
+	bool isHovered;
 	std::vector<shared_ptr<Tile>> tilesMap;	//The vector of tiles in this field.
 	Tile startTile;							//The tile where enter the enemies.
 	Tile endTile;							//The tile in the end of the path of enemies.
@@ -46,9 +47,10 @@ public:
 
 	//Functions
 	bool mouseHover(sf::RenderWindow&);
-	bool mouseClicking(sf::Event, sf::RenderWindow&);
-	bool mouseClick(sf::Event, sf::RenderWindow&);
-	void resolveEvent(sf::Event, sf::RenderWindow&);
+	bool checkHover();
+	//bool mouseClicking(sf::Event);
+	//bool mouseClick(sf::Event);
+	void resolveEvent(sf::Event);
 	void draw(sf::RenderWindow&);			//Draw
 	Path computePath(shared_ptr<Tile>, shared_ptr<Tile>);			//Compute path of enemeny
 	bool tryCross(shared_ptr<Tile>, shared_ptr<Tile>);

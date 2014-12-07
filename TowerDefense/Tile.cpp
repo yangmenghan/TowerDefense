@@ -116,6 +116,15 @@ void Tile::setSprite(sf::Sprite mySprite)
 }
 
 //Functions
+bool Tile::checkHover()
+{
+	return isHovered;
+}
+
+bool Tile::checkClick()
+{
+	return isClicked;
+}
 
 bool Tile::mouseHover(sf::RenderWindow& w)
 {
@@ -132,6 +141,7 @@ bool Tile::mouseHover(sf::RenderWindow& w)
 	return isHovered;
 }
 
+/*
 bool Tile::mouseClicking(sf::Event event, sf::RenderWindow& w)
 {
 	if (mouseHover(w))
@@ -159,15 +169,33 @@ bool Tile::mouseClick(sf::Event event, sf::RenderWindow& w)
 		}
 	}
 	return isClicked;
-}
+}*/
 
-void Tile::resolveEvent(sf::Event event, sf::RenderWindow& w)
+void Tile::resolveEvent(sf::Event event)
 {
-	
-	if (!isPolluted())
+	//if (!isPolluted())
 	{
-		if (mouseClick(event,w))
+		if (event.type == sf::Event::MouseButtonPressed)
 		{
+			isClicking = true;
+			if (currentSprite == 0)
+			{
+				currentSprite = 1;
+				spriteUpdate(currentSprite);
+			}
+			
+			
+		}
+		if (event.type == sf::Event::MouseButtonReleased)
+		{
+			isClicked = true;
+
+			if (currentSprite == 0)
+			{
+				currentSprite = 1;
+				spriteUpdate(currentSprite);
+			}
+
 			if (hasTower())
 			{
 				openTowerMenu();
@@ -209,7 +237,9 @@ bool Tile::hasTower()
 
 shared_ptr<BuildMenu> Tile::openBuildMenu()
 {
-	return make_shared<BuildMenu>();
+	auto buildMenuptr = make_shared<BuildMenu>();
+	MenuManager::getMenuManager()->addMenu(buildMenuptr);
+	return buildMenuptr;
 }
 
 shared_ptr<TowerMenu> Tile::openTowerMenu()

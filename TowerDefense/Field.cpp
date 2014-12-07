@@ -79,27 +79,29 @@ void Field::setSprite(sf::Sprite mySprite)
 }
 
 //Functions
+bool Field::checkHover()
+{
+	return isHovered;
+}
 
 bool Field::mouseHover(sf::RenderWindow& w)
 {
-	bool isHovering = false;
 	sf::Vector2f mousePosition((float)sf::Mouse::getPosition(w).x, (float)sf::Mouse::getPosition(w).y);
 
 	if (boundingBox.contains(mousePosition))
 	{
-		isHovering = true;
-		
+		isHovered = true;
 		//updatesprite
 	}
 	else
 	{
-		isHovering = false;
+		isHovered = false;
 		//updatesprite
 	}
 
-	return isHovering;
+	return isHovered;
 }
-
+/*
 bool Field::mouseClicking(sf::Event event, sf::RenderWindow& w)
 {
 	if (mouseHover(w))
@@ -125,15 +127,12 @@ bool Field::mouseClick(sf::Event event, sf::RenderWindow& w)
 	}
 	return false;
 }
-
-void Field::resolveEvent(sf::Event event, sf::RenderWindow& w)
+*/
+void Field::resolveEvent(sf::Event event)
 {
-	if (mouseHover(w) || mouseClick(event, w) || mouseClicking(event,w))
+	for (auto t : tilesMap)
 	{
-		for (auto t : tilesMap)
-		{
-			t->resolveEvent(event, w);
-		}
+		t->resolveEvent(event);
 	}
 }
 

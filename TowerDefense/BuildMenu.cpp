@@ -109,6 +109,7 @@ void BuildMenu::resolveEvent(sf::Event event)
 void BuildMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
+
 	basicTwButton.draw(w);
 	slowTwButton.draw(w);
 	moneyTwButton.draw(w);
