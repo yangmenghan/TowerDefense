@@ -22,6 +22,8 @@ private:
 	sf::Texture texture;
 	int currentSprite;
 	bool isHovered;
+	bool isClicked;
+	bool isClicking;
 public:
 	//Constructors and destroyers
 	Tile();										//Default constructor. 

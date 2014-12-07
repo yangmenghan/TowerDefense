@@ -4,6 +4,7 @@
 #include "GameMenu.h"
 #include "Button.h"
 #include "Config.h"
+#include "LevelManager.h"
 
 GameMenu::GameMenu()
 {
@@ -85,7 +86,7 @@ void GameMenu::draw(sf::RenderWindow& w)
 	levelManager->gameLoop(w);
 }
 
-void GameMenu::resolveEvent(sf::Event event)
+void GameMenu::resolveEvent(sf::Event event,sf::RenderWindow& w)
 {
 	
 	if (pauseButton.checkHover())
@@ -142,6 +143,7 @@ void GameMenu::resolveEvent(sf::Event event)
 			restartGame();
 		}
 	}
+	LevelManager::getLevelManager()->getField().resolveEvent(event,w);
 
 	/*
 	if (giveUpButton.mouseClick(event))

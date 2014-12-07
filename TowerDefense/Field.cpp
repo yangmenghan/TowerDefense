@@ -126,10 +126,22 @@ bool Field::mouseClick(sf::Event event, sf::RenderWindow& w)
 	return false;
 }
 
+void Field::resolveEvent(sf::Event event, sf::RenderWindow& w)
+{
+	if (mouseHover(w) || mouseClick(event, w) || mouseClicking(event,w))
+	{
+		for (auto t : tilesMap)
+		{
+			t->resolveEvent(event, w);
+		}
+	}
+}
+
 void Field::draw(sf::RenderWindow& w)
 {
 	//w.draw(sprite);
-	for (shared_ptr<Tile> t : tilesMap){
+	for (shared_ptr<Tile> t : tilesMap)
+	{
 		t->draw(w);
 	}
 }

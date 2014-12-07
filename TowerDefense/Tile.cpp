@@ -13,6 +13,8 @@ Tile::Tile()
 	cooldown = 0;
 	tower = NULL;
 	isHovered = false;
+	isClicked = false;
+	isClicking = false;
 	currentSprite = 0;
 	if (!texture.loadFromFile(TILE_SPRITE[currentSprite]))
 	{
@@ -32,6 +34,8 @@ Tile::Tile(int x, int y)//(row,collone)=(x,y)
 	cooldown = 0;
 	tower = NULL;
 	isHovered = false;	
+	isClicked = false;
+	isClicking = false;
 	currentSprite = 0;
 	if (!texture.loadFromFile(TILE_SPRITE[currentSprite]))
 	{
@@ -120,8 +124,16 @@ bool Tile::mouseHover(sf::RenderWindow& w)
 
 	if (boundingBox.contains(mousePosition))
 	{
-		isHovered = true;
-		spriteUpdate(1);
+		if (isPolluted())
+		{
+			isHovered = true;
+			spriteUpdate(2);
+		}
+		else
+		{
+			isHovered = true;
+			spriteUpdate(1);
+		}
 	}
 	else
 	{
@@ -137,12 +149,13 @@ bool Tile::mouseClicking(sf::Event event, sf::RenderWindow& w)
 	{
 		if (event.type == sf::Event::MouseButtonPressed)
 		{
-			return true;
+			isClicking = true;
 			//updatesprite
-			spriteUpdate(1);
+			spriteUpdate(1); 
 		}
 	}
-	return false;
+	
+	return isClicking;
 }
 
 bool Tile::mouseClick(sf::Event event, sf::RenderWindow& w)
@@ -151,12 +164,12 @@ bool Tile::mouseClick(sf::Event event, sf::RenderWindow& w)
 	{
 		if (event.type == sf::Event::MouseButtonReleased)
 		{
-			return true;
+			isClicked = true;
 			//updatesprite
 			spriteUpdate(1);
 		}
 	}
-	return false;
+	return isClicked;
 }
 
 void Tile::resolveEvent(sf::Event event, sf::RenderWindow& w)
@@ -164,18 +177,15 @@ void Tile::resolveEvent(sf::Event event, sf::RenderWindow& w)
 	
 	if (!isPolluted())
 	{
-		if (mouseHover(w))
+		if (mouseClick(event,w))
 		{
-			if (mouseClick(event,w))
+			if (hasTower())
 			{
-				if (hasTower())
-				{
-					openTowerMenu();
-				}
-				else
-				{
-					openBuildMenu();
-				}
+				openTowerMenu();
+			}
+			else
+			{
+				openBuildMenu();
 			}
 		}
 	}

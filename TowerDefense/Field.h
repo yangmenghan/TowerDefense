@@ -48,6 +48,7 @@ public:
 	bool mouseHover(sf::RenderWindow&);
 	bool mouseClicking(sf::Event, sf::RenderWindow&);
 	bool mouseClick(sf::Event, sf::RenderWindow&);
+	void resolveEvent(sf::Event, sf::RenderWindow&);
 	void draw(sf::RenderWindow&);			//Draw
 	Path computePath(shared_ptr<Tile>, shared_ptr<Tile>);			//Compute path of enemeny
 	bool tryCross(shared_ptr<Tile>, shared_ptr<Tile>);

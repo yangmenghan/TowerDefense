@@ -50,5 +50,5 @@ public:
 	void returnSpeed();
 	void restartGame();
 	void draw(sf::RenderWindow& w);
-	void resolveEvent(sf::Event event);
+	void resolveEvent(sf::Event event, sf::RenderWindow&);
 };
