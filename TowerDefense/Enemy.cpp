@@ -66,7 +66,7 @@ bool Enemy::move(){
 	if (position.x == t->getPositionPixel().x && position.y == t->getPositionPixel().y){
 		setTile(t);
 	}
-	sprite.setPosition(sf::Vector2f(float(position.x + TILE_WIDTH), float(position.y + TILE_HEIGHT)));
+	sprite.setPosition(sf::Vector2f(float(position.x), float(position.y)));
 	
 	return true;
 };
