@@ -27,8 +27,11 @@ public :
 
 	void takeDamage(int);
 
+	void draw(sf::RenderWindow&);
+
 protected:
 	int hp;
+	int maxHp;
 	float defence;
 	int bounty;
 	int scoreValue;

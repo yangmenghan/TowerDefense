@@ -32,6 +32,6 @@ public:
 	void setSprite(sf::Sprite mSprite);
 
 	//Functions
-	void draw(sf::RenderWindow&);
+	virtual void draw(sf::RenderWindow&);
 };
 

@@ -18,6 +18,7 @@ Enemy::Enemy(){
 	scoreValue = 0;
 	speed = 0;
 	slowed = false;
+	maxHp = 0;
 }
 
 
@@ -29,6 +30,7 @@ Enemy::Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite m
 	speed = mSpeed;
 	sprite = mSprite;
 	slowed = false;
+	maxHp = mHP;
 }
 
 float Enemy::getDistanceToTarget(){
@@ -130,5 +132,21 @@ int Enemy::getSlowTime(){
 	return slowTime;
 };
 
+void Enemy::draw(sf::RenderWindow &w){
+	sf::RectangleShape rectangle(sf::Vector2f(50,5));
+	rectangle.setFillColor(sf::Color(150, 50, 250, 0));
 
+	// définit un contour orange de 10 pixels d'épaisseur
+	rectangle.setOutlineThickness(1);
+	rectangle.setOutlineColor(sf::Color(255, 255, 255));
+	rectangle.setPosition(sf::Vector2f(position.x, position.y + TILE_HEIGHT));
+
+	sf::RectangleShape rectangle2(sf::Vector2f(50*(hp/maxHp), 5));
+	rectangle2.setFillColor(sf::Color(26, 255, 83));
+	rectangle2.setPosition(sf::Vector2f(position.x, position.y + TILE_HEIGHT));
+
+	w.draw(rectangle2);
+	w.draw(rectangle);
+	w.draw(sprite);
+}
 
