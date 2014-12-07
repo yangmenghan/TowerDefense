@@ -20,7 +20,7 @@ Tile::Tile()
 	{
 		// TODO erreur...
 	}
-	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
+	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);
 	boundingBox = sf::IntRect(position, sf::Vector2i(width, height));
 }
 
@@ -41,6 +41,7 @@ Tile::Tile(int x, int y)//(row,collone)=(x,y)
 		// TODO erreur...
 	}
 	sprite.setTexture(texture);	
+
 	//sf::IntRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
 	boundingBox = sf::IntRect(position, sf::Vector2i(width, height));
 }
@@ -126,11 +127,10 @@ bool Tile::checkClick()
 	return isClicked;
 }
 
-bool Tile::mouseHover(sf::RenderWindow& w)
+void Tile::mouseHover(sf::RenderWindow& w)
 {
 	if (boundingBox.contains(sf::Mouse::getPosition(w)))
 	{
-		spriteUpdate(1);
 		isHovered = true;
 	}
 	else
@@ -138,42 +138,15 @@ bool Tile::mouseHover(sf::RenderWindow& w)
 		spriteUpdate(0);
 		isHovered = false;
 	}
-	return isHovered;
 }
-
-/*
-bool Tile::mouseClicking(sf::Event event, sf::RenderWindow& w)
-{
-	if (mouseHover(w))
-	{
-		if (event.type == sf::Event::MouseButtonPressed)
-		{
-			isClicking = true;
-			//updatesprite
-			spriteUpdate(1); 
-		}
-	}
-	
-	return isClicking;
-}
-
-bool Tile::mouseClick(sf::Event event, sf::RenderWindow& w)
-{
-	if (mouseClicking(event,w))
-	{
-		if (event.type == sf::Event::MouseButtonReleased)
-		{
-			isClicked = true;
-			//updatesprite
-			spriteUpdate(1);
-		}
-	}
-	return isClicked;
-}*/
 
 void Tile::resolveEvent(sf::Event event)
 {
-	//if (!isPolluted())
+	spriteUpdate(1);
+	if (!isPolluted())
+	{
+		spriteUpdate(2);
+	}
 	{
 		if (event.type == sf::Event::MouseButtonPressed)
 		{

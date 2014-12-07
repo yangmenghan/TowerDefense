@@ -114,9 +114,13 @@ void Button::resolveEvent(sf::Event event)
 					spriteUpdate(0);
 				}
 			}
+			isClicked = true;
+			isClicking = false;
 		}
-		isClicked = true;
-		isClicking = false;
+	}
+	else
+	{
+		isClicked = false;
 	}
 }
 

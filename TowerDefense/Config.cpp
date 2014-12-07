@@ -34,14 +34,14 @@ extern const int		TILE_NUM_VER			= 20;
 //extern const int		TILE_NUM				= TILE_NUM_HOR * TILE_NUM_VER;
 extern const int		NUM_START_TILE			= 4 * TILE_NUM_VER;
 extern const int		NUM_END_TILE			= 5 * TILE_NUM_VER  - 1;
-extern const string		TILE_SPRITE				= "sprites/tile_texture.png";
+extern const string		TILE_SPRITE				= "sprites/tile_texture_test.png";
 
 /*
 BuildMenu Constants
 */
 
-extern const int		BUTTON_WIDTH			= 70;
-extern const int		BUTTON_HEIGHT			= 70;
+extern const int		BUTTON_WIDTH			= 50;
+extern const int		BUTTON_HEIGHT			= 50;
 
 /*
 Wave constants

@@ -91,54 +91,26 @@ bool Field::mouseHover(sf::RenderWindow& w)
 	if (boundingBox.contains(mousePosition))
 	{
 		isHovered = true;
-		//updatesprite
 	}
 	else
 	{
 		isHovered = false;
-		//updatesprite
 	}
 
 	return isHovered;
 }
-/*
-bool Field::mouseClicking(sf::Event event, sf::RenderWindow& w)
-{
-	if (mouseHover(w))
-	{
-		if (event.type == sf::Event::MouseButtonPressed)
-		{
-			return true;
-			//updatesprite
-		}
-	}
-	return false;
-}
 
-bool Field::mouseClick(sf::Event event, sf::RenderWindow& w)
-{
-	if (mouseClicking(event,w))
-	{
-		if (event.type == sf::Event::MouseButtonReleased)
-		{
-			return true;
-			//updatesprite
-		}
-	}
-	return false;
-}
-*/
 void Field::resolveEvent(sf::Event event)
 {
 	for (auto t : tilesMap)
 	{
+		if (t->checkHover())
 		t->resolveEvent(event);
 	}
 }
 
 void Field::draw(sf::RenderWindow& w)
 {
-	//w.draw(sprite);
 	for (shared_ptr<Tile> t : tilesMap){
 		mouseHover(w);
 		t->draw(w);
