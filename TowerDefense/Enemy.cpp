@@ -51,21 +51,21 @@ bool Enemy::move(){
 
 	int gameSpeed = LevelManager::getLevelManager()->getSpeed();
 
-	if(position.x < t->getPosition().x){
+	if(position.x < t->getPositionPixel().x){
 		position.x = position.x + gameSpeed * speed;
 	}
-	else if (position.x > t->getPosition().x){
+	else if (position.x > t->getPositionPixel().x){
 		position.x = position.x - gameSpeed * speed;
 	}
 	
-	if (position.y < t->getPosition().y){
+	if (position.y < t->getPositionPixel().y){
 		position.y = position.y + gameSpeed * speed;
 	}
-	else if (position.y > t->getPosition().y){
+	else if (position.y > t->getPositionPixel().y){
 		position.y = position.y - gameSpeed * speed;
 	}
 	
-	if (position.x == t->getPosition().x && position.y == t->getPosition().y){
+	if (position.x == t->getPositionPixel().x && position.y == t->getPositionPixel().y){
 		setTile(t);
 	}
 	sprite.setPosition(sf::Vector2f(float(position.x + TILE_WIDTH), float(position.y + TILE_HEIGHT)));
