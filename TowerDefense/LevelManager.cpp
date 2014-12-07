@@ -78,7 +78,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 					removeEnemy(i);
 					i--;
 				}
-				else if (enemies.at(i)->getPosition() == field.getEndTile()->getPosition()){
+				else if (enemies.at(i)->getPosition() == field.getEndTile()->getPositionPixel()){
 					player.manageHP(-1);
 					enemies.at(i)->succed();
 					removeEnemy(i);

@@ -124,21 +124,21 @@ bool Tile::mouseHover(sf::RenderWindow& w)
 
 	if (boundingBox.contains(mousePosition))
 	{
-		if (isPolluted())
+		if (currentSprite == 0)
 		{
-			isHovered = true;
-			spriteUpdate(2);
+			currentSprite = 1;
+			spriteUpdate(currentSprite);
 		}
-		else
-		{
-			isHovered = true;
-			spriteUpdate(1);
-		}
+		isHovered = true;
 	}
 	else
 	{
+		if (currentSprite == 1)
+		{
+			currentSprite = 0;
+			spriteUpdate(currentSprite);
+		}
 		isHovered = false;
-		spriteUpdate(0);
 	}
 	return isHovered;
 }
