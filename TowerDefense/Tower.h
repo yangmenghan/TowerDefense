@@ -27,6 +27,8 @@ public:
 	void upgradeTw();
 	void downgradeTw();
 	virtual void doAttack() = 0;
+
+	void spriteUpdate(int i);
 	void showRangeCircle(); 
 
 protected:
@@ -37,9 +39,9 @@ protected:
 	int level;
 	float range[3];
 
+	int currentSprite;
 
 	sf::CircleShape rangeCircle;
-	sf::Texture texture;
-	sf::Texture texturesRead[3];
+	
 };
 

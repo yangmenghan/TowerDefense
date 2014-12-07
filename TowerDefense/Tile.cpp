@@ -20,13 +20,13 @@ Tile::Tile()
 	{
 		// TODO erreur...
 	}
-	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
+	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);
 	boundingBox = sf::IntRect(position, sf::Vector2i(width, height));
 }
 
 Tile::Tile(int x, int y)//(row,collone)=(x,y)
 {
-	positionPixel = sf::Vector2i(x*TILE_WIDTH, y*TILE_HEIGHT);
+	positionPixel = sf::Vector2i(x*TILE_WIDTH + 50, y*TILE_HEIGHT + 50);
 	position = sf::Vector2i(x, y);
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
@@ -41,7 +41,8 @@ Tile::Tile(int x, int y)//(row,collone)=(x,y)
 		// TODO erreur...
 	}
 	sprite.setTexture(texture);	
-	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
+
+	//sf::IntRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
 	boundingBox = sf::IntRect(position, sf::Vector2i(width, height));
 }
 
@@ -116,12 +117,20 @@ void Tile::setSprite(sf::Sprite mySprite)
 }
 
 //Functions
+bool Tile::checkHover()
+{
+	return isHovered;
+}
 
-bool Tile::mouseHover(sf::RenderWindow& w)
+bool Tile::checkClick()
+{
+	return isClicked;
+}
+
+void Tile::mouseHover(sf::RenderWindow& w)
 {
 	if (boundingBox.contains(sf::Mouse::getPosition(w)))
 	{
-		spriteUpdate(1);
 		isHovered = true;
 	}
 	else
@@ -129,45 +138,37 @@ bool Tile::mouseHover(sf::RenderWindow& w)
 		spriteUpdate(0);
 		isHovered = false;
 	}
-	return isHovered;
 }
 
-bool Tile::mouseClicking(sf::Event event, sf::RenderWindow& w)
+void Tile::resolveEvent(sf::Event event)
 {
-	if (mouseHover(w))
+	spriteUpdate(1);
+	if (!isPolluted())
+	{
+		spriteUpdate(2);
+	}
 	{
 		if (event.type == sf::Event::MouseButtonPressed)
 		{
 			isClicking = true;
-			//updatesprite
-			spriteUpdate(1); 
+			if (currentSprite == 0)
+			{
+				currentSprite = 1;
+				spriteUpdate(currentSprite);
+			}
+			
+			
 		}
-	}
-	
-	return isClicking;
-}
-
-bool Tile::mouseClick(sf::Event event, sf::RenderWindow& w)
-{
-	if (mouseClicking(event,w))
-	{
 		if (event.type == sf::Event::MouseButtonReleased)
 		{
 			isClicked = true;
-			//updatesprite
-			spriteUpdate(1);
-		}
-	}
-	return isClicked;
-}
 
-void Tile::resolveEvent(sf::Event event, sf::RenderWindow& w)
-{
-	
-	if (!isPolluted())
-	{
-		if (mouseClick(event,w))
-		{
+			if (currentSprite == 0)
+			{
+				currentSprite = 1;
+				spriteUpdate(currentSprite);
+			}
+
 			if (hasTower())
 			{
 				openTowerMenu();
@@ -209,7 +210,9 @@ bool Tile::hasTower()
 
 shared_ptr<BuildMenu> Tile::openBuildMenu()
 {
-	return make_shared<BuildMenu>();
+	auto buildMenuptr = make_shared<BuildMenu>();
+	MenuManager::getMenuManager()->addMenu(buildMenuptr);
+	return buildMenuptr;
 }
 
 shared_ptr<TowerMenu> Tile::openTowerMenu()

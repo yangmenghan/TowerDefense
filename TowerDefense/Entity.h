@@ -6,7 +6,7 @@ class Entity
 {
 protected:
 	sf::Vector2i position;
-	sf::Vector2f size;
+	sf::Vector2i size;
 	float speed;
 	sf::Sprite sprite;
 	shared_ptr<Tile> tile;
@@ -20,14 +20,14 @@ public:
 
 	//Getters
 	sf::Vector2i getPosition();
-	sf::Vector2f getSize();
+	sf::Vector2i getSize();
 	float getSpeed();
 	sf::Sprite getSprite();
 	shared_ptr<Tile> getTile();
 
 	//Setters
 	void setPosition(sf::Vector2i mPosition);
-	void setSize(sf::Vector2f mSize);
+	void setSize(sf::Vector2i mSize);
 	void setSpeed(float mSpeed);
 	void setSprite(sf::Sprite mSprite);
 

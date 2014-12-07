@@ -79,67 +79,38 @@ void Field::setSprite(sf::Sprite mySprite)
 }
 
 //Functions
+bool Field::checkHover()
+{
+	return isHovered;
+}
 
 bool Field::mouseHover(sf::RenderWindow& w)
 {
-	bool isHovering = false;
 	sf::Vector2f mousePosition((float)sf::Mouse::getPosition(w).x, (float)sf::Mouse::getPosition(w).y);
 
 	if (boundingBox.contains(mousePosition))
 	{
-		isHovering = true;
-		
-		//updatesprite
+		isHovered = true;
 	}
 	else
 	{
-		isHovering = false;
-		//updatesprite
+		isHovered = false;
 	}
 
-	return isHovering;
+	return isHovered;
 }
 
-bool Field::mouseClicking(sf::Event event, sf::RenderWindow& w)
+void Field::resolveEvent(sf::Event event)
 {
-	if (mouseHover(w))
+	for (auto t : tilesMap)
 	{
-		if (event.type == sf::Event::MouseButtonPressed)
-		{
-			return true;
-			//updatesprite
-		}
-	}
-	return false;
-}
-
-bool Field::mouseClick(sf::Event event, sf::RenderWindow& w)
-{
-	if (mouseClicking(event,w))
-	{
-		if (event.type == sf::Event::MouseButtonReleased)
-		{
-			return true;
-			//updatesprite
-		}
-	}
-	return false;
-}
-
-void Field::resolveEvent(sf::Event event, sf::RenderWindow& w)
-{
-	if (mouseHover(w) || mouseClick(event, w) || mouseClicking(event,w))
-	{
-		for (auto t : tilesMap)
-		{
-			t->resolveEvent(event, w);
-		}
+		if (t->checkHover())
+		t->resolveEvent(event);
 	}
 }
 
 void Field::draw(sf::RenderWindow& w)
 {
-	//w.draw(sprite);
 	for (shared_ptr<Tile> t : tilesMap){
 		mouseHover(w);
 		t->draw(w);

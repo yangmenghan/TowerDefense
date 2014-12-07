@@ -152,7 +152,7 @@ void GameMenu::resolveEvent(sf::Event event)
 			restartGame();
 		}
 	}
-	//LevelManager::getLevelManager()->getField().resolveEvent(event,w);
+	LevelManager::getLevelManager()->getField().resolveEvent(event);
 
 	/*
 	if (giveUpButton.mouseClick(event))

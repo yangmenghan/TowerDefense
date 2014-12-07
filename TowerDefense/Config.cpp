@@ -34,14 +34,14 @@ extern const int		TILE_NUM_VER			= 20;
 //extern const int		TILE_NUM				= TILE_NUM_HOR * TILE_NUM_VER;
 extern const int		NUM_START_TILE			= 4 * TILE_NUM_VER;
 extern const int		NUM_END_TILE			= 5 * TILE_NUM_VER  - 1;
-extern const string		TILE_SPRITE				= "sprites/tile_texture.png";
+extern const string		TILE_SPRITE				= "sprites/tile_texture_test.png";
 
 /*
 BuildMenu Constants
 */
 
-extern const int		BUTTON_WIDTH			= 70;
-extern const int		BUTTON_HEIGHT			= 70;
+extern const int		BUTTON_WIDTH			= 50;
+extern const int		BUTTON_HEIGHT			= 50;
 
 /*
 Wave constants
@@ -103,18 +103,14 @@ extern const float		NORMAL_TOWER_DAMAGE[3]	= { 10, 20, 30 };
 extern const float		NORMAL_TOWER_RANGE[3]	= { 10, 15, 20 };
 extern const int		NORMAL_TOWER_PRICE		= 200;
 extern const int		NORMAL_TOWER_INCOME[3]	= {150,300, 450 };
-extern const string		NORMAL_TOWER_SPRITE_ADD[3] = { 
-														"sprites/tower_lv1.png",
-														"sprites/tower_lv2.png",
-														"sprites/tower_lv3.png" 
-													};
+extern const string		NORMAL_TOWER_SPRITE_ADD = "sprites/normal_tower.png";
 
 extern const float		SUN_TOWER_DAMAGE[3]		= { 10, 15, 20 };
 //extern const int		SUN_TOWER_SPEED[3]		= { 30, 20, 10 };
 extern const float		SUN_TOWER_RANGE[3]		= { 10, 15, 20 };
 extern const int		SUN_TOWER_PRICE			= 500;
 extern const int		SUN_TOWER_INCOME[3]		= {400, 800, 1200};
-extern const string		SUN_TOWER_SPRITE_ADD[3] = { "", "", "" };
+extern const string		SUN_TOWER_SPRITE_ADD	= "";
 
 extern const float		MONEY_TOWER_DAMAGE[3]	= { 0, 0, 0 };
 extern const int		MONEY_TOWER_GENERATION_UNIT[3] = { 300, 600, 900 }; //TODO : = ???
@@ -122,14 +118,14 @@ extern const int		MONEY_TOWER_GENERATION_UNIT[3] = { 300, 600, 900 }; //TODO : =
 extern const float		MONEY_TOWER_RANGE[3]	= { 0, 0, 0 };
 extern const int		MONEY_TOWER_PRICE		= 400;
 extern const int		MONEY_TOWER_INCOME[3]	= {300, 600, 900};
-extern const string		MONEY_TOWER_SPRITE_ADD[3] = { "", "", "" };
+extern const string		MONEY_TOWER_SPRITE_ADD	= "";
 
 extern const float		SLOW_TOWER_DAMAGE[3]	= { 10, 20, 30 };
 extern const int		SLOW_TOWER_SPEED[3]		= { 15, 10, 5 };
 extern const float		SLOW_TOWER_RANGE[3]		= { 10, 15, 20 };
 extern const int		SLOW_TOWER_PRICE		= 300;
 extern const int		SLOW_TOWER_INCOME[3]	= {250, 500, 750};
-extern const string		SLOW_TOWER_SPRITE_ADD[3] = { "", "", "" };
+extern const string		SLOW_TOWER_SPRITE_ADD	= "";
 
 /*
 Attack constants

@@ -5,6 +5,7 @@
 #include <Vector>
 #include "BuildMenu.h"
 #include "TowerMenu.h"
+#include "MenuManager.h"
 
 class Tower;
 
@@ -47,10 +48,10 @@ public:
 	void setSprite(sf::Sprite);
 
 	//Functions	
-	bool mouseHover(sf::RenderWindow& w);
-	bool mouseClicking(sf::Event, sf::RenderWindow& );
-	bool mouseClick(sf::Event, sf::RenderWindow& );
-	void resolveEvent(sf::Event, sf::RenderWindow& );
+	void mouseHover(sf::RenderWindow& w);
+	bool checkHover();
+	bool checkClick();
+	void resolveEvent(sf::Event );
 	bool isPolluted();							//Determine if the tower in this tile is polluted by enemy.
 	bool hasTower();							//Determine if there is a tower built in this tile.
 	shared_ptr<BuildMenu> openBuildMenu();		//Open the menu for build a tower.
