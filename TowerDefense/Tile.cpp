@@ -13,37 +13,33 @@ Tile::Tile()
 	cooldown = 0;
 	tower = NULL;
 	isHovered = false;
-	isClicked = false;
-	isClicking = false;
 	currentSprite = 0;
-	if (!texture.loadFromFile(TILE_SPRITE))
+	if (!texture.loadFromFile(TILE_SPRITE[currentSprite]))
 	{
 		// TODO erreur...
 	}
-	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);
-	boundingBox = sf::IntRect(position, sf::Vector2i(width, height));
+	sprite.setTexture(texture);
+	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
+	boundingBox = sprite.getGlobalBounds();
 }
 
 Tile::Tile(int x, int y)//(row,collone)=(x,y)
 {
-	positionPixel = sf::Vector2i(x*TILE_WIDTH + 50, y*TILE_HEIGHT + 50);
+	positionPixel = sf::Vector2i(x*TILE_WIDTH, y*TILE_HEIGHT);
 	position = sf::Vector2i(x, y);
 	width = TILE_WIDTH;
 	height = TILE_HEIGHT;
 	cooldown = 0;
 	tower = NULL;
 	isHovered = false;	
-	isClicked = false;
-	isClicking = false;
 	currentSprite = 0;
-	if (!texture.loadFromFile(TILE_SPRITE))
+	if (!texture.loadFromFile(TILE_SPRITE[currentSprite]))
 	{
 		// TODO erreur...
 	}
 	sprite.setTexture(texture);	
-
-	//sf::IntRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
-	boundingBox = sf::IntRect(position, sf::Vector2i(width, height));
+	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);//Board size = 50 ?
+	boundingBox = bounding;
 }
 
 Tile::~Tile(){}
@@ -117,65 +113,77 @@ void Tile::setSprite(sf::Sprite mySprite)
 }
 
 //Functions
-bool Tile::checkHover()
-{
-	return isHovered;
-}
 
-bool Tile::checkClick()
+bool Tile::mouseHover(sf::RenderWindow& w)
 {
-	return isClicked;
-}
+	sf::Vector2f mousePosition((float)sf::Mouse::getPosition(w).x, (float)sf::Mouse::getPosition(w).y);
 
-void Tile::mouseHover(sf::RenderWindow& w)
-{
-	if (boundingBox.contains(sf::Mouse::getPosition(w)))
+	if (boundingBox.contains(mousePosition))
 	{
+		if (currentSprite == 0)
+		{
+			currentSprite = 1;
+			spriteUpdate(currentSprite);
+		}
 		isHovered = true;
 	}
 	else
 	{
-		spriteUpdate(0);
+		if (currentSprite == 1)
+		{
+			currentSprite = 0;
+			spriteUpdate(0);
+		}
 		isHovered = false;
 	}
+	return isHovered;
 }
 
-void Tile::resolveEvent(sf::Event event)
+bool Tile::mouseClicking(sf::Event event, sf::RenderWindow& w)
 {
-	spriteUpdate(1);
-	if (!isPolluted())
-	{
-		spriteUpdate(2);
-	}
+	if (mouseHover(w))
 	{
 		if (event.type == sf::Event::MouseButtonPressed)
 		{
-			isClicking = true;
-			if (currentSprite == 0)
-			{
-				currentSprite = 1;
-				spriteUpdate(currentSprite);
-			}
-			
-			
+			return true;
+			//updatesprite
+			spriteUpdate(1);
 		}
+	}
+	return false;
+}
+
+bool Tile::mouseClick(sf::Event event, sf::RenderWindow& w)
+{
+	if (mouseClicking(event,w))
+	{
 		if (event.type == sf::Event::MouseButtonReleased)
 		{
-			isClicked = true;
+			return true;
+			//updatesprite
+			spriteUpdate(1);
+		}
+	}
+	return false;
+}
 
-			if (currentSprite == 0)
+void Tile::resolveEvent(sf::Event event, sf::RenderWindow& w)
+{
+	
+	if (!isPolluted())
+	{
+		if (mouseHover(w))
+		{
+			if (mouseClick(event,w))
 			{
-				currentSprite = 1;
-				spriteUpdate(currentSprite);
-			}
-
-			if (hasTower())
-			{
-				openTowerMenu();
-			}
-			else
-			{
-				openBuildMenu();
+				if (hasTower())
+				{
+					openTowerMenu();
+				}
+				else
+				{
+					openBuildMenu();
+				}
 			}
 		}
 	}
@@ -186,7 +194,6 @@ bool Tile::isPolluted()
 {
 	if (cooldown != 0)
 	{
-		spriteUpdate(2);
 		return true;
 	}
 	else
@@ -210,9 +217,7 @@ bool Tile::hasTower()
 
 shared_ptr<BuildMenu> Tile::openBuildMenu()
 {
-	auto buildMenuptr = make_shared<BuildMenu>();
-	MenuManager::getMenuManager()->addMenu(buildMenuptr);
-	return buildMenuptr;
+	return make_shared<BuildMenu>();
 }
 
 shared_ptr<TowerMenu> Tile::openTowerMenu()
@@ -224,14 +229,17 @@ shared_ptr<TowerMenu> Tile::openTowerMenu()
 void Tile::draw(sf::RenderWindow& w)
 {
 	sprite.setTexture(texture);
-	sf::Vector2i spriteInit(0, currentSprite*height);
-	sprite.setTextureRect(sf::IntRect(spriteInit, sf::Vector2i(width, height)));
 
-	sprite.setPosition(sf::Vector2f(float(positionPixel.x), float(positionPixel.y)));
+	sprite.setTextureRect(sf::IntRect(sf::Vector2i(0,0), sf::Vector2i(width, height)));
+
+	sprite.setPosition(sf::Vector2f(float(positionPixel.x + TILE_WIDTH), float(positionPixel.y+TILE_HEIGHT)));
+	
+	mouseHover(w);
 	w.draw(sprite);
 }
 
 void Tile::spriteUpdate(int i)
 {
 	currentSprite = i;
+	texture.loadFromFile(TILE_SPRITE[currentSprite]);
 }
