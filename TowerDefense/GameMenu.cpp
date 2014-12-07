@@ -60,10 +60,13 @@ void GameMenu::speedGame()
 
 void GameMenu::restartGame()
 {
-	MenuManager* m = MenuManager::getMenuManager();
+	//MenuManager* m = MenuManager::getMenuManager();
 
-	m->popMenu();
-	m->addMenu(make_shared<GameMenu>(GAME_MENU_DEFAULT_TEXTURE, sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT), sf::Vector2i(0, 0)));
+	//m->popMenu();
+	//m->addMenu(make_shared<GameMenu>(GAME_MENU_DEFAULT_TEXTURE, sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT), sf::Vector2i(0, 0)));
+
+	LevelManager::getLevelManager()->restartGame();
+
 }
 
 

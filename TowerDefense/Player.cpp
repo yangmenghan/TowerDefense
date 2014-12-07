@@ -2,11 +2,14 @@
 #include "Config.h"
 
 Player::Player(){
+	init();
+};
+
+void Player::init(){
 	money = INIT_MONEY;
 	hp = INIT_HP;
 	score = 0;
-};
-
+}
 
 void Player::manageMoney(int m){
 	money = money + m;

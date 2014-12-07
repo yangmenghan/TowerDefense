@@ -25,7 +25,7 @@ void LevelManager::kill(){
 LevelManager::LevelManager()
 {
 	waveCooldown = WAVE_COOLDOWN;
-	loadWaves();
+	startGame();
 }
 
 LevelManager::~LevelManager(){
@@ -138,6 +138,25 @@ void LevelManager::victory(){
 
 void LevelManager::gameOver(){
 	//TODO
+}
+
+void LevelManager::startGame(){
+	loadWaves();
+	player.init();
+}
+
+void LevelManager::stopGame(){
+	gameSpeed = 0;
+	field = Field();
+	waves.clear();
+	enemies.clear();
+	towers.clear();
+
+}
+
+void LevelManager::restartGame(){
+	stopGame();
+	startGame();
 }
 
 void LevelManager::addEnemy(shared_ptr<Enemy> e){
