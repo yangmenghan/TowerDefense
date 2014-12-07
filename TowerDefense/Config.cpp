@@ -178,5 +178,5 @@ extern const sf::Vector2i	BACK_BUTTON_POSITION	= sf::Vector2i((WINDOW_WIDTH - MU
 /*
 Other constants
 */
-extern const int		INIT_MONEY				= 0;
+extern const int		INIT_MONEY				= 400;
 extern const int		INIT_HP					= 10;

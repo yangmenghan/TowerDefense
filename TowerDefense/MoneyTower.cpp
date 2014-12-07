@@ -38,12 +38,12 @@ Generate money in a frequency defined by timer
 
 void MoneyTower::generateMoney()
 {
-		if (timer == 0)
-		{
-			LevelManager::getLevelManager()->getPlayer()->manageMoney(MONEY_TOWER_GENERATION_UNIT[level - 1]);
-			timer = speed;
-		}
-		else
-			timer--;
-		int m = LevelManager::getLevelManager()->getPlayer()->getMoney();
+	if (timer == 0)
+	{
+		LevelManager::getLevelManager()->getPlayer()->manageMoney(MONEY_TOWER_GENERATION_UNIT[level - 1]);
+		int c = LevelManager::getLevelManager()->getPlayer()->getMoney();
+		timer = speed;
+	}
+	else
+		timer--;
 }

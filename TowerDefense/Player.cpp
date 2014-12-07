@@ -2,7 +2,10 @@
 #include "Config.h"
 
 Player::Player(){
-	init();
+	money = INIT_MONEY;
+	hp = INIT_HP;
+	score = 0;
+	//init();
 };
 
 void Player::init(){
