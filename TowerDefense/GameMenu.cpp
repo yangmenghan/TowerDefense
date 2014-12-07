@@ -16,6 +16,15 @@ GameMenu::GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector
 {
 	gameSpeed = 1;
 	levelManager = LevelManager::getLevelManager();
+	shared_ptr<AudioManager> audio = AudioManager::getAudioManager();
+	if (audio->isMute() == false)
+	{
+		muteButton.spriteUpdate(0);
+	}
+	else
+	{
+		muteButton.spriteUpdate(1);
+	}
 }
 
 GameMenu::~GameMenu(){}
