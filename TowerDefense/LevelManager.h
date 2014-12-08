@@ -39,6 +39,8 @@ public:
 	void nextWave();
 	void loadWaves(); 
 
+	void updatePath();
+
 	void gameOver(); //TODO
 	void victory(); //TODO
 

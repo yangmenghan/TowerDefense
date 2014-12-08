@@ -37,9 +37,7 @@ Enemy::~Enemy(){}
 
 float Enemy::getDistanceToTarget(){
 
-	return LevelManager::getLevelManager()->getField()
-		.computePath(tile, LevelManager::getLevelManager()->getField().getEndTile())
-		.getPath().size();
+	return path.getPath().size();
 };
 
 bool Enemy::move(){
@@ -50,9 +48,7 @@ bool Enemy::move(){
 		unSlow();
 	}
 
-	vector<shared_ptr<Tile>> tiles = LevelManager::getLevelManager()->getField().computePath(tile, LevelManager::getLevelManager()->getField().getEndTile()).getPath();
-
-	shared_ptr<Tile> t = tiles[1];
+	shared_ptr<Tile> t = path.getPath()[1];
 
 	int gameSpeed = LevelManager::getLevelManager()->getSpeed();
 
@@ -87,6 +83,7 @@ void Enemy::setTile(shared_ptr<Tile> t){
 	tile = t;
 	if (t != NULL){
 		position = t->getPositionPixel();
+		updatePath(); //TODO : just need to remove the previous tile !
 	}
 }
 
@@ -114,6 +111,11 @@ void Enemy::unSlow(){
 	speed = speed + SLOW_EFFECT;
 	slowed = false;
 };
+
+void Enemy::updatePath(){
+	path = LevelManager::getLevelManager()->getField().computePath(tile, LevelManager::getLevelManager()->getField().getEndTile());
+}
+
 
 void Enemy::takeDamage(int damage){
 	if (hp - damage > 0)

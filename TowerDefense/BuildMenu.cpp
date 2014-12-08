@@ -130,4 +130,5 @@ void BuildMenu::close()
 {
 	MenuManager::getMenuManager()->popMenu();
 	LevelManager::getLevelManager()->setSpeed(1);
+	LevelManager::getLevelManager()->updatePath();
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include "Entity.h"
+#include "Path.h"
 #include <SFML\Graphics.hpp>
  
 class Enemy : public Entity{
@@ -14,6 +15,7 @@ public :
 	void dieWithoutBonus();
 	void slow(int);
 	void unSlow();
+	void updatePath();
 
 	int getHP();
 	int getBounty();
@@ -38,5 +40,6 @@ protected:
 	int scoreValue;
 	int slowTime;
 	bool slowed;
+	Path path;
 };
 

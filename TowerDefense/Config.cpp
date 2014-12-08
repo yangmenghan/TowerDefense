@@ -1,10 +1,8 @@
 #include "Config.h"
 #include <SFML\Graphics.hpp>
 
-/* Global game configuration constants
-For using those constants :
-include Config.h in your class
-call simply the name of the global constant ! :D
+/* 
+Global game configuration constants
 */
 
 /*
@@ -28,10 +26,9 @@ Tile constants
 
 extern const int		TILE_WIDTH				= 50; //changed from 100
 extern const int		TILE_HEIGHT				= 50;
-extern const int		TILE_COOLDOWN			= 50;
+extern const int		TILE_COOLDOWN			= 240;
 extern const int		TILE_NUM_HOR			= 10;
 extern const int		TILE_NUM_VER			= 20;
-//extern const int		TILE_NUM				= TILE_NUM_HOR * TILE_NUM_VER;
 extern const int		NUM_START_TILE			= 4 * TILE_NUM_VER;
 extern const int		NUM_END_TILE			= 5 * TILE_NUM_VER  - 1;
 extern const string		TILE_SPRITE				= "sprites/tile_texture_test.png";

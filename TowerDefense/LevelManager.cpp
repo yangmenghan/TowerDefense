@@ -31,9 +31,16 @@ LevelManager::LevelManager()
 LevelManager::~LevelManager(){
 }
 
+void LevelManager::updatePath(){
+	currentPath = field.computePath(field.getStartTile(), field.getEndTile());
+	for (auto e : enemies){
+		e->updatePath();
+	}
+}
+
 void LevelManager::gameLoop(RenderWindow& w){
 		field.draw(w);
-		//currentPath.draw(w);
+		currentPath.draw(w);
 
 		//field.computePath(field.getStartTile(), field.getEndTile()).draw(w);
 
@@ -152,9 +159,9 @@ void LevelManager::gameOver(){
 
 void LevelManager::startGame(){
 	loadWaves();
+	updatePath();
 	//player = Player();
 	//player.init();
-	currentPath = field.computePath(field.getStartTile(), field.getEndTile());
 }
 
 void LevelManager::stopGame(){
