@@ -11,7 +11,7 @@ class Tower :
 public:
 	Tower(shared_ptr<Tile>);
 	Tower();
-	~Tower();
+	virtual ~Tower();
 
 	float getDamage();
 	int getPrice();

@@ -33,6 +33,8 @@ Enemy::Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite m
 	maxHp = mHP;
 }
 
+Enemy::~Enemy(){}
+
 float Enemy::getDistanceToTarget(){
 	return LevelManager::getLevelManager()->getField().timeCross(tile, LevelManager::getLevelManager()->getField().getEndTile());
 };
