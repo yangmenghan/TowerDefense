@@ -112,12 +112,12 @@ void Tower::downgradeTw()
 			spriteUpdate(currentSprite);
 		}
 	}
-	if (level == 0)
+	/*if (level == 0)
 	{
-		LevelManager::getLevelManager()->removeTower(shared_ptr<Tower>(this));
 		tile->setTower(NULL);
+		LevelManager::getLevelManager()->removeTower(shared_ptr<Tower>(this));
 		//this->~Tower();//Delete this tower
-	}
+	}*/
 		
 }
 
@@ -126,7 +126,8 @@ Sell this tower and
 */
 void Tower::sellTw()
 {
-	LevelManager::getLevelManager()->getPlayer().manageMoney(income[level - 1]);
+	LevelManager::getLevelManager()->getPlayer()->manageMoney(income[level - 1]);
+	tile->setTower(NULL);
 }
 
 

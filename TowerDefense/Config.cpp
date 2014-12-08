@@ -1,10 +1,8 @@
 #include "Config.h"
 #include <SFML\Graphics.hpp>
 
-/* Global game configuration constants
-For using those constants :
-include Config.h in your class
-call simply the name of the global constant ! :D
+/* 
+Global game configuration constants
 */
 
 /*
@@ -28,10 +26,9 @@ Tile constants
 
 extern const int		TILE_WIDTH				= 50; //changed from 100
 extern const int		TILE_HEIGHT				= 50;
-extern const int		TILE_COOLDOWN			= 50;
+extern const int		TILE_COOLDOWN			= 240;
 extern const int		TILE_NUM_HOR			= 10;
 extern const int		TILE_NUM_VER			= 20;
-//extern const int		TILE_NUM				= TILE_NUM_HOR * TILE_NUM_VER;
 extern const int		NUM_START_TILE			= 4 * TILE_NUM_VER;
 extern const int		NUM_END_TILE			= 5 * TILE_NUM_VER  - 1;
 extern const string		TILE_SPRITE				= "sprites/tile_texture.png";
@@ -47,10 +44,10 @@ extern const int		BUTTON_HEIGHT			= 50;
 Wave constants
 */
 
-extern const int		WAVE_TOTAL				= 21;
+extern const int		WAVE_TOTAL				= 24;
 extern const string		WAVE_FILE_ADDRESS		= "Waves.txt";
-extern const int		WAVE_SPAWN_COOLDOWN		= 300;
-extern const int		WAVE_COOLDOWN			= 600;
+extern const int		WAVE_SPAWN_COOLDOWN		= 60;
+extern const int		WAVE_COOLDOWN			= 300;
 
 /*
 Enemy constants
@@ -71,13 +68,13 @@ extern const float		FAST_ENEMY_DEFENCE		= 7;
 extern const string		FAST_ENEMY_SPRITE_ADD	= "sprites/Enemy2.png";
 
 extern const float		BOMB_ENEMY_SPEED		= 5;
-extern const int		BOMB_ENEMY_HP			= 200;
+extern const int		BOMB_ENEMY_HP			= 5000;
 extern const int		BOMB_ENEMY_BOUNTY		= 100;
 extern const int		BOMB_ENEMY_SCOREVALUE	= 200;
 extern const float		BOMB_ENEMY_DEFENCE		= 15;
 extern const string		BOMB_ENEMY_SPRITE_ADD	= "sprites/Enemy1.png";
-extern const int		BOMB_ENEMY_TRIGGER		= 25;
-extern const int		BOMB_ENEMY_COUNTDOWN	= 5;
+extern const int		BOMB_ENEMY_TRIGGER		= 4800;
+extern const int		BOMB_ENEMY_COUNTDOWN	= 120;
 
 extern const float		TOUGH_ENEMY_SPEED		= 5;
 extern const int		TOUGH_ENEMY_HP			= 500;
@@ -98,9 +95,9 @@ extern const sf::Color	RANGE_CIRCLE_FILL_COLOR = sf::Color(0, 0, 255, 100);
 extern const int		TOWER_SPEED				= 15;
 
 
-extern const float		NORMAL_TOWER_DAMAGE[3]	= { 10, 20, 30 };
+extern const float		NORMAL_TOWER_DAMAGE[3]	= { 25, 45, 60 };
 //extern const int		NORMAL_TOWER_SPEED[3]	= { 15, 10, 5 };
-extern const float		NORMAL_TOWER_RANGE[3]	= { 10, 15, 20 };
+extern const float		NORMAL_TOWER_RANGE[3]	= { 75, 125, 175 };
 extern const int		NORMAL_TOWER_PRICE		= 200;
 extern const int		NORMAL_TOWER_INCOME[3]	= {150,300, 450 };
 extern const string		NORMAL_TOWER_SPRITE_ADD = "sprites/normal_tower.png";
@@ -110,7 +107,7 @@ extern const float		SUN_TOWER_DAMAGE[3]		= { 10, 15, 20 };
 extern const float		SUN_TOWER_RANGE[3]		= { 10, 15, 20 };
 extern const int		SUN_TOWER_PRICE			= 500;
 extern const int		SUN_TOWER_INCOME[3]		= {400, 800, 1200};
-extern const string		SUN_TOWER_SPRITE_ADD	= "";
+extern const string		SUN_TOWER_SPRITE_ADD	= "sprites/normal_tower.png";
 
 extern const float		MONEY_TOWER_DAMAGE[3]	= { 0, 0, 0 };
 extern const int		MONEY_TOWER_GENERATION_UNIT[3] = { 300, 600, 900 }; //TODO : = ???
@@ -118,14 +115,14 @@ extern const int		MONEY_TOWER_GENERATION_UNIT[3] = { 300, 600, 900 }; //TODO : =
 extern const float		MONEY_TOWER_RANGE[3]	= { 0, 0, 0 };
 extern const int		MONEY_TOWER_PRICE		= 400;
 extern const int		MONEY_TOWER_INCOME[3]	= {300, 600, 900};
-extern const string		MONEY_TOWER_SPRITE_ADD	= "";
+extern const string		MONEY_TOWER_SPRITE_ADD	= "sprites/normal_tower.png";
 
 extern const float		SLOW_TOWER_DAMAGE[3]	= { 10, 20, 30 };
 extern const int		SLOW_TOWER_SPEED[3]		= { 15, 10, 5 };
 extern const float		SLOW_TOWER_RANGE[3]		= { 10, 15, 20 };
 extern const int		SLOW_TOWER_PRICE		= 300;
 extern const int		SLOW_TOWER_INCOME[3]	= {250, 500, 750};
-extern const string		SLOW_TOWER_SPRITE_ADD	= "";
+extern const string		SLOW_TOWER_SPRITE_ADD	= "sprites/normal_tower.png";
 
 /*
 Attack constants
@@ -167,8 +164,8 @@ extern const string		BASIC_TOWER_BUTTON_TEXTURE	= "sprites/normal_tower_button.p
 extern const string		SUN_TOWER_BUTTON_TEXTURE	= "sprites/sun_tower_button.png";
 extern const string		SLOW_TOWER_BUTTON_TEXTURE	= "sprites/slow_tower_button.png";
 extern const string		MONEY_TOWER_BUTTON_TEXTURE	= "sprites/money_tower_button.png";
-extern const string		SELL_BUTTON_TEXTURE			= "";
-extern const string		UPGRADE_BUTTON_TEXTURE		= "";
+extern const string		SELL_BUTTON_TEXTURE			= "sprites/sell_tower_button.png";
+extern const string		UPGRADE_BUTTON_TEXTURE		= "sprites/upgrade_tower_button.png";
 
 extern const sf::Vector2i	BUTTON_SIZE			  = sf::Vector2i(408, 77);
 extern const sf::Vector2i	MUTE_BUTTON_SIZE	  = sf::Vector2i(100, 32);
@@ -187,5 +184,5 @@ extern const sf::Vector2i	BACK_BUTTON_POSITION	= sf::Vector2i((WINDOW_WIDTH - MU
 /*
 Other constants
 */
-extern const int		INIT_MONEY				= 0;
+extern const int		INIT_MONEY				= 400;
 extern const int		INIT_HP					= 10;

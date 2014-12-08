@@ -22,7 +22,7 @@ private:
 public:
 	StartMenu();
 	StartMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition);
-	virtual ~StartMenu();
+	~StartMenu();
 
 	void draw(sf::RenderWindow&);
 

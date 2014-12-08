@@ -17,6 +17,7 @@ public:
 	void setCenter(sf::Vector2i mCenter);
 	void setRange(float mRange);
 	void setSpeed(int mSpeed);
+	void setTimer(int mTimer);
 
 
 	shared_ptr<Enemy> getTarget();

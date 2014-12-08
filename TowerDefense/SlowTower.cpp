@@ -15,7 +15,7 @@ SlowTower::SlowTower(shared_ptr<Tile> mTile)
 
 	timer = speed;
 
-	if (!texture.loadFromFile(NORMAL_TOWER_SPRITE_ADD))
+	if (!texture.loadFromFile(SLOW_TOWER_SPRITE_ADD))
 	{
 		// TODO erreur...
 	}

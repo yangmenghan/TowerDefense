@@ -20,9 +20,10 @@ public:
 
 	//Constructors and destroyers
 	TowerMenu::TowerMenu();						//Defauld constructor.
-	TowerMenu(std::string, sf::Vector2u, sf::Vector2i, shared_ptr<Tile>);
+
 												//Constructor a towermenu in this tile.
-	virtual ~TowerMenu();								//Destructor.
+	TowerMenu(shared_ptr<Tile>);
+	~TowerMenu();								//Destructor.
 
 	//Getters
 	shared_ptr<Tile> getTile();					//Get the tile which opens the towermenu.

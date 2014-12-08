@@ -16,7 +16,7 @@ protected:
 public:
 	//Constructors and destroyers
 	Entity();
-	~Entity();
+	virtual ~Entity();
 
 	//Getters
 	sf::Vector2i getPosition();
@@ -32,6 +32,6 @@ public:
 	void setSprite(sf::Sprite mSprite);
 
 	//Functions
-	void draw(sf::RenderWindow&);
+	virtual void draw(sf::RenderWindow&);
 };
 

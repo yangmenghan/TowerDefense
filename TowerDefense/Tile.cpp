@@ -70,7 +70,7 @@ shared_ptr<Tower>  Tile::getTower()
 	return tower;
 }
 
-int Tile::getCooldowm()
+int Tile::getCooldown()
 {
 	return cooldown;
 }
@@ -79,10 +79,10 @@ std::vector<shared_ptr<Tile>> Tile::getNeighbor(int _range)
 {
 	std::vector<shared_ptr<Tile>> neighborTiles;
 	shared_ptr<Tile> pNeighber;
-	int i, j;
-	for (i = position.x - _range; i <= position.x + _range; i++)
+
+	for (int i = position.x - _range; i <= position.x + _range; i++)
 	{
-		for (j = position.y - _range; j <= position.y + _range; j++)
+		for (int j = position.y - _range; j <= position.y + _range; j++)
 		{
 			if (i >= 0 && i < TILE_NUM_VER && j >= 0 && j <= TILE_NUM_HOR)
 			{
@@ -101,6 +101,13 @@ sf::Sprite Tile::getSprite()
 }
 
 //Setters
+void Tile::setCooldown()
+{
+	cooldown = TILE_COOLDOWN;
+	currentSprite = 2;
+	spriteUpdate(currentSprite);
+}
+
 void Tile::setPosition(sf::Vector2i myPosition)
 {
 	myPosition = myPosition;
@@ -116,11 +123,6 @@ void Tile::setTower(shared_ptr<Tower> myTower)
 	{
 		hasTw = false;
 	}
-}
-
-void Tile::setCooldown(int myCooldown)
-{
-	cooldown = myCooldown;
 }
 
 void Tile::setSprite(sf::Sprite mySprite)
@@ -169,6 +171,7 @@ void Tile::resolveEvent(sf::Event event)
 		currentSprite = 2;
 		spriteUpdate(currentSprite);
 	}
+
 	{
 		if (event.type == sf::Event::MouseButtonPressed)
 		{
@@ -197,7 +200,12 @@ void Tile::resolveEvent(sf::Event event)
 			}
 			else
 			{
-				openBuildMenu();
+				hasTw = true;
+				if (LevelManager::getLevelManager()->getField().tryCross(LevelManager::getLevelManager()->getField().getTile(NUM_START_TILE), LevelManager::getLevelManager()->getField().getTile(NUM_END_TILE)))
+				{
+					openBuildMenu();
+				}
+				hasTw = false;
 			}
 		}
 	}
@@ -206,50 +214,37 @@ void Tile::resolveEvent(sf::Event event)
 
 bool Tile::isPolluted()
 {
-	if (cooldown != 0)
-	{
-		spriteUpdate(2);
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return (cooldown != 0);
 }
 
 bool Tile::hasTower()
 {
 	return hasTw;
-
-	/*if (tower != NULL)
-	{
-		if (tower->getTile()->position == position){
-			return true;
-		}
-		return false;
-	}
-	else
-	{
-		return false;
-	}
-	*/
 }
 
 shared_ptr<BuildMenu> Tile::openBuildMenu()
 {
-	auto buildMenuptr = make_shared<BuildMenu>(shared_ptr<Tile>(this));
+	auto buildMenuptr = make_shared<BuildMenu>(shared_from_this());
 	MenuManager::getMenuManager()->addMenu(buildMenuptr);
 	return buildMenuptr;
 }
 
 shared_ptr<TowerMenu> Tile::openTowerMenu()
 {
-	return make_shared<TowerMenu>();
+	auto TowerMenuptr = make_shared<TowerMenu>(shared_from_this());
+	MenuManager::getMenuManager()->addMenu(TowerMenuptr);
+	return TowerMenuptr;
 
 }
 
 void Tile::draw(sf::RenderWindow& w)
 {
+	if (isPolluted()){
+		cooldown--;
+	}
+
+
+
 	sprite.setTexture(texture);
 	sf::Vector2i spriteInit(0, currentSprite*height);
 	sprite.setTextureRect(sf::IntRect(spriteInit, sf::Vector2i(width, height)));

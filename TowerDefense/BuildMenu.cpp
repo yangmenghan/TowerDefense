@@ -11,25 +11,9 @@
 
 BuildMenu::BuildMenu(){}
 
-BuildMenu::BuildMenu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition, shared_ptr<Tile> pTile)
-{
-
-	tile = pTile;
-
-	sf::Vector2i tilePositionPixel(tile->getPositionPixel());
-
-
-	Button basicTw(BASIC_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(-BUTTON_WIDTH, 0), 2);
-	Button moneyTw(MONEY_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(0, -BUTTON_HEIGHT), 2);
-	Button slowTw(SLOW_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(BUTTON_WIDTH, 0), 2);
-	Button sunTw(SUN_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(0, BUTTON_HEIGHT), 2);
-}
-
 BuildMenu::BuildMenu(shared_ptr<Tile> pTile)
 {
-
 	tile = pTile;
-
 	sf::Vector2i tilePositionPixel(tile->getPositionPixel());
 
 	basicTwButton=Button(BASIC_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(-BUTTON_WIDTH, 0), 1);
@@ -51,7 +35,7 @@ shared_ptr<Tile> BuildMenu::getTile()
 
 void BuildMenu::buyBasicTw()
 {
-	LevelManager::getLevelManager()->getPlayer().manageMoney(-NORMAL_TOWER_PRICE);
+	LevelManager::getLevelManager()->getPlayer()->manageMoney(-NORMAL_TOWER_PRICE);
 	auto pNormalTw = make_shared<NormalTower>(tile);
 	LevelManager::getLevelManager()->addTower(pNormalTw);
 	tile->setTower(pNormalTw);
@@ -59,7 +43,7 @@ void BuildMenu::buyBasicTw()
 
 void BuildMenu::buyMoneyTw()
 {
-	LevelManager::getLevelManager()->getPlayer().manageMoney(-MONEY_TOWER_PRICE);
+	LevelManager::getLevelManager()->getPlayer()->manageMoney(-MONEY_TOWER_PRICE);
 	auto pMoneyTw = make_shared<MoneyTower>(tile);
 	LevelManager::getLevelManager()->addTower(pMoneyTw);
 	tile->setTower(pMoneyTw);
@@ -67,7 +51,7 @@ void BuildMenu::buyMoneyTw()
 
 void BuildMenu::buySlowTw()
 {
-	LevelManager::getLevelManager()->getPlayer().manageMoney(-SLOW_TOWER_PRICE);
+	LevelManager::getLevelManager()->getPlayer()->manageMoney(-SLOW_TOWER_PRICE);
 	auto pSlowTw = make_shared<SlowTower>(tile);
 	LevelManager::getLevelManager()->addTower(pSlowTw);
 	tile->setTower(pSlowTw);
@@ -75,7 +59,7 @@ void BuildMenu::buySlowTw()
 
 void BuildMenu::buySunTw()
 {
-	LevelManager::getLevelManager()->getPlayer().manageMoney(-SUN_TOWER_PRICE);
+	LevelManager::getLevelManager()->getPlayer()->manageMoney(-SUN_TOWER_PRICE);
 	auto pSunTw = make_shared<SunTower>(tile);
 	LevelManager::getLevelManager()->addTower(pSunTw);
 	tile->setTower(pSunTw);
@@ -144,6 +128,7 @@ void BuildMenu::draw(sf::RenderWindow& w)
 
 void BuildMenu::close()
 {
-	MenuManager::getMenuManager()->popMenu();
 	LevelManager::getLevelManager()->setSpeed(1);
+	LevelManager::getLevelManager()->updatePath();
+	MenuManager::getMenuManager()->popMenu();
 }

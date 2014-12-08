@@ -34,7 +34,7 @@ public:
 //Constructors, destructors
 	GameMenu();
 	GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition);
-	virtual ~GameMenu();
+	~GameMenu();
 	
 	void opent(){}; //TODO : for test
 

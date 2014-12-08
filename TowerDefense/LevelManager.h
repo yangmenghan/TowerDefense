@@ -28,7 +28,7 @@ public:
 	vector<Wave> getWaves();
 	
 	void setPlayer(Player &player);
-	Player getPlayer();
+	Player* getPlayer();
 
 	void setField(Field &field);
 	Field getField();
@@ -39,6 +39,8 @@ public:
 	void nextWave();
 	void loadWaves(); 
 
+	void updatePath();
+
 	void gameOver(); //TODO
 	void victory(); //TODO
 
@@ -48,12 +50,13 @@ public:
 
 	int getCurrentWaveNumber();
 
-	static LevelManager* levelManager;
-
 private:
 
 	LevelManager();
 	~LevelManager();
+	static LevelManager* levelManager;
+
+	Path currentPath;
 
 	//Cooldowns:
 	int waveCooldown;
