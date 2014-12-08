@@ -127,6 +127,8 @@ Sell this tower and
 void Tower::sellTw()
 {
 	LevelManager::getLevelManager()->getPlayer()->manageMoney(income[level - 1]);
+	LevelManager::getLevelManager()->removeTower(shared_ptr<Tower>(this));
+	tile->setTower(NULL);
 }
 
 
