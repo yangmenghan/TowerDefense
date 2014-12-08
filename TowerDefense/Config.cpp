@@ -44,10 +44,10 @@ extern const int		BUTTON_HEIGHT			= 50;
 Wave constants
 */
 
-extern const int		WAVE_TOTAL				= 21;
+extern const int		WAVE_TOTAL				= 24;
 extern const string		WAVE_FILE_ADDRESS		= "Waves.txt";
-extern const int		WAVE_SPAWN_COOLDOWN		= 300;
-extern const int		WAVE_COOLDOWN			= 600;
+extern const int		WAVE_SPAWN_COOLDOWN		= 60;
+extern const int		WAVE_COOLDOWN			= 300;
 
 /*
 Enemy constants

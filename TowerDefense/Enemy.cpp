@@ -11,6 +11,8 @@ int scoreValue;
 int slowTime;
 */
 
+using namespace std;
+
 Enemy::Enemy(){
 	hp = 0;
 	defence = 0;
@@ -52,18 +54,19 @@ bool Enemy::move(){
 
 	int gameSpeed = LevelManager::getLevelManager()->getSpeed();
 
+
 	if(position.x < t->getPositionPixel().x){
-		position.x = position.x + gameSpeed * speed;
+		position.x = position.x + min((int)(gameSpeed * speed), t->getPositionPixel().x - position.x);
 	}
 	else if (position.x > t->getPositionPixel().x){
-		position.x = position.x - gameSpeed * speed;
+		position.x = position.x - min((int)(gameSpeed * speed), position.x - t->getPositionPixel().x);
 	}
 	
 	if (position.y < t->getPositionPixel().y){
-		position.y = position.y + gameSpeed * speed;
+		position.y = position.y + min((int)(gameSpeed * speed), t->getPositionPixel().y - position.y);
 	}
 	else if (position.y > t->getPositionPixel().y){
-		position.y = position.y - gameSpeed * speed;
+		position.y = position.y - min((int)(gameSpeed * speed), position.y - t->getPositionPixel().y);
 	}
 	
 	if (position.x == t->getPositionPixel().x && position.y == t->getPositionPixel().y){
