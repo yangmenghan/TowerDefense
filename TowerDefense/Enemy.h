@@ -6,6 +6,7 @@ class Enemy : public Entity{
 public :
 	Enemy();
 	Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite mSprite, float mSpeed);
+	virtual ~Enemy();
 
 	virtual bool move();
 	void succed();

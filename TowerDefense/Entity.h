@@ -16,7 +16,7 @@ protected:
 public:
 	//Constructors and destroyers
 	Entity();
-	~Entity();
+	virtual ~Entity();
 
 	//Getters
 	sf::Vector2i getPosition();
