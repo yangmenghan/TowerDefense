@@ -7,9 +7,11 @@
 #include "TowerMenu.h"
 #include "MenuManager.h"
 
+using namespace std;
+
 class Tower;
 
-class Tile
+class Tile : public enable_shared_from_this<Tile>
 {
 private:
 	sf::Vector2i positionPixel;					//Positon of the pixel in topleft point of tile.

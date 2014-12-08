@@ -24,7 +24,7 @@ public:
 
 											//Constructor a buildmenu in this tile. 
 	BuildMenu(shared_ptr<Tile>);
-	~BuildMenu();//Destructor.
+	~BuildMenu();							//Destructor.
 
 	//Getters
 	shared_ptr<Tile> getTile();				//Get the tile where build the tower.

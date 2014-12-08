@@ -42,7 +42,7 @@ public:
 
 //Functions
 	virtual void draw(sf::RenderWindow&);
-	void close();
+	virtual void close();
 	void opent();
 	virtual void resolveEvent(sf::Event) = 0;
 };
