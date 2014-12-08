@@ -37,7 +37,9 @@ Enemy::~Enemy(){}
 
 float Enemy::getDistanceToTarget(){
 
-	return LevelManager::getLevelManager()->getField().computePath(tile, LevelManager::getLevelManager()->getField().getEndTile()).getPath().size();
+	return LevelManager::getLevelManager()->getField()
+		.computePath(tile, LevelManager::getLevelManager()->getField().getEndTile())
+		.getPath().size();
 };
 
 bool Enemy::move(){
@@ -69,7 +71,7 @@ bool Enemy::move(){
 	}
 	
 	if (position.x == t->getPositionPixel().x && position.y == t->getPositionPixel().y){
-		setTile(t);
+		setTile(make_shared<Tile>(*t));
 	}
 	sprite.setPosition(sf::Vector2f(float(position.x), float(position.y)));
 	
@@ -119,7 +121,6 @@ void Enemy::takeDamage(int damage){
 	else
 	{
 		hp = 0;
-		this->die();
 	}
 };
 

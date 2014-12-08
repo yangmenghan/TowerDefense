@@ -73,6 +73,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 			for (int i = 0; i < towers.size(); i++){
 				if (towers.at(i)->getLevel() ==0){
 					towers.at(i)->getTile()->setTower(NULL);
+					removeTower(i);
 					i--;
 				}
 				else {
