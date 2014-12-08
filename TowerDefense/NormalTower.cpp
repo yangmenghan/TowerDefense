@@ -8,12 +8,14 @@ NormalTower::NormalTower(shared_ptr<Tile> mTile)
 	price = NORMAL_TOWER_PRICE;
 	income[level - 1] = NORMAL_TOWER_INCOME[level - 1];
 	range[level - 1] = NORMAL_TOWER_RANGE[level - 1];
+	timer = speed;
 
 	attack.setDamage(damage[level - 1]);
 	attack.setRange(range[level - 1]);
 	attack.setSpeed(speed);
+	attack.setTimer(timer);
 
-	timer = speed;
+	
 	
 	if (!texture.loadFromFile(NORMAL_TOWER_SPRITE_ADD))
 	{

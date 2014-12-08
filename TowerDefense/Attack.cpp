@@ -50,16 +50,21 @@ void Attack::setSpeed(int mSpeed)
 	speed = mSpeed;
 }
 
+void Attack::setTimer(int mTimer)
+{
+	timer = mTimer;
+}
+
 /*
 Return the pointer to the enenmy (in the range of tower) who is the closest to the final target. 
 */
 
 shared_ptr<Enemy> Attack::getTarget()
 {
-	std::vector<shared_ptr<Enemy>> enemiesField = LevelManager::getLevelManager()->getEnemies();
+	//std::vector<shared_ptr<Enemy>> enemiesField = LevelManager::getLevelManager()->getEnemies();
 	shared_ptr<Enemy> enemyMinDistanceToTarget = make_shared<NormalEnemy>();
 	float minDistance = 0;
-	for (shared_ptr<Enemy> e : enemiesField)
+	for (shared_ptr<Enemy> e : LevelManager::getLevelManager()->getEnemies())
 	{
 		if (sqrt((e->getPosition().x - center.x) ^ 2 + (e->getPosition().y - center.y) ^ 2) < range)
 		{

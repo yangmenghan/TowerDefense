@@ -16,8 +16,8 @@ void NormalAttack::resolve()
 	//TODO:Animation
 	if (timer == 0)
 	{
-		shared_ptr<Enemy> enemy = getTarget();
-		enemy->takeDamage(damage);
+		//shared_ptr<Enemy> enemy = getTarget();
+		//enemy->takeDamage(damage);
 		getTarget()->takeDamage(damage);
 		timer = speed;
 	}

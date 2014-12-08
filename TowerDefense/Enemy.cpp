@@ -86,6 +86,7 @@ void Enemy::setTile(shared_ptr<Tile> t){
 
 void Enemy::die(){
 	LevelManager::getLevelManager()->getPlayer()->manageScore(scoreValue);
+	//LevelManager::getLevelManager()->removeEnemy(shared_ptr<Enemy>(this));
 };
 
 void Enemy::dieWithoutBonus(){
@@ -107,7 +108,10 @@ void Enemy::takeDamage(int damage){
 	if (hp - damage > 0)
 		hp = hp - damage;
 	else
+	{
+		hp = 0;
 		this->die();
+	}
 };
 
 
