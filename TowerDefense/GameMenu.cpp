@@ -16,6 +16,28 @@ GameMenu::GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector
 {
 	gameSpeed = 1;
 	levelManager = LevelManager::getLevelManager();
+	
+	if (!font.loadFromFile(FONT))
+	{
+		//error
+	}
+
+	lifeCountDisplay.setFont(font);
+	pointsCountDisplay.setFont(font);
+	waveCountDisplay.setFont(font);
+
+	lifeCountDisplay.setColor(sf::Color::Green);
+	pointsCountDisplay.setColor(sf::Color::Green);
+	waveCountDisplay.setColor(sf::Color::Green);
+
+	lifeCountDisplay.setCharacterSize(14);
+	pointsCountDisplay.setCharacterSize(14);
+	waveCountDisplay.setCharacterSize(14);
+
+	lifeCountDisplay.setPosition(LIFE_COUNT_DISPLAY_POSITION);
+	pointsCountDisplay.setPosition(POINTS_COUNT_DISPLAY_POSITION);
+	waveCountDisplay.setPosition(WAVE_COUNT_DISPLAY_POSITION);
+
 	shared_ptr<AudioManager> audio = AudioManager::getAudioManager();
 	if (audio->isMute() == false)
 	{
@@ -97,6 +119,15 @@ void GameMenu::draw(sf::RenderWindow& w)
 
 	
 	//set position and font for the text displays
+
+	std::string lifeCount = std::to_string(levelManager->getPlayer().getHP());
+	lifeCountDisplay.setString("Player life : " + lifeCount+"/10");
+
+	std::string pointsCount = std::to_string(levelManager->getPlayer().getScore());
+	pointsCountDisplay.setString("Player score : " + pointsCount);
+
+	string waveCount = std::to_string(levelManager->getCurrentWaveNumber());
+	waveCountDisplay.setString("Wave " + waveCount + "/24");
 
 	w.draw(lifeCountDisplay);
 	w.draw(pointsCountDisplay);

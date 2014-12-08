@@ -7,7 +7,7 @@
 #include "LevelManager.h"
 #include "Button.h"
 #include "Config.h"
-#include "LevelManager.h"
+#include "MenuManager.h"
 
 class GameMenu 
 	: public Menu
@@ -22,6 +22,8 @@ private:
 
 	LevelManager* levelManager;
 
+	std::string fontAddress;
+	sf::Font font;
 	sf::Text lifeCountDisplay; //is it the best way to proceed ? will need tests
 	sf::Text pointsCountDisplay;
 	sf::Text waveCountDisplay;

@@ -33,7 +33,7 @@ LevelManager::~LevelManager(){
 
 void LevelManager::gameLoop(RenderWindow& w){
 		field.draw(w);
-		field.computePath(field.getStartTile(), field.getEndTile()).draw(w);
+		//field.computePath(field.getStartTile(), field.getEndTile()).draw(w);
 
 		//if the game is not paused
 		if (gameSpeed != 0){ 

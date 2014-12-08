@@ -13,7 +13,6 @@ private:
 	vector<shared_ptr<Menu>> menuStack;
 	bool exitFlag;
 
-
 	MenuManager();
 	~MenuManager();
 
