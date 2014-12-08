@@ -299,16 +299,15 @@ Path Field::computePath(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)
 		if (((g+1)%TILE_NUM_VER != 0)&&time == timeCross(g + 1, n) + timeCross(m, g + 1)){
 			g += 1;
 		}
-		else if ((g % TILE_NUM_VER != 0) && time == timeCross(g - 1, n) + timeCross(m, g - 1)){
-			g -= 1;
-		}
 		else if ((g + TILE_NUM_VER < TILE_NUM_VER*TILE_NUM_HOR) && time == timeCross(g + TILE_NUM_VER, n) + timeCross(m, g + TILE_NUM_VER)){
 			g += TILE_NUM_VER;
 		}
 		else if ((g>TILE_NUM_VER) && time == timeCross(g - TILE_NUM_VER, n) + timeCross(m, g - TILE_NUM_VER)){
 			g -= TILE_NUM_VER;
 		}
-		
+		else if ((g % TILE_NUM_VER != 0) && time == timeCross(g - 1, n) + timeCross(m, g - 1)){
+			g -= 1;
+		}
 			
 		path.push_back(getTile(g));
 	}
