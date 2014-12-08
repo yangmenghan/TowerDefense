@@ -79,10 +79,10 @@ std::vector<shared_ptr<Tile>> Tile::getNeighbor(int _range)
 {
 	std::vector<shared_ptr<Tile>> neighborTiles;
 	shared_ptr<Tile> pNeighber;
-	int i, j;
-	for (i = position.x - _range; i <= position.x + _range; i++)
+
+	for (int i = position.x - _range; i <= position.x + _range; i++)
 	{
-		for (j = position.y - _range; j <= position.y + _range; j++)
+		for (int j = position.y - _range; j <= position.y + _range; j++)
 		{
 			if (i >= 0 && i < TILE_NUM_VER && j >= 0 && j <= TILE_NUM_HOR)
 			{

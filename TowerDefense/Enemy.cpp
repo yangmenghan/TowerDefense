@@ -34,7 +34,10 @@ Enemy::Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite m
 }
 
 float Enemy::getDistanceToTarget(){
-	return LevelManager::getLevelManager()->getField().timeCross(tile, LevelManager::getLevelManager()->getField().getEndTile());
+	if (tile !=NULL){
+		return LevelManager::getLevelManager()->getField().timeCross(tile, LevelManager::getLevelManager()->getField().getEndTile());
+	} 
+	return 999;
 };
 
 bool Enemy::move(){
@@ -80,16 +83,22 @@ void Enemy::succed(){
 
 void Enemy::setTile(shared_ptr<Tile> t){
 	tile = t;
-	position = t->getPositionPixel();
+	if (t != NULL){
+		position = t->getPositionPixel();
+	}
 }
 
 
 void Enemy::die(){
+	hp = 0;
 	LevelManager::getLevelManager()->getPlayer()->manageScore(scoreValue);
+	setTile(NULL);
 	//LevelManager::getLevelManager()->removeEnemy(shared_ptr<Enemy>(this));
 };
 
 void Enemy::dieWithoutBonus(){
+	hp = 0;
+	setTile(NULL);
 }
 
 void Enemy::slow(int frames){
@@ -145,7 +154,7 @@ void Enemy::draw(sf::RenderWindow &w){
 	rectangle.setOutlineColor(sf::Color(255, 255, 255));
 	rectangle.setPosition(sf::Vector2f(position.x, position.y + TILE_HEIGHT));
 
-	sf::RectangleShape rectangle2(sf::Vector2f(50*(hp/maxHp), 5));
+	sf::RectangleShape rectangle2(sf::Vector2f((50 * (float)hp) / (float)maxHp, 5));
 	rectangle2.setFillColor(sf::Color(26, 255, 83));
 	rectangle2.setPosition(sf::Vector2f(position.x, position.y + TILE_HEIGHT));
 

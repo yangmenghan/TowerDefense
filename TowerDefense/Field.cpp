@@ -48,7 +48,7 @@ shared_ptr<Tile> Field::getTile(int n)
 
 shared_ptr<Tile> Field::getTile(sf::Vector2i _position)
 {
-	return tilesMap[_position.x*TILE_NUM_HOR + _position.y];
+	return tilesMap[_position.y*TILE_NUM_VER + _position.x];
 }
 
 shared_ptr<Tile> Field::getStartTile()

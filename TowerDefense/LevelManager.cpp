@@ -35,7 +35,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 		field.draw(w);
 		//currentPath.draw(w);
 
-		field.computePath(field.getStartTile(), field.getEndTile()).draw(w);
+		//field.computePath(field.getStartTile(), field.getEndTile()).draw(w);
 
 		//if the game is not paused
 		if (gameSpeed != 0){ 
@@ -70,8 +70,14 @@ void LevelManager::gameLoop(RenderWindow& w){
 			
 
 			//Tower actions
-			for (shared_ptr<Tower> tower : towers){
-				tower->doAttack();
+			for (int i = 0; i < towers.size(); i++){
+				if (towers.at(i)->getLevel() ==0){
+					towers.at(i)->getTile()->setTower(NULL);
+					i--;
+				}
+				else {
+					towers.at(i)->doAttack();
+				}
 			}
 
 			//Enemy Action
