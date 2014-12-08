@@ -67,7 +67,7 @@ void BombEnemy::explode(){
 	vector<shared_ptr<Tile>> t = tile->getNeighbor(1);
 	t.push_back(tile);
 	for (shared_ptr<Tile> tile : t){
-		tile->setCooldown(TILE_COOLDOWN);
+		tile->setCooldown();
 	}
 
 	vector<shared_ptr<Enemy>> e = LevelManager::getLevelManager()->getEnemies();

@@ -7,9 +7,11 @@
 #include "TowerMenu.h"
 #include "MenuManager.h"
 
+using namespace std;
+
 class Tower;
 
-class Tile
+class Tile : public enable_shared_from_this<Tile>
 {
 private:
 	sf::Vector2i positionPixel;					//Positon of the pixel in topleft point of tile.
@@ -36,7 +38,7 @@ public:
 	sf::Vector2i getPosition();					//Get the position of tile.
 	sf::Vector2i getPositionPixel();			//Get the position of the pixel topleft of the tile.
 	shared_ptr<Tower>  getTower();				//Get the pointer of the tower in this tile.
-	int getCooldowm();							//Get the time left for the tower to return normal.
+	int getCooldown();							//Get the time left for the tower to return normal.
 	vector<shared_ptr<Tile>> getNeighbor(int);	//get all the tiles near this tile.
 												//The distanse may be 1,2,3.
 	sf::Sprite getSprite();
@@ -45,6 +47,7 @@ public:
 	//Setters
 	void setPosition(sf::Vector2i);				//Set the position of this tile.
 	void setTower(shared_ptr<Tower>);			//Build a tower in this tile.
+	void setCooldown();							//Set the time of cooldown for the tower in this tile.
 	void setCooldown(int);						//Set the time of cooldown for the tower in this tile.
 	void setSprite(sf::Sprite);
 

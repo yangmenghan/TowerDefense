@@ -62,7 +62,7 @@ Return the pointer to the enenmy (in the range of tower) who is the closest to t
 shared_ptr<Enemy> Attack::getTarget()
 {
 	//std::vector<shared_ptr<Enemy>> enemiesField = LevelManager::getLevelManager()->getEnemies();
-	shared_ptr<Enemy> enemyMinDistanceToTarget = make_shared<NormalEnemy>();
+	shared_ptr<Enemy> enemyMinDistanceToTarget = NULL;
 	float minDistance = 0;
 	for (shared_ptr<Enemy> e : LevelManager::getLevelManager()->getEnemies())
 	{

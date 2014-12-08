@@ -31,9 +31,16 @@ LevelManager::LevelManager()
 LevelManager::~LevelManager(){
 }
 
+void LevelManager::updatePath(){
+	currentPath = field.computePath(field.getStartTile(), field.getEndTile());
+	for (auto e : enemies){
+		e->updatePath();
+	}
+}
+
 void LevelManager::gameLoop(RenderWindow& w){
 		field.draw(w);
-		//currentPath.draw(w);
+		currentPath.draw(w);
 
 		//field.computePath(field.getStartTile(), field.getEndTile()).draw(w);
 
@@ -73,6 +80,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 			for (int i = 0; i < towers.size(); i++){
 				if (towers.at(i)->getLevel() ==0){
 					towers.at(i)->getTile()->setTower(NULL);
+					removeTower(i);
 					i--;
 				}
 				else {
@@ -151,9 +159,9 @@ void LevelManager::gameOver(){
 
 void LevelManager::startGame(){
 	loadWaves();
+	updatePath();
 	//player = Player();
 	//player.init();
-	currentPath = field.computePath(field.getStartTile(), field.getEndTile());
 }
 
 void LevelManager::stopGame(){

@@ -70,7 +70,7 @@ shared_ptr<Tower>  Tile::getTower()
 	return tower;
 }
 
-int Tile::getCooldowm()
+int Tile::getCooldown()
 {
 	return cooldown;
 }
@@ -101,6 +101,13 @@ sf::Sprite Tile::getSprite()
 }
 
 //Setters
+void Tile::setCooldown()
+{
+	cooldown = TILE_COOLDOWN;
+	currentSprite = 2;
+	spriteUpdate(currentSprite);
+}
+
 void Tile::setPosition(sf::Vector2i myPosition)
 {
 	myPosition = myPosition;
@@ -116,11 +123,6 @@ void Tile::setTower(shared_ptr<Tower> myTower)
 	{
 		hasTw = false;
 	}
-}
-
-void Tile::setCooldown(int myCooldown)
-{
-	cooldown = myCooldown;
 }
 
 void Tile::setSprite(sf::Sprite mySprite)
@@ -169,6 +171,7 @@ void Tile::resolveEvent(sf::Event event)
 		currentSprite = 2;
 		spriteUpdate(currentSprite);
 	}
+
 	{
 		if (event.type == sf::Event::MouseButtonPressed)
 		{
@@ -211,17 +214,7 @@ void Tile::resolveEvent(sf::Event event)
 
 bool Tile::isPolluted()
 {
-	if (cooldown != 0)
-	{
-		spriteUpdate(2);
-		cooldown--;
-		return true;
-	}
-	else
-	{
-		spriteUpdate(0);
-		return false;
-	}
+	return (cooldown != 0);
 }
 
 bool Tile::hasTower()
@@ -231,14 +224,14 @@ bool Tile::hasTower()
 
 shared_ptr<BuildMenu> Tile::openBuildMenu()
 {
-	auto buildMenuptr = make_shared<BuildMenu>(shared_ptr<Tile>(this));
+	auto buildMenuptr = make_shared<BuildMenu>(shared_from_this());
 	MenuManager::getMenuManager()->addMenu(buildMenuptr);
 	return buildMenuptr;
 }
 
 shared_ptr<TowerMenu> Tile::openTowerMenu()
 {
-	auto TowerMenuptr = make_shared<TowerMenu>(shared_ptr<Tile>(this));
+	auto TowerMenuptr = make_shared<TowerMenu>(shared_from_this());
 	MenuManager::getMenuManager()->addMenu(TowerMenuptr);
 	return TowerMenuptr;
 
@@ -246,6 +239,12 @@ shared_ptr<TowerMenu> Tile::openTowerMenu()
 
 void Tile::draw(sf::RenderWindow& w)
 {
+	if (isPolluted()){
+		cooldown--;
+	}
+
+
+
 	sprite.setTexture(texture);
 	sf::Vector2i spriteInit(0, currentSprite*height);
 	sprite.setTextureRect(sf::IntRect(spriteInit, sf::Vector2i(width, height)));

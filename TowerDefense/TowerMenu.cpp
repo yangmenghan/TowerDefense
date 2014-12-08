@@ -9,7 +9,7 @@ TowerMenu::TowerMenu(){}
 
 TowerMenu::TowerMenu(shared_ptr<Tile> pTile)
 {
-	tile = pTile;
+	tile = shared_ptr<Tile>(pTile);
 	sf::Vector2i tilePositionPixel(tile->getPositionPixel());
 
 	sellButton = Button(SELL_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(-BUTTON_WIDTH, 0), 1);
@@ -34,7 +34,9 @@ void TowerMenu::resolveEvent(sf::Event event)
 		sellButton.resolveEvent(event);
 		if (sellButton.checkClick())
 		{
-			tile->getTower()->sellTw();
+			shared_ptr<Tower> tower = tile->getTower();
+			tower->sellTw();
+			LevelManager::getLevelManager()->removeTower(tower);
 			close();
 		}		
 	}
@@ -68,6 +70,7 @@ void TowerMenu::draw(sf::RenderWindow& w)
 
 void TowerMenu::close()
 {
-	MenuManager::getMenuManager()->popMenu();
 	LevelManager::getLevelManager()->setSpeed(1);
+	LevelManager::getLevelManager()->updatePath();
+	MenuManager::getMenuManager()->popMenu();
 }

@@ -145,6 +145,15 @@ extern const string		CREDITS_SPRITE_ADD;
 extern const string		GAMEOVER_MENU_TEXTURE;
 
 /*
+Display constants
+*/
+
+extern const string			FONT;
+extern const sf::Vector2f	LIFE_COUNT_DISPLAY_POSITION;
+extern const sf::Vector2f	POINTS_COUNT_DISPLAY_POSITION;
+extern const sf::Vector2f	WAVE_COUNT_DISPLAY_POSITION;
+
+/*
 Button constants
 */
 extern const string		PAUSE_BUTTON_TEXTURE;

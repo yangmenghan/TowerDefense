@@ -11,6 +11,8 @@ int scoreValue;
 int slowTime;
 */
 
+using namespace std;
+
 Enemy::Enemy(){
 	hp = 0;
 	defence = 0;
@@ -37,7 +39,7 @@ Enemy::~Enemy(){}
 
 float Enemy::getDistanceToTarget(){
 
-	return LevelManager::getLevelManager()->getField().computePath(tile, LevelManager::getLevelManager()->getField().getEndTile()).getPath().size();
+	return path.getPath().size();
 };
 
 bool Enemy::move(){
@@ -48,28 +50,27 @@ bool Enemy::move(){
 		unSlow();
 	}
 
-	vector<shared_ptr<Tile>> tiles = LevelManager::getLevelManager()->getField().computePath(tile, LevelManager::getLevelManager()->getField().getEndTile()).getPath();
-
-	shared_ptr<Tile> t = tiles[1];
+	shared_ptr<Tile> t = path.getPath()[1];
 
 	int gameSpeed = LevelManager::getLevelManager()->getSpeed();
 
+
 	if(position.x < t->getPositionPixel().x){
-		position.x = position.x + gameSpeed * speed;
+		position.x = position.x + min((int)(gameSpeed * speed), t->getPositionPixel().x - position.x);
 	}
 	else if (position.x > t->getPositionPixel().x){
-		position.x = position.x - gameSpeed * speed;
+		position.x = position.x - min((int)(gameSpeed * speed), position.x - t->getPositionPixel().x);
 	}
 	
 	if (position.y < t->getPositionPixel().y){
-		position.y = position.y + gameSpeed * speed;
+		position.y = position.y + min((int)(gameSpeed * speed), t->getPositionPixel().y - position.y);
 	}
 	else if (position.y > t->getPositionPixel().y){
-		position.y = position.y - gameSpeed * speed;
+		position.y = position.y - min((int)(gameSpeed * speed), position.y - t->getPositionPixel().y);
 	}
 	
 	if (position.x == t->getPositionPixel().x && position.y == t->getPositionPixel().y){
-		setTile(t);
+		setTile(make_shared<Tile>(*t));
 	}
 	sprite.setPosition(sf::Vector2f(float(position.x), float(position.y)));
 	
@@ -85,6 +86,7 @@ void Enemy::setTile(shared_ptr<Tile> t){
 	tile = t;
 	if (t != NULL){
 		position = t->getPositionPixel();
+		updatePath(); //TODO : just need to remove the previous tile !
 	}
 }
 
@@ -113,13 +115,17 @@ void Enemy::unSlow(){
 	slowed = false;
 };
 
+void Enemy::updatePath(){
+	path = LevelManager::getLevelManager()->getField().computePath(tile, LevelManager::getLevelManager()->getField().getEndTile());
+}
+
+
 void Enemy::takeDamage(int damage){
 	if (hp - damage > 0)
 		hp = hp - damage;
 	else
 	{
 		hp = 0;
-		this->die();
 	}
 };
 

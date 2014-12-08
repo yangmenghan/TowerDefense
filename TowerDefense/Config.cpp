@@ -1,10 +1,8 @@
 #include "Config.h"
 #include <SFML\Graphics.hpp>
 
-/* Global game configuration constants
-For using those constants :
-include Config.h in your class
-call simply the name of the global constant ! :D
+/* 
+Global game configuration constants
 */
 
 /*
@@ -28,13 +26,12 @@ Tile constants
 
 extern const int		TILE_WIDTH				= 50; //changed from 100
 extern const int		TILE_HEIGHT				= 50;
-extern const int		TILE_COOLDOWN			= 50;
+extern const int		TILE_COOLDOWN			= 240;
 extern const int		TILE_NUM_HOR			= 10;
 extern const int		TILE_NUM_VER			= 20;
-//extern const int		TILE_NUM				= TILE_NUM_HOR * TILE_NUM_VER;
 extern const int		NUM_START_TILE			= 4 * TILE_NUM_VER;
 extern const int		NUM_END_TILE			= 5 * TILE_NUM_VER  - 1;
-extern const string		TILE_SPRITE				= "sprites/tile_texture_test.png";
+extern const string		TILE_SPRITE				= "sprites/tile_texture.png";
 
 /*
 BuildMenu Constants
@@ -47,10 +44,10 @@ extern const int		BUTTON_HEIGHT			= 50;
 Wave constants
 */
 
-extern const int		WAVE_TOTAL				= 21;
+extern const int		WAVE_TOTAL				= 24;
 extern const string		WAVE_FILE_ADDRESS		= "Waves.txt";
-extern const int		WAVE_SPAWN_COOLDOWN		= 300;
-extern const int		WAVE_COOLDOWN			= 600;
+extern const int		WAVE_SPAWN_COOLDOWN		= 60;
+extern const int		WAVE_COOLDOWN			= 300;
 
 /*
 Enemy constants
@@ -140,7 +137,16 @@ extern const string		GAME_MENU_DEFAULT_TEXTURE = "sprites/gamebg.png";
 extern const string		START_MENU_TEXTURE		  = "sprites/startbackground.png";
 extern const string		CREDITS_SPRITE_ADD		  = "sprites/credits.png";
 extern const string		GAMEOVER_MENU_TEXTURE	  = "";
-		
+
+/*
+Display constants
+*/
+
+extern const string			FONT								= "ressources/SourceCodePro.ttf";
+extern const sf::Vector2f	LIFE_COUNT_DISPLAY_POSITION			= sf::Vector2f(600, 13);
+extern const sf::Vector2f	POINTS_COUNT_DISPLAY_POSITION		= sf::Vector2f(800, 13);
+extern const sf::Vector2f	WAVE_COUNT_DISPLAY_POSITION			= sf::Vector2f(1000, 13);
+
 /*
 Button constants
 */
