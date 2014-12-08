@@ -9,8 +9,6 @@ Tower::Tower(shared_ptr<Tile> mTile)
 	currentSprite = level - 1;
 	tile = mTile;
 	size = sf::Vector2i(TILE_WIDTH, TILE_HEIGHT);
-	attack = make_shared<NormalAttack>();
-	attack->setCenter(tile->getPosition());
 
 	speed = TOWER_SPEED;
 }

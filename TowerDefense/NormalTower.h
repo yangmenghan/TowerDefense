@@ -10,8 +10,11 @@ public:
 	NormalTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite);
 	virtual ~NormalTower(){};
 
+
 	void doAttack()override;
+
 private:
 	NormalAttack attack;
+	
 };
 

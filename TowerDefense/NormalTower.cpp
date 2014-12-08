@@ -10,10 +10,12 @@ NormalTower::NormalTower(shared_ptr<Tile> mTile)
 	range[level - 1] = NORMAL_TOWER_RANGE[level - 1];
 	timer = speed;
 
+	attack.setCenter(sf::Vector2i(tile->getPositionPixel().x + 25, tile->getPositionPixel().y + 25));
 	attack.setDamage(damage[level - 1]);
 	attack.setRange(range[level - 1]);
 	attack.setSpeed(speed);
 	attack.setTimer(timer);
+	attack.setTarget(NULL);
 
 	
 	
@@ -27,15 +29,19 @@ NormalTower::NormalTower(shared_ptr<Tile> mTile)
 	sprite.setTextureRect(sf::IntRect(spriteInit, size));
 	sprite.setPosition(sf::Vector2f(tile->getPositionPixel().x, tile->getPositionPixel().y));
 
+	/*
 	rangeCircle.setPosition(sf::Vector2f(this->getPosition()));
 	rangeCircle.setRadius(range[level - 1]);
 	rangeCircle.setOutlineThickness(2);
 	rangeCircle.setFillColor(sf::Color(0, 0, 255, 100));
+	*/
 }
 
 /*
 Activate attack
 */
+
+
 
 void NormalTower::doAttack() 
 {

@@ -214,10 +214,12 @@ bool Tile::isPolluted()
 	if (cooldown != 0)
 	{
 		spriteUpdate(2);
+		cooldown--;
 		return true;
 	}
 	else
 	{
+		spriteUpdate(0);
 		return false;
 	}
 }
