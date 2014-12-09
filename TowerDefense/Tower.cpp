@@ -9,8 +9,9 @@ Tower::Tower(shared_ptr<Tile> mTile)
 	currentSprite = level - 1;
 	tile = mTile;
 	size = sf::Vector2i(TILE_WIDTH, TILE_HEIGHT);
-
+	position = sf::Vector2i(tile->getPositionPixel().x + 25, tile->getPositionPixel().y + 25);
 	speed = TOWER_SPEED;
+	timer = speed;
 }
 
 
@@ -58,6 +59,32 @@ void Tower::setLevel(int mLevel)
 void Tower::setRange(float mRange)
 {
 	range[level - 1] = mRange;
+}
+
+void Tower::setAttack()
+{
+	attack->setCenter(position);
+	attack->setDamage(damage[level - 1]);
+	attack->setSlowAmount(slowAmount[level - 1]);
+	attack->setRange(range[level - 1]);
+	attack->setSpeed(speed);
+	attack->setTimer(timer);
+}
+
+void Tower::setTowerTexture()
+{
+	sprite.setTexture(texture);
+	sf::Vector2i spriteInit(0, currentSprite * size.y);
+	sprite.setTextureRect(sf::IntRect(spriteInit, size));
+	sprite.setPosition(sf::Vector2f(tile->getPositionPixel().x, tile->getPositionPixel().y));
+}
+
+void Tower::setRangeCircle()
+{
+	rangeCircle.setOrigin(sf::Vector2f(range[level - 1], range[level - 1]));
+	rangeCircle.setPosition(sf::Vector2f(position.x, position.y));
+	rangeCircle.setRadius(range[level - 1]);
+	rangeCircle.setFillColor(RANGE_CIRCLE_FILL_COLOR);
 }
 
 void Tower::spriteUpdate(int i)

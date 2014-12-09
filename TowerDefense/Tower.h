@@ -22,6 +22,9 @@ public:
 	void setPrice(int mPrice);
 	void setLevel(int mLevel);
 	void setRange(float mRange);
+	void setAttack();
+	void setTowerTexture();
+	void setRangeCircle();
 
 	void sellTw();
 	void upgradeTw();
@@ -34,6 +37,7 @@ public:
 protected:
 	shared_ptr<Attack> attack;
 	float damage[3];
+	int slowAmount[3];
 	int price;
 	int income[3];
 	int level;
