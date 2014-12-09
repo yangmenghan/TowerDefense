@@ -122,12 +122,10 @@ void BuildMenu::draw(sf::RenderWindow& w)
 	slowTwButton.draw(w);
 	moneyTwButton.draw(w);
 	sunTwButton.draw(w);
-	LevelManager::getLevelManager()->setSpeed(0);
 }
 
 void BuildMenu::close()
 {
-	LevelManager::getLevelManager()->setSpeed(1);
 	LevelManager::getLevelManager()->updatePath();
 	MenuManager::getMenuManager()->popMenu();
 }

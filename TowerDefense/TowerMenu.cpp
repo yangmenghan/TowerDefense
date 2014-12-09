@@ -64,13 +64,10 @@ void TowerMenu::draw(sf::RenderWindow& w)
 
 	sellButton.draw(w);
 	upgradeButton.draw(w);
-
-	LevelManager::getLevelManager()->setSpeed(0);
 }
 
 void TowerMenu::close()
 {
-	LevelManager::getLevelManager()->setSpeed(1);
 	LevelManager::getLevelManager()->updatePath();
 	MenuManager::getMenuManager()->popMenu();
 }
