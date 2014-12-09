@@ -241,6 +241,10 @@ void Tile::draw(sf::RenderWindow& w)
 {
 	if (isPolluted()){
 		cooldown--;
+		if (cooldown == 0)
+		{
+			spriteUpdate(0);
+		}
 	}
 
 
