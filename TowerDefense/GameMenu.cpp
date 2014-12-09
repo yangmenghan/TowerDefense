@@ -132,7 +132,7 @@ void GameMenu::draw(sf::RenderWindow& w)
 	pointsCountDisplay.setString("Score : " + pointsCount);
 
 	std::string moneyCount = std::to_string(levelManager->getPlayer()->getMoney());
-	moneyCountDisplay.setString("Gold : " + pointsCount);
+	moneyCountDisplay.setString("Gold : " + moneyCount);
 
 	string waveCount = std::to_string((levelManager->getCurrentWaveNumber()));
 	waveCountDisplay.setString("Wave " + waveCount + "/24");
