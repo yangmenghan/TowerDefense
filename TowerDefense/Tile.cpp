@@ -148,7 +148,9 @@ void Tile::mouseHover(sf::RenderWindow& w)
 		if (currentSprite == 0)
 		{
 			currentSprite == 1;
-			spriteUpdate(currentSprite);			
+			spriteUpdate(currentSprite);
+			if (hasTower())
+				tower->showRangeCircle(w);
 		}
 		isHovered = true;
 	}

@@ -11,5 +11,6 @@ public:
 
 	void generateMoney();
 	void doAttack() override;
+	void showRangeCircle(sf::RenderWindow& w)override;
 };
 

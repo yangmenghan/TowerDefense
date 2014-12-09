@@ -29,7 +29,7 @@ public:
 	virtual void doAttack() = 0;
 
 	void spriteUpdate(int i);
-	void showRangeCircle(); 
+	virtual void showRangeCircle(sf::RenderWindow& w) = 0; 
 
 protected:
 	shared_ptr<Attack> attack;

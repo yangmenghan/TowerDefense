@@ -11,6 +11,7 @@ public:
 	virtual ~SunTower(){};
 
 	void doAttack() override;
+	void showRangeCircle(sf::RenderWindow& w)override;
 private:
 	AreaAttack attack;
 };

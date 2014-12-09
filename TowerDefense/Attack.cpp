@@ -15,6 +15,11 @@ Attack::~Attack()
 /*
 Setters and Getters.
 */
+sf::Vector2i Attack::getCenter()
+{
+	return center;
+}
+
 float Attack::getDamage()
 {
 	return damage;

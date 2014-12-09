@@ -111,19 +111,11 @@ void Tower::downgradeTw()
 			timer = speed;
 			attack->setTimer(timer);
 		}
-		/*else    
-		/!\ don't delete the tower here, already done in levelManager - Mew
-		{
-			level = 0;
-			tile->setTower(NULL);
-		}
-		*/
-	}
-		
+	}	
 }
 
 /*
-Sell this tower and
+Sell this tower
 */
 void Tower::sellTw()
 {

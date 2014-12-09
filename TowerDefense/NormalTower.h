@@ -11,6 +11,7 @@ public:
 	virtual ~NormalTower(){};
 
 
-	void doAttack()override;	
+	void doAttack()override;
+	void showRangeCircle(sf::RenderWindow& w)override;
 };
 

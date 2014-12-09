@@ -4,9 +4,11 @@
 MoneyTower::MoneyTower(shared_ptr<Tile> mTile)
 	:Tower(mTile)
 {
+	for (int i = 0; i < 3; i++)
+	{
+		income[level - 1] = MONEY_TOWER_INCOME[level - 1];
+	}
 	price = MONEY_TOWER_PRICE;
-	income[level - 1] = MONEY_TOWER_INCOME[level - 1];
-
 	timer = speed;
 
 	if (!texture.loadFromFile(MONEY_TOWER_SPRITE_ADD))
@@ -30,6 +32,11 @@ MoneyTower::MoneyTower(shared_ptr<Tile> mTile)
 void MoneyTower::doAttack()
 {
 	generateMoney();
+}
+
+void MoneyTower::showRangeCircle(sf::RenderWindow& w)
+{
+
 }
 
 /*

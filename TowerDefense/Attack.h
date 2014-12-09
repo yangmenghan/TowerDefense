@@ -21,6 +21,7 @@ public:
 
 
 	shared_ptr<Enemy> getTarget();
+	sf::Vector2i getCenter();
 	void virtual resolve()=0;
 
 protected:

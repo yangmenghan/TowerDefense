@@ -39,3 +39,7 @@ void SunTower::doAttack()
 {
 	attack.resolve();
 }
+void SunTower::showRangeCircle(sf::RenderWindow& w)
+{
+
+}

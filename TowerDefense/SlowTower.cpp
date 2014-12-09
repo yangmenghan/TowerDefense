@@ -37,3 +37,8 @@ void SlowTower::doAttack()
 
 	attack.resolve();
 }
+
+void SlowTower::showRangeCircle(sf::RenderWindow& w)
+{
+
+}
