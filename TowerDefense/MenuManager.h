@@ -12,6 +12,7 @@ class MenuManager
 private:
 	vector<shared_ptr<Menu>> menuStack;
 	bool exitFlag;
+	bool existBuildMenu;
 
 	MenuManager();
 	~MenuManager();
@@ -27,6 +28,8 @@ public:
 	void popMenu();
 
 	bool getExitFlag();
+	bool getExistBuildMenu();
+	void setExsitBuildMenu(bool);
 	std::vector<shared_ptr<Menu>>* getMenus();
 
 	void openMenu(shared_ptr<Menu> menu);

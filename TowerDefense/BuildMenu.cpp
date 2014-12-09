@@ -131,4 +131,5 @@ void BuildMenu::close()
 	LevelManager::getLevelManager()->setSpeed(1);
 	LevelManager::getLevelManager()->updatePath();
 	MenuManager::getMenuManager()->popMenu();
+	MenuManager::getMenuManager()->setExsitBuildMenu(false);
 }
