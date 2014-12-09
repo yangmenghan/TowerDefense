@@ -21,7 +21,6 @@ void NormalAttack::resolve()
 			getTarget()->takeDamage(damage);
 			timer = speed;
 		}
-		
 	}
 	else{
 		timer--;
