@@ -17,7 +17,7 @@ void NormalAttack::resolve()
 	if (timer == 0)
 	{
 		shared_ptr<Enemy> enemy = getTarget();
-		if (enemy !=NULL){
+		if (enemy != NULL){
 			enemy->takeDamage(damage);
 			timer = speed;
 		}

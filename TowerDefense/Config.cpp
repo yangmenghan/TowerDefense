@@ -46,7 +46,7 @@ Wave constants
 
 extern const int		WAVE_TOTAL				= 24;
 extern const string		WAVE_FILE_ADDRESS		= "Waves.txt";
-extern const int		WAVE_SPAWN_COOLDOWN		= 60;
+extern const int		WAVE_SPAWN_COOLDOWN		= 10;
 extern const int		WAVE_COOLDOWN			= 300;
 
 /*
@@ -101,7 +101,7 @@ extern const string		NORMAL_TOWER_SPRITE_ADD = "sprites/normal_tower.png";
 
 extern const float		SUN_TOWER_DAMAGE[3]		= { 25, 45, 60};
 //extern const int		SUN_TOWER_SPEED[3]		= { 30, 20, 10 };
-extern const float		SUN_TOWER_RANGE[3]		= { 10, 15, 20 };
+extern const float		SUN_TOWER_RANGE[3]		= { 125, 175, 225 };
 extern const int		SUN_TOWER_PRICE			= 500;
 extern const int		SUN_TOWER_INCOME[3]		= {400, 800, 1200};
 extern const string		SUN_TOWER_SPRITE_ADD	= "sprites/normal_tower.png";

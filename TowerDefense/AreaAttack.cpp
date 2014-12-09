@@ -21,7 +21,9 @@ vector<shared_ptr<Enemy>> AreaAttack::getTarget()
 	vector<shared_ptr<Enemy>> enemiesInRange;
 	for (shared_ptr<Enemy> e : enemiesField)
 	{
-		if (sqrt((e->getPosition().x - center.x) ^ 2 + (e->getPosition().y - center.y) ^ 2) < range)
+		float i = sqrt(pow(e->getPosition().x - center.x, 2)
+			+ pow((e->getPosition().y - center.y), 2));
+		if (i < range)
 			enemiesInRange.push_back(e);
 	}
 
@@ -37,11 +39,14 @@ void AreaAttack::resolve()
 	if (timer == 0)
 	{
 		vector<shared_ptr<Enemy>> enemiesInRange = getTarget();
-		for (shared_ptr<Enemy> e : enemiesInRange)
+		if (!enemiesInRange.empty())
 		{
-			e->takeDamage(damage);
+			for (shared_ptr<Enemy> e : enemiesInRange)
+			{
+				e->takeDamage(damage);
+			}
+			timer = speed;
 		}
-		timer = speed;
 	}
 	else
 		timer--;

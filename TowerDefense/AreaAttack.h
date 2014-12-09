@@ -8,13 +8,7 @@ public:
 	AreaAttack();
 	virtual ~AreaAttack();
 
-	float getRange();
-
 	vector<shared_ptr<Enemy>> getTarget();
 	void resolve() override;
-
-
-private:
-	float range;
 };
 
