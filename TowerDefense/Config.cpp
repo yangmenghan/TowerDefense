@@ -107,8 +107,7 @@ extern const int		SUN_TOWER_INCOME[3]		= {400, 800, 1200};
 extern const string		SUN_TOWER_SPRITE_ADD	= "sprites/normal_tower.png";
 
 extern const float		MONEY_TOWER_DAMAGE[3]	= { 0, 0, 0 };
-extern const int		MONEY_TOWER_GENERATION_UNIT[3] = { 300, 600, 900 }; //TODO : = ???
-extern const int		MONEY_TOWER_SLOW_AMOUNT[3]	= { 0, 0, 0 };
+extern const int		MONEY_TOWER_GENERATION_UNIT[3] = { 300, 600, 900 }; 
 extern const float		MONEY_TOWER_RANGE[3]	= { 0, 0, 0 };
 extern const int		MONEY_TOWER_PRICE		= 400;
 extern const int		MONEY_TOWER_INCOME[3]	= {300, 600, 900};

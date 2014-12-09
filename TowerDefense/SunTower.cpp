@@ -6,9 +6,9 @@ SunTower::SunTower(shared_ptr<Tile> mTile)
 {
 	for (int i = 0; i < 3; i++)
 	{
-		damage[level - 1] = SUN_TOWER_DAMAGE[level - 1];
-		income[level - 1] = SUN_TOWER_INCOME[level - 1];
-		range[level - 1] = SUN_TOWER_RANGE[level - 1];
+		damage[i] = SUN_TOWER_DAMAGE[i];
+		income[i] = SUN_TOWER_INCOME[i];
+		range[i] = SUN_TOWER_RANGE[i];
 	}
 	price = SUN_TOWER_PRICE;
 
@@ -20,7 +20,6 @@ SunTower::SunTower(shared_ptr<Tile> mTile)
 		// TODO erreur...
 	}
 	setTowerTexture();
-
 	setRangeCircle();
 }
 

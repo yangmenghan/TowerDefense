@@ -90,10 +90,7 @@ void Tower::setRangeCircle()
 void Tower::spriteUpdate(int i)
 {
 	currentSprite = i;
-	sprite.setTexture(texture);
-	sf::Vector2i spriteInit(0, currentSprite * size.y);
-	sprite.setTextureRect(sf::IntRect(spriteInit, size));
-	sprite.setPosition(sf::Vector2f(tile->getPositionPixel().x, tile->getPositionPixel().y));
+	setTowerTexture();
 }
 
 /*
@@ -105,15 +102,11 @@ void Tower::upgradeTw()
 	{
 		level++;
 		speed -= 5;
+		timer = speed;
 		currentSprite = level - 1;
 		spriteUpdate(currentSprite);
-
-		attack->setDamage(damage[level - 1]);
-		attack->setSlowAmount(damage[level - 1]);
-		attack->setSpeed(speed);
-		attack->setRange(range[level - 1]);
-		timer = speed;
-		attack->setTimer(timer);
+		setAttack();
+		setRangeCircle();
 	}
 }
 /*
@@ -130,13 +123,10 @@ void Tower::downgradeTw()
 			speed += 5;
 			currentSprite = level - 1;
 			spriteUpdate(currentSprite);
-
-			attack->setDamage(damage[level - 1]);
-			attack->setSlowAmount(damage[level - 1]);
-			attack->setSpeed(speed);
-			attack->setRange(range[level - 1]);
 			timer = speed;
-			attack->setTimer(timer);
+
+			setAttack();
+			setRangeCircle();
 		}
 	}	
 }

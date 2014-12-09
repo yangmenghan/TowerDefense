@@ -6,7 +6,9 @@ MoneyTower::MoneyTower(shared_ptr<Tile> mTile)
 {
 	for (int i = 0; i < 3; i++)
 	{
-		income[level - 1] = MONEY_TOWER_INCOME[level - 1];
+		damage[i] = SUN_TOWER_DAMAGE[i];
+		income[i] = SUN_TOWER_INCOME[i];
+		range[i] = SUN_TOWER_RANGE[i];
 	}
 	price = MONEY_TOWER_PRICE;
 
@@ -15,6 +17,10 @@ MoneyTower::MoneyTower(shared_ptr<Tile> mTile)
 		// TODO erreur...
 	}
 	setTowerTexture();
+	
+	attack = make_shared<NormalAttack>();
+	setAttack();
+	setRangeCircle();
 }
 
 void MoneyTower::doAttack()
