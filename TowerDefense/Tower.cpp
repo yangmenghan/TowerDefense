@@ -111,18 +111,14 @@ void Tower::downgradeTw()
 			timer = speed;
 			attack->setTimer(timer);
 		}
-		else
+		/*else    
+		/!\ don't delete the tower here, already done in levelManager - Mew
 		{
 			level = 0;
 			tile->setTower(NULL);
 		}
+		*/
 	}
-	/*if (level == 0)
-	{
-		tile->setTower(NULL);
-		LevelManager::getLevelManager()->removeTower(shared_ptr<Tower>(this));
-		//this->~Tower();//Delete this tower
-	}*/
 		
 }
 

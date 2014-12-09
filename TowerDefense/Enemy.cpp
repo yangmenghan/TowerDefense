@@ -94,13 +94,10 @@ void Enemy::setTile(shared_ptr<Tile> t){
 void Enemy::die(){
 	hp = 0;
 	LevelManager::getLevelManager()->getPlayer()->manageScore(scoreValue);
-	setTile(NULL);
-	//LevelManager::getLevelManager()->removeEnemy(shared_ptr<Enemy>(this));
 };
 
 void Enemy::dieWithoutBonus(){
 	hp = 0;
-	setTile(NULL);
 }
 
 void Enemy::slow(int frames){

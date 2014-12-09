@@ -47,17 +47,6 @@ void LevelManager::gameLoop(RenderWindow& w){
 		//if the game is not paused
 		if (gameSpeed != 0){ 
 
-
-			/*for (Tile tile : field.getTiles()) {
-				if (tile.hasOpenedMenu()) {
-					tile.getCurrentMenu().draw(w);
-					tile.getCurrentMenu().resolveEvents();
-				}
-			}
-			*/
-
-
-
 			if (player.getHP() <=0){
 				gameOver(); 
 			}
@@ -81,6 +70,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 				if (towers.at(i)->getLevel() ==0){
 					towers.at(i)->getTile()->setTower(NULL);
 					removeTower(i);
+					updatePath();
 					i--;
 				}
 				else {
@@ -96,7 +86,6 @@ void LevelManager::gameLoop(RenderWindow& w){
 					i--;
 				}
 				else if (enemies.at(i)->getPosition() == field.getEndTile()->getPositionPixel()){
-					player.manageHP(-1);
 					enemies.at(i)->succed();
 					removeEnemy(i);
 					i--;
