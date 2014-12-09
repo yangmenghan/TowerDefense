@@ -120,10 +120,10 @@ void GameMenu::draw(sf::RenderWindow& w)
 	
 	//set position and font for the text displays
 
-	std::string lifeCount = std::to_string(levelManager->getPlayer().getHP());
+	std::string lifeCount = std::to_string(levelManager->getPlayer()->getHP());
 	lifeCountDisplay.setString("Player life : " + lifeCount+"/10");
 
-	std::string pointsCount = std::to_string(levelManager->getPlayer().getScore());
+	std::string pointsCount = std::to_string(levelManager->getPlayer()->getScore());
 	pointsCountDisplay.setString("Player score : " + pointsCount);
 
 	string waveCount = std::to_string(levelManager->getCurrentWaveNumber());

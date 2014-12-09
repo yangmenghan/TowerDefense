@@ -63,6 +63,10 @@ void Tower::setRange(float mRange)
 void Tower::spriteUpdate(int i)
 {
 	currentSprite = i;
+	sprite.setTexture(texture);
+	sf::Vector2i spriteInit(0, currentSprite * size.y);
+	sprite.setTextureRect(sf::IntRect(spriteInit, size));
+	sprite.setPosition(sf::Vector2f(tile->getPositionPixel().x, tile->getPositionPixel().y));
 }
 
 /*
@@ -75,15 +79,14 @@ void Tower::upgradeTw()
 		level++;
 		speed -= 5;
 		currentSprite = level - 1;
+		spriteUpdate(currentSprite);
 
 		attack->setDamage(damage[level - 1]);
 		attack->setSlowAmount(damage[level - 1]);
 		attack->setSpeed(speed);
 		attack->setRange(range[level - 1]);
-
 		timer = speed;
-
-		spriteUpdate(currentSprite);
+		attack->setTimer(timer);
 	}
 }
 /*
@@ -95,19 +98,23 @@ void Tower::downgradeTw()
 	{
 		level--;
 		
-		if (level != 0)
+		if (level > 0)
 		{
 			speed += 5;
 			currentSprite = level - 1;
+			spriteUpdate(currentSprite);
 
 			attack->setDamage(damage[level - 1]);
 			attack->setSlowAmount(damage[level - 1]);
 			attack->setSpeed(speed);
 			attack->setRange(range[level - 1]);
-
 			timer = speed;
-
-			spriteUpdate(currentSprite);
+			attack->setTimer(timer);
+		}
+		else
+		{
+			level = 0;
+			tile->setTower(NULL);
 		}
 	}
 	/*if (level == 0)

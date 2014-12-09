@@ -11,10 +11,6 @@ public:
 	virtual ~NormalTower(){};
 
 
-	void doAttack()override;
-
-private:
-	NormalAttack attack;
-	
+	void doAttack()override;	
 };
 
