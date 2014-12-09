@@ -152,6 +152,7 @@ extern const string			FONT;
 extern const sf::Vector2f	LIFE_COUNT_DISPLAY_POSITION;
 extern const sf::Vector2f	POINTS_COUNT_DISPLAY_POSITION;
 extern const sf::Vector2f	WAVE_COUNT_DISPLAY_POSITION;
+extern const sf::Vector2f	MONEY_COUNT_DISPLAY_POSITION;
 
 /*
 Button constants

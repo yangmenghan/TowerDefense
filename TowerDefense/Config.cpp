@@ -143,9 +143,10 @@ Display constants
 */
 
 extern const string			FONT								= "ressources/SourceCodePro.ttf";
-extern const sf::Vector2f	LIFE_COUNT_DISPLAY_POSITION			= sf::Vector2f(600, 13);
-extern const sf::Vector2f	POINTS_COUNT_DISPLAY_POSITION		= sf::Vector2f(800, 13);
+extern const sf::Vector2f	LIFE_COUNT_DISPLAY_POSITION			= sf::Vector2f(500, 13);
+extern const sf::Vector2f	POINTS_COUNT_DISPLAY_POSITION		= sf::Vector2f(700, 13);
 extern const sf::Vector2f	WAVE_COUNT_DISPLAY_POSITION			= sf::Vector2f(1000, 13);
+extern const sf::Vector2f	MONEY_COUNT_DISPLAY_POSITION		= sf::Vector2f(850, 13);
 
 /*
 Button constants

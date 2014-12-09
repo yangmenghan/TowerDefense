@@ -16,7 +16,7 @@ private:
 	Button pauseButton = Button(PAUSE_BUTTON_TEXTURE, MUTE_BUTTON_SIZE, MUTE_BUTTON_POSITION + sf::Vector2i(120,0), 2);
 	Button speedButton = Button(SPEED_BUTTON_TEXTURE, MUTE_BUTTON_SIZE, MUTE_BUTTON_POSITION + sf::Vector2i(240, 0), 2);
 	Button muteButton = Button(MUTE_BUTTON_TEXTURE, MUTE_BUTTON_SIZE, MUTE_BUTTON_POSITION, 2);
-	Button restartButton = Button(RESTART_BUTTON_TEXTURE, MUTE_BUTTON_SIZE, MUTE_BUTTON_POSITION + sf::Vector2i(360, 0), 2);
+	Button restartButton = Button(RESTART_BUTTON_TEXTURE, MUTE_BUTTON_SIZE, MUTE_BUTTON_POSITION + sf::Vector2i(360, 0), 3);
 	//Button giveUpButton = Button(GIVE_UP_BUTTON_TEXTURE);
 	float gameSpeed;
 
@@ -27,6 +27,7 @@ private:
 	sf::Text lifeCountDisplay; //is it the best way to proceed ? will need tests
 	sf::Text pointsCountDisplay;
 	sf::Text waveCountDisplay;
+	sf::Text moneyCountDisplay;
 
 
 public:

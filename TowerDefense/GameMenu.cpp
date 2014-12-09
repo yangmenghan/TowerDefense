@@ -25,18 +25,23 @@ GameMenu::GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector
 	lifeCountDisplay.setFont(font);
 	pointsCountDisplay.setFont(font);
 	waveCountDisplay.setFont(font);
+	moneyCountDisplay.setFont(font);
 
 	lifeCountDisplay.setColor(sf::Color::Green);
 	pointsCountDisplay.setColor(sf::Color::Green);
 	waveCountDisplay.setColor(sf::Color::Green);
+	moneyCountDisplay.setColor(sf::Color::Green);
 
 	lifeCountDisplay.setCharacterSize(14);
 	pointsCountDisplay.setCharacterSize(14);
 	waveCountDisplay.setCharacterSize(14);
+	moneyCountDisplay.setCharacterSize(14);
 
 	lifeCountDisplay.setPosition(LIFE_COUNT_DISPLAY_POSITION);
 	pointsCountDisplay.setPosition(POINTS_COUNT_DISPLAY_POSITION);
 	waveCountDisplay.setPosition(WAVE_COUNT_DISPLAY_POSITION);
+	moneyCountDisplay.setPosition(MONEY_COUNT_DISPLAY_POSITION);
+
 
 	shared_ptr<AudioManager> audio = AudioManager::getAudioManager();
 	if (audio->isMute() == false)
@@ -124,7 +129,10 @@ void GameMenu::draw(sf::RenderWindow& w)
 	lifeCountDisplay.setString("Player life : " + lifeCount+"/10");
 
 	std::string pointsCount = std::to_string(levelManager->getPlayer()->getScore());
-	pointsCountDisplay.setString("Player score : " + pointsCount);
+	pointsCountDisplay.setString("Score : " + pointsCount);
+
+	std::string moneyCount = std::to_string(levelManager->getPlayer()->getMoney());
+	moneyCountDisplay.setString("Gold : " + pointsCount);
 
 	string waveCount = std::to_string((levelManager->getCurrentWaveNumber()));
 	waveCountDisplay.setString("Wave " + waveCount + "/24");
@@ -132,6 +140,7 @@ void GameMenu::draw(sf::RenderWindow& w)
 	w.draw(lifeCountDisplay);
 	w.draw(pointsCountDisplay);
 	w.draw(waveCountDisplay);
+	w.draw(moneyCountDisplay);
 
 	levelManager->gameLoop(w);
 }
