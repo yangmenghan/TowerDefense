@@ -105,7 +105,7 @@ void Field::resolveEvent(sf::Event event)
 	for (auto t : tilesMap)
 	{
 		if (t->checkHover())
-		t->resolveEvent(event);
+			t->resolveEvent(event);
 	}
 }
 

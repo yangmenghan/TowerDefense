@@ -103,8 +103,7 @@ void BuildMenu::resolveEvent(sf::Event event)
 			close();
 		}
 	}
-	//field.mouseClick(_event) && (!buildMenu.mouseClick(_event))
-	else if (event.type == sf::Event::MouseButtonPressed)
+	else if (event.type == sf::Event::MouseButtonReleased)
 	{
 		close();
 	}
@@ -131,5 +130,4 @@ void BuildMenu::close()
 	LevelManager::getLevelManager()->setSpeed(1);
 	LevelManager::getLevelManager()->updatePath();
 	MenuManager::getMenuManager()->popMenu();
-	MenuManager::getMenuManager()->setExsitBuildMenu(false);
 }

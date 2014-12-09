@@ -49,7 +49,7 @@ void TowerMenu::resolveEvent(sf::Event event)
 			close();
 		}
 	}
-	else if (event.type==sf::Event::MouseButtonPressed )
+	else if (event.type==sf::Event::MouseButtonReleased)
 	{
 		close();
 	}

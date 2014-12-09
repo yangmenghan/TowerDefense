@@ -11,7 +11,6 @@ MenuManager* MenuManager::menuManager = NULL;
 
 MenuManager::MenuManager()
 {
-	existBuildMenu = false;
 }
 
 MenuManager::~MenuManager()
@@ -19,15 +18,6 @@ MenuManager::~MenuManager()
 	menuStack.clear();
 }
 
-bool MenuManager::getExistBuildMenu()
-{
-	return existBuildMenu;
-}
-
-void MenuManager::setExsitBuildMenu(bool _existBuildMenu)
-{
-	existBuildMenu = _existBuildMenu;
-}
 
 void MenuManager::exit()
 {
