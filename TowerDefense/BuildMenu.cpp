@@ -113,10 +113,17 @@ void BuildMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
 
-	basicTwButton.mouseHover(w);
+	if (basicTwButton.mouseHover(w))
+	{
+		auto tempTower = make_shared<NormalTower>(tile);
+		tempTower->draw(w);
+		tempTower->showRangeCircle(w);
+	}
+	//basicTwButton.mouseHover(w);
 	slowTwButton.mouseHover(w);
 	moneyTwButton.mouseHover(w);
 	sunTwButton.mouseHover(w);
+
 
 	basicTwButton.draw(w);
 	slowTwButton.draw(w);

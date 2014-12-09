@@ -5,6 +5,9 @@
 #include "Menu.h"
 #include "Button.h"
 
+
+
+
 using namespace std;
 
 class Tile;
@@ -18,6 +21,7 @@ private:
 	Button slowTwButton;					//The button for building a slow tower in the tile.
 	Button moneyTwButton;					//The button for building a money tower in the tile.
 	Button sunTwButton;						//The button for building a sun tower in the tile.
+	//shared_ptr<Tower> tempTower;
 public:
 	//Constructors, destructors
 	BuildMenu();							//Default constructor.

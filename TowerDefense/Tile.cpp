@@ -245,10 +245,14 @@ void Tile::draw(sf::RenderWindow& w)
 		cooldown--;
 		if (cooldown == 0)
 		{
-			spriteUpdate(0);
+			currentSprite = 0;
+			spriteUpdate(currentSprite);
 		}
 	}
-
+	if (hasTower() && isHovered )
+	{
+		getTower()->showRangeCircle(w);
+	}
 
 
 	sprite.setTexture(texture);
