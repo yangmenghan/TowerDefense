@@ -19,9 +19,7 @@ NormalTower::NormalTower(shared_ptr<Tile> mTile)
 	attack->setDamage(damage[level - 1]);
 	attack->setRange(range[level - 1]);
 	attack->setSpeed(speed);
-	attack->setTimer(timer);
-
-	
+	attack->setTimer(timer);	
 	
 	if (!texture.loadFromFile(NORMAL_TOWER_SPRITE_ADD))
 	{

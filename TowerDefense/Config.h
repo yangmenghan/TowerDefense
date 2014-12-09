@@ -93,11 +93,7 @@ extern const string		TOUGH_ENEMY_SPRITE_ADD;
 Tower constants
 */
 
-extern const float		INCOME_RATE;
-extern const int		UPGRADE_INCREMENT;
-extern const float		UPGRADE_RATE;
 extern const int		TOWER_SPEED;
-
 extern const sf::Color	RANGE_CIRCLE_FILL_COLOR;
 
 extern const float		NORMAL_TOWER_DAMAGE[3];

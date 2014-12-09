@@ -88,9 +88,6 @@ extern const string		TOUGH_ENEMY_SPRITE_ADD	= "sprites/Enemy5.png";
 Tower constants
 */
 
-extern const float		INCOME_RATE				= 0.8;
-extern const int		UPGRADE_INCREMENT		= 5;
-extern const float		UPGRADE_RATE			= 1.5;
 extern const sf::Color	RANGE_CIRCLE_FILL_COLOR = sf::Color(0, 0, 255, 100);
 extern const int		TOWER_SPEED				= 15;
 
@@ -102,7 +99,7 @@ extern const int		NORMAL_TOWER_PRICE		= 200;
 extern const int		NORMAL_TOWER_INCOME[3]	= {150,300, 450 };
 extern const string		NORMAL_TOWER_SPRITE_ADD = "sprites/normal_tower.png";
 
-extern const float		SUN_TOWER_DAMAGE[3]		= { 10, 15, 20 };
+extern const float		SUN_TOWER_DAMAGE[3]		= { 25, 45, 60};
 //extern const int		SUN_TOWER_SPEED[3]		= { 30, 20, 10 };
 extern const float		SUN_TOWER_RANGE[3]		= { 10, 15, 20 };
 extern const int		SUN_TOWER_PRICE			= 500;
@@ -117,9 +114,9 @@ extern const int		MONEY_TOWER_PRICE		= 400;
 extern const int		MONEY_TOWER_INCOME[3]	= {300, 600, 900};
 extern const string		MONEY_TOWER_SPRITE_ADD	= "sprites/normal_tower.png";
 
-extern const float		SLOW_TOWER_DAMAGE[3]	= { 10, 20, 30 };
-extern const int		SLOW_TOWER_SPEED[3]		= { 15, 10, 5 };
-extern const float		SLOW_TOWER_RANGE[3]		= { 10, 15, 20 };
+extern const float		SLOW_TOWER_DAMAGE[3]	= { 120, 180, 240 };
+//extern const int		SLOW_TOWER_SPEED[3]		= { 15, 10, 5 };
+extern const float		SLOW_TOWER_RANGE[3]		= { 125, 175, 225 };
 extern const int		SLOW_TOWER_PRICE		= 300;
 extern const int		SLOW_TOWER_INCOME[3]	= {250, 500, 750};
 extern const string		SLOW_TOWER_SPRITE_ADD	= "sprites/normal_tower.png";
@@ -128,7 +125,7 @@ extern const string		SLOW_TOWER_SPRITE_ADD	= "sprites/normal_tower.png";
 Attack constants
 */
 
-extern const int		SLOW_EFFECT				= 100;
+extern const int		SLOW_EFFECT				= 1;
 
 /*
 Menu constants

@@ -19,7 +19,6 @@ void SlowAttack::resolve()
 		shared_ptr<Enemy> enemy = getTarget();
 		if (enemy != NULL){
 			enemy->slow(slowAmount);
-			getTarget()->slow(slowAmount);
 			timer = speed;
 		}
 	}

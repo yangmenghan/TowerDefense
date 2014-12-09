@@ -12,7 +12,5 @@ public:
 
 	void doAttack() override;
 	void showRangeCircle(sf::RenderWindow& w)override;
-private:
-	SlowAttack attack;
 };
 
