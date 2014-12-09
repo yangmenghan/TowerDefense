@@ -36,6 +36,7 @@ shared_ptr<Tile> BuildMenu::getTile()
 void BuildMenu::buyBasicTw()
 {
 	LevelManager::getLevelManager()->getPlayer()->manageMoney(-NORMAL_TOWER_PRICE);
+	
 	auto pNormalTw = make_shared<NormalTower>(tile);
 	LevelManager::getLevelManager()->addTower(pNormalTw);
 	tile->setTower(pNormalTw);
