@@ -173,7 +173,7 @@ void Tile::resolveEvent(sf::Event event)
 		currentSprite = 2;
 		spriteUpdate(currentSprite);
 	}
-	else
+	else 
 	{
 		if (event.type == sf::Event::MouseButtonPressed)
 		{
@@ -228,6 +228,7 @@ shared_ptr<BuildMenu> Tile::openBuildMenu()
 {
 	auto buildMenuptr = make_shared<BuildMenu>(shared_from_this());
 	MenuManager::getMenuManager()->addMenu(buildMenuptr);
+	MenuManager::getMenuManager()->setExistBTMenu(true);
 	return buildMenuptr;
 }
 
@@ -235,6 +236,7 @@ shared_ptr<TowerMenu> Tile::openTowerMenu()
 {
 	auto TowerMenuptr = make_shared<TowerMenu>(shared_from_this());
 	MenuManager::getMenuManager()->addMenu(TowerMenuptr);
+	MenuManager::getMenuManager()->setExistBTMenu(true);
 	return TowerMenuptr;
 
 }
@@ -249,7 +251,7 @@ void Tile::draw(sf::RenderWindow& w)
 			spriteUpdate(currentSprite);
 		}
 	}
-	if (hasTower() && isHovered )
+	if (hasTower() && isHovered && (!MenuManager::getMenuManager()->getExistBTMenu()))
 	{
 		getTower()->showRangeCircle(w);
 	}

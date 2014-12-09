@@ -70,4 +70,5 @@ void TowerMenu::close()
 {
 	LevelManager::getLevelManager()->updatePath();
 	MenuManager::getMenuManager()->popMenu();
+	MenuManager::getMenuManager()->setExistBTMenu(false);
 }

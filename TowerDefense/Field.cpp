@@ -110,9 +110,9 @@ void Field::resolveEvent(sf::Event event)
 }
 
 void Field::draw(sf::RenderWindow& w)
-{
-	for (shared_ptr<Tile> t : tilesMap){
-		mouseHover(w);
+{	
+	mouseHover(w);	
+	for (shared_ptr<Tile> t : tilesMap){	
 		t->draw(w);
 	}
 }

@@ -11,6 +11,7 @@ MenuManager* MenuManager::menuManager = NULL;
 
 MenuManager::MenuManager()
 {
+	existBTMenu = false;
 }
 
 MenuManager::~MenuManager()
@@ -50,6 +51,17 @@ bool MenuManager::getExitFlag()
 {
 	return exitFlag;
 }
+
+bool MenuManager::getExistBTMenu()
+{
+	return existBTMenu;
+}
+
+void MenuManager::setExistBTMenu(bool _exist)
+{
+	existBTMenu = _exist;
+}
+
 std::vector<shared_ptr<Menu>>* MenuManager::getMenus()
 {
 	return &menuStack;
