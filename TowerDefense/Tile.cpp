@@ -251,10 +251,13 @@ void Tile::draw(sf::RenderWindow& w)
 			spriteUpdate(currentSprite);
 		}
 	}
-	if (hasTower() && isHovered && (!MenuManager::getMenuManager()->getExistBTMenu()))
+	if (!MenuManager::getMenuManager()->getExistBTMenu())
 	{
-		getTower()->showRangeCircle(w);
+		
+		if (hasTower() && isHovered)
+			getTower()->showRangeCircle(w);
 	}
+
 
 
 	sprite.setTexture(texture);
