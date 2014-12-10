@@ -25,6 +25,7 @@ void LevelManager::kill(){
 LevelManager::LevelManager()
 {
 	waveCooldown = WAVE_COOLDOWN;
+	player = make_shared<Player>();
 	startGame();
 }
 
@@ -47,7 +48,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 		//if the game is not paused
 		if (gameSpeed != 0){ 
 
-			if (player.getHP() <=0){
+			if (player->getHP() <=0){
 				gameOver(); 
 			}
 			
@@ -150,7 +151,7 @@ void LevelManager::startGame(){
 	loadWaves();
 	updatePath();
 	//player = Player();
-	//player.init();
+	player->init();
 }
 
 void LevelManager::stopGame(){
@@ -201,15 +202,15 @@ vector<shared_ptr<Tower>> LevelManager::getTowers(){
 	return towers;
 }
 
-void LevelManager::setPlayer(Player &p){
+void LevelManager::setPlayer(shared_ptr<Player> p){
 	player = p;
 };
 void LevelManager::setField(Field &f){
 	field = f;
 };
 
-Player*	LevelManager::getPlayer(){
-	return &player;
+shared_ptr<Player> LevelManager::getPlayer(){
+	return player;
 }
 
 Field LevelManager::getField(){

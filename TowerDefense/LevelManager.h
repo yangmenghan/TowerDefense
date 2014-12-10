@@ -27,8 +27,8 @@ public:
 	vector<shared_ptr<Tower>> getTowers();
 	vector<Wave> getWaves();
 	
-	void setPlayer(Player &player);
-	Player* getPlayer();
+	void setPlayer(shared_ptr<Player> player);
+	shared_ptr<Player> getPlayer();
 
 	void setField(Field &field);
 	Field getField();
@@ -70,7 +70,7 @@ private:
 	vector<shared_ptr<Tower>> towers;
 	vector<Wave> waves;
 
-	Player player;
+	shared_ptr<Player> player;
 	Field field;
 
 };
