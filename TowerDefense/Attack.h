@@ -22,7 +22,7 @@ public:
 
 	shared_ptr<Enemy> getTarget();
 	sf::Vector2i getCenter();
-	void setAttackRayAngle();
+	void setAttackRayAngle(shared_ptr<Enemy> target);
 	void virtual attackAnimation(sf::RenderWindow& w) = 0;
 	void virtual resolve(sf::RenderWindow& w) = 0;
 

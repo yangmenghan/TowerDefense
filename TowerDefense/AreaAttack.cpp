@@ -21,8 +21,8 @@ vector<shared_ptr<Enemy>> AreaAttack::getTarget()
 	vector<shared_ptr<Enemy>> enemiesInRange;
 	for (shared_ptr<Enemy> e : enemiesField)
 	{
-		float i = sqrt(pow(e->getPosition().x - center.x, 2)
-			+ pow((e->getPosition().y - center.y), 2));
+		float i = sqrt(pow(e->getPosition().x + 25 - center.x, 2)
+			+ pow((e->getPosition().y + 25 - center.y), 2));
 		if (i < range)
 			enemiesInRange.push_back(e);
 	}
@@ -31,12 +31,13 @@ vector<shared_ptr<Enemy>> AreaAttack::getTarget()
 }
 void AreaAttack::attackAnimation(sf::RenderWindow& w)
 {
-	attackRay.setSize(sf::Vector2f(2, targetDistance));
-	attackRay.setPosition(sf::Vector2f(center));
-	attackRay.setFillColor(sf::Color(255, 0, 0, 100));
-	setAttackRayAngle();
+	attackCircle.setPosition(sf::Vector2f(center));
+	attackCircle.setFillColor(sf::Color(0, 255, 255, 100));
+	attackCircle.setOutlineColor(sf::Color(0, 255, 255, 255));
+	attackCircle.setRadius((float)(speed - timer)/(float)speed * range);
+	attackCircle.setOrigin(attackCircle.getRadius(), attackCircle.getRadius());
 
-	w.draw(attackRay);
+	w.draw(attackCircle);
 }
 
 /*
@@ -51,14 +52,17 @@ void AreaAttack::resolve(sf::RenderWindow& w)
 		vector<shared_ptr<Enemy>> enemiesInRange = getTarget();
 		if (!enemiesInRange.empty())
 		{
+			
 			for (shared_ptr<Enemy> e : enemiesInRange)
 			{
 				e->takeDamage(damage);
 			}
-			attackAnimation(w);
 			timer = speed;
 		}
 	}
 	else
+	{
 		timer--;
+		attackAnimation(w);
+	}
 }

@@ -64,10 +64,38 @@ void Attack::setTimer(int mTimer)
 	timer = mTimer;
 }
 
-void Attack::setAttackRayAngle()
+void Attack::setAttackRayAngle(shared_ptr<Enemy> target)
 {
 	float angle;
-	angle = acos(targetDistance/(float)(getTarget()->getPosition().x + 25));
+	float targetX = target->getPosition().x;
+	float targetY = target->getPosition().y;
+	if (targetX > center.x && targetY <= center.y)
+	{
+		angle = 180 
+			* acos(targetDistance / (float)(getTarget()->getPosition().x ))
+			/ 3.14
+			+ 220;// Correction of angle
+	}
+	else if (targetX <= center.x && targetY <= center.y)
+	{
+		angle = 180
+			* acos(targetDistance / (float)(getTarget()->getPosition().x ))
+			/ 3.14
+			+ 180;//Correction of angle
+	}
+	else if (targetX <= center.x && targetY > center.y)
+	{
+		angle = 180
+			* acos(targetDistance / (float)(getTarget()->getPosition().x ))
+			/ 3.14
+			+ 30;//Correction of angle
+	}
+	else if (targetX > center.x && targetY > center.y)
+	{
+		angle = 180
+			* acos(targetDistance / (float)(getTarget()->getPosition().x ))
+			/ 3.14;
+	}
 	attackRay.setRotation(angle);
 }
 
@@ -97,6 +125,6 @@ shared_ptr<Enemy> Attack::getTarget()
 			}
 		}
 	}
-	targetDistance = minDistance;
+	
 	return enemyMinDistanceToTarget;
 }

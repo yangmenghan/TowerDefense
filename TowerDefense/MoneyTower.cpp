@@ -37,8 +37,12 @@ void MoneyTower::generateMoney()
 	if (timer == 0)
 	{
 		LevelManager::getLevelManager()->getPlayer()->manageMoney(MONEY_TOWER_GENERATION_UNIT[level - 1]);
+		sprite.setColor(sf::Color(255, 255, 0, 100));
 		timer = speed;
 	}
 	else
+	{
+		sprite.setColor(sf::Color(255, 255, 255, 255));
 		timer--;
+	}
 }

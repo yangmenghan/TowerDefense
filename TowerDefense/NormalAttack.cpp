@@ -8,13 +8,11 @@ NormalAttack::NormalAttack()
 
 void NormalAttack::attackAnimation(sf::RenderWindow& w)
 {
-	attackRay.setSize(sf::Vector2f(2, targetDistance));
+	attackRay.setSize(sf::Vector2f(targetDistance, 2));
 	attackRay.setPosition(sf::Vector2f(center));
 	attackRay.setFillColor(sf::Color(255, 0, 0, 255));
-	//setAttackRayAngle();
 
 	w.draw(attackRay);
-	w.display();
 }
 
 /*
@@ -29,9 +27,12 @@ void NormalAttack::resolve(sf::RenderWindow& w)
 	{
 		shared_ptr<Enemy> enemy = getTarget();
 		if (enemy != NULL){
+			targetDistance = sqrt(pow(enemy->getPosition().x + 25 - center.x, 2)
+				+ pow((enemy->getPosition().y + 25 - center.y), 2));
+			setAttackRayAngle(enemy);
+			attackAnimation(w);
 			enemy->takeDamage(damage);
 			timer = speed;
-			attackAnimation(w);
 		}
 	}
 	else{
