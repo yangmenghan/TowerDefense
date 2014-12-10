@@ -24,13 +24,9 @@ SlowTower::SlowTower(shared_ptr<Tile> mTile)
 }
 
 
-void SlowTower::doAttack()
+void SlowTower::doAttack(sf::RenderWindow& w)
 {
 
-	attack->resolve();
+	attack->resolve(w);
 }
 
-void SlowTower::showRangeCircle(sf::RenderWindow& w)
-{
-	w.draw(rangeCircle);
-}

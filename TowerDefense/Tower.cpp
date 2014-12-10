@@ -10,7 +10,7 @@ Tower::Tower(shared_ptr<Tile> mTile)
 	tile = mTile;
 	size = sf::Vector2i(TILE_WIDTH, TILE_HEIGHT);
 	position = sf::Vector2i(tile->getPositionPixel().x + 25, tile->getPositionPixel().y + 25);
-	speed = TOWER_SPEED;
+	speed = TOWER_SPEED * LevelManager::getLevelManager()->getSpeed();
 	timer = speed;
 }
 
@@ -91,6 +91,11 @@ void Tower::spriteUpdate(int i)
 {
 	currentSprite = i;
 	setTowerTexture();
+}
+
+void Tower::showRangeCircle(sf::RenderWindow& w)
+{
+	w.draw(rangeCircle);
 }
 
 /*

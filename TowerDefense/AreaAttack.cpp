@@ -29,11 +29,21 @@ vector<shared_ptr<Enemy>> AreaAttack::getTarget()
 
 	return enemiesInRange;
 }
+void AreaAttack::attackAnimation(sf::RenderWindow& w)
+{
+	attackRay.setSize(sf::Vector2f(2, targetDistance));
+	attackRay.setPosition(sf::Vector2f(center));
+	attackRay.setFillColor(sf::Color(255, 0, 0, 100));
+	setAttackRayAngle();
+
+	w.draw(attackRay);
+}
+
 /*
 Resolve damages of enemies who are in the range. 
 The damage will occure in a frequency defined by timer.
 */
-void AreaAttack::resolve()
+void AreaAttack::resolve(sf::RenderWindow& w)
 {
 	//TODO:Animation
 	if (timer == 0)
@@ -45,6 +55,7 @@ void AreaAttack::resolve()
 			{
 				e->takeDamage(damage);
 			}
+			attackAnimation(w);
 			timer = speed;
 		}
 	}

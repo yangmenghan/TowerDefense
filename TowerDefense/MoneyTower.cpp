@@ -23,14 +23,9 @@ MoneyTower::MoneyTower(shared_ptr<Tile> mTile)
 	setRangeCircle();
 }
 
-void MoneyTower::doAttack()
+void MoneyTower::doAttack(sf::RenderWindow& w)
 {
 	generateMoney();
-}
-
-void MoneyTower::showRangeCircle(sf::RenderWindow& w)
-{
-
 }
 
 /*

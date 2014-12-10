@@ -22,7 +22,9 @@ public:
 
 	shared_ptr<Enemy> getTarget();
 	sf::Vector2i getCenter();
-	void virtual resolve()=0;
+	void setAttackRayAngle();
+	void virtual attackAnimation(sf::RenderWindow& w) = 0;
+	void virtual resolve(sf::RenderWindow& w) = 0;
 
 protected:
 	float slowAmount;
@@ -31,5 +33,8 @@ protected:
 	sf::Vector2i center;
 	int timer;
 	int speed;
+	float targetDistance;
+
+	sf::RectangleShape attackRay;
 };
 

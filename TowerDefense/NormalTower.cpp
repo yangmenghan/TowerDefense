@@ -29,12 +29,7 @@ NormalTower::NormalTower(shared_ptr<Tile> mTile)
 Activate attack
 */
 
-void NormalTower::doAttack() 
+void NormalTower::doAttack(sf::RenderWindow& w) 
 {
-	attack->resolve();
-}
-
-void NormalTower::showRangeCircle(sf::RenderWindow& w)
-{
-	w.draw(rangeCircle);
+	attack->resolve(w);
 }

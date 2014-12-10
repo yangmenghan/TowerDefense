@@ -6,6 +6,10 @@
 Attack::Attack()
 {
 	timer = speed;
+	targetDistance = 0;
+	slowAmount = 0;
+	damage = 0;
+	range = 0;
 }
 
 Attack::~Attack()
@@ -60,19 +64,25 @@ void Attack::setTimer(int mTimer)
 	timer = mTimer;
 }
 
+void Attack::setAttackRayAngle()
+{
+	float angle;
+	angle = acos(targetDistance/(float)(getTarget()->getPosition().x + 25));
+	attackRay.setRotation(angle);
+}
+
 /*
 Return the pointer to the enenmy (in the range of tower) who is the closest to the final target. 
 */
 
 shared_ptr<Enemy> Attack::getTarget()
 {
-	//std::vector<shared_ptr<Enemy>> enemiesField = LevelManager::getLevelManager()->getEnemies();
 	shared_ptr<Enemy> enemyMinDistanceToTarget = NULL;
 	float minDistance = 0;
 	for (shared_ptr<Enemy> e : LevelManager::getLevelManager()->getEnemies())
 	{
-		float i = sqrt(pow(e->getPosition().x - center.x, 2) 
-						+ pow((e->getPosition().y - center.y),2));
+		float i = sqrt(pow(e->getPosition().x + 25 - center.x, 2) 
+						+ pow((e->getPosition().y + 25 - center.y),2));
 		if ( i < range)
 		{
 			if (minDistance == 0)
@@ -87,5 +97,6 @@ shared_ptr<Enemy> Attack::getTarget()
 			}
 		}
 	}
+	targetDistance = minDistance;
 	return enemyMinDistanceToTarget;
 }

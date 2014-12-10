@@ -8,6 +8,7 @@ public:
 	SlowAttack();
 	virtual ~SlowAttack(){};
 
-	void resolve() override;
+	void attackAnimation(sf::RenderWindow& w) override;
+	void resolve(sf::RenderWindow& w) override;
 };
 

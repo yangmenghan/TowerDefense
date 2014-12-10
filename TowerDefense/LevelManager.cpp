@@ -74,7 +74,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 					i--;
 				}
 				else {
-					towers.at(i)->doAttack();
+					towers.at(i)->doAttack(w);
 				}
 			}
 

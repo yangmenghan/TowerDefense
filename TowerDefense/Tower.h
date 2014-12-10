@@ -29,10 +29,10 @@ public:
 	void sellTw();
 	void upgradeTw();
 	void downgradeTw();
-	virtual void doAttack() = 0;
+	virtual void doAttack(sf::RenderWindow& w) = 0;
 
 	void spriteUpdate(int i);
-	virtual void showRangeCircle(sf::RenderWindow& w) = 0; 
+	void showRangeCircle(sf::RenderWindow& w); 
 
 protected:
 	shared_ptr<Attack> attack;

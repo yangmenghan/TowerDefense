@@ -27,11 +27,8 @@ SunTower::SunTower(shared_ptr<Tile> mTile)
 Activate attck
 */
 
-void SunTower::doAttack()
+void SunTower::doAttack(sf::RenderWindow& w)
 {
-	attack->resolve();
+	attack->resolve(w);
 }
-void SunTower::showRangeCircle(sf::RenderWindow& w)
-{
-	w.draw(rangeCircle);
-}
+
