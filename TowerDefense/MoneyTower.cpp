@@ -36,11 +36,15 @@ Generate money in a frequency defined by timer
 
 void MoneyTower::generateMoney()
 {
-	if (timer == 0)
+	if (timer < 10 / LevelManager::getLevelManager()->getSpeed())
 	{
-		LevelManager::getLevelManager()->getPlayer()->manageMoney(MONEY_TOWER_GENERATION_UNIT[level - 1]);
 		sprite.setColor(sf::Color(255, 255, 0, 100));
-		timer = speed[level - 1];
+		timer--;
+		if (timer == 0)
+		{
+			LevelManager::getLevelManager()->getPlayer()->manageMoney(MONEY_TOWER_GENERATION_UNIT[level - 1]);
+			timer = speed[level - 1];
+		}
 	}
 	else
 	{

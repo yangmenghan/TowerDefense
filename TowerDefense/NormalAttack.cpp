@@ -23,7 +23,7 @@ The damage will occure in a frequency defined by timer.
 void NormalAttack::resolve(sf::RenderWindow& w)
 {
 	//TODO:Animation
-	if (timer == 0)
+	if (timer < timer / 3)
 	{
 		shared_ptr<Enemy> enemy = getTarget();
 		if (enemy != NULL){
@@ -32,7 +32,11 @@ void NormalAttack::resolve(sf::RenderWindow& w)
 			setAttackRayAngle(enemy);
 			attackAnimation(w);
 			enemy->takeDamage(damage);
-			timer = speed;
+			timer--;
+			if (timer == 0)
+			{
+				timer = speed;
+			}
 		}
 	}
 	else{

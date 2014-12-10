@@ -24,7 +24,7 @@ The slow effect will occure in a frequency defined by timer.
 void SlowAttack::resolve(sf::RenderWindow& w)
 {
 	//TODO:Animation
-	if (timer == 0)
+	if (timer < timer / 3)
 	{
 		shared_ptr<Enemy> enemy = getTarget();
 		if (enemy != NULL){
@@ -33,7 +33,11 @@ void SlowAttack::resolve(sf::RenderWindow& w)
 			setAttackRayAngle(enemy);
 			attackAnimation(w);
 			enemy->slow(slowAmount);
-			timer = speed;
+			timer--;
+			if (timer == 0)
+			{
+				timer = speed;
+			}
 		}
 	}
 	else

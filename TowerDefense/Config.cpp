@@ -92,7 +92,7 @@ extern const sf::Color	RANGE_CIRCLE_FILL_COLOR = sf::Color(0, 0, 255, 100);
 extern const int		TOWER_SPEED				= 15;
 
 
-extern const float		NORMAL_TOWER_DAMAGE[3]	= { 25, 45, 60 };
+extern const float		NORMAL_TOWER_DAMAGE[3]	= { 10, 20, 25 };
 extern const int		NORMAL_TOWER_SLOW_AMOUNT[3]	= { 0, 0, 0 };
 extern const int		NORMAL_TOWER_SPEED[3]	= {20, 15, 10};
 extern const float		NORMAL_TOWER_RANGE[3]	= { 125, 175, 225 };
