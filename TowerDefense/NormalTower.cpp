@@ -24,7 +24,6 @@ NormalTower::NormalTower(shared_ptr<Tile> mTile)
 	}
 
 	setTowerTexture();
-
 	setRangeCircle();
 }
 

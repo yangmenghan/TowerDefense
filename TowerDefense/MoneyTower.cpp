@@ -6,10 +6,10 @@ MoneyTower::MoneyTower(shared_ptr<Tile> mTile)
 {
 	for (int i = 0; i < 3; i++)
 	{
-		damage[i] = SUN_TOWER_DAMAGE[i];
-		income[i] = SUN_TOWER_INCOME[i];
-		range[i] = SUN_TOWER_RANGE[i];
-		speed[i] = SUN_TOWER_SPEED[i] * LevelManager::getLevelManager()->getSpeed();
+		damage[i] = MONEY_TOWER_DAMAGE[i];
+		income[i] = MONEY_TOWER_INCOME[i];
+		range[i] = MONEY_TOWER_RANGE[i];
+		speed[i] = MONEY_TOWER_SPEED[i] * LevelManager::getLevelManager()->getSpeed();
 	}
 	timer = speed[level - 1];
 	price = MONEY_TOWER_PRICE;
