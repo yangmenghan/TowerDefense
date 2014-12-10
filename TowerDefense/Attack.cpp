@@ -67,34 +67,49 @@ void Attack::setTimer(int mTimer)
 void Attack::setAttackRayAngle(shared_ptr<Enemy> target)
 {
 	float angle;
-	float targetX = target->getPosition().x;
-	float targetY = target->getPosition().y;
-	if (targetX > center.x && targetY <= center.y)
+	int targetX = target->getPosition().x + 25;
+	int targetY = target->getPosition().y + 25;
+	if (targetX > center.x && targetY == center.y)
 	{
-		angle = 180 
-			* acos(targetDistance / (float)(getTarget()->getPosition().x ))
-			/ 3.14
-			+ 220;// Correction of angle
-	}
-	else if (targetX <= center.x && targetY <= center.y)
-	{
-		angle = 180
-			* acos(targetDistance / (float)(getTarget()->getPosition().x ))
-			/ 3.14
-			+ 180;//Correction of angle
-	}
-	else if (targetX <= center.x && targetY > center.y)
-	{
-		angle = 180
-			* acos(targetDistance / (float)(getTarget()->getPosition().x ))
-			/ 3.14
-			+ 30;//Correction of angle
+		angle = 0;
 	}
 	else if (targetX > center.x && targetY > center.y)
 	{
-		angle = 180
-			* acos(targetDistance / (float)(getTarget()->getPosition().x ))
-			/ 3.14;
+		angle = 180 / 3.14 
+			* acos((float)(targetX - center.x) / targetDistance);
+	}
+	else if (targetX == center.x && targetY > center.y)
+	{
+		angle = 90;
+	}
+	else if (targetX < center.x && targetY > center.y)
+	{
+		angle = 180 / 3.14
+			* acos((float)(targetY - center.y) / targetDistance)
+			+ 90;
+	}
+	else if (targetX < center.x && targetY == center.y)
+	{
+		angle = 180;
+	}
+	else if (targetX < center.x && targetY < center.y)
+	{
+		float a = acos((float)(center.x - targetX) / targetDistance);
+		angle = 180 / 3.14
+			* acos((float)(center.x - targetX) / targetDistance)
+			+ 180;
+		int i = 0;
+
+	}
+	else if (targetX == center.x && targetY < center.y)
+	{
+		angle = 270;
+	}
+	else
+	{
+		angle = 180 / 3.14
+			* acos((float)(center.y - targetY) / targetDistance)
+			+ 270;
 	}
 	attackRay.setRotation(angle);
 }

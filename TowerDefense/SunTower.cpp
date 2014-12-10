@@ -9,7 +9,9 @@ SunTower::SunTower(shared_ptr<Tile> mTile)
 		damage[i] = SUN_TOWER_DAMAGE[i];
 		income[i] = SUN_TOWER_INCOME[i];
 		range[i] = SUN_TOWER_RANGE[i];
+		speed[i] = SUN_TOWER_SPEED[i] * LevelManager::getLevelManager()->getSpeed();
 	}
+	timer = speed[level - 1];
 	price = SUN_TOWER_PRICE;
 
 	attack = make_shared<AreaAttack>();

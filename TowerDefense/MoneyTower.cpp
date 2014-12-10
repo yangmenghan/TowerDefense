@@ -9,7 +9,9 @@ MoneyTower::MoneyTower(shared_ptr<Tile> mTile)
 		damage[i] = SUN_TOWER_DAMAGE[i];
 		income[i] = SUN_TOWER_INCOME[i];
 		range[i] = SUN_TOWER_RANGE[i];
+		speed[i] = SUN_TOWER_SPEED[i] * LevelManager::getLevelManager()->getSpeed();
 	}
+	timer = speed[level - 1];
 	price = MONEY_TOWER_PRICE;
 
 	if (!texture.loadFromFile(MONEY_TOWER_SPRITE_ADD))
@@ -38,7 +40,7 @@ void MoneyTower::generateMoney()
 	{
 		LevelManager::getLevelManager()->getPlayer()->manageMoney(MONEY_TOWER_GENERATION_UNIT[level - 1]);
 		sprite.setColor(sf::Color(255, 255, 0, 100));
-		timer = speed;
+		timer = speed[level - 1];
 	}
 	else
 	{

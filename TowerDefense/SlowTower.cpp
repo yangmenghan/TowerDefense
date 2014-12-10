@@ -9,7 +9,10 @@ SlowTower::SlowTower(shared_ptr<Tile> mTile)
 		slowAmount[i] = SLOW_TOWER_SLOW_AMOUNT[i];
 		income[i] = SLOW_TOWER_INCOME[i];
 		range[i] = SLOW_TOWER_RANGE[i];
+		speed[i] = SLOW_TOWER_SPEED[i] * LevelManager::getLevelManager()->getSpeed();
+
 	}
+	timer = speed[level - 1];
 	price = SLOW_TOWER_PRICE;
 
 	attack = make_shared<SlowAttack>();

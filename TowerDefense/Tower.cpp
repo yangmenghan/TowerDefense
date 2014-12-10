@@ -10,8 +10,6 @@ Tower::Tower(shared_ptr<Tile> mTile)
 	tile = mTile;
 	size = sf::Vector2i(TILE_WIDTH, TILE_HEIGHT);
 	position = sf::Vector2i(tile->getPositionPixel().x + 25, tile->getPositionPixel().y + 25);
-	speed = TOWER_SPEED * LevelManager::getLevelManager()->getSpeed();
-	timer = speed;
 }
 
 
@@ -67,7 +65,7 @@ void Tower::setAttack()
 	attack->setDamage(damage[level - 1]);
 	attack->setSlowAmount(slowAmount[level - 1]);
 	attack->setRange(range[level - 1]);
-	attack->setSpeed(speed);
+	attack->setSpeed(speed[level - 1]);
 	attack->setTimer(timer);
 }
 
@@ -106,8 +104,7 @@ void Tower::upgradeTw()
 	if (level < 3)
 	{
 		level++;
-		speed -= 5;
-		timer = speed;
+		timer = speed[level - 1];
 		currentSprite = level - 1;
 		spriteUpdate(currentSprite);
 		setAttack();
@@ -125,10 +122,9 @@ void Tower::downgradeTw()
 		
 		if (level > 0)
 		{
-			speed += 5;
 			currentSprite = level - 1;
 			spriteUpdate(currentSprite);
-			timer = speed;
+			timer = speed[level - 1];
 
 			setAttack();
 			setRangeCircle();

@@ -38,11 +38,11 @@ protected:
 	shared_ptr<Attack> attack;
 	float damage[3];
 	int slowAmount[3];
-	int price;
-	int income[3];
-	int level;
 	float range[3];
-
+	int speed[3];
+	int income[3];
+	int price;
+	int level;
 	int currentSprite;
 
 	sf::CircleShape rangeCircle;
