@@ -14,7 +14,7 @@ private:
 public:
 	CreditsMenu();
 	CreditsMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition);
-	virtual ~CreditsMenu();
+	~CreditsMenu();
 
 	string getCreditsAddress();
 	sf::Sprite getSprite();

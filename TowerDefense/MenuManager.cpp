@@ -36,14 +36,15 @@ void MenuManager::popMenu()
 	if (!menuStack.empty())
 	{
 		menuStack.pop_back();
+		menuStack.shrink_to_fit();
 	}
 }
 
 void MenuManager::display(sf::RenderWindow& w)
 {
-	for (shared_ptr<Menu> menu : menuStack)
+	for (int i = 0; i < menuStack.size(); i++)
 	{
-		menu->draw(w);
+		menuStack[i]->draw(w);
 	}
 }
 

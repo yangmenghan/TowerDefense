@@ -29,6 +29,7 @@ public:
 	
 	void setPlayer(shared_ptr<Player> player);
 	shared_ptr<Player> getPlayer();
+	bool ifWin();
 
 	void setField(Field &field);
 	Field getField();
@@ -44,7 +45,7 @@ public:
 	void gameOver(); //TODO
 	void victory(); //TODO
 
-	void stopGame();
+	int stopGame();
 	void startGame();
 	void restartGame();
 

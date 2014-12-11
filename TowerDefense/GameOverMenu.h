@@ -4,13 +4,12 @@
 #include "Button.h"
 #include "Config.h"
 
-class GameOverMenu 
-	: public Menu
+class GameOverMenu : public Menu
 {
 private:
 
-	Button reStartGameButton = Button(RESTART_BUTTON_TEXTURE, BUTTON_SIZE, sf::Vector2i((WINDOW_WIDTH / 2) - (BUTTON_SIZE.x / 2), ((WINDOW_HEIGHT - 200) / 2) - (BUTTON_SIZE.y / 2)), 3);//The button to restart the game.
-	Button exitGameButton = Button(EXIT_GAME_BUTTON_TEXTURE, BUTTON_SIZE, sf::Vector2i((WINDOW_WIDTH / 2) - (BUTTON_SIZE.x / 2), ((WINDOW_HEIGHT - 200) / 2) - (BUTTON_SIZE.y / 2)), 3);//The button te exit.
+	Button reStartGameButton = Button(RESTART_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, RESTART_BUTTON_POSITION, 3);//The button to restart the game.
+	Button exitGameButton = Button(BACK_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, BACK_BUTTON_POSITION, 3);//The button te exit.
 	
 
 public:

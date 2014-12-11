@@ -18,33 +18,47 @@ GameOverMenu::~GameOverMenu(){}
 void GameOverMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
+	reStartGameButton.mouseHover(w);
 	reStartGameButton.draw(w);
+	exitGameButton.draw(w);
 	exitGameButton.draw(w);
 }
 
-void GameOverMenu::resolveEvent(sf::Event _event)
+void GameOverMenu::resolveEvent(sf::Event event)
 {
-	/*if (reStartGameButton.resolveEvent(_event))
+	if (reStartGameButton.checkHover())
 	{
-		reStartGame();
+		reStartGameButton.resolveEvent(event);
+		if (reStartGameButton.checkClick())
+		{
+			reStartGame();
+		}
 	}
-	if (exitGameButton.resolveEvent(_event))
+	else if (exitGameButton.checkHover())
 	{
-		exitGame();
-	}*/
+		exitGameButton.resolveEvent(event);
+		if (exitGameButton.checkClick())
+		{
+			exitGame();
+		}
+	}
 }
+	
+
 
 void GameOverMenu::reStartGame()
 {
 	MenuManager* m = MenuManager::getMenuManager();
+	LevelManager::getLevelManager()->restartGame();
 	m->popMenu();
-	m->addMenu(make_shared<GameMenu>());
-	this->~GameOverMenu();
 }
 
 void GameOverMenu::exitGame()
 {
 	MenuManager* m = MenuManager::getMenuManager();
+	LevelManager::getLevelManager()->stopGame();
+	m->popMenu();
+	m->popMenu();
 	//m->~MenuManager();
 	//TODO
 }

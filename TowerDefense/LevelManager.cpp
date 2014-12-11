@@ -1,4 +1,5 @@
 #include "LevelManager.h"
+#include "GameOverMenu.h"
 #include <fstream>
 
 using namespace sf;
@@ -13,6 +14,10 @@ LevelManager* LevelManager::getLevelManager(){
 
 	return levelManager;
 };
+
+bool LevelManager::ifWin(){
+	return waves.empty() && enemies.empty();
+}
 
 void LevelManager::kill(){
 	if (NULL != levelManager)
@@ -43,32 +48,26 @@ void LevelManager::gameLoop(RenderWindow& w){
 		field.draw(w);
 		currentPath.draw(w);
 
-		//field.computePath(field.getStartTile(), field.getEndTile()).draw(w);
-
 		//if the game is not paused
 		if (gameSpeed != 0){ 
 
+
 			if (player->getHP() <=0){
 				gameOver(); 
-			}
-			
-
-			if (waves.size() == 0){
-				if (enemies.empty()){
-					victory(); // you win if there is no enemy and no wave left
-				}
+				return;
+			} else if (waves.size() == 0 && enemies.empty()){
+				victory();		// you win if there is no enemy and no wave left
+				return;
 			}
 			else { 
 				//TODO : memory???
 				waves.back().spawnEnemy();
-
-				
 			}
 			
 
 			//Tower actions
 			for (int i = 0; i < towers.size(); i++){
-				if (towers.at(i)->getLevel() ==0){
+				if (towers.at(i)->getLevel() == 0){
 					towers.at(i)->getTile()->setTower(NULL);
 					removeTower(i);
 					updatePath();
@@ -140,27 +139,30 @@ void LevelManager::loadWaves(){
 }
 
 void LevelManager::victory(){
-	//TODO
+	setSpeed(0);
+	MenuManager::getMenuManager()->addMenu(make_shared<GameOverMenu>(WIN_MENU_TEXTURE, sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT), sf::Vector2i(0, 0)));
 }
 
 void LevelManager::gameOver(){
-	//TODO
+	setSpeed(0);
+	MenuManager::getMenuManager()->addMenu(
+		make_shared<GameOverMenu>(GAMEOVER_MENU_TEXTURE, sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT), sf::Vector2i(0, 0)));
 }
 
 void LevelManager::startGame(){
+	gameSpeed = 1;
 	loadWaves();
 	updatePath();
-	//player = Player();
 	player->init();
 }
 
-void LevelManager::stopGame(){
+int LevelManager::stopGame(){
 	gameSpeed = 0;
 	field = Field();
 	waves.clear();
 	enemies.clear();
 	towers.clear();
-
+	return player->getScore();
 }
 
 void LevelManager::restartGame(){

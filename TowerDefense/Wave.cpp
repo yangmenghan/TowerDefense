@@ -32,6 +32,10 @@ void Wave::addEnemy(char type){
 		enemies.push_back(make_shared<BombEnemy>());
 		return;
 	}
+	else if (type == '0'){
+		enemies.push_back(NULL);
+		return;
+	}
 
 }
 
@@ -47,11 +51,19 @@ void Wave::spawnEnemy(){
 	if (spawnCooldown <= 0){
 		
 		if (!enemies.empty()){
-			spawnCooldown = WAVE_SPAWN_COOLDOWN;
-			LevelManager::getLevelManager()->addEnemy(enemies.back());
-			LevelManager::getLevelManager()->getEnemies().back()->setTile(LevelManager::getLevelManager()->getField().getStartTile());
-			enemies.pop_back();
-			enemies.shrink_to_fit();
+			if (enemies.back() == NULL){
+				spawnCooldown = WAVE_SPAWN_PAUSE_COOLDOWN;
+				enemies.pop_back();
+				enemies.shrink_to_fit();
+			}
+			else {
+				spawnCooldown = WAVE_SPAWN_COOLDOWN;
+				LevelManager::getLevelManager()->addEnemy(enemies.back());
+				LevelManager::getLevelManager()->getEnemies().back()->setTile(LevelManager::getLevelManager()->getField().getStartTile());
+				enemies.pop_back();
+				enemies.shrink_to_fit();
+			}
+			
 		}
 		else {
 			LevelManager::getLevelManager()->nextWave();

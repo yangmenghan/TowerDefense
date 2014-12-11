@@ -51,6 +51,7 @@ Wave Constants
 extern const int		WAVE_TOTAL;
 extern const string		WAVE_FILE_ADDRESS;
 extern const int		WAVE_SPAWN_COOLDOWN;
+extern const int		WAVE_SPAWN_PAUSE_COOLDOWN;
 extern const int		WAVE_COOLDOWN;
 
 
@@ -143,6 +144,7 @@ extern const string		GAME_MENU_DEFAULT_TEXTURE;
 extern const string		START_MENU_TEXTURE;
 extern const string		CREDITS_SPRITE_ADD;
 extern const string		GAMEOVER_MENU_TEXTURE;
+extern const string		WIN_MENU_TEXTURE;
 
 /*
 Display constants
@@ -183,6 +185,7 @@ extern const sf::Vector2i	CREDITS_BUTTON_POSITION;
 extern const sf::Vector2i	EXIT_BUTTON_POSITION;
 extern const sf::Vector2i	MUTE_BUTTON_POSITION;
 extern const sf::Vector2i	BACK_BUTTON_POSITION;
+extern const sf::Vector2i	RESTART_BUTTON_POSITION;
 
 /*
 Other constants

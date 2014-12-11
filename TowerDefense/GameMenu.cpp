@@ -6,6 +6,7 @@
 #include "Button.h"
 #include "Config.h"
 #include "LevelManager.h"
+#include "GameOverMenu.h"
 
 GameMenu::GameMenu()
 {
@@ -143,6 +144,7 @@ void GameMenu::draw(sf::RenderWindow& w)
 	w.draw(moneyCountDisplay);
 
 	levelManager->gameLoop(w);
+
 }
 
 void GameMenu::resolveEvent(sf::Event event)
