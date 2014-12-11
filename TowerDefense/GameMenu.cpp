@@ -203,16 +203,18 @@ void GameMenu::resolveEvent(sf::Event event)
 			restartGame();
 		}
 	}
-	
-		LevelManager::getLevelManager()->getField().resolveEvent(event);
-	
-		
 
-	/*
-	if (giveUpButton.mouseClick(event))
+	if (giveUpButton.checkHover())
 	{
-		//game over
-	}*/
+		giveUpButton.resolveEvent(event);
+		if (giveUpButton.checkClick())
+		{
+			levelManager->getPlayer()->manageHP(-10);
+		}
+	}
+	
+	LevelManager::getLevelManager()->getField().resolveEvent(event);
+	
 }
 
 

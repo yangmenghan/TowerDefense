@@ -20,7 +20,7 @@ void GameOverMenu::draw(sf::RenderWindow& w)
 	w.draw(sprite);
 	reStartGameButton.mouseHover(w);
 	reStartGameButton.draw(w);
-	exitGameButton.draw(w);
+	exitGameButton.mouseHover(w);
 	exitGameButton.draw(w);
 }
 
@@ -34,6 +34,7 @@ void GameOverMenu::resolveEvent(sf::Event event)
 			reStartGame();
 		}
 	}
+
 	if (exitGameButton.checkHover())
 	{
 		exitGameButton.resolveEvent(event);
