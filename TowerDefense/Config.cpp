@@ -184,7 +184,8 @@ extern const sf::Vector2i	MUTE_BUTTON_POSITION	= sf::Vector2i(10, 10);
 extern const sf::Vector2i	RESTART_BUTTON_POSITION	= sf::Vector2i(10, 560);
 
 extern const sf::Vector2i	BACK_BUTTON_POSITION	= sf::Vector2i((WINDOW_WIDTH - MUTE_BUTTON_SIZE.x)/2,500);
-extern const sf::Vector2i	RESTART_BUTTON_POSITION = sf::Vector2i((WINDOW_WIDTH - MUTE_BUTTON_SIZE.x) +200/ 2, 500);
+extern const sf::Vector2i	GO_RESTART_BUTTON_POSITION = sf::Vector2i(((WINDOW_WIDTH - MUTE_BUTTON_SIZE.x) / 2)+100, 500);
+extern const sf::Vector2i	GO_BACK_BUTTON_POSITION = sf::Vector2i(((WINDOW_WIDTH - MUTE_BUTTON_SIZE.x) / 2) - 100, 500);
 
 
 

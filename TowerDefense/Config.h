@@ -187,7 +187,8 @@ extern const sf::Vector2i	EXIT_BUTTON_POSITION;
 extern const sf::Vector2i	MUTE_BUTTON_POSITION;
 extern const sf::Vector2i	RESTART_BUTTON_POSITION;
 extern const sf::Vector2i	BACK_BUTTON_POSITION;
-extern const sf::Vector2i	RESTART_BUTTON_POSITION;
+extern const sf::Vector2i	GO_RESTART_BUTTON_POSITION;
+extern const sf::Vector2i	GO_BACK_BUTTON_POSITION;
 
 /*
 Other constants

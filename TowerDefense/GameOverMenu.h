@@ -8,8 +8,8 @@ class GameOverMenu : public Menu
 {
 private:
 
-	Button reStartGameButton = Button(RESTART_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, RESTART_BUTTON_POSITION, 3);//The button to restart the game.
-	Button exitGameButton = Button(BACK_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, BACK_BUTTON_POSITION, 3);//The button te exit.
+	Button reStartGameButton = Button(RESTART_BUTTON_TEXTURE, BACK_BUTTON_SIZE, GO_RESTART_BUTTON_POSITION, 3);//The button to restart the game.
+	Button exitGameButton = Button(BACK_BUTTON_TEXTURE, BACK_BUTTON_SIZE, GO_BACK_BUTTON_POSITION, 3);//The button te exit.
 	
 
 public:

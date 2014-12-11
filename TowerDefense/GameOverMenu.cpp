@@ -34,7 +34,7 @@ void GameOverMenu::resolveEvent(sf::Event event)
 			reStartGame();
 		}
 	}
-	else if (exitGameButton.checkHover())
+	if (exitGameButton.checkHover())
 	{
 		exitGameButton.resolveEvent(event);
 		if (exitGameButton.checkClick())
