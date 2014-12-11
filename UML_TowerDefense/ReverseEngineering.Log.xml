@@ -6,9 +6,9 @@
   <MessageClass Name="Error" Label="错误" Option="显示错误" />
   <MessageClass Name="Property" Label="属性" Option="显示元数据" />
   <MessageClass Name="Diagnostic" Label="消息" Option="显示诊断消息" />
-  <Message Timestamp="2014-12-10T00:27:31" Importance="High" Text="已启动反向工程。" />
-  <Error Timestamp="2014-12-10T00:27:31" Importance="High" Text="不支持对 C++ 类型进行反向工程。处理过程中将跳过某个/某些 DGML 节点。有关详细信息，请查看警告。" />
-  <Warning Timestamp="2014-12-10T00:27:31" Importance="Medium" Text="已跳过对 C++ 类型“BuildMenu”进行反向工程。" />
-  <Message Timestamp="2014-12-10T00:27:31" Importance="High" Text="已对(0)个类型进行完全反向工程。" />
-  <Message Timestamp="2014-12-10T00:27:31" Importance="High" Text="反向工程操作已完成，出现了(1)个错误和(1)个警告。" />
+  <Message Timestamp="2014-12-10T17:48:45" Importance="High" Text="已启动反向工程。" />
+  <Error Timestamp="2014-12-10T17:48:45" Importance="High" Text="不支持对 C++ 类型进行反向工程。处理过程中将跳过某个/某些 DGML 节点。有关详细信息，请查看警告。" />
+  <Warning Timestamp="2014-12-10T17:48:45" Importance="Medium" Text="已跳过对 C++ 类型“Tile”进行反向工程。" />
+  <Message Timestamp="2014-12-10T17:48:46" Importance="High" Text="已对(0)个类型进行完全反向工程。" />
+  <Message Timestamp="2014-12-10T17:48:46" Importance="High" Text="反向工程操作已完成，出现了(1)个错误和(1)个警告。" />
 </Log>

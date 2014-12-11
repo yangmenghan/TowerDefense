@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="NameAndType">
+  <Class Name="AreaAttack" Collapsed="true">
+    <Position X="0.75" Y="13.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAASAAAAAAAAAAgCAABAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AreaAttack.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Attack" Collapsed="true">
+    <Position X="3.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AowgCCAIAAQAgAAAgAAABAAIAIASASCACASEAAAAAAA=</HashCode>
+      <FileName>Attack.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioManager" Collapsed="true">
+    <Position X="19.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAIAAABAAAAAAAAACCAAAAAAgAAAACAAAA=</HashCode>
+      <FileName>AudioManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BombEnemy" Collapsed="true">
+    <Position X="1.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIEAAAABCACAAAAEAAAAAAACAIQABAAAAAAAA=</HashCode>
+      <FileName>BombEnemy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BuildMenu" Collapsed="true">
+    <Position X="4.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgBAEAAAAAAACAAAAMAAAAAAACgAIAAAIABBAEEAAA=</HashCode>
+      <FileName>BuildMenu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Button" Collapsed="true">
+    <Position X="21.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAAIEEAAIEAAAgAQbIAIgACwBAwAAAAAAAAAAUgAAA=</HashCode>
+      <FileName>Button.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CreditsMenu" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAQRYAAAAAASAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CreditsMenu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy" Collapsed="true">
+    <Position X="4.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgIAAgAAACAACACACAIDEAIAAACEAASIAAhEAFgQAAI=</HashCode>
+      <FileName>Enemy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entity" Collapsed="true">
+    <Position X="9" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQBIAAAAIAAAAgAAZIAIAACADAQAwABAAAAAAEAAAA=</HashCode>
+      <FileName>Entity.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FastEnemy" Collapsed="true">
+    <Position X="5.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAABAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>FastEnemy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Field" Collapsed="true">
+    <Position X="23" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>yAAAgECACCEBAAQAQRIAAKAkQBAgQACgAAAAAAECgAA=</HashCode>
+      <FileName>Field.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameMenu" Collapsed="true">
+    <Position X="9" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAoAAQAAgAAZAAAEAQoIAAQBBAAwACAAAECAACAAAAA=</HashCode>
+      <FileName>GameMenu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameOverMenu" Collapsed="true">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQABIAAAAAACAgAAAAQACACAAAAAA=</HashCode>
+      <FileName>GameOverMenu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelManager" Collapsed="true">
+    <Position X="19.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SQKQAAIAkAgQBShAACgIAAEACCAQAAABAATIAAhAAIA=</HashCode>
+      <FileName>LevelManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Menu" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAEAgIBgAggAAZIAIAACABAoAgAgAIAAAgAAAAA=</HashCode>
+      <FileName>Menu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuManager" Collapsed="true">
+    <Position X="21.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAUwQAAEAAAAAAAQAABAAQAAgEgAQAAAgAAACAIAAA=</HashCode>
+      <FileName>MenuManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoneyTower" Collapsed="true">
+    <Position X="10.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAAQAAAA=</HashCode>
+      <FileName>MoneyTower.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NormalAttack" Collapsed="true">
+    <Position X="4.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABgAAABAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NormalAttack.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NormalEnemy" Collapsed="true">
+    <Position X="3.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAABEAAAAA=</HashCode>
+      <FileName>NormalEnemy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NormalTower" Collapsed="true">
+    <Position X="14.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAIAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NormalTower.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Path" Collapsed="true">
+    <Position X="23" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAICAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Path.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player" Collapsed="true">
+    <Position X="19.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAIAAAAAAAABQKAAQBAAUAAEAA=</HashCode>
+      <FileName>Player.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SlowAttack" Collapsed="true">
+    <Position X="7" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAgAAABAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>SlowAttack.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SlowTower" Collapsed="true">
+    <Position X="17" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAQAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SlowTower.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartMenu" Collapsed="true">
+    <Position X="13.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAUADIAAAAAAAAgAGABgAAAAAAAAAA=</HashCode>
+      <FileName>StartMenu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SunTower" Collapsed="true">
+    <Position X="12.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAEAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SunTower.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tile" Collapsed="true">
+    <Position X="21.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAQIgAAAAESAAwBQTMAIgAiQDAwAgAgAAABQCQAIQA=</HashCode>
+      <FileName>Tile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToughEnemy" Collapsed="true">
+    <Position X="8" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>ToughEnemy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tower" Collapsed="true">
+    <Position X="13.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIABCAIKECCAgBBAAAFAARAIAAExAQCAAgCBAAQIAQA=</HashCode>
+      <FileName>Tower.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TowerMenu" Collapsed="true">
+    <Position X="6.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBAAAAAIAAAAAAAAIAAAAAAAAgAAACAIAEAAUAAAA=</HashCode>
+      <FileName>TowerMenu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wave" Collapsed="true">
+    <Position X="23" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBAgAIAAAAAAAAAAAAAAAAAAAAAACAABAAAAAAAAAAA=</HashCode>
+      <FileName>Wave.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

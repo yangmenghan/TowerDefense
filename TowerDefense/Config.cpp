@@ -134,11 +134,12 @@ extern const int		SLOW_EFFECT				= 1;
 /*
 Menu constants
 */
-extern const string		GAME_MENU_DEFAULT_TEXTURE		= "sprites/gamebg.png";
-extern const string		START_MENU_TEXTURE				= "sprites/startbackground.png";
-extern const string		CREDITS_SPRITE_ADD				= "sprites/credits.png";
+
+extern const string		GAME_MENU_DEFAULT_TEXTURE = "sprites/backgrounds/gamebg.png";
+extern const string		START_MENU_TEXTURE		  = "sprites/backgrounds/background.png";
+extern const string		CREDITS_SPRITE_ADD		  = "sprites/backgrounds/credits.png";
 extern const string		GAMEOVER_MENU_TEXTURE			= "sprites/gameover.png";
-extern const string		WIN_MENU_TEXTURE				= "sprites/youwin.png";
+extern const string		WIN_MENU_TEXTURE				="sprites/youwin.png";
 
 /*
 Display constants
@@ -153,16 +154,16 @@ extern const sf::Vector2f	MONEY_COUNT_DISPLAY_POSITION		= sf::Vector2f(850, 13);
 /*
 Button constants
 */
-extern const string		PAUSE_BUTTON_TEXTURE		= "sprites/pause_button.png";
-extern const string		SPEED_BUTTON_TEXTURE		= "sprites/speed_button.png";
-extern const string		MUTE_BUTTON_TEXTURE			= "sprites/mute_button.png";
-extern const string		RESTART_BUTTON_TEXTURE		= "sprites/restart_button.png";
-extern const string		GIVE_UP_BUTTON_TEXTURE		= "";
-extern const string		START_GAME_BUTTON_TEXTURE	= "sprites/start_game_button.png";
+extern const string		PAUSE_BUTTON_TEXTURE		= "sprites/buttons/pause_button.png";
+extern const string		SPEED_BUTTON_TEXTURE		= "sprites/buttons/speed_button.png";
+extern const string		MUTE_BUTTON_TEXTURE			= "sprites/buttons/mute_button.png";
+extern const string		RESTART_BUTTON_TEXTURE		= "sprites/buttons/restart_button.png";
+extern const string		GIVE_UP_BUTTON_TEXTURE		= "sprites/buttons/give_up_button.png";
+extern const string		START_GAME_BUTTON_TEXTURE	= "sprites/buttons/start_game_button.png";
 extern const string		SCOREBOARD_BUTTON_TEXTURE	= "";
-extern const string		CREDITS_BUTTON_TEXTURE      = "sprites/credits_button.png";
-extern const string		EXIT_GAME_BUTTON_TEXTURE 	= "sprites/exit_game.png";
-extern const string		BACK_BUTTON_TEXTURE			= "sprites/back_button.png";
+extern const string		CREDITS_BUTTON_TEXTURE      = "sprites/buttons/credits_button.png";
+extern const string		EXIT_GAME_BUTTON_TEXTURE 	= "sprites/buttons/exit_game.png";
+extern const string		BACK_BUTTON_TEXTURE			= "sprites/buttons/back_button.png";
 extern const string		BASIC_TOWER_BUTTON_TEXTURE	= "sprites/normal_tower_button.png";
 extern const string		SUN_TOWER_BUTTON_TEXTURE	= "sprites/sun_tower_button.png";
 extern const string		SLOW_TOWER_BUTTON_TEXTURE	= "sprites/slow_tower_button.png";
@@ -170,14 +171,17 @@ extern const string		MONEY_TOWER_BUTTON_TEXTURE	= "sprites/money_tower_button.pn
 extern const string		SELL_BUTTON_TEXTURE			= "sprites/sell_tower_button.png";
 extern const string		UPGRADE_BUTTON_TEXTURE		= "sprites/upgrade_tower_button.png";
 
-extern const sf::Vector2i	BUTTON_SIZE				= sf::Vector2i(408, 77);
-extern const sf::Vector2i	MUTE_BUTTON_SIZE		= sf::Vector2i(100, 32);
-extern const sf::Vector2i	SMALL_BUTTON_SIZE		= sf::Vector2i(BUTTON_WIDTH, BUTTON_HEIGHT);
+
+extern const sf::Vector2i	BUTTON_SIZE			  = sf::Vector2i(408, 76);
+extern const sf::Vector2i	MUTE_BUTTON_SIZE	  = sf::Vector2i(100, 32);
+extern const sf::Vector2i	BACK_BUTTON_SIZE	  = sf::Vector2i(100, 34);
+extern const sf::Vector2i	SMALL_BUTTON_SIZE	  = sf::Vector2i(BUTTON_WIDTH, BUTTON_HEIGHT);
 
 extern const sf::Vector2i	START_BUTTON_POSITION	= sf::Vector2i(346, 150);
 extern const sf::Vector2i	CREDITS_BUTTON_POSITION = sf::Vector2i(346, 250);
 extern const sf::Vector2i	EXIT_BUTTON_POSITION	= sf::Vector2i(346, 350);
 extern const sf::Vector2i	MUTE_BUTTON_POSITION	= sf::Vector2i(10, 10);
+extern const sf::Vector2i	RESTART_BUTTON_POSITION	= sf::Vector2i(10, 560);
 
 extern const sf::Vector2i	BACK_BUTTON_POSITION	= sf::Vector2i((WINDOW_WIDTH - MUTE_BUTTON_SIZE.x)/2,500);
 extern const sf::Vector2i	RESTART_BUTTON_POSITION = sf::Vector2i((WINDOW_WIDTH - MUTE_BUTTON_SIZE.x) +200/ 2, 500);

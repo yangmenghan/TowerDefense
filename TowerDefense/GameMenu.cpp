@@ -115,13 +115,13 @@ void GameMenu::draw(sf::RenderWindow& w)
 	speedButton.mouseHover(w);
 	muteButton.mouseHover(w);
 	restartButton.mouseHover(w);
-	//giveUpButton.draw(w);
+	giveUpButton.mouseHover(w);
 	
 	pauseButton.draw(w);
 	speedButton.draw(w);
 	muteButton.draw(w);
 	restartButton.draw(w);
-	//giveUpButton.draw(w);
+	giveUpButton.draw(w);
 
 	
 	//set position and font for the text displays
