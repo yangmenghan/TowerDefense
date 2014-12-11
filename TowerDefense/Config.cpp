@@ -122,7 +122,7 @@ extern const int		SLOW_TOWER_SPEED[3]		= {20, 15, 10};
 extern const float		SLOW_TOWER_RANGE[3]		= { 125, 175, 225 };
 extern const int		SLOW_TOWER_PRICE		= 300;
 extern const int		SLOW_TOWER_INCOME[3]	= {250, 500, 750};
-extern const string		SLOW_TOWER_SPRITE_ADD	= "sprites/slow_towerd.png";
+extern const string		SLOW_TOWER_SPRITE_ADD	= "sprites/slow_tower.png";
 
 /*
 Attack constants
