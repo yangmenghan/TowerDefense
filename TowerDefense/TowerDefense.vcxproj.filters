@@ -16,9 +16,6 @@
     <ClCompile Include="Wave.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="TowerTest.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="AreaAttack.cpp">
       <Filter>Source\Attack</Filter>
     </ClCompile>
@@ -102,6 +99,12 @@
     </ClCompile>
     <ClCompile Include="Path.cpp">
       <Filter>Source\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerTest.cpp">
+      <Filter>Source\UnitTests</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTests.cpp">
+      <Filter>Source\UnitTests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -454,6 +457,9 @@
     </Filter>
     <Filter Include="Header\Interface">
       <UniqueIdentifier>{f87a8917-5c4f-465d-8b43-319ef7bbefaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\UnitTests">
+      <UniqueIdentifier>{57bc0765-6ba7-4204-a8ec-b0044fbb0b07}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
