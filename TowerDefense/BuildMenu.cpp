@@ -36,10 +36,10 @@ shared_ptr<Tile> BuildMenu::getTile()
 void BuildMenu::buyBasicTw()
 {
 	LevelManager::getLevelManager()->getPlayer()->manageMoney(-NORMAL_TOWER_PRICE);
-	
 	auto pNormalTw = make_shared<NormalTower>(tile);
 	LevelManager::getLevelManager()->addTower(pNormalTw);
 	tile->setTower(pNormalTw);
+	
 }
 
 void BuildMenu::buyMoneyTw()
@@ -48,6 +48,7 @@ void BuildMenu::buyMoneyTw()
 	auto pMoneyTw = make_shared<MoneyTower>(tile);
 	LevelManager::getLevelManager()->addTower(pMoneyTw);
 	tile->setTower(pMoneyTw);
+	
 }
 
 void BuildMenu::buySlowTw()
@@ -56,6 +57,7 @@ void BuildMenu::buySlowTw()
 	auto pSlowTw = make_shared<SlowTower>(tile);
 	LevelManager::getLevelManager()->addTower(pSlowTw);
 	tile->setTower(pSlowTw);
+	
 }
 
 void BuildMenu::buySunTw()
@@ -66,6 +68,7 @@ void BuildMenu::buySunTw()
 	tile->setTower(pSunTw);
 }
 
+
 void BuildMenu::resolveEvent(sf::Event event)
 {
 	if (basicTwButton.checkHover())
@@ -73,7 +76,10 @@ void BuildMenu::resolveEvent(sf::Event event)
 		basicTwButton.resolveEvent(event);
 		if (basicTwButton.checkClick())
 		{
-			buyBasicTw();
+			if (LevelManager::getLevelManager()->getPlayer()->getMoney() >= NORMAL_TOWER_PRICE)
+			{
+				buyBasicTw();
+			}
 			close();
 		}
 	}
@@ -82,7 +88,10 @@ void BuildMenu::resolveEvent(sf::Event event)
 		sunTwButton.resolveEvent(event);
 		if (sunTwButton.checkClick())
 		{
-			buySunTw();
+			if (LevelManager::getLevelManager()->getPlayer()->getMoney() >= SUN_TOWER_PRICE)
+			{
+				buySunTw();
+			}
 			close();
 		}
 	}
@@ -91,7 +100,10 @@ void BuildMenu::resolveEvent(sf::Event event)
 		slowTwButton.resolveEvent(event);
 		if (slowTwButton.checkClick())
 		{
-			buySlowTw();
+			if (LevelManager::getLevelManager()->getPlayer()->getMoney() >= SLOW_TOWER_PRICE)
+			{
+				buySlowTw();
+			}
 			close();
 		}
 	}
@@ -100,7 +112,10 @@ void BuildMenu::resolveEvent(sf::Event event)
 		moneyTwButton.resolveEvent(event);
 		if (moneyTwButton.checkClick())
 		{
-			buyMoneyTw();
+			if (LevelManager::getLevelManager()->getPlayer()->getMoney() >= MONEY_TOWER_PRICE)
+			{
+				buyMoneyTw();
+			}
 			close();
 		}
 	}

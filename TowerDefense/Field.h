@@ -54,6 +54,4 @@ public:
 	void draw(sf::RenderWindow&);			//Draw
 	Path computePath(shared_ptr<Tile>, shared_ptr<Tile>);			//Compute path of enemeny
 	bool tryCross(shared_ptr<Tile>, shared_ptr<Tile>);
-	int timeCross(shared_ptr<Tile>, shared_ptr<Tile>);
-	int timeCross(int, int);
 };

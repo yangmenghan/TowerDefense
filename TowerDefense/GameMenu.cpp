@@ -11,6 +11,7 @@
 GameMenu::GameMenu()
 {
 	levelManager = LevelManager::getLevelManager();
+	levelManager->startGame();
 }
 
 GameMenu::GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition) : Menu(myTextureAddress, mySize, myPosition)
@@ -209,7 +210,8 @@ void GameMenu::resolveEvent(sf::Event event)
 		giveUpButton.resolveEvent(event);
 		if (giveUpButton.checkClick())
 		{
-			levelManager->getPlayer()->manageHP(-10);
+			//levelManager->getPlayer()->manageHP(-10);
+			levelManager->gameOver();
 		}
 	}
 	
