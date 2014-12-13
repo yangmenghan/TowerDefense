@@ -12,26 +12,26 @@ private:
 public:
 	//! A function to draw the path
 	/*!
-	\ param w is a game window
+	\param w is a game window
 	*/
 	void draw(sf::RenderWindow& w);
 
 
 	//! A constructor
 	/*!
-	constructor with argument
+	Constructor with argument
 	*/
 	Path(vector<shared_ptr<Tile>>);	
 
 	//! A constructor
 	/*!
-	constructor by default
+	Constructor by default
 	*/
 	Path();		
 
 	//! A function without arguments and return a vector of tiles which represent the path
 	/*!
-	\ return the path
+	\return The path
 	*/
 	vector<shared_ptr<Tile>> getPath();					
 };
