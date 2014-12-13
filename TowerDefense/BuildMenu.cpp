@@ -35,37 +35,43 @@ shared_ptr<Tile> BuildMenu::getTile()
 
 void BuildMenu::buyBasicTw()
 {
-	LevelManager::getLevelManager()->getPlayer()->manageMoney(-NORMAL_TOWER_PRICE);
-	auto pNormalTw = make_shared<NormalTower>(tile);
-	LevelManager::getLevelManager()->addTower(pNormalTw);
-	tile->setTower(pNormalTw);
-	
+	if (!tile->hasEnemy()){
+		LevelManager::getLevelManager()->getPlayer()->manageMoney(-NORMAL_TOWER_PRICE);
+		auto pNormalTw = make_shared<NormalTower>(tile);
+		LevelManager::getLevelManager()->addTower(pNormalTw);
+		tile->setTower(pNormalTw);
+	}
 }
 
 void BuildMenu::buyMoneyTw()
 {
-	LevelManager::getLevelManager()->getPlayer()->manageMoney(-MONEY_TOWER_PRICE);
-	auto pMoneyTw = make_shared<MoneyTower>(tile);
-	LevelManager::getLevelManager()->addTower(pMoneyTw);
-	tile->setTower(pMoneyTw);
-	
+	if (!tile->hasEnemy()){
+		LevelManager::getLevelManager()->getPlayer()->manageMoney(-MONEY_TOWER_PRICE);
+		auto pMoneyTw = make_shared<MoneyTower>(tile);
+		LevelManager::getLevelManager()->addTower(pMoneyTw);
+		tile->setTower(pMoneyTw);
+	}
 }
 
 void BuildMenu::buySlowTw()
 {
-	LevelManager::getLevelManager()->getPlayer()->manageMoney(-SLOW_TOWER_PRICE);
-	auto pSlowTw = make_shared<SlowTower>(tile);
-	LevelManager::getLevelManager()->addTower(pSlowTw);
-	tile->setTower(pSlowTw);
-	
+	if (!tile->hasEnemy()){
+		LevelManager::getLevelManager()->getPlayer()->manageMoney(-SLOW_TOWER_PRICE);
+		auto pSlowTw = make_shared<SlowTower>(tile);
+		LevelManager::getLevelManager()->addTower(pSlowTw);
+		tile->setTower(pSlowTw);
+	}
 }
 
 void BuildMenu::buySunTw()
 {
-	LevelManager::getLevelManager()->getPlayer()->manageMoney(-SUN_TOWER_PRICE);
-	auto pSunTw = make_shared<SunTower>(tile);
-	LevelManager::getLevelManager()->addTower(pSunTw);
-	tile->setTower(pSunTw);
+	if (!tile->hasEnemy()){
+		LevelManager::getLevelManager()->getPlayer()->manageMoney(-SUN_TOWER_PRICE);
+		auto pSunTw = make_shared<SunTower>(tile);
+		LevelManager::getLevelManager()->addTower(pSunTw);
+		tile->setTower(pSunTw);
+	}
+	
 }
 
 
