@@ -19,6 +19,7 @@ private:
 	std::string fontAddress;
 	sf::Font font;
 	sf::Text upGradePrice;
+	sf::Text sellPrice;
 
 public:
 

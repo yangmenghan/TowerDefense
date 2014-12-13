@@ -26,6 +26,12 @@ TowerMenu::TowerMenu(shared_ptr<Tile> pTile)
 	upGradePrice.setString("$" + std::to_string(getTile()->getTower()->getPrice()));
 	upGradePrice.setCharacterSize(14);
 	upGradePrice.setPosition(sf::Vector2f(upgradeButton.getPosition()));
+
+	sellPrice.setFont(font);
+	sellPrice.setColor(sf::Color::Green);
+	sellPrice.setString("$" + std::to_string(getTile()->getTower()->getIncome()));
+	sellPrice.setCharacterSize(14);
+	sellPrice.setPosition(sf::Vector2f(sellButton.getPosition()));
 }
 
 TowerMenu::~TowerMenu(){}
@@ -79,6 +85,7 @@ void TowerMenu::draw(sf::RenderWindow& w)
 	upgradeButton.draw(w);
 
 	w.draw(upGradePrice);
+	w.draw(sellPrice);
 }
 
 void TowerMenu::close()
