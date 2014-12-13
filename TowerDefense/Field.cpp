@@ -233,128 +233,7 @@ Path Field::computePath(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)	//algori
 	}
 	return Path(path);
 }
-
-/*int Field::timeCross(int m, int n)										 // overload    algorithme de Dijkstra
-{
-	
-
-	int t[TILE_NUM][TILE_NUM];		//build matrice of graph TILE_NUM_HOR*TILE_NUM_VER, TILE_NUM_HOR*TILE_NUM_VER Tiles
-
-	for (int i = 0; i < TILE_NUM_HOR*TILE_NUM_VER; i++)
-	{
-		for (int j = 0; j < TILE_NUM_HOR*TILE_NUM_VER; j++)
-		{
-			if(
-				(i == j + 1 && i % TILE_NUM_VER != 0) ||
-				(i == j - 1 && j % TILE_NUM_VER != 0) ||
-				i == j + TILE_NUM_VER ||
-				i == j - TILE_NUM_VER)
-			{
-				t[i][j] = 1;
-			}
-			else if (i == j)
-			{
-				t[i][j] = 0;
-			}
-			else {
-				t[i][j] = 999;
-			}
-     
-		};
-	};
-	for (int k = 0; k < TILE_NUM_HOR*TILE_NUM_VER; k++)
-	{
-		if (tilesMap.at(k)->hasTower())
-		{
-			for (int l = 0; l < TILE_NUM_HOR*TILE_NUM_VER; l++)
-			{
-				t[k][l] = 999;
-				t[l][k] = 999;
-			}
-		}
-	}                  
-
-
-	int V[TILE_NUM];  
-	int D[TILE_NUM];  
-
-	for (int c = 0; c < TILE_NUM_HOR*TILE_NUM_VER; c++)
-	{
-		D[c] = t[m][c];
-		V[c] = 0;
-	}
-
-	for (int f = 0; f < TILE_NUM_HOR*TILE_NUM_VER; f++)
-	{
-		int sum;
-		int temp = 999, w = m;
-		for (int d = 0; d < TILE_NUM_HOR*TILE_NUM_VER; d++)
-		{
-			if (V[d] == 0 && D[d] < temp)
-			{
-				temp = D[d];
-				w = d;
-			}
-		}
-		V[w] = 1;
-		for (int k = 0; k < TILE_NUM_HOR*TILE_NUM_VER; k++)
-		{
-			if (V[k] == 0)
-			{
-				sum = D[w] + t[w][k];
-				if (sum < D[k])
-				{
-					D[k] = sum;
-				}
-			}
-		}
-	}
-	return D[n];
-
-}
-
-
-
-Path Field::computePath(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)
-{
-	sf::Vector2i vec1 = tile1->getPosition();
-	sf::Vector2i vec2 = tile2->getPosition();
-	int m = vec1.x  + vec1.y * TILE_NUM_VER ;		 //  start tile
-	int n = vec2.x  + vec2.y * TILE_NUM_VER ;		 // end tile
-	int time = timeCross(m, n);
-	vector<shared_ptr<Tile>> path;
-	path.push_back(tile1);
-
-	//limit the size of the path...
-	if (time == 999){
-		path.push_back(tile1);
-		return Path(path);
-	}
-
-	
-	int g = m;
-	while ( time!=0 )
-	{
-		if (((g+1)%TILE_NUM_VER != 0)&&time == timeCross(g + 1, n) + timeCross(g, g + 1)){
-			g += 1;
-		}
-		else if ((g + TILE_NUM_VER < TILE_NUM_VER*TILE_NUM_HOR) && time == timeCross(g + TILE_NUM_VER, n) + timeCross(g, g + TILE_NUM_VER)){
-			g += TILE_NUM_VER;
-		}
-		else if ((g>TILE_NUM_VER) && time == timeCross(g - TILE_NUM_VER, n) + timeCross(g, g - TILE_NUM_VER)){
-			g -= TILE_NUM_VER;
-		}
-		else if ((g % TILE_NUM_VER != 0) && time == timeCross(g - 1, n) + timeCross(g, g - 1)){
-			g -= 1;
-		}
-			
-		path.push_back(getTile(g));
-		time = timeCross(g, n);
-	}
-	path.push_back(getEndTile());
-	return Path(path);
-}
-*/
+ 
 
 bool Field::tryCross(shared_ptr<Tile> _startTile, shared_ptr<Tile> _endTile)
 {
@@ -363,11 +242,7 @@ bool Field::tryCross(shared_ptr<Tile> _startTile, shared_ptr<Tile> _endTile)
 	int m = vec1.x  + vec1.y * TILE_NUM_VER ;  
 	int n = vec2.x  + vec2.y * TILE_NUM_VER ; 
 
-	/*//trycross from depart tile
-	int time = timeCross(m, n);
-	if (time > TILE_NUM_HOR*TILE_NUM_VER)
-		return false;
-		*/
+
 	vector<shared_ptr<Tile>> path = computePath(_startTile, _endTile).getPath();
 	if (path.size() == 0)
 	{
@@ -382,17 +257,12 @@ bool Field::tryCross(shared_ptr<Tile> _startTile, shared_ptr<Tile> _endTile)
 	{
 		shared_ptr<Enemy> enemy = enemies[i];
 		shared_ptr<Tile> tile = (*enemy).getTile();
-		//sf::Vector2i vec3 = tile->getPosition();
-		//int p = vec3.x  + vec3.y * TILE_NUM_VER ;  //  tile of enemy
-		//time = timeCross(p, n);
-		//if (time > TILE_NUM_HOR*TILE_NUM_VER)
 		vector<shared_ptr<Tile>> path = computePath(tile, _endTile).getPath();
 		if (path.size() == 0)
 		{
 			return false;
-		}
-		//	return false;													//enemy i can't cross
+		}												//enemy i can't cross
 	}
 	
-	return true;															//all the enemis on the field and enemies that will appear on the field can cross
+	return true;										//all the enemis on the field and enemies that will appear on the field can cross
 }
