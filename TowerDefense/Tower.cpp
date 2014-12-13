@@ -109,6 +109,7 @@ void Tower::upgradeTw()
 		spriteUpdate(currentSprite);
 		setAttack();
 		setRangeCircle();
+		LevelManager::getLevelManager()->getPlayer()->manageMoney(-price);
 	}
 }
 /*

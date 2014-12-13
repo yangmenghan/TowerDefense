@@ -10,6 +10,18 @@ AreaAttack::AreaAttack()
 AreaAttack::~AreaAttack()
 {
 }
+bool AreaAttack::hasEnemyInRange()
+{
+	vector<shared_ptr<Enemy>> enemiesField = LevelManager::getLevelManager()->getEnemies();
+	for (shared_ptr<Enemy> e : enemiesField)
+	{
+		float i = sqrt(pow(e->getPosition().x + 50 - center.x, 2)
+			+ pow((e->getPosition().y + 25 - center.y), 2));
+		if (i < range)
+			return true;
+	}
+	return false;
+}
 
 /*
 Return a list of pointers to enemies, who are in the range of tower. 
@@ -18,16 +30,16 @@ Return a list of pointers to enemies, who are in the range of tower.
 vector<shared_ptr<Enemy>> AreaAttack::getTarget()
 {
 	vector<shared_ptr<Enemy>> enemiesField = LevelManager::getLevelManager()->getEnemies();
-	vector<shared_ptr<Enemy>> enemiesInRange;
+	vector<shared_ptr<Enemy>> enemiesToAttack;
 	for (shared_ptr<Enemy> e : enemiesField)
 	{
-		float i = sqrt(pow(e->getPosition().x + 25 - center.x, 2)
+		float i = sqrt(pow(e->getPosition().x + 50 - center.x, 2)
 			+ pow((e->getPosition().y + 25 - center.y), 2));
 		if (i < (float)(speed - timer) / (float)speed * range)
-			enemiesInRange.push_back(e);
+			enemiesToAttack.push_back(e);
 	}
 
-	return enemiesInRange;
+	return enemiesToAttack;
 }
 void AreaAttack::attackAnimation(sf::RenderWindow& w)
 {
@@ -47,22 +59,26 @@ The damage will occure in a frequency defined by timer.
 void AreaAttack::resolve(sf::RenderWindow& w)
 {
 	//TODO:Animation
-	if (timer == 0)
+	if (hasEnemyInRange())
 	{
-			timer = speed;
-	}
-	else
-	{
-		vector<shared_ptr<Enemy>> enemiesInRange = getTarget();
-		if (!enemiesInRange.empty())
+		vector<shared_ptr<Enemy>> enemiesInRange;
+		if (timer == 0)
 		{
-
-			for (shared_ptr<Enemy> e : enemiesInRange)
+			if (!enemiesInRange.empty())
 			{
-				e->takeDamage(damage);
+				for (shared_ptr<Enemy> e : enemiesInRange)
+				{
+					e->takeDamage(damage);
+				}
 			}
+			timer = speed;
 		}
-		attackAnimation(w);
-		timer--;
+		else
+		{
+			enemiesInRange = getTarget();
+			attackAnimation(w);
+
+			timer--;
+		}
 	}
 }
