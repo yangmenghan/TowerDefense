@@ -103,7 +103,7 @@ extern const string		NORMAL_TOWER_SPRITE_ADD = "sprites/normal_tower.png";
 
 extern const float		SUN_TOWER_DAMAGE[3]		= { 25, 45, 60};
 extern const int		SUN_TOWER_SLOW_AMOUNT[3]= { 0, 0, 0 };
-extern const int		SUN_TOWER_SPEED[3]		= {30, 25, 20};
+extern const int		SUN_TOWER_SPEED[3]		= {60, 40, 20};
 extern const float		SUN_TOWER_RANGE[3]		= { 125, 175, 225 };
 extern const int		SUN_TOWER_PRICE			= 500;
 extern const int		SUN_TOWER_INCOME[3]		= {400, 800, 1200};

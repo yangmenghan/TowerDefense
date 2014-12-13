@@ -35,7 +35,7 @@ vector<shared_ptr<Enemy>> AreaAttack::getTarget()
 	{
 		float i = sqrt(pow(e->getPosition().x + 50 - center.x, 2)
 			+ pow((e->getPosition().y + 25 - center.y), 2));
-		if (i < (float)(speed - timer) / (float)speed * range)
+		if (abs(attackCircle.getRadius() - i) < 5)
 			enemiesToAttack.push_back(e);
 	}
 
@@ -64,6 +64,13 @@ void AreaAttack::resolve(sf::RenderWindow& w)
 		vector<shared_ptr<Enemy>> enemiesInRange;
 		if (timer == 0)
 		{
+			timer = speed;
+		}
+		else
+		{
+			attackAnimation(w);
+			enemiesInRange = getTarget();
+			
 			if (!enemiesInRange.empty())
 			{
 				for (shared_ptr<Enemy> e : enemiesInRange)
@@ -71,14 +78,9 @@ void AreaAttack::resolve(sf::RenderWindow& w)
 					e->takeDamage(damage);
 				}
 			}
-			timer = speed;
-		}
-		else
-		{
-			enemiesInRange = getTarget();
-			attackAnimation(w);
-
 			timer--;
 		}
 	}
+	else
+		timer = speed;
 }
