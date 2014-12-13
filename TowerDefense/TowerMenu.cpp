@@ -14,6 +14,18 @@ TowerMenu::TowerMenu(shared_ptr<Tile> pTile)
 
 	sellButton = Button(SELL_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(-BUTTON_WIDTH, 0), 1);
 	upgradeButton = Button(UPGRADE_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(BUTTON_WIDTH, 0), 1);
+
+
+	if (!font.loadFromFile(FONT))
+	{
+		//error
+	}
+
+	upGradePrice.setFont(font);
+	upGradePrice.setColor(sf::Color::Green);
+	upGradePrice.setString("$" + std::to_string(getTile()->getTower()->getPrice()));
+	upGradePrice.setCharacterSize(14);
+	upGradePrice.setPosition(sf::Vector2f(upgradeButton.getPosition()));
 }
 
 TowerMenu::~TowerMenu(){}
@@ -65,6 +77,8 @@ void TowerMenu::draw(sf::RenderWindow& w)
 
 	sellButton.draw(w);
 	upgradeButton.draw(w);
+
+	w.draw(upGradePrice);
 }
 
 void TowerMenu::close()
