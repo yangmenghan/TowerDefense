@@ -226,10 +226,25 @@ bool Tile::hasTower()
 
 shared_ptr<BuildMenu> Tile::openBuildMenu()
 {
-	auto buildMenuptr = make_shared<BuildMenu>(shared_from_this());
-	MenuManager::getMenuManager()->addMenu(buildMenuptr);
-	MenuManager::getMenuManager()->setExistBTMenu(true);
-	return buildMenuptr;
+	LevelManager* levelManager = LevelManager::getLevelManager();
+	vector<shared_ptr<Enemy>> enemies;
+	enemies = levelManager->getEnemies();	//get the list of enemies
+	bool hasEnemy = false;
+	for (int i = 0; i < enemies.size(); i++)
+	{
+		shared_ptr<Enemy> enemy = enemies[i];
+		if (position == (*(*enemy).getTile()).getPosition())
+			hasEnemy = true;
+	}
+	if (hasEnemy == false)
+	{	
+		auto buildMenuptr = make_shared<BuildMenu>(shared_from_this());
+		MenuManager::getMenuManager()->addMenu(buildMenuptr);
+		MenuManager::getMenuManager()->setExistBTMenu(true);
+		return buildMenuptr;
+	}
+
+
 }
 
 shared_ptr<TowerMenu> Tile::openTowerMenu()
