@@ -10,15 +10,16 @@ using namespace std;
 
 shared_ptr<AudioManager> AudioManager::audioManager = NULL;
 
-sf::Music music;                                     // Declare a new music
-
+/*! 
+Declare a new music
+*/
+sf::Music music;                                    
 
 AudioManager::AudioManager()
 {
 	ismute = false;
 	loaded = false;
 };
-
 
 AudioManager::AudioManager(bool b)
 {
@@ -28,7 +29,7 @@ AudioManager::AudioManager(bool b)
 void AudioManager::mute()
 {
 	if (music.Playing){
-		music.pause();		//Pause it
+		music.pause();
 		ismute = true;
 	}
 									

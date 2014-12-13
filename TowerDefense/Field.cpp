@@ -159,7 +159,6 @@ Path Field::computePath(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)	//algori
 		}
 	}
 
-
 	int V[TILE_NUM];									//is in the group
 	int D[TILE_NUM];									//distance from m   
 
@@ -241,7 +240,6 @@ bool Field::tryCross(shared_ptr<Tile> _startTile, shared_ptr<Tile> _endTile)
 	sf::Vector2i vec2 = _endTile->getPosition();
 	int m = vec1.x  + vec1.y * TILE_NUM_VER ;  
 	int n = vec2.x  + vec2.y * TILE_NUM_VER ; 
-
 
 	vector<shared_ptr<Tile>> path = computePath(_startTile, _endTile).getPath();
 	if (path.size() == 0)
