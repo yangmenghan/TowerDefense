@@ -17,23 +17,23 @@ Wave::Wave(vector<shared_ptr<Enemy>> e){
 void Wave::addEnemy(char type){
 	//TODO : warning modularity
 	if (type == '1'){
-		enemies.push_back(make_shared<NormalEnemy>());
+		enemies.insert(enemies.begin(), make_shared<NormalEnemy>());
 		return;
 	}
 	else if (type == '2'){
-		enemies.push_back(make_shared<FastEnemy>());
+		enemies.insert(enemies.begin(), make_shared<FastEnemy>());
 		return;
 	}
 	else if (type == '3'){
-		enemies.push_back(make_shared<ToughEnemy>());
+		enemies.insert(enemies.begin(), make_shared<ToughEnemy>());
 		return;
 	}
 	else if (type == '4'){
-		enemies.push_back(make_shared<BombEnemy>());
+		enemies.insert(enemies.begin(), make_shared<BombEnemy>());
 		return;
 	}
 	else if (type == '0'){
-		enemies.push_back(NULL);
+		enemies.insert(enemies.begin(), NULL);
 		return;
 	}
 

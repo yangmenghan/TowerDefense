@@ -52,7 +52,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 
 		//if the game is not paused
 		if (player->getHP() <= 0){
-			gameOver();
+			//gameOver();
 			return;
 		}
 		else if (gameSpeed != 0){ 
@@ -133,7 +133,7 @@ void LevelManager::loadWaves(){
 		for (char type: line){
 			w.addEnemy(type);
 		}
-		waves.push_back(w);
+		waves.insert(waves.begin(), w);
 	}
 	file.close();
 }

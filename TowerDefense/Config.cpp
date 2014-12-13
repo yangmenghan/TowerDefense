@@ -44,9 +44,9 @@ extern const int		BUTTON_HEIGHT			= 50;
 Wave constants
 */
 
-extern const int		WAVE_TOTAL				= 24;
+extern const int		WAVE_TOTAL				= 15;
 extern const string		WAVE_FILE_ADDRESS		= "Waves.txt";
-extern const int		WAVE_SPAWN_COOLDOWN		= 30;
+extern const int		WAVE_SPAWN_COOLDOWN		= 10;
 extern const int		WAVE_SPAWN_PAUSE_COOLDOWN = 100;
 extern const int		WAVE_COOLDOWN			= 300;
 
@@ -54,14 +54,14 @@ extern const int		WAVE_COOLDOWN			= 300;
 Enemy constants
 */
 
-extern const float		NORMAL_ENEMY_SPEED		= 5;
+extern const float		NORMAL_ENEMY_SPEED		= 4;
 extern const int		NORMAL_ENEMY_HP			= 100;
 extern const int		NORMAL_ENEMY_BOUNTY		= 100;
 extern const int		NORMAL_ENEMY_SCOREVALUE = 100;
 extern const float		NORMAL_ENEMY_DEFENCE	= 10;
 extern const string		NORMAL_ENEMY_SPRITE_ADD = "sprites/Enemy4.png";
 
-extern const float		FAST_ENEMY_SPEED		= 5;
+extern const float		FAST_ENEMY_SPEED		= 10;
 extern const int		FAST_ENEMY_HP			= 50;
 extern const int		FAST_ENEMY_BOUNTY		= 150;
 extern const int		FAST_ENEMY_SCOREVALUE	= 150;
@@ -77,7 +77,7 @@ extern const string		BOMB_ENEMY_SPRITE_ADD	= "sprites/Enemy1.png";
 extern const int		BOMB_ENEMY_TRIGGER		= 4800;
 extern const int		BOMB_ENEMY_COUNTDOWN	= 120;
 
-extern const float		TOUGH_ENEMY_SPEED		= 5;
+extern const float		TOUGH_ENEMY_SPEED		= 2;
 extern const int		TOUGH_ENEMY_HP			= 500;
 extern const int		TOUGH_ENEMY_BOUNTY		= 300;
 extern const int		TOUGH_ENEMY_SCOREVALUE	= 350;
