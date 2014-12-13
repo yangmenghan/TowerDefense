@@ -21,7 +21,14 @@ private:
 	Button slowTwButton;					//The button for building a slow tower in the tile.
 	Button moneyTwButton;					//The button for building a money tower in the tile.
 	Button sunTwButton;						//The button for building a sun tower in the tile.
-	//shared_ptr<Tower> tempTower;
+	
+
+	std::string fontAddress;
+	sf::Font font;
+	sf::Text basicPrice; 
+	sf::Text slowPrice;
+	sf::Text moneyPrice;
+	sf::Text sunPrice;
 public:
 	//Constructors, destructors
 	BuildMenu();							//Default constructor.

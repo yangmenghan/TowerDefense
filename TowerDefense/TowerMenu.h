@@ -15,6 +15,11 @@ private:
 	Button sellButton;							//The button to sell the tower in this tile.
 	Button upgradeButton;						//The button to upgrade the tower in this tile.
 	shared_ptr<Tile> tile;						//The tile which opens the towermenu.
+	
+	std::string fontAddress;
+	sf::Font font;
+	sf::Text upGradePrice;
+	sf::Text sellPrice;
 
 public:
 

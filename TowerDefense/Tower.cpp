@@ -39,6 +39,11 @@ float Tower::getRange()
 	return range[level - 1];
 }
 
+int Tower::getIncome()
+{
+	return income[level-1];
+}
+
 void Tower::setDamage(float mDamage)
 {
 	damage[level - 1] = mDamage;

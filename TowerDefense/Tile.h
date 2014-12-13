@@ -62,4 +62,5 @@ public:
 	shared_ptr<TowerMenu> openTowerMenu();		//Open the menu for upgrade or sell a menu.
 	void draw(sf::RenderWindow&);
 	void spriteUpdate(int);
+	bool hasEnemy();
 };

@@ -31,7 +31,6 @@ LevelManager::LevelManager()
 {
 	waveCooldown = WAVE_COOLDOWN;
 	player = make_shared<Player>();
-	startGame();
 }
 
 LevelManager::~LevelManager(){
@@ -48,15 +47,13 @@ void LevelManager::gameLoop(RenderWindow& w){
 		field.draw(w);
 		currentPath.draw(w);
 
-		
-
-		//if the game is not paused
-		if (player->getHP() <= 0){
-			//gameOver();
-			return;
-		}
-		else if (gameSpeed != 0){ 
-			if (waves.size() == 0 && enemies.empty()){
+		if (gameSpeed != 0){ 
+			//if the game is not paused
+			if (player->getHP() <= 0){
+				gameOver();
+				return;
+			}
+			else if (waves.size() == 0 && enemies.empty()){
 				victory();		// you win if there is no enemy and no wave left
 				return;
 			}
@@ -227,5 +224,5 @@ void LevelManager::setSpeed(int speed){
 }
 
 int LevelManager::getCurrentWaveNumber(){
-	return (WAVE_TOTAL - waves.size());
+	return (WAVE_TOTAL - waves.size() + 1);
 }

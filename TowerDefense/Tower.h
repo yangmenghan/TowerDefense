@@ -17,6 +17,7 @@ public:
 	int getPrice();
 	int getLevel();
 	float getRange();
+	int getIncome();
 
 	void setDamage(float mDamage);
 	void setPrice(int mPrice);

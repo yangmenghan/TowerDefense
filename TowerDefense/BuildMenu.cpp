@@ -20,6 +20,36 @@ BuildMenu::BuildMenu(shared_ptr<Tile> pTile)
 	moneyTwButton=Button(MONEY_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(0, -BUTTON_HEIGHT), 1);
 	slowTwButton=Button(SLOW_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(BUTTON_WIDTH, 0), 1);
 	sunTwButton=Button(SUN_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(0, BUTTON_HEIGHT), 1);
+
+	if (!font.loadFromFile(FONT))
+	{
+		//error
+	}
+
+	basicPrice.setFont(font);
+	moneyPrice.setFont(font);
+	slowPrice.setFont(font);
+	sunPrice.setFont(font);
+
+	basicPrice.setColor(sf::Color::Green);
+	moneyPrice.setColor(sf::Color::Green);
+	slowPrice.setColor(sf::Color::Green);
+	sunPrice.setColor(sf::Color::Green);
+
+	basicPrice.setString("$" + std::to_string(NORMAL_TOWER_PRICE));
+	moneyPrice.setString("$" + std::to_string(MONEY_TOWER_PRICE));
+	slowPrice.setString("$" + std::to_string(SLOW_TOWER_PRICE));
+	sunPrice.setString("$" + std::to_string(SUN_TOWER_PRICE));
+
+	basicPrice.setCharacterSize(14);
+	moneyPrice.setCharacterSize(14);
+	slowPrice.setCharacterSize(14);
+	sunPrice.setCharacterSize(14);
+
+	basicPrice.setPosition(sf::Vector2f(basicTwButton.getPosition()));
+	moneyPrice.setPosition(sf::Vector2f(moneyTwButton.getPosition()));
+	slowPrice.setPosition(sf::Vector2f(slowTwButton.getPosition()));
+	sunPrice.setPosition(sf::Vector2f(sunTwButton.getPosition()));
 }
 
 BuildMenu::~BuildMenu(){}
@@ -35,37 +65,43 @@ shared_ptr<Tile> BuildMenu::getTile()
 
 void BuildMenu::buyBasicTw()
 {
-	LevelManager::getLevelManager()->getPlayer()->manageMoney(-NORMAL_TOWER_PRICE);
-	auto pNormalTw = make_shared<NormalTower>(tile);
-	LevelManager::getLevelManager()->addTower(pNormalTw);
-	tile->setTower(pNormalTw);
-	
+	if (!tile->hasEnemy()){
+		LevelManager::getLevelManager()->getPlayer()->manageMoney(-NORMAL_TOWER_PRICE);
+		auto pNormalTw = make_shared<NormalTower>(tile);
+		LevelManager::getLevelManager()->addTower(pNormalTw);
+		tile->setTower(pNormalTw);
+	}
 }
 
 void BuildMenu::buyMoneyTw()
 {
-	LevelManager::getLevelManager()->getPlayer()->manageMoney(-MONEY_TOWER_PRICE);
-	auto pMoneyTw = make_shared<MoneyTower>(tile);
-	LevelManager::getLevelManager()->addTower(pMoneyTw);
-	tile->setTower(pMoneyTw);
-	
+	if (!tile->hasEnemy()){
+		LevelManager::getLevelManager()->getPlayer()->manageMoney(-MONEY_TOWER_PRICE);
+		auto pMoneyTw = make_shared<MoneyTower>(tile);
+		LevelManager::getLevelManager()->addTower(pMoneyTw);
+		tile->setTower(pMoneyTw);
+	}
 }
 
 void BuildMenu::buySlowTw()
 {
-	LevelManager::getLevelManager()->getPlayer()->manageMoney(-SLOW_TOWER_PRICE);
-	auto pSlowTw = make_shared<SlowTower>(tile);
-	LevelManager::getLevelManager()->addTower(pSlowTw);
-	tile->setTower(pSlowTw);
-	
+	if (!tile->hasEnemy()){
+		LevelManager::getLevelManager()->getPlayer()->manageMoney(-SLOW_TOWER_PRICE);
+		auto pSlowTw = make_shared<SlowTower>(tile);
+		LevelManager::getLevelManager()->addTower(pSlowTw);
+		tile->setTower(pSlowTw);
+	}
 }
 
 void BuildMenu::buySunTw()
 {
-	LevelManager::getLevelManager()->getPlayer()->manageMoney(-SUN_TOWER_PRICE);
-	auto pSunTw = make_shared<SunTower>(tile);
-	LevelManager::getLevelManager()->addTower(pSunTw);
-	tile->setTower(pSunTw);
+	if (!tile->hasEnemy()){
+		LevelManager::getLevelManager()->getPlayer()->manageMoney(-SUN_TOWER_PRICE);
+		auto pSunTw = make_shared<SunTower>(tile);
+		LevelManager::getLevelManager()->addTower(pSunTw);
+		tile->setTower(pSunTw);
+	}
+	
 }
 
 
@@ -155,11 +191,15 @@ void BuildMenu::draw(sf::RenderWindow& w)
 		tempTower->showRangeCircle(w);
 	}
 
-
 	basicTwButton.draw(w);
 	slowTwButton.draw(w);
 	moneyTwButton.draw(w);
 	sunTwButton.draw(w);
+
+	w.draw(basicPrice);
+	w.draw(moneyPrice);
+	w.draw(slowPrice);
+	w.draw(sunPrice);
 }
 
 void BuildMenu::close()
