@@ -62,7 +62,7 @@ extern const float		NORMAL_ENEMY_DEFENCE	= 10;
 extern const string		NORMAL_ENEMY_SPRITE_ADD = "sprites/enemies/basic_enemy.png";
 
 extern const float		FAST_ENEMY_SPEED		= 10;
-extern const int		FAST_ENEMY_HP			= 50;
+extern const int		FAST_ENEMY_HP			= 80;
 extern const int		FAST_ENEMY_BOUNTY		= 1;
 extern const int		FAST_ENEMY_SCOREVALUE	= 5;
 extern const float		FAST_ENEMY_DEFENCE		= 7;
@@ -91,35 +91,35 @@ Tower constants
 
 extern const sf::Color	RANGE_CIRCLE_FILL_COLOR = sf::Color(0, 0, 255, 100);
 
-extern const float		NORMAL_TOWER_DAMAGE[3]	= { 2, 5, 12};
+extern const float		NORMAL_TOWER_DAMAGE[3]	= { 3, 7, 15};
 extern const int		NORMAL_TOWER_SLOW_AMOUNT[3]	= { 0, 0, 0 };
 extern const int		NORMAL_TOWER_SPEED[3]	= {20, 15, 10};
-extern const float		NORMAL_TOWER_RANGE[3]	= { 125, 175, 225 };
+extern const float		NORMAL_TOWER_RANGE[3]	= { 125, 150, 175 };
 extern const int		NORMAL_TOWER_PRICE		= 5;
 extern const int		NORMAL_TOWER_INCOME[3]	= {4, 8, 12 };
 extern const string		NORMAL_TOWER_SPRITE_ADD = "sprites/normal_tower.png";
 
-extern const float		SUN_TOWER_DAMAGE[3]		= { 1, 3, 8};
+extern const float		SUN_TOWER_DAMAGE[3]		= { 1, 3, 7};
 extern const int		SUN_TOWER_SLOW_AMOUNT[3]= { 0, 0, 0 };
 extern const int		SUN_TOWER_SPEED[3]		= {60, 40, 20};
-extern const float		SUN_TOWER_RANGE[3]		= { 125, 175, 225 };
-extern const int		SUN_TOWER_PRICE			= 10;
+extern const float		SUN_TOWER_RANGE[3]		= { 125, 150, 175 };
+extern const int		SUN_TOWER_PRICE			= 30;
 extern const int		SUN_TOWER_INCOME[3]		= {8, 16, 24};
 extern const string		SUN_TOWER_SPRITE_ADD	= "sprites/sun_tower.png";
 
 extern const float		MONEY_TOWER_DAMAGE[3]	= { 0, 0, 0 };
-extern const int		MONEY_TOWER_GENERATION_UNIT[3] = { 300, 600, 900 }; 
+extern const int		MONEY_TOWER_GENERATION_UNIT[3] = { 1, 3, 8 }; 
 extern const int		MONEY_TOWER_SPEED[3]	= {180, 150, 120};
 extern const float		MONEY_TOWER_RANGE[3]	= { 0, 0, 0 };
-extern const int		MONEY_TOWER_PRICE		= 15;
+extern const int		MONEY_TOWER_PRICE		= 50;
 extern const int		MONEY_TOWER_INCOME[3]	= {12, 24, 36};
 extern const string		MONEY_TOWER_SPRITE_ADD	= "sprites/money_tower.png";
 
 extern const float		SLOW_TOWER_DAMAGE[3]	= { 0, 0, 0 };
-extern const int		SLOW_TOWER_SLOW_AMOUNT[3]= { 50, 120, 260 };
+extern const int		SLOW_TOWER_SLOW_AMOUNT[3]= { 1, 3, 8 };
 extern const int		SLOW_TOWER_SPEED[3]		= {20, 15, 10};
-extern const float		SLOW_TOWER_RANGE[3]		= { 125, 175, 225 };
-extern const int		SLOW_TOWER_PRICE		= 5;
+extern const float		SLOW_TOWER_RANGE[3]		= { 125, 150, 175 };
+extern const int		SLOW_TOWER_PRICE		= 10;
 extern const int		SLOW_TOWER_INCOME[3]	= {4, 8, 12};
 extern const string		SLOW_TOWER_SPRITE_ADD	= "sprites/slow_tower.png";
 
@@ -191,5 +191,5 @@ extern const sf::Vector2i	GO_BACK_BUTTON_POSITION = sf::Vector2i(((WINDOW_WIDTH 
 /*
 Other constants
 */
-extern const int		INIT_MONEY				= 10;
+extern const int		INIT_MONEY				= 8;
 extern const int		INIT_HP					= 10;

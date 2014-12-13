@@ -8,7 +8,7 @@ class FastEnemy : public Enemy{
 public:
 	FastEnemy();
 	FastEnemy(int hp, float defence, int bounty, int scoreValue, sf::Sprite sprite, float speed);
-	virtual ~FastEnemy(){};
+	~FastEnemy(){};
 
 	string test(){ return ""; };
 };
