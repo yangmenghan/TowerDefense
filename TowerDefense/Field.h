@@ -57,7 +57,7 @@ public:
 	/*!
 	\param tile1 is the start tile of the path
 	\param tile2 is the end tile of the path
-	\return the path computed
+	\return The path computed
 	*/
 	Path computePath(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2);	
 
@@ -65,7 +65,7 @@ public:
 	/*!
 	\param tile1 is the start tile of the path
 	\param tile2 is the end tile of the path
-	\return if there existe a path
+	\return If there existe a path
 	*/
 	bool tryCross(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2);
 };

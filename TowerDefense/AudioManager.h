@@ -12,13 +12,13 @@ private:
 public:
 	//! A constructor
 	/*!
-	constructor with argument
+	Constructor with argument
 	*/
 	AudioManager(bool);	
 
 	//! A constructor
 	/*!
-	constructor by default
+	Constructor by default
 	*/
 	AudioManager();
 
@@ -27,7 +27,7 @@ public:
 
 	//! A normal function without arguments and return a bool value to play the music
 	/*!
-	\ return if the file is opened successfully and played
+	\return If the file is opened successfully and played
 	*/
 	bool play();									
 
@@ -36,7 +36,7 @@ public:
 
 	//! A normal function without arguments and return a bool value mesure if it is mute
 	/*!
-	\ return if it is mute
+	\return If it is mute
 	*/
 	bool isMute();									
 	 
