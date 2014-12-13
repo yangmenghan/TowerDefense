@@ -139,7 +139,7 @@ void GameMenu::draw(sf::RenderWindow& w)
 	moneyCountDisplay.setString("Gold : " + moneyCount);
 
 	string waveCount = std::to_string((levelManager->getCurrentWaveNumber()));
-	waveCountDisplay.setString("Wave " + waveCount + "/24");
+	waveCountDisplay.setString("Wave " + waveCount + "/" + std::to_string(WAVE_TOTAL));
 
 	w.draw(lifeCountDisplay);
 	w.draw(pointsCountDisplay);

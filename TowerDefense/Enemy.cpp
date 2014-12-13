@@ -94,7 +94,7 @@ void Enemy::setTile(shared_ptr<Tile> t){
 void Enemy::die(){
 	hp = 0;
 	LevelManager::getLevelManager()->getPlayer()->manageScore(scoreValue);
-	LevelManager::getLevelManager()->getPlayer()->manageMoney(scoreValue);
+	LevelManager::getLevelManager()->getPlayer()->manageMoney(bounty);
 };
 
 void Enemy::dieWithoutBonus(){
