@@ -35,11 +35,6 @@ sf::Vector2i Button::getSize()
 	return size;
 }
 
-sf::Sprite Button::getSprite()
-{
-	return sprite;
-}
-
 bool Button::checkClick()
 {
 	return isClicked;
@@ -63,11 +58,6 @@ void Button::setPosition(sf::Vector2i mPosition)
 void Button::setSize(sf::Vector2i mSize)
 {
 	size = mSize;
-}
-
-void Button::setSprite(sf::Sprite mSprite)
-{
-	sprite = mSprite;
 }
 
 void Button::draw(sf::RenderWindow& w)

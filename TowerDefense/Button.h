@@ -111,4 +111,6 @@ public:
 	\param i the wanted sprite number as an integer
 */
 	void spriteUpdate(int i);
+
+	void setClickedState(bool mIsClicked);
 };
