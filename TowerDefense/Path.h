@@ -10,8 +10,28 @@ private:
 	vector<shared_ptr<Tile>> path;
 	
 public:
-	void draw(sf::RenderWindow&);				//draw path by changing color
-	Path(vector<shared_ptr<Tile>>);						//constructor
-	Path();									//constructor
-	vector<shared_ptr<Tile>> getPath();					//provide path
+	//! A function to draw the path
+	/*!
+	\ param w is a game window
+	*/
+	void draw(sf::RenderWindow& w);
+
+
+	//! A constructor
+	/*!
+	constructor with argument
+	*/
+	Path(vector<shared_ptr<Tile>>);	
+
+	//! A constructor
+	/*!
+	constructor by default
+	*/
+	Path();		
+
+	//! A function without arguments and return a vector of tiles which represent the path
+	/*!
+	\ return the path
+	*/
+	vector<shared_ptr<Tile>> getPath();					
 };

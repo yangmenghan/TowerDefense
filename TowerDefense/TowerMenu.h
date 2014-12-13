@@ -8,36 +8,89 @@
 using namespace std;
 
 class Tile;
+//! Tower Menu class
+/*!
 
+*/
 class TowerMenu : public Menu
 {
 private:
-	Button sellButton;							//The button to sell the tower in this tile.
-	Button upgradeButton;						//The button to upgrade the tower in this tile.
-	shared_ptr<Tile> tile;						//The tile which opens the towermenu.
-	
+	//! Button 
+	/*!
+	The button is used to sell the tower in this tile.
+	*/
+	Button sellButton;							
+	//! Button 
+	/*!
+	The button is used to upgrade the tower in this tile.
+	*/
+	Button upgradeButton;						
+	//! Tile
+	/*!
+	The tile which opens the towermenu.
+	*/
+	shared_ptr<Tile> tile;						
+	//! String
+	/*!
+	The name of the address of the font.
+	*/
 	std::string fontAddress;
+	//! A font
+	/*!
+
+	*/
 	sf::Font font;
+	//!
+	/*!
+
+	*/
 	sf::Text upGradePrice;
+	//!
+	/*!
+
+	*/
 	sf::Text sellPrice;
 
 public:
 
-	//Constructors and destroyers
-	TowerMenu::TowerMenu();						//Defauld constructor.
+	//! Default constructor.
+	/*!
+	Default constructor.
+	*/
+	TowerMenu::TowerMenu();						
+	//! Construct the buildMenu at this tile. 
+	/*!
+	
+	*/											
+	TowerMenu(shared_ptr<Tile> t);
+	//! Destructor
+	/*!
+	Destructor.
+	*/
+	~TowerMenu();								
+	//! Get the tile which opens the towermenu.
+	/*!
+	
+	*/
+	shared_ptr<Tile> getTile();					
+	//! Resolve all the events on this tile.
+	/*!
+	\param event the event to resolve. 
+	*/ 
+	void resolveEvent(sf::Event event);
+	//! Sell the tower in this tile.
+	/*!
 
-												//Constructor a towermenu in this tile.
-	TowerMenu(shared_ptr<Tile>);
-	~TowerMenu();								//Destructor.
-
-	//Getters
-	shared_ptr<Tile> getTile();					//Get the tile which opens the towermenu.
-
-	//Setters
-
-	//Functions
-	void resolveEvent(sf::Event);
+	*/
 	void sellTower();
-	void draw(sf::RenderWindow&);				//Draw the menu.
-	void close();								//Close the menu.
+	//!Draw the menu.
+	/*!
+	
+	*/
+	void draw(sf::RenderWindow&);				
+	//!Close the menu.
+	/*!
+	
+	*/
+	void close();								
 };

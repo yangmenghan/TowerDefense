@@ -9,6 +9,4 @@ public:
 	FastEnemy();
 	FastEnemy(int hp, float defence, int bounty, int scoreValue, sf::Sprite sprite, float speed);
 	~FastEnemy(){};
-
-	string test(){ return ""; };
 };

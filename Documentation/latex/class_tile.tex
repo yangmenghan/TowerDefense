@@ -1,0 +1,341 @@
+\hypertarget{class_tile}{\section{Tile Class Reference}
+\label{class_tile}\index{Tile@{Tile}}
+}
+
+
+\hyperlink{class_tile}{Tile}.  
+
+
+
+
+{\ttfamily \#include $<$Tile.\+h$>$}
+
+Inheritance diagram for Tile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tile}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tile_aeeb5593bb6b75aae2edfcccbc84ab378}{Tile} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_tile_a837f442dc4576cd22c95fab3bd29dc69}{Tile} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Construct the tile with the position of tile. \end{DoxyCompactList}\item 
+\hyperlink{class_tile_a98634abbd93fa13d0578d7103202d03d}{$\sim$\+Tile} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+sf\+::\+Vector2i \hyperlink{class_tile_ad66322fd7d2cb15d9387a567662c0260}{get\+Position} ()
+\begin{DoxyCompactList}\small\item\em Get the position of tile. \end{DoxyCompactList}\item 
+sf\+::\+Vector2i \hyperlink{class_tile_adf9367fb8cb9d26f51d692f18ef2d4d3}{get\+Position\+Pixel} ()
+\begin{DoxyCompactList}\small\item\em Get the position of the pixel of topleft of the tile. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_tower}{Tower} $>$ \hyperlink{class_tile_a741c73bfdb1607240e99f54a6c29153f}{get\+Tower} ()
+\begin{DoxyCompactList}\small\item\em Get the pointer of the tower in this tile. \end{DoxyCompactList}\item 
+int \hyperlink{class_tile_a49a65d5fb6a4607d21966c82c3198bfb}{get\+Cooldown} ()
+\begin{DoxyCompactList}\small\item\em Get the time left for the tower to return normal. \end{DoxyCompactList}\item 
+vector$<$ shared\+\_\+ptr$<$ \hyperlink{class_tile}{Tile} $>$ $>$ \hyperlink{class_tile_ad468d33f424d564e0b6c2f0c079ea7ab}{get\+Neighbor} (int range)
+\begin{DoxyCompactList}\small\item\em Get all the tiles near this tile. \end{DoxyCompactList}\item 
+sf\+::\+Sprite \hyperlink{class_tile_af3dec632de42f9e9784af0dce462837c}{get\+Sprite} ()
+\begin{DoxyCompactList}\small\item\em Get the sprite of the tile. \end{DoxyCompactList}\item 
+void \hyperlink{class_tile_ad49285b0453a229798c64a08a4480de5}{set\+Position} (sf\+::\+Vector2i pos)
+\begin{DoxyCompactList}\small\item\em Set the position of this tile. \end{DoxyCompactList}\item 
+void \hyperlink{class_tile_a388c6caf78a0c0063b229c2b10eb4e1c}{set\+Tower} (shared\+\_\+ptr$<$ \hyperlink{class_tower}{Tower} $>$ tower)
+\begin{DoxyCompactList}\small\item\em Build a tower in this tile. \end{DoxyCompactList}\item 
+void \hyperlink{class_tile_a3976735a9d30faa53e03e72aa08b3a2c}{set\+Cooldown} ()
+\begin{DoxyCompactList}\small\item\em Set the time of cooldown for the tower in this tile. \end{DoxyCompactList}\item 
+void \hyperlink{class_tile_a597689cfa33df779594c888ee1d0875b}{set\+Sprite} (sf\+::\+Sprite)
+\item 
+void \hyperlink{class_tile_a0ecef130e42783b84e95408689546f8d}{mouse\+Hover} (sf\+::\+Render\+Window \&w)
+\item 
+bool \hyperlink{class_tile_ad95f62d8b577df5ace5636a14fb59e6e}{check\+Hover} ()
+\item 
+bool \hyperlink{class_tile_a802ca0ade47efc9b5f28a047a2f98a96}{check\+Click} ()
+\item 
+void \hyperlink{class_tile_a398b848f0c6ccfd58245a23e19a7ecc9}{resolve\+Event} (sf\+::\+Event)
+\item 
+bool \hyperlink{class_tile_a9b3edec9eeb02506164d900e8aecb017}{is\+Polluted} ()
+\item 
+bool \hyperlink{class_tile_acc84537f5757e5ea52aadcd290ba4f2f}{has\+Tower} ()
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_build_menu}{Build\+Menu} $>$ \hyperlink{class_tile_a3192d9456a5ef1ed9e1f6eb447f75cd4}{open\+Build\+Menu} ()
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_tower_menu}{Tower\+Menu} $>$ \hyperlink{class_tile_abfe0e5e0a4bd3a5b7194ba7b70e7919e}{open\+Tower\+Menu} ()
+\item 
+void \hyperlink{class_tile_aa7b74c774f58cc6259a48b144a0a7d14}{draw} (sf\+::\+Render\+Window \&)
+\item 
+void \hyperlink{class_tile_af11fe597c0bdc2b49d33c4111461ccc4}{sprite\+Update} (int)
+\item 
+bool \hyperlink{class_tile_ab8081a8e4e47aa339c7ed22ce502afbb}{has\+Enemy} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_tile}{Tile}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tile_aeeb5593bb6b75aae2edfcccbc84ab378}{\index{Tile@{Tile}!Tile@{Tile}}
+\index{Tile@{Tile}!Tile@{Tile}}
+\subsubsection[{Tile}]{\setlength{\rightskip}{0pt plus 5cm}Tile\+::\+Tile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_aeeb5593bb6b75aae2edfcccbc84ab378}
+
+
+Default constructor. 
+
+\hypertarget{class_tile_a837f442dc4576cd22c95fab3bd29dc69}{\index{Tile@{Tile}!Tile@{Tile}}
+\index{Tile@{Tile}!Tile@{Tile}}
+\subsubsection[{Tile}]{\setlength{\rightskip}{0pt plus 5cm}Tile\+::\+Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_tile_a837f442dc4576cd22c95fab3bd29dc69}
+
+
+Construct the tile with the position of tile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the row of the tile. \\
+\hline
+{\em y} & the collone of the tile. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_tile_a98634abbd93fa13d0578d7103202d03d}{\index{Tile@{Tile}!````~Tile@{$\sim$\+Tile}}
+\index{````~Tile@{$\sim$\+Tile}!Tile@{Tile}}
+\subsubsection[{$\sim$\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}Tile\+::$\sim$\+Tile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_a98634abbd93fa13d0578d7103202d03d}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tile_a802ca0ade47efc9b5f28a047a2f98a96}{\index{Tile@{Tile}!check\+Click@{check\+Click}}
+\index{check\+Click@{check\+Click}!Tile@{Tile}}
+\subsubsection[{check\+Click}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\+::check\+Click (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_a802ca0ade47efc9b5f28a047a2f98a96}
+\hypertarget{class_tile_ad95f62d8b577df5ace5636a14fb59e6e}{\index{Tile@{Tile}!check\+Hover@{check\+Hover}}
+\index{check\+Hover@{check\+Hover}!Tile@{Tile}}
+\subsubsection[{check\+Hover}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\+::check\+Hover (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_ad95f62d8b577df5ace5636a14fb59e6e}
+\hypertarget{class_tile_aa7b74c774f58cc6259a48b144a0a7d14}{\index{Tile@{Tile}!draw@{draw}}
+\index{draw@{draw}!Tile@{Tile}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{w}
+\end{DoxyParamCaption}
+)}}\label{class_tile_aa7b74c774f58cc6259a48b144a0a7d14}
+\hypertarget{class_tile_a49a65d5fb6a4607d21966c82c3198bfb}{\index{Tile@{Tile}!get\+Cooldown@{get\+Cooldown}}
+\index{get\+Cooldown@{get\+Cooldown}!Tile@{Tile}}
+\subsubsection[{get\+Cooldown}]{\setlength{\rightskip}{0pt plus 5cm}int Tile\+::get\+Cooldown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_a49a65d5fb6a4607d21966c82c3198bfb}
+
+
+Get the time left for the tower to return normal. 
+
+\begin{DoxyReturn}{Returns}
+An integer which means the time left for the tile to become nomal. 
+\end{DoxyReturn}
+\hypertarget{class_tile_ad468d33f424d564e0b6c2f0c079ea7ab}{\index{Tile@{Tile}!get\+Neighbor@{get\+Neighbor}}
+\index{get\+Neighbor@{get\+Neighbor}!Tile@{Tile}}
+\subsubsection[{get\+Neighbor}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ shared\+\_\+ptr$<$ {\bf Tile} $>$ $>$ Tile\+::get\+Neighbor (
+\begin{DoxyParamCaption}
+\item[{int}]{range}
+\end{DoxyParamCaption}
+)}}\label{class_tile_ad468d33f424d564e0b6c2f0c079ea7ab}
+
+
+Get all the tiles near this tile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em range} & is the distance entre two tiles. It can be 1, 2, 3. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vactor contains all the shared pointers of the tile near this tile. 
+\end{DoxyReturn}
+\hypertarget{class_tile_ad66322fd7d2cb15d9387a567662c0260}{\index{Tile@{Tile}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Tile@{Tile}}
+\subsubsection[{get\+Position}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2i Tile\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_ad66322fd7d2cb15d9387a567662c0260}
+
+
+Get the position of tile. 
+
+\begin{DoxyReturn}{Returns}
+The position in forme sf\+::\+Vector2i.(x,y) is row and collone of the tile. 
+\end{DoxyReturn}
+\hypertarget{class_tile_adf9367fb8cb9d26f51d692f18ef2d4d3}{\index{Tile@{Tile}!get\+Position\+Pixel@{get\+Position\+Pixel}}
+\index{get\+Position\+Pixel@{get\+Position\+Pixel}!Tile@{Tile}}
+\subsubsection[{get\+Position\+Pixel}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2i Tile\+::get\+Position\+Pixel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_adf9367fb8cb9d26f51d692f18ef2d4d3}
+
+
+Get the position of the pixel of topleft of the tile. 
+
+\begin{DoxyReturn}{Returns}
+The position in forme sf\+::\+Vector2i. 
+\end{DoxyReturn}
+\hypertarget{class_tile_af3dec632de42f9e9784af0dce462837c}{\index{Tile@{Tile}!get\+Sprite@{get\+Sprite}}
+\index{get\+Sprite@{get\+Sprite}!Tile@{Tile}}
+\subsubsection[{get\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Sprite Tile\+::get\+Sprite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_af3dec632de42f9e9784af0dce462837c}
+
+
+Get the sprite of the tile. 
+
+\begin{DoxyReturn}{Returns}
+The sprite. 
+\end{DoxyReturn}
+\hypertarget{class_tile_a741c73bfdb1607240e99f54a6c29153f}{\index{Tile@{Tile}!get\+Tower@{get\+Tower}}
+\index{get\+Tower@{get\+Tower}!Tile@{Tile}}
+\subsubsection[{get\+Tower}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Tower} $>$ Tile\+::get\+Tower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_a741c73bfdb1607240e99f54a6c29153f}
+
+
+Get the pointer of the tower in this tile. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer of the tower in this tile. 
+\end{DoxyReturn}
+\hypertarget{class_tile_ab8081a8e4e47aa339c7ed22ce502afbb}{\index{Tile@{Tile}!has\+Enemy@{has\+Enemy}}
+\index{has\+Enemy@{has\+Enemy}!Tile@{Tile}}
+\subsubsection[{has\+Enemy}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\+::has\+Enemy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_ab8081a8e4e47aa339c7ed22ce502afbb}
+\hypertarget{class_tile_acc84537f5757e5ea52aadcd290ba4f2f}{\index{Tile@{Tile}!has\+Tower@{has\+Tower}}
+\index{has\+Tower@{has\+Tower}!Tile@{Tile}}
+\subsubsection[{has\+Tower}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\+::has\+Tower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_acc84537f5757e5ea52aadcd290ba4f2f}
+\hypertarget{class_tile_a9b3edec9eeb02506164d900e8aecb017}{\index{Tile@{Tile}!is\+Polluted@{is\+Polluted}}
+\index{is\+Polluted@{is\+Polluted}!Tile@{Tile}}
+\subsubsection[{is\+Polluted}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\+::is\+Polluted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_a9b3edec9eeb02506164d900e8aecb017}
+\hypertarget{class_tile_a0ecef130e42783b84e95408689546f8d}{\index{Tile@{Tile}!mouse\+Hover@{mouse\+Hover}}
+\index{mouse\+Hover@{mouse\+Hover}!Tile@{Tile}}
+\subsubsection[{mouse\+Hover}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\+::mouse\+Hover (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{w}
+\end{DoxyParamCaption}
+)}}\label{class_tile_a0ecef130e42783b84e95408689546f8d}
+\hypertarget{class_tile_a3192d9456a5ef1ed9e1f6eb447f75cd4}{\index{Tile@{Tile}!open\+Build\+Menu@{open\+Build\+Menu}}
+\index{open\+Build\+Menu@{open\+Build\+Menu}!Tile@{Tile}}
+\subsubsection[{open\+Build\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Build\+Menu} $>$ Tile\+::open\+Build\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_a3192d9456a5ef1ed9e1f6eb447f75cd4}
+\hypertarget{class_tile_abfe0e5e0a4bd3a5b7194ba7b70e7919e}{\index{Tile@{Tile}!open\+Tower\+Menu@{open\+Tower\+Menu}}
+\index{open\+Tower\+Menu@{open\+Tower\+Menu}!Tile@{Tile}}
+\subsubsection[{open\+Tower\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Tower\+Menu} $>$ Tile\+::open\+Tower\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_abfe0e5e0a4bd3a5b7194ba7b70e7919e}
+\hypertarget{class_tile_a398b848f0c6ccfd58245a23e19a7ecc9}{\index{Tile@{Tile}!resolve\+Event@{resolve\+Event}}
+\index{resolve\+Event@{resolve\+Event}!Tile@{Tile}}
+\subsubsection[{resolve\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\+::resolve\+Event (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Event}]{event}
+\end{DoxyParamCaption}
+)}}\label{class_tile_a398b848f0c6ccfd58245a23e19a7ecc9}
+\hypertarget{class_tile_a3976735a9d30faa53e03e72aa08b3a2c}{\index{Tile@{Tile}!set\+Cooldown@{set\+Cooldown}}
+\index{set\+Cooldown@{set\+Cooldown}!Tile@{Tile}}
+\subsubsection[{set\+Cooldown}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\+::set\+Cooldown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_a3976735a9d30faa53e03e72aa08b3a2c}
+
+
+Set the time of cooldown for the tower in this tile. 
+
+Set the time \hypertarget{class_tile_ad49285b0453a229798c64a08a4480de5}{\index{Tile@{Tile}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Tile@{Tile}}
+\subsubsection[{set\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2i}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_tile_ad49285b0453a229798c64a08a4480de5}
+
+
+Set the position of this tile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & is the postion that will be set to the tile. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_tile_a597689cfa33df779594c888ee1d0875b}{\index{Tile@{Tile}!set\+Sprite@{set\+Sprite}}
+\index{set\+Sprite@{set\+Sprite}!Tile@{Tile}}
+\subsubsection[{set\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\+::set\+Sprite (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Sprite}]{my\+Sprite}
+\end{DoxyParamCaption}
+)}}\label{class_tile_a597689cfa33df779594c888ee1d0875b}
+\hypertarget{class_tile_a388c6caf78a0c0063b229c2b10eb4e1c}{\index{Tile@{Tile}!set\+Tower@{set\+Tower}}
+\index{set\+Tower@{set\+Tower}!Tile@{Tile}}
+\subsubsection[{set\+Tower}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\+::set\+Tower (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf Tower} $>$}]{tower}
+\end{DoxyParamCaption}
+)}}\label{class_tile_a388c6caf78a0c0063b229c2b10eb4e1c}
+
+
+Build a tower in this tile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tower} & is the tower built in this tile. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_tile_af11fe597c0bdc2b49d33c4111461ccc4}{\index{Tile@{Tile}!sprite\+Update@{sprite\+Update}}
+\index{sprite\+Update@{sprite\+Update}!Tile@{Tile}}
+\subsubsection[{sprite\+Update}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\+::sprite\+Update (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_tile_af11fe597c0bdc2b49d33c4111461ccc4}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Tower\+Defense/\+Tower\+Defense/\hyperlink{_tile_8h}{Tile.\+h}\item 
+D\+:/\+Tower\+Defense/\+Tower\+Defense/\hyperlink{_tile_8cpp}{Tile.\+cpp}\end{DoxyCompactItemize}

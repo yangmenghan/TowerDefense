@@ -9,11 +9,10 @@ Path::Path(vector<shared_ptr<Tile>> a)
 {
 	path = a;
 };
+
 Path::Path()
 {
-
 };
-
 
 void Path::draw(sf::RenderWindow &w)
 {

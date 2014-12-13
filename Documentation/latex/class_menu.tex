@@ -1,0 +1,253 @@
+\hypertarget{class_menu}{\section{Menu Class Reference}
+\label{class_menu}\index{Menu@{Menu}}
+}
+
+
+{\ttfamily \#include $<$Menu.\+h$>$}
+
+Inheritance diagram for Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.651917cm]{class_menu}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_menu_ad466dd83355124a6ed958430450bfe94}{Menu} ()
+\item 
+\hyperlink{class_menu_af64b0c25ff426ce6b7819b1f24f17bd5}{Menu} (std\+::string my\+Texture\+Adress, sf\+::\+Vector2u my\+Size, sf\+::\+Vector2i my\+Position)
+\item 
+virtual \hyperlink{class_menu_a831387f51358cfb88cd018e1777bc980}{$\sim$\+Menu} ()
+\item 
+void \hyperlink{class_menu_a73160bee6f7a67c04ffe63b58fc19c7c}{set\+Size} (sf\+::\+Vector2u)
+\item 
+void \hyperlink{class_menu_a41687c51ee454954ce7ec116cc1f7459}{set\+Position} (sf\+::\+Vector2i)
+\item 
+void \hyperlink{class_menu_aade766e02b73948ebafb712ca9e53e12}{set\+Address} (std\+::string)
+\item 
+void \hyperlink{class_menu_a7d77cca2bf67824ebfb17b304950f2fc}{set\+Texture} (sf\+::\+Texture)
+\item 
+void \hyperlink{class_menu_a87144c354eae67283f29676a1d5207b6}{set\+Texture} (std\+::string)
+\item 
+void \hyperlink{class_menu_ae4f85d7309f7516a6147a5e8a85d1f7a}{set\+Sprite} (sf\+::\+Sprite)
+\item 
+void \hyperlink{class_menu_a98f348210794d6dbb3a5c5287f330e89}{set\+Sprite} (sf\+::\+Texture)
+\item 
+void \hyperlink{class_menu_afc4c1ec46b7e91299e1a0bbad98ea65e}{set\+Sprite} (std\+::string)
+\item 
+sf\+::\+Vector2u \hyperlink{class_menu_a570493d92f586ea813ecf3c9ea064bb9}{get\+Size} ()
+\item 
+sf\+::\+Vector2i \hyperlink{class_menu_ada5303b1b8997b3d117b8a553764d10f}{get\+Position} ()
+\item 
+sf\+::\+Sprite \hyperlink{class_menu_a2df8bb3db21a96e665e12bcaa0b3d5ef}{get\+Sprite} ()
+\item 
+sf\+::\+Texture \hyperlink{class_menu_a02124c4cb527346ac42b5c48235bea7f}{get\+Texture} ()
+\item 
+std\+::string \hyperlink{class_menu_a8eef8d68a55d02a9c12d6f1a2d832edc}{get\+Address} ()
+\item 
+virtual void \hyperlink{class_menu_a5c486201ec217b10588c145d043e4eb8}{draw} (sf\+::\+Render\+Window \&)
+\item 
+virtual void \hyperlink{class_menu_a4bc958c66bb39a91446b5c12ac6469c6}{close} ()
+\item 
+void \hyperlink{class_menu_a21202f42edbb5f1014ebe9f264613991}{opent} ()
+\item 
+virtual void \hyperlink{class_menu_a91ec4d6d898e740524b1fe3312d8f197}{resolve\+Event} (sf\+::\+Event)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Sprite \hyperlink{class_menu_aa31afe4a4979a2c9ba427640af6e0909}{sprite}
+\item 
+sf\+::\+Texture \hyperlink{class_menu_a9be54103b9d80fc96cdc15d29da244b8}{texture}
+\item 
+std\+::string \hyperlink{class_menu_ae5ee6080fe5aad3dbee4935320e589b6}{texture\+Address}
+\item 
+sf\+::\+Vector2u \hyperlink{class_menu_ae43ea4415376f28f0d1c9b069614fde3}{size}
+\item 
+sf\+::\+Vector2i \hyperlink{class_menu_a5e6b181edbe72a18efff2eaa66cb97c4}{position}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_menu_ad466dd83355124a6ed958430450bfe94}{\index{Menu@{Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!Menu@{Menu}}
+\subsubsection[{Menu}]{\setlength{\rightskip}{0pt plus 5cm}Menu\+::\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_ad466dd83355124a6ed958430450bfe94}
+\hypertarget{class_menu_af64b0c25ff426ce6b7819b1f24f17bd5}{\index{Menu@{Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!Menu@{Menu}}
+\subsubsection[{Menu}]{\setlength{\rightskip}{0pt plus 5cm}Menu\+::\+Menu (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{my\+Texture\+Adress, }
+\item[{sf\+::\+Vector2u}]{my\+Size, }
+\item[{sf\+::\+Vector2i}]{my\+Position}
+\end{DoxyParamCaption}
+)}}\label{class_menu_af64b0c25ff426ce6b7819b1f24f17bd5}
+\hypertarget{class_menu_a831387f51358cfb88cd018e1777bc980}{\index{Menu@{Menu}!````~Menu@{$\sim$\+Menu}}
+\index{````~Menu@{$\sim$\+Menu}!Menu@{Menu}}
+\subsubsection[{$\sim$\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}Menu\+::$\sim$\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_a831387f51358cfb88cd018e1777bc980}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_menu_a4bc958c66bb39a91446b5c12ac6469c6}{\index{Menu@{Menu}!close@{close}}
+\index{close@{close}!Menu@{Menu}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_a4bc958c66bb39a91446b5c12ac6469c6}
+
+
+Reimplemented in \hyperlink{class_tower_menu_afc1c7447eacd85abfa1f36ccdf3cbd7d}{Tower\+Menu}, and \hyperlink{class_build_menu_a58efd17837e0cd60a9bd1852cf6eaadd}{Build\+Menu}.
+
+\hypertarget{class_menu_a5c486201ec217b10588c145d043e4eb8}{\index{Menu@{Menu}!draw@{draw}}
+\index{draw@{draw}!Menu@{Menu}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{w}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_a5c486201ec217b10588c145d043e4eb8}
+
+
+Reimplemented in \hyperlink{class_tower_menu_a0ecd4cdad69ed36c06781035d77569bc}{Tower\+Menu}, \hyperlink{class_game_menu_aabc9ea58600553c8562881d069c67d2c}{Game\+Menu}, \hyperlink{class_build_menu_acbedc91d2b9c5ecf3d429612b95543a5}{Build\+Menu}, \hyperlink{class_start_menu_a34e56fc211d852a717bef5fc4136d13e}{Start\+Menu}, \hyperlink{class_credits_menu_a64fe7f7471ab92c69cbc95cb4ad9dfc8}{Credits\+Menu}, and \hyperlink{class_game_over_menu_a5e67d2adec64c94bd880b608c72c4453}{Game\+Over\+Menu}.
+
+\hypertarget{class_menu_a8eef8d68a55d02a9c12d6f1a2d832edc}{\index{Menu@{Menu}!get\+Address@{get\+Address}}
+\index{get\+Address@{get\+Address}!Menu@{Menu}}
+\subsubsection[{get\+Address}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Menu\+::get\+Address (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_a8eef8d68a55d02a9c12d6f1a2d832edc}
+\hypertarget{class_menu_ada5303b1b8997b3d117b8a553764d10f}{\index{Menu@{Menu}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Menu@{Menu}}
+\subsubsection[{get\+Position}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2i Menu\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_ada5303b1b8997b3d117b8a553764d10f}
+\hypertarget{class_menu_a570493d92f586ea813ecf3c9ea064bb9}{\index{Menu@{Menu}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Menu@{Menu}}
+\subsubsection[{get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2u Menu\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_a570493d92f586ea813ecf3c9ea064bb9}
+\hypertarget{class_menu_a2df8bb3db21a96e665e12bcaa0b3d5ef}{\index{Menu@{Menu}!get\+Sprite@{get\+Sprite}}
+\index{get\+Sprite@{get\+Sprite}!Menu@{Menu}}
+\subsubsection[{get\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Sprite Menu\+::get\+Sprite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_a2df8bb3db21a96e665e12bcaa0b3d5ef}
+\hypertarget{class_menu_a02124c4cb527346ac42b5c48235bea7f}{\index{Menu@{Menu}!get\+Texture@{get\+Texture}}
+\index{get\+Texture@{get\+Texture}!Menu@{Menu}}
+\subsubsection[{get\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Texture Menu\+::get\+Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_a02124c4cb527346ac42b5c48235bea7f}
+\hypertarget{class_menu_a21202f42edbb5f1014ebe9f264613991}{\index{Menu@{Menu}!opent@{opent}}
+\index{opent@{opent}!Menu@{Menu}}
+\subsubsection[{opent}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::opent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_a21202f42edbb5f1014ebe9f264613991}
+\hypertarget{class_menu_a91ec4d6d898e740524b1fe3312d8f197}{\index{Menu@{Menu}!resolve\+Event@{resolve\+Event}}
+\index{resolve\+Event@{resolve\+Event}!Menu@{Menu}}
+\subsubsection[{resolve\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::resolve\+Event (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Event}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_menu_a91ec4d6d898e740524b1fe3312d8f197}
+
+
+Implemented in \hyperlink{class_tower_menu_aacd3732231059c039a663f98fd6ec349}{Tower\+Menu}, \hyperlink{class_game_menu_a9dd958097e685b1904cdc1c8d2a9ffff}{Game\+Menu}, \hyperlink{class_build_menu_a2d044954ea1713a15048630e104c7d2a}{Build\+Menu}, \hyperlink{class_start_menu_a4f6701a9d7a4e08a5212c675ef1c66b2}{Start\+Menu}, \hyperlink{class_credits_menu_a6fa8421ffafa70e6d6e3af1f61b220c7}{Credits\+Menu}, and \hyperlink{class_game_over_menu_a2b73cda98b30f7c20c5607b6ca8a6915}{Game\+Over\+Menu}.
+
+\hypertarget{class_menu_aade766e02b73948ebafb712ca9e53e12}{\index{Menu@{Menu}!set\+Address@{set\+Address}}
+\index{set\+Address@{set\+Address}!Menu@{Menu}}
+\subsubsection[{set\+Address}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::set\+Address (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_aade766e02b73948ebafb712ca9e53e12}
+\hypertarget{class_menu_a41687c51ee454954ce7ec116cc1f7459}{\index{Menu@{Menu}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Menu@{Menu}}
+\subsubsection[{set\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2i}]{my\+Position}
+\end{DoxyParamCaption}
+)}}\label{class_menu_a41687c51ee454954ce7ec116cc1f7459}
+\hypertarget{class_menu_a73160bee6f7a67c04ffe63b58fc19c7c}{\index{Menu@{Menu}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!Menu@{Menu}}
+\subsubsection[{set\+Size}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::set\+Size (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2u}]{my\+Size}
+\end{DoxyParamCaption}
+)}}\label{class_menu_a73160bee6f7a67c04ffe63b58fc19c7c}
+\hypertarget{class_menu_ae4f85d7309f7516a6147a5e8a85d1f7a}{\index{Menu@{Menu}!set\+Sprite@{set\+Sprite}}
+\index{set\+Sprite@{set\+Sprite}!Menu@{Menu}}
+\subsubsection[{set\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::set\+Sprite (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Sprite}]{my\+Sprite}
+\end{DoxyParamCaption}
+)}}\label{class_menu_ae4f85d7309f7516a6147a5e8a85d1f7a}
+\hypertarget{class_menu_a98f348210794d6dbb3a5c5287f330e89}{\index{Menu@{Menu}!set\+Sprite@{set\+Sprite}}
+\index{set\+Sprite@{set\+Sprite}!Menu@{Menu}}
+\subsubsection[{set\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::set\+Sprite (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Texture}]{my\+Texture}
+\end{DoxyParamCaption}
+)}}\label{class_menu_a98f348210794d6dbb3a5c5287f330e89}
+\hypertarget{class_menu_afc4c1ec46b7e91299e1a0bbad98ea65e}{\index{Menu@{Menu}!set\+Sprite@{set\+Sprite}}
+\index{set\+Sprite@{set\+Sprite}!Menu@{Menu}}
+\subsubsection[{set\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::set\+Sprite (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{my\+File\+Name}
+\end{DoxyParamCaption}
+)}}\label{class_menu_afc4c1ec46b7e91299e1a0bbad98ea65e}
+\hypertarget{class_menu_a7d77cca2bf67824ebfb17b304950f2fc}{\index{Menu@{Menu}!set\+Texture@{set\+Texture}}
+\index{set\+Texture@{set\+Texture}!Menu@{Menu}}
+\subsubsection[{set\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::set\+Texture (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Texture}]{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_a7d77cca2bf67824ebfb17b304950f2fc}
+\hypertarget{class_menu_a87144c354eae67283f29676a1d5207b6}{\index{Menu@{Menu}!set\+Texture@{set\+Texture}}
+\index{set\+Texture@{set\+Texture}!Menu@{Menu}}
+\subsubsection[{set\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::set\+Texture (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_a87144c354eae67283f29676a1d5207b6}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_menu_a5e6b181edbe72a18efff2eaa66cb97c4}{\index{Menu@{Menu}!position@{position}}
+\index{position@{position}!Menu@{Menu}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2i Menu\+::position\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_menu_a5e6b181edbe72a18efff2eaa66cb97c4}
+\hypertarget{class_menu_ae43ea4415376f28f0d1c9b069614fde3}{\index{Menu@{Menu}!size@{size}}
+\index{size@{size}!Menu@{Menu}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2u Menu\+::size\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_menu_ae43ea4415376f28f0d1c9b069614fde3}
+\hypertarget{class_menu_aa31afe4a4979a2c9ba427640af6e0909}{\index{Menu@{Menu}!sprite@{sprite}}
+\index{sprite@{sprite}!Menu@{Menu}}
+\subsubsection[{sprite}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Sprite Menu\+::sprite\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_menu_aa31afe4a4979a2c9ba427640af6e0909}
+\hypertarget{class_menu_a9be54103b9d80fc96cdc15d29da244b8}{\index{Menu@{Menu}!texture@{texture}}
+\index{texture@{texture}!Menu@{Menu}}
+\subsubsection[{texture}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Texture Menu\+::texture\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_menu_a9be54103b9d80fc96cdc15d29da244b8}
+\hypertarget{class_menu_ae5ee6080fe5aad3dbee4935320e589b6}{\index{Menu@{Menu}!texture\+Address@{texture\+Address}}
+\index{texture\+Address@{texture\+Address}!Menu@{Menu}}
+\subsubsection[{texture\+Address}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Menu\+::texture\+Address\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_menu_ae5ee6080fe5aad3dbee4935320e589b6}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Tower\+Defense/\+Tower\+Defense/\hyperlink{_menu_8h}{Menu.\+h}\item 
+D\+:/\+Tower\+Defense/\+Tower\+Defense/\hyperlink{_menu_8cpp}{Menu.\+cpp}\end{DoxyCompactItemize}

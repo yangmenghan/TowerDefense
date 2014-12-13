@@ -1,0 +1,195 @@
+\hypertarget{class_field}{\section{Field Class Reference}
+\label{class_field}\index{Field@{Field}}
+}
+
+
+{\ttfamily \#include $<$Field.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_field_a3e804c92273d9159f413f227b535c672}{Field} ()
+\item 
+\hyperlink{class_field_a45d6e6d09b8f8e46de62b40119d62c60}{$\sim$\+Field} ()
+\item 
+int \hyperlink{class_field_a53178ea9734894e60a5151d7e56d94e4}{get\+Width} ()
+\item 
+int \hyperlink{class_field_ac39db829e87a75308ea3e7f650c5b8aa}{get\+Height} ()
+\item 
+int \hyperlink{class_field_a80421e1b0847ecdffad0e30a1c5039cb}{get\+Num\+Tile\+Ver} ()
+\item 
+int \hyperlink{class_field_a4e81aea72d1792db4b7ae317d572f3f8}{get\+Num\+Tile\+Hor} ()
+\item 
+std\+::vector$<$ shared\+\_\+ptr$<$ \hyperlink{class_tile}{Tile} $>$ $>$ \hyperlink{class_field_a02d0f4d7a71d5db233296d0a1f2970b3}{get\+All\+Tiles} ()
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_tile}{Tile} $>$ \hyperlink{class_field_af7c4ae236b67f71dafa5af55e07d5a35}{get\+Tile} (int)
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_tile}{Tile} $>$ \hyperlink{class_field_aa02831bd4750269235141b881b7528c1}{get\+Tile} (sf\+::\+Vector2i position)
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_tile}{Tile} $>$ \hyperlink{class_field_ad745822d39abbe2c5ccbd4bd7cd480aa}{get\+Start\+Tile} ()
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_tile}{Tile} $>$ \hyperlink{class_field_aa38352e415a48f7c7554d1455ca6057b}{get\+End\+Tile} ()
+\item 
+sf\+::\+Sprite \hyperlink{class_field_aed6c614deb72c92b63c2d41d24cb74c2}{get\+Sprite} ()
+\item 
+void \hyperlink{class_field_accd424e7ead0ad4fb1bc20ee14832c90}{set\+Sprite} (sf\+::\+Sprite)
+\item 
+bool \hyperlink{class_field_adc431d5df33f58c06fd204fb46a4cd6c}{mouse\+Hover} (sf\+::\+Render\+Window \&)
+\item 
+bool \hyperlink{class_field_a6d7cb1016f80de47a2a1b00b8aff313f}{check\+Hover} ()
+\item 
+void \hyperlink{class_field_a72898c12bb3645e290a08aff186061da}{resolve\+Event} (sf\+::\+Event)
+\item 
+void \hyperlink{class_field_ad9b2d1b93b7e808863b4cdbc702acb29}{draw} (sf\+::\+Render\+Window \&)
+\item 
+\hyperlink{class_path}{Path} \hyperlink{class_field_acf45bb5e860a2f0d4e482de63b8af916}{compute\+Path} (shared\+\_\+ptr$<$ \hyperlink{class_tile}{Tile} $>$, shared\+\_\+ptr$<$ \hyperlink{class_tile}{Tile} $>$)
+\item 
+bool \hyperlink{class_field_a4906473ee0da96e450a41fafc0fa0e0a}{try\+Cross} (shared\+\_\+ptr$<$ \hyperlink{class_tile}{Tile} $>$, shared\+\_\+ptr$<$ \hyperlink{class_tile}{Tile} $>$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_field_a3e804c92273d9159f413f227b535c672}{\index{Field@{Field}!Field@{Field}}
+\index{Field@{Field}!Field@{Field}}
+\subsubsection[{Field}]{\setlength{\rightskip}{0pt plus 5cm}Field\+::\+Field (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_field_a3e804c92273d9159f413f227b535c672}
+\hypertarget{class_field_a45d6e6d09b8f8e46de62b40119d62c60}{\index{Field@{Field}!````~Field@{$\sim$\+Field}}
+\index{````~Field@{$\sim$\+Field}!Field@{Field}}
+\subsubsection[{$\sim$\+Field}]{\setlength{\rightskip}{0pt plus 5cm}Field\+::$\sim$\+Field (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_field_a45d6e6d09b8f8e46de62b40119d62c60}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_field_a6d7cb1016f80de47a2a1b00b8aff313f}{\index{Field@{Field}!check\+Hover@{check\+Hover}}
+\index{check\+Hover@{check\+Hover}!Field@{Field}}
+\subsubsection[{check\+Hover}]{\setlength{\rightskip}{0pt plus 5cm}bool Field\+::check\+Hover (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_field_a6d7cb1016f80de47a2a1b00b8aff313f}
+\hypertarget{class_field_acf45bb5e860a2f0d4e482de63b8af916}{\index{Field@{Field}!compute\+Path@{compute\+Path}}
+\index{compute\+Path@{compute\+Path}!Field@{Field}}
+\subsubsection[{compute\+Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Path} Field\+::compute\+Path (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf Tile} $>$}]{tile1, }
+\item[{shared\+\_\+ptr$<$ {\bf Tile} $>$}]{tile2}
+\end{DoxyParamCaption}
+)}}\label{class_field_acf45bb5e860a2f0d4e482de63b8af916}
+\hypertarget{class_field_ad9b2d1b93b7e808863b4cdbc702acb29}{\index{Field@{Field}!draw@{draw}}
+\index{draw@{draw}!Field@{Field}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Field\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{w}
+\end{DoxyParamCaption}
+)}}\label{class_field_ad9b2d1b93b7e808863b4cdbc702acb29}
+\hypertarget{class_field_a02d0f4d7a71d5db233296d0a1f2970b3}{\index{Field@{Field}!get\+All\+Tiles@{get\+All\+Tiles}}
+\index{get\+All\+Tiles@{get\+All\+Tiles}!Field@{Field}}
+\subsubsection[{get\+All\+Tiles}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ shared\+\_\+ptr$<$ {\bf Tile} $>$ $>$ Field\+::get\+All\+Tiles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_field_a02d0f4d7a71d5db233296d0a1f2970b3}
+\hypertarget{class_field_aa38352e415a48f7c7554d1455ca6057b}{\index{Field@{Field}!get\+End\+Tile@{get\+End\+Tile}}
+\index{get\+End\+Tile@{get\+End\+Tile}!Field@{Field}}
+\subsubsection[{get\+End\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Tile} $>$ Field\+::get\+End\+Tile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_field_aa38352e415a48f7c7554d1455ca6057b}
+\hypertarget{class_field_ac39db829e87a75308ea3e7f650c5b8aa}{\index{Field@{Field}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!Field@{Field}}
+\subsubsection[{get\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int Field\+::get\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_field_ac39db829e87a75308ea3e7f650c5b8aa}
+\hypertarget{class_field_a4e81aea72d1792db4b7ae317d572f3f8}{\index{Field@{Field}!get\+Num\+Tile\+Hor@{get\+Num\+Tile\+Hor}}
+\index{get\+Num\+Tile\+Hor@{get\+Num\+Tile\+Hor}!Field@{Field}}
+\subsubsection[{get\+Num\+Tile\+Hor}]{\setlength{\rightskip}{0pt plus 5cm}int Field\+::get\+Num\+Tile\+Hor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_field_a4e81aea72d1792db4b7ae317d572f3f8}
+\hypertarget{class_field_a80421e1b0847ecdffad0e30a1c5039cb}{\index{Field@{Field}!get\+Num\+Tile\+Ver@{get\+Num\+Tile\+Ver}}
+\index{get\+Num\+Tile\+Ver@{get\+Num\+Tile\+Ver}!Field@{Field}}
+\subsubsection[{get\+Num\+Tile\+Ver}]{\setlength{\rightskip}{0pt plus 5cm}int Field\+::get\+Num\+Tile\+Ver (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_field_a80421e1b0847ecdffad0e30a1c5039cb}
+\hypertarget{class_field_aed6c614deb72c92b63c2d41d24cb74c2}{\index{Field@{Field}!get\+Sprite@{get\+Sprite}}
+\index{get\+Sprite@{get\+Sprite}!Field@{Field}}
+\subsubsection[{get\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Sprite Field\+::get\+Sprite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_field_aed6c614deb72c92b63c2d41d24cb74c2}
+\hypertarget{class_field_ad745822d39abbe2c5ccbd4bd7cd480aa}{\index{Field@{Field}!get\+Start\+Tile@{get\+Start\+Tile}}
+\index{get\+Start\+Tile@{get\+Start\+Tile}!Field@{Field}}
+\subsubsection[{get\+Start\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Tile} $>$ Field\+::get\+Start\+Tile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_field_ad745822d39abbe2c5ccbd4bd7cd480aa}
+\hypertarget{class_field_af7c4ae236b67f71dafa5af55e07d5a35}{\index{Field@{Field}!get\+Tile@{get\+Tile}}
+\index{get\+Tile@{get\+Tile}!Field@{Field}}
+\subsubsection[{get\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Tile} $>$ Field\+::get\+Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{class_field_af7c4ae236b67f71dafa5af55e07d5a35}
+\hypertarget{class_field_aa02831bd4750269235141b881b7528c1}{\index{Field@{Field}!get\+Tile@{get\+Tile}}
+\index{get\+Tile@{get\+Tile}!Field@{Field}}
+\subsubsection[{get\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Tile} $>$ Field\+::get\+Tile (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2i}]{position}
+\end{DoxyParamCaption}
+)}}\label{class_field_aa02831bd4750269235141b881b7528c1}
+\hypertarget{class_field_a53178ea9734894e60a5151d7e56d94e4}{\index{Field@{Field}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!Field@{Field}}
+\subsubsection[{get\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Field\+::get\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_field_a53178ea9734894e60a5151d7e56d94e4}
+\hypertarget{class_field_adc431d5df33f58c06fd204fb46a4cd6c}{\index{Field@{Field}!mouse\+Hover@{mouse\+Hover}}
+\index{mouse\+Hover@{mouse\+Hover}!Field@{Field}}
+\subsubsection[{mouse\+Hover}]{\setlength{\rightskip}{0pt plus 5cm}bool Field\+::mouse\+Hover (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{w}
+\end{DoxyParamCaption}
+)}}\label{class_field_adc431d5df33f58c06fd204fb46a4cd6c}
+\hypertarget{class_field_a72898c12bb3645e290a08aff186061da}{\index{Field@{Field}!resolve\+Event@{resolve\+Event}}
+\index{resolve\+Event@{resolve\+Event}!Field@{Field}}
+\subsubsection[{resolve\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void Field\+::resolve\+Event (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Event}]{event}
+\end{DoxyParamCaption}
+)}}\label{class_field_a72898c12bb3645e290a08aff186061da}
+\hypertarget{class_field_accd424e7ead0ad4fb1bc20ee14832c90}{\index{Field@{Field}!set\+Sprite@{set\+Sprite}}
+\index{set\+Sprite@{set\+Sprite}!Field@{Field}}
+\subsubsection[{set\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void Field\+::set\+Sprite (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Sprite}]{my\+Sprite}
+\end{DoxyParamCaption}
+)}}\label{class_field_accd424e7ead0ad4fb1bc20ee14832c90}
+\hypertarget{class_field_a4906473ee0da96e450a41fafc0fa0e0a}{\index{Field@{Field}!try\+Cross@{try\+Cross}}
+\index{try\+Cross@{try\+Cross}!Field@{Field}}
+\subsubsection[{try\+Cross}]{\setlength{\rightskip}{0pt plus 5cm}bool Field\+::try\+Cross (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf Tile} $>$}]{\+\_\+start\+Tile, }
+\item[{shared\+\_\+ptr$<$ {\bf Tile} $>$}]{\+\_\+end\+Tile}
+\end{DoxyParamCaption}
+)}}\label{class_field_a4906473ee0da96e450a41fafc0fa0e0a}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Tower\+Defense/\+Tower\+Defense/\hyperlink{_field_8h}{Field.\+h}\item 
+D\+:/\+Tower\+Defense/\+Tower\+Defense/\hyperlink{_field_8cpp}{Field.\+cpp}\end{DoxyCompactItemize}

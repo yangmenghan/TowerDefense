@@ -12,8 +12,6 @@ public:
 	BombEnemy(int hp, float defence, int bounty, int scoreValue, int trigger, sf::Sprite sprite, float speed);
 	~BombEnemy(){};
 
-	string test(){ return ""; };
-
 	int getTrigger();
 	int getTimer();
 

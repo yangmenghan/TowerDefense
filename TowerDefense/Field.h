@@ -52,6 +52,20 @@ public:
 	//bool mouseClick(sf::Event);
 	void resolveEvent(sf::Event);
 	void draw(sf::RenderWindow&);			//Draw
-	Path computePath(shared_ptr<Tile>, shared_ptr<Tile>);			//Compute path of enemeny
-	bool tryCross(shared_ptr<Tile>, shared_ptr<Tile>);
+	
+	//! A function with 2 arguments and returns a path which is a vector of tiles
+	/*!
+	\param tile1 is the start tile of the path
+	\param tile2 is the end tile of the path
+	\return The path computed
+	*/
+	Path computePath(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2);	
+
+	//! A function with 2 arguments and returns a boolean which represent if there existe a path
+	/*!
+	\param tile1 is the start tile of the path
+	\param tile2 is the end tile of the path
+	\return If there existe a path
+	*/
+	bool tryCross(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2);
 };

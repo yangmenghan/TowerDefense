@@ -1,0 +1,181 @@
+\hypertarget{class_entity}{\section{Entity Class Reference}
+\label{class_entity}\index{Entity@{Entity}}
+}
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+Inheritance diagram for Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{class_entity}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_entity_a980f368aa07ce358583982821533a54a}{Entity} ()
+\item 
+virtual \hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{$\sim$\+Entity} ()
+\item 
+sf\+::\+Vector2i \hyperlink{class_entity_a1bc281383bd777ba96dd0c7c989ba1e7}{get\+Position} ()
+\item 
+sf\+::\+Vector2i \hyperlink{class_entity_aad4cbcdad1ba43221eff4e5474dfdd58}{get\+Size} ()
+\item 
+float \hyperlink{class_entity_a1ab1df6a898303e678a11d727016dd09}{get\+Speed} ()
+\item 
+sf\+::\+Sprite \hyperlink{class_entity_aa5dd2cfe8cd0bd31e908752bf7c4b510}{get\+Sprite} ()
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_tile}{Tile} $>$ \hyperlink{class_entity_a4c0e3e14381db594a39b0b1fa69b9bc7}{get\+Tile} ()
+\item 
+void \hyperlink{class_entity_a999e10122f45fb582c2d4976f12e4c3e}{set\+Position} (sf\+::\+Vector2i m\+Position)
+\item 
+void \hyperlink{class_entity_a5d01a1d6f13fa685d75ac657d2e72b6b}{set\+Size} (sf\+::\+Vector2i m\+Size)
+\item 
+void \hyperlink{class_entity_a752b7fb05557c905dcdce931500e700e}{set\+Speed} (float m\+Speed)
+\item 
+void \hyperlink{class_entity_acffd8697cae92e62b0962c78e2d45d06}{set\+Sprite} (sf\+::\+Sprite m\+Sprite)
+\item 
+virtual void \hyperlink{class_entity_a0eca969d39e7b7bc728236f85e02bbb6}{draw} (sf\+::\+Render\+Window \&)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vector2i \hyperlink{class_entity_aa58364f83a24774ad8d29e2f5e48e06d}{position}
+\item 
+sf\+::\+Vector2i \hyperlink{class_entity_ae32cdf24e4f89bee02c7132c4d6e9c18}{size}
+\item 
+float \hyperlink{class_entity_a1de3d8d9ab8088f61e6726069b26fa60}{speed}
+\item 
+sf\+::\+Sprite \hyperlink{class_entity_a48ef4ab143b8d0211877c9f6be42e824}{sprite}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_tile}{Tile} $>$ \hyperlink{class_entity_a2774f1e938416fab37040a33ec573495}{tile}
+\item 
+int \hyperlink{class_entity_abccceab981ceb2c361408358a6ff0585}{timer}
+\item 
+sf\+::\+Texture \hyperlink{class_entity_ad64dd6d282432a68475f30f7c7bbdc88}{texture}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_entity_a980f368aa07ce358583982821533a54a}{\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\subsubsection[{Entity}]{\setlength{\rightskip}{0pt plus 5cm}Entity\+::\+Entity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a980f368aa07ce358583982821533a54a}
+\hypertarget{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{\index{Entity@{Entity}!````~Entity@{$\sim$\+Entity}}
+\index{````~Entity@{$\sim$\+Entity}!Entity@{Entity}}
+\subsubsection[{$\sim$\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}Entity\+::$\sim$\+Entity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_entity_a0eca969d39e7b7bc728236f85e02bbb6}{\index{Entity@{Entity}!draw@{draw}}
+\index{draw@{draw}!Entity@{Entity}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{w}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_entity_a0eca969d39e7b7bc728236f85e02bbb6}
+
+
+Reimplemented in \hyperlink{class_enemy_ab6302a04e63f97255eb44fc8ce35d012}{Enemy}.
+
+\hypertarget{class_entity_a1bc281383bd777ba96dd0c7c989ba1e7}{\index{Entity@{Entity}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Entity@{Entity}}
+\subsubsection[{get\+Position}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2i Entity\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a1bc281383bd777ba96dd0c7c989ba1e7}
+\hypertarget{class_entity_aad4cbcdad1ba43221eff4e5474dfdd58}{\index{Entity@{Entity}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Entity@{Entity}}
+\subsubsection[{get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2i Entity\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_entity_aad4cbcdad1ba43221eff4e5474dfdd58}
+\hypertarget{class_entity_a1ab1df6a898303e678a11d727016dd09}{\index{Entity@{Entity}!get\+Speed@{get\+Speed}}
+\index{get\+Speed@{get\+Speed}!Entity@{Entity}}
+\subsubsection[{get\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Entity\+::get\+Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a1ab1df6a898303e678a11d727016dd09}
+\hypertarget{class_entity_aa5dd2cfe8cd0bd31e908752bf7c4b510}{\index{Entity@{Entity}!get\+Sprite@{get\+Sprite}}
+\index{get\+Sprite@{get\+Sprite}!Entity@{Entity}}
+\subsubsection[{get\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Sprite Entity\+::get\+Sprite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_entity_aa5dd2cfe8cd0bd31e908752bf7c4b510}
+\hypertarget{class_entity_a4c0e3e14381db594a39b0b1fa69b9bc7}{\index{Entity@{Entity}!get\+Tile@{get\+Tile}}
+\index{get\+Tile@{get\+Tile}!Entity@{Entity}}
+\subsubsection[{get\+Tile}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Tile} $>$ Entity\+::get\+Tile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a4c0e3e14381db594a39b0b1fa69b9bc7}
+\hypertarget{class_entity_a999e10122f45fb582c2d4976f12e4c3e}{\index{Entity@{Entity}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Entity@{Entity}}
+\subsubsection[{set\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2i}]{m\+Position}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a999e10122f45fb582c2d4976f12e4c3e}
+\hypertarget{class_entity_a5d01a1d6f13fa685d75ac657d2e72b6b}{\index{Entity@{Entity}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!Entity@{Entity}}
+\subsubsection[{set\+Size}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\+::set\+Size (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2i}]{m\+Size}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a5d01a1d6f13fa685d75ac657d2e72b6b}
+\hypertarget{class_entity_a752b7fb05557c905dcdce931500e700e}{\index{Entity@{Entity}!set\+Speed@{set\+Speed}}
+\index{set\+Speed@{set\+Speed}!Entity@{Entity}}
+\subsubsection[{set\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\+::set\+Speed (
+\begin{DoxyParamCaption}
+\item[{float}]{m\+Speed}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a752b7fb05557c905dcdce931500e700e}
+\hypertarget{class_entity_acffd8697cae92e62b0962c78e2d45d06}{\index{Entity@{Entity}!set\+Sprite@{set\+Sprite}}
+\index{set\+Sprite@{set\+Sprite}!Entity@{Entity}}
+\subsubsection[{set\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\+::set\+Sprite (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Sprite}]{m\+Sprite}
+\end{DoxyParamCaption}
+)}}\label{class_entity_acffd8697cae92e62b0962c78e2d45d06}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_entity_aa58364f83a24774ad8d29e2f5e48e06d}{\index{Entity@{Entity}!position@{position}}
+\index{position@{position}!Entity@{Entity}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2i Entity\+::position\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_aa58364f83a24774ad8d29e2f5e48e06d}
+\hypertarget{class_entity_ae32cdf24e4f89bee02c7132c4d6e9c18}{\index{Entity@{Entity}!size@{size}}
+\index{size@{size}!Entity@{Entity}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2i Entity\+::size\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_ae32cdf24e4f89bee02c7132c4d6e9c18}
+\hypertarget{class_entity_a1de3d8d9ab8088f61e6726069b26fa60}{\index{Entity@{Entity}!speed@{speed}}
+\index{speed@{speed}!Entity@{Entity}}
+\subsubsection[{speed}]{\setlength{\rightskip}{0pt plus 5cm}float Entity\+::speed\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_a1de3d8d9ab8088f61e6726069b26fa60}
+\hypertarget{class_entity_a48ef4ab143b8d0211877c9f6be42e824}{\index{Entity@{Entity}!sprite@{sprite}}
+\index{sprite@{sprite}!Entity@{Entity}}
+\subsubsection[{sprite}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Sprite Entity\+::sprite\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_a48ef4ab143b8d0211877c9f6be42e824}
+\hypertarget{class_entity_ad64dd6d282432a68475f30f7c7bbdc88}{\index{Entity@{Entity}!texture@{texture}}
+\index{texture@{texture}!Entity@{Entity}}
+\subsubsection[{texture}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Texture Entity\+::texture\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_ad64dd6d282432a68475f30f7c7bbdc88}
+\hypertarget{class_entity_a2774f1e938416fab37040a33ec573495}{\index{Entity@{Entity}!tile@{tile}}
+\index{tile@{tile}!Entity@{Entity}}
+\subsubsection[{tile}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<${\bf Tile}$>$ Entity\+::tile\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_a2774f1e938416fab37040a33ec573495}
+\hypertarget{class_entity_abccceab981ceb2c361408358a6ff0585}{\index{Entity@{Entity}!timer@{timer}}
+\index{timer@{timer}!Entity@{Entity}}
+\subsubsection[{timer}]{\setlength{\rightskip}{0pt plus 5cm}int Entity\+::timer\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_abccceab981ceb2c361408358a6ff0585}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Tower\+Defense/\+Tower\+Defense/\hyperlink{_entity_8h}{Entity.\+h}\item 
+D\+:/\+Tower\+Defense/\+Tower\+Defense/\hyperlink{_entity_8cpp}{Entity.\+cpp}\end{DoxyCompactItemize}
