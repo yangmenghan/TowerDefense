@@ -210,7 +210,6 @@ void GameMenu::resolveEvent(sf::Event event)
 		giveUpButton.resolveEvent(event);
 		if (giveUpButton.checkClick())
 		{
-			//levelManager->getPlayer()->manageHP(-10);
 			levelManager->gameOver();
 		}
 	}
