@@ -90,7 +90,7 @@ void BuildMenu::resolveEvent(sf::Event event)
 		{
 			if (LevelManager::getLevelManager()->getPlayer()->getMoney() >= SUN_TOWER_PRICE)
 			{
-				buyBasicTw();
+				buySunTw();
 			}
 			close();
 		}
@@ -102,7 +102,7 @@ void BuildMenu::resolveEvent(sf::Event event)
 		{
 			if (LevelManager::getLevelManager()->getPlayer()->getMoney() >= SLOW_TOWER_PRICE)
 			{
-				buyBasicTw();
+				buySlowTw();
 			}
 			close();
 		}
@@ -114,7 +114,7 @@ void BuildMenu::resolveEvent(sf::Event event)
 		{
 			if (LevelManager::getLevelManager()->getPlayer()->getMoney() >= MONEY_TOWER_PRICE)
 			{
-				buyBasicTw();
+				buyMoneyTw();
 			}
 			close();
 		}
