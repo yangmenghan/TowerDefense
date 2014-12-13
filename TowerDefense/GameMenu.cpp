@@ -54,6 +54,8 @@ GameMenu::GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector
 	{
 		muteButton.spriteUpdate(1);
 	}
+
+	levelManager->startGame();
 }
 
 GameMenu::~GameMenu(){}

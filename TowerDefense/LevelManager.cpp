@@ -31,7 +31,6 @@ LevelManager::LevelManager()
 {
 	waveCooldown = WAVE_COOLDOWN;
 	player = make_shared<Player>();
-	startGame();
 }
 
 LevelManager::~LevelManager(){
@@ -225,5 +224,5 @@ void LevelManager::setSpeed(int speed){
 }
 
 int LevelManager::getCurrentWaveNumber(){
-	return (WAVE_TOTAL - waves.size());
+	return (WAVE_TOTAL - waves.size() + 1);
 }
