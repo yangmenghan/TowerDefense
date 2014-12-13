@@ -241,7 +241,7 @@ bool Tile::hasEnemy(){
 	for (int i = 0; i < enemies.size(); i++)
 	{
 		shared_ptr<Enemy> enemy = enemies[i];
-		if (position == (*(*enemy).getTile()).getPosition())
+		if ( position == (*(*enemy).getTile()).getPosition())
 			return true;
 	}
 	return false;
