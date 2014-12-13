@@ -197,7 +197,6 @@ void LevelManager::removeTower(int index){
 
 vector<shared_ptr<Enemy>> LevelManager::getEnemies(){
 	return enemies;
-
 }
 
 vector<shared_ptr<Tower>> LevelManager::getTowers(){

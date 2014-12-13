@@ -36,7 +36,6 @@ void MenuManager::popMenu()
 	if (!menuStack.empty())
 	{
 		menuStack.pop_back();
-		menuStack.shrink_to_fit();
 	}
 }
 
