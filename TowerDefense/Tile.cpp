@@ -182,9 +182,7 @@ void Tile::resolveEvent(sf::Event event)
 			{
 				currentSprite = 1;
 				spriteUpdate(currentSprite);
-			}
-			
-			
+			}			
 		}
 		if (event.type == sf::Event::MouseButtonReleased)
 		{

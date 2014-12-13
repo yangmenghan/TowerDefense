@@ -36,7 +36,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div id="nav-path" class="navpath">
@@ -49,33 +48,28 @@
 <div class="title">NormalTower.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_normal_tower_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_tower_8h.html">Tower.h</a>&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_normal_attack_8h.html">NormalAttack.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Tower.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;NormalAttack.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_normal_tower.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_normal_tower.html">NormalTower</a> :</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_tower.html">Tower</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_normal_tower.html#a99db5d3dbf58cd6ba3619d4e4601630c">NormalTower</a>(shared_ptr&lt;Tile&gt; mTile);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_normal_tower.html#a99db5d3dbf58cd6ba3619d4e4601630c">NormalTower</a>(<span class="keywordtype">float</span> mDamage, <span class="keywordtype">int</span> mPrice, <span class="keywordtype">int</span> mLevel, <span class="keywordtype">float</span> mRange, <span class="keywordtype">float</span> mSpeed, sf::Sprite mSprite);</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_normal_tower.html#a26761e67765db3cdb854c695d17b7bc5">   11</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_normal_tower.html#a26761e67765db3cdb854c695d17b7bc5">~NormalTower</a>(){};</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_normal_tower.html">NormalTower</a>(shared_ptr&lt;Tile&gt; mTile);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_normal_tower.html">NormalTower</a>(<span class="keywordtype">float</span> mDamage, <span class="keywordtype">int</span> mPrice, <span class="keywordtype">int</span> mLevel, <span class="keywordtype">float</span> mRange, <span class="keywordtype">float</span> mSpeed, sf::Sprite mSprite);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_normal_tower.html">NormalTower</a>(){};</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_normal_tower.html#a1e3b0a2216d943650b060bac297511b6">doAttack</a>(sf::RenderWindow&amp; w)<span class="keyword">override</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> doAttack(sf::RenderWindow&amp; w)<span class="keyword">override</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="ttc" id="_tower_8h_html"><div class="ttname"><a href="_tower_8h.html">Tower.h</a></div></div>
-<div class="ttc" id="class_normal_tower_html_a99db5d3dbf58cd6ba3619d4e4601630c"><div class="ttname"><a href="class_normal_tower.html#a99db5d3dbf58cd6ba3619d4e4601630c">NormalTower::NormalTower</a></div><div class="ttdeci">NormalTower(shared_ptr&lt; Tile &gt; mTile)</div><div class="ttdef"><b>Definition:</b> NormalTower.cpp:4</div></div>
-<div class="ttc" id="_normal_attack_8h_html"><div class="ttname"><a href="_normal_attack_8h.html">NormalAttack.h</a></div></div>
 <div class="ttc" id="class_normal_tower_html"><div class="ttname"><a href="class_normal_tower.html">NormalTower</a></div><div class="ttdef"><b>Definition:</b> NormalTower.h:5</div></div>
-<div class="ttc" id="class_normal_tower_html_a26761e67765db3cdb854c695d17b7bc5"><div class="ttname"><a href="class_normal_tower.html#a26761e67765db3cdb854c695d17b7bc5">NormalTower::~NormalTower</a></div><div class="ttdeci">virtual ~NormalTower()</div><div class="ttdef"><b>Definition:</b> NormalTower.h:11</div></div>
-<div class="ttc" id="class_normal_tower_html_a1e3b0a2216d943650b060bac297511b6"><div class="ttname"><a href="class_normal_tower.html#a1e3b0a2216d943650b060bac297511b6">NormalTower::doAttack</a></div><div class="ttdeci">void doAttack(sf::RenderWindow &amp;w) override</div><div class="ttdef"><b>Definition:</b> NormalTower.cpp:34</div></div>
 <div class="ttc" id="class_tower_html"><div class="ttname"><a href="class_tower.html">Tower</a></div><div class="ttdef"><b>Definition:</b> Tower.h:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 13 2014 19:35:32 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 14 2014 00:11:39 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

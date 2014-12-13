@@ -117,9 +117,6 @@
     <ClInclude Include="Wave.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Tile.h">
-      <Filter>Header</Filter>
-    </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Header</Filter>
     </ClInclude>
@@ -202,6 +199,9 @@
       <Filter>Header\Tower</Filter>
     </ClInclude>
     <ClInclude Include="TowerMenu.h">
+      <Filter>Header\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
       <Filter>Header\Interface</Filter>
     </ClInclude>
   </ItemGroup>

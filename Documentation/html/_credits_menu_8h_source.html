@@ -36,7 +36,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div id="nav-path" class="navpath">
@@ -49,52 +48,38 @@
 <div class="title">CreditsMenu.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_credits_menu_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;SFML\Graphics.hpp&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_menu_8h.html">Menu.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_button_8h.html">Button.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_config_8h.html">Config.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Menu.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Button.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Config.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_credits_menu.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_credits_menu.html">CreditsMenu</a> : <span class="keyword">public</span> <a class="code" href="class_menu.html">Menu</a></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_button.html">Button</a> backButton = <a class="code" href="class_button.html">Button</a>(<a class="code" href="_config_8cpp.html#a56be9d3bb20162697abbb892803393fa">BACK_BUTTON_TEXTURE</a>, <a class="code" href="_config_8cpp.html#a6d17e915dd53acc5d44a9478a54cc50a">BACK_BUTTON_SIZE</a>, <a class="code" href="_config_8cpp.html#a21853d89bf8b839810045b3eb12e5747">BACK_BUTTON_POSITION</a>, 3);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_button.html">Button</a> backButton = <a class="code" href="class_button.html">Button</a>(BACK_BUTTON_TEXTURE, BACK_BUTTON_SIZE, BACK_BUTTON_POSITION, 3);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_credits_menu.html#a5faefd77a6bf66b98de838e28f1beff1">CreditsMenu</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_credits_menu.html#a5faefd77a6bf66b98de838e28f1beff1">CreditsMenu</a>(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_credits_menu.html#afab6fd75a71b5faa26508907c28ef3b4">~CreditsMenu</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_credits_menu.html">CreditsMenu</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_credits_menu.html">CreditsMenu</a>(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    ~<a class="code" href="class_credits_menu.html">CreditsMenu</a>();</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_credits_menu.html#a7ce3ffb34ef6b1d74a6975506c3f8a92">getCreditsAddress</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    sf::Sprite <a class="code" href="class_credits_menu.html#a285f9f79c86cc255743f70ba7f23e22b">getSprite</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_credits_menu.html#ad0d86e63b66e1a68bd6600e59040ff18">setSprite</a>(sf::Sprite);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_credits_menu.html#a64fe7f7471ab92c69cbc95cb4ad9dfc8">draw</a>(sf::RenderWindow&amp; w);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_credits_menu.html#afe78658efba17b95a8a7d87d4a90c4d3">closeMenu</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_credits_menu.html#a6fa8421ffafa70e6d6e3af1f61b220c7">resolveEvent</a>(sf::Event event);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">string</span> getCreditsAddress();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    sf::Sprite getSprite();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> setSprite(sf::Sprite);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> draw(sf::RenderWindow&amp; w);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> closeMenu();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> resolveEvent(sf::Event event);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="ttc" id="class_credits_menu_html_afab6fd75a71b5faa26508907c28ef3b4"><div class="ttname"><a href="class_credits_menu.html#afab6fd75a71b5faa26508907c28ef3b4">CreditsMenu::~CreditsMenu</a></div><div class="ttdeci">~CreditsMenu()</div><div class="ttdef"><b>Definition:</b> CreditsMenu.cpp:9</div></div>
 <div class="ttc" id="class_menu_html"><div class="ttname"><a href="class_menu.html">Menu</a></div><div class="ttdef"><b>Definition:</b> Menu.h:5</div></div>
-<div class="ttc" id="class_credits_menu_html_a5faefd77a6bf66b98de838e28f1beff1"><div class="ttname"><a href="class_credits_menu.html#a5faefd77a6bf66b98de838e28f1beff1">CreditsMenu::CreditsMenu</a></div><div class="ttdeci">CreditsMenu()</div><div class="ttdef"><b>Definition:</b> CreditsMenu.cpp:5</div></div>
-<div class="ttc" id="_button_8h_html"><div class="ttname"><a href="_button_8h.html">Button.h</a></div></div>
-<div class="ttc" id="_menu_8h_html"><div class="ttname"><a href="_menu_8h.html">Menu.h</a></div></div>
-<div class="ttc" id="_config_8cpp_html_a6d17e915dd53acc5d44a9478a54cc50a"><div class="ttname"><a href="_config_8cpp.html#a6d17e915dd53acc5d44a9478a54cc50a">BACK_BUTTON_SIZE</a></div><div class="ttdeci">const sf::Vector2i BACK_BUTTON_SIZE</div></div>
-<div class="ttc" id="class_credits_menu_html_afe78658efba17b95a8a7d87d4a90c4d3"><div class="ttname"><a href="class_credits_menu.html#afe78658efba17b95a8a7d87d4a90c4d3">CreditsMenu::closeMenu</a></div><div class="ttdeci">void closeMenu()</div><div class="ttdef"><b>Definition:</b> CreditsMenu.cpp:26</div></div>
-<div class="ttc" id="class_credits_menu_html_a285f9f79c86cc255743f70ba7f23e22b"><div class="ttname"><a href="class_credits_menu.html#a285f9f79c86cc255743f70ba7f23e22b">CreditsMenu::getSprite</a></div><div class="ttdeci">sf::Sprite getSprite()</div></div>
-<div class="ttc" id="class_credits_menu_html_a64fe7f7471ab92c69cbc95cb4ad9dfc8"><div class="ttname"><a href="class_credits_menu.html#a64fe7f7471ab92c69cbc95cb4ad9dfc8">CreditsMenu::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;w)</div><div class="ttdef"><b>Definition:</b> CreditsMenu.cpp:18</div></div>
-<div class="ttc" id="_config_8cpp_html_a56be9d3bb20162697abbb892803393fa"><div class="ttname"><a href="_config_8cpp.html#a56be9d3bb20162697abbb892803393fa">BACK_BUTTON_TEXTURE</a></div><div class="ttdeci">const string BACK_BUTTON_TEXTURE</div></div>
 <div class="ttc" id="class_credits_menu_html"><div class="ttname"><a href="class_credits_menu.html">CreditsMenu</a></div><div class="ttdef"><b>Definition:</b> CreditsMenu.h:9</div></div>
-<div class="ttc" id="_config_8cpp_html_a21853d89bf8b839810045b3eb12e5747"><div class="ttname"><a href="_config_8cpp.html#a21853d89bf8b839810045b3eb12e5747">BACK_BUTTON_POSITION</a></div><div class="ttdeci">const sf::Vector2i BACK_BUTTON_POSITION</div></div>
-<div class="ttc" id="_config_8h_html"><div class="ttname"><a href="_config_8h.html">Config.h</a></div></div>
-<div class="ttc" id="class_credits_menu_html_ad0d86e63b66e1a68bd6600e59040ff18"><div class="ttname"><a href="class_credits_menu.html#ad0d86e63b66e1a68bd6600e59040ff18">CreditsMenu::setSprite</a></div><div class="ttdeci">void setSprite(sf::Sprite)</div></div>
 <div class="ttc" id="class_button_html"><div class="ttname"><a href="class_button.html">Button</a></div><div class="ttdef"><b>Definition:</b> Button.h:6</div></div>
-<div class="ttc" id="class_credits_menu_html_a6fa8421ffafa70e6d6e3af1f61b220c7"><div class="ttname"><a href="class_credits_menu.html#a6fa8421ffafa70e6d6e3af1f61b220c7">CreditsMenu::resolveEvent</a></div><div class="ttdeci">void resolveEvent(sf::Event event)</div><div class="ttdef"><b>Definition:</b> CreditsMenu.cpp:33</div></div>
-<div class="ttc" id="class_credits_menu_html_a7ce3ffb34ef6b1d74a6975506c3f8a92"><div class="ttname"><a href="class_credits_menu.html#a7ce3ffb34ef6b1d74a6975506c3f8a92">CreditsMenu::getCreditsAddress</a></div><div class="ttdeci">string getCreditsAddress()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 13 2014 19:35:32 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 14 2014 00:11:38 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

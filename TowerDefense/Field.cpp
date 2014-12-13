@@ -20,27 +20,6 @@ Field::Field()
 
 Field::~Field(){}
 
-//Getters
-int Field::getWidth()
-{
-	return width;
-}
-
-int Field::getHeight()
-{
-	return height;
-}
-
-int Field::getNumTileHor()
-{
-	return numTileHor;
-}
-
-int Field::getNumTileVer()
-{
-	return numTileVer;
-}
-
 shared_ptr<Tile> Field::getTile(int n)
 {
 	return tilesMap[n];
@@ -59,11 +38,6 @@ shared_ptr<Tile> Field::getStartTile()
 shared_ptr<Tile> Field::getEndTile()
 {
 	return this->getTile(NUM_END_TILE);
-}
-
-std::vector<shared_ptr<Tile>> Field::getAllTiles()
-{
-	return tilesMap;
 }
 
 sf::Sprite Field::getSprite()

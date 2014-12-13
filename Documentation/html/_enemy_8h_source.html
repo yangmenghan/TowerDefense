@@ -36,7 +36,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div id="nav-path" class="navpath">
@@ -49,87 +48,56 @@
 <div class="title">Enemy.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_enemy_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_entity_8h.html">Entity.h</a>&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_path_8h.html">Path.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Entity.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Path.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SFML\Graphics.hpp&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_enemy.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_enemy.html">Enemy</a> : <span class="keyword">public</span> <a class="code" href="class_entity.html">Entity</a>{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span> :</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_enemy.html#a94f30d348b6d2840fd71675472ba38dd">Enemy</a>();</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_enemy.html#a94f30d348b6d2840fd71675472ba38dd">Enemy</a>(<span class="keywordtype">int</span> mHP, <span class="keywordtype">float</span> mDefence, <span class="keywordtype">int</span> mBounty, <span class="keywordtype">int</span> mScoreValue, sf::Sprite mSprite, <span class="keywordtype">float</span> mSpeed);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_enemy.html#ac0eec4755e28c02688065f9657150ac3">~Enemy</a>();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_enemy.html">Enemy</a>();</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_enemy.html">Enemy</a>(<span class="keywordtype">int</span> mHP, <span class="keywordtype">float</span> mDefence, <span class="keywordtype">int</span> mBounty, <span class="keywordtype">int</span> mScoreValue, sf::Sprite mSprite, <span class="keywordtype">float</span> mSpeed);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_enemy.html">Enemy</a>();</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_enemy.html#a8e0cfa58b8d27e254a0b3c6965962280">move</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_enemy.html#a0e46f5b36e6b038bfaef05979bb76325">succed</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_enemy.html#a04c451624958712b36546037fc25c601">die</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_enemy.html#ad8c2cd506c90a57adad1f94d9e4c25d2">dieWithoutBonus</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_enemy.html#aa5ddb1dc9aeba11ef0e502527bf6f412">slow</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_enemy.html#a98a78c7c16c3eaca41d60fd54b9ff92a">unSlow</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_enemy.html#a39d2efd8625d3d8449cc45631d8b4f9b">updatePath</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> move();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> succed();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> die();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> dieWithoutBonus();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> slow(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> unSlow();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> updatePath();</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_enemy.html#ab1c5ecbd2567b509a5d4492764a28f5d">getHP</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_enemy.html#aecdda0124a341bace43f683a766ec6f7">getBounty</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_enemy.html#ac04d0b26f6209586b87c8ecbaa0e0257">getScoreValue</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_enemy.html#ae01d1b6fedb8f342b7f216ca463d7349">getDefence</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_enemy.html#af4d6253bc6c28ad1d1ff6deb4303347b">getSlowTime</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_enemy.html#a53020fcba7330809918946e150f8a591">getDistanceToTarget</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> getHP();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> getBounty();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> getScoreValue();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">float</span> getDefence();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> getSlowTime();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">float</span> getDistanceToTarget();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="class_enemy.html#a37b2bae4f5a9e8d673aeb28880ded0bc">test</a>() = 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> setTile(shared_ptr&lt;Tile&gt;);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_enemy.html#a0f1e1c58a06fd254c537bf8733e69b63">setTile</a>(shared_ptr&lt;Tile&gt;);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> takeDamage(<span class="keywordtype">int</span>);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_enemy.html#a6612d7486e4599d8fbc085c43168962f">takeDamage</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> draw(sf::RenderWindow&amp;);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_enemy.html#ab6302a04e63f97255eb44fc8ce35d012">draw</a>(sf::RenderWindow&amp;);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_enemy.html#a278d70100af07c946743db1b7a1a9f59">   36</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_enemy.html#a278d70100af07c946743db1b7a1a9f59">hp</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_enemy.html#ab48bc28310a5ca396fbfaf6edc74996d">   37</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_enemy.html#ab48bc28310a5ca396fbfaf6edc74996d">maxHp</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_enemy.html#a9bb5d74024760e604c41ba79cc7da892">   38</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_enemy.html#a9bb5d74024760e604c41ba79cc7da892">defence</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_enemy.html#a1d9a86d110b87f3cc55b40d1bdb59eb5">   39</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_enemy.html#a1d9a86d110b87f3cc55b40d1bdb59eb5">bounty</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_enemy.html#abc49d5a2cef917c8ece8a16547f8efee">   40</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_enemy.html#abc49d5a2cef917c8ece8a16547f8efee">scoreValue</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_enemy.html#ad59184710c7f9df80138434b8487a9f5">   41</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_enemy.html#ad59184710c7f9df80138434b8487a9f5">slowTime</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_enemy.html#a7f185bcecfc927871387f6bda2191d0c">   42</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_enemy.html#a7f185bcecfc927871387f6bda2191d0c">slowed</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_enemy.html#aff8dab38e3d179a2fb471cf7a9c42cbe">   43</a></span>&#160;    <a class="code" href="class_path.html">Path</a> <a class="code" href="class_enemy.html#aff8dab38e3d179a2fb471cf7a9c42cbe">path</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="ttc" id="class_enemy_html_a04c451624958712b36546037fc25c601"><div class="ttname"><a href="class_enemy.html#a04c451624958712b36546037fc25c601">Enemy::die</a></div><div class="ttdeci">void die()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:94</div></div>
-<div class="ttc" id="class_enemy_html_a98a78c7c16c3eaca41d60fd54b9ff92a"><div class="ttname"><a href="class_enemy.html#a98a78c7c16c3eaca41d60fd54b9ff92a">Enemy::unSlow</a></div><div class="ttdeci">void unSlow()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:111</div></div>
-<div class="ttc" id="_path_8h_html"><div class="ttname"><a href="_path_8h.html">Path.h</a></div></div>
-<div class="ttc" id="class_enemy_html_ad59184710c7f9df80138434b8487a9f5"><div class="ttname"><a href="class_enemy.html#ad59184710c7f9df80138434b8487a9f5">Enemy::slowTime</a></div><div class="ttdeci">int slowTime</div><div class="ttdef"><b>Definition:</b> Enemy.h:41</div></div>
-<div class="ttc" id="class_enemy_html_a0f1e1c58a06fd254c537bf8733e69b63"><div class="ttname"><a href="class_enemy.html#a0f1e1c58a06fd254c537bf8733e69b63">Enemy::setTile</a></div><div class="ttdeci">void setTile(shared_ptr&lt; Tile &gt;)</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:85</div></div>
-<div class="ttc" id="_entity_8h_html"><div class="ttname"><a href="_entity_8h.html">Entity.h</a></div></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> hp;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> maxHp;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">float</span> defence;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> bounty;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> scoreValue;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> slowTime;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> slowed;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_path.html">Path</a> path;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="ttc" id="class_path_html"><div class="ttname"><a href="class_path.html">Path</a></div><div class="ttdef"><b>Definition:</b> Path.h:7</div></div>
-<div class="ttc" id="class_enemy_html_ab48bc28310a5ca396fbfaf6edc74996d"><div class="ttname"><a href="class_enemy.html#ab48bc28310a5ca396fbfaf6edc74996d">Enemy::maxHp</a></div><div class="ttdeci">int maxHp</div><div class="ttdef"><b>Definition:</b> Enemy.h:37</div></div>
-<div class="ttc" id="class_enemy_html_ad8c2cd506c90a57adad1f94d9e4c25d2"><div class="ttname"><a href="class_enemy.html#ad8c2cd506c90a57adad1f94d9e4c25d2">Enemy::dieWithoutBonus</a></div><div class="ttdeci">void dieWithoutBonus()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:100</div></div>
-<div class="ttc" id="class_enemy_html_ab1c5ecbd2567b509a5d4492764a28f5d"><div class="ttname"><a href="class_enemy.html#ab1c5ecbd2567b509a5d4492764a28f5d">Enemy::getHP</a></div><div class="ttdeci">int getHP()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:134</div></div>
-<div class="ttc" id="class_enemy_html_a53020fcba7330809918946e150f8a591"><div class="ttname"><a href="class_enemy.html#a53020fcba7330809918946e150f8a591">Enemy::getDistanceToTarget</a></div><div class="ttdeci">float getDistanceToTarget()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:40</div></div>
-<div class="ttc" id="class_enemy_html_a6612d7486e4599d8fbc085c43168962f"><div class="ttname"><a href="class_enemy.html#a6612d7486e4599d8fbc085c43168962f">Enemy::takeDamage</a></div><div class="ttdeci">void takeDamage(int)</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:121</div></div>
-<div class="ttc" id="class_enemy_html_a0e46f5b36e6b038bfaef05979bb76325"><div class="ttname"><a href="class_enemy.html#a0e46f5b36e6b038bfaef05979bb76325">Enemy::succed</a></div><div class="ttdeci">void succed()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:80</div></div>
-<div class="ttc" id="class_enemy_html_af4d6253bc6c28ad1d1ff6deb4303347b"><div class="ttname"><a href="class_enemy.html#af4d6253bc6c28ad1d1ff6deb4303347b">Enemy::getSlowTime</a></div><div class="ttdeci">int getSlowTime()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:148</div></div>
-<div class="ttc" id="class_enemy_html_a9bb5d74024760e604c41ba79cc7da892"><div class="ttname"><a href="class_enemy.html#a9bb5d74024760e604c41ba79cc7da892">Enemy::defence</a></div><div class="ttdeci">float defence</div><div class="ttdef"><b>Definition:</b> Enemy.h:38</div></div>
-<div class="ttc" id="class_enemy_html_ac04d0b26f6209586b87c8ecbaa0e0257"><div class="ttname"><a href="class_enemy.html#ac04d0b26f6209586b87c8ecbaa0e0257">Enemy::getScoreValue</a></div><div class="ttdeci">int getScoreValue()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:141</div></div>
 <div class="ttc" id="class_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> Entity.h:5</div></div>
-<div class="ttc" id="class_enemy_html_ab6302a04e63f97255eb44fc8ce35d012"><div class="ttname"><a href="class_enemy.html#ab6302a04e63f97255eb44fc8ce35d012">Enemy::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;)</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:152</div></div>
-<div class="ttc" id="class_enemy_html_a94f30d348b6d2840fd71675472ba38dd"><div class="ttname"><a href="class_enemy.html#a94f30d348b6d2840fd71675472ba38dd">Enemy::Enemy</a></div><div class="ttdeci">Enemy()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:16</div></div>
-<div class="ttc" id="class_enemy_html_ac0eec4755e28c02688065f9657150ac3"><div class="ttname"><a href="class_enemy.html#ac0eec4755e28c02688065f9657150ac3">Enemy::~Enemy</a></div><div class="ttdeci">virtual ~Enemy()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:38</div></div>
-<div class="ttc" id="class_enemy_html_a1d9a86d110b87f3cc55b40d1bdb59eb5"><div class="ttname"><a href="class_enemy.html#a1d9a86d110b87f3cc55b40d1bdb59eb5">Enemy::bounty</a></div><div class="ttdeci">int bounty</div><div class="ttdef"><b>Definition:</b> Enemy.h:39</div></div>
-<div class="ttc" id="class_enemy_html_a37b2bae4f5a9e8d673aeb28880ded0bc"><div class="ttname"><a href="class_enemy.html#a37b2bae4f5a9e8d673aeb28880ded0bc">Enemy::test</a></div><div class="ttdeci">virtual string test()=0</div></div>
-<div class="ttc" id="class_enemy_html_aff8dab38e3d179a2fb471cf7a9c42cbe"><div class="ttname"><a href="class_enemy.html#aff8dab38e3d179a2fb471cf7a9c42cbe">Enemy::path</a></div><div class="ttdeci">Path path</div><div class="ttdef"><b>Definition:</b> Enemy.h:43</div></div>
-<div class="ttc" id="class_enemy_html_ae01d1b6fedb8f342b7f216ca463d7349"><div class="ttname"><a href="class_enemy.html#ae01d1b6fedb8f342b7f216ca463d7349">Enemy::getDefence</a></div><div class="ttdeci">float getDefence()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:144</div></div>
-<div class="ttc" id="class_enemy_html_a7f185bcecfc927871387f6bda2191d0c"><div class="ttname"><a href="class_enemy.html#a7f185bcecfc927871387f6bda2191d0c">Enemy::slowed</a></div><div class="ttdeci">bool slowed</div><div class="ttdef"><b>Definition:</b> Enemy.h:42</div></div>
-<div class="ttc" id="class_enemy_html_a278d70100af07c946743db1b7a1a9f59"><div class="ttname"><a href="class_enemy.html#a278d70100af07c946743db1b7a1a9f59">Enemy::hp</a></div><div class="ttdeci">int hp</div><div class="ttdef"><b>Definition:</b> Enemy.h:36</div></div>
-<div class="ttc" id="class_enemy_html_a8e0cfa58b8d27e254a0b3c6965962280"><div class="ttname"><a href="class_enemy.html#a8e0cfa58b8d27e254a0b3c6965962280">Enemy::move</a></div><div class="ttdeci">virtual bool move()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:45</div></div>
-<div class="ttc" id="class_enemy_html_a39d2efd8625d3d8449cc45631d8b4f9b"><div class="ttname"><a href="class_enemy.html#a39d2efd8625d3d8449cc45631d8b4f9b">Enemy::updatePath</a></div><div class="ttdeci">void updatePath()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:116</div></div>
 <div class="ttc" id="class_enemy_html"><div class="ttname"><a href="class_enemy.html">Enemy</a></div><div class="ttdef"><b>Definition:</b> Enemy.h:6</div></div>
-<div class="ttc" id="class_enemy_html_abc49d5a2cef917c8ece8a16547f8efee"><div class="ttname"><a href="class_enemy.html#abc49d5a2cef917c8ece8a16547f8efee">Enemy::scoreValue</a></div><div class="ttdeci">int scoreValue</div><div class="ttdef"><b>Definition:</b> Enemy.h:40</div></div>
-<div class="ttc" id="class_enemy_html_aecdda0124a341bace43f683a766ec6f7"><div class="ttname"><a href="class_enemy.html#aecdda0124a341bace43f683a766ec6f7">Enemy::getBounty</a></div><div class="ttdeci">int getBounty()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:137</div></div>
-<div class="ttc" id="class_enemy_html_aa5ddb1dc9aeba11ef0e502527bf6f412"><div class="ttname"><a href="class_enemy.html#aa5ddb1dc9aeba11ef0e502527bf6f412">Enemy::slow</a></div><div class="ttdeci">void slow(int)</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:104</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 13 2014 19:35:32 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 14 2014 00:11:38 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

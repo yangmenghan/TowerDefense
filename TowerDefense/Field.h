@@ -9,50 +9,89 @@
 #include "string.h"
 #include "Config.h"
 #include "Enemy.h"
-
+//! The field of battle.
+/*!
+*/
 class Field
 {
 private:
-	int width;								//The width of the field.
-	int height;								//The height of the heignt.
-	int numTileHor;							//The number of tiles in a row.
-	int numTileVer;							//The number of tiles in a colonne.
+	int width;								
+	int height;								
+	int numTileHor;							
+	int numTileVer;							
 	bool isHovered;
-	std::vector<shared_ptr<Tile>> tilesMap;	//The vector of tiles in this field.
-	Tile startTile;							//The tile where enter the enemies.
-	Tile endTile;							//The tile in the end of the path of enemies.
+	std::vector<shared_ptr<Tile>> tilesMap;	
+	Tile startTile;							
+	Tile endTile;							
 	Tile currentTileAcitve;
 	sf::FloatRect boundingBox;
 	sf::Sprite sprite;
 
 public:
-	//Constructors and destroyers
-	Field();								//Default constructor.
-	~Field();								//Destructor.
-	
-	//Getters
-	int getWidth();							//Get the width of this field.
-	int getHeight();						//Get the height of this field.
-	int getNumTileVer();					//Get the nomber of tiles in a colonne.
-	int getNumTileHor();					//Get the nomber of tiles in a row.
-	std::vector<shared_ptr<Tile>> getAllTiles();
-	shared_ptr<Tile> getTile(int);						//Get the tile with the number of tile.
-	shared_ptr<Tile> getTile(sf::Vector2i position);	//Get the tile with its position. 
-	shared_ptr<Tile> getStartTile();					//Get the starttile.
-	shared_ptr<Tile> getEndTile();						//Get the end tile.
+	//!Default constructor.
+	/*!
+	*/
+	Field();								
+	//!Destructor.
+	/*!
+	*/
+	~Field();												
+	//!Get the tile with the number of tile.
+	/*!
+	\param n the number of the tile.
+	\return Return the shared pointer of the tile.
+	*/
+	shared_ptr<Tile> getTile(int n);						
+	//!Get the tile with its position. 
+	/*!
+	\param position : the postion of the tile in the form of (row,collon).
+	\return Return the shared pointer of the tile.
+	*/
+	shared_ptr<Tile> getTile(sf::Vector2i position);	
+	//!Get the start tile.
+	/*!
+	\return Return the shared pointer of the strat tile.
+	\sa Tile.
+	*/
+	shared_ptr<Tile> getStartTile();					
+	//!Get the end tile.
+	/*!
+	\return Return the shared pointer of the end tile.
+	*/
+	shared_ptr<Tile> getEndTile();						
+	//! Get the sprite of the field.
+	/*!
+	\return The sprite.
+	*/
 	sf::Sprite getSprite();
-
-	//Setters
-	void setSprite(sf::Sprite);
-
-	//Functions
-	bool mouseHover(sf::RenderWindow&);
+	//! Set the sprite of field.
+	/*!
+	\param sprite : the sprite of the field.
+	*/
+	void setSprite(sf::Sprite sprite);
+	//! Check if the tile is hovered.
+	/*!
+	\sa mouseHover(sf::RenderWindow& w).
+	\return Return true if the tile is hovered.
+	\sa checkHover().
+	*/
+	bool mouseHover(sf::RenderWindow& w);
+	//! Check if the tile is hovered.
+	/*!
+	\return Return true if the tile is hovered.
+	*/
 	bool checkHover();
-	//bool mouseClicking(sf::Event);
-	//bool mouseClick(sf::Event);
-	void resolveEvent(sf::Event);
-	void draw(sf::RenderWindow&);			//Draw
-	
+	//! Resolve the mouse event.
+	/*!
+	Call all the tiles to resolve the event.
+	\param event : the mouse enevt.
+	*/
+	void resolveEvent(sf::Event event);
+	//! Draw the field and all the tiles.
+	/*!
+	\param w the RenderWindow of the game.
+	*/
+	void draw(sf::RenderWindow&);
 	//! A function with 2 arguments and returns a path which is a vector of tiles
 	/*!
 	\param tile1 is the start tile of the path

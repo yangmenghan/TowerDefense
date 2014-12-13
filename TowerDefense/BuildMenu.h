@@ -11,16 +11,19 @@
 using namespace std;
 
 class Tile;
-
+//! A menu to build a tower.
+/*!
+Appeared when click on an empty tile.
+*/
 class BuildMenu 
 	: public Menu
 {
 private: 
-	shared_ptr<Tile> tile;					//The tile which opens the buildmenu.
-	Button basicTwButton;					//The button for building a basic tower in the tile.
-	Button slowTwButton;					//The button for building a slow tower in the tile.
-	Button moneyTwButton;					//The button for building a money tower in the tile.
-	Button sunTwButton;						//The button for building a sun tower in the tile.
+	shared_ptr<Tile> tile;				
+	Button basicTwButton;				
+	Button slowTwButton;					
+	Button moneyTwButton;				
+	Button sunTwButton;						
 	
 
 	std::string fontAddress;
@@ -30,24 +33,52 @@ private:
 	sf::Text moneyPrice;
 	sf::Text sunPrice;
 public:
-	//Constructors, destructors
-	BuildMenu();							//Default constructor.
-
-											//Constructor a buildmenu in this tile. 
-	BuildMenu(shared_ptr<Tile>);
-	~BuildMenu();							//Destructor.
-
-	//Getters
-	shared_ptr<Tile> getTile();				//Get the tile where build the tower.
-
-	//Setters
-
-	//Functions
-	void buyBasicTw();						//Buy and build a normal tower.
-	void buySlowTw();						//Buy and build a slow tower.
-	void buyMoneyTw();						//Buy and build a money tower.
-	void buySunTw(); 						// Buy and build a sun tower.
-	void resolveEvent(sf::Event);
-	void draw(sf::RenderWindow&);			//Draw the menu.
-	void close();							//Close the menu.
+	//!Default constructor.
+	/*!
+	*/
+	BuildMenu();							
+	//!Construct a build menu with a tile. 
+	/*!
+	\param tile : the tile where opens the build menu.
+	*/										
+	BuildMenu(shared_ptr<Tile> tile);
+	//!Destructor.
+	/*!
+	*/
+	~BuildMenu();							
+	//!Get the tile where build the tower.
+	/*!
+	\return Return the shared pointer of the tile.
+	*/
+	shared_ptr<Tile> getTile();				
+	//!Buy and build a normal tower.
+	/*!
+	*/
+	void buyBasicTw();						
+	//!Buy and build a slow tower.
+	/*!
+	*/
+	void buySlowTw();						
+	//!Buy and build a money tower.
+	/*!
+	*/
+	void buyMoneyTw();						
+	//!Buy and build a sun tower.
+	/*!
+	*/
+	void buySunTw(); 						
+	//! Resolve the mouse event.
+	/*!
+	Build a tower when click on the button or close the menu when click outside.
+	*/
+	void resolveEvent(sf::Event event);
+	//!Draw the build menu.
+	/*!
+	Draw the menu and show the money of each tower.
+	*/
+	void draw(sf::RenderWindow&);			
+	//!Close the menu.
+	/*!
+	*/
+	void close();							
 };

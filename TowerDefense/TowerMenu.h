@@ -8,9 +8,9 @@
 using namespace std;
 
 class Tile;
-//! Tower Menu class
+//! A menu to sell or upgrade a tower.
 /*!
-
+Appeared when click on a tile which has a tower.
 */
 class TowerMenu : public Menu
 {
@@ -37,17 +37,14 @@ private:
 	std::string fontAddress;
 	//! A font
 	/*!
-
 	*/
 	sf::Font font;
 	//!
 	/*!
-
 	*/
 	sf::Text upGradePrice;
 	//!
 	/*!
-
 	*/
 	sf::Text sellPrice;
 
@@ -58,11 +55,11 @@ public:
 	Default constructor.
 	*/
 	TowerMenu::TowerMenu();						
-	//! Construct the buildMenu at this tile. 
+	//! Construct the tower menu with a tile. 
 	/*!
-	
+	\param tile : the tile where opens the tower menu.
 	*/											
-	TowerMenu(shared_ptr<Tile> t);
+	TowerMenu(shared_ptr<Tile> tile);
 	//! Destructor
 	/*!
 	Destructor.
@@ -70,27 +67,26 @@ public:
 	~TowerMenu();								
 	//! Get the tile which opens the towermenu.
 	/*!
-	
+	\return Return the shared pointer of the tile.
 	*/
 	shared_ptr<Tile> getTile();					
 	//! Resolve all the events on this tile.
 	/*!
-	\param event the event to resolve. 
+	Sell or upgrade the tower when click on the button or close the menu when click outside.
+	\param event : the event to resolve. 
 	*/ 
 	void resolveEvent(sf::Event event);
 	//! Sell the tower in this tile.
 	/*!
-
 	*/
 	void sellTower();
-	//!Draw the menu.
+	//!Draw the tower menu.
 	/*!
-	
+	Draw the menu and show the money to upgrade or the income to sell the tower.
 	*/
 	void draw(sf::RenderWindow&);				
 	//!Close the menu.
 	/*!
-	
 	*/
 	void close();								
 };

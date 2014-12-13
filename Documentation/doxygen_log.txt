@@ -1,0 +1,1098 @@
+Searching for include files...
+Searching for example files...
+Searching for images...
+Searching for dot files...
+Searching for msc files...
+Searching for dia files...
+Searching for files to exclude
+Searching for files to process...
+Searching for files in directory D:/TowerDefense/TowerDefense
+Reading and parsing tag files
+Parsing files
+Preprocessing D:/TowerDefense/TowerDefense/AreaAttack.cpp...
+Parsing file D:/TowerDefense/TowerDefense/AreaAttack.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/AreaAttack.h...
+Parsing file D:/TowerDefense/TowerDefense/AreaAttack.h...
+Preprocessing D:/TowerDefense/TowerDefense/Attack.cpp...
+Parsing file D:/TowerDefense/TowerDefense/Attack.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/Attack.h...
+Parsing file D:/TowerDefense/TowerDefense/Attack.h...
+Preprocessing D:/TowerDefense/TowerDefense/AudioManager.cpp...
+Parsing file D:/TowerDefense/TowerDefense/AudioManager.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/AudioManager.h...
+Parsing file D:/TowerDefense/TowerDefense/AudioManager.h...
+Preprocessing D:/TowerDefense/TowerDefense/BombEnemy.cpp...
+Parsing file D:/TowerDefense/TowerDefense/BombEnemy.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/BombEnemy.h...
+Parsing file D:/TowerDefense/TowerDefense/BombEnemy.h...
+Preprocessing D:/TowerDefense/TowerDefense/BuildMenu.cpp...
+Parsing file D:/TowerDefense/TowerDefense/BuildMenu.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/BuildMenu.h...
+Parsing file D:/TowerDefense/TowerDefense/BuildMenu.h...
+Preprocessing D:/TowerDefense/TowerDefense/Button.cpp...
+Parsing file D:/TowerDefense/TowerDefense/Button.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/Button.h...
+Parsing file D:/TowerDefense/TowerDefense/Button.h...
+Preprocessing D:/TowerDefense/TowerDefense/Config.cpp...
+Parsing file D:/TowerDefense/TowerDefense/Config.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/Config.h...
+Parsing file D:/TowerDefense/TowerDefense/Config.h...
+Preprocessing D:/TowerDefense/TowerDefense/CreditsMenu.cpp...
+Parsing file D:/TowerDefense/TowerDefense/CreditsMenu.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/CreditsMenu.h...
+Parsing file D:/TowerDefense/TowerDefense/CreditsMenu.h...
+Preprocessing D:/TowerDefense/TowerDefense/Enemy.cpp...
+Parsing file D:/TowerDefense/TowerDefense/Enemy.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/Enemy.h...
+Parsing file D:/TowerDefense/TowerDefense/Enemy.h...
+Preprocessing D:/TowerDefense/TowerDefense/Entity.cpp...
+Parsing file D:/TowerDefense/TowerDefense/Entity.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/Entity.h...
+Parsing file D:/TowerDefense/TowerDefense/Entity.h...
+Preprocessing D:/TowerDefense/TowerDefense/FastEnemy.cpp...
+Parsing file D:/TowerDefense/TowerDefense/FastEnemy.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/FastEnemy.h...
+Parsing file D:/TowerDefense/TowerDefense/FastEnemy.h...
+Preprocessing D:/TowerDefense/TowerDefense/Field.cpp...
+Parsing file D:/TowerDefense/TowerDefense/Field.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/Field.h...
+Parsing file D:/TowerDefense/TowerDefense/Field.h...
+Preprocessing D:/TowerDefense/TowerDefense/GameMenu.cpp...
+Parsing file D:/TowerDefense/TowerDefense/GameMenu.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/GameMenu.h...
+Parsing file D:/TowerDefense/TowerDefense/GameMenu.h...
+Preprocessing D:/TowerDefense/TowerDefense/GameOverMenu.cpp...
+Parsing file D:/TowerDefense/TowerDefense/GameOverMenu.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/GameOverMenu.h...
+Parsing file D:/TowerDefense/TowerDefense/GameOverMenu.h...
+Preprocessing D:/TowerDefense/TowerDefense/LevelManager.cpp...
+Parsing file D:/TowerDefense/TowerDefense/LevelManager.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/LevelManager.h...
+Parsing file D:/TowerDefense/TowerDefense/LevelManager.h...
+P
+reprocessing D:/TowerDefense/TowerDefense/main.cpp...
+Parsing file D:/TowerDefense/TowerDefense/main.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/Menu.cpp...
+Parsing file D:/TowerDefense/TowerDefense/Menu.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/Menu.h...
+Parsing file D:/TowerDefense/TowerDefense/Menu.h...
+Preprocessing D:/TowerDefense/TowerDefense/MenuManager.cpp...
+Parsing file D:/TowerDefense/TowerDefense/MenuManager.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/MenuManager.h...
+Parsing file D:/TowerDefense/TowerDefense/MenuManager.h...
+Preprocessing D:/TowerDefense/TowerDefense/MoneyTower.cpp...
+Parsing file D:/TowerDefense/TowerDefense/MoneyTower.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/MoneyTower.h...
+Parsing file D:/TowerDefense/TowerDefense/MoneyTower.h...
+Preprocessing D:/TowerDefense/TowerDefense/NormalAttack.cpp...
+Parsing file D:/TowerDefense/TowerDefense/NormalAttack.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/NormalAttack.h...
+Parsing file D:/TowerDefense/TowerDefense/NormalAttack.h...
+Preprocessing D:/TowerDefense/TowerDefense/NormalEnemy.cpp...
+Parsing file D:/TowerDefense/TowerDefense/NormalEnemy.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/NormalEnemy.h...
+Parsing file D:/TowerDefense/TowerDefense/NormalEnemy.h...
+Preprocessing D:/TowerDefense/TowerDefense/NormalTower.cpp...
+Parsing file D:/TowerDefense/TowerDefense/NormalTower.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/NormalTower.h...
+Parsing file D:/TowerDefense/TowerDefense/NormalTower.h...
+Preprocessing D:/TowerDefense/TowerDefense/Path.cpp...
+Parsing file D:/TowerDefense/TowerDefense/Path.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/Path.h...
+Parsing file D:/TowerDefense/TowerDefense/Path.h...
+Preprocessing D:/TowerDefense/TowerDefense/Player.cpp...
+Parsing file D:/TowerDefense/TowerDefense/Player.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/Player.h...
+Parsing file D:/TowerDefense/TowerDefense/Player.h...
+Preprocessing D:/TowerDefense/TowerDefense/SlowAttack.cpp...
+Parsing file D:/TowerDefense/TowerDefense/SlowAttack.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/SlowAttack.h...
+Parsing file D:/TowerDefense/TowerDefense/SlowAttack.h...
+Preprocessing D:/TowerDefense/TowerDefense/SlowTower.cpp...
+Parsing file D:/TowerDefense/TowerDefense/SlowTower.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/SlowTower.h...
+Parsing file D:/TowerDefense/TowerDefense/SlowTower.h...
+Preprocessing D:/TowerDefense/TowerDefense/StartMenu.cpp...
+Parsing file D:/TowerDefense/TowerDefense/StartMenu.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/StartMenu.h...
+Parsing file D:/TowerDefense/TowerDefense/StartMenu.h...
+Preprocessing D:/TowerDefense/TowerDefense/SunTower.cpp...
+Parsing file D:/TowerDefense/TowerDefense/SunTower.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/SunTower.h...
+Parsing file D:/TowerDefense/TowerDefense/SunTower.h...
+Preprocessing D:/TowerDefense/TowerDefense/Tile.cpp...
+Parsing file D:/TowerDefense/TowerDefense/Tile.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/Tile.h...
+Parsing file D:/TowerDefense/TowerDefense/Tile.h...
+Preprocessing D:/TowerDefense/TowerDefense/ToughEnemy.cpp...
+Parsing file D:/TowerDefense/TowerDefense/ToughEnemy.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/ToughEnemy.h...
+Parsing file D:/TowerDefense/TowerDefense/ToughEnemy.h...
+Preprocessing D:/TowerDefense/TowerDefense/Tower.cpp...
+Parsing file D:/TowerDefense/TowerDefense/Tower.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/Tower.h...
+Parsing file D:/TowerDefense/TowerDefense/Tower.h...
+Preprocessing D:/TowerDefense/TowerDefense/TowerMenu.cpp...
+Parsing file D:/TowerDefense/TowerDefense/TowerMenu.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/TowerMenu.h...
+Parsing file D:/TowerDefense/TowerDefense/TowerMenu.h...
+Preprocessing D:/TowerDefense/TowerDefense/TowerTest.cpp...
+Parsing file D:/TowerDefense/TowerDefense/TowerTest.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/UnitTests.cpp...
+Parsing file D:/TowerDefense/TowerDefense/UnitTests.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/Wave.cpp...
+Parsing file D:/TowerDefense/TowerDefense/Wave.cpp...
+Preprocessing D:/TowerDefense/TowerDefense/Wave.h...
+Parsing file D:/TowerDefense/TowerDefense/Wave.h...
+Building group list...
+Building directory list...
+Building namespace list...
+Building file list...
+Building class list...
+Associating documentation with classes...
+Computing nesting relations for classes...
+Building example list...
+Searching for enumerations...
+Searching for documented typedefs...
+Searching for members imported via using declarations...
+Searching for included using directives...
+Searching for documented variables...
+Building interface member list...
+Building member list...
+Searching for friends...
+Searching for documented defines...
+Computing class inheritance relations...
+Computing class usage relations...
+Flushing cached template relations that have become invalid...
+Creating members for template instances...
+Computing class relations...
+Add enum values to enums...
+Searching for member function documentation...
+Building page list...
+Search for main page...
+Computing page relations...
+Determining the scope of groups...
+Sorting lists...
+Freeing entry tree
+Determining which enums are documented
+Computing member relations...
+Building full member lists recursively...
+Adding members to member groups.
+Computing member references...
+Inheriting documentation...
+Generating disk names...
+Adding source references...
+Adding xrefitems...
+Sorting member lists...
+Computing dependencies between directories...
+Generating citations page...
+Counting data structures...
+Resolving user defined references...
+Finding anchors and sections in the documentation...
+Transferring function references...
+Combining using relations...
+Adding members to index pages...
+Generating style sheet...
+Generating example documentation...
+Generating file sources...
+Generating code for file D:/TowerDefense/TowerDefense/AreaAttack.h...
+Generating code for file D:/TowerDefense/TowerDefense/Attack.h...
+Generating code for file D:/TowerDefense/TowerDefense/AudioManager.h...
+Generating code for file D:/TowerDefense/TowerDefense/BombEnemy.h...
+Generating code for file D:/TowerDefense/TowerDefense/BuildMenu.h...
+Generating code for file D:/TowerDefense/TowerDefense/Button.h...
+Generating code for file D:/TowerDefense/TowerDefense/Config.h...
+Generating code for file D:/TowerDefense/TowerDefense/CreditsMenu.h...
+Generating code for file D:/TowerDefense/TowerDefense/Enemy.h...
+Generating code for file D:/TowerDefense/TowerDefense/Entity.h...
+Generating code for file D:/TowerDefense/TowerDefense/FastEnemy.h...
+Generating code for file D:/TowerDefense/TowerDefense/Field.h...
+Generating code for file D:/TowerDefense/TowerDefense/GameMenu.h...
+Generating code for file D:/TowerDefense/TowerDefense/GameOverMenu.h...
+Generating code for file D:/TowerDefense/TowerDefense/LevelManager.h...
+Generating code for file D:/TowerDefense/TowerDefense/Menu.h...
+Generating code for file D:/TowerDefense/TowerDefense/MenuManager.h...
+Generating code for file D:/TowerDefense/TowerDefense/MoneyTower.h...
+Generating code for file D:/TowerDefense/TowerDefense/NormalAttack.h...
+Generating code for file D:/TowerDefense/TowerDefense/NormalEnemy.h...
+Generating code for file D:/TowerDefense/TowerDefense/NormalTower.h...
+Generating code for file D:/TowerDefense/TowerDefense/Path.h...
+Generating code for file D:/TowerDefense/TowerDefense/Player.h...
+Generating code for file D:/TowerDefense/TowerDefense/SlowAttack.h...
+Generating code for file D:/TowerDefense/TowerDefense/SlowTower.h...
+Generating code for file D:/TowerDefense/TowerDefense/StartMenu.h...
+Generating code for file D:/TowerDefense/TowerDefense/SunTower.h...
+Generating code for file D:/TowerDefense/TowerDefense/Tile.h...
+Generating code for file D:/TowerDefense/TowerDefense/ToughEnemy.h...
+Generating code for file D:/TowerDefense/TowerDefense/Tower.h...
+Generating code for file D:/TowerDefense/TowerDefense/TowerMenu.h...
+Generating code for file D:/TowerDefense/TowerDefense/Wave.h...
+Generating file documentation...
+Generating page documentation...
+Generating group documentation...
+Generating class documentation...
+Generating docs for compound AreaAttack...
+D:/TowerDefense/TowerDefense/Attack.h:6: warning: Compound Attack is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:6: warning: Compound Menu is not documented.
+D:/TowerDefense/TowerDefense/GameMenu.h:14: warning: Compound GameMenu is not documented.
+D:/TowerDefense/TowerDefense/FastEnemy.h:7: warning: Compound FastEnemy is not documented.
+D:/TowerDefense/TowerDefense/MoneyTower.h:7: warning: Compound MoneyTower is not documented.
+D:/TowerDefense/TowerDefense/StartMenu.h:14: warning: Compound StartMenu is not documented.
+D:/TowerDefense/TowerDefense/Button.h:7: warning: Compound Button is not documented.
+D:/TowerDefense/TowerDefense/BombEnemy.h:9: warning: Compound BombEnemy is not documented.
+D:/TowerDefense/TowerDefense/Path.h:8: warning: Compound Path is not documented.
+D:/TowerDefense/TowerDefense/NormalAttack.h:6: warning: Compound NormalAttack is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:10: warning: Compound Tower is not documented.
+D:/TowerDefense/TowerDefense/SunTower.h:7: warning: Compound SunTower is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:12: warning: Compound LevelManager is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:6: warning: Compound Entity is not documented.
+D:/TowerDefense/TowerDefense/GameOverMenu.h:8: warning: Compound GameOverMenu is not documented.
+D:/TowerDefense/TowerDefense/SlowAttack.h:6: warning: Compound SlowAttack is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:6: warning: Compound Enemy is not documented.
+D:/TowerDefense/TowerDefense/SlowTower.h:7: warning: Compound SlowTower is not documented.
+D:/TowerDefense/TowerDefense/Wave.h:8: warning: Compound Wave is not documented.
+D:/TowerDefense/TowerDefense/Player.h:4: warning: Compound Player is not documented.
+D:/TowerDefense/TowerDefense/CreditsMenu.h:10: warning: Compound CreditsMenu is not documented.
+D:/TowerDefense/TowerDefense/MenuManager.h:11: warning: Compound MenuManager is not documented.
+D:/TowerDefense/TowerDefense/AreaAttack.h:6: warning: Compound AreaAttack is not documented.
+D:/TowerDefense/TowerDefense/NormalTower.h:7: warning: Compound NormalTower is not documented.
+D:/TowerDefense/TowerDefense/AudioManager.h:7: warning: Compound AudioManager is not documented.
+D:/TowerDefense/TowerDefense/AreaAttack.h:11: warning: Member getTarget() (function) of class AreaAttack is not documented.
+D:/TowerDefense/TowerDefense/AreaAttack.h:12: warning: Member attackAnimation(sf::RenderWindow &w) override (function) of class AreaAttack is not documented.
+D:/TowerDefense/TowerDefense/AreaAttack.h:13: warning: Member resolve(sf::RenderWindow &w) override (function) of class AreaAttack is not documented.
+D:/TowerDefense/TowerDefense/AreaAttack.h:14: warning: Member hasEnemyInRange() (function) of class AreaAttack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:12: warning: Member getDamage() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:13: warning: Member getSlowAmount() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:15: warning: Member setDamage(float mDamage) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:16: warning: Member setSlowAmount(float mSlowAmount) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:17: warning: Member setCenter(sf::Vector2i mCenter) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:18: warning: Member setRange(float mRange) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:19: warning: Member setSpeed(int mSpeed) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:20: warning: Member setTimer(int mTimer) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:23: warning: Member getTarget() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:24: warning: Member getCenter() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:Generating docs for compound Attack...
+Generating docs for compound AudioManager...
+Generating docs for compound BombEnemy...
+25: warning: Member setAttackRayAngle(shared_ptr< Enemy > target) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:30: warning: Member slowAmount (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:31: warning: Member damage (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:32: warning: Member range (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:33: warning: Member center (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:34: warning: Member timer (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:35: warning: Member speed (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:36: warning: Member targetDistance (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:38: warning: Member attackRay (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:12: warning: Member getDamage() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:13: warning: Member getSlowAmount() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:15: warning: Member setDamage(float mDamage) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:16: warning: Member setSlowAmount(float mSlowAmount) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:17: warning: Member setCenter(sf::Vector2i mCenter) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:18: warning: Member setRange(float mRange) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:19: warning: Member setSpeed(int mSpeed) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:20: warning: Member setTimer(int mTimer) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:23: warning: Member getTarget() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:24: warning: Member getCenter() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:25: warning: Member setAttackRayAngle(shared_ptr< Enemy > target) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:26: warning: Member attackAnimation(sf::RenderWindow &w)=0 (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:27: warning: Member resolve(sf::RenderWindow &w)=0 (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:30: warning: Member slowAmount (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:31: warning: Member damage (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:32: warning: Member range (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:33: warning: Member center (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:34: warning: Member timer (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:35: warning: Member speed (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:36: warning: Member targetDistance (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:38: warning: Member attackRay (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/BombEnemy.h:12: warning: Member BombEnemy(int hp, float defence, int bounty, int scoreValue, int trigger, sf::Sprite sprite, float speed) (function) of class BombEnemy is not documented.
+D:/TowerDefense/TowerDefense/BombEnemy.h:15: warning: Member getTrigger() (function) of class BombEnemy is not documented.
+D:/TowerDefense/TowerDefense/BombEnemy.h:16: warning: Member getTimer() (function) of class BombEnemy is not documented.
+D:/TowerDefense/TowerDefense/BombEnemy.h:18: warning: Member explode() (function) of class BombEnemy is not documented.
+D:/TowerDefense/TowerDefense/BombEnemy.h:19: warning: Member TriggerCountDown() (function) of class BombEnemy is not documented.
+D:/TowerDefense/TowerDefense/BombEnemy.h:20: warning: Member checkCountDown() (function) of class BombEnemy is not documented.
+D:/TowerDefense/TowerDefense/BombEnemy.h:21: warning: Member move() override (function) of class BombEnemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:9: warning: Member Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite mSprite, float mSpeed) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:13: warning: Member succed() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:14: warning: Member die() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:15: warning: Member dieWithoutBonus() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:16: warning: Member slow(int) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:17: warning: Member unSlow() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:18: warning: Member updatePath() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:20: warning: Member getHP() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:21: warning: Member getBounty() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:22: warning: Member getScoreValue() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:23: warning: Member getDefence() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:24: warning: Member getSlowTime() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:25: warning: Member getDistanceToTarget() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:27: warning: Member setTile(shared_ptr< Tile >) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:29: warning: Member takeDamage(int) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:31: warning: Member draw(sf::RenderWindow &) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:22: warning: Member getPosition() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:23: warning: Member getSize() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:24: warning: Member getSpeed() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:25: warning: Member getSprite() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:26: warning: Member getTile() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:29: warning: Member setPosition(sf::Vector2i mPosition) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:30: warning: Member setSize(sf::Vector2i mSize) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:31: warning: Member setSpeed(float mSpeed) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:32: warning: Member setSprite(sf::Sprite mSprite) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:34: warning: Member hp (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:35: warning: Member maxHp (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:36: warning: Member defence (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:37: warning: Member bounty (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:38: warning: Member scoreValue (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:39: waGenerating docs for compound BuildMenu...
+Generating docs for compound Button...
+Generating docs for compound CreditsMenu...
+rning: Member slowTime (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:40: warning: Member slowed (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:41: warning: Member path (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:8: warning: Member position (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:9: warning: Member size (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:10: warning: Member speed (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:11: warning: Member sprite (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:12: warning: Member tile (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:13: warning: Member timer (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:14: warning: Member texture (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:17: warning: Member Menu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:21: warning: Member setSize(sf::Vector2u) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:22: warning: Member setPosition(sf::Vector2i) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:24: warning: Member setAddress(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:26: warning: Member setTexture(sf::Texture) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:27: warning: Member setTexture(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:29: warning: Member setSprite(sf::Sprite) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:30: warning: Member setSprite(sf::Texture) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:31: warning: Member setSprite(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:36: warning: Member getSize() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:37: warning: Member getPosition() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:38: warning: Member getSprite() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:39: warning: Member getTexture() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:40: warning: Member getAddress() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:46: warning: Member opent() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:8: warning: Member sprite (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:9: warning: Member texture (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:10: warning: Member textureAddress (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:11: warning: Member size (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:12: warning: Member position (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Button.h:115: warning: Member setClickedState(bool mIsClicked) (function) of class Button is not documented.
+D:/TowerDefense/TowerDefense/CreditsMenu.h:16: warning: Member CreditsMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition) (function) of class CreditsMenu is not documented.
+D:/TowerDefense/TowerDefense/CreditsMenu.h:19: warning: Member getCreditsAddress() (function) of class CreditsMenu is not documented.
+D:/TowerDefense/TowerDefense/CreditsMenu.h:20: warning: Member getSprite() (function) of class CreditsMenu is not documented.
+D:/TowerDefense/TowerDefense/CreditsMenu.h:21: warning: MembGenerating docs for compound Enemy...
+er setSprite(sf::Sprite) (function) of class CreditsMenu is not documented.
+D:/TowerDefense/TowerDefense/CreditsMenu.h:22: warning: Member draw(sf::RenderWindow &w) (function) of class CreditsMenu is not documented.
+D:/TowerDefense/TowerDefense/CreditsMenu.h:23: warning: Member closeMenu() (function) of class CreditsMenu is not documented.
+D:/TowerDefense/TowerDefense/CreditsMenu.h:24: warning: Member resolveEvent(sf::Event event) (function) of class CreditsMenu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:17: warning: Member Menu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:21: warning: Member setSize(sf::Vector2u) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:22: warning: Member setPosition(sf::Vector2i) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:24: warning: Member setAddress(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:26: warning: Member setTexture(sf::Texture) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:27: warning: Member setTexture(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:29: warning: Member setSprite(sf::Sprite) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:30: warning: Member setSprite(sf::Texture) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:31: warning: Member setSprite(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:36: warning: Member getSize() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:37: warning: Member getPosition() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:38: warning: Member getSprite() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:39: warning: Member getTexture() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:40: warning: Member getAddress() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:45: warning: Member close() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:46: warning: Member opent() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:8: warning: Member sprite (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:9: warning: Member texture (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:10: warning: Member textureAddress (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:11: warning: Member size (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:12: warning: Member position (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:9: warning: Member Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite mSprite, float mSpeed) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:12: warning: Member move() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:13: warning: Member succed() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:14: warning: Member die() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:15: warning: Member dieWithoutBonus() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:16: warning: Member slow(int) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:17: warning: Member unSlow() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:18: warning: Member updatePath() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:20: warning: Member getHP() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/EGenerating docs for compound Entity...
+nemy.h:21: warning: Member getBounty() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:22: warning: Member getScoreValue() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:23: warning: Member getDefence() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:24: warning: Member getSlowTime() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:25: warning: Member getDistanceToTarget() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:27: warning: Member setTile(shared_ptr< Tile >) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:29: warning: Member takeDamage(int) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:31: warning: Member draw(sf::RenderWindow &) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:22: warning: Member getPosition() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:23: warning: Member getSize() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:24: warning: Member getSpeed() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:25: warning: Member getSprite() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:26: warning: Member getTile() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:29: warning: Member setPosition(sf::Vector2i mPosition) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:30: warning: Member setSize(sf::Vector2i mSize) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:31: warning: Member setSpeed(float mSpeed) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:32: warning: Member setSprite(sf::Sprite mSprite) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:34: warning: Member hp (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:35: warning: Member maxHp (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:36: warning: Member defence (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:37: warning: Member bounty (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:38: warning: Member scoreValue (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:39: warning: Member slowTime (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:40: warning: Member slowed (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:41: warning: Member path (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:8: warning: Member position (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:9: warning: Member size (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:10: warning: Member speed (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:11: warning: Member sprite (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:12: warning: Member tile (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:13: warning: Member timer (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:14: warning: Member texture (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:22: warning: Member getPosition() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:23: warning: Member getSize() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:24: warning: Member getSpeed() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:25: warning: Member getSpGenerating docs for compound FastEnemy...
+rite() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:26: warning: Member getTile() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:29: warning: Member setPosition(sf::Vector2i mPosition) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:30: warning: Member setSize(sf::Vector2i mSize) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:31: warning: Member setSpeed(float mSpeed) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:32: warning: Member setSprite(sf::Sprite mSprite) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:35: warning: Member draw(sf::RenderWindow &) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:8: warning: Member position (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:9: warning: Member size (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:10: warning: Member speed (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:11: warning: Member sprite (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:12: warning: Member tile (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:13: warning: Member timer (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:14: warning: Member texture (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/FastEnemy.h:10: warning: Member FastEnemy(int hp, float defence, int bounty, int scoreValue, sf::Sprite sprite, float speed) (function) of class FastEnemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:9: warning: Member Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite mSprite, float mSpeed) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:12: warning: Member move() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:13: warning: Member succed() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:14: warning: Member die() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:15: warning: Member dieWithoutBonus() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:16: warning: Member slow(int) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:17: warning: Member unSlow() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:18: warning: Member updatePath() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:20: warning: Member getHP() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:21: warning: Member getBounty() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:22: warning: Member getScoreValue() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:23: warning: Member getDefence() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:24: warning: Member getSlowTime() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:25: warning: Member getDistanceToTarget() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:27: warning: Member setTile(shared_ptr< Tile >) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:29: warning: Member takeDamage(int) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:31: warning: Member draw(sf::RenderWindow &) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:22: warning: Member getPosition() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:23: warning: Member getSize() (function) of class Entity is not documented.
+D:/TowGenerating docs for compound Field...
+Generating docs for compound GameMenu...
+erDefense/TowerDefense/Entity.h:24: warning: Member getSpeed() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:25: warning: Member getSprite() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:26: warning: Member getTile() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:29: warning: Member setPosition(sf::Vector2i mPosition) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:30: warning: Member setSize(sf::Vector2i mSize) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:31: warning: Member setSpeed(float mSpeed) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:32: warning: Member setSprite(sf::Sprite mSprite) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:34: warning: Member hp (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:35: warning: Member maxHp (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:36: warning: Member defence (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:37: warning: Member bounty (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:38: warning: Member scoreValue (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:39: warning: Member slowTime (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:40: warning: Member slowed (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:41: warning: Member path (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:8: warning: Member position (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:9: warning: Member size (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:10: warning: Member speed (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:11: warning: Member sprite (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:12: warning: Member tile (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:13: warning: Member timer (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:14: warning: Member texture (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/GameMenu.h:37: warning: Member GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition) (function) of class GameMenu is not documented.
+D:/TowerDefense/TowerDefense/GameMenu.h:40: warning: Member opent() (function) of class GameMenu is not documented.
+D:/TowerDefense/TowerDefense/GameMenu.h:44: warning: Member getGameSpeed() (function) of class GameMenu is not documented.
+D:/TowerDefense/TowerDefense/GameMenu.h:47: warning: Member setGameSpeed(float) (function) of class GameMenu is not documented.
+D:/TowerDefense/TowerDefense/GameMenu.h:51: warning: Member pauseGame() (function) of class GameMenu is not documented.
+D:/TowerDefense/TowerDefense/GameMenu.h:52: warning: Member speedGame() (function) of class GameMenu is not documented.
+D:/TowerDefense/TowerDefense/GameMenu.h:53: warning: Member returnSpeed() (function) of class GameMenu is not documented.
+D:/TowerDefense/TowerDefense/GameMenu.h:54: warning: Member restartGame() (function) of class GameMenu is not documented.
+D:/TowerDefense/TowerDefense/GameMenu.h:55: warning: Member draw(sf::RenderWindow &w) (function) of class GameMenu is not documented.
+D:/TowerDefense/TowerDefense/GameMenu.h:56: warning: Member resolveEvent(sf::Event event) (function) of class GameMenu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:17: warning: Member Menu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:21: warning: Member setSize(sf::Vector2u) (functGenerating docs for compound GameOverMenu...
+ion) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:22: warning: Member setPosition(sf::Vector2i) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:24: warning: Member setAddress(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:26: warning: Member setTexture(sf::Texture) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:27: warning: Member setTexture(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:29: warning: Member setSprite(sf::Sprite) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:30: warning: Member setSprite(sf::Texture) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:31: warning: Member setSprite(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:36: warning: Member getSize() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:37: warning: Member getPosition() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:38: warning: Member getSprite() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:39: warning: Member getTexture() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:40: warning: Member getAddress() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:45: warning: Member close() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:46: warning: Member opent() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:8: warning: Member sprite (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:9: warning: Member texture (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:10: warning: Member textureAddress (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:11: warning: Member size (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:12: warning: Member position (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/GameOverMenu.h:17: warning: Member GameOverMenu(std::string, sf::Vector2u, sf::Vector2i) (function) of class GameOverMenu is not documented.
+D:/TowerDefense/TowerDefense/GameOverMenu.h:20: warning: Member draw(sf::RenderWindow &) (function) of class GameOverMenu is not documented.
+D:/TowerDefense/TowerDefense/GameOverMenu.h:22: warning: Member resolveEvent(sf::Event) (function) of class GameOverMenu is not documented.
+D:/TowerDefense/TowerDefense/GameOverMenu.h:24: warning: Member reStartGame() (function) of class GameOverMenu is not documented.
+D:/TowerDefense/TowerDefense/GameOverMenu.h:25: warning: Member exitGame() (function) of class GameOverMenu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:17: warning: Member Menu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:21: warning: Member setSize(sf::Vector2u) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:22: warning: Member setPosition(sf::Vector2i) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:24: warning: Member setAddress(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:26: warning: Member setTexture(sf::Texture) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:27: warning: Member setTexture(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:29: warning: Member setSprite(sf::Sprite) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:30: warning: Member setSprite(sf::Texture) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:31: warning: Member setSprite(std::string) (function) of class Menu is not documentGenerating docs for compound LevelManager...
+ed.
+D:/TowerDefense/TowerDefense/Menu.h:36: warning: Member getSize() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:37: warning: Member getPosition() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:38: warning: Member getSprite() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:39: warning: Member getTexture() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:40: warning: Member getAddress() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:45: warning: Member close() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:46: warning: Member opent() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:8: warning: Member sprite (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:9: warning: Member texture (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:10: warning: Member textureAddress (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:11: warning: Member size (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:12: warning: Member position (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:16: warning: Member kill() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:18: warning: Member gameLoop(sf::RenderWindow &w) (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:19: warning: Member addEnemy(shared_ptr< Enemy > e) (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:20: warning: Member removeEnemy(shared_ptr< Enemy > e) (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:21: warning: Member removeEnemy(int) (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:22: warning: Member addTower(shared_ptr< Tower >) (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:23: warning: Member removeTower(shared_ptr< Tower >) (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:24: warning: Member removeTower(int) (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:26: warning: Member getEnemies() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:27: warning: Member getTowers() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:28: warning: Member getWaves() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:30: warning: Member setPlayer(shared_ptr< Player > player) (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:31: warning: Member getPlayer() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:32: warning: Member ifWin() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:34: warning: Member setField(Field &field) (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:35: warning: Member getField() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:37: warning: Member getSpeed() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:38: warning: Member setSpeed(int) (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:40: warning: Member nextWave() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:41: warning: Member loadWaves() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:43: warning: Member updatePathGenerating docs for compound Menu...
+Generating docs for compound MenuManager...
+() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:45: warning: Member gameOver() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:46: warning: Member victory() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:48: warning: Member stopGame() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:49: warning: Member startGame() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:50: warning: Member restartGame() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:52: warning: Member getCurrentWaveNumber() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/LevelManager.h:15: warning: Member getLevelManager() (function) of class LevelManager is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:17: warning: Member Menu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:21: warning: Member setSize(sf::Vector2u) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:22: warning: Member setPosition(sf::Vector2i) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:24: warning: Member setAddress(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:26: warning: Member setTexture(sf::Texture) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:27: warning: Member setTexture(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:29: warning: Member setSprite(sf::Sprite) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:30: warning: Member setSprite(sf::Texture) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:31: warning: Member setSprite(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:36: warning: Member getSize() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:37: warning: Member getPosition() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:38: warning: Member getSprite() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:39: warning: Member getTexture() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:40: warning: Member getAddress() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:44: warning: Member draw(sf::RenderWindow &) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:45: warning: Member close() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:46: warning: Member opent() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:47: warning: Member resolveEvent(sf::Event)=0 (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:8: warning: Member sprite (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:9: warning: Member texture (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:10: warning: Member textureAddress (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:11: warning: Member size (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:12: warning: Member position (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/MenuManager.h:24: warning: Member exit() (function) of class MenuManager is not documented.
+D:/TowerDefense/TowerDefense/MenuManager.h:26: warning: Member display(sf::RenderWindow &w) (function) of class MenuManager is not documented.
+D:/TowerDefense/TowerDefense/MenuManager.h:27: warning: Member addMenu(shared_ptr< Menu > menu) (function) of class MenuManagerGenerating docs for compound MoneyTower...
+ is not documented.
+D:/TowerDefense/TowerDefense/MenuManager.h:28: warning: Member popMenu() (function) of class MenuManager is not documented.
+D:/TowerDefense/TowerDefense/MenuManager.h:30: warning: Member getExitFlag() (function) of class MenuManager is not documented.
+D:/TowerDefense/TowerDefense/MenuManager.h:31: warning: Member getExistBTMenu() (function) of class MenuManager is not documented.
+D:/TowerDefense/TowerDefense/MenuManager.h:32: warning: Member setExistBTMenu(bool) (function) of class MenuManager is not documented.
+D:/TowerDefense/TowerDefense/MenuManager.h:33: warning: Member getMenus() (function) of class MenuManager is not documented.
+D:/TowerDefense/TowerDefense/MenuManager.h:35: warning: Member openMenu(shared_ptr< Menu > menu) (function) of class MenuManager is not documented.
+D:/TowerDefense/TowerDefense/MenuManager.h:36: warning: Member closeMenu() (function) of class MenuManager is not documented.
+D:/TowerDefense/TowerDefense/MenuManager.h:41: warning: Member resolveEvent(sf::Event) (function) of class MenuManager is not documented.
+D:/TowerDefense/TowerDefense/MenuManager.h:39: warning: Member getMenuManager() (function) of class MenuManager is not documented.
+D:/TowerDefense/TowerDefense/MenuManager.h:22: warning: Member menuManager (variable) of class MenuManager is not documented.
+D:/TowerDefense/TowerDefense/MoneyTower.h:9: warning: Member MoneyTower(shared_ptr< Tile > mTile) (function) of class MoneyTower is not documented.
+D:/TowerDefense/TowerDefense/MoneyTower.h:10: warning: Member MoneyTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite) (function) of class MoneyTower is not documented.
+D:/TowerDefense/TowerDefense/MoneyTower.h:13: warning: Member generateMoney() (function) of class MoneyTower is not documented.
+D:/TowerDefense/TowerDefense/MoneyTower.h:14: warning: Member doAttack(sf::RenderWindow &w) override (function) of class MoneyTower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:12: warning: Member Tower(shared_ptr< Tile >) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:16: warning: Member getDamage() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:17: warning: Member getPrice() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:18: warning: Member getLevel() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:19: warning: Member getRange() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:20: warning: Member getIncome() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:22: warning: Member setDamage(float mDamage) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:23: warning: Member setPrice(int mPrice) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:24: warning: Member setLevel(int mLevel) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:25: warning: Member setRange(float mRange) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:26: warning: Member setAttack() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:27: warning: Member setTowerTexture() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:28: warning: Member setRangeCircle() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:30: warning: Member sellTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:31: warning: Member upgradeTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:32: warning: Member downgradeTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:35: warning: Member spriteUpdate(int i) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:36: warning: Member showRangeCircle(sf::RenderWindow &w) (function) of class Towe
+Generating docs for compound NormalAttack...
+r is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:22: warning: Member getPosition() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:23: warning: Member getSize() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:24: warning: Member getSpeed() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:25: warning: Member getSprite() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:26: warning: Member getTile() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:29: warning: Member setPosition(sf::Vector2i mPosition) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:30: warning: Member setSize(sf::Vector2i mSize) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:31: warning: Member setSpeed(float mSpeed) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:32: warning: Member setSprite(sf::Sprite mSprite) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:35: warning: Member draw(sf::RenderWindow &) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:39: warning: Member attack (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:40: warning: Member damage[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:41: warning: Member slowAmount[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:42: warning: Member range[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:43: warning: Member speed[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:44: warning: Member income[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:45: warning: Member price (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:46: warning: Member level (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:47: warning: Member currentSprite (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:49: warning: Member rangeCircle (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:8: warning: Member position (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:9: warning: Member size (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:10: warning: Member speed (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:11: warning: Member sprite (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:12: warning: Member tile (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:13: warning: Member timer (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:14: warning: Member texture (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/NormalAttack.h:11: warning: Member attackAnimation(sf::RenderWindow &w) override (function) of class NormalAttack is not documented.
+D:/TowerDefense/TowerDefense/NormalAttack.h:12: warning: Member resolve(sf::RenderWindow &w) override (function) of class NormalAttack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:12: warning: Member getDamage() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:13: warning: Member getSlowAmount() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:15: warning: Member setDamage(float mDamage) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:16: warning: Member setSlowAmount(float mSlowAmount) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:17: warning: Member setCenter(sf::Vector2i mCenter) (function) of class Attack is not documGenerating docs for compound NormalEnemy...
+ented.
+D:/TowerDefense/TowerDefense/Attack.h:18: warning: Member setRange(float mRange) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:19: warning: Member setSpeed(int mSpeed) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:20: warning: Member setTimer(int mTimer) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:23: warning: Member getTarget() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:24: warning: Member getCenter() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:25: warning: Member setAttackRayAngle(shared_ptr< Enemy > target) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:30: warning: Member slowAmount (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:31: warning: Member damage (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:32: warning: Member range (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:33: warning: Member center (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:34: warning: Member timer (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:35: warning: Member speed (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:36: warning: Member targetDistance (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:38: warning: Member attackRay (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:9: warning: Member Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite mSprite, float mSpeed) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:12: warning: Member move() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:13: warning: Member succed() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:14: warning: Member die() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:15: warning: Member dieWithoutBonus() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:16: warning: Member slow(int) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:17: warning: Member unSlow() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:18: warning: Member updatePath() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:20: warning: Member getHP() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:21: warning: Member getBounty() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:22: warning: Member getScoreValue() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:23: warning: Member getDefence() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:24: warning: Member getSlowTime() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:25: warning: Member getDistanceToTarget() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:27: warning: Member setTile(shared_ptr< Tile >) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:29: warning: Member takeDamage(int) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:31: warning: Member draw(sf::RenderWindow &) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:22: warning: Member getPosition() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:23: warning: Member getSize() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:24: warning: Member getSpeed() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Generating docs for compound NormalTower...
+Entity.h:25: warning: Member getSprite() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:26: warning: Member getTile() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:29: warning: Member setPosition(sf::Vector2i mPosition) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:30: warning: Member setSize(sf::Vector2i mSize) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:31: warning: Member setSpeed(float mSpeed) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:32: warning: Member setSprite(sf::Sprite mSprite) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:34: warning: Member hp (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:35: warning: Member maxHp (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:36: warning: Member defence (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:37: warning: Member bounty (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:38: warning: Member scoreValue (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:39: warning: Member slowTime (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:40: warning: Member slowed (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:41: warning: Member path (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:8: warning: Member position (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:9: warning: Member size (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:10: warning: Member speed (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:11: warning: Member sprite (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:12: warning: Member tile (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:13: warning: Member timer (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:14: warning: Member texture (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/NormalEnemy.h:16: warning: The following parameters of NormalEnemy::NormalEnemy(int hp, float defence, int bounty, int scoreValue, sf::Sprite sprite, float speed) are not documented:
+  parameter 'sprite'
+D:/TowerDefense/TowerDefense/NormalTower.h:9: warning: Member NormalTower(shared_ptr< Tile > mTile) (function) of class NormalTower is not documented.
+D:/TowerDefense/TowerDefense/NormalTower.h:10: warning: Member NormalTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite) (function) of class NormalTower is not documented.
+D:/TowerDefense/TowerDefense/NormalTower.h:14: warning: Member doAttack(sf::RenderWindow &w) override (function) of class NormalTower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:12: warning: Member Tower(shared_ptr< Tile >) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:16: warning: Member getDamage() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:17: warning: Member getPrice() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:18: warning: Member getLevel() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:19: warning: Member getRange() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:20: warning: Member getIncome() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:22: warning: Member setDamage(float mDamage) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:23: warning: Member setPrice(int mPrice) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:24: warning: Member setLevel(int mLevel) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:25: warning: Member setRange(float mRange) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:26: warning: Member setAttack() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:27: warning: Member setTowerTexture() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:28: warning: Member setRangeCircle() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:30: warning: Member sellTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:31: warning: Member upgradeTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:32: warning: Member downgradeTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:35: warning: Member spriteUpdate(int i) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:36: warning: Member showRangeCircle(sf::RenderWindow &w) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:22: warning: Member getPosition() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:23: warning: Member getSize() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:24: warning: Member getSpeed() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:25: warning: Member getSprite() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:26: warning: Member getTile() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:29: warning: Member setPosition(sf::Vector2i mPosition) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:30: warning: Member setSize(sf::Vector2i mSize) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:31: warning: Member setSpeed(float mSpeed) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:32: warning: Member setSprite(sf::Sprite mSprite) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:35: warning: Member draw(sf::RenderWindow &) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:39: warning: Member attack (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:40: warning: Member damage[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:41: warning: Member slowAmount[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:42: warning: Member range[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:43: warning: Member speed[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:44: warning: Member income[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:45: warning: Member price (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:46: warning: Member level (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:47: warning: Member currentSprite (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:49: warning: Member rangeCircle (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:8: warning: Member position (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:9: warning: Member size (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:10: warning: Member speed (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:11: warning: Member sprite (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:12: warning: Member tile (variable) of class Entity is not documented.
+D:/TowerDeGenerating docs for compound Path...
+Generating docs for compound Player...
+Generating docs for compound SlowAttack...
+Generating docs for compound SlowTower...
+fense/TowerDefense/Entity.h:13: warning: Member timer (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:14: warning: Member texture (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Player.h:8: warning: Member manageMoney(int) (function) of class Player is not documented.
+D:/TowerDefense/TowerDefense/Player.h:9: warning: Member manageScore(int) (function) of class Player is not documented.
+D:/TowerDefense/TowerDefense/Player.h:10: warning: Member manageHP(int) (function) of class Player is not documented.
+D:/TowerDefense/TowerDefense/Player.h:12: warning: Member getHP() (function) of class Player is not documented.
+D:/TowerDefense/TowerDefense/Player.h:13: warning: Member getScore() (function) of class Player is not documented.
+D:/TowerDefense/TowerDefense/Player.h:14: warning: Member getMoney() (function) of class Player is not documented.
+D:/TowerDefense/TowerDefense/Player.h:16: warning: Member init() (function) of class Player is not documented.
+D:/TowerDefense/TowerDefense/SlowAttack.h:11: warning: Member attackAnimation(sf::RenderWindow &w) override (function) of class SlowAttack is not documented.
+D:/TowerDefense/TowerDefense/SlowAttack.h:12: warning: Member resolve(sf::RenderWindow &w) override (function) of class SlowAttack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:12: warning: Member getDamage() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:13: warning: Member getSlowAmount() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:15: warning: Member setDamage(float mDamage) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:16: warning: Member setSlowAmount(float mSlowAmount) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:17: warning: Member setCenter(sf::Vector2i mCenter) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:18: warning: Member setRange(float mRange) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:19: warning: Member setSpeed(int mSpeed) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:20: warning: Member setTimer(int mTimer) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:23: warning: Member getTarget() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:24: warning: Member getCenter() (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:25: warning: Member setAttackRayAngle(shared_ptr< Enemy > target) (function) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:30: warning: Member slowAmount (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:31: warning: Member damage (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:32: warning: Member range (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:33: warning: Member center (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:34: warning: Member timer (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:35: warning: Member speed (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:36: warning: Member targetDistance (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/Attack.h:38: warning: Member attackRay (variable) of class Attack is not documented.
+D:/TowerDefense/TowerDefense/SlowTower.h:9: warning: Member SlowTower(shared_ptr< Tile > mTile) (function) of class SlowTower is not documented.
+D:/TowerDefense/TowerDefense/SlowTower.h:10: warning: Member SlowTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite) (function) of class SlowTower is not documented.
+D:/TowerDefense/TowerDefense/SlowTower.h:13: warning: Member doAttack(sf::RenderWindow &w) override (function) of class SlowTower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:12: warning: Member Tower(shared_ptr< Tile >) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:16: warning: Member getDamage() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:17: warning: Member getPrice() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:18: warning: Member getLevel() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:19: warning: Member getRange() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:20: warning: Member getIncome() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:22: warning: Member setDamage(float mDamage) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:23: warning: Member setPrice(int mPrice) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:24: warning: Member setLevel(int mLevel) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:25: warning: Member setRange(float mRange) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:26: warning: Member setAttack() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:27: warning: Member setTowerTexture() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:28: warning: Member setRangeCircle() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:30: warning: Member sellTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:31: warning: Member upgradeTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:32: warning: Member downgradeTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:35: warning: Member spriteUpdate(int i) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:36: warning: Member showRangeCircle(sf::RenderWindow &w) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:22: warning: Member getPosition() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:23: warning: Member getSize() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:24: warning: Member getSpeed() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:25: warning: Member getSprite() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:26: warning: Member getTile() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:29: warning: Member setPosition(sf::Vector2i mPosition) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:30: warning: Member setSize(sf::Vector2i mSize) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:31: warning: Member setSpeed(float mSpeed) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:32: warning: Member setSprite(sf::Sprite mSprite) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:35: warning: Member draw(sf::RenderWindow &) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:39: warning: Member attack (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:40: warning: Member damage[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:41: warning: Member slowAmount[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:42: warning: Member range[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:43: warning: Member speed[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:44: warning: Member income[3] (variable) of class Tower is not documented.
+D:/To
+Generating docs for compound StartMenu...
+werDefense/TowerDefense/Tower.h:45: warning: Member price (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:46: warning: Member level (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:47: warning: Member currentSprite (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:49: warning: Member rangeCircle (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:8: warning: Member position (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:9: warning: Member size (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:10: warning: Member speed (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:11: warning: Member sprite (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:12: warning: Member tile (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:13: warning: Member timer (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:14: warning: Member texture (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/StartMenu.h:24: warning: Member StartMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition) (function) of class StartMenu is not documented.
+D:/TowerDefense/TowerDefense/StartMenu.h:27: warning: Member draw(sf::RenderWindow &) (function) of class StartMenu is not documented.
+D:/TowerDefense/TowerDefense/StartMenu.h:29: warning: Member resolveEvent(sf::Event) (function) of class StartMenu is not documented.
+D:/TowerDefense/TowerDefense/StartMenu.h:31: warning: Member startGame() (function) of class StartMenu is not documented.
+D:/TowerDefense/TowerDefense/StartMenu.h:32: warning: Member openCredits() (function) of class StartMenu is not documented.
+D:/TowerDefense/TowerDefense/StartMenu.h:33: warning: Member exitGame() (function) of class StartMenu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:17: warning: Member Menu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:21: warning: Member setSize(sf::Vector2u) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:22: warning: Member setPosition(sf::Vector2i) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:24: warning: Member setAddress(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:26: warning: Member setTexture(sf::Texture) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:27: warning: Member setTexture(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:29: warning: Member setSprite(sf::Sprite) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:30: warning: Member setSprite(sf::Texture) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:31: warning: Member setSprite(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:36: warning: Member getSize() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:37: warning: Member getPosition() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:38: warning: Member getSprite() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:39: warning: Member getTexture() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:40: warning: Member getAddress() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:45: warning: Member close() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:46: warning: Member opent() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:8: warning: Member sprite (variable) of class Menu is not documented.Generating docs for compound SunTower...
+
+D:/TowerDefense/TowerDefense/Menu.h:9: warning: Member texture (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:10: warning: Member textureAddress (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:11: warning: Member size (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:12: warning: Member position (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/SunTower.h:9: warning: Member SunTower(shared_ptr< Tile > mTile) (function) of class SunTower is not documented.
+D:/TowerDefense/TowerDefense/SunTower.h:10: warning: Member SunTower(float mDamage, int mPrice, int mLevel, float mRange, float mSpeed, sf::Sprite mSprite) (function) of class SunTower is not documented.
+D:/TowerDefense/TowerDefense/SunTower.h:13: warning: Member doAttack(sf::RenderWindow &w) override (function) of class SunTower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:12: warning: Member Tower(shared_ptr< Tile >) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:16: warning: Member getDamage() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:17: warning: Member getPrice() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:18: warning: Member getLevel() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:19: warning: Member getRange() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:20: warning: Member getIncome() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:22: warning: Member setDamage(float mDamage) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:23: warning: Member setPrice(int mPrice) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:24: warning: Member setLevel(int mLevel) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:25: warning: Member setRange(float mRange) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:26: warning: Member setAttack() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:27: warning: Member setTowerTexture() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:28: warning: Member setRangeCircle() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:30: warning: Member sellTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:31: warning: Member upgradeTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:32: warning: Member downgradeTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:35: warning: Member spriteUpdate(int i) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:36: warning: Member showRangeCircle(sf::RenderWindow &w) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:22: warning: Member getPosition() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:23: warning: Member getSize() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:24: warning: Member getSpeed() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:25: warning: Member getSprite() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:26: warning: Member getTile() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:29: warning: Member setPosition(sf::Vector2i mPosition) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:30: warning: Member setSize(sf::Vector2i mSize) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:31: warning: Member setSpeed(float mSpeed) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:32: Generating docs for compound Tile...
+Generating docs for compound ToughEnemy...
+warning: Member setSprite(sf::Sprite mSprite) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:35: warning: Member draw(sf::RenderWindow &) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:39: warning: Member attack (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:40: warning: Member damage[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:41: warning: Member slowAmount[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:42: warning: Member range[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:43: warning: Member speed[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:44: warning: Member income[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:45: warning: Member price (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:46: warning: Member level (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:47: warning: Member currentSprite (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:49: warning: Member rangeCircle (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:8: warning: Member position (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:9: warning: Member size (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:10: warning: Member speed (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:11: warning: Member sprite (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:12: warning: Member tile (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:13: warning: Member timer (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:14: warning: Member texture (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:9: warning: Member Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite mSprite, float mSpeed) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:12: warning: Member move() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:13: warning: Member succed() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:14: warning: Member die() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:15: warning: Member dieWithoutBonus() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:16: warning: Member slow(int) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:17: warning: Member unSlow() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:18: warning: Member updatePath() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:20: warning: Member getHP() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:21: warning: Member getBounty() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:22: warning: Member getScoreValue() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:23: warning: Member getDefence() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:24: warning: Member getSlowTime() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:25: warning: Member getDistanceToTarget() (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:27: warning: Member setTile(shared_ptr< Tile >) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:29: warning: Member takeDamage(int) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:31: warning: Member drGenerating docs for compound Tower...
+aw(sf::RenderWindow &) (function) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:22: warning: Member getPosition() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:23: warning: Member getSize() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:24: warning: Member getSpeed() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:25: warning: Member getSprite() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:26: warning: Member getTile() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:29: warning: Member setPosition(sf::Vector2i mPosition) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:30: warning: Member setSize(sf::Vector2i mSize) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:31: warning: Member setSpeed(float mSpeed) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:32: warning: Member setSprite(sf::Sprite mSprite) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:34: warning: Member hp (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:35: warning: Member maxHp (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:36: warning: Member defence (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:37: warning: Member bounty (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:38: warning: Member scoreValue (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:39: warning: Member slowTime (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:40: warning: Member slowed (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Enemy.h:41: warning: Member path (variable) of class Enemy is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:8: warning: Member position (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:9: warning: Member size (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:10: warning: Member speed (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:11: warning: Member sprite (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:12: warning: Member tile (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:13: warning: Member timer (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:14: warning: Member texture (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/ToughEnemy.h:16: warning: The following parameters of ToughEnemy::ToughEnemy(int hp, float defence, int bounty, int scoreValue, sf::Sprite sprite, float speed) are not documented:
+  parameter 'sprite'
+D:/TowerDefense/TowerDefense/Tower.h:12: warning: Member Tower(shared_ptr< Tile >) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:16: warning: Member getDamage() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:17: warning: Member getPrice() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:18: warning: Member getLevel() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:19: warning: Member getRange() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:20: warning: Member getIncome() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:22: warning: Member setDamage(float mDamage) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:23: warning: Member setPrice(int mPrice) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:24: warning: Member setLevel(int mLevel) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:25: warning: Member setRange(float mRange) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:26: warning: Member setAttack() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:27: warning: Member setTowerTexture() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:28: warning: Member setRangeCircle() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:30: warning: Member sellTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:31: warning: Member upgradeTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:32: warning: Member downgradeTw() (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:33: warning: Member doAttack(sf::RenderWindow &w)=0 (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:35: warning: Member spriteUpdate(int i) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:36: warning: Member showRangeCircle(sf::RenderWindow &w) (function) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:22: warning: Member getPosition() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:23: warning: Member getSize() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:24: warning: Member getSpeed() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:25: warning: Member getSprite() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:26: warning: Member getTile() (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:29: warning: Member setPosition(sf::Vector2i mPosition) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:30: warning: Member setSize(sf::Vector2i mSize) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:31: warning: Member setSpeed(float mSpeed) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:32: warning: Member setSprite(sf::Sprite mSprite) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:35: warning: Member draw(sf::RenderWindow &) (function) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:39: warning: Member attack (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:40: warning: Member damage[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:41: warning: Member slowAmount[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:42: warning: Member range[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:43: warning: Member speed[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:44: warning: Member income[3] (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:45: warning: Member price (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:46: warning: Member level (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:47: warning: Member currentSprite (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Tower.h:49: warning: Member rangeCircle (variable) of class Tower is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:8: warning: Member position (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:9: warning: Member size (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:10: warning: Member speed (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:11: warning: Member sprite (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:12: warning: Member til
+Generating docs for compound TowerMenu...
+Generating docs for compound Wave...
+Generating namespace index...
+Generating graph info page...
+Generating directory documentation...
+Generating index page...
+Generating page index...
+Generating module index...
+Generating namespace index...
+Generating namespace member index...
+Generating annotated compound index...
+Generating alphabetical compound index...
+Generating hierarchical class index...
+Generating member index...
+Generating file index...
+Generating file member index...
+Generating example index...
+finalizing index lists...
+lookup cache used 816/65536 hits=3015 misses=841
+finished...
+e (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:13: warning: Member timer (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Entity.h:14: warning: Member texture (variable) of class Entity is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:17: warning: Member Menu(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:21: warning: Member setSize(sf::Vector2u) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:22: warning: Member setPosition(sf::Vector2i) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:24: warning: Member setAddress(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:26: warning: Member setTexture(sf::Texture) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:27: warning: Member setTexture(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:29: warning: Member setSprite(sf::Sprite) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:30: warning: Member setSprite(sf::Texture) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:31: warning: Member setSprite(std::string) (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:36: warning: Member getSize() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:37: warning: Member getPosition() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:38: warning: Member getSprite() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:39: warning: Member getTexture() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:40: warning: Member getAddress() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:46: warning: Member opent() (function) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:8: warning: Member sprite (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:9: warning: Member texture (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:10: warning: Member textureAddress (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:11: warning: Member size (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Menu.h:12: warning: Member position (variable) of class Menu is not documented.
+D:/TowerDefense/TowerDefense/Wave.h:11: warning: Member Wave(vector< shared_ptr< Enemy >>) (function) of class Wave is not documented.
+D:/TowerDefense/TowerDefense/Wave.h:12: warning: Member Wave(int lineNumber) (function) of class Wave is not documented.
+D:/TowerDefense/TowerDefense/Wave.h:14: warning: Member spawnEnemy() (function) of class Wave is not documented.
+D:/TowerDefense/TowerDefense/Wave.h:16: warning: Member addEnemy(char type) (function) of class Wave is not documented.
+D:/TowerDefense/TowerDefense/Wave.h:18: warning: Member getSpawnCooldown() (function) of class Wave is not documented.
+*** Doxygen has finished

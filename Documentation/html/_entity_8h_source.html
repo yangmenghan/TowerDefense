@@ -36,7 +36,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <div id="nav-path" class="navpath">
@@ -49,68 +48,48 @@
 <div class="title">Entity.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_entity_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_tile_8h.html">Tile.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Tile.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_entity.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_entity.html">Entity</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_entity.html#aa58364f83a24774ad8d29e2f5e48e06d">    8</a></span>&#160;    sf::Vector2i <a class="code" href="class_entity.html#aa58364f83a24774ad8d29e2f5e48e06d">position</a>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_entity.html#ae32cdf24e4f89bee02c7132c4d6e9c18">    9</a></span>&#160;    sf::Vector2i <a class="code" href="class_entity.html#ae32cdf24e4f89bee02c7132c4d6e9c18">size</a>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_entity.html#a1de3d8d9ab8088f61e6726069b26fa60">   10</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_entity.html#a1de3d8d9ab8088f61e6726069b26fa60">speed</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_entity.html#a48ef4ab143b8d0211877c9f6be42e824">   11</a></span>&#160;    sf::Sprite <a class="code" href="class_entity.html#a48ef4ab143b8d0211877c9f6be42e824">sprite</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_entity.html#a2774f1e938416fab37040a33ec573495">   12</a></span>&#160;    shared_ptr&lt;Tile&gt; <a class="code" href="class_entity.html#a2774f1e938416fab37040a33ec573495">tile</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_entity.html#abccceab981ceb2c361408358a6ff0585">   13</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_entity.html#abccceab981ceb2c361408358a6ff0585">timer</a>;<span class="comment">//To define Config respectively for Enemy and Tower</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_entity.html#ad64dd6d282432a68475f30f7c7bbdc88">   14</a></span>&#160;    sf::Texture <a class="code" href="class_entity.html#ad64dd6d282432a68475f30f7c7bbdc88">texture</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    sf::Vector2i position;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    sf::Vector2i size;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">float</span> speed;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    sf::Sprite sprite;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    shared_ptr&lt;Tile&gt; tile;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">int</span> timer;<span class="comment">//To define Config respectively for Enemy and Tower</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    sf::Texture texture;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//Constructors and destroyers</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_entity.html#a980f368aa07ce358583982821533a54a">Entity</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae">~Entity</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_entity.html">Entity</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_entity.html">Entity</a>();</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//Getters</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    sf::Vector2i <a class="code" href="class_entity.html#a1bc281383bd777ba96dd0c7c989ba1e7">getPosition</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    sf::Vector2i <a class="code" href="class_entity.html#aad4cbcdad1ba43221eff4e5474dfdd58">getSize</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_entity.html#a1ab1df6a898303e678a11d727016dd09">getSpeed</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    sf::Sprite <a class="code" href="class_entity.html#aa5dd2cfe8cd0bd31e908752bf7c4b510">getSprite</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    shared_ptr&lt;Tile&gt; <a class="code" href="class_entity.html#a4c0e3e14381db594a39b0b1fa69b9bc7">getTile</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    sf::Vector2i getPosition();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    sf::Vector2i getSize();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">float</span> getSpeed();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    sf::Sprite getSprite();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    shared_ptr&lt;Tile&gt; getTile();</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//Setters</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a999e10122f45fb582c2d4976f12e4c3e">setPosition</a>(sf::Vector2i mPosition);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a5d01a1d6f13fa685d75ac657d2e72b6b">setSize</a>(sf::Vector2i mSize);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a752b7fb05557c905dcdce931500e700e">setSpeed</a>(<span class="keywordtype">float</span> mSpeed);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#acffd8697cae92e62b0962c78e2d45d06">setSprite</a>(sf::Sprite mSprite);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> setPosition(sf::Vector2i mPosition);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> setSize(sf::Vector2i mSize);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> setSpeed(<span class="keywordtype">float</span> mSpeed);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> setSprite(sf::Sprite mSprite);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//Functions</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a0eca969d39e7b7bc728236f85e02bbb6">draw</a>(sf::RenderWindow&amp;);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw(sf::RenderWindow&amp;);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="ttc" id="_tile_8h_html"><div class="ttname"><a href="_tile_8h.html">Tile.h</a></div></div>
-<div class="ttc" id="class_entity_html_a1bc281383bd777ba96dd0c7c989ba1e7"><div class="ttname"><a href="class_entity.html#a1bc281383bd777ba96dd0c7c989ba1e7">Entity::getPosition</a></div><div class="ttdeci">sf::Vector2i getPosition()</div><div class="ttdef"><b>Definition:</b> Entity.cpp:16</div></div>
-<div class="ttc" id="class_entity_html_a752b7fb05557c905dcdce931500e700e"><div class="ttname"><a href="class_entity.html#a752b7fb05557c905dcdce931500e700e">Entity::setSpeed</a></div><div class="ttdeci">void setSpeed(float mSpeed)</div><div class="ttdef"><b>Definition:</b> Entity.cpp:51</div></div>
-<div class="ttc" id="class_entity_html_aa5dd2cfe8cd0bd31e908752bf7c4b510"><div class="ttname"><a href="class_entity.html#aa5dd2cfe8cd0bd31e908752bf7c4b510">Entity::getSprite</a></div><div class="ttdeci">sf::Sprite getSprite()</div><div class="ttdef"><b>Definition:</b> Entity.cpp:31</div></div>
-<div class="ttc" id="class_entity_html_a999e10122f45fb582c2d4976f12e4c3e"><div class="ttname"><a href="class_entity.html#a999e10122f45fb582c2d4976f12e4c3e">Entity::setPosition</a></div><div class="ttdeci">void setPosition(sf::Vector2i mPosition)</div><div class="ttdef"><b>Definition:</b> Entity.cpp:41</div></div>
-<div class="ttc" id="class_entity_html_a48ef4ab143b8d0211877c9f6be42e824"><div class="ttname"><a href="class_entity.html#a48ef4ab143b8d0211877c9f6be42e824">Entity::sprite</a></div><div class="ttdeci">sf::Sprite sprite</div><div class="ttdef"><b>Definition:</b> Entity.h:11</div></div>
-<div class="ttc" id="class_entity_html_a980f368aa07ce358583982821533a54a"><div class="ttname"><a href="class_entity.html#a980f368aa07ce358583982821533a54a">Entity::Entity</a></div><div class="ttdeci">Entity()</div><div class="ttdef"><b>Definition:</b> Entity.cpp:4</div></div>
-<div class="ttc" id="class_entity_html_a2774f1e938416fab37040a33ec573495"><div class="ttname"><a href="class_entity.html#a2774f1e938416fab37040a33ec573495">Entity::tile</a></div><div class="ttdeci">shared_ptr&lt; Tile &gt; tile</div><div class="ttdef"><b>Definition:</b> Entity.h:12</div></div>
-<div class="ttc" id="class_entity_html_a0eca969d39e7b7bc728236f85e02bbb6"><div class="ttname"><a href="class_entity.html#a0eca969d39e7b7bc728236f85e02bbb6">Entity::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderWindow &amp;)</div><div class="ttdef"><b>Definition:</b> Entity.cpp:66</div></div>
-<div class="ttc" id="class_entity_html_ae32cdf24e4f89bee02c7132c4d6e9c18"><div class="ttname"><a href="class_entity.html#ae32cdf24e4f89bee02c7132c4d6e9c18">Entity::size</a></div><div class="ttdeci">sf::Vector2i size</div><div class="ttdef"><b>Definition:</b> Entity.h:9</div></div>
 <div class="ttc" id="class_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> Entity.h:5</div></div>
-<div class="ttc" id="class_entity_html_acffd8697cae92e62b0962c78e2d45d06"><div class="ttname"><a href="class_entity.html#acffd8697cae92e62b0962c78e2d45d06">Entity::setSprite</a></div><div class="ttdeci">void setSprite(sf::Sprite mSprite)</div><div class="ttdef"><b>Definition:</b> Entity.cpp:56</div></div>
-<div class="ttc" id="class_entity_html_aa58364f83a24774ad8d29e2f5e48e06d"><div class="ttname"><a href="class_entity.html#aa58364f83a24774ad8d29e2f5e48e06d">Entity::position</a></div><div class="ttdeci">sf::Vector2i position</div><div class="ttdef"><b>Definition:</b> Entity.h:8</div></div>
-<div class="ttc" id="class_entity_html_a5d01a1d6f13fa685d75ac657d2e72b6b"><div class="ttname"><a href="class_entity.html#a5d01a1d6f13fa685d75ac657d2e72b6b">Entity::setSize</a></div><div class="ttdeci">void setSize(sf::Vector2i mSize)</div><div class="ttdef"><b>Definition:</b> Entity.cpp:46</div></div>
-<div class="ttc" id="class_entity_html_a1de3d8d9ab8088f61e6726069b26fa60"><div class="ttname"><a href="class_entity.html#a1de3d8d9ab8088f61e6726069b26fa60">Entity::speed</a></div><div class="ttdeci">float speed</div><div class="ttdef"><b>Definition:</b> Entity.h:10</div></div>
-<div class="ttc" id="class_entity_html_adf6d3f7cb1b2ba029b6b048a395cc8ae"><div class="ttname"><a href="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae">Entity::~Entity</a></div><div class="ttdeci">virtual ~Entity()</div><div class="ttdef"><b>Definition:</b> Entity.cpp:9</div></div>
-<div class="ttc" id="class_entity_html_aad4cbcdad1ba43221eff4e5474dfdd58"><div class="ttname"><a href="class_entity.html#aad4cbcdad1ba43221eff4e5474dfdd58">Entity::getSize</a></div><div class="ttdeci">sf::Vector2i getSize()</div><div class="ttdef"><b>Definition:</b> Entity.cpp:21</div></div>
-<div class="ttc" id="class_entity_html_a1ab1df6a898303e678a11d727016dd09"><div class="ttname"><a href="class_entity.html#a1ab1df6a898303e678a11d727016dd09">Entity::getSpeed</a></div><div class="ttdeci">float getSpeed()</div><div class="ttdef"><b>Definition:</b> Entity.cpp:26</div></div>
-<div class="ttc" id="class_entity_html_ad64dd6d282432a68475f30f7c7bbdc88"><div class="ttname"><a href="class_entity.html#ad64dd6d282432a68475f30f7c7bbdc88">Entity::texture</a></div><div class="ttdeci">sf::Texture texture</div><div class="ttdef"><b>Definition:</b> Entity.h:14</div></div>
-<div class="ttc" id="class_entity_html_a4c0e3e14381db594a39b0b1fa69b9bc7"><div class="ttname"><a href="class_entity.html#a4c0e3e14381db594a39b0b1fa69b9bc7">Entity::getTile</a></div><div class="ttdeci">shared_ptr&lt; Tile &gt; getTile()</div><div class="ttdef"><b>Definition:</b> Entity.cpp:36</div></div>
-<div class="ttc" id="class_entity_html_abccceab981ceb2c361408358a6ff0585"><div class="ttname"><a href="class_entity.html#abccceab981ceb2c361408358a6ff0585">Entity::timer</a></div><div class="ttdeci">int timer</div><div class="ttdef"><b>Definition:</b> Entity.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 13 2014 19:35:32 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 14 2014 00:11:38 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
