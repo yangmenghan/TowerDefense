@@ -48,14 +48,15 @@ void LevelManager::gameLoop(RenderWindow& w){
 		field.draw(w);
 		currentPath.draw(w);
 
+		
+
 		//if the game is not paused
-		if (gameSpeed != 0){ 
-
-
-			if (player->getHP() <=0){
-				gameOver(); 
-				return;
-			} else if (waves.size() == 0 && enemies.empty()){
+		if (player->getHP() <= 0){
+			gameOver();
+			return;
+		}
+		else if (gameSpeed != 0){ 
+			if (waves.size() == 0 && enemies.empty()){
 				victory();		// you win if there is no enemy and no wave left
 				return;
 			}
@@ -64,7 +65,6 @@ void LevelManager::gameLoop(RenderWindow& w){
 				waves.back().spawnEnemy();
 			}
 			
-
 			//Tower actions
 			for (int i = 0; i < towers.size(); i++){
 				if (towers.at(i)->getLevel() == 0){

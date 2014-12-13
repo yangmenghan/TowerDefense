@@ -138,7 +138,7 @@ Menu constants
 extern const string		GAME_MENU_DEFAULT_TEXTURE = "sprites/backgrounds/gamebg.png";
 extern const string		START_MENU_TEXTURE		  = "sprites/backgrounds/background.png";
 extern const string		CREDITS_SPRITE_ADD		  = "sprites/backgrounds/credits.png";
-extern const string		GAMEOVER_MENU_TEXTURE			= "sprites/gameover.png";
+extern const string		GAMEOVER_MENU_TEXTURE			= "sprites/backgrounds/gameover.png";
 extern const string		WIN_MENU_TEXTURE				="sprites/youwin.png";
 
 /*
