@@ -59,21 +59,21 @@ extern const int		NORMAL_ENEMY_HP			= 100;
 extern const int		NORMAL_ENEMY_BOUNTY		= 100;
 extern const int		NORMAL_ENEMY_SCOREVALUE = 100;
 extern const float		NORMAL_ENEMY_DEFENCE	= 10;
-extern const string		NORMAL_ENEMY_SPRITE_ADD = "sprites/Enemy4.png";
+extern const string		NORMAL_ENEMY_SPRITE_ADD = "sprites/enemies/basic_enemy.png";
 
 extern const float		FAST_ENEMY_SPEED		= 5;
 extern const int		FAST_ENEMY_HP			= 50;
 extern const int		FAST_ENEMY_BOUNTY		= 150;
 extern const int		FAST_ENEMY_SCOREVALUE	= 150;
 extern const float		FAST_ENEMY_DEFENCE		= 7;
-extern const string		FAST_ENEMY_SPRITE_ADD	= "sprites/Enemy2.png";
+extern const string		FAST_ENEMY_SPRITE_ADD	= "sprites/enemies/fast_enemy.png";
 
 extern const float		BOMB_ENEMY_SPEED		= 5;
 extern const int		BOMB_ENEMY_HP			= 5000;
 extern const int		BOMB_ENEMY_BOUNTY		= 100;
 extern const int		BOMB_ENEMY_SCOREVALUE	= 200;
 extern const float		BOMB_ENEMY_DEFENCE		= 15;
-extern const string		BOMB_ENEMY_SPRITE_ADD	= "sprites/Enemy1.png";
+extern const string		BOMB_ENEMY_SPRITE_ADD	= "sprites/enemies/bomb_enemy.png";
 extern const int		BOMB_ENEMY_TRIGGER		= 4800;
 extern const int		BOMB_ENEMY_COUNTDOWN	= 120;
 
@@ -82,7 +82,7 @@ extern const int		TOUGH_ENEMY_HP			= 500;
 extern const int		TOUGH_ENEMY_BOUNTY		= 300;
 extern const int		TOUGH_ENEMY_SCOREVALUE	= 350;
 extern const float		TOUGH_ENEMY_DEFENCE		= 10;
-extern const string		TOUGH_ENEMY_SPRITE_ADD	= "sprites/Enemy5.png";
+extern const string		TOUGH_ENEMY_SPRITE_ADD	= "sprites/enemies/tough_enemy.png";
 
 
 /*
