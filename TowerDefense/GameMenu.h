@@ -32,26 +32,65 @@ private:
 
 public:
 
-//Constructors, destructors
+//! Default Constructor
 	GameMenu();
+
+//! Constructor inherited from mother class Menu
 	GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition);
+
+//! Destructor
 	~GameMenu();
 	
 	void opent(){}; //TODO : for test
 
-//Getters
-//Do we need getters and setters for buttons ?
+//! Gets game speed
+	/*!
+		\return float
+	*/
 	float getGameSpeed();
 
-//Setters
+//! Sets game speed
+	/*!
+		\param float speed value to which game speed will be set
+	*/
 	void setGameSpeed(float);
 
 
 //Fonctions
+
+//! Pause Game
+	/*!
+		Pauses game
+	*/
 	void pauseGame();
+
+//! Speed Game up
+	/*!
+		Speeds game up if the game is paused or at normal speed
+	*/
 	void speedGame();
+
+//! Return speed
+	/*!
+		Resets speed of the game
+	*/
 	void returnSpeed();
+
+//! Restart game
+	/*!
+	Resets game
+	*/
 	void restartGame();
+
+//! Draw
+	/*!
+		Displays elements of the game, such as buttons and player values
+	*/
 	void draw(sf::RenderWindow& w);
+
+//! Resolve event
+	/*!
+		Handles events in the game. Passes them to buttons and game fields.
+	*/
 	void resolveEvent(sf::Event event);
 };

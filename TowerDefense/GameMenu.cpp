@@ -100,13 +100,7 @@ void GameMenu::speedGame()
 
 void GameMenu::restartGame()
 {
-	//MenuManager* m = MenuManager::getMenuManager();
-
-	//m->popMenu();
-	//m->addMenu(make_shared<GameMenu>(GAME_MENU_DEFAULT_TEXTURE, sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT), sf::Vector2i(0, 0)));
-
 	LevelManager::getLevelManager()->restartGame();
-
 }
 
 
@@ -157,13 +151,14 @@ void GameMenu::resolveEvent(sf::Event event)
 		pauseButton.resolveEvent(event);
 		if (pauseButton.checkClick())
 		{
-			if (gameSpeed == 0)
+			speedButton.spriteUpdate(0);
+			if (gameSpeed != 0)
 			{
-				returnSpeed();
+				pauseGame();
 			}
 			else
 			{
-				pauseGame();
+				returnSpeed();
 			}
 		}
 	}
@@ -172,13 +167,14 @@ void GameMenu::resolveEvent(sf::Event event)
 		speedButton.resolveEvent(event);
 		if (speedButton.checkClick())
 		{
-			if (gameSpeed == 2)
+			pauseButton.spriteUpdate(0);
+			if (gameSpeed != 2)
 			{
-				returnSpeed();
+				speedGame();
 			}
 			else
 			{
-				speedGame();
+				returnSpeed();
 			}
 		}
 	}
@@ -217,7 +213,6 @@ void GameMenu::resolveEvent(sf::Event event)
 	}
 	
 	LevelManager::getLevelManager()->getField().resolveEvent(event);
-	
 }
 
 

@@ -100,7 +100,7 @@ public:
 
 //! Resolve Event
 /*!
-	Handles all events that take place in the button and determine whether he was clicked or not
+	Handles all events that take place in the button and determine whether it was clicked or not
 	\param event an SFML event that will be handled
 */
 	void Button::resolveEvent(sf::Event event);
