@@ -21,6 +21,7 @@ Enemy::Enemy(){
 	speed = 0;
 	slowed = false;
 	maxHp = 0;
+	origin_speed = speed;
 }
 
 
@@ -33,6 +34,7 @@ Enemy::Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite m
 	sprite = mSprite;
 	slowed = false;
 	maxHp = mHP;
+	origin_speed = speed;
 }
 
 Enemy::~Enemy(){}
@@ -104,13 +106,15 @@ void Enemy::dieWithoutBonus(){
 void Enemy::slow(int frames){
 	slowTime = frames;
 	slowed = true;
-	if (speed - SLOW_EFFECT > 0)
+	if (speed - SLOW_EFFECT > 1)
 		speed = speed - SLOW_EFFECT;
 };
 
 void Enemy::unSlow(){
-	speed = speed + SLOW_EFFECT;
-	slowed = false;
+	if (speed + SLOW_EFFECT < origin_speed)
+		speed = speed + SLOW_EFFECT;
+	else if(speed + SLOW_EFFECT == origin_speed)
+		slowed = false;
 };
 
 void Enemy::updatePath(){

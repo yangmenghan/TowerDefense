@@ -100,9 +100,6 @@
     <ClCompile Include="Path.cpp">
       <Filter>Source\Interface</Filter>
     </ClCompile>
-    <ClCompile Include="TowerTest.cpp">
-      <Filter>Source\UnitTests</Filter>
-    </ClCompile>
     <ClCompile Include="UnitTests.cpp">
       <Filter>Source\UnitTests</Filter>
     </ClCompile>

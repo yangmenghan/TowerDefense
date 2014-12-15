@@ -37,6 +37,7 @@ protected:
 	int bounty;
 	int scoreValue;
 	int slowTime;
+	float origin_speed;
 	bool slowed;
 	Path path;
 };

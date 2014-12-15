@@ -134,7 +134,7 @@ extern const string		SLOW_TOWER_SPRITE_ADD;
 /*
 Attack constants
 */
-extern const int		SLOW_EFFECT;
+extern const float		SLOW_EFFECT;
 
 
 /*

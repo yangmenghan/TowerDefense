@@ -54,22 +54,22 @@ extern const int		WAVE_COOLDOWN			= 300;
 Enemy constants
 */
 
-extern const float		NORMAL_ENEMY_SPEED		= 5;
-extern const int		NORMAL_ENEMY_HP			= 100;
+extern const float		NORMAL_ENEMY_SPEED		= 3;
+extern const int		NORMAL_ENEMY_HP			= 220;
 extern const int		NORMAL_ENEMY_BOUNTY		= 2;
 extern const int		NORMAL_ENEMY_SCOREVALUE = 10;
 extern const float		NORMAL_ENEMY_DEFENCE	= 10;
 extern const string		NORMAL_ENEMY_SPRITE_ADD = "sprites/enemies/basic_enemy.png";
 
-extern const float		FAST_ENEMY_SPEED		= 10;
-extern const int		FAST_ENEMY_HP			= 80;
+extern const float		FAST_ENEMY_SPEED		= 7;
+extern const int		FAST_ENEMY_HP			= 180;
 extern const int		FAST_ENEMY_BOUNTY		= 1;
 extern const int		FAST_ENEMY_SCOREVALUE	= 5;
 extern const float		FAST_ENEMY_DEFENCE		= 7;
 extern const string		FAST_ENEMY_SPRITE_ADD	= "sprites/enemies/fast_enemy.png";
 
-extern const float		BOMB_ENEMY_SPEED		= 3;
-extern const int		BOMB_ENEMY_HP			= 300;
+extern const float		BOMB_ENEMY_SPEED		= 2;
+extern const int		BOMB_ENEMY_HP			= 800;
 extern const int		BOMB_ENEMY_BOUNTY		= 3;
 extern const int		BOMB_ENEMY_SCOREVALUE	= 15;
 extern const float		BOMB_ENEMY_DEFENCE		= 15;
@@ -78,7 +78,7 @@ extern const int		BOMB_ENEMY_TRIGGER		= 50;
 extern const int		BOMB_ENEMY_COUNTDOWN	= 120;
 
 extern const float		TOUGH_ENEMY_SPEED		= 2;
-extern const int		TOUGH_ENEMY_HP			= 500;
+extern const int		TOUGH_ENEMY_HP			= 1000;
 extern const int		TOUGH_ENEMY_BOUNTY		= 5;
 extern const int		TOUGH_ENEMY_SCOREVALUE	= 25;
 extern const float		TOUGH_ENEMY_DEFENCE		= 10;
@@ -116,10 +116,10 @@ extern const int		MONEY_TOWER_INCOME[3]	= {12, 24, 36};
 extern const string		MONEY_TOWER_SPRITE_ADD	= "sprites/money_tower.png";
 
 extern const float		SLOW_TOWER_DAMAGE[3]	= { 0, 0, 0 };
-extern const int		SLOW_TOWER_SLOW_AMOUNT[3]= { 1, 3, 8 };
+extern const int		SLOW_TOWER_SLOW_AMOUNT[3]= { 1, 3, 7 };
 extern const int		SLOW_TOWER_SPEED[3]		= {20, 15, 10};
 extern const float		SLOW_TOWER_RANGE[3]		= { 125, 150, 175 };
-extern const int		SLOW_TOWER_PRICE		= 10;
+extern const int		SLOW_TOWER_PRICE		= 5;
 extern const int		SLOW_TOWER_INCOME[3]	= {4, 8, 12};
 extern const string		SLOW_TOWER_SPRITE_ADD	= "sprites/slow_tower.png";
 
@@ -127,7 +127,7 @@ extern const string		SLOW_TOWER_SPRITE_ADD	= "sprites/slow_tower.png";
 Attack constants
 */
 
-extern const int		SLOW_EFFECT				= 1;
+extern const float		SLOW_EFFECT				= 0.1;
 
 /*
 Menu constants
