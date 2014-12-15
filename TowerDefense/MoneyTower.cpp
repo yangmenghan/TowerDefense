@@ -23,6 +23,15 @@ MoneyTower::MoneyTower(shared_ptr<Tile> mTile)
 	attack = make_shared<NormalAttack>();
 	setAttack();
 	setRangeCircle();
+
+	if (!font.loadFromFile(FONT))
+	{
+		//TODO erreur
+	}
+	moneyGenerationDisplay.setFont(font);
+	moneyGenerationDisplay.setCharacterSize(14);
+	moneyGenerationDisplay.setColor(sf::Color::Green);
+	moneyGenerationDisplay.setPosition(sf::Vector2f(float(tile->getPositionPixel().x - 5), float(tile->getPositionPixel().y + 5)));
 }
 
 void MoneyTower::doAttack(sf::RenderWindow& w)
@@ -44,11 +53,38 @@ void MoneyTower::generateMoney()
 		{
 			LevelManager::getLevelManager()->getPlayer()->manageMoney(MONEY_TOWER_GENERATION_UNIT[level - 1]);
 			timer = speed[level - 1];
+			displayTimer = 0;
 		}
 	}
 	else
 	{
 		sprite.setColor(sf::Color(255, 255, 255, 255));
 		timer--;
+	}
+}
+
+void MoneyTower::draw(sf::RenderWindow& w)
+{
+	w.draw(sprite);
+	displayGeneratedMoney();
+	w.draw(moneyGenerationDisplay);
+}
+
+void MoneyTower::displayGeneratedMoney()
+{
+	if (displayTimer == 0)
+	{
+		moneyGenerationDisplay.setPosition(sf::Vector2f(float(tile->getPositionPixel().x - 5), float(tile->getPositionPixel().y + 5)));
+		moneyGenerationDisplay.setString("+" + to_string(MONEY_TOWER_GENERATION_UNIT[level - 1]) + "$");
+		displayTimer++;
+	}
+	else if (displayTimer == 15)
+	{
+		moneyGenerationDisplay.setString("");
+	}
+	else
+	{
+		moneyGenerationDisplay.setPosition(moneyGenerationDisplay.getPosition() + sf::Vector2f(0, -1));
+		displayTimer++;
 	}
 }
