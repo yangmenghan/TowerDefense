@@ -33,11 +33,10 @@ TEST(NormalEnemy, construction)
 
 int main(int argc, char **argv)
 {
-
 	::testing::InitGoogleTest(&argc, argv);
 	RUN_ALL_TESTS();
 
-	string m3;
-	cout << "fin des tests unitaires";
-	getline(cin, m3);
+	system("pause");
+	getchar();
+	return 0;
 }

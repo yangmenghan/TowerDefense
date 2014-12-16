@@ -146,7 +146,18 @@ void GameMenu::draw(sf::RenderWindow& w)
 
 	if (levelManager->getTrigger())
 	{
-		comingWaveDisplay.setString("Wave " + std::to_string((levelManager->getCurrentWaveNumber()+1)) + "!");
+		if ((levelManager->getCurrentWaveNumber() + 1) == WAVE_TOTAL)
+		{
+			comingWaveDisplay.setString("Last Wave");
+		}
+		else if ((levelManager->getCurrentWaveNumber() + 1) == WAVE_TOTAL + 1)
+		{
+			comingWaveDisplay.setString("Finished");
+		}
+		else
+		{
+			comingWaveDisplay.setString("Wave " + std::to_string((levelManager->getCurrentWaveNumber() + 1)) + "!");
+		}
 	}
 	else
 	{
