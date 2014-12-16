@@ -50,6 +50,8 @@ public:
 	void restartGame();
 
 	int getCurrentWaveNumber();
+	void triggerWaveDisplay(bool mtrigger);
+	bool getTrigger();
 
 private:
 
@@ -63,7 +65,7 @@ private:
 	int waveCooldown;
 
 	//end of cooldowns
-
+	bool trigger;
 
 	float gameSpeed = 1;
 

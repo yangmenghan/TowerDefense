@@ -55,7 +55,7 @@ Enemy constants
 */
 
 extern const float		NORMAL_ENEMY_SPEED		= 3;
-extern const int		NORMAL_ENEMY_HP			= 220;
+extern const int		NORMAL_ENEMY_HP			= 210;
 extern const int		NORMAL_ENEMY_BOUNTY		= 2;
 extern const int		NORMAL_ENEMY_SCOREVALUE = 10;
 extern const float		NORMAL_ENEMY_DEFENCE	= 10;

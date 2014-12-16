@@ -28,22 +28,25 @@ GameMenu::GameMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector
 	pointsCountDisplay.setFont(font);
 	waveCountDisplay.setFont(font);
 	moneyCountDisplay.setFont(font);
+	comingWaveDisplay.setFont(font);
 
 	lifeCountDisplay.setColor(sf::Color::Green);
 	pointsCountDisplay.setColor(sf::Color::Green);
 	waveCountDisplay.setColor(sf::Color::Green);
 	moneyCountDisplay.setColor(sf::Color::Green);
+	comingWaveDisplay.setColor(sf::Color::Green);
 
 	lifeCountDisplay.setCharacterSize(14);
 	pointsCountDisplay.setCharacterSize(14);
 	waveCountDisplay.setCharacterSize(14);
 	moneyCountDisplay.setCharacterSize(14);
+	comingWaveDisplay.setCharacterSize(50);
 
 	lifeCountDisplay.setPosition(LIFE_COUNT_DISPLAY_POSITION);
 	pointsCountDisplay.setPosition(POINTS_COUNT_DISPLAY_POSITION);
 	waveCountDisplay.setPosition(WAVE_COUNT_DISPLAY_POSITION);
 	moneyCountDisplay.setPosition(MONEY_COUNT_DISPLAY_POSITION);
-
+	comingWaveDisplay.setPosition(WINDOW_WIDTH / 2 - 100, WINDOW_HEIGHT / 2 - 100);
 
 	shared_ptr<AudioManager> audio = AudioManager::getAudioManager();
 	if (audio->isMute() == false)
@@ -131,7 +134,7 @@ void GameMenu::draw(sf::RenderWindow& w)
 
 	std::string moneyCount = std::to_string(levelManager->getPlayer()->getMoney());
 	moneyCountDisplay.setString("Gold : " + moneyCount);
-
+	
 	string waveCount = std::to_string((levelManager->getCurrentWaveNumber()));
 	waveCountDisplay.setString("Wave " + waveCount + "/" + std::to_string(WAVE_TOTAL));
 
@@ -139,7 +142,17 @@ void GameMenu::draw(sf::RenderWindow& w)
 	w.draw(pointsCountDisplay);
 	w.draw(waveCountDisplay);
 	w.draw(moneyCountDisplay);
+	w.draw(comingWaveDisplay);
 
+	if (levelManager->getTrigger())
+	{
+		comingWaveDisplay.setString("Wave " + std::to_string((levelManager->getCurrentWaveNumber()+1)) + "!");
+	}
+	else
+	{
+		comingWaveDisplay.setString("");
+	}
+	
 	levelManager->gameLoop(w);
 
 }
@@ -214,5 +227,8 @@ void GameMenu::resolveEvent(sf::Event event)
 	
 	LevelManager::getLevelManager()->getField().resolveEvent(event);
 }
+
+
+
 
 

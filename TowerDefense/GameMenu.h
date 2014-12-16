@@ -28,6 +28,7 @@ private:
 	sf::Text pointsCountDisplay;
 	sf::Text waveCountDisplay;
 	sf::Text moneyCountDisplay;
+	sf::Text comingWaveDisplay;
 
 
 public:
@@ -93,4 +94,6 @@ public:
 		Handles events in the game. Passes them to buttons and game fields.
 	*/
 	void resolveEvent(sf::Event event);
+
+	void displayComingWay();
 };

@@ -106,17 +106,20 @@ void LevelManager::gameLoop(RenderWindow& w){
 
 //proceed to the terminaison of current wave and pop the next wave
 void LevelManager::nextWave(){
-	if (enemies.empty()){ // the spawn of the next wave start if there is no enemy left on the map
 		if (waveCooldown != 0){
+			if (waveCooldown <= 50)
+			{
+				triggerWaveDisplay(true);
+			}
 			waveCooldown--;
 		}
 		else {
 			waveCooldown = WAVE_COOLDOWN;
 			waves.pop_back();
+			triggerWaveDisplay(false);
 		}
 	}
 	
-}
 
 //load
 void LevelManager::loadWaves(){
@@ -194,7 +197,6 @@ void LevelManager::removeTower(int index){
 
 vector<shared_ptr<Enemy>> LevelManager::getEnemies(){
 	return enemies;
-
 }
 
 vector<shared_ptr<Tower>> LevelManager::getTowers(){
@@ -225,4 +227,14 @@ void LevelManager::setSpeed(int speed){
 
 int LevelManager::getCurrentWaveNumber(){
 	return (WAVE_TOTAL - waves.size() + 1);
+}
+
+void LevelManager::triggerWaveDisplay(bool mtrigger)
+{
+	trigger = mtrigger;
+}
+
+bool LevelManager::getTrigger()
+{
+	return trigger;
 }
