@@ -24,12 +24,32 @@ TEST(fraction, addition2)
 
 */
 
-TEST(NormalEnemy, construction)
+TEST(Enemy, construction)
 {
+	Field f;
 	NormalEnemy enemy;
 	EXPECT_EQ(NORMAL_ENEMY_HP, enemy.getHP());
+
+	enemy.setTile(f.getStartTile());
+	EXPECT_EQ(f.getStartTile()->getPosition(), enemy.getTile()->getPosition());
 }
 
+TEST(Enemy, move){
+	Field f;
+	NormalEnemy enemy;
+	enemy.setTile(f.getStartTile());
+	enemy.updatePath();
+	enemy.move();
+	EXPECT_GT(f.getStartTile()->getPosition().x,enemy.getPosition().x);
+
+}
+
+TEST(BombEnemy, explode){
+	Field f;
+	BombEnemy b;
+	b.takeDamage(BOMB_ENEMY_HP * 4 / 5);
+	b.move();
+}
 
 int main(int argc, char **argv)
 {

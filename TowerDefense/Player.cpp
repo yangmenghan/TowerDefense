@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "Config.h"
+#include "AudioManager.h"
 
 Player::Player(){
 	money = INIT_MONEY;
@@ -24,6 +25,9 @@ void Player::manageScore(int s){
 
 void Player::manageHP(int h){
 	hp = hp + h;
+	if (h<0){
+		AudioManager::getAudioManager()->playSound(SOUND_DAMAGE);
+	}
 };
 
 

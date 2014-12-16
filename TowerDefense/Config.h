@@ -24,6 +24,16 @@ Audio constants
 */
 
 extern const string		MAIN_BGM;
+extern const string		SOUND_SELECT;
+extern const string		SOUND_HOVER;
+extern const string		SOUND_GAMEOVER;
+extern const string		SOUND_WIN;
+extern const string		SOUND_NORMAL_ATTACK;
+extern const string		SOUND_SLOW_ATTACK;
+extern const string		SOUND_MONEY;
+extern const string		SOUND_ZONE_ATTACK;
+extern const string		SOUND_DAMAGE;
+extern const string		SOUND_EXPLOSION;
 
 
 /*

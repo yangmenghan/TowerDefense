@@ -1,6 +1,6 @@
 #include "AreaAttack.h"
 #include "LevelManager.h"
-
+#include "AudioManager.h"
 
 AreaAttack::AreaAttack()
 {
@@ -65,14 +65,17 @@ void AreaAttack::resolve(sf::RenderWindow& w)
 		if (timer == 0)
 		{
 			timer = speed;
+			AudioManager::getAudioManager()->playSound(SOUND_ZONE_ATTACK);
 		}
 		else
 		{
+
 			attackAnimation(w);
 			enemiesInRange = getTarget();
 			
 			if (!enemiesInRange.empty())
 			{
+				
 				for (shared_ptr<Enemy> e : enemiesInRange)
 				{
 					e->takeDamage(damage);
@@ -82,5 +85,8 @@ void AreaAttack::resolve(sf::RenderWindow& w)
 		}
 	}
 	else
+	{
 		timer = speed;
+	}
+		
 }

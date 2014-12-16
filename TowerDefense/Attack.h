@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "Enemy.h"
 
 class Attack
@@ -7,7 +8,7 @@ class Attack
 
 public:
 	Attack();
-	~Attack();
+	virtual ~Attack();
 
 	float getDamage();
 	float getSlowAmount();

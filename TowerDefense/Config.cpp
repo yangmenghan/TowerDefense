@@ -19,6 +19,16 @@ Audio constants
 */
 
 extern const string		MAIN_BGM				= "music/test.ogg";
+extern const string		SOUND_SELECT			= "sounds/select.wav";
+extern const string		SOUND_HOVER				= "sounds/hover.wav";
+extern const string		SOUND_GAMEOVER			= "sounds/gameover.wav";
+extern const string		SOUND_WIN				= "sounds/win.wav";
+extern const string		SOUND_NORMAL_ATTACK		= "sounds/attack_normal.wav";
+extern const string		SOUND_SLOW_ATTACK		= "sounds/attack_slow.wav";
+extern const string		SOUND_MONEY				= "sounds/attack_money.wav";
+extern const string		SOUND_ZONE_ATTACK		= "sounds/attack_zone.wav";
+extern const string		SOUND_DAMAGE			= "sounds/damage.wav";
+extern const string		SOUND_EXPLOSION			= "sounds/explosion.wav";
 
 /*
 Tile constants
@@ -191,5 +201,5 @@ extern const sf::Vector2i	GO_BACK_BUTTON_POSITION = sf::Vector2i(((WINDOW_WIDTH 
 /*
 Other constants
 */
-extern const int		INIT_MONEY				= 8;
+extern const int		INIT_MONEY				= 80;
 extern const int		INIT_HP					= 10;

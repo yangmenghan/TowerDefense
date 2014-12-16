@@ -27,6 +27,7 @@ void NormalAttack::resolve(sf::RenderWindow& w)
 	{
 		shared_ptr<Enemy> enemy = getTarget();
 		if (enemy != NULL){
+
 			targetDistance = sqrt(pow(enemy->getPosition().x + 25 - center.x, 2)
 				+ pow((enemy->getPosition().y + 25 - center.y), 2));
 			setAttackRayAngle(enemy);

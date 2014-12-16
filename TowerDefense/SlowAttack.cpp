@@ -1,5 +1,6 @@
 #include "SlowAttack.h"
 #include "LevelManager.h"
+#include "AudioManager.h"
 
 
 SlowAttack::SlowAttack()
@@ -28,14 +29,18 @@ void SlowAttack::resolve(sf::RenderWindow& w)
 	{
 		shared_ptr<Enemy> enemy = getTarget();
 		if (enemy != NULL){
+			
 			targetDistance = sqrt(pow(enemy->getPosition().x + 25 - center.x, 2)
 				+ pow((enemy->getPosition().y + 25 - center.y), 2));
 			setAttackRayAngle(enemy);
 			attackAnimation(w);
-			enemy->slow(slowAmount);
+			
 			timer--;
+
 			if (timer == 0)
 			{
+				AudioManager::getAudioManager()->playSound(SOUND_SLOW_ATTACK);
+				enemy->slow(slowAmount);
 				timer = speed;
 			}
 		}

@@ -1,5 +1,8 @@
 #pragma once
 #include <memory>
+#include <map>
+#include <string>
+#include <SFML/Audio.hpp>
 
 using namespace std;
 
@@ -9,6 +12,9 @@ private:
 	bool ismute;
 	bool loaded;
 	static shared_ptr<AudioManager> audioManager;
+	sf::Sound sound;
+	map<string, sf::SoundBuffer> buffers;
+
 public:
 	//! A constructor
 	/*!
@@ -29,7 +35,9 @@ public:
 	/*!
 	\return If the file is opened successfully and played
 	*/
-	bool play();									
+	bool play();
+
+	bool playSound(string add);
 
 	//! A function to get the AudioManager
 	static shared_ptr<AudioManager> getAudioManager();
