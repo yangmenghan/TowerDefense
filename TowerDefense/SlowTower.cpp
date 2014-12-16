@@ -29,7 +29,6 @@ SlowTower::SlowTower(shared_ptr<Tile> mTile)
 
 void SlowTower::doAttack(sf::RenderWindow& w)
 {
-
 	attack->resolve(w);
 }
 

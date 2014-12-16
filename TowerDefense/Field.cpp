@@ -96,7 +96,7 @@ Path Field::computePath(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)	//algori
 	sf::Vector2i vec1 = tile1->getPosition();
 	sf::Vector2i vec2 = tile2->getPosition();
 	int m = vec1.x + vec1.y * TILE_NUM_VER;  //  start tile
-	int n = vec2.x + vec2.y * TILE_NUM_VER;  // destination tile
+	int n = vec2.x + vec2.y * TILE_NUM_VER;  //  destination tile
 
 	int t[TILE_NUM][TILE_NUM];		//build matrice of graph (TILE_NUM_HOR*TILE_NUM_VER, TILE_NUM_HOR*TILE_NUM_VER Tiles)
 
@@ -110,16 +110,16 @@ Path Field::computePath(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)	//algori
 				i == j + TILE_NUM_VER ||
 				i == j - TILE_NUM_VER)
 			{
-				t[i][j] = 1;											 // have link between Tile i and Tile j
+				t[i][j] = 1;											// Tile i and Tile j share a side
 			}
 			else if (i == j){
-				t[i][j] = 0;
+				t[i][j] = 0;											// Tile i and j are the same tile
 			}
 			else {
-				t[i][j] = 999;												// no link between Tile i and Tile j
+				t[i][j] = 999;											// Tile i and Tile j do not share a side
 			}
-		};
-	};
+		}
+	}
 
 	for (int k = 0; k < TILE_NUM_HOR*TILE_NUM_VER; k++)
 	{
@@ -167,7 +167,6 @@ Path Field::computePath(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)	//algori
 			}
 		}																// change the distances
 	}
-	//return D[n];
 
 	vector<shared_ptr<Tile>> path;
 	if (D[n] == 999)
@@ -197,7 +196,7 @@ Path Field::computePath(shared_ptr<Tile> tile1, shared_ptr<Tile> tile2)	//algori
 			time -= 1;
 			path.insert(path.begin(), tilesMap[g]);
 		}
-		else if (((g + 1) % TILE_NUM_VER != 0) && (D[g - 1] == time - 1))
+		else if (((g + 1) % TILE_NUM_VER != 0) && (D[g + 1] == time - 1))
 		{
 			g += 1;
 			time -= 1;
