@@ -63,44 +63,68 @@
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//Constructor and destructor</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_menu.html">Menu</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_menu.html">Menu</a>(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_menu.html">Menu</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_menu.html#ad466dd83355124a6ed958430450bfe94">Menu</a>();</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//Setters</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> setSize(sf::Vector2u);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> setPosition(sf::Vector2i);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> setAddress(std::string);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> setTexture(sf::Texture);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> setTexture(std::string);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_menu.html#ad466dd83355124a6ed958430450bfe94">Menu</a>(std::string myTextureAdress, sf::Vector2u mySize, sf::Vector2i myPosition);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_menu.html">Menu</a>();</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> setSprite(sf::Sprite);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> setSprite(sf::Texture);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> setSprite(std::string);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//Getters</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    sf::Vector2u getSize();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    sf::Vector2i getPosition();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    sf::Sprite getSprite();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    sf::Texture getTexture();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::string getAddress();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//Setters</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    sets size of the Menu</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_menu.html#a73160bee6f7a67c04ffe63b58fc19c7c">setSize</a>(sf::Vector2u);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">    sets position of the Menu</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_menu.html#a41687c51ee454954ce7ec116cc1f7459">setPosition</a>(sf::Vector2i);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//Functions</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw(sf::RenderWindow&amp;);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> close();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> opent();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> resolveEvent(sf::Event) = 0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//Getters</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    gets size of the Menu</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    sf::Vector2u <a class="code" href="class_menu.html#a570493d92f586ea813ecf3c9ea064bb9">getSize</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">    gets position of the Menu</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    sf::Vector2i <a class="code" href="class_menu.html#ada5303b1b8997b3d117b8a553764d10f">getPosition</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">//Functions</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">        Displays Menu</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">        \param w the window in which the Menu is rendered</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_menu.html#a318acc3dae74a054b4e97871344ef13c">draw</a>(sf::RenderWindow&amp; w);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">    Pure virtual function</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">    Handles events from the menu et transmits them to buttons.</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">    \param an SFML event</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_menu.html#a91ec4d6d898e740524b1fe3312d8f197">resolveEvent</a>(sf::Event) = 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> close();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> opent();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="ttc" id="class_menu_html_ad466dd83355124a6ed958430450bfe94"><div class="ttname"><a href="class_menu.html#ad466dd83355124a6ed958430450bfe94">Menu::Menu</a></div><div class="ttdeci">Menu()</div><div class="ttdoc">Default Constructor. </div><div class="ttdef"><b>Definition:</b> Menu.cpp:6</div></div>
 <div class="ttc" id="class_menu_html"><div class="ttname"><a href="class_menu.html">Menu</a></div><div class="ttdef"><b>Definition:</b> Menu.h:5</div></div>
+<div class="ttc" id="class_menu_html_a73160bee6f7a67c04ffe63b58fc19c7c"><div class="ttname"><a href="class_menu.html#a73160bee6f7a67c04ffe63b58fc19c7c">Menu::setSize</a></div><div class="ttdeci">void setSize(sf::Vector2u)</div><div class="ttdoc">Set size. </div><div class="ttdef"><b>Definition:</b> Menu.cpp:41</div></div>
+<div class="ttc" id="class_menu_html_ada5303b1b8997b3d117b8a553764d10f"><div class="ttname"><a href="class_menu.html#ada5303b1b8997b3d117b8a553764d10f">Menu::getPosition</a></div><div class="ttdeci">sf::Vector2i getPosition()</div><div class="ttdoc">Get position. </div><div class="ttdef"><b>Definition:</b> Menu.cpp:34</div></div>
+<div class="ttc" id="class_menu_html_a91ec4d6d898e740524b1fe3312d8f197"><div class="ttname"><a href="class_menu.html#a91ec4d6d898e740524b1fe3312d8f197">Menu::resolveEvent</a></div><div class="ttdeci">virtual void resolveEvent(sf::Event)=0</div><div class="ttdoc">Resolve Events. </div><div class="ttdef"><b>Definition:</b> Menu.cpp:61</div></div>
+<div class="ttc" id="class_menu_html_a570493d92f586ea813ecf3c9ea064bb9"><div class="ttname"><a href="class_menu.html#a570493d92f586ea813ecf3c9ea064bb9">Menu::getSize</a></div><div class="ttdeci">sf::Vector2u getSize()</div><div class="ttdoc">Get size. </div><div class="ttdef"><b>Definition:</b> Menu.cpp:29</div></div>
+<div class="ttc" id="class_menu_html_a41687c51ee454954ce7ec116cc1f7459"><div class="ttname"><a href="class_menu.html#a41687c51ee454954ce7ec116cc1f7459">Menu::setPosition</a></div><div class="ttdeci">void setPosition(sf::Vector2i)</div><div class="ttdoc">Set position. </div><div class="ttdef"><b>Definition:</b> Menu.cpp:46</div></div>
+<div class="ttc" id="class_menu_html_a318acc3dae74a054b4e97871344ef13c"><div class="ttname"><a href="class_menu.html#a318acc3dae74a054b4e97871344ef13c">Menu::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderWindow &amp;w)</div><div class="ttdoc">draw </div><div class="ttdef"><b>Definition:</b> Menu.cpp:53</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 14 2014 00:11:39 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 16 2014 18:42:01 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

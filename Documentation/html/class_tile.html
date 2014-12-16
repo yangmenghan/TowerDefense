@@ -99,7 +99,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad49285b0453a229798c64a08a4480de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of this tile.  <a href="#ad49285b0453a229798c64a08a4480de5">More...</a><br /></td></tr>
 <tr class="separator:ad49285b0453a229798c64a08a4480de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a388c6caf78a0c0063b229c2b10eb4e1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a388c6caf78a0c0063b229c2b10eb4e1c">setTower</a> (shared_ptr&lt; <a class="el" href="class_tower.html">Tower</a> &gt; tower)</td></tr>
-<tr class="memdesc:a388c6caf78a0c0063b229c2b10eb4e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a tower in this tile.  <a href="#a388c6caf78a0c0063b229c2b10eb4e1c">More...</a><br /></td></tr>
+<tr class="memdesc:a388c6caf78a0c0063b229c2b10eb4e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a tower on this tile.  <a href="#a388c6caf78a0c0063b229c2b10eb4e1c">More...</a><br /></td></tr>
 <tr class="separator:a388c6caf78a0c0063b229c2b10eb4e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3976735a9d30faa53e03e72aa08b3a2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tile.html#a3976735a9d30faa53e03e72aa08b3a2c">setCooldown</a> ()</td></tr>
 <tr class="memdesc:a3976735a9d30faa53e03e72aa08b3a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the time of cooldown for the tower in this tile.  <a href="#a3976735a9d30faa53e03e72aa08b3a2c">More...</a><br /></td></tr>
@@ -172,7 +172,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>the row of the tile. </td></tr>
-    <tr><td class="paramname">y</td><td>the collone of the tile. </td></tr>
+    <tr><td class="paramname">y</td><td>the column of the tile. </td></tr>
   </table>
   </dd>
 </dl>
@@ -254,7 +254,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the time left for the tower to return normal. </p>
-<dl class="section return"><dt>Returns</dt><dd>An integer which means the time left for the tile to become nomal. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>an integer which is the time left for the tile to become nomal. </dd></dl>
 
 </div>
 </div>
@@ -275,11 +275,11 @@ Public Member Functions</h2></td></tr>
 <p>Get all the tiles near this tile. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">range</td><td>is the distance entre two tiles. It can be 1, 2, 3. </td></tr>
+    <tr><td class="paramname">range</td><td>is the distance between two tiles. It can be 1, 2, 3. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A vactor contains all the shared pointers of the tile near this tile. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector contains all the shared pointers of the tile near this tile. </dd></dl>
 
 </div>
 </div>
@@ -297,7 +297,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the position of tile. </p>
-<dl class="section return"><dt>Returns</dt><dd>The position in forme sf::Vector2i.(x,y) is row and collone of the tile. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The position in the form of a sf::Vector2i.(x,y) (row and column of the tile) </dd></dl>
 
 </div>
 </div>
@@ -315,7 +315,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the position of the pixel of topleft of the tile. </p>
-<dl class="section return"><dt>Returns</dt><dd>The position in forme sf::Vector2i. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The position in the form sf::Vector2i. </dd></dl>
 
 </div>
 </div>
@@ -424,7 +424,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Deal with the hovering case of tile. </p>
-<p>Change the sprite when the mouse is hovering over this tile. If there is a tower built in the tile, it will show the range of the tower when the tile is hovering. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Change the sprite when the mouse is hovering over this tile. If there is a tower built on the tile, it will show the range of the tower when the tile is hovering. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">w</td><td>the RenderWindow of the game. </td></tr>
   </table>
@@ -573,10 +573,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Build a tower in this tile. </p>
+<p>Build a tower on this tile. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tower</td><td>is the tower built in this tile. </td></tr>
+    <tr><td class="paramname">tower</td><td>is the tower to be built on this tile. </td></tr>
   </table>
   </dd>
 </dl>
@@ -614,7 +614,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 14 2014 00:11:39 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 16 2014 18:42:02 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

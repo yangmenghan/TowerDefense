@@ -51,23 +51,33 @@
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Attack.h&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_slow_attack.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_slow_attack.html">SlowAttack</a> :</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_attack.html">Attack</a></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_slow_attack.html">SlowAttack</a>();</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_slow_attack.html">SlowAttack</a>(){};</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> attackAnimation(sf::RenderWindow&amp; w) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">void</span> resolve(sf::RenderWindow&amp; w) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="ttc" id="class_attack_html"><div class="ttname"><a href="class_attack.html">Attack</a></div><div class="ttdef"><b>Definition:</b> Attack.h:5</div></div>
-<div class="ttc" id="class_slow_attack_html"><div class="ttname"><a href="class_slow_attack.html">SlowAttack</a></div><div class="ttdef"><b>Definition:</b> SlowAttack.h:4</div></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_slow_attack.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_slow_attack.html">SlowAttack</a> :</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_attack.html">Attack</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_slow_attack.html#ae00c267aa1ef2822860027cb33e12c79">SlowAttack</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_slow_attack.html#a6c2862cc079dc13050f2435e25c1fa06">   17</a></span>&#160;    <a class="code" href="class_slow_attack.html#a6c2862cc079dc13050f2435e25c1fa06">~SlowAttack</a>(){};</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_slow_attack.html#afa5a9af6a5b26bdb4168ee5a909433a6">attackAnimation</a>(sf::RenderWindow&amp; w) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_slow_attack.html#a73767803482c26adf9aae486faa7499c">resolve</a>(sf::RenderWindow&amp; w) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="ttc" id="class_slow_attack_html_afa5a9af6a5b26bdb4168ee5a909433a6"><div class="ttname"><a href="class_slow_attack.html#afa5a9af6a5b26bdb4168ee5a909433a6">SlowAttack::attackAnimation</a></div><div class="ttdeci">void attackAnimation(sf::RenderWindow &amp;w) override</div><div class="ttdoc">An overriden function to deal with the animation of the slow attack action. </div><div class="ttdef"><b>Definition:</b> SlowAttack.cpp:9</div></div>
+<div class="ttc" id="class_attack_html"><div class="ttname"><a href="class_attack.html">Attack</a></div><div class="ttdoc">Basic class for towers&#39; attack action. </div><div class="ttdef"><b>Definition:</b> Attack.h:8</div></div>
+<div class="ttc" id="class_slow_attack_html_a6c2862cc079dc13050f2435e25c1fa06"><div class="ttname"><a href="class_slow_attack.html#a6c2862cc079dc13050f2435e25c1fa06">SlowAttack::~SlowAttack</a></div><div class="ttdeci">~SlowAttack()</div><div class="ttdoc">SlowAttack destructon. </div><div class="ttdef"><b>Definition:</b> SlowAttack.h:17</div></div>
+<div class="ttc" id="class_slow_attack_html"><div class="ttname"><a href="class_slow_attack.html">SlowAttack</a></div><div class="ttdoc">Derived class from Attack class for SlowTowers&#39; attack action. </div><div class="ttdef"><b>Definition:</b> SlowAttack.h:8</div></div>
+<div class="ttc" id="class_slow_attack_html_ae00c267aa1ef2822860027cb33e12c79"><div class="ttname"><a href="class_slow_attack.html#ae00c267aa1ef2822860027cb33e12c79">SlowAttack::SlowAttack</a></div><div class="ttdeci">SlowAttack()</div><div class="ttdoc">SlowAttack constructor. </div><div class="ttdef"><b>Definition:</b> SlowAttack.cpp:5</div></div>
+<div class="ttc" id="class_slow_attack_html_a73767803482c26adf9aae486faa7499c"><div class="ttname"><a href="class_slow_attack.html#a73767803482c26adf9aae486faa7499c">SlowAttack::resolve</a></div><div class="ttdeci">void resolve(sf::RenderWindow &amp;w) override</div><div class="ttdoc">An overriden function to deal with the process of the slow attack action. </div><div class="ttdef"><b>Definition:</b> SlowAttack.cpp:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 14 2014 00:11:39 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 16 2014 18:42:01 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
