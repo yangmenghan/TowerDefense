@@ -7,9 +7,6 @@
     <ClCompile Include="Entity.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Source</Filter>
     </ClCompile>
@@ -99,12 +96,6 @@
     </ClCompile>
     <ClCompile Include="Path.cpp">
       <Filter>Source\Interface</Filter>
-    </ClCompile>
-    <ClCompile Include="UnitTests.cpp">
-      <Filter>Source\UnitTests</Filter>
-    </ClCompile>
-    <ClCompile Include="UnitTests_JU.cpp">
-      <Filter>Source\UnitTests</Filter>
     </ClCompile>
     <ClCompile Include="UnitTests_Si.cpp">
       <Filter>Source\UnitTests</Filter>

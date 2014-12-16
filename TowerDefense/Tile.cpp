@@ -5,25 +5,7 @@
 
 
 //Constructors and destroyers
-Tile::Tile()
-{
-	position = sf::Vector2i(0, 0);//(row,collon)=(0.0)
-	width = TILE_WIDTH;
-	height = TILE_HEIGHT;
-	cooldown = 0;
-	tower = NULL;
-	isHovered = false;
-	isClicked = false;
-	isClicking = false;
-	hasTw = false;
-	currentSprite = 0;
-	if (!texture.loadFromFile(TILE_SPRITE))
-	{
-		// TODO erreur...
-	}
-	sf::FloatRect bounding(positionPixel.x + 50, positionPixel.y + 50, TILE_WIDTH, TILE_HEIGHT);
-	boundingBox = sf::IntRect(positionPixel, sf::Vector2i(width, height));
-}
+Tile::Tile() {}
 
 Tile::Tile(int x, int y)//(row,collone)=(x,y)
 {
