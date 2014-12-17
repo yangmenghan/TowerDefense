@@ -100,6 +100,15 @@
     <ClCompile Include="UnitTests_Si.cpp">
       <Filter>Source\UnitTests</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTests_JU.cpp">
+      <Filter>Source\UnitTests</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTests.cpp">
+      <Filter>Source\UnitTests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h">
@@ -293,9 +302,6 @@
     </ClCompile>
     <ClCompile Include="NormalAttack.cpp">
       <Filter>Fichiers sources\Attack</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="GameOverMenu.cpp">
       <Filter>Fichiers sources</Filter>

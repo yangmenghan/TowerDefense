@@ -9,7 +9,7 @@ Tower::Tower(shared_ptr<Tile> mTile)
 	currentSprite = level - 1;
 	tile = mTile;
 	size = sf::Vector2i(TILE_WIDTH, TILE_HEIGHT);
-	position = sf::Vector2i(tile->getPositionPixel().x + 25, tile->getPositionPixel().y + 25);
+	position = sf::Vector2i(tile->getPositionPixel().x+25, tile->getPositionPixel().y+25);
 }
 
 
@@ -78,8 +78,9 @@ void Tower::setTowerTexture()
 {
 	sprite.setTexture(texture);
 	sf::Vector2i spriteInit(0, currentSprite * size.y);
+	sprite.setOrigin(25, 25);
 	sprite.setTextureRect(sf::IntRect(spriteInit, size));
-	sprite.setPosition(sf::Vector2f(tile->getPositionPixel().x, tile->getPositionPixel().y));
+	sprite.setPosition(sf::Vector2f(tile->getPositionPixel().x + 25, tile->getPositionPixel().y + 25));
 }
 
 void Tower::setRangeCircle()

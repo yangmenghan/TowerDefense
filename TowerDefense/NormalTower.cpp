@@ -35,3 +35,8 @@ void NormalTower::doAttack(sf::RenderWindow& w)
 {
 	attack->resolve(w);
 }
+
+void NormalTower::draw(sf::RenderWindow& w){
+	sprite.setRotation(attack->getAttackRay().getRotation()+90);
+	w.draw(sprite);
+}

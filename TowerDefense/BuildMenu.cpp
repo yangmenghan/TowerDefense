@@ -16,10 +16,10 @@ BuildMenu::BuildMenu(shared_ptr<Tile> pTile)
 	tile = pTile;
 	sf::Vector2i tilePositionPixel(tile->getPositionPixel());
 
-	basicTwButton=Button(BASIC_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(-BUTTON_WIDTH, 0), 1);
-	moneyTwButton=Button(MONEY_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(0, -BUTTON_HEIGHT), 1);
-	slowTwButton=Button(SLOW_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(BUTTON_WIDTH, 0), 1);
-	sunTwButton=Button(SUN_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(0, BUTTON_HEIGHT), 1);
+	basicTwButton=Button(BASIC_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(-BUTTON_WIDTH, -BUTTON_WIDTH), 1);
+	moneyTwButton=Button(MONEY_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(BUTTON_WIDTH, -BUTTON_HEIGHT), 1);
+	slowTwButton=Button(SLOW_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(BUTTON_WIDTH, BUTTON_HEIGHT), 1);
+	sunTwButton=Button(SUN_TOWER_BUTTON_TEXTURE, SMALL_BUTTON_SIZE, tilePositionPixel + sf::Vector2i(-BUTTON_WIDTH, BUTTON_HEIGHT), 1);
 
 	if (!font.loadFromFile(FONT))
 	{

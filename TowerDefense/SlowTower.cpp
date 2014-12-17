@@ -32,3 +32,7 @@ void SlowTower::doAttack(sf::RenderWindow& w)
 	attack->resolve(w);
 }
 
+void SlowTower::draw(sf::RenderWindow& w){
+	sprite.setRotation(attack->getAttackRay().getRotation() + 90);
+	w.draw(sprite);
+}

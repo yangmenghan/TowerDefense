@@ -104,6 +104,8 @@ public:
 	*/
 	void virtual resolve(sf::RenderWindow& w) = 0;
 
+	sf::RectangleShape getAttackRay();
+
 protected:
 	//! A protected float variable representing slowing effect of the attack action, especially for the slowAttack.
 	float slowAmount;

@@ -110,6 +110,7 @@ void GameMenu::restartGame()
 void GameMenu::draw(sf::RenderWindow& w)
 {
 	w.draw(sprite);
+	levelManager->display(w);
 
 	pauseButton.mouseHover(w);
 	speedButton.mouseHover(w);

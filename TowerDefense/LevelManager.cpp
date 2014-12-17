@@ -43,11 +43,14 @@ void LevelManager::updatePath(){
 	}
 }
 
-void LevelManager::gameLoop(RenderWindow& w){
-		field.draw(w);
-		currentPath.draw(w);
+void LevelManager::display(RenderWindow& w)
+{
+	field.draw(w);
+	currentPath.draw(w);
+}
 
-		if (gameSpeed != 0){ 
+void LevelManager::gameLoop(RenderWindow& w){
+			if (gameSpeed != 0){ 
 			//if the game is not paused
 			if (player->getHP() <= 0){
 				gameOver();

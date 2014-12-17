@@ -53,6 +53,8 @@ public:
 	void triggerWaveDisplay(bool mtrigger);
 	bool getTrigger();
 
+	void display(sf::RenderWindow& w);
+
 private:
 
 	LevelManager();

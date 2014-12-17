@@ -143,3 +143,8 @@ shared_ptr<Enemy> Attack::getTarget()
 	
 	return enemyMinDistanceToTarget;
 }
+
+sf::RectangleShape Attack::getAttackRay()
+{
+	return attackRay;
+}

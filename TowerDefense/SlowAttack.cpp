@@ -10,7 +10,7 @@ void SlowAttack::attackAnimation(sf::RenderWindow& w)
 {
 	attackRay.setSize(sf::Vector2f(targetDistance, 2));
 	attackRay.setPosition(sf::Vector2f(center));
-	attackRay.setFillColor(sf::Color(255, 255, 0, 255));
+	attackRay.setFillColor(sf::Color(0, 0, 255, 255));
 	
 
 	w.draw(attackRay);
