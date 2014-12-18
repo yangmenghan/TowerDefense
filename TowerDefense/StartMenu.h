@@ -55,6 +55,12 @@ public:
 	*/
 	void openCredits();
 
+//! Open Tutorial
+	/*!
+	Opens how to play when associated button is clicked
+	*/
+	void openTutorial();
+
 //! Exit Game
 	/*!
 		Exits the game

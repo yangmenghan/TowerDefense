@@ -33,11 +33,13 @@ void StartMenu::draw(sf::RenderWindow& w)
 	startGameButton.mouseHover(w);
 	openCreditsButton.mouseHover(w);
 	muteButton.mouseHover(w);
+	tutorialButton.mouseHover(w);
 	exitGameButton.mouseHover(w);
 
 	startGameButton.draw(w);
 	openCreditsButton.draw(w);
-	muteButton.draw(w);
+	muteButton.draw(w); 
+	tutorialButton.draw(w);
 	exitGameButton.draw(w);
 }
 
@@ -76,6 +78,14 @@ void StartMenu::resolveEvent(sf::Event event)
 			}
 		}
 	}
+	else if (tutorialButton.checkHover())
+	{
+		tutorialButton.resolveEvent(event);
+		if (tutorialButton.checkClick())
+		{
+			openTutorial();
+		}
+	}
 	else if (exitGameButton.checkHover())
 	{
 		exitGameButton.resolveEvent(event);
@@ -104,5 +114,12 @@ void StartMenu::exitGame()
 {
 	MenuManager* m = MenuManager::getMenuManager();
 	m->exit();
+}
+
+void StartMenu::openTutorial()
+{
+	MenuManager* m = MenuManager::getMenuManager();
+	tutorialButton.setClickedState(false);
+	m->addMenu(make_shared<CreditsMenu>(TUTORIAL_SPRITE_ADD, sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT), sf::Vector2i(0, 0)));
 }
 
