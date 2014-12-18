@@ -41,8 +41,6 @@ public:
 
 //! Destructor
 	~GameMenu();
-	
-	void opent(){}; //TODO : for test
 
 //! Gets game speed
 	/*!
@@ -95,5 +93,10 @@ public:
 	*/
 	void resolveEvent(sf::Event event);
 
+
+//! Display coming wave number
+	/*!
+	displays the number of the coming way
+	*/
 	void displayComingWay();
 };
