@@ -38,7 +38,7 @@ TEST(AudioManager, play)
 	EXPECT_EQ(false,audiomanager.isMute());
 }
 
-/*//Tests for Path
+//Tests for Path
 
 TEST(Path, construction)
 {
@@ -54,8 +54,8 @@ TEST(Field, computePath)
 	Field field;
 	shared_ptr<Tile> tile1 = field.getTile(80);
 	shared_ptr<Tile> tile2 = field.getTile(99);
-	vector<shared_ptr<Tile>> a;
-	a.push_back(field.getTile(80));
+	const vector<shared_ptr<Tile>> a.push_back(field.getTile(80)).push_back(field.getTile(81)).push_back(field.getTile(82)).push_back(field.getTile(83)).push_back(field.getTile(84)).push_back(field.getTile(85)).push_back(field.getTile(86)).push_back(field.getTile(87)).push_back(field.getTile(88)).push_back(field.getTile(89)).push_back(field.getTile(90)).push_back(field.getTile(91)).push_back(field.getTile(92)).push_back(field.getTile(93)).push_back(field.getTile(94)).push_back(field.getTile(95)).push_back(field.getTile(96)).push_back(field.getTile(97)).push_back(field.getTile(98)).push_back(field.getTile(99));
+	/*a.push_back(field.getTile(80));
 	a.push_back(field.getTile(81));
 	a.push_back(field.getTile(82));
 	a.push_back(field.getTile(83));
@@ -74,9 +74,9 @@ TEST(Field, computePath)
 	a.push_back(field.getTile(96));
 	a.push_back(field.getTile(97));
 	a.push_back(field.getTile(98));
-	a.push_back(field.getTile(99));
+	a.push_back(field.getTile(99));*/
 	EXPECT_EQ(a, field.computePath(tile1,tile2));
-	shared_ptr<Tile> tile3 = field.getTile(81);
+	/*shared_ptr<Tile> tile3 = field.getTile(81);
 	shared_ptr<Tower> myTower;
 	tile3->setTower(myTower);
 	vector<shared_ptr<Tile>> b;
@@ -128,9 +128,9 @@ TEST(Field, computePath)
 	c.push_back(field.getTile(118));
 	c.push_back(field.getTile(119));
 	c.push_back(field.getTile(99));
-	EXPECT_EQ(c, field.computePath(tile1, tile2));
+	EXPECT_EQ(c, field.computePath(tile1, tile2));*/
 }
-*/
+
 //Tests for tryCross()
 
 TEST(Field, tryCross)
