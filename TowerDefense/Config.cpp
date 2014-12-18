@@ -136,7 +136,6 @@ Menu constants
 extern const string		GAME_MENU_DEFAULT_TEXTURE = "sprites/backgrounds/gamebg.png";
 extern const string		START_MENU_TEXTURE		  = "sprites/backgrounds/background.png";
 extern const string		CREDITS_SPRITE_ADD		  = "sprites/backgrounds/credits.png";
-extern const string		TUTORIAL_SPRITE_ADD		  = "sprites/backgrounds/tutorial.png";
 extern const string		GAMEOVER_MENU_TEXTURE			= "sprites/backgrounds/gameover.png";
 extern const string		WIN_MENU_TEXTURE				="sprites/youwin.png";
 
@@ -176,16 +175,16 @@ extern const sf::Vector2i	MUTE_BUTTON_SIZE	  = sf::Vector2i(100, 32);
 extern const sf::Vector2i	BACK_BUTTON_SIZE	  = sf::Vector2i(100, 34);
 extern const sf::Vector2i	SMALL_BUTTON_SIZE	  = sf::Vector2i(BUTTON_WIDTH, BUTTON_HEIGHT);
 
-extern const sf::Vector2i	START_BUTTON_POSITION	 = sf::Vector2i(346, 100);
-extern const sf::Vector2i	CREDITS_BUTTON_POSITION	 = sf::Vector2i(346, 200);
-extern const sf::Vector2i	TUTORIAL_BUTTON_POSITION = sf::Vector2i(346, 300);
-extern const sf::Vector2i	EXIT_BUTTON_POSITION	 = sf::Vector2i(346, 400);
+extern const sf::Vector2i	START_BUTTON_POSITION	 = sf::Vector2i(346, 150);
+extern const sf::Vector2i	CREDITS_BUTTON_POSITION	 = sf::Vector2i(346, 250);
+extern const sf::Vector2i	TUTORIAL_BUTTON_POSITION = sf::Vector2i(346, 350);
+extern const sf::Vector2i	EXIT_BUTTON_POSITION	 = sf::Vector2i(346, 450);
 extern const sf::Vector2i	MUTE_BUTTON_POSITION	 = sf::Vector2i(10, 10);
 extern const sf::Vector2i	RESTART_BUTTON_POSITION	 = sf::Vector2i(10, 560);
 
-extern const sf::Vector2i	BACK_BUTTON_POSITION	   = sf::Vector2i(WINDOW_WIDTH - 10 - BACK_BUTTON_SIZE.x, 560);
+extern const sf::Vector2i	BACK_BUTTON_POSITION	= sf::Vector2i((WINDOW_WIDTH - MUTE_BUTTON_SIZE.x)/2,500);
 extern const sf::Vector2i	GO_RESTART_BUTTON_POSITION = sf::Vector2i(((WINDOW_WIDTH - MUTE_BUTTON_SIZE.x) / 2)+100, 500);
-extern const sf::Vector2i	GO_BACK_BUTTON_POSITION    = sf::Vector2i(((WINDOW_WIDTH - MUTE_BUTTON_SIZE.x) / 2) - 100, 500);
+extern const sf::Vector2i	GO_BACK_BUTTON_POSITION = sf::Vector2i(((WINDOW_WIDTH - MUTE_BUTTON_SIZE.x) / 2) - 100, 500);
 
 
 

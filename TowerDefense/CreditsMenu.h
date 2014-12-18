@@ -9,7 +9,7 @@
 class CreditsMenu : public Menu
 {
 private:
-	Button backButton = Button(BACK_BUTTON_TEXTURE, BACK_BUTTON_SIZE, BACK_BUTTON_POSITION, 3);
+	Button backButton = Button(BACK_BUTTON_TEXTURE, BACK_BUTTON_SIZE, RESTART_BUTTON_POSITION, 3);
 
 public:
 
