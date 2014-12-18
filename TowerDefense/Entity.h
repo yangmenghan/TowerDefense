@@ -14,24 +14,70 @@ protected:
 	sf::Texture texture;
 
 public:
-	//Constructors and destroyers
+	//! A constructor
 	Entity();
+
+	//! A virtual destructor
 	virtual ~Entity();
 
-	//Getters
+	//! Return the current position of this entity.
+	/*!
+	\return A sf::Vector2i variable.
+	*/
 	sf::Vector2i getPosition();
+
+	//! Return the current size of this entity.
+	/*!
+	\return A sf::Vector2i variable.
+	*/
 	sf::Vector2i getSize();
+
+	//! Return the current speed of this entity.
+	/*!
+	\return A float variable.
+	*/
 	float getSpeed();
+
+	//! Return the current sprite of this entity.
+	/*!
+	\return A sf::Sprite variable.
+	*/
 	sf::Sprite getSprite();
+
+	//! Return the current tile of this entity.
+	/*!
+	\return A shared pointer pointing a type Tile.
+	*/
 	shared_ptr<Tile> getTile();
 
-	//Setters
+	//! Set postion of this entity.
+	/*!
+	\param mPosition A sf::Vector2i variable
+	*/
 	void setPosition(sf::Vector2i mPosition);
+	
+	//! Set size of this entity.
+	/*!
+	\param mSize A sf::Vector2i variable
+	*/
 	void setSize(sf::Vector2i mSize);
+
+	//! Set speed of this entity.
+	/*!
+	\param mSpeed A float variable
+	*/
 	void setSpeed(float mSpeed);
+
+	//! Set sprite of this entity.
+	/*!
+	\param mSprite A sf::Sprite variable
+	*/
 	void setSprite(sf::Sprite mSprite);
 
-	//Functions
-	virtual void draw(sf::RenderWindow&);
+	//! To draw this entity in a render window.
+	/*!
+	\param w A sf::RenderWindow reference variable.
+	*/
+	void draw(sf::RenderWindow& w);
 };
 
