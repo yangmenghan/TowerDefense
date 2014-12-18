@@ -64,7 +64,7 @@ void TowerMenu::resolveEvent(sf::Event event)
 		if (upgradeButton.checkClick())
 		{
 			if (LevelManager::getLevelManager()->getPlayer()->getMoney() >= tile->getTower()->getPrice())
-			tile->getTower()->upgradeTw();
+				tile->getTower()->upgradeTw();
 			close();
 		}
 	}
