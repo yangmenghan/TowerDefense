@@ -57,7 +57,7 @@ int Tile::getCooldown()
 	return cooldown;
 }
 
-std::vector<shared_ptr<Tile>> Tile::getNeighbor(int _range)
+std::vector<shared_ptr<Tile>> Tile::getNeighbor(int _range)//_range = 1,range of the bombe;
 {
 	std::vector<shared_ptr<Tile>> neighborTiles;
 	shared_ptr<Tile> pNeighber;

@@ -5,6 +5,7 @@
 #include "TowerMenu.h"
 #include "Tower.h"
 #include "Config.h"
+#include "LevelManager.h"
 
 using namespace std;
 
@@ -27,14 +28,26 @@ TEST(Field, construction)
 	EXPECT_FALSE(field.getTile(NUM_START_TILE)->isPolluted());
 	EXPECT_EQ(sf::Vector2i(NUM_END_TILE % TILE_NUM_VER, NUM_END_TILE / TILE_NUM_VER), field.getEndTile()->getPosition());
 	EXPECT_FALSE(field.getTile(NUM_END_TILE)->isPolluted());
+
 	std::vector<shared_ptr<Tile>> neighborTiles = field.getTile(sf::Vector2i(TILE_NUM_VER - 1, TILE_NUM_HOR - 1))->getNeighbor(1);
 	EXPECT_EQ(4, neighborTiles.capacity());
-	neighborTiles = field.getTile(sf::Vector2i(0, TILE_NUM_HOR - 1))->getNeighbor(3);
-	EXPECT_EQ(19, neighborTiles.capacity());
+
+	neighborTiles = field.getTile(sf::Vector2i(TILE_NUM_VER - 1, TILE_NUM_HOR - 1))->getNeighbor(1);
+	EXPECT_EQ(4, neighborTiles.capacity());
+	neighborTiles = field.getTile(sf::Vector2i(0, TILE_NUM_HOR - 1))->getNeighbor(1);
+	EXPECT_EQ(4, neighborTiles.capacity());
+	neighborTiles = field.getTile(sf::Vector2i(TILE_NUM_VER - 1, 0))->getNeighbor(1);
+	EXPECT_EQ(4, neighborTiles.capacity());
 	neighborTiles = field.getTile(sf::Vector2i(0, 8))->getNeighbor(1);
 	EXPECT_EQ(6, neighborTiles.capacity());
 	neighborTiles = field.getTile(sf::Vector2i(TILE_NUM_VER - 1, 5))->getNeighbor(1);
 	EXPECT_EQ(6, neighborTiles.capacity());
+	neighborTiles = field.getTile(sf::Vector2i(3, TILE_NUM_HOR - 1))->getNeighbor(1);
+	EXPECT_EQ(6, neighborTiles.capacity());
+	neighborTiles = field.getTile(sf::Vector2i(6, 0))->getNeighbor(1);
+	EXPECT_EQ(6, neighborTiles.capacity());
+	neighborTiles = field.getTile(sf::Vector2i(5, 8))->getNeighbor(1);
+	EXPECT_EQ(9, neighborTiles.capacity());
 }
 
 TEST(BuildMenu, construction)
@@ -52,6 +65,10 @@ TEST(TowerMenu, construction)
 	buildMenu.buySunTw();
 	EXPECT_TRUE(pTile->hasTower());
 	TowerMenu towerMenu(pTile);
+	pTile->getTower()->upgradeTw();
+	EXPECT_TRUE(pTile->hasTower());
+	pTile->getTower()->upgradeTw();
+	EXPECT_TRUE(pTile->hasTower());
 	pTile->getTower()->sellTw();
 	EXPECT_FALSE(pTile->hasTower());
 }
@@ -60,7 +77,6 @@ int main(int argc, char **argv)
 {
 
 	::testing::InitGoogleTest(&argc, argv);
-	
 	RUN_ALL_TESTS();
 
 	string fin;
