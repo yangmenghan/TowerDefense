@@ -66,7 +66,7 @@ void AreaAttack::resolve(sf::RenderWindow& w)
 		vector<shared_ptr<Enemy>> enemiesInRange;
 		if (timer == 0)
 		{
-			timer = speed;
+			timer = speed * LevelManager::getLevelManager()->getSpeed();
 		}
 		else
 		{
@@ -84,5 +84,5 @@ void AreaAttack::resolve(sf::RenderWindow& w)
 		}
 	}
 	else
-		timer = speed;
+		timer = speed * LevelManager::getLevelManager()->getSpeed();
 }

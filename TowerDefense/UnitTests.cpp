@@ -72,17 +72,24 @@ TEST_F(EnemyTest, nextWave)
 	EXPECT_EQ(WAVE_TOTAL - 1, levelManager->getWaves().size());
 }
 
-/*
 TEST_F(EnemyTest, addEnemy)
 {
-	//EXPECT_EQ(NORMAL_ENEMY_HP, enemy.getHP());
+	shared_ptr<Enemy> e;
+	levelManager->addEnemy(e);
+	vector<shared_ptr<Enemy>> enemies;
+	enemies = levelManager->getEnemies();
+	EXPECT_EQ(1, enemies.size());
 }
 
 TEST_F(EnemyTest, removeEnemy)
 {
-	//LevelManager->removeEnemy(enemy);
-	//EXPECT_EQ(NORMAL_ENEMY_HP, enemy.getHP());
-}*/
+	shared_ptr<Enemy> e;
+	levelManager->addEnemy(e);
+	levelManager->removeEnemy(e);
+	vector<shared_ptr<Enemy>> enemies;
+	enemies = levelManager->getEnemies();
+	EXPECT_EQ(0, enemies.size());
+}
 
 TEST_F(EnemyTest, construction)
 {

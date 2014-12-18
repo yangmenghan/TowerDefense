@@ -35,7 +35,7 @@ void NormalAttack::resolve(sf::RenderWindow& w)
 			timer--;
 			if (timer == 0)
 			{
-				timer = speed;
+				timer = speed * LevelManager::getLevelManager()->getSpeed();
 			}
 		}
 	}

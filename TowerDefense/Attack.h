@@ -1,6 +1,8 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Enemy.h"
+#include "LevelManager.h"
+
 //! Basic class for towers' attack action.
 /*! 
 Inheritted by NormalAttack, SlowAttack and AreaAttack to realise attack action respectively.

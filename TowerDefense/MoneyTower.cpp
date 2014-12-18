@@ -51,7 +51,7 @@ void MoneyTower::generateMoney()
 		if (timer == 0)
 		{
 			LevelManager::getLevelManager()->getPlayer()->manageMoney(MONEY_TOWER_GENERATION_UNIT[level - 1]);
-			timer = speed[level - 1];
+			timer = speed[level - 1] * LevelManager::getLevelManager()->getSpeed();
 			displayTimer = 0;
 		}
 		else
