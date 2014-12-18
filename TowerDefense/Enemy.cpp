@@ -13,6 +13,7 @@ Enemy::Enemy(){
 	slowed = false;
 	maxHp = 0;
 	origin_speed = speed;
+	slowTime = 0;
 }
 
 
@@ -26,6 +27,7 @@ Enemy::Enemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite m
 	slowed = false;
 	maxHp = mHP;
 	origin_speed = speed;
+	slowTime = 0;
 }
 
 Enemy::~Enemy(){}
