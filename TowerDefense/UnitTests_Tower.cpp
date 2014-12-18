@@ -91,6 +91,17 @@ TEST(MoneyTower, generateMoney)
 	EXPECT_EQ(originMoney + MONEY_TOWER_GENERATION_UNIT[0], LevelManager::getLevelManager()->getPlayer()->getMoney());
 	EXPECT_EQ(tower.getSpeed(), tower.getTimer());
 }
+
+TEST(Attack, setAttackRayAngle)
+{
+	shared_ptr<Enemy> target = make_shared<Enemy>();
+	shared_ptr<Tile> pTile = make_shared<Tile>(10, 5);
+	NormalTower tower(pTile);
+
+	target->setPosition(sf::Vector2i(pTile->getPositionPixel().x, pTile->getPositionPixel().y));
+	tower.getAttack()->setAttackRayAngle(target);
+	EXPECT_FALSE(tower.);
+}
 int main(int argc, char **argv)
 {
 	testing::InitGoogleTest(&argc, argv);

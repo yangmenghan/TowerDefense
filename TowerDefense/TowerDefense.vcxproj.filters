@@ -109,6 +109,9 @@
     <ClCompile Include="UnitTests_Si.cpp">
       <Filter>Source\UnitTests</Filter>
     </ClCompile>
+    <ClCompile Include="UnitTests_Tower.cpp">
+      <Filter>Source\UnitTests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h">

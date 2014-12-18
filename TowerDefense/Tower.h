@@ -83,7 +83,7 @@ public:
 	//! Tower upgrade. The possible levels are 1, 2, 3.
 	void upgradeTw();
 
-	//! Tower downgrade. The possible levels are 1, 2, 3.
+	//! Set the tower level to 0 in order to destroy this tower.
 	void downgradeTw();
 
 	//! A pure virtual function overriden by derived classes.
