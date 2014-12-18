@@ -57,17 +57,8 @@ TEST(Tower, grade)
 	EXPECT_EQ(tower.getDamage(), tower.getAttack()->getDamage());
 	EXPECT_EQ(0, tower.getAttack()->getSlowAmount());
 	
-	for (int i = 3; i > 0; i--)
-	{
-		EXPECT_EQ(i, tower.getLevel());
-		EXPECT_EQ(NORMAL_TOWER_DAMAGE[i - 1], tower.getDamage());
-		EXPECT_EQ(NORMAL_TOWER_INCOME[i - 1], tower.getIncome());
-		EXPECT_EQ(NORMAL_TOWER_RANGE[i - 1], tower.getRange());
-		EXPECT_EQ(NORMAL_TOWER_SPEED[i - 1], tower.getSpeed());
-		EXPECT_EQ(tower.getDamage(), tower.getAttack()->getDamage());
-		EXPECT_EQ(0, tower.getAttack()->getSlowAmount());
-		tower.downgradeTw();
-	}
+	tower.downgradeTw();
+	EXPECT_EQ(0, tower.getLevel());
 }
 
 TEST(Tower, sellTower)
@@ -98,9 +89,18 @@ TEST(Attack, setAttackRayAngle)
 	shared_ptr<Tile> pTile = make_shared<Tile>(10, 5);
 	NormalTower tower(pTile);
 
-	target->setPosition(sf::Vector2i(pTile->getPositionPixel().x, pTile->getPositionPixel().y));
+	target->setPosition(sf::Vector2i(pTile->getPositionPixel().x + 100, pTile->getPositionPixel().y - 25));
 	tower.getAttack()->setAttackRayAngle(target);
-	EXPECT_FALSE(tower.);
+	EXPECT_FALSE(tower.getAttack()->getAttackRay().getRotation() == 0);
+
+	target->setPosition(sf::Vector2i(pTile->getPositionPixel().x + 100, pTile->getPositionPixel().y + 50));
+	tower.getAttack()->setAttackRayAngle(target);
+	EXPECT_FALSE(tower.getAttack()->getAttackRay().getRotation() > 0 &&
+				tower.getAttack()->getAttackRay().getRotation() < 90);
+
+	target->setPosition(sf::Vector2i(pTile->getPositionPixel().x, pTile->getPositionPixel().y + 100));
+	tower.getAttack()->setAttackRayAngle(target);
+	EXPECT_FALSE(tower.getAttack()->getAttackRay().getRotation() == 0 );
 }
 int main(int argc, char **argv)
 {
