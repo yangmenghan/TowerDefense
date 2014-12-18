@@ -112,5 +112,7 @@ public:
 */
 	void spriteUpdate(int i);
 
+
+
 	void setClickedState(bool mIsClicked);
 };

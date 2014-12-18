@@ -43,21 +43,39 @@ TEST(AudioManager, play)
 TEST(Path, construction)
 {
 	Path path;
-	vector<shared_ptr<Tile>> a;
-	EXPECT_EQ(a,path);
+	vector<shared_ptr<Tile>> x;
+	Path p=Path(x);
+	EXPECT_EQ(p.getPath().size(),path.getPath().size());
 }
+
 
 //Tests for computePath()
 
 TEST(Field, computePath)
 {
 	Field field;
+	bool compare = true;
 	shared_ptr<Tile> tile1 = field.getTile(80);
 	shared_ptr<Tile> tile2 = field.getTile(99);
-	const vector<shared_ptr<Tile>> a.
-push_back(field.getTile(80)).push_back(field.getTile(81)).push_back(field.getTile(82)).push_back(field.getTile(83)).push_back(field.getTile(84)).push_back(field.getTile(85)).push_back(field.getTile(86)).push_back(field.getTile(87)).push_back(field.getTile(88)).push_back(field.getTile(89)).push_back(field.getTile(90)).push_back(field.getTile(91)).push_back(field.getTile(92)).push_back(field.getTile(93)).push_back(field.getTile(94)).push_back(field.getTile(95)).push_back(field.getTile(96)).push_back(field.getTile(97)).push_back(field.getTile(98)).push_back(field.getTile(99));
-	/*a.push_back(field.getTile(80));
-	a.push_back(field.getTile(81));
+	vector<shared_ptr<Tile>> p1 = field.computePath(tile1, tile2).getPath();
+	int p1l = p1.size();
+	if (p1l != 20)
+	{
+		compare = false;
+	}
+	else
+	{
+		for (int i = 0; i < 20; i++)
+		{
+			if (p1[i] != (field.getTile(80 + i)))
+			{
+				compare = false;
+				break;
+			}
+		}
+	}
+	
+	/*a.push_back(field.getTile(81));
 	a.push_back(field.getTile(82));
 	a.push_back(field.getTile(83));
 	a.push_back(field.getTile(84));
@@ -75,13 +93,37 @@ push_back(field.getTile(80)).push_back(field.getTile(81)).push_back(field.getTil
 	a.push_back(field.getTile(96));
 	a.push_back(field.getTile(97));
 	a.push_back(field.getTile(98));
-	a.push_back(field.getTile(99));*/
-	EXPECT_EQ(a, field.computePath(tile1,tile2));
-	/*shared_ptr<Tile> tile3 = field.getTile(81);
-	shared_ptr<Tower> myTower;
-	tile3->setTower(myTower);
-	vector<shared_ptr<Tile>> b;
-	b.push_back(field.getTile(80));
+	a.push_back(field.getTile(99));
+	Path p1 = Path(a);
+	*/
+	EXPECT_EQ(true, compare);
+	shared_ptr<Tile> tile3 = field.getTile(81);
+	//shared_ptr<Tower> myTower;
+	auto pNormalTw = make_shared<NormalTower>(tile3);
+		tile3->setTower(pNormalTw);
+	bool compare1 = true;
+	vector<shared_ptr<Tile>> p2 = field.computePath(tile1, tile2).getPath();
+	int p2l = p2.size();
+	if (p2l != 22)
+	{
+		compare1 = false;
+	}
+	else
+	{
+		for (int i = 0; i < 20; i++)
+		{
+			if (p2[i + 1] != (field.getTile(60 + i)))
+			{
+				compare1 = false;
+				break;
+			}
+		}
+		if ((p2[0] != field.getTile(80))||(p2[21] != field.getTile(99)))
+		{
+			compare1 = false;
+		}
+	}
+	/*b.push_back(field.getTile(80));
 	b.push_back(field.getTile(60));
 	b.push_back(field.getTile(61));
 	b.push_back(field.getTile(62));
@@ -103,11 +145,35 @@ push_back(field.getTile(80)).push_back(field.getTile(81)).push_back(field.getTil
 	b.push_back(field.getTile(78));
 	b.push_back(field.getTile(79));
 	b.push_back(field.getTile(99));
-	EXPECT_EQ(b, field.computePath(tile1, tile2));
+	Path p2=Path(b);
+	*/
+	EXPECT_EQ(true, compare1);
 	shared_ptr<Tile> tile4 = field.getTile(62);
-	tile4->setTower(myTower);
-	vector<shared_ptr<Tile>> c;
-	c.push_back(field.getTile(80));
+	auto p1NormalTw = make_shared<NormalTower>(tile4);
+	tile4->setTower(p1NormalTw);
+	bool compare2 = true;
+	vector<shared_ptr<Tile>> p3 = field.computePath(tile1, tile2).getPath();
+	int p3l = p3.size();
+	if (p3l != 22)
+	{
+		compare2 = false;
+	}
+	else
+	{
+		for (int i = 0; i < 20; i++)
+		{
+			if (p3[i + 1] != (field.getTile(100 + i)))
+			{
+				compare2 = false;
+				break;
+			}
+		}
+		if ((p3[0] != field.getTile(80)) || (p3[21] != field.getTile(99)))
+		{
+			compare2 = false;
+		}
+	}
+	/*c.push_back(field.getTile(80));
 	c.push_back(field.getTile(100));
 	c.push_back(field.getTile(101));
 	c.push_back(field.getTile(102));
@@ -129,7 +195,9 @@ push_back(field.getTile(80)).push_back(field.getTile(81)).push_back(field.getTil
 	c.push_back(field.getTile(118));
 	c.push_back(field.getTile(119));
 	c.push_back(field.getTile(99));
-	EXPECT_EQ(c, field.computePath(tile1, tile2));*/
+	Path p3=Path(c);
+	*/
+	EXPECT_EQ(true, compare2);
 }
 
 //Tests for tryCross()
@@ -140,8 +208,9 @@ TEST(Field, tryCross)
 	shared_ptr<Tile> tile1 = field.getTile(80);
 	shared_ptr<Tile> tile2 = field.getTile(99);
 	EXPECT_EQ(true,field.tryCross(tile1, tile2));
-	shared_ptr<Tower> myTower; 
-	tile1->setTower(myTower);
+	auto pNormalTw = make_shared<NormalTower>(tile1);
+	//shared_ptr<Tower> myTower; 
+	tile1->setTower(pNormalTw);
 	EXPECT_EQ(false,field.tryCross(tile1, tile2));
 }
 

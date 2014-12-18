@@ -18,7 +18,7 @@ extern const int		FRAME_RATE				= 60;
 Audio constants
 */
 
-extern const string		MAIN_BGM				= "music/test.ogg";
+extern const string		MAIN_BGM				= "music/Searching.ogg";
 
 /*
 Tile constants

@@ -44,6 +44,15 @@ int Tower::getIncome()
 	return income[level-1];
 }
 
+int Tower::getSpeed()
+{
+	return speed[level - 1];
+}
+
+shared_ptr<Attack> Tower::getAttack()
+{
+	return attack;
+}
 void Tower::setDamage(float mDamage)
 {
 	damage[level - 1] = mDamage;
@@ -119,24 +128,11 @@ void Tower::upgradeTw()
 	}
 }
 /*
-Downgrade the level of tower and set its new parameters
+Set the tower level to 0 in order to destroy this tower.
 */
 void Tower::downgradeTw()
 {
-	if (level > 0)
-	{
-		level--;
-		
-		if (level > 0)
-		{
-			currentSprite = level - 1;
-			spriteUpdate(currentSprite);
-			timer = speed[level - 1];
-
-			setAttack();
-			setRangeCircle();
-		}
-	}	
+	level = 0;
 }
 
 /*

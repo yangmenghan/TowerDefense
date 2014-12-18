@@ -52,23 +52,33 @@
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Tower.h&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;SlowAttack.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_slow_tower.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_slow_tower.html">SlowTower</a> :</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_tower.html">Tower</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_slow_tower.html">SlowTower</a>(shared_ptr&lt;Tile&gt; mTile);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_slow_tower.html">SlowTower</a>(<span class="keywordtype">float</span> mDamage, <span class="keywordtype">int</span> mPrice, <span class="keywordtype">int</span> mLevel, <span class="keywordtype">float</span> mRange, <span class="keywordtype">float</span> mSpeed, sf::Sprite mSprite);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_slow_tower.html">SlowTower</a>(){};</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> doAttack(sf::RenderWindow&amp; w) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="ttc" id="class_slow_tower_html"><div class="ttname"><a href="class_slow_tower.html">SlowTower</a></div><div class="ttdef"><b>Definition:</b> SlowTower.h:5</div></div>
-<div class="ttc" id="class_tower_html"><div class="ttname"><a href="class_tower.html">Tower</a></div><div class="ttdef"><b>Definition:</b> Tower.h:8</div></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_slow_tower.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_slow_tower.html">SlowTower</a> :</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_tower.html">Tower</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_slow_tower.html#a05ce0356b1d846450e3c522d5558974f">SlowTower</a>(shared_ptr&lt;Tile&gt; mTile);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_slow_tower.html#a63621752f73bac9ff807fb5453e7a189">   20</a></span>&#160;    <a class="code" href="class_slow_tower.html#a63621752f73bac9ff807fb5453e7a189">~SlowTower</a>(){};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_slow_tower.html#a5a5d10af63b914331b6380f1cb4f726a">draw</a>(sf::RenderWindow &amp;w);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_slow_tower.html#a263531cb94fccecfdc1bd667a54b168d">doAttack</a>(sf::RenderWindow&amp; w) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="ttc" id="class_slow_tower_html_a263531cb94fccecfdc1bd667a54b168d"><div class="ttname"><a href="class_slow_tower.html#a263531cb94fccecfdc1bd667a54b168d">SlowTower::doAttack</a></div><div class="ttdeci">void doAttack(sf::RenderWindow &amp;w) override</div><div class="ttdoc">Execute the attack action. An implementation of Tower::doAttack(sf::RenderWindow& w)...</div><div class="ttdef"><b>Definition:</b> SlowTower.cpp:30</div></div>
+<div class="ttc" id="class_slow_tower_html_a63621752f73bac9ff807fb5453e7a189"><div class="ttname"><a href="class_slow_tower.html#a63621752f73bac9ff807fb5453e7a189">SlowTower::~SlowTower</a></div><div class="ttdeci">~SlowTower()</div><div class="ttdoc">A destructor by default. </div><div class="ttdef"><b>Definition:</b> SlowTower.h:20</div></div>
+<div class="ttc" id="class_slow_tower_html_a05ce0356b1d846450e3c522d5558974f"><div class="ttname"><a href="class_slow_tower.html#a05ce0356b1d846450e3c522d5558974f">SlowTower::SlowTower</a></div><div class="ttdeci">SlowTower(shared_ptr&lt; Tile &gt; mTile)</div><div class="ttdoc">A constructor. </div><div class="ttdef"><b>Definition:</b> SlowTower.cpp:4</div></div>
+<div class="ttc" id="class_slow_tower_html"><div class="ttname"><a href="class_slow_tower.html">SlowTower</a></div><div class="ttdoc">Derived class from Tower class. </div><div class="ttdef"><b>Definition:</b> SlowTower.h:9</div></div>
+<div class="ttc" id="class_slow_tower_html_a5a5d10af63b914331b6380f1cb4f726a"><div class="ttname"><a href="class_slow_tower.html#a5a5d10af63b914331b6380f1cb4f726a">SlowTower::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;w)</div><div class="ttdoc">A redefined function. Draw the tower in a render window. </div><div class="ttdef"><b>Definition:</b> SlowTower.cpp:35</div></div>
+<div class="ttc" id="class_tower_html"><div class="ttname"><a href="class_tower.html">Tower</a></div><div class="ttdoc">Basic class for construction of tower. </div><div class="ttdef"><b>Definition:</b> Tower.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 16 2014 18:42:01 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 18 2014 17:59:39 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

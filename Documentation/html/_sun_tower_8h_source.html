@@ -52,23 +52,30 @@
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Tower.h&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;AreaAttack.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_sun_tower.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sun_tower.html">SunTower</a> :</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_tower.html">Tower</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_sun_tower.html">SunTower</a>(shared_ptr&lt;Tile&gt; mTile);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_sun_tower.html">SunTower</a>(<span class="keywordtype">float</span> mDamage, <span class="keywordtype">int</span> mPrice, <span class="keywordtype">int</span> mLevel, <span class="keywordtype">float</span> mRange, <span class="keywordtype">float</span> mSpeed, sf::Sprite mSprite);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_sun_tower.html">SunTower</a>(){};</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> doAttack(sf::RenderWindow&amp; w) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_sun_tower.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sun_tower.html">SunTower</a> :</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_tower.html">Tower</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="ttc" id="class_sun_tower_html"><div class="ttname"><a href="class_sun_tower.html">SunTower</a></div><div class="ttdef"><b>Definition:</b> SunTower.h:5</div></div>
-<div class="ttc" id="class_tower_html"><div class="ttname"><a href="class_tower.html">Tower</a></div><div class="ttdef"><b>Definition:</b> Tower.h:8</div></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_sun_tower.html#aa24e04aa4d64bb77dee9e931b52a3ca5">SunTower</a>(shared_ptr&lt;Tile&gt; mTile);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_sun_tower.html#afae25b6665efce763daad7e3f0cbf034">   21</a></span>&#160;    <a class="code" href="class_sun_tower.html#afae25b6665efce763daad7e3f0cbf034">~SunTower</a>(){};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sun_tower.html#af0453294af7e980271431cab34155cd8">doAttack</a>(sf::RenderWindow&amp; w) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="ttc" id="class_sun_tower_html_afae25b6665efce763daad7e3f0cbf034"><div class="ttname"><a href="class_sun_tower.html#afae25b6665efce763daad7e3f0cbf034">SunTower::~SunTower</a></div><div class="ttdeci">~SunTower()</div><div class="ttdoc">A destructor by default. </div><div class="ttdef"><b>Definition:</b> SunTower.h:21</div></div>
+<div class="ttc" id="class_sun_tower_html_aa24e04aa4d64bb77dee9e931b52a3ca5"><div class="ttname"><a href="class_sun_tower.html#aa24e04aa4d64bb77dee9e931b52a3ca5">SunTower::SunTower</a></div><div class="ttdeci">SunTower(shared_ptr&lt; Tile &gt; mTile)</div><div class="ttdoc">A constructor. </div><div class="ttdef"><b>Definition:</b> SunTower.cpp:4</div></div>
+<div class="ttc" id="class_sun_tower_html"><div class="ttname"><a href="class_sun_tower.html">SunTower</a></div><div class="ttdoc">Derived class from Tower class. </div><div class="ttdef"><b>Definition:</b> SunTower.h:9</div></div>
+<div class="ttc" id="class_sun_tower_html_af0453294af7e980271431cab34155cd8"><div class="ttname"><a href="class_sun_tower.html#af0453294af7e980271431cab34155cd8">SunTower::doAttack</a></div><div class="ttdeci">void doAttack(sf::RenderWindow &amp;w) override</div><div class="ttdoc">Execute the attack action. An implementation of Tower::doAttack(sf::RenderWindow& w)...</div><div class="ttdef"><b>Definition:</b> SunTower.cpp:32</div></div>
+<div class="ttc" id="class_tower_html"><div class="ttname"><a href="class_tower.html">Tower</a></div><div class="ttdoc">Basic class for construction of tower. </div><div class="ttdef"><b>Definition:</b> Tower.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 16 2014 18:42:01 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 18 2014 17:59:39 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

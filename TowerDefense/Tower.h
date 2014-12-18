@@ -40,6 +40,10 @@ public:
 	//! A getter returning the income when selling tower.
 	int getIncome();
 
+	//! A redefined function. Return the current speed of tower. 
+	int getSpeed();
+
+	shared_ptr<Attack> getAttack();
 	//! Set the damage of tower.
 	/*!
 	\param mDamage A float variable.
@@ -79,7 +83,7 @@ public:
 	//! Tower upgrade. The possible levels are 1, 2, 3.
 	void upgradeTw();
 
-	//! Tower downgrade. The possible levels are 1, 2, 3.
+	//! Set the tower level to 0 in order to destroy this tower.
 	void downgradeTw();
 
 	//! A pure virtual function overriden by derived classes.

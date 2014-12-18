@@ -20,15 +20,43 @@ private:
 	Button exitGameButton = Button(EXIT_GAME_BUTTON_TEXTURE, BUTTON_SIZE, EXIT_BUTTON_POSITION,3);
 
 public:
+
+//! Default Constructor
 	StartMenu();
+
+//! Constructor inherited from Menu class
 	StartMenu(std::string myTextureAddress, sf::Vector2u mySize, sf::Vector2i myPosition);
+	
+//! Destructor
 	~StartMenu();
 
+//! Draw
+	/*!
+		Displays background and buttons
+	*/
 	void draw(sf::RenderWindow&);
 
+//! Resolve Event
+	/*!
+		Handles all events in the menu and handles them to buttons
+	*/
 	void resolveEvent(sf::Event); 
 
+//! Start Game
+	/*!
+		Lauches game when start game button is clicked
+	*/
 	void startGame();
+
+//! Open Credits
+	/*!
+		Opens Credits menu when associated button is clicked
+	*/
 	void openCredits();
+
+//! Exit Game
+	/*!
+		Exits the game
+	*/
 	void exitGame();
 };

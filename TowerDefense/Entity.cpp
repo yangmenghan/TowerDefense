@@ -28,6 +28,11 @@ float Entity::getSpeed()
 	return speed;
 }
 
+int Entity::getTimer()
+{
+	return timer;
+}
+
 sf::Sprite Entity::getSprite()
 {
 	return sprite;
@@ -51,6 +56,11 @@ void Entity::setSize(sf::Vector2i mSize)
 void Entity::setSpeed(float mSpeed)
 {
 	speed = mSpeed;
+}
+
+void Entity::setTimer(int mTimer)
+{
+	timer = mTimer;
 }
 
 void Entity::setSprite(sf::Sprite mSprite)
