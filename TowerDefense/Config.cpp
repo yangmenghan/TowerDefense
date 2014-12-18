@@ -158,7 +158,7 @@ extern const string		MUTE_BUTTON_TEXTURE			= "sprites/buttons/mute_button.png";
 extern const string		RESTART_BUTTON_TEXTURE		= "sprites/buttons/restart_button.png";
 extern const string		GIVE_UP_BUTTON_TEXTURE		= "sprites/buttons/give_up_button.png";
 extern const string		START_GAME_BUTTON_TEXTURE	= "sprites/buttons/start_game_button.png";
-extern const string		SCOREBOARD_BUTTON_TEXTURE	= "";
+extern const string		TUTORIAL_BUTTON_TEXTURE		= "sprites/buttons/tutorial_button.png";
 extern const string		CREDITS_BUTTON_TEXTURE      = "sprites/buttons/credits_button.png";
 extern const string		EXIT_GAME_BUTTON_TEXTURE 	= "sprites/buttons/exit_game.png";
 extern const string		BACK_BUTTON_TEXTURE			= "sprites/buttons/back_button.png";
@@ -175,11 +175,12 @@ extern const sf::Vector2i	MUTE_BUTTON_SIZE	  = sf::Vector2i(100, 32);
 extern const sf::Vector2i	BACK_BUTTON_SIZE	  = sf::Vector2i(100, 34);
 extern const sf::Vector2i	SMALL_BUTTON_SIZE	  = sf::Vector2i(BUTTON_WIDTH, BUTTON_HEIGHT);
 
-extern const sf::Vector2i	START_BUTTON_POSITION	= sf::Vector2i(346, 150);
-extern const sf::Vector2i	CREDITS_BUTTON_POSITION = sf::Vector2i(346, 250);
-extern const sf::Vector2i	EXIT_BUTTON_POSITION	= sf::Vector2i(346, 350);
-extern const sf::Vector2i	MUTE_BUTTON_POSITION	= sf::Vector2i(10, 10);
-extern const sf::Vector2i	RESTART_BUTTON_POSITION	= sf::Vector2i(10, 560);
+extern const sf::Vector2i	START_BUTTON_POSITION	 = sf::Vector2i(346, 150);
+extern const sf::Vector2i	CREDITS_BUTTON_POSITION	 = sf::Vector2i(346, 250);
+extern const sf::Vector2i	TUTORIAL_BUTTON_POSITION = sf::Vector2i(346, 350);
+extern const sf::Vector2i	EXIT_BUTTON_POSITION	 = sf::Vector2i(346, 450);
+extern const sf::Vector2i	MUTE_BUTTON_POSITION	 = sf::Vector2i(10, 10);
+extern const sf::Vector2i	RESTART_BUTTON_POSITION	 = sf::Vector2i(10, 560);
 
 extern const sf::Vector2i	BACK_BUTTON_POSITION	= sf::Vector2i((WINDOW_WIDTH - MUTE_BUTTON_SIZE.x)/2,500);
 extern const sf::Vector2i	GO_RESTART_BUTTON_POSITION = sf::Vector2i(((WINDOW_WIDTH - MUTE_BUTTON_SIZE.x) / 2)+100, 500);

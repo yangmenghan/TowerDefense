@@ -165,7 +165,7 @@ extern const string		MUTE_BUTTON_TEXTURE;
 extern const string		RESTART_BUTTON_TEXTURE;
 extern const string		GIVE_UP_BUTTON_TEXTURE;
 extern const string		START_GAME_BUTTON_TEXTURE;
-extern const string		SCOREBOARD_BUTTON_TEXTURE;
+extern const string		TUTORIAL_BUTTON_TEXTURE;
 extern const string		CREDITS_BUTTON_TEXTURE;
 extern const string		EXIT_GAME_BUTTON_TEXTURE;
 extern const string		BACK_BUTTON_TEXTURE;
@@ -183,6 +183,7 @@ extern const sf::Vector2i	SMALL_BUTTON_SIZE;
 
 extern const sf::Vector2i	START_BUTTON_POSITION;
 extern const sf::Vector2i	CREDITS_BUTTON_POSITION;
+extern const sf::Vector2i	TUTORIAL_BUTTON_POSITION;
 extern const sf::Vector2i	EXIT_BUTTON_POSITION;
 extern const sf::Vector2i	MUTE_BUTTON_POSITION;
 extern const sf::Vector2i	RESTART_BUTTON_POSITION;
