@@ -20,10 +20,7 @@ Tile::Tile(int x, int y)//(row,collone)=(x,y)
 	isClicking = false;
 	hasTw = false;
 	currentSprite = 0;
-	if (!texture.loadFromFile(TILE_SPRITE))
-	{
-		// TODO erreur...
-	}
+	texture.loadFromFile(TILE_SPRITE);
 	sprite.setTexture(texture);	
 
 
@@ -74,8 +71,6 @@ std::vector<shared_ptr<Tile>> Tile::getNeighbor(int _range)//_range = 1,range of
 		}
 	}
 	return neighborTiles;
-	//HOR 10,VER 20
-	// y    ,  x
 }
 
 sf::Sprite Tile::getSprite()
@@ -192,7 +187,6 @@ void Tile::resolveEvent(sf::Event event)
 			}
 		}
 	}
-	
 }
 
 bool Tile::isPolluted()
@@ -207,7 +201,6 @@ bool Tile::hasTower()
 
 shared_ptr<BuildMenu> Tile::openBuildMenu()
 {
-	
 		auto buildMenuptr = make_shared<BuildMenu>(shared_from_this());
 		MenuManager::getMenuManager()->addMenu(buildMenuptr);
 		MenuManager::getMenuManager()->setExistBTMenu(true);
@@ -234,7 +227,6 @@ shared_ptr<TowerMenu> Tile::openTowerMenu()
 	MenuManager::getMenuManager()->addMenu(TowerMenuptr);
 	MenuManager::getMenuManager()->setExistBTMenu(true);
 	return TowerMenuptr;
-
 }
 
 void Tile::draw(sf::RenderWindow& w)
