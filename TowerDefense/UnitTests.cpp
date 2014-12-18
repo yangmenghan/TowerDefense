@@ -22,68 +22,57 @@ public:
 
 	virtual void SetUp(){
 
-		enemy.setTile(field.getStartTile());
-		enemy.updatePath();
-
 		//startGame
 		levelManager->startGame();
 
-		//create init path
-		vector<shared_ptr<Tile>> a;
-		a.push_back(field.getTile(80));
-		a.push_back(field.getTile(81));
-		a.push_back(field.getTile(82));
-		a.push_back(field.getTile(83));
-		a.push_back(field.getTile(84));
-		a.push_back(field.getTile(85));
-		a.push_back(field.getTile(86));
-		a.push_back(field.getTile(87));
-		a.push_back(field.getTile(88));
-		a.push_back(field.getTile(89));
-		a.push_back(field.getTile(90));
-		a.push_back(field.getTile(91));
-		a.push_back(field.getTile(92));
-		a.push_back(field.getTile(93));
-		a.push_back(field.getTile(94));
-		a.push_back(field.getTile(95));
-		a.push_back(field.getTile(96));
-		a.push_back(field.getTile(97));
-		a.push_back(field.getTile(98));
-		a.push_back(field.getTile(99));
-		init_path = Path(a);
+		enemy.setTile(field.getStartTile());
+		enemy.updatePath();
 
-		//create test path
+		enemy_b.setTile(field.getStartTile());
+		enemy_b.updatePath();
+
 	}
-	virtual void TearDown(){}
+	virtual void TearDown(){
+		levelManager->stopGame();
+		levelManager->kill();
+	}
 
 protected:
-
-	EnemyTest() {
-		
-	}
-
-	virtual ~EnemyTest() {
-	}
-
-
+	EnemyTest() {}
+	virtual ~EnemyTest() {}
 };
 
-/*
+
 TEST_F(EnemyTest, waves)
 {
-	//EXPECT_EQ(WAVE_TOTAL);
+	EXPECT_EQ(WAVE_TOTAL, levelManager->getWaves().size());
+	EXPECT_EQ(1, levelManager->getCurrentWaveNumber());
 }
+
 
 TEST_F(EnemyTest, spawnEnemy)
 {
-	//EXPECT_EQ(NORMAL_ENEMY_HP, enemy.getHP());
+	Wave w = levelManager->getWaves().at(0);
+	for (int i = 0; i <= 2 * WAVE_SPAWN_COOLDOWN + 2 * WAVE_SPAWN_PAUSE_COOLDOWN ; i++){
+		w.spawnEnemy();
+	}
+
+	EXPECT_EQ(1, levelManager->getEnemies().size());
+
 }
+
 
 TEST_F(EnemyTest, nextWave)
 {
-	//EXPECT_EQ(NORMAL_ENEMY_HP, enemy.getHP());
+	LevelManager* lm = levelManager;
+	for (int i = 0; i <= WAVE_COOLDOWN; i++){
+		lm->nextWave();
+	}
+
+	EXPECT_EQ(WAVE_TOTAL - 1, levelManager->getWaves().size());
 }
 
+/*
 TEST_F(EnemyTest, addEnemy)
 {
 	//EXPECT_EQ(NORMAL_ENEMY_HP, enemy.getHP());
@@ -107,10 +96,7 @@ TEST_F(EnemyTest, construction)
 TEST_F(EnemyTest, setTile)
 {
 
-	
 	EXPECT_EQ(field.getStartTile()->getPosition().x, enemy.getTile()->getPosition().x);
-
-	
 	EXPECT_EQ(TILE_NUM_VER, enemy.getDistanceToTarget());
 
 }
@@ -119,15 +105,14 @@ TEST_F(EnemyTest, setTile)
 TEST_F(EnemyTest, move)
 {
 	enemy.move();
-	EXPECT_NE(field.getStartTile()->getPosition().x, enemy.getPosition().x);
+	EXPECT_LT(field.getStartTile()->getPosition().x, enemy.getPosition().x);
 }
 
 TEST_F(EnemyTest, BombExplosion)
 {
 	enemy_b.explode();
 	EXPECT_TRUE(enemy_b.getTile()->isPolluted());
-
-	//EXPECT_EQ(NORMAL_ENEMY_HP, enemy.getHP());
+	EXPECT_LT(0,enemy_b.getTile()->getCooldown());
 }
 
 TEST_F(EnemyTest, succed)
@@ -139,7 +124,7 @@ TEST_F(EnemyTest, succed)
 TEST_F(EnemyTest, slow)
 {
 	enemy.slow(100);
-	EXPECT_LT(NORMAL_ENEMY_SPEED, enemy.getSpeed());
+	EXPECT_GT(NORMAL_ENEMY_SPEED, enemy.getSpeed());
 
 	enemy.move();
 	EXPECT_EQ(99,enemy.getSlowTime());

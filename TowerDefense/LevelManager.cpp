@@ -209,6 +209,10 @@ vector<shared_ptr<Tower>> LevelManager::getTowers(){
 	return towers;
 }
 
+vector<Wave> LevelManager::getWaves(){
+	return waves;
+}
+
 void LevelManager::setPlayer(shared_ptr<Player> p){
 	player = p;
 };
