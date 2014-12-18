@@ -9,7 +9,7 @@ NormalTower::NormalTower(shared_ptr<Tile> mTile)
 		damage[i] = NORMAL_TOWER_DAMAGE[i];
 		income[i] = NORMAL_TOWER_INCOME[i];
 		range[i] = NORMAL_TOWER_RANGE[i];
-		speed[i] = NORMAL_TOWER_SPEED[i] / LevelManager::getLevelManager()->getSpeed();
+		speed[i] = NORMAL_TOWER_SPEED[i];
 
 	}
 	timer = speed[level - 1];

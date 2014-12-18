@@ -79,7 +79,7 @@ void Tower::setAttack()
 	attack->setDamage(damage[level - 1]);
 	attack->setSlowAmount(slowAmount[level - 1]);
 	attack->setRange(range[level - 1]);
-	attack->setSpeed(getSpeed());
+	attack->setSpeed(speed[level - 1]);
 	attack->setTimer(timer);
 }
 

@@ -83,5 +83,5 @@ void AreaAttack::resolve(sf::RenderWindow& w)
 		}
 	}
 	else
-		timer = speed * LevelManager::getLevelManager()->getSpeed();
+		timer = speed / LevelManager::getLevelManager()->getSpeed();
 }
