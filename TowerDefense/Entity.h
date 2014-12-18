@@ -38,10 +38,17 @@ public:
 	*/
 	float getSpeed();
 
+	//! Return current value of timer.
+	/*!
+	\return A integer variable.
+	*/
+	int getTimer();
+
 	//! Return the current sprite of this entity.
 	/*!
 	\return A sf::Sprite variable.
 	*/
+
 	sf::Sprite getSprite();
 
 	//! Return the current tile of this entity.
@@ -67,6 +74,12 @@ public:
 	\param mSpeed A float variable
 	*/
 	void setSpeed(float mSpeed);
+
+	//! Set timer of this entity.
+	/*!
+	\param mTimer A integer variable.
+	*/
+	void setTimer(int mTimer);
 
 	//! Set sprite of this entity.
 	/*!
