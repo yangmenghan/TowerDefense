@@ -22,7 +22,6 @@ The damage will occure in a frequency defined by timer.
 
 void NormalAttack::resolve(sf::RenderWindow& w)
 {
-	//TODO:Animation
 	if (timer < timer / 3)
 	{
 		shared_ptr<Enemy> enemy = getTarget();

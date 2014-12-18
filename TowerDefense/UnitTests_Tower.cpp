@@ -4,6 +4,7 @@
 #include "SlowTower.h"
 #include "MoneyTower.h"
 #include "SunTower.h"
+#include "NormalEnemy.h"
 
 using namespace std;
 
@@ -85,22 +86,60 @@ TEST(MoneyTower, generateMoney)
 
 TEST(Attack, setAttackRayAngle)
 {
-	shared_ptr<Enemy> target = make_shared<Enemy>();
+	shared_ptr<Enemy> target = make_shared<NormalEnemy>();
 	shared_ptr<Tile> pTile = make_shared<Tile>(10, 5);
 	NormalTower tower(pTile);
 
-	target->setPosition(sf::Vector2i(pTile->getPositionPixel().x + 100, pTile->getPositionPixel().y - 25));
+	target->setPosition(sf::Vector2i(tower.getPosition().x + 100, tower.getPosition().y ));
 	tower.getAttack()->setAttackRayAngle(target);
 	EXPECT_FALSE(tower.getAttack()->getAttackRay().getRotation() == 0);
 
-	target->setPosition(sf::Vector2i(pTile->getPositionPixel().x + 100, pTile->getPositionPixel().y + 50));
+	target->setPosition(sf::Vector2i(tower.getPosition().x + 100, tower.getPosition().y + 50));
 	tower.getAttack()->setAttackRayAngle(target);
 	EXPECT_FALSE(tower.getAttack()->getAttackRay().getRotation() > 0 &&
 				tower.getAttack()->getAttackRay().getRotation() < 90);
 
-	target->setPosition(sf::Vector2i(pTile->getPositionPixel().x - 25, pTile->getPositionPixel().y + 100));
+	target->setPosition(sf::Vector2i(tower.getPosition().x, tower.getPosition().y + 100));
 	tower.getAttack()->setAttackRayAngle(target);
 	EXPECT_FALSE(tower.getAttack()->getAttackRay().getRotation() == 90 );
+
+	target->setPosition(sf::Vector2i(tower.getPosition().x - 100, tower.getPosition().y + 100));
+	tower.getAttack()->setAttackRayAngle(target);
+	EXPECT_FALSE(tower.getAttack()->getAttackRay().getRotation() > 90 &&
+		tower.getAttack()->getAttackRay().getRotation() < 180);
+
+	target->setPosition(sf::Vector2i(tower.getPosition().x - 100, tower.getPosition().y));
+	tower.getAttack()->setAttackRayAngle(target);
+	EXPECT_FALSE(tower.getAttack()->getAttackRay().getRotation() == 180);
+
+	target->setPosition(sf::Vector2i(tower.getPosition().x - 100, tower.getPosition().y - 100));
+	tower.getAttack()->setAttackRayAngle(target);
+	EXPECT_FALSE(tower.getAttack()->getAttackRay().getRotation() > 180 &&
+		tower.getAttack()->getAttackRay().getRotation() < 270);
+
+	target->setPosition(sf::Vector2i(tower.getPosition().x, tower.getPosition().y - 100));
+	tower.getAttack()->setAttackRayAngle(target);
+	EXPECT_FALSE(tower.getAttack()->getAttackRay().getRotation() == 270);
+
+	target->setPosition(sf::Vector2i(tower.getPosition().x + 100, tower.getPosition().y - 100));
+	tower.getAttack()->setAttackRayAngle(target);
+	EXPECT_FALSE(tower.getAttack()->getAttackRay().getRotation() > 270 &&
+		tower.getAttack()->getAttackRay().getRotation() < 360);
+}
+
+TEST(Attack, getTarget)
+{
+	shared_ptr<Tile> pTile = make_shared<Tile>(10, 5);
+	NormalTower tower(pTile);
+	shared_ptr<Enemy> enemy = make_shared<NormalEnemy>();
+	enemy->setPosition(sf::Vector2i(tower.getPosition().x + tower.getRange() + 1, tower.getPosition().y));
+	LevelManager::getLevelManager()->addEnemy(enemy);
+	EXPECT_FALSE(tower.getAttack()->getTarget());
+}
+
+TEST(AreaAttack, getTarget)
+{
+
 }
 int main(int argc, char **argv)
 {
