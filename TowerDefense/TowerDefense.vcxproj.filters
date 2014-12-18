@@ -112,6 +112,9 @@
     <ClCompile Include="UnitTests_Tile.cpp">
       <Filter>Source\UnitTests</Filter>
     </ClCompile>
+    <ClCompile Include="UnitTestFr.cpp">
+      <Filter>Source\UnitTests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h">
