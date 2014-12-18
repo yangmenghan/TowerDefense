@@ -44,6 +44,15 @@ int Tower::getIncome()
 	return income[level-1];
 }
 
+int Tower::getSpeed()
+{
+	return speed[level - 1];
+}
+
+shared_ptr<Attack> Tower::getAttack()
+{
+	return attack;
+}
 void Tower::setDamage(float mDamage)
 {
 	damage[level - 1] = mDamage;

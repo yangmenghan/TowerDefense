@@ -40,6 +40,10 @@ public:
 	//! A getter returning the income when selling tower.
 	int getIncome();
 
+	//! A redefined function. Return the current speed of tower. 
+	int getSpeed();
+
+	shared_ptr<Attack> getAttack();
 	//! Set the damage of tower.
 	/*!
 	\param mDamage A float variable.
