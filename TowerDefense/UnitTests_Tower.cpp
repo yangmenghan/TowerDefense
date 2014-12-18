@@ -132,9 +132,11 @@ TEST(Attack, getTarget)
 	shared_ptr<Tile> pTile = make_shared<Tile>(10, 5);
 	NormalTower tower(pTile);
 	shared_ptr<Enemy> enemy = make_shared<NormalEnemy>();
-	enemy->setPosition(sf::Vector2i(tower.getPosition().x + tower.getRange() + 1, tower.getPosition().y));
+	enemy->setPosition(sf::Vector2i(tower.getPosition().x + tower.getRange() - 1, tower.getPosition().y));
 	LevelManager::getLevelManager()->addEnemy(enemy);
-	EXPECT_FALSE(tower.getAttack()->getTarget());
+
+	shared_ptr<Enemy> target = tower.getAttack()->getTarget();
+	EXPECT_FALSE(target);
 }
 
 TEST(AreaAttack, getTarget)

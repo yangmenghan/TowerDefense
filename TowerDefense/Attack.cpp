@@ -124,7 +124,7 @@ shared_ptr<Enemy> Attack::getTarget()
 	float minDistance = 0;
 	for (shared_ptr<Enemy> e : LevelManager::getLevelManager()->getEnemies())
 	{
-		float i = sqrt(pow(e->getPosition().x + 25 - center.x, 2) 
+		float i = sqrt(pow(e->getPosition().x + 25 - center.x, 2) //position of enemy is left-top point, so add 25 (half of enemy size) to compute
 						+ pow((e->getPosition().y + 25 - center.y),2));
 		if ( i < range)
 		{
