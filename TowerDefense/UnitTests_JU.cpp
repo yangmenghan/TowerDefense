@@ -98,7 +98,6 @@ TEST(Field, computePath)
 	*/
 	EXPECT_EQ(true, compare);
 	shared_ptr<Tile> tile3 = field.getTile(81);
-	//shared_ptr<Tower> myTower;
 	auto pNormalTw = make_shared<NormalTower>(tile3);
 		tile3->setTower(pNormalTw);
 	bool compare1 = true;
@@ -208,8 +207,7 @@ TEST(Field, tryCross)
 	shared_ptr<Tile> tile1 = field.getTile(80);
 	shared_ptr<Tile> tile2 = field.getTile(99);
 	EXPECT_EQ(true,field.tryCross(tile1, tile2));
-	auto pNormalTw = make_shared<NormalTower>(tile1);
-	//shared_ptr<Tower> myTower; 
+	auto pNormalTw = make_shared<NormalTower>(tile1); 
 	tile1->setTower(pNormalTw);
 	EXPECT_EQ(false,field.tryCross(tile1, tile2));
 }

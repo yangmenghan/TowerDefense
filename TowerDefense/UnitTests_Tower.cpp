@@ -139,10 +139,6 @@ TEST(Attack, getTarget)
 	EXPECT_FALSE(target);
 }
 
-TEST(AreaAttack, getTarget)
-{
-
-}
 int main(int argc, char **argv)
 {
 	testing::InitGoogleTest(&argc, argv);
