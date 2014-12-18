@@ -245,3 +245,6 @@ TowerDefense/AreaAttack.cpp
 TowerDefense/TowerDefense.vcxproj
 TowerDefense/TowerDefense.vcxproj
 TowerDefense/TowerDefense.vcxproj.filters
+TowerDefense/TowerDefense.vcxproj.filters
+TowerDefense/TowerDefense.vcxproj.filters
+*.filters
