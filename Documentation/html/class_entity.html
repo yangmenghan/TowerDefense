@@ -57,51 +57,59 @@ Inheritance diagram for Entity:</div>
  <div class="center">
   <img src="class_entity.png" usemap="#Entity_map" alt=""/>
   <map id="Entity_map" name="Entity_map">
-<area href="class_enemy.html" alt="Enemy" shape="rect" coords="0,56,90,80"/>
-<area href="class_tower.html" alt="Tower" shape="rect" coords="200,56,290,80"/>
+<area href="class_enemy.html" title="Base class of enemies. " alt="Enemy" shape="rect" coords="0,56,90,80"/>
+<area href="class_tower.html" title="Basic class for construction of tower. " alt="Tower" shape="rect" coords="200,56,290,80"/>
 <area href="class_bomb_enemy.html" alt="BombEnemy" shape="rect" coords="100,112,190,136"/>
-<area href="class_fast_enemy.html" alt="FastEnemy" shape="rect" coords="100,168,190,192"/>
+<area href="class_fast_enemy.html" title="Class of normal enemy. " alt="FastEnemy" shape="rect" coords="100,168,190,192"/>
 <area href="class_normal_enemy.html" title="Class of normal enemy. " alt="NormalEnemy" shape="rect" coords="100,224,190,248"/>
 <area href="class_tough_enemy.html" title="Class of tough enemy. " alt="ToughEnemy" shape="rect" coords="100,280,190,304"/>
-<area href="class_money_tower.html" alt="MoneyTower" shape="rect" coords="300,112,390,136"/>
-<area href="class_normal_tower.html" alt="NormalTower" shape="rect" coords="300,168,390,192"/>
-<area href="class_slow_tower.html" alt="SlowTower" shape="rect" coords="300,224,390,248"/>
-<area href="class_sun_tower.html" alt="SunTower" shape="rect" coords="300,280,390,304"/>
+<area href="class_money_tower.html" title="Derived class from Tower class. " alt="MoneyTower" shape="rect" coords="300,112,390,136"/>
+<area href="class_normal_tower.html" title="Derived class from Tower class. " alt="NormalTower" shape="rect" coords="300,168,390,192"/>
+<area href="class_slow_tower.html" title="Derived class from Tower class. " alt="SlowTower" shape="rect" coords="300,224,390,248"/>
+<area href="class_sun_tower.html" title="Derived class from Tower class. " alt="SunTower" shape="rect" coords="300,280,390,304"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1bc281383bd777ba96dd0c7c989ba1e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1bc281383bd777ba96dd0c7c989ba1e7"></a>
-sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> ()</td></tr>
+<tr class="memitem:a980f368aa07ce358583982821533a54a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a980f368aa07ce358583982821533a54a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a980f368aa07ce358583982821533a54a">Entity</a> ()</td></tr>
+<tr class="memdesc:a980f368aa07ce358583982821533a54a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor. <br /></td></tr>
+<tr class="separator:a980f368aa07ce358583982821533a54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf6d3f7cb1b2ba029b6b048a395cc8ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf6d3f7cb1b2ba029b6b048a395cc8ae"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae">~Entity</a> ()</td></tr>
+<tr class="memdesc:adf6d3f7cb1b2ba029b6b048a395cc8ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">A virtual destructor. <br /></td></tr>
+<tr class="separator:adf6d3f7cb1b2ba029b6b048a395cc8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bc281383bd777ba96dd0c7c989ba1e7"><td class="memItemLeft" align="right" valign="top">sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a1bc281383bd777ba96dd0c7c989ba1e7">getPosition</a> ()</td></tr>
+<tr class="memdesc:a1bc281383bd777ba96dd0c7c989ba1e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current position of this entity.  <a href="#a1bc281383bd777ba96dd0c7c989ba1e7">More...</a><br /></td></tr>
 <tr class="separator:a1bc281383bd777ba96dd0c7c989ba1e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad4cbcdad1ba43221eff4e5474dfdd58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad4cbcdad1ba43221eff4e5474dfdd58"></a>
-sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><b>getSize</b> ()</td></tr>
+<tr class="memitem:aad4cbcdad1ba43221eff4e5474dfdd58"><td class="memItemLeft" align="right" valign="top">sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#aad4cbcdad1ba43221eff4e5474dfdd58">getSize</a> ()</td></tr>
+<tr class="memdesc:aad4cbcdad1ba43221eff4e5474dfdd58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current size of this entity.  <a href="#aad4cbcdad1ba43221eff4e5474dfdd58">More...</a><br /></td></tr>
 <tr class="separator:aad4cbcdad1ba43221eff4e5474dfdd58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ab1df6a898303e678a11d727016dd09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ab1df6a898303e678a11d727016dd09"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getSpeed</b> ()</td></tr>
+<tr class="memitem:a1ab1df6a898303e678a11d727016dd09"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a1ab1df6a898303e678a11d727016dd09">getSpeed</a> ()</td></tr>
+<tr class="memdesc:a1ab1df6a898303e678a11d727016dd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current speed of this entity.  <a href="#a1ab1df6a898303e678a11d727016dd09">More...</a><br /></td></tr>
 <tr class="separator:a1ab1df6a898303e678a11d727016dd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5dd2cfe8cd0bd31e908752bf7c4b510"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5dd2cfe8cd0bd31e908752bf7c4b510"></a>
-sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><b>getSprite</b> ()</td></tr>
+<tr class="memitem:aa5dd2cfe8cd0bd31e908752bf7c4b510"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#aa5dd2cfe8cd0bd31e908752bf7c4b510">getSprite</a> ()</td></tr>
+<tr class="memdesc:aa5dd2cfe8cd0bd31e908752bf7c4b510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current sprite of this entity.  <a href="#aa5dd2cfe8cd0bd31e908752bf7c4b510">More...</a><br /></td></tr>
 <tr class="separator:aa5dd2cfe8cd0bd31e908752bf7c4b510"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c0e3e14381db594a39b0b1fa69b9bc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c0e3e14381db594a39b0b1fa69b9bc7"></a>
-shared_ptr&lt; <a class="el" href="class_tile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getTile</b> ()</td></tr>
+<tr class="memitem:a4c0e3e14381db594a39b0b1fa69b9bc7"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="class_tile.html">Tile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a4c0e3e14381db594a39b0b1fa69b9bc7">getTile</a> ()</td></tr>
+<tr class="memdesc:a4c0e3e14381db594a39b0b1fa69b9bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current tile of this entity.  <a href="#a4c0e3e14381db594a39b0b1fa69b9bc7">More...</a><br /></td></tr>
 <tr class="separator:a4c0e3e14381db594a39b0b1fa69b9bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a999e10122f45fb582c2d4976f12e4c3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a999e10122f45fb582c2d4976f12e4c3e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (sf::Vector2i mPosition)</td></tr>
+<tr class="memitem:a999e10122f45fb582c2d4976f12e4c3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a999e10122f45fb582c2d4976f12e4c3e">setPosition</a> (sf::Vector2i mPosition)</td></tr>
+<tr class="memdesc:a999e10122f45fb582c2d4976f12e4c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set postion of this entity.  <a href="#a999e10122f45fb582c2d4976f12e4c3e">More...</a><br /></td></tr>
 <tr class="separator:a999e10122f45fb582c2d4976f12e4c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d01a1d6f13fa685d75ac657d2e72b6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d01a1d6f13fa685d75ac657d2e72b6b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSize</b> (sf::Vector2i mSize)</td></tr>
+<tr class="memitem:a5d01a1d6f13fa685d75ac657d2e72b6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a5d01a1d6f13fa685d75ac657d2e72b6b">setSize</a> (sf::Vector2i mSize)</td></tr>
+<tr class="memdesc:a5d01a1d6f13fa685d75ac657d2e72b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set size of this entity.  <a href="#a5d01a1d6f13fa685d75ac657d2e72b6b">More...</a><br /></td></tr>
 <tr class="separator:a5d01a1d6f13fa685d75ac657d2e72b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a752b7fb05557c905dcdce931500e700e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a752b7fb05557c905dcdce931500e700e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSpeed</b> (float mSpeed)</td></tr>
+<tr class="memitem:a752b7fb05557c905dcdce931500e700e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a752b7fb05557c905dcdce931500e700e">setSpeed</a> (float mSpeed)</td></tr>
+<tr class="memdesc:a752b7fb05557c905dcdce931500e700e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set speed of this entity.  <a href="#a752b7fb05557c905dcdce931500e700e">More...</a><br /></td></tr>
 <tr class="separator:a752b7fb05557c905dcdce931500e700e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acffd8697cae92e62b0962c78e2d45d06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acffd8697cae92e62b0962c78e2d45d06"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSprite</b> (sf::Sprite mSprite)</td></tr>
+<tr class="memitem:acffd8697cae92e62b0962c78e2d45d06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#acffd8697cae92e62b0962c78e2d45d06">setSprite</a> (sf::Sprite mSprite)</td></tr>
+<tr class="memdesc:acffd8697cae92e62b0962c78e2d45d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sprite of this entity.  <a href="#acffd8697cae92e62b0962c78e2d45d06">More...</a><br /></td></tr>
 <tr class="separator:acffd8697cae92e62b0962c78e2d45d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eca969d39e7b7bc728236f85e02bbb6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0eca969d39e7b7bc728236f85e02bbb6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (sf::RenderWindow &amp;)</td></tr>
-<tr class="separator:a0eca969d39e7b7bc728236f85e02bbb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f639dbaa21a19e991c973245431987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a42f639dbaa21a19e991c973245431987">draw</a> (sf::RenderWindow &amp;w)</td></tr>
+<tr class="memdesc:a42f639dbaa21a19e991c973245431987"><td class="mdescLeft">&#160;</td><td class="mdescRight">To draw this entity in a render window.  <a href="#a42f639dbaa21a19e991c973245431987">More...</a><br /></td></tr>
+<tr class="separator:a42f639dbaa21a19e991c973245431987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -127,6 +135,217 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b></td></tr>
 sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><b>texture</b></td></tr>
 <tr class="separator:ad64dd6d282432a68475f30f7c7bbdc88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a42f639dbaa21a19e991c973245431987"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::draw </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>w</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To draw this entity in a render window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>A sf::RenderWindow reference variable. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1bc281383bd777ba96dd0c7c989ba1e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2i Entity::getPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the current position of this entity. </p>
+<dl class="section return"><dt>Returns</dt><dd>A sf::Vector2i variable. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aad4cbcdad1ba43221eff4e5474dfdd58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2i Entity::getSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the current size of this entity. </p>
+<dl class="section return"><dt>Returns</dt><dd>A sf::Vector2i variable. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1ab1df6a898303e678a11d727016dd09"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Entity::getSpeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the current speed of this entity. </p>
+<dl class="section return"><dt>Returns</dt><dd>A float variable. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa5dd2cfe8cd0bd31e908752bf7c4b510"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Sprite Entity::getSprite </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the current sprite of this entity. </p>
+<dl class="section return"><dt>Returns</dt><dd>A sf::Sprite variable. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c0e3e14381db594a39b0b1fa69b9bc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; <a class="el" href="class_tile.html">Tile</a> &gt; Entity::getTile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the current tile of this entity. </p>
+<dl class="section return"><dt>Returns</dt><dd>A shared pointer pointing a type <a class="el" href="class_tile.html" title="A unit in the field. ">Tile</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a999e10122f45fb582c2d4976f12e4c3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2i&#160;</td>
+          <td class="paramname"><em>mPosition</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set postion of this entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mPosition</td><td>A sf::Vector2i variable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5d01a1d6f13fa685d75ac657d2e72b6b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::setSize </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2i&#160;</td>
+          <td class="paramname"><em>mSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set size of this entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mSize</td><td>A sf::Vector2i variable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a752b7fb05557c905dcdce931500e700e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::setSpeed </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>mSpeed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set speed of this entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mSpeed</td><td>A float variable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acffd8697cae92e62b0962c78e2d45d06"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::setSprite </td>
+          <td>(</td>
+          <td class="paramtype">sf::Sprite&#160;</td>
+          <td class="paramname"><em>mSprite</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set sprite of this entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mSprite</td><td>A sf::Sprite variable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>D:/TowerDefense/TowerDefense/<a class="el" href="_entity_8h_source.html">Entity.h</a></li>
 <li>D:/TowerDefense/TowerDefense/Entity.cpp</li>
@@ -134,7 +353,7 @@ sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><b>texture</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 16 2014 18:42:01 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 18 2014 17:59:40 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

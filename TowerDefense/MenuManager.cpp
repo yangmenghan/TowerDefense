@@ -62,16 +62,6 @@ void MenuManager::setExistBTMenu(bool _exist)
 	existBTMenu = _exist;
 }
 
-std::vector<shared_ptr<Menu>>* MenuManager::getMenus()
-{
-	return &menuStack;
-}
-
-void MenuManager::openMenu(shared_ptr<Menu> menu)
-{
-	addMenu(menu);
-}
-
 void MenuManager::closeMenu()
 {
 	popMenu();
@@ -90,4 +80,19 @@ MenuManager* MenuManager::getMenuManager()
 void MenuManager::resolveEvent(sf::Event event)
 {
 	menuStack.back()->resolveEvent(event);
+}
+
+int MenuManager::getCount()
+{
+	return menuStack.size();
+}
+
+shared_ptr<Menu> MenuManager::getActiveMenu()
+{
+	return menuStack.back();
+}
+
+void MenuManager::clearMenuStack()
+{
+	menuStack.clear();
 }

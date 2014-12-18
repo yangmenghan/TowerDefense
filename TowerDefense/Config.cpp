@@ -191,5 +191,6 @@ extern const sf::Vector2i	GO_BACK_BUTTON_POSITION = sf::Vector2i(((WINDOW_WIDTH 
 /*
 Other constants
 */
+
 extern const int		INIT_MONEY				= 9;
 extern const int		INIT_HP					= 10;

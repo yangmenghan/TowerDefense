@@ -56,6 +56,8 @@ void AreaAttack::attackAnimation(sf::RenderWindow& w)
 Resolve damages of enemies who are in the range. 
 The damage will occure in a frequency defined by timer.
 */
+
+
 void AreaAttack::resolve(sf::RenderWindow& w)
 {
 	//TODO:Animation

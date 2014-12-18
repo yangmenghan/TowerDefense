@@ -27,6 +27,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#a1b7bb04e9eca7ef43e5f916f766e01d4"><param name="Name" value="attackRay"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#a93137b1d93ca34ea21026225eeda24af"><param name="Name" value="center"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#aebc541003702819369c4645d425b8ba0"><param name="Name" value="damage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#ab7146606e0eadea9922ac5c6203793e4"><param name="Name" value="getAttackRay"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#a03bd157da34103a2a3a79fcd53e65e12"><param name="Name" value="getCenter"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#a03f55a2222756b756522c90de785a254"><param name="Name" value="getDamage"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#ae6eb96b3cd44a8c90e88d09de05224f3"><param name="Name" value="getSlowAmount"></OBJECT>
@@ -65,13 +66,12 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html"><param name="Name" value="BombEnemy"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a3d5bbfa65313a43603d1a23cd66f9cd1"><param name="Name" value="BombEnemy"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a15e34ebba40eaf805ffe179ec4c9a2af"><param name="Name" value="checkCountDown"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a6b23badbfab051daf75ef8c10bfcd915"><param name="Name" value="BombEnemy"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a0a984610f97fe852884e0d00d0461a9c"><param name="Name" value="explode"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a5a8244c65fbf9f8fceb07080e11ddbe8"><param name="Name" value="getTimer"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a9d1db939bea4bf8a9fc4b5bfead03fc3"><param name="Name" value="getTrigger"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#ae421414fdc87d4cb92bdc6975a3b28b4"><param name="Name" value="move"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a7eb5ed711a40cbd0af016450bf59b0e4"><param name="Name" value="TriggerCountDown"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a722f9d87fcdcd501600b9393649d025a"><param name="Name" value="move"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a903ec40e2b54441ad464e8be0c20a162"><param name="Name" value="~BombEnemy"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a1d9a86d110b87f3cc55b40d1bdb59eb5"><param name="Name" value="bounty"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_build_menu.html"><param name="Name" value="BuildMenu"></OBJECT>
@@ -114,13 +114,13 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_button.html#a52948ae70f6716f8dd7480122166d09e"><param name="Name" value="Button"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tile.html#a802ca0ade47efc9b5f28a047a2f98a96"><param name="Name" value="Tile"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a15e34ebba40eaf805ffe179ec4c9a2af"><param name="Name" value="checkCountDown"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_button.html#a5a81c2b30a885e90782def5c35bda9c5"><param name="Name" value="checkHover"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_button.html#a5a81c2b30a885e90782def5c35bda9c5"><param name="Name" value="Button"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_field.html#a6d7cb1016f80de47a2a1b00b8aff313f"><param name="Name" value="Field"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tile.html#ad95f62d8b577df5ace5636a14fb59e6e"><param name="Name" value="Tile"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#ad812dde05404b6f140a27ad38af8d8dd"><param name="Name" value="clearMenuStack"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_build_menu.html#a58efd17837e0cd60a9bd1852cf6eaadd"><param name="Name" value="close"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_build_menu.html#a58efd17837e0cd60a9bd1852cf6eaadd"><param name="Name" value="BuildMenu"></OBJECT>
@@ -136,12 +136,10 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html"><param name="Name" value="CreditsMenu"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#afe78658efba17b95a8a7d87d4a90c4d3"><param name="Name" value="closeMenu"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#ab044c04c75903dfd5ddc1d1c9e22dc97"><param name="Name" value="CreditsMenu"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#a5faefd77a6bf66b98de838e28f1beff1"><param name="Name" value="CreditsMenu"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#a64fe7f7471ab92c69cbc95cb4ad9dfc8"><param name="Name" value="draw"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#a7ce3ffb34ef6b1d74a6975506c3f8a92"><param name="Name" value="getCreditsAddress"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#a285f9f79c86cc255743f70ba7f23e22b"><param name="Name" value="getSprite"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#a6fa8421ffafa70e6d6e3af1f61b220c7"><param name="Name" value="resolveEvent"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#ad0d86e63b66e1a68bd6600e59040ff18"><param name="Name" value="setSprite"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#afab6fd75a71b5faa26508907c28ef3b4"><param name="Name" value="~CreditsMenu"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower.html#ae9ab0c86f3c1bdd5e73a5cdee4bdfd96"><param name="Name" value="currentSprite"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#aebc541003702819369c4645d425b8ba0"><param name="Name" value="damage"></OBJECT>
@@ -152,7 +150,11 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a9bb5d74024760e604c41ba79cc7da892"><param name="Name" value="defence"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a04c451624958712b36546037fc25c601"><param name="Name" value="die"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#ad8c2cd506c90a57adad1f94d9e4c25d2"><param name="Name" value="dieWithoutBonus"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a03555427106f2f8c584e1e1aea02593a"><param name="Name" value="display"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a93a12aab0f84a4d4d4557bd8a5f05573"><param name="Name" value="display"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a93a12aab0f84a4d4d4557bd8a5f05573"><param name="Name" value="LevelManager"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a03555427106f2f8c584e1e1aea02593a"><param name="Name" value="MenuManager"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_menu.html#a08db122cf9f8caf35a49238692170ffa"><param name="Name" value="displayComingWay"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_money_tower.html#a1a677bf77688d2dc52ea3bff35a4edf4"><param name="Name" value="displayGeneratedMoney"></OBJECT>
   <UL>
@@ -173,14 +175,16 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_build_menu.html#acbedc91d2b9c5ecf3d429612b95543a5"><param name="Name" value="BuildMenu"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_button.html#aa64ba351ba4a13e71eb8abcfbe3e4fa0"><param name="Name" value="Button"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#a64fe7f7471ab92c69cbc95cb4ad9dfc8"><param name="Name" value="CreditsMenu"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#ab6302a04e63f97255eb44fc8ce35d012"><param name="Name" value="Enemy"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#a0eca969d39e7b7bc728236f85e02bbb6"><param name="Name" value="Entity"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a4a373085cf9890e9ef9d2b3825bfa92a"><param name="Name" value="Enemy"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#a42f639dbaa21a19e991c973245431987"><param name="Name" value="Entity"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_field.html#ad9b2d1b93b7e808863b4cdbc702acb29"><param name="Name" value="Field"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_menu.html#aabc9ea58600553c8562881d069c67d2c"><param name="Name" value="GameMenu"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_over_menu.html#a5e67d2adec64c94bd880b608c72c4453"><param name="Name" value="GameOverMenu"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu.html#a318acc3dae74a054b4e97871344ef13c"><param name="Name" value="Menu"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_money_tower.html#aaa24e2c1a3748aa4fb4775b5124b0b21"><param name="Name" value="MoneyTower"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_money_tower.html#a9cc1a7502725fdf7af36b7871853669a"><param name="Name" value="MoneyTower"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_normal_tower.html#ae58d00f70a97e994a6d331ad0ae22f7c"><param name="Name" value="NormalTower"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_path.html#a27f9ea0a2e56cfbea520c099545e2a21"><param name="Name" value="Path"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_slow_tower.html#a5a5d10af63b914331b6380f1cb4f726a"><param name="Name" value="SlowTower"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_start_menu.html#a34e56fc211d852a717bef5fc4136d13e"><param name="Name" value="StartMenu"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tile.html#a0b766f6a252bf0ff377228f4d50a65c0"><param name="Name" value="Tile"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower_menu.html#a0ecd4cdad69ed36c06781035d77569bc"><param name="Name" value="TowerMenu"></OBJECT>
@@ -191,8 +195,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a9bb5d74024760e604c41ba79cc7da892"><param name="Name" value="defence"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a04c451624958712b36546037fc25c601"><param name="Name" value="die"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#ad8c2cd506c90a57adad1f94d9e4c25d2"><param name="Name" value="dieWithoutBonus"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#ab6302a04e63f97255eb44fc8ce35d012"><param name="Name" value="draw"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a54489e1cd1e2fd48465effef7e45fd1b"><param name="Name" value="Enemy"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a4a373085cf9890e9ef9d2b3825bfa92a"><param name="Name" value="draw"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a94f30d348b6d2840fd71675472ba38dd"><param name="Name" value="Enemy"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#aecdda0124a341bace43f683a766ec6f7"><param name="Name" value="getBounty"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#ae01d1b6fedb8f342b7f216ca463d7349"><param name="Name" value="getDefence"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a53020fcba7330809918946e150f8a591"><param name="Name" value="getDistanceToTarget"></OBJECT>
@@ -201,22 +205,24 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#af4d6253bc6c28ad1d1ff6deb4303347b"><param name="Name" value="getSlowTime"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a278d70100af07c946743db1b7a1a9f59"><param name="Name" value="hp"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#ab48bc28310a5ca396fbfaf6edc74996d"><param name="Name" value="maxHp"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a8e0cfa58b8d27e254a0b3c6965962280"><param name="Name" value="move"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a9a398f8d12234f02563b27440aff7891"><param name="Name" value="move"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a070f11f33dd2fb8552f7b628622f6eaf"><param name="Name" value="origin_speed"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#aff8dab38e3d179a2fb471cf7a9c42cbe"><param name="Name" value="path"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#abc49d5a2cef917c8ece8a16547f8efee"><param name="Name" value="scoreValue"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a0f1e1c58a06fd254c537bf8733e69b63"><param name="Name" value="setTile"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#aa5ddb1dc9aeba11ef0e502527bf6f412"><param name="Name" value="slow"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#af85c9066fe6f82757d9b2105161261e1"><param name="Name" value="setTile"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a8c49b8c95806bf6d436b714b1f70a73b"><param name="Name" value="slow"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a7f185bcecfc927871387f6bda2191d0c"><param name="Name" value="slowed"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#ad59184710c7f9df80138434b8487a9f5"><param name="Name" value="slowTime"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a0e46f5b36e6b038bfaef05979bb76325"><param name="Name" value="succed"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a6612d7486e4599d8fbc085c43168962f"><param name="Name" value="takeDamage"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#ae01c62a474fbcd547000ff1068976d49"><param name="Name" value="takeDamage"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a98a78c7c16c3eaca41d60fd54b9ff92a"><param name="Name" value="unSlow"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a39d2efd8625d3d8449cc45631d8b4f9b"><param name="Name" value="updatePath"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#ac0eec4755e28c02688065f9657150ac3"><param name="Name" value="~Enemy"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html"><param name="Name" value="Entity"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#a0eca969d39e7b7bc728236f85e02bbb6"><param name="Name" value="draw"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#a42f639dbaa21a19e991c973245431987"><param name="Name" value="draw"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#a980f368aa07ce358583982821533a54a"><param name="Name" value="Entity"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#a1bc281383bd777ba96dd0c7c989ba1e7"><param name="Name" value="getPosition"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#aad4cbcdad1ba43221eff4e5474dfdd58"><param name="Name" value="getSize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#a1ab1df6a898303e678a11d727016dd09"><param name="Name" value="getSpeed"></OBJECT>
@@ -233,6 +239,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#ad64dd6d282432a68475f30f7c7bbdc88"><param name="Name" value="texture"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#a2774f1e938416fab37040a33ec573495"><param name="Name" value="tile"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#abccceab981ceb2c361408358a6ff0585"><param name="Name" value="timer"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae"><param name="Name" value="~Entity"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a49f86e0962807099541704a0cab8af44"><param name="Name" value="exit"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_over_menu.html#abb28ebaf2def30a8fc15434639a483e4"><param name="Name" value="exitGame"></OBJECT>
@@ -243,7 +250,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a0a984610f97fe852884e0d00d0461a9c"><param name="Name" value="explode"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fast_enemy.html"><param name="Name" value="FastEnemy"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fast_enemy.html#a385d3a2fd3a4b83bfb0a9820ae5a9905"><param name="Name" value="FastEnemy"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fast_enemy.html#a22193a351c1600aa27a754dd1e98f828"><param name="Name" value="FastEnemy"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fast_enemy.html#a1b9c40401f5e43845a8685fc40ec0f65"><param name="Name" value="~FastEnemy"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_field.html"><param name="Name" value="Field"></OBJECT>
   <UL>
@@ -268,7 +276,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_menu.html#aabc9ea58600553c8562881d069c67d2c"><param name="Name" value="draw"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_menu.html#ae31c50148abf655297a2a3eab53c15a3"><param name="Name" value="GameMenu"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_menu.html#a601a07a24fe40342bdc678ded8d4b6e4"><param name="Name" value="getGameSpeed"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_menu.html#af564d47068179979d48904e73455a542"><param name="Name" value="opent"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_menu.html#a248194828f1a914fd1f09d263a0326d0"><param name="Name" value="pauseGame"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_menu.html#a9dd958097e685b1904cdc1c8d2a9ffff"><param name="Name" value="resolveEvent"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_menu.html#a77617acfe92a25cf97d0da8197ff5e92"><param name="Name" value="restartGame"></OBJECT>
@@ -287,11 +294,13 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_over_menu.html#a1c01e4275b763f83b14301353c873899"><param name="Name" value="reStartGame"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_money_tower.html#a7bb3cc062e2d584247857f226283cf22"><param name="Name" value="generateMoney"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a8689e273014e0ea0315855d39e6e1e4b"><param name="Name" value="getActiveMenu"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#ab7146606e0eadea9922ac5c6203793e4"><param name="Name" value="getAttackRay"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_audio_manager.html#a9bd57da07855563c46daaa9d1aec5d29"><param name="Name" value="getAudioManager"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#aecdda0124a341bace43f683a766ec6f7"><param name="Name" value="getBounty"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#a03bd157da34103a2a3a79fcd53e65e12"><param name="Name" value="getCenter"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tile.html#a49a65d5fb6a4607d21966c82c3198bfb"><param name="Name" value="getCooldown"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#a7ce3ffb34ef6b1d74a6975506c3f8a92"><param name="Name" value="getCreditsAddress"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a4dbd4dbb8fef339b75281bbf45be126b"><param name="Name" value="getCount"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a7e3e06f49d24c49be1a58124a2aa92eb"><param name="Name" value="getCurrentWaveNumber"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#a03f55a2222756b756522c90de785a254"><param name="Name" value="getDamage"></OBJECT>
   <UL>
@@ -315,7 +324,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower.html#ad1fe459e4a6e4a8a6976001ea53a06a7"><param name="Name" value="getLevel"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a0c42183e70000a197ac63a631fc14c97"><param name="Name" value="getLevelManager"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a39e9e52cee6594f32cb56b3bb75ebdb5"><param name="Name" value="getMenuManager"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a65859149175c8f582e02256f6cfc2cfe"><param name="Name" value="getMenus"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_player.html#ac45154df7c4eb2d1d58255c3ff1c55dd"><param name="Name" value="getMoney"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tile.html#ad468d33f424d564e0b6c2f0c079ea7ab"><param name="Name" value="getNeighbor"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_path.html#aca110b8b269cae3f65f80c49059d6492"><param name="Name" value="getPath"></OBJECT>
@@ -346,9 +354,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#a1ab1df6a898303e678a11d727016dd09"><param name="Name" value="Entity"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a8794dccc6438fc2058a78d625f508841"><param name="Name" value="LevelManager"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#a285f9f79c86cc255743f70ba7f23e22b"><param name="Name" value="getSprite"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#aa5dd2cfe8cd0bd31e908752bf7c4b510"><param name="Name" value="getSprite"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#a285f9f79c86cc255743f70ba7f23e22b"><param name="Name" value="CreditsMenu"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#aa5dd2cfe8cd0bd31e908752bf7c4b510"><param name="Name" value="Entity"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_field.html#aed6c614deb72c92b63c2d41d24cb74c2"><param name="Name" value="Field"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tile.html#af3dec632de42f9e9784af0dce462837c"><param name="Name" value="Tile"></OBJECT>
@@ -391,6 +398,7 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a6e65b26fe458b839abc10edd582fae92"><param name="Name" value="addEnemy"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#aefa59f244e5ea86cc3f9d70943abfd16"><param name="Name" value="addTower"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a93a12aab0f84a4d4d4557bd8a5f05573"><param name="Name" value="display"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#aa5fe71c398e90bbe0692bee8482565ff"><param name="Name" value="gameLoop"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a488b4c395d164dc5b1975b69f45eb9ac"><param name="Name" value="gameOver"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a7e3e06f49d24c49be1a58124a2aa92eb"><param name="Name" value="getCurrentWaveNumber"></OBJECT>
@@ -411,10 +419,10 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a23dcc64c396c58ac864c7d032b3618cf"><param name="Name" value="restartGame"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a4435cdb4ae2d199c372d4047f0dc0c92"><param name="Name" value="setField"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#ae82f34baef0c9bd5e4b9db6156b45f85"><param name="Name" value="setPlayer"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#ab7945c7629de9d3e77bf6328779aed35"><param name="Name" value="setSpeed"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#ae44ed1fd15e3e38cbf3489ee1c84c9f7"><param name="Name" value="setSpeed"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a128f679f42d155e38a657feac3c2cc78"><param name="Name" value="startGame"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a7d1ad576cc249a90c17fd06fa907976a"><param name="Name" value="stopGame"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a216916c1073acd44571e074e0be20c4e"><param name="Name" value="triggerWaveDisplay"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a7ea3adfe70afd6998c4254d14ca2a0ee"><param name="Name" value="triggerWaveDisplay"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a53c800a80f6f78702d6eaf3b43ca2d2b"><param name="Name" value="updatePath"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a3fda56827462d66760c612c2a382fc05"><param name="Name" value="victory"></OBJECT>
   </UL>
@@ -430,7 +438,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu.html#ada5303b1b8997b3d117b8a553764d10f"><param name="Name" value="getPosition"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu.html#a570493d92f586ea813ecf3c9ea064bb9"><param name="Name" value="getSize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu.html#ad466dd83355124a6ed958430450bfe94"><param name="Name" value="Menu"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu.html#a21202f42edbb5f1014ebe9f264613991"><param name="Name" value="opent"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu.html#a5e6b181edbe72a18efff2eaa66cb97c4"><param name="Name" value="position"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu.html#a91ec4d6d898e740524b1fe3312d8f197"><param name="Name" value="resolveEvent"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu.html#a41687c51ee454954ce7ec116cc1f7459"><param name="Name" value="setPosition"></OBJECT>
@@ -443,19 +450,20 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html"><param name="Name" value="MenuManager"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a54996a292bfd96a3bf8b265674f6fa17"><param name="Name" value="addMenu"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#ad812dde05404b6f140a27ad38af8d8dd"><param name="Name" value="clearMenuStack"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#af609a70fb742e899fce7e8f65a5d006a"><param name="Name" value="closeMenu"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a03555427106f2f8c584e1e1aea02593a"><param name="Name" value="display"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a49f86e0962807099541704a0cab8af44"><param name="Name" value="exit"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a8689e273014e0ea0315855d39e6e1e4b"><param name="Name" value="getActiveMenu"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a4dbd4dbb8fef339b75281bbf45be126b"><param name="Name" value="getCount"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a46ab981e500d5ccb7cc190169efad820"><param name="Name" value="getExistBTMenu"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#ab66339b9e4f92951c2cf198f8a7abe38"><param name="Name" value="getExitFlag"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a39e9e52cee6594f32cb56b3bb75ebdb5"><param name="Name" value="getMenuManager"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a65859149175c8f582e02256f6cfc2cfe"><param name="Name" value="getMenus"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a0c64ce191bbd66e4815c7e98aca1a65b"><param name="Name" value="menuManager"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a0c64ce191bbd66e4815c7e98aca1a65b"><param name="Name" value="menuManager"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html"><param name="Name" value="MenuManager"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a0c64ce191bbd66e4815c7e98aca1a65b"><param name="Name" value="menuManager"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a81c9f1266764c3d0fa2e69b99b735d7d"><param name="Name" value="openMenu"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a28849ea9b4272d42330ea5de81edc8cf"><param name="Name" value="popMenu"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a295e8aa6a3d04c189e0efc47abe8bb85"><param name="Name" value="resolveEvent"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a152d9d34cbb1e31a42958bcd23b2629c"><param name="Name" value="setExistBTMenu"></OBJECT>
@@ -464,9 +472,10 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_money_tower.html#a1a677bf77688d2dc52ea3bff35a4edf4"><param name="Name" value="displayGeneratedMoney"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_money_tower.html#a83e66451e2e45ab85ffc2fa69ae79192"><param name="Name" value="doAttack"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_money_tower.html#aaa24e2c1a3748aa4fb4775b5124b0b21"><param name="Name" value="draw"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_money_tower.html#a9cc1a7502725fdf7af36b7871853669a"><param name="Name" value="draw"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_money_tower.html#a7bb3cc062e2d584247857f226283cf22"><param name="Name" value="generateMoney"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_money_tower.html#a5c30b8e529f104ae8ab8d93392c27dd3"><param name="Name" value="MoneyTower"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_money_tower.html#a25203f3413a593ed084bd2ff670c131d"><param name="Name" value="~MoneyTower"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_button.html#a33a1181bac39f9c17c8adef1d30ce5a8"><param name="Name" value="mouseHover"></OBJECT>
   <UL>
@@ -474,10 +483,10 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_field.html#ade48c8e4d0aeb214ff0262e7157fa837"><param name="Name" value="Field"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tile.html#a0ecef130e42783b84e95408689546f8d"><param name="Name" value="Tile"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#ae421414fdc87d4cb92bdc6975a3b28b4"><param name="Name" value="move"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a722f9d87fcdcd501600b9393649d025a"><param name="Name" value="move"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#ae421414fdc87d4cb92bdc6975a3b28b4"><param name="Name" value="BombEnemy"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a8e0cfa58b8d27e254a0b3c6965962280"><param name="Name" value="Enemy"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a722f9d87fcdcd501600b9393649d025a"><param name="Name" value="BombEnemy"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a9a398f8d12234f02563b27440aff7891"><param name="Name" value="Enemy"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_audio_manager.html#a413714ef87ed432842fb9c3571a1d3f2"><param name="Name" value="mute"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#aa883e507745c8d405ef2cdd2b6351dfa"><param name="Name" value="nextWave"></OBJECT>
@@ -496,16 +505,12 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_normal_tower.html"><param name="Name" value="NormalTower"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_normal_tower.html#a1e3b0a2216d943650b060bac297511b6"><param name="Name" value="doAttack"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_normal_tower.html#ae58d00f70a97e994a6d331ad0ae22f7c"><param name="Name" value="draw"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_normal_tower.html#a99db5d3dbf58cd6ba3619d4e4601630c"><param name="Name" value="NormalTower"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_normal_tower.html#a85cec60f22466d0f5807de36bac5a417"><param name="Name" value="~NormalTower"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tile.html#a3192d9456a5ef1ed9e1f6eb447f75cd4"><param name="Name" value="openBuildMenu"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_start_menu.html#ab350bdd6779e99bda9f1f4aaa5f02977"><param name="Name" value="openCredits"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a81c9f1266764c3d0fa2e69b99b735d7d"><param name="Name" value="openMenu"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_menu.html#af564d47068179979d48904e73455a542"><param name="Name" value="opent"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_menu.html#af564d47068179979d48904e73455a542"><param name="Name" value="GameMenu"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu.html#a21202f42edbb5f1014ebe9f264613991"><param name="Name" value="Menu"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tile.html#abfe0e5e0a4bd3a5b7194ba7b70e7919e"><param name="Name" value="openTowerMenu"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a070f11f33dd2fb8552f7b628622f6eaf"><param name="Name" value="origin_speed"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_path.html"><param name="Name" value="Path"></OBJECT>
@@ -529,6 +534,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_player.html#afe6e5a3b4455aac2a27619a98115f14e"><param name="Name" value="manageHP"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_player.html#ae1969eb6823abda215454eba0e57fbf1"><param name="Name" value="manageMoney"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_player.html#adaa8a60e604c08eeb43ac222d6bbe0f0"><param name="Name" value="manageScore"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8"><param name="Name" value="Player"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu_manager.html#a28849ea9b4272d42330ea5de81edc8cf"><param name="Name" value="popMenu"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#aa58364f83a24774ad8d29e2f5e48e06d"><param name="Name" value="position"></OBJECT>
@@ -613,16 +619,15 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#a6800223da82f1ccf295b9d0a1940cb9e"><param name="Name" value="Attack"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#a752b7fb05557c905dcdce931500e700e"><param name="Name" value="Entity"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#ab7945c7629de9d3e77bf6328779aed35"><param name="Name" value="LevelManager"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#ae44ed1fd15e3e38cbf3489ee1c84c9f7"><param name="Name" value="LevelManager"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#ad0d86e63b66e1a68bd6600e59040ff18"><param name="Name" value="setSprite"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#acffd8697cae92e62b0962c78e2d45d06"><param name="Name" value="setSprite"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#ad0d86e63b66e1a68bd6600e59040ff18"><param name="Name" value="CreditsMenu"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#acffd8697cae92e62b0962c78e2d45d06"><param name="Name" value="Entity"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_field.html#a73021154d26b6cb0960834ce853b9f59"><param name="Name" value="Field"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tile.html#aed1d87e0ae6396889bb44909e036fad4"><param name="Name" value="Tile"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a0f1e1c58a06fd254c537bf8733e69b63"><param name="Name" value="setTile"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#af85c9066fe6f82757d9b2105161261e1"><param name="Name" value="setTile"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#a096521777c0ac31ee453d42ab2bdc8aa"><param name="Name" value="setTimer"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tile.html#a388c6caf78a0c0063b229c2b10eb4e1c"><param name="Name" value="setTower"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower.html#a4f3edbbfcd0908c398057d2608ca88d9"><param name="Name" value="setTowerTexture"></OBJECT>
@@ -632,7 +637,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#ae32cdf24e4f89bee02c7132c4d6e9c18"><param name="Name" value="Entity"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_menu.html#ae43ea4415376f28f0d1c9b069614fde3"><param name="Name" value="Menu"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#aa5ddb1dc9aeba11ef0e502527bf6f412"><param name="Name" value="slow"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a8c49b8c95806bf6d436b714b1f70a73b"><param name="Name" value="slow"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#ada6394cfb35919b6f84cfb390eb7c9ab"><param name="Name" value="slowAmount"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#ada6394cfb35919b6f84cfb390eb7c9ab"><param name="Name" value="Attack"></OBJECT>
@@ -650,7 +655,9 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_slow_tower.html"><param name="Name" value="SlowTower"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_slow_tower.html#a263531cb94fccecfdc1bd667a54b168d"><param name="Name" value="doAttack"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_slow_tower.html#a5a5d10af63b914331b6380f1cb4f726a"><param name="Name" value="draw"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_slow_tower.html#a05ce0356b1d846450e3c522d5558974f"><param name="Name" value="SlowTower"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_slow_tower.html#a63621752f73bac9ff807fb5453e7a189"><param name="Name" value="~SlowTower"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_wave.html#a22532b46c406de513257a30e9f997264"><param name="Name" value="spawnEnemy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#adffcc8570d6503befe2646836893d466"><param name="Name" value="speed"></OBJECT>
@@ -683,7 +690,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_start_menu.html#ab350bdd6779e99bda9f1f4aaa5f02977"><param name="Name" value="openCredits"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_start_menu.html#a4f6701a9d7a4e08a5212c675ef1c66b2"><param name="Name" value="resolveEvent"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_start_menu.html#a40316866dabe852ee5c931eb5fde164e"><param name="Name" value="startGame"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_start_menu.html#aeb41c71dcfa43b3e9a88c256fc261d99"><param name="Name" value="StartMenu"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_start_menu.html#aee52e6dee72aae9ebf1a502f3eaeb4f1"><param name="Name" value="StartMenu"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_start_menu.html#a0586b30fd5cedbb22ad3a22c98913481"><param name="Name" value="~StartMenu"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a7d1ad576cc249a90c17fd06fa907976a"><param name="Name" value="stopGame"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a0e46f5b36e6b038bfaef05979bb76325"><param name="Name" value="succed"></OBJECT>
@@ -691,8 +699,9 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_sun_tower.html#af0453294af7e980271431cab34155cd8"><param name="Name" value="doAttack"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_sun_tower.html#aa24e04aa4d64bb77dee9e931b52a3ca5"><param name="Name" value="SunTower"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_sun_tower.html#afae25b6665efce763daad7e3f0cbf034"><param name="Name" value="~SunTower"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a6612d7486e4599d8fbc085c43168962f"><param name="Name" value="takeDamage"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#ae01c62a474fbcd547000ff1068976d49"><param name="Name" value="takeDamage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#ab318c12d748769f542a45839958a0b3f"><param name="Name" value="targetDistance"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#ad64dd6d282432a68475f30f7c7bbdc88"><param name="Name" value="texture"></OBJECT>
   <UL>
@@ -769,8 +778,9 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower.html#a88bb2c4d038523ab9430d69ffe508cf1"><param name="Name" value="slowAmount"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower.html#a06784c625069968923cf19a0cecdf37e"><param name="Name" value="speed"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower.html#af1ab9b841310f9cfb929311c20feb337"><param name="Name" value="spriteUpdate"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower.html#a2fd91cfd06bdbb8c5e26b3d5e30770d8"><param name="Name" value="Tower"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower.html#a1b785dc1e9fb979a10620ca183b5761d"><param name="Name" value="Tower"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower.html#a34ffa45b1ad095499df291fc5b7c8083"><param name="Name" value="upgradeTw"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower.html#a96972da33c287758c036c944eccdc5fe"><param name="Name" value="~Tower"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower_menu.html"><param name="Name" value="TowerMenu"></OBJECT>
   <UL>
@@ -783,8 +793,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower_menu.html#aebdd08286832e919f6f379c79064615e"><param name="Name" value="TowerMenu"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower_menu.html#adb6ddb7949289ce8e8e65323640acf7b"><param name="Name" value="~TowerMenu"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a7eb5ed711a40cbd0af016450bf59b0e4"><param name="Name" value="TriggerCountDown"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a216916c1073acd44571e074e0be20c4e"><param name="Name" value="triggerWaveDisplay"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_level_manager.html#a7ea3adfe70afd6998c4254d14ca2a0ee"><param name="Name" value="triggerWaveDisplay"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_field.html#a08468ccf237477b197499156803a1518"><param name="Name" value="tryCross"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a98a78c7c16c3eaca41d60fd54b9ff92a"><param name="Name" value="unSlow"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#a39d2efd8625d3d8449cc45631d8b4f9b"><param name="Name" value="updatePath"></OBJECT>
@@ -799,19 +808,30 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_wave.html#a7f2f45dca94480f64fe0ede4e7b53056"><param name="Name" value="addEnemy"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_wave.html#a0b2ae90f612c1f8d0e7c595ac36092e6"><param name="Name" value="getSpawnCooldown"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_wave.html#a22532b46c406de513257a30e9f997264"><param name="Name" value="spawnEnemy"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_wave.html#a774b08c0e12725a67094d5d1c3ed3553"><param name="Name" value="Wave"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_wave.html#a3d8144ec0d6c0b0ede77ff59f54471aa"><param name="Name" value="Wave"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_area_attack.html#aa1e868a7e1be4faff11efd88bab9aed8"><param name="Name" value="~AreaAttack"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_attack.html#a6d3c8266507e4ac0102ab40847f478fe"><param name="Name" value="~Attack"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_bomb_enemy.html#a903ec40e2b54441ad464e8be0c20a162"><param name="Name" value="~BombEnemy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_build_menu.html#a3683fde835c95da534d3bcbad731f6c8"><param name="Name" value="~BuildMenu"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_button.html#a2a001eb9c3cc8ae54768a850dd345002"><param name="Name" value="~Button"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_credits_menu.html#afab6fd75a71b5faa26508907c28ef3b4"><param name="Name" value="~CreditsMenu"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_enemy.html#ac0eec4755e28c02688065f9657150ac3"><param name="Name" value="~Enemy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae"><param name="Name" value="~Entity"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fast_enemy.html#a1b9c40401f5e43845a8685fc40ec0f65"><param name="Name" value="~FastEnemy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_field.html#a45d6e6d09b8f8e46de62b40119d62c60"><param name="Name" value="~Field"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_game_menu.html#a70ac0e31f882993f09eb1bdbdd352a56"><param name="Name" value="~GameMenu"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_money_tower.html#a25203f3413a593ed084bd2ff670c131d"><param name="Name" value="~MoneyTower"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_normal_attack.html#a8c83527448260418399104a02f396453"><param name="Name" value="~NormalAttack"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_normal_enemy.html#adc9a3115b2494739261b5cc363c11c32"><param name="Name" value="~NormalEnemy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_normal_tower.html#a85cec60f22466d0f5807de36bac5a417"><param name="Name" value="~NormalTower"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_slow_attack.html#a6c2862cc079dc13050f2435e25c1fa06"><param name="Name" value="~SlowAttack"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_slow_tower.html#a63621752f73bac9ff807fb5453e7a189"><param name="Name" value="~SlowTower"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_start_menu.html#a0586b30fd5cedbb22ad3a22c98913481"><param name="Name" value="~StartMenu"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_sun_tower.html#afae25b6665efce763daad7e3f0cbf034"><param name="Name" value="~SunTower"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tile.html#a98634abbd93fa13d0578d7103202d03d"><param name="Name" value="~Tile"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tough_enemy.html#ac84483a5899da4d8e806b699478253f6"><param name="Name" value="~ToughEnemy"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower.html#a96972da33c287758c036c944eccdc5fe"><param name="Name" value="~Tower"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tower_menu.html#adb6ddb7949289ce8e8e65323640acf7b"><param name="Name" value="~TowerMenu"></OBJECT>
 </UL>
 </BODY>

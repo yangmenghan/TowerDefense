@@ -17,6 +17,7 @@ public:
 	\param defence Enemy's defence, float value, not used yet
 	\param bounty integer money that the player get when the enemy is killed
 	\param scoreValue integer number of point that the player get when the enemy is killed
+	\param sprite sf::Sprite, sprite of the enemy
 	\param speed speed of the enemy, float value
 	*/
 	NormalEnemy(int hp, float defence, int bounty, int scoreValue, sf::Sprite sprite, float speed);

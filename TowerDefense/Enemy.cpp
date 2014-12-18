@@ -2,15 +2,6 @@
 #include "Config.h"
 #include "LevelManager.h"
 
-/*
-private:
-int hp;
-float defence;
-int bounty;
-int scoreValue;
-int slowTime;
-*/
-
 using namespace std;
 
 Enemy::Enemy(){
@@ -44,7 +35,7 @@ float Enemy::getDistanceToTarget(){
 	return path.getPath().size();
 };
 
-bool Enemy::move(){
+void Enemy::move(){
 	if (slowTime > 0){
 		slowTime--;
 	}
@@ -76,7 +67,6 @@ bool Enemy::move(){
 	}
 	sprite.setPosition(sf::Vector2f(float(position.x), float(position.y)));
 	
-	return true;
 };
 
 void Enemy::succed(){
@@ -88,7 +78,7 @@ void Enemy::setTile(shared_ptr<Tile> t){
 	tile = t;
 	if (t != NULL){
 		position = t->getPositionPixel();
-		updatePath(); //TODO : just need to remove the previous tile !
+		updatePath(); 
 	}
 }
 
@@ -106,6 +96,8 @@ void Enemy::dieWithoutBonus(){
 void Enemy::slow(int frames){
 	slowTime = frames;
 	slowed = true;
+	
+	//affect the new speed to the enemy
 	if (speed - SLOW_EFFECT > 1)
 		speed = speed - SLOW_EFFECT;
 };
@@ -154,20 +146,23 @@ int Enemy::getSlowTime(){
 };
 
 void Enemy::draw(sf::RenderWindow &w){
-	sf::RectangleShape rectangle(sf::Vector2f(50,5));
-	rectangle.setFillColor(sf::Color(150, 50, 250, 0));
+	
+	sf::RectangleShape hpBar(sf::Vector2f(50,2));
+	hpBar.setFillColor(sf::Color(150, 50, 250, 0));
+	
+	// create the background of the hpbar
+	hpBar.setOutlineThickness(0.8f);
+	hpBar.setOutlineColor(sf::Color(255, 255, 255));
+	hpBar.setPosition(sf::Vector2f(position.x, position.y + TILE_HEIGHT));
 
-	// définit un contour orange de 10 pixels d'épaisseur
-	rectangle.setOutlineThickness(1);
-	rectangle.setOutlineColor(sf::Color(255, 255, 255));
-	rectangle.setPosition(sf::Vector2f(position.x, position.y + TILE_HEIGHT));
+	//create the fill of the hpBar
+	sf::RectangleShape hpBarFill(sf::Vector2f((50 * (float)hp) / (float)maxHp, 2));
+	hpBarFill.setFillColor(sf::Color(26, 255, 83));
+	hpBarFill.setPosition(sf::Vector2f(position.x, position.y + TILE_HEIGHT));
+	
+	w.draw(hpBarFill);
+	w.draw(hpBar);
 
-	sf::RectangleShape rectangle2(sf::Vector2f((50 * (float)hp) / (float)maxHp, 5));
-	rectangle2.setFillColor(sf::Color(26, 255, 83));
-	rectangle2.setPosition(sf::Vector2f(position.x, position.y + TILE_HEIGHT));
-
-	w.draw(rectangle2);
-	w.draw(rectangle);
 	w.draw(sprite);
 }
 

@@ -47,25 +47,35 @@ void LevelManager::display(RenderWindow& w)
 {
 	field.draw(w);
 	currentPath.draw(w);
+
+	for (shared_ptr<Tower> tower : towers){
+		tower->draw(w);
+	}
+
+	for (int i = 0; i < enemies.size(); i++){
+		enemies.at(i)->draw(w);
+	}
 }
 
 void LevelManager::gameLoop(RenderWindow& w){
-			if (gameSpeed != 0){ 
-			//if the game is not paused
+		//if the game is not paused, resolve entities' actions
+		if (gameSpeed != 0){ 
+			
 			if (player->getHP() <= 0){
 				gameOver();
 				return;
 			}
+
+			// you win if there is no enemy and no wave left
 			else if (waves.size() == 0 && enemies.empty()){
-				victory();		// you win if there is no enemy and no wave left
+				victory();		
 				return;
 			}
 			else { 
-				//TODO : memory???
 				waves.back().spawnEnemy();
 			}
 			
-			//Tower actions
+			//Tower actions,attack and remove level 0 towers
 			for (int i = 0; i < towers.size(); i++){
 				if (towers.at(i)->getLevel() == 0){
 					towers.at(i)->getTile()->setTower(NULL);
@@ -78,7 +88,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 				}
 			}
 
-			//Enemy Action
+			//Enemy Action, die or move
 			for (int i = 0; i < enemies.size(); i++){
 				if (enemies.at(i)->getHP() <= 0){
 					enemies.at(i)->die();
@@ -96,14 +106,7 @@ void LevelManager::gameLoop(RenderWindow& w){
 			}
 			
 		}
-		//Tower actions
-		for (shared_ptr<Tower> tower : towers){
-			tower->draw(w);
-		}
 
-		for (int i = 0; i < enemies.size(); i++){
-			enemies.at(i)->draw(w);
-		}
 };
 
 

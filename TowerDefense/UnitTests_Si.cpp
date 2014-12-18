@@ -8,21 +8,33 @@
 
 using namespace std;
 
-/*TEST(Tile, isPolluted)
-{
-	EXPECT_EQ();
-}*/
-
 TEST(Tile,construction)
 {
-	Tile tile;
-	EXPECT_EQ(0,tile.getCooldown());
+	auto tile=make_shared<Tile>(0,0);
+	EXPECT_EQ(0,tile->getCooldown());
+	EXPECT_EQ(sf::Vector2i(0,0), tile->getPosition());
+	EXPECT_FALSE(tile->hasEnemy());
+	EXPECT_FALSE(tile->hasTower());
+	EXPECT_FALSE(tile->checkClick());
+	EXPECT_FALSE(tile->checkHover());
+	
 }
 
 TEST(Field, construction)
 {
 	Field field;
+	EXPECT_EQ(sf::Vector2i(NUM_START_TILE % TILE_NUM_VER, NUM_START_TILE / TILE_NUM_VER), field.getStartTile()->getPosition());
+	EXPECT_FALSE(field.getTile(NUM_START_TILE)->isPolluted());
+	EXPECT_EQ(sf::Vector2i(NUM_END_TILE % TILE_NUM_VER, NUM_END_TILE / TILE_NUM_VER), field.getEndTile()->getPosition());
 	EXPECT_FALSE(field.getTile(NUM_END_TILE)->isPolluted());
+	std::vector<shared_ptr<Tile>> neighborTiles = field.getTile(sf::Vector2i(TILE_NUM_VER - 1, TILE_NUM_HOR - 1))->getNeighbor(1);
+	EXPECT_EQ(4, neighborTiles.capacity());
+	neighborTiles = field.getTile(sf::Vector2i(0, TILE_NUM_HOR - 1))->getNeighbor(3);
+	EXPECT_EQ(19, neighborTiles.capacity());
+	neighborTiles = field.getTile(sf::Vector2i(0, 8))->getNeighbor(1);
+	EXPECT_EQ(6, neighborTiles.capacity());
+	neighborTiles = field.getTile(sf::Vector2i(TILE_NUM_VER - 1, 5))->getNeighbor(1);
+	EXPECT_EQ(6, neighborTiles.capacity());
 }
 
 TEST(BuildMenu, construction)
@@ -38,6 +50,7 @@ TEST(TowerMenu, construction)
 	auto pTile = make_shared<Tile>(0,0);
 	BuildMenu buildMenu(pTile);
 	buildMenu.buySunTw();
+	EXPECT_TRUE(pTile->hasTower());
 	TowerMenu towerMenu(pTile);
 	pTile->getTower()->sellTw();
 	EXPECT_FALSE(pTile->hasTower());
@@ -50,29 +63,9 @@ int main(int argc, char **argv)
 	
 	RUN_ALL_TESTS();
 
-	string m3;
-	cout << "fin des tests unitaires";
-	getline(cin, m3);
+	string fin;
+	cout << "Fin des tests unitaires.";
+	getline(cin, fin);
 
-	return 1;
+	return 0;
 }
-
-/*
-int Foo(int a, int b)
-{
-if (a == 0 || b == 0)
-{
-throw "don't do that";
-}
-int c = a % b;
-if (c == 0)
-return b;
-return Foo(b, c);
-}
-
-TEST(FooTest, HandleNoneZeroInput)
-{
-EXPECT_EQ(2, Foo(4, 10));
-EXPECT_EQ(3, Foo(30, 18));
-}
-*/

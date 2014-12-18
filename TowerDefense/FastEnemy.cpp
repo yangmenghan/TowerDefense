@@ -3,10 +3,7 @@
 
 FastEnemy::FastEnemy() :Enemy(FAST_ENEMY_HP, FAST_ENEMY_DEFENCE, FAST_ENEMY_BOUNTY, FAST_ENEMY_SCOREVALUE, sf::Sprite(), FAST_ENEMY_SPEED){
 
-	if (!texture.loadFromFile(FAST_ENEMY_SPRITE_ADD))
-	{
-		// TODO erreur...
-	}
+	texture.loadFromFile(FAST_ENEMY_SPRITE_ADD);
 
 	sprite.setTexture(texture);
 	sprite.setTextureRect(sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(TILE_WIDTH, TILE_HEIGHT)));
@@ -15,10 +12,7 @@ FastEnemy::FastEnemy() :Enemy(FAST_ENEMY_HP, FAST_ENEMY_DEFENCE, FAST_ENEMY_BOUN
 
 FastEnemy::FastEnemy(int mHP, float mDefence, int mBounty, int mScoreValue, sf::Sprite mSprite, float mSpeed) :Enemy(mHP, mDefence, mBounty, mScoreValue, mSprite, mSpeed)
 {
-	if (!texture.loadFromFile(FAST_ENEMY_SPRITE_ADD))
-	{
-		// TODO erreur...
-	}
+	texture.loadFromFile(FAST_ENEMY_SPRITE_ADD);
 
 	sprite.setTexture(texture);
 	sprite.setTextureRect(sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(TILE_WIDTH, TILE_HEIGHT)));

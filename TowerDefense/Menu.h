@@ -72,6 +72,9 @@ public:
 	*/
 	virtual void resolveEvent(sf::Event) = 0;
 
+//! close Menu
+	/*
+	closes the menu.
+	*/
 	virtual void close();
-	void opent();
 };

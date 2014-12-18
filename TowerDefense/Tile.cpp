@@ -66,7 +66,7 @@ std::vector<shared_ptr<Tile>> Tile::getNeighbor(int _range)
 	{
 		for (int j = position.y - _range; j <= position.y + _range; j++)
 		{
-			if (i >= 0 && i < TILE_NUM_VER && j >= 0 && j <= TILE_NUM_HOR)
+			if (i >= 0 && i < TILE_NUM_VER && j >= 0 && j < TILE_NUM_HOR)
 			{
 				pNeighber = LevelManager::getLevelManager()->getField().getTile(sf::Vector2i(i, j)); 
 				neighborTiles.push_back(pNeighber);
@@ -74,7 +74,8 @@ std::vector<shared_ptr<Tile>> Tile::getNeighbor(int _range)
 		}
 	}
 	return neighborTiles;
-
+	//HOR 10,VER 20
+	// y    ,  x
 }
 
 sf::Sprite Tile::getSprite()
