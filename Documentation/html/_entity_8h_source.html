@@ -78,44 +78,52 @@
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_entity.html#a1ab1df6a898303e678a11d727016dd09">getSpeed</a>();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    sf::Sprite <a class="code" href="class_entity.html#aa5dd2cfe8cd0bd31e908752bf7c4b510">getSprite</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_entity.html#aee27929141a81e1ce2b6b87401ae33b3">getTimer</a>();</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    shared_ptr&lt;Tile&gt; <a class="code" href="class_entity.html#a4c0e3e14381db594a39b0b1fa69b9bc7">getTile</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a999e10122f45fb582c2d4976f12e4c3e">setPosition</a>(sf::Vector2i mPosition);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a5d01a1d6f13fa685d75ac657d2e72b6b">setSize</a>(sf::Vector2i mSize);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a752b7fb05557c905dcdce931500e700e">setSpeed</a>(<span class="keywordtype">float</span> mSpeed);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#acffd8697cae92e62b0962c78e2d45d06">setSprite</a>(sf::Sprite mSprite);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a42f639dbaa21a19e991c973245431987">draw</a>(sf::RenderWindow&amp; w);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    sf::Sprite <a class="code" href="class_entity.html#aa5dd2cfe8cd0bd31e908752bf7c4b510">getSprite</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    shared_ptr&lt;Tile&gt; <a class="code" href="class_entity.html#a4c0e3e14381db594a39b0b1fa69b9bc7">getTile</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a999e10122f45fb582c2d4976f12e4c3e">setPosition</a>(sf::Vector2i mPosition);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a5d01a1d6f13fa685d75ac657d2e72b6b">setSize</a>(sf::Vector2i mSize);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a752b7fb05557c905dcdce931500e700e">setSpeed</a>(<span class="keywordtype">float</span> mSpeed);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#ab4bf1756a61a06533bd6643e8f5013d6">setTimer</a>(<span class="keywordtype">int</span> mTimer);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#acffd8697cae92e62b0962c78e2d45d06">setSprite</a>(sf::Sprite mSprite);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a42f639dbaa21a19e991c973245431987">draw</a>(sf::RenderWindow&amp; w);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="ttc" id="class_entity_html_a1bc281383bd777ba96dd0c7c989ba1e7"><div class="ttname"><a href="class_entity.html#a1bc281383bd777ba96dd0c7c989ba1e7">Entity::getPosition</a></div><div class="ttdeci">sf::Vector2i getPosition()</div><div class="ttdoc">Return the current position of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:16</div></div>
-<div class="ttc" id="class_entity_html_a752b7fb05557c905dcdce931500e700e"><div class="ttname"><a href="class_entity.html#a752b7fb05557c905dcdce931500e700e">Entity::setSpeed</a></div><div class="ttdeci">void setSpeed(float mSpeed)</div><div class="ttdoc">Set speed of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:51</div></div>
-<div class="ttc" id="class_entity_html_aa5dd2cfe8cd0bd31e908752bf7c4b510"><div class="ttname"><a href="class_entity.html#aa5dd2cfe8cd0bd31e908752bf7c4b510">Entity::getSprite</a></div><div class="ttdeci">sf::Sprite getSprite()</div><div class="ttdoc">Return the current sprite of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:31</div></div>
-<div class="ttc" id="class_entity_html_a999e10122f45fb582c2d4976f12e4c3e"><div class="ttname"><a href="class_entity.html#a999e10122f45fb582c2d4976f12e4c3e">Entity::setPosition</a></div><div class="ttdeci">void setPosition(sf::Vector2i mPosition)</div><div class="ttdoc">Set postion of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:41</div></div>
+<div class="ttc" id="class_entity_html_a752b7fb05557c905dcdce931500e700e"><div class="ttname"><a href="class_entity.html#a752b7fb05557c905dcdce931500e700e">Entity::setSpeed</a></div><div class="ttdeci">void setSpeed(float mSpeed)</div><div class="ttdoc">Set speed of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:56</div></div>
+<div class="ttc" id="class_entity_html_aa5dd2cfe8cd0bd31e908752bf7c4b510"><div class="ttname"><a href="class_entity.html#aa5dd2cfe8cd0bd31e908752bf7c4b510">Entity::getSprite</a></div><div class="ttdeci">sf::Sprite getSprite()</div><div class="ttdoc">Return the current sprite of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:36</div></div>
+<div class="ttc" id="class_entity_html_a999e10122f45fb582c2d4976f12e4c3e"><div class="ttname"><a href="class_entity.html#a999e10122f45fb582c2d4976f12e4c3e">Entity::setPosition</a></div><div class="ttdeci">void setPosition(sf::Vector2i mPosition)</div><div class="ttdoc">Set postion of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:46</div></div>
 <div class="ttc" id="class_entity_html_a980f368aa07ce358583982821533a54a"><div class="ttname"><a href="class_entity.html#a980f368aa07ce358583982821533a54a">Entity::Entity</a></div><div class="ttdeci">Entity()</div><div class="ttdoc">A constructor. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:4</div></div>
 <div class="ttc" id="class_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> Entity.h:5</div></div>
-<div class="ttc" id="class_entity_html_acffd8697cae92e62b0962c78e2d45d06"><div class="ttname"><a href="class_entity.html#acffd8697cae92e62b0962c78e2d45d06">Entity::setSprite</a></div><div class="ttdeci">void setSprite(sf::Sprite mSprite)</div><div class="ttdoc">Set sprite of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:56</div></div>
-<div class="ttc" id="class_entity_html_a5d01a1d6f13fa685d75ac657d2e72b6b"><div class="ttname"><a href="class_entity.html#a5d01a1d6f13fa685d75ac657d2e72b6b">Entity::setSize</a></div><div class="ttdeci">void setSize(sf::Vector2i mSize)</div><div class="ttdoc">Set size of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:46</div></div>
+<div class="ttc" id="class_entity_html_acffd8697cae92e62b0962c78e2d45d06"><div class="ttname"><a href="class_entity.html#acffd8697cae92e62b0962c78e2d45d06">Entity::setSprite</a></div><div class="ttdeci">void setSprite(sf::Sprite mSprite)</div><div class="ttdoc">Set sprite of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:66</div></div>
+<div class="ttc" id="class_entity_html_a5d01a1d6f13fa685d75ac657d2e72b6b"><div class="ttname"><a href="class_entity.html#a5d01a1d6f13fa685d75ac657d2e72b6b">Entity::setSize</a></div><div class="ttdeci">void setSize(sf::Vector2i mSize)</div><div class="ttdoc">Set size of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:51</div></div>
+<div class="ttc" id="class_entity_html_aee27929141a81e1ce2b6b87401ae33b3"><div class="ttname"><a href="class_entity.html#aee27929141a81e1ce2b6b87401ae33b3">Entity::getTimer</a></div><div class="ttdeci">int getTimer()</div><div class="ttdoc">Return current value of timer. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:31</div></div>
 <div class="ttc" id="class_entity_html_adf6d3f7cb1b2ba029b6b048a395cc8ae"><div class="ttname"><a href="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae">Entity::~Entity</a></div><div class="ttdeci">virtual ~Entity()</div><div class="ttdoc">A virtual destructor. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:9</div></div>
 <div class="ttc" id="class_entity_html_aad4cbcdad1ba43221eff4e5474dfdd58"><div class="ttname"><a href="class_entity.html#aad4cbcdad1ba43221eff4e5474dfdd58">Entity::getSize</a></div><div class="ttdeci">sf::Vector2i getSize()</div><div class="ttdoc">Return the current size of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:21</div></div>
 <div class="ttc" id="class_entity_html_a1ab1df6a898303e678a11d727016dd09"><div class="ttname"><a href="class_entity.html#a1ab1df6a898303e678a11d727016dd09">Entity::getSpeed</a></div><div class="ttdeci">float getSpeed()</div><div class="ttdoc">Return the current speed of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:26</div></div>
-<div class="ttc" id="class_entity_html_a4c0e3e14381db594a39b0b1fa69b9bc7"><div class="ttname"><a href="class_entity.html#a4c0e3e14381db594a39b0b1fa69b9bc7">Entity::getTile</a></div><div class="ttdeci">shared_ptr&lt; Tile &gt; getTile()</div><div class="ttdoc">Return the current tile of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:36</div></div>
-<div class="ttc" id="class_entity_html_a42f639dbaa21a19e991c973245431987"><div class="ttname"><a href="class_entity.html#a42f639dbaa21a19e991c973245431987">Entity::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;w)</div><div class="ttdoc">To draw this entity in a render window. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:66</div></div>
+<div class="ttc" id="class_entity_html_ab4bf1756a61a06533bd6643e8f5013d6"><div class="ttname"><a href="class_entity.html#ab4bf1756a61a06533bd6643e8f5013d6">Entity::setTimer</a></div><div class="ttdeci">void setTimer(int mTimer)</div><div class="ttdoc">Set timer of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:61</div></div>
+<div class="ttc" id="class_entity_html_a4c0e3e14381db594a39b0b1fa69b9bc7"><div class="ttname"><a href="class_entity.html#a4c0e3e14381db594a39b0b1fa69b9bc7">Entity::getTile</a></div><div class="ttdeci">shared_ptr&lt; Tile &gt; getTile()</div><div class="ttdoc">Return the current tile of this entity. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:41</div></div>
+<div class="ttc" id="class_entity_html_a42f639dbaa21a19e991c973245431987"><div class="ttname"><a href="class_entity.html#a42f639dbaa21a19e991c973245431987">Entity::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderWindow &amp;w)</div><div class="ttdoc">To draw this entity in a render window. </div><div class="ttdef"><b>Definition:</b> Entity.cpp:76</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 18 2014 17:59:39 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 18 2014 21:05:39 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

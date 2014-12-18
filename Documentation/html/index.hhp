@@ -60,6 +60,8 @@ class_credits_menu.html
 class_credits_menu-members.html
 class_enemy.html
 class_enemy-members.html
+class_enemy_test.html
+class_enemy_test-members.html
 class_entity.html
 class_entity-members.html
 class_fast_enemy.html
@@ -189,6 +191,7 @@ class_bomb_enemy.png
 class_build_menu.png
 class_credits_menu.png
 class_enemy.png
+class_enemy_test.png
 class_entity.png
 class_fast_enemy.png
 class_game_menu.png

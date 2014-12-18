@@ -48,6 +48,8 @@ TEST(Field, construction)
 	EXPECT_EQ(6, neighborTiles.capacity());
 	neighborTiles = field.getTile(sf::Vector2i(5, 8))->getNeighbor(1);
 	EXPECT_EQ(9, neighborTiles.capacity());
+	neighborTiles = field.getTile(sf::Vector2i(7,  TILE_NUM_HOR - 1))->getNeighbor(1);
+	EXPECT_EQ(6, neighborTiles.capacity());
 }
 
 TEST(BuildMenu, construction)

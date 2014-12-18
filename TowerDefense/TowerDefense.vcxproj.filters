@@ -106,10 +106,10 @@
     <ClCompile Include="UnitTests_JU.cpp">
       <Filter>Source\UnitTests</Filter>
     </ClCompile>
-    <ClCompile Include="UnitTests_Si.cpp">
+    <ClCompile Include="UnitTests_Tower.cpp">
       <Filter>Source\UnitTests</Filter>
     </ClCompile>
-    <ClCompile Include="UnitTests_Tower.cpp">
+    <ClCompile Include="UnitTests_Tile.cpp">
       <Filter>Source\UnitTests</Filter>
     </ClCompile>
   </ItemGroup>

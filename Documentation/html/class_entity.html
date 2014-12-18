@@ -89,6 +89,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a1ab1df6a898303e678a11d727016dd09"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a1ab1df6a898303e678a11d727016dd09">getSpeed</a> ()</td></tr>
 <tr class="memdesc:a1ab1df6a898303e678a11d727016dd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current speed of this entity.  <a href="#a1ab1df6a898303e678a11d727016dd09">More...</a><br /></td></tr>
 <tr class="separator:a1ab1df6a898303e678a11d727016dd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee27929141a81e1ce2b6b87401ae33b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#aee27929141a81e1ce2b6b87401ae33b3">getTimer</a> ()</td></tr>
+<tr class="memdesc:aee27929141a81e1ce2b6b87401ae33b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current value of timer.  <a href="#aee27929141a81e1ce2b6b87401ae33b3">More...</a><br /></td></tr>
+<tr class="separator:aee27929141a81e1ce2b6b87401ae33b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5dd2cfe8cd0bd31e908752bf7c4b510"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#aa5dd2cfe8cd0bd31e908752bf7c4b510">getSprite</a> ()</td></tr>
 <tr class="memdesc:aa5dd2cfe8cd0bd31e908752bf7c4b510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current sprite of this entity.  <a href="#aa5dd2cfe8cd0bd31e908752bf7c4b510">More...</a><br /></td></tr>
 <tr class="separator:aa5dd2cfe8cd0bd31e908752bf7c4b510"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,10 +107,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a752b7fb05557c905dcdce931500e700e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a752b7fb05557c905dcdce931500e700e">setSpeed</a> (float mSpeed)</td></tr>
 <tr class="memdesc:a752b7fb05557c905dcdce931500e700e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set speed of this entity.  <a href="#a752b7fb05557c905dcdce931500e700e">More...</a><br /></td></tr>
 <tr class="separator:a752b7fb05557c905dcdce931500e700e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4bf1756a61a06533bd6643e8f5013d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ab4bf1756a61a06533bd6643e8f5013d6">setTimer</a> (int mTimer)</td></tr>
+<tr class="memdesc:ab4bf1756a61a06533bd6643e8f5013d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set timer of this entity.  <a href="#ab4bf1756a61a06533bd6643e8f5013d6">More...</a><br /></td></tr>
+<tr class="separator:ab4bf1756a61a06533bd6643e8f5013d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acffd8697cae92e62b0962c78e2d45d06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#acffd8697cae92e62b0962c78e2d45d06">setSprite</a> (sf::Sprite mSprite)</td></tr>
 <tr class="memdesc:acffd8697cae92e62b0962c78e2d45d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sprite of this entity.  <a href="#acffd8697cae92e62b0962c78e2d45d06">More...</a><br /></td></tr>
 <tr class="separator:acffd8697cae92e62b0962c78e2d45d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42f639dbaa21a19e991c973245431987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a42f639dbaa21a19e991c973245431987">draw</a> (sf::RenderWindow &amp;w)</td></tr>
+<tr class="memitem:a42f639dbaa21a19e991c973245431987"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a42f639dbaa21a19e991c973245431987">draw</a> (sf::RenderWindow &amp;w)</td></tr>
 <tr class="memdesc:a42f639dbaa21a19e991c973245431987"><td class="mdescLeft">&#160;</td><td class="mdescRight">To draw this entity in a render window.  <a href="#a42f639dbaa21a19e991c973245431987">More...</a><br /></td></tr>
 <tr class="separator:a42f639dbaa21a19e991c973245431987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -139,6 +145,9 @@ sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><b>texture</b></t
 <a class="anchor" id="a42f639dbaa21a19e991c973245431987"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Entity::draw </td>
@@ -148,6 +157,11 @@ sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><b>texture</b></t
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>To draw this entity in a render window. </p>
@@ -157,6 +171,8 @@ sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><b>texture</b></t
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented in <a class="el" href="class_enemy.html#a4a373085cf9890e9ef9d2b3825bfa92a">Enemy</a>, <a class="el" href="class_money_tower.html#a9cc1a7502725fdf7af36b7871853669a">MoneyTower</a>, <a class="el" href="class_normal_tower.html#ae58d00f70a97e994a6d331ad0ae22f7c">NormalTower</a>, and <a class="el" href="class_slow_tower.html#a5a5d10af63b914331b6380f1cb4f726a">SlowTower</a>.</p>
 
 </div>
 </div>
@@ -247,6 +263,24 @@ sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><b>texture</b></t
 
 <p>Return the current tile of this entity. </p>
 <dl class="section return"><dt>Returns</dt><dd>A shared pointer pointing a type <a class="el" href="class_tile.html" title="A unit in the field. ">Tile</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aee27929141a81e1ce2b6b87401ae33b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Entity::getTimer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return current value of timer. </p>
+<dl class="section return"><dt>Returns</dt><dd>A integer variable. </dd></dl>
 
 </div>
 </div>
@@ -346,6 +380,30 @@ sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><b>texture</b></t
 
 </div>
 </div>
+<a class="anchor" id="ab4bf1756a61a06533bd6643e8f5013d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::setTimer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mTimer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set timer of this entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mTimer</td><td>A integer variable. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>D:/TowerDefense/TowerDefense/<a class="el" href="_entity_8h_source.html">Entity.h</a></li>
 <li>D:/TowerDefense/TowerDefense/Entity.cpp</li>
@@ -353,7 +411,7 @@ sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><b>texture</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 18 2014 17:59:40 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 18 2014 21:05:39 for TowerDefense by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -180,7 +180,7 @@
     <ClCompile Include="UnitTests_JU.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="UnitTests_Si.cpp">
+    <ClCompile Include="UnitTests_Tile.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="UnitTests_Tower.cpp">
