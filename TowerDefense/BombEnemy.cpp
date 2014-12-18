@@ -9,10 +9,8 @@ BombEnemy::BombEnemy() :Enemy(BOMB_ENEMY_HP, BOMB_ENEMY_DEFENCE, BOMB_ENEMY_BOUN
 
 	timer = BOMB_ENEMY_COUNTDOWN;
 	trigger = BOMB_ENEMY_TRIGGER;
-	if (!texture.loadFromFile(BOMB_ENEMY_SPRITE_ADD))
-	{
-		// TODO erreur...
-	}
+
+	texture.loadFromFile(BOMB_ENEMY_SPRITE_ADD);
 
 	sprite.setTexture(texture);
 	sprite.setTextureRect(sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(TILE_WIDTH, TILE_HEIGHT)));
@@ -22,13 +20,12 @@ BombEnemy::BombEnemy() :Enemy(BOMB_ENEMY_HP, BOMB_ENEMY_DEFENCE, BOMB_ENEMY_BOUN
 
 BombEnemy::BombEnemy(int mHP, float mDefence, int mBounty, int mScoreValue, int mTrigger, sf::Sprite mSprite, float mSpeed)
 	:Enemy(mHP, mDefence, mBounty, mScoreValue, mSprite, mSpeed)
-{
+	{
+
 	trigger = mTrigger; 
 	timer = BOMB_ENEMY_COUNTDOWN;
-	if (!texture.loadFromFile(BOMB_ENEMY_SPRITE_ADD))
-	{
-		// TODO erreur...
-	}
+	
+	texture.loadFromFile(BOMB_ENEMY_SPRITE_ADD);
 
 	sprite.setTexture(texture);
 	sprite.setTextureRect(sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(TILE_WIDTH, TILE_HEIGHT)));
@@ -43,7 +40,8 @@ int BombEnemy::getTimer(){
 	return timer;
 };
 
-bool BombEnemy::move(){
+void BombEnemy::move(){
+	// proceed to cooldown before explosion if HP is under the trigger
 	if (hp <= trigger){
 		if (timer > 0){
 			timer--;
@@ -55,14 +53,16 @@ bool BombEnemy::move(){
 		}
 		
 	}
+
+	//normal move if not triggered
 	else {
 		return Enemy::move();
-		//TODO : verify the syntax
 	}
 }
 
 void BombEnemy::explode(){
 	
+	// Pollute tiles
 	Field f = LevelManager::getLevelManager()->getField();
 	vector<shared_ptr<Tile>> t = tile->getNeighbor(1);
 	t.push_back(tile);
@@ -70,6 +70,7 @@ void BombEnemy::explode(){
 		tile->setCooldown();
 	}
 
+	// get enemies to kill with the explosion
 	vector<shared_ptr<Enemy>> e = LevelManager::getLevelManager()->getEnemies();
 	vector<shared_ptr<Enemy>> enemies;
 
@@ -82,11 +83,13 @@ void BombEnemy::explode(){
 
 	}
 
+	// kill the enemies
 	for (shared_ptr<Enemy> e : enemies){
 		e->dieWithoutBonus();
 		LevelManager::getLevelManager()->removeEnemy(e);
 	}
 
+	//get the towers to downgrade
 	vector<shared_ptr<Tower>> t2 = LevelManager::getLevelManager()->getTowers();
 	vector<shared_ptr<Tower>> towers;
 
@@ -99,16 +102,11 @@ void BombEnemy::explode(){
 
 	}
 
+	// proceed to downgrade
 	for (shared_ptr<Tower> t : towers){
 		t->downgradeTw();
 	}
 
+	// the Bomb enemy dies
 	dieWithoutBonus();
-};
-
-void BombEnemy::TriggerCountDown(){
-
-};
-
-void BombEnemy::checkCountDown(){
 };

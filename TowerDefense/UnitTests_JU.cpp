@@ -54,7 +54,8 @@ TEST(Field, computePath)
 	Field field;
 	shared_ptr<Tile> tile1 = field.getTile(80);
 	shared_ptr<Tile> tile2 = field.getTile(99);
-	const vector<shared_ptr<Tile>> a.push_back(field.getTile(80)).push_back(field.getTile(81)).push_back(field.getTile(82)).push_back(field.getTile(83)).push_back(field.getTile(84)).push_back(field.getTile(85)).push_back(field.getTile(86)).push_back(field.getTile(87)).push_back(field.getTile(88)).push_back(field.getTile(89)).push_back(field.getTile(90)).push_back(field.getTile(91)).push_back(field.getTile(92)).push_back(field.getTile(93)).push_back(field.getTile(94)).push_back(field.getTile(95)).push_back(field.getTile(96)).push_back(field.getTile(97)).push_back(field.getTile(98)).push_back(field.getTile(99));
+	const vector<shared_ptr<Tile>> a.
+push_back(field.getTile(80)).push_back(field.getTile(81)).push_back(field.getTile(82)).push_back(field.getTile(83)).push_back(field.getTile(84)).push_back(field.getTile(85)).push_back(field.getTile(86)).push_back(field.getTile(87)).push_back(field.getTile(88)).push_back(field.getTile(89)).push_back(field.getTile(90)).push_back(field.getTile(91)).push_back(field.getTile(92)).push_back(field.getTile(93)).push_back(field.getTile(94)).push_back(field.getTile(95)).push_back(field.getTile(96)).push_back(field.getTile(97)).push_back(field.getTile(98)).push_back(field.getTile(99));
 	/*a.push_back(field.getTile(80));
 	a.push_back(field.getTile(81));
 	a.push_back(field.getTile(82));
