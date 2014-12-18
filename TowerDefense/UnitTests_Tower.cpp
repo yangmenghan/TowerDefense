@@ -98,9 +98,9 @@ TEST(Attack, setAttackRayAngle)
 	EXPECT_FALSE(tower.getAttack()->getAttackRay().getRotation() > 0 &&
 				tower.getAttack()->getAttackRay().getRotation() < 90);
 
-	target->setPosition(sf::Vector2i(pTile->getPositionPixel().x, pTile->getPositionPixel().y + 100));
+	target->setPosition(sf::Vector2i(pTile->getPositionPixel().x - 25, pTile->getPositionPixel().y + 100));
 	tower.getAttack()->setAttackRayAngle(target);
-	EXPECT_FALSE(tower.getAttack()->getAttackRay().getRotation() == 0 );
+	EXPECT_FALSE(tower.getAttack()->getAttackRay().getRotation() == 90 );
 }
 int main(int argc, char **argv)
 {

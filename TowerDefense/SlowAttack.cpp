@@ -36,7 +36,7 @@ void SlowAttack::resolve(sf::RenderWindow& w)
 			timer--;
 			if (timer == 0)
 			{
-				timer = speed * LevelManager::getLevelManager()->getSpeed();
+				timer = speed / LevelManager::getLevelManager()->getSpeed();
 			}
 		}
 	}

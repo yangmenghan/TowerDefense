@@ -1,5 +1,5 @@
 #include "NormalAttack.h"
-
+#include "LevelManager.h"
 
 
 NormalAttack::NormalAttack()
@@ -35,7 +35,7 @@ void NormalAttack::resolve(sf::RenderWindow& w)
 			timer--;
 			if (timer == 0)
 			{
-				timer = speed * LevelManager::getLevelManager()->getSpeed();
+				timer = speed / LevelManager::getLevelManager()->getSpeed();
 			}
 		}
 	}

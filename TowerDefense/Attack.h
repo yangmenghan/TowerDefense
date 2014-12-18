@@ -1,7 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Enemy.h"
-#include "LevelManager.h"
 
 //! Basic class for towers' attack action.
 /*! 
