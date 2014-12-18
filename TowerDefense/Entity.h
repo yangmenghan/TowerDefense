@@ -91,6 +91,6 @@ public:
 	/*!
 	\param w A sf::RenderWindow reference variable.
 	*/
-	void draw(sf::RenderWindow& w);
+	virtual void draw(sf::RenderWindow& w);
 };
 
